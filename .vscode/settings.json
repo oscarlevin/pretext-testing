@@ -1,0 +1,9 @@
+{
+    "cSpell.languageSettings": [],
+    "xml.fileAssociations": [
+        {
+            "pattern": "**/source/**.ptx",
+            "systemId": "C:\\Users\\oscar.levin\\.ptx\\2.6.2\\core\\schema\\pretext.rng"
+        }
+    ]
+}

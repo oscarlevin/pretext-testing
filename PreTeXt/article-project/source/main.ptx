@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <docinfo>
+    <macros>
+      \renewcommand{\c}{\mathcal}
+\renewcommand{\b}{\mathbf}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Iff}{\Longleftrightarrow}
+\newcommand{\Imp}{\Longrightarrow}
+\renewcommand{\iff}{\leftrightarrow}
+\newcommand{\imp}{\rightarrow}
+\newcommand{\compdim}{\mathrm{comp}\,\mathrm{dim}}
+\newcommand{\halts}{\!\downarrow}
+\newcommand{\enters}{\searrow}
+\newcommand{\upto}{\!\!\upharpoonright\!\!}
+\newcommand{\hp}{K}
+
+\newcommand{\into}{\hookrightarrow}
+\renewcommand{\hat}{\widehat}
+\newcommand{\dom}{dom}
+\newcommand{\st}{~|~}
+\newcommand{\inv}{^{-1}}
+    </macros>
+    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+  </docinfo>
+
+  <article xml:id="sample-research-article">
+    <title>Sample PreTeXt Research Article</title>
+
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>
+          Oscar Levin</personname>
+          <department>Mathematical Sciences</department>
+          <institution>University of Northern Colorado</institution>
+          <email>oscar.levin@unco.edu</email>
+        </author>
+
+        <author>
+          <personname>
+          Author Two</personname>
+          <department>Mathematical Fiction</department>
+          <institution>University of Northern Nowhere</institution>
+          <email>author.two@madeup.edu</email>
+        </author>
+      </titlepage>
+
+      <abstract>
+        <p>
+          This is an example of a research article written in PreTeXt.
+          It tries to have all of the common things that one might want in such an article.
+        </p>
+
+        <p>
+          For example, sometimes an abstract can have multiple paragraphs.
+          And it is probably a good idea to have these be long lines.
+          Just in case there is something strange with how the text gets wrapped or indented.
+        </p>
+      </abstract>
+    </frontmatter>
+
+    <introduction>
+      <p>
+        Sometimes there is an introduction before the first section of a paper.
+        That might even have multiple paragraphs.
+        It could have math like <m>\int_1^\infty \frac{1}{x}\, dx = \infty</m>.
+        It might also have a reference to a paper <xref ref="bib_cite1"/>.
+        And it could have a footnote <fn>This is a footnote.</fn>
+      </p>
+
+      <p>
+        If it doesn't have multiple paragraphs, this is what that might look like.
+      </p>
+    </introduction>
+
+    <section xml:id="sec-introduction">
+      <title>Introduction</title>
+
+      <p>
+        The first section of a paper is often an introduction that includes a fair amount of background.
+        It might also have a reference to a paper <xref ref="bib_cite2"/>.
+      </p>
+
+      <p>
+        Sometimes authors like to state definitions in the introduction.
+        For example, we might define a <term>widget</term> to be a thing that does something.
+        And we might define a <term>gadget</term> to be a thing that does something else.
+        We might even define a <term>thingamajig</term> to be a thing that does something else.
+      </p>
+
+      <definition xml:id="def-widget">
+        <statement>
+          <p>
+            A <term>widget</term> is a thing that does something.
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        It probably ends with a description of what is in the rest of the paper.
+        It might say something like that in <xref ref="sec-prelims"/> we will introduce some preliminary concepts.
+        Then in <xref ref="sec-initial-results"/> we have some initial results.
+        And finally in <xref ref="sec-conclusion"/> we have a conclusion.
+      </p>
+    </section>
+
+    <section xml:id="sec-prelims">
+      <title>Background and Preliminaries</title>
+
+      <p>
+        The following is taken from an actual paper of mine, namely <xref ref="bib_levin"/>.
+      </p>
+
+      <p>
+        Before considering any computability theory, we review some classical definitions and results from the theory of ordered fields.
+        For a more comprehensive introduction, see the chapter 6 in <xref ref="jacobson"/>, chapter 11 in <xref ref="lang"/>, or <xref ref="prestel"/>.
+        Throughout the paper, all fields have characteristic 0 (as all ordered fields do) and are countable (as all computable fields are).
+      </p>
+
+      <definition>
+        <p>
+          Let <m>F</m> be a field.
+          An <em>ordering</em> on <m>F</m> is a linear order <m>\le</m> (i.e., a total, transitive, antisymmetric binary relation) such that for all <m>a, b, c \in F</m>,
+        </p>
+
+        <ol>
+          <li>
+            <p>
+              <m>a \le b \Imp a + c \le b + c</m>, and
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>a \le b, ~ 0 \le c \Imp ac \le bc</m>.
+            </p>
+          </li>
+        </ol>
+
+        <p>
+          <m>F</m> is <em>orderable</em> if there exists an ordering <m>\le</m> on <m>F</m>. An <em>ordered field</em> is a pair <m>(F, \le)</m>.
+        </p>
+      </definition>
+
+      <p>
+        Related to ordered fields are real fields.
+      </p>
+
+      <definition>
+        <p>
+          A field <m>F</m> is <em>formally real</em> (or simply <em>real</em>) provided <m>-1</m> is not a sum of squares in <m>F</m>.
+        </p>
+      </definition>
+
+      <p>
+        Classically, a field is orderable if and only if it is formally real.
+        However, this does not hold effectively as there are computable real fields which have no computable ordering.
+        In fact, given any <m>\Pi^0_1</m> class <m>C</m> there is a  computable real field for which the space of orderings is in Turing degree preserving bijection with <m>C</m> <xref ref="metakides-nerode"/>.
+      </p>
+
+      <p>
+        Given a formally real field <m>F</m>, the algebraic closure of <m>F</m> is no longer real since <m>x^2 + 1 = 0</m> has a root in the algebraic closure, making <m>-1</m> a square.
+        If we consider a maximal algebraic extension of a real field which is still real, we get a real closure.
+      </p>
+
+      <definition>
+        <p>
+          A field <m>F</m> is <em>real closed</em> if <m>F</m> is formally real and no algebraic extension of <m>F</m> is formally real.
+          A <em>real closure</em> <m>R_F</m> of a field <m>F</m> is a real closed field which is algebraic over <m>F</m>.
+        </p>
+      </definition>
+
+      <p>
+        Real closed fields have a unique ordering: the positive elements are simply those which have square roots in the field.
+        This is enough to determine the ordering on the field, as <m>a &lt; b</m> if and only if <m>b-a</m> is positive.
+        Moreover, if we consider a computable real closed field (the field operations are computable), the order can be computably determined: search the field for  the square root of either <m>b-a</m> or <m>a-b</m>.
+        Thus when dealing with real closed fields, we will freely use order notation (including intervals) even though <q><m>\lt</m></q> is not part of the signature of real closed fields.
+      </p>
+
+      <p>
+        Every formally real field has a real closure, although it need not be unique as a given formally real field may admit multiple orderings.
+        For example, <m>\Q(\sqrt 2)</m> is formally real with two orderings: one in which <m>0 &lt; \sqrt 2</m> and the other in which <m>\sqrt 2 &lt; 0</m>.
+        However, if we consider a formally real field and specify the order (that is, consider an ordered field) then the unique order on the real closed field must extend the order on the base field.
+        Thus uniqueness of the real closure is guaranteed:
+      </p>
+
+      <theorem>
+        <p>
+          Any ordered field <m>(F, \le)</m> has a unique (up to isomorphism) real closure.
+        </p>
+      </theorem>
+
+      <p>
+        Beyond their unique orderings, real closed fields are nice for a variety of reasons.
+        In a real closed field <m>R</m>, every polynomial of odd degree with coefficients in <m>R</m> has a root in <m>R</m>.
+        Also, <m>R(\sqrt{-1})</m> is necessarily the algebraic closure of <m>R</m>.
+        Real closed fields are also nice from a model theory point of view: the theory of real closed fields (in the language of ordered rings) is a complete, decidable theory (see section 3.3 in <xref ref="marker"/>).
+        This implies that any two real closed field are elementarily equivalent.
+        Since the real numbers, as an ordered field, are a real closed field, this says that any real closed field shares all the first order algebraic and order-theoretic properties of <m>\R</m> (the <q>Tarski-Principle</q>).
+      </p>
+
+      <p>
+        Another nice property we will make heavy use of is that it is possible to determine the number of roots of a given polynomial in a real closed field.
+        There are multiple ways to do this.
+        One way is to use the fact that the theory of real closed fields is complete and decidable.
+        Alternatively, we can appeal to the purely algebraic Sturm's Theorem, which we now discuss in more detail.
+      </p>
+
+      <theorem>
+        <p>
+          Let <m>p(x)</m> be any polynomial with coefficients in a real closed field <m>R</m>.
+          Then there is a sequence of polynomials
+          <me>
+            p_0(x), p_1(x), \ldots, p_n(x)
+          </me>
+          such that if <m>p(\alpha) \ne 0</m> and <m>p(\beta) \ne 0</m>, then the number of distinct roots of <m>p(x)</m> in the interval <m>[\alpha, \beta]</m> is <m>V_\alpha - V_\beta</m>, where <m>V_\gamma</m> denotes the number of variations in sign of <m>\{p_0(\gamma), p_1(\gamma), \ldots, p_n(\gamma)\}</m>.
+        </p>
+      </theorem>
+
+      <p>
+        The polynomials <m>p_0(x), p_1(x), \ldots, p_n(x)</m> can be found effectively.
+        In fact, <m>p_0(x) = p(x)</m>, <m>p_1(x) = p'(x)</m> and for <m>i \ge 2</m>, <m>p_{i}(x)</m> is the negative remainder after dividing <m>p_{i-1}(x)</m> by <m>p_{i-2}(x)</m>.
+        Since we are concerned with computable real closed fields, we can to calculate <m>p_i(\gamma)</m> for any <m>\gamma</m> in <m>R</m> and <m>i = 0, \ldots, n</m>.
+        Thus we can effectively find <m>V_\gamma</m>, and as such, the number of roots of <m>p(x)</m> between any <m>\alpha</m> and <m>\beta</m> which are not roots of <m>p(x)</m>.
+        Further, there is a bound (due to Cauchy) on the roots of a given polynomial, so the total number of roots of a given polynomial can be effectively determined.
+        (For a detailed discussion of Sturm's Theorem, and its proof, see <xref ref="jacobson"/>.)
+      </p>
+
+      <p>
+        The real closure of a field is an algebraic extension, but we also consider field extensions which are not algebraic.
+        Recall that for any field <m>F</m> (ordered or otherwise) a set <m>S \subseteq F</m> is <em>algebraically dependent</em> if for some <m>n \in \N</m> there is a nonzero polynomial <m>p \in \Q[x_1, \ldots, x_n]</m> and distinct <m>s_1,\ldots, s_n \in S</m> such that <m>p(s_1,\ldots,s_n) = 0</m>.
+        <m>S</m> is <em>algebraically independent</em> if it is not algebraically dependent.
+        A maximal algebraically independent set in <m>F</m> is called a <em>transcendence basis</em> for <m>F</m> over <m>\Q</m>.
+        The <em>transcendence degree</em> of a field <m>F</m> is the cardinality of some transcendence basis for <m>F</m>.
+        Every non-algebraic extension field of <m>\Q</m> has a transcendence basis over <m>\Q</m>, and all transcendence bases of a given field have the same cardinality, so these notions are well defined (see <xref ref="hungerford"/>).
+        For any field <m>F</m>, if <m>F</m> is an extension of <m>\Q</m> and has a transcendence basis <m>S</m>, then <m>F</m> is algebraic over the field <m>\Q(S)</m>.
+        The field <m>\Q(S)</m> is a <em>purely transcendental</em> extension of <m>\Q</m>, with a <em>pure transcendence basis</em> <m>S</m>.
+        Note that every purely transcendental extension has a pure transcendence basis, but also has transcendence bases which are not pure.
+        (All of this also works for extensions of arbitrary fields instead of <m>\Q</m>, but we will only need to consider this simplest of cases.)
+      </p>
+
+      <p>
+        Finally, we consider the possibility of infinite elements in an ordered field.
+      </p>
+
+      <definition>
+        <p>
+          For any element <m>a</m> in an ordered field <m>F</m>, define the <em>absolute value of <m>a</m></em> by
+          <me>
+            |a| = \begin{cases} ~a &amp; \text{ if } 0 \le a \\ -a &amp; \text{ if } a &lt; 0\end{cases}
+          </me>
+        </p>
+      </definition>
+
+      <definition>
+        <p>
+          An ordered field <m>F</m> is <em>archimedean</em> if for all <m>a \in F</m> there is some <m>n \in \N</m> such that <m>|a| \le n</m>.
+        </p>
+      </definition>
+
+      <p>
+        Now to computability theory.
+        We assume familiarity with the basic ideas from the subject (otherwise, see <xref ref="soare"/>).
+        Intuitively, an ordered field will be computable if the operations <m>+</m> and <m>\cdot</m> are computable, and the relation <m>\le</m> is computable.
+        Specifically, we work in the language of ordered rings, so a field <m>F</m> will have a domain <m>|F|</m> and there will be binary function symbols <m>+_F</m> and <m>\cdot_F</m>, a binary relation <m>\le_F</m>, and distinguished elements <m>0_F</m> and <m>1_F</m>.
+        For <m>F</m> to be a <em>computable</em> ordered field, <m>|F|</m> will be a computable subset of <m>\N</m>, with <m>+_F</m> and <m>\cdot_F</m> partial computable functions from <m>|F|\times |F|</m> to <m>|F|</m>, and <m>\le_F \subseteq |F| \times |F|</m> a computable relation.
+        Additionally, we are given the elements <m>0_F</m> and <m>1_F</m> computably, although these can always be found uniformly by searching through the elements of the field.
+        Thus the subfield <m>\Q</m> (ordered fields have characteristic zero) is computably enumerable (c.e.) for all computable ordered fields.
+        Of course we want <m>F</m> to be an ordered field, so the usual ordered field axioms must be satisfied.
+        Note that since the domain of <m>F</m> is a subset of <m>\N</m>, computable ordered fields (and in general all computable algebraic structures) are necessarily countable.
+      </p>
+    </section>
+  </article>
+</pretext>
