@@ -4,25 +4,25 @@
   <docinfo>
     <macros>
       \renewcommand{\c}{\mathcal}
-\renewcommand{\b}{\mathbf}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Iff}{\Longleftrightarrow}
-\newcommand{\Imp}{\Longrightarrow}
-\renewcommand{\iff}{\leftrightarrow}
-\newcommand{\imp}{\rightarrow}
-\newcommand{\compdim}{\mathrm{comp}\,\mathrm{dim}}
-\newcommand{\halts}{\!\downarrow}
-\newcommand{\enters}{\searrow}
-\newcommand{\upto}{\!\!\upharpoonright\!\!}
-\newcommand{\hp}{K}
+      \renewcommand{\b}{\mathbf}
+      \newcommand{\R}{\mathbb{R}}
+      \newcommand{\Q}{\mathbb{Q}}
+      \newcommand{\N}{\mathbb{N}}
+      \newcommand{\Iff}{\Longleftrightarrow}
+      \newcommand{\Imp}{\Longrightarrow}
+      \renewcommand{\iff}{\leftrightarrow}
+      \newcommand{\imp}{\rightarrow}
+      \newcommand{\compdim}{\mathrm{comp}\,\mathrm{dim}}
+      \newcommand{\halts}{\!\downarrow}
+      \newcommand{\enters}{\searrow}
+      \newcommand{\upto}{\!\!\upharpoonright\!\!}
+      \newcommand{\hp}{K}
 
-\newcommand{\into}{\hookrightarrow}
-\renewcommand{\hat}{\widehat}
-\newcommand{\dom}{dom}
-\newcommand{\st}{~|~}
-\newcommand{\inv}{^{-1}}
+      \newcommand{\into}{\hookrightarrow}
+      \renewcommand{\hat}{\widehat}
+      \newcommand{\dom}{dom}
+      \newcommand{\st}{~|~}
+      \newcommand{\inv}{^{-1}}
     </macros>
     <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
   </docinfo>
@@ -273,6 +273,87 @@
         Of course we want <m>F</m> to be an ordered field, so the usual ordered field axioms must be satisfied.
         Note that since the domain of <m>F</m> is a subset of <m>\N</m>, computable ordered fields (and in general all computable algebraic structures) are necessarily countable.
       </p>
+    </section>
+
+
+    <section xml:id="sec-results">
+      <title>Figures and Blocks</title>
+      
+      <p>
+        Here are a few figures to make sure those work.
+      </p>
+
+      <figure xml:id="sample-figure">
+        <caption>An example of a figure</caption>
+        <image width="20%">
+          <shortdescription>A sample latex-image</shortdescription>
+          <latex-image label="sample-image">
+            \begin{tikzpicture}
+              \draw (0,0) rectangle (1,1) -- (0,0);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        And here is a figure containing a tabular.
+      </p>
+
+      <figure xml:id="fig-tabular">
+        <caption>A tabular in a figure</caption>
+        <tabular>
+          <row>
+            <cell>a</cell><cell>b</cell><cell>c</cell>
+          </row>
+          <row>
+            <cell>1</cell><cell>2</cell><cell>3</cell>
+          </row>
+        </tabular>
+      </figure>
+
+      <p>
+        Of course, we can also put a tabular inside a table.
+      </p>
+      <table>
+        <title>An example table</title>
+        <tabular>
+          <row>
+            <cell>a</cell><cell>b</cell><cell>c</cell>
+          </row>
+          <row>
+            <cell>1</cell><cell>2</cell><cell>3</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Images and tabulars can also appear <q>bare</q> without a figure or table wrapping them.
+      </p>
+      
+      <image width="20%">
+        <shortdescription>A bare image</shortdescription>
+        <latex-image>
+          \begin{tikzpicture}
+            \draw (0,0) circle (1cm);
+          \end{tikzpicture}
+        </latex-image>
+      </image>
+      
+      <tabular>
+        <col right="minor"/><col/>
+        <row bottom="minor" header="yes">
+          <cell><m>n</m></cell><cell><m>f(n)</m></cell>
+        </row>
+        <row>
+          <cell>1</cell><cell>2</cell>
+        </row>
+        <row>
+          <cell>2</cell><cell>4</cell>
+        </row>
+        <row>
+          <cell>3</cell><cell>6</cell>
+        </row>
+      </tabular>
     </section>
   </article>
 </pretext>
