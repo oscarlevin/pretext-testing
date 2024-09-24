@@ -4,5 +4,7 @@
   <targets>
     <target name="web" format="html" />
     <target name="print" format="pdf" />
+    <target name="amsart" format="latex" xsl="ams-article.xsl" />
+    <target name="latex" format="latex" />
   </targets>
 </project>
