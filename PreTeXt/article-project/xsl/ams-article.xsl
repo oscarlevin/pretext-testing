@@ -1091,20 +1091,20 @@
         <!-- <xsl:text>\usepackage{fontawesome}&#xa;</xsl:text> -->
     <!-- </xsl:if> -->
     <!-- Poetry -->
-    <!-- <xsl:if test="$document-root//poem"> -->
-        <!-- <xsl:text>%% Poetry Support&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newenvironment{poem}{\setlength{\parindent}{0em}}{}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemTitle}[1]{\begin{center}\large\textbf{#1}\end{center}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemIndent}{\hspace{2 em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newenvironment{stanza}{\vspace{0.25 em}\hangindent=4em}{\vspace{1 em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\stanzaTitle}[1]{{\centering\textbf{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemauthorleft}[1]{\vspace{-1em}\begin{flushleft}\textit{#1}\end{flushleft}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemauthorcenter}[1]{\vspace{-1em}\begin{center}\textit{#1}\end{center}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemauthorright}[1]{\vspace{-1em}\begin{flushright}\textit{#1}\end{flushright}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemlineleft}[1]{{\raggedright{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemlinecenter}[1]{{\centering{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\poemlineright}[1]{{\raggedleft{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text> -->
-    <!-- </xsl:if> -->
+    <xsl:if test="$document-root//poem">
+        <xsl:text>%% Poetry Support&#xa;</xsl:text>
+        <xsl:text>\newenvironment{poem}{\setlength{\parindent}{0em}}{}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemTitle}[1]{\begin{center}\large\textbf{#1}\end{center}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemIndent}{\hspace{2 em}}&#xa;</xsl:text>
+        <xsl:text>\newenvironment{stanza}{\vspace{0.25 em}\hangindent=4em}{\vspace{1 em}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\stanzaTitle}[1]{{\centering\textbf{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemauthorleft}[1]{\vspace{-1em}\begin{flushleft}\textit{#1}\end{flushleft}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemauthorcenter}[1]{\vspace{-1em}\begin{center}\textit{#1}\end{center}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemauthorright}[1]{\vspace{-1em}\begin{flushright}\textit{#1}\end{flushright}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemlineleft}[1]{{\raggedright{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemlinecenter}[1]{{\centering{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\poemlineright}[1]{{\raggedleft{#1}\par}\vspace{-\parskip}}&#xa;</xsl:text>
+    </xsl:if>
     <!-- Music -->
     <xsl:if test="$document-root//flat | $document-root//doubleflat | $document-root//sharp | $document-root//doublesharp | $document-root//natural | $document-root//n | $document-root//scaledeg | $document-root//chord">
         <xsl:text>%% Musical Symbol Support&#xa;</xsl:text>
@@ -1381,7 +1381,7 @@
         <!-- </xsl:if> -->
     <!-- </xsl:if> -->
     <!-- <xsl:if test="$document-root//dl"> -->
-`        <!-- <xsl:text>%% Description lists as tcolorbox sidebyside&#xa;</xsl:text> -->
+    <!-- <xsl:text>%% Description lists as tcolorbox sidebyside&#xa;</xsl:text> -->
         <!-- <xsl:text>%% "dli" short for "description list item"&#xa;</xsl:text> -->
         <!-- title widths, gaps, from David Farmer, ~2021-09-15, pretext-support, "inline titles" -->
         <!-- <xsl:text>\newlength{\dlititlewidth}&#xa;</xsl:text> -->
@@ -1438,7 +1438,7 @@
         <!-- See http://tex.blogoverflow.com/2012/09/dont-forget-to-run-makeindex/ for "imakeidx" usage -->
         <!-- <xsl:text>%% Support for index creation&#xa;</xsl:text> -->
         <!-- <xsl:if test="$author-tools-new = 'no'"> -->
- `           <!-- <xsl:text>%% imakeidx package does not require extra pass (as with makeidx)&#xa;</xsl:text> -->
+            <!-- <xsl:text>%% imakeidx package does not require extra pass (as with makeidx)&#xa;</xsl:text> -->
             <!-- <xsl:text>%% Title of the "Index" section set via a keyword&#xa;</xsl:text> -->
             <!-- <xsl:text>%% Language support for the "see" and "see also" phrases,&#xa;</xsl:text> -->
             <!-- <xsl:text>%% but to do so presumes exactly one "index-list" generator is present&#xa;</xsl:text> -->
@@ -1685,6 +1685,46 @@
 </xsl:template>
 
 
+<!-- Theorems, Proofs, Definitions, Examples, Exercises -->
+
+<!-- Theorems have statement/proof structure                    -->
+<!-- Definitions have notation, which is handled elsewhere      -->
+<!-- Examples have no structure, or have statement and solution -->
+<!-- Exercises have hints, answers and solutions                -->
+
+<!-- Environments/blocks implemented with tcolorbox          -->
+<!-- expect certain arguments.  This template provides them. -->
+<!--                                                         -->
+<!-- 1.  title, with punctuation as needed                   -->
+<!-- 2.  the "unique-id", which suffices for                 -->
+<!--     the LaTeX label/ref mechanism                       -->
+<!--                                                         -->
+<!-- Or, for THEOREM-LIKE and AXIOM-LIKE,                    -->
+<!--                                                         -->
+<!-- 1.  title, right now we add punctuation as needed       -->
+<!-- 2.  a list of creator(s)                                -->
+<!-- 3.  the "unique-id", which suffices for                 -->
+<!--     the LaTeX label/ref mechanism                       -->
+<!-- N.B.: "objectives", "outcomes" need to use this         -->
+<xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options">
+    <!-- <xsl:text>{</xsl:text>
+    <xsl:apply-templates select="." mode="type-name"/>
+    <xsl:text>}</xsl:text> -->
+    <xsl:text>[</xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>]</xsl:text>
+    <!-- <xsl:if test="&THEOREM-FILTER; or &AXIOM-FILTER;">
+        <xsl:text>{</xsl:text>
+        <xsl:apply-templates select="." mode="creator-full" />
+        <xsl:text>}</xsl:text>
+    </xsl:if> -->
+    <!-- unique-id destined for tcolorbox  phantomlabel=  option -->
+    <xsl:text>\label{</xsl:text>
+    <xsl:apply-templates select="." mode="unique-id"/>
+    <xsl:text>}</xsl:text>
+</xsl:template>
+
+<!-- <xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options"/> -->
 
 
 </xsl:stylesheet>
