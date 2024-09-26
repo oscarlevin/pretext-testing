@@ -415,7 +415,7 @@
 
     <!-- language tags appear in docinfo in renames, so be careful -->
      <!-- Generic will keep these for now (2024-09-24) -->
-    <xsl:text>%% Extensive support for other languages&#xa;</xsl:text>
+    <!-- <xsl:text>%% Extensive support for other languages&#xa;</xsl:text>
     <xsl:text>\usepackage{polyglossia}&#xa;</xsl:text>
     <xsl:text>%% Set main/default language based on pretext/@xml:lang value&#xa;</xsl:text>
     <xsl:choose>
@@ -452,10 +452,10 @@
             <xsl:text>%% document language code is "it-IT", Italian&#xa;</xsl:text>
             <xsl:text>\setmainlanguage{italian}&#xa;</xsl:text>
         </xsl:when>
-    </xsl:choose>
-    <xsl:text>%% Enable secondary languages based on discovery of @xml:lang values&#xa;</xsl:text>
+    </xsl:choose> -->
+    <!-- <xsl:text>%% Enable secondary languages based on discovery of @xml:lang values&#xa;</xsl:text> -->
     <!-- secondary: so not already "main", and look just beyond $document-root (eg "book") -->
-    <xsl:if test="not($document-language = 'en-US') and ($document-root/*//@xml:lang = 'en-US')">
+    <!-- <xsl:if test="not($document-language = 'en-US') and ($document-root/*//@xml:lang = 'en-US')">
         <xsl:text>%% document contains language code "en-US", US English&#xa;</xsl:text>
         <xsl:text>%% usmax variant has extra hypenation&#xa;</xsl:text>
         <xsl:text>\setotherlanguage[variant=usmax]{english}&#xa;</xsl:text>
@@ -503,7 +503,7 @@
         <xsl:text>%% Font families: CMU Serif, Linux Libertine O&#xa;</xsl:text>
         <xsl:text>%% OTF Script needs to be enabled&#xa;</xsl:text>
         <xsl:text>\newfontfamily\russianfont[Script=Cyrillic]{CMU Serif}&#xa;</xsl:text>
-    </xsl:if>
+    </xsl:if> -->
 
 <!-- 
     <xsl:text>%% end:   font setup and configuration for use with xelatex&#xa;</xsl:text>
@@ -1685,27 +1685,25 @@
 </xsl:template>
 
 
+<!-- Divisions -->
+
+<xsl:template match="section|subsection|subsubsection">
+    <xsl:text>\</xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:text>{</xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>}&#xa;&#xa;</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>% end of </xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:text>: </xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>&#xa;&#xa;</xsl:text>
+</xsl:template>
+
+
 <!-- Theorems, Proofs, Definitions, Examples, Exercises -->
 
-<!-- Theorems have statement/proof structure                    -->
-<!-- Definitions have notation, which is handled elsewhere      -->
-<!-- Examples have no structure, or have statement and solution -->
-<!-- Exercises have hints, answers and solutions                -->
-
-<!-- Environments/blocks implemented with tcolorbox          -->
-<!-- expect certain arguments.  This template provides them. -->
-<!--                                                         -->
-<!-- 1.  title, with punctuation as needed                   -->
-<!-- 2.  the "unique-id", which suffices for                 -->
-<!--     the LaTeX label/ref mechanism                       -->
-<!--                                                         -->
-<!-- Or, for THEOREM-LIKE and AXIOM-LIKE,                    -->
-<!--                                                         -->
-<!-- 1.  title, right now we add punctuation as needed       -->
-<!-- 2.  a list of creator(s)                                -->
-<!-- 3.  the "unique-id", which suffices for                 -->
-<!--     the LaTeX label/ref mechanism                       -->
-<!-- N.B.: "objectives", "outcomes" need to use this         -->
 <xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options">
     <!-- <xsl:text>{</xsl:text>
     <xsl:apply-templates select="." mode="type-name"/>

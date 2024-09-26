@@ -103,8 +103,8 @@
       <p>
         It probably ends with a description of what is in the rest of the paper.
         It might say something like that in <xref ref="sec-prelims"/> we will introduce some preliminary concepts.
-        Then in <xref ref="sec-initial-results"/> we have some initial results.
-        And finally in <xref ref="sec-conclusion"/> we have a conclusion.
+        Then in <xref ref="sec-results"/> we have some initial results.
+        And finally in <xref ref="sec-prelims"/> we have a conclusion.
       </p>
     </section>
 
@@ -112,7 +112,7 @@
       <title>Background and Preliminaries</title>
 
       <p>
-        The following is taken from an actual paper of mine, namely <xref ref="bib_levin"/>.
+        The following is taken from an actual paper of mine, namely <xref ref="levin"/>.
       </p>
 
       <p>
@@ -122,38 +122,42 @@
       </p>
 
       <definition>
+        <statement>
         <p>
           Let <m>F</m> be a field.
           An <em>ordering</em> on <m>F</m> is a linear order <m>\le</m> (i.e., a total, transitive, antisymmetric binary relation) such that for all <m>a, b, c \in F</m>,
-        </p>
-
-        <ol>
-          <li>
+          
+          <ol>
+            <li>
             <p>
               <m>a \le b \Imp a + c \le b + c</m>, and
             </p>
           </li>
-
+          
           <li>
             <p>
               <m>a \le b, ~ 0 \le c \Imp ac \le bc</m>.
             </p>
           </li>
         </ol>
+      </p>
 
         <p>
           <m>F</m> is <em>orderable</em> if there exists an ordering <m>\le</m> on <m>F</m>. An <em>ordered field</em> is a pair <m>(F, \le)</m>.
         </p>
-      </definition>
-
+      </statement>
+    </definition>
+    
       <p>
         Related to ordered fields are real fields.
       </p>
 
       <definition>
-        <p>
-          A field <m>F</m> is <em>formally real</em> (or simply <em>real</em>) provided <m>-1</m> is not a sum of squares in <m>F</m>.
-        </p>
+        <statement>
+          <p>
+            A field <m>F</m> is <em>formally real</em> (or simply <em>real</em>) provided <m>-1</m> is not a sum of squares in <m>F</m>.
+          </p>
+        </statement>
       </definition>
 
       <p>
@@ -168,10 +172,12 @@
       </p>
 
       <definition>
-        <p>
-          A field <m>F</m> is <em>real closed</em> if <m>F</m> is formally real and no algebraic extension of <m>F</m> is formally real.
-          A <em>real closure</em> <m>R_F</m> of a field <m>F</m> is a real closed field which is algebraic over <m>F</m>.
-        </p>
+        <statement>
+          <p>
+            A field <m>F</m> is <em>real closed</em> if <m>F</m> is formally real and no algebraic extension of <m>F</m> is formally real.
+            A <em>real closure</em> <m>R_F</m> of a field <m>F</m> is a real closed field which is algebraic over <m>F</m>.
+          </p>
+        </statement>
       </definition>
 
       <p>
@@ -365,5 +371,96 @@
         </row>
       </tabular>
     </section>
+
+    <references xml:id="refs-biblio">
+
+      <biblio type="raw" xml:id="prestel">
+        Soare, Robert I.
+        <title>Recursively enumerable sets and degrees</title>
+       <journal>Perspectives in Mathematical Logic</journal>
+        A study of computable functions and computably generated sets,
+        Springer-Verlag, Berlin,
+         <year>1987</year>.   
+         </biblio>
+      <biblio type="raw" xml:id="metakides-nerode">
+        Soare, Robert I.
+        <title>Recursively enumerable sets and degrees</title>
+       <journal>Perspectives in Mathematical Logic</journal>
+        A study of computable functions and computably generated sets,
+        Springer-Verlag, Berlin,
+         <year>1987</year>.   
+      </biblio>
+      <biblio type="raw" xml:id="soare">
+        Soare, Robert I.
+        <title>Recursively enumerable sets and degrees</title>
+       <journal>Perspectives in Mathematical Logic</journal>
+        A study of computable functions and computably generated sets,
+        Springer-Verlag, Berlin,
+         <year>1987</year>.   
+      </biblio>
+      <biblio type="raw" xml:id="marker">
+        Soare, Robert I.
+        <title>Recursively enumerable sets and degrees</title>
+       <journal>Perspectives in Mathematical Logic</journal>
+        A study of computable functions and computably generated sets,
+        Springer-Verlag, Berlin,
+         <year>1987</year>.   
+      </biblio>
+
+      <biblio type="raw" xml:id="bib_cite1">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+      <biblio type="raw" xml:id="bib_cite2">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+      <biblio type="raw" xml:id="levin">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+      <biblio type="raw" xml:id="hungerford">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+      <biblio type="raw" xml:id="lang">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+      <biblio type="raw" xml:id="jacobson">
+        David C. Lay,
+        <title>Subspaces and Echelon Forms</title>.
+        <journal>The College Mathematics Journal</journal>,
+        January 1993,
+        <volume>24</volume>
+        <number>1</number>,
+        57<ndash />62.
+      </biblio>
+    </references>
   </article>
 </pretext>
