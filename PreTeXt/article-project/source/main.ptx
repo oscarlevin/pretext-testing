@@ -248,18 +248,23 @@
       </p>
 
       <definition>
+        <title>Absolute Value</title>
+        <statement>
         <p>
           For any element <m>a</m> in an ordered field <m>F</m>, define the <em>absolute value of <m>a</m></em> by
           <me>
             |a| = \begin{cases} ~a &amp; \text{ if } 0 \le a \\ -a &amp; \text{ if } a &lt; 0\end{cases}
           </me>
         </p>
+      </statement>
       </definition>
 
       <definition>
-        <p>
-          An ordered field <m>F</m> is <em>archimedean</em> if for all <m>a \in F</m> there is some <m>n \in \N</m> such that <m>|a| \le n</m>.
-        </p>
+        <statement>
+          <p>
+            An ordered field <m>F</m> is <em>archimedean</em> if for all <m>a \in F</m> there is some <m>n \in \N</m> such that <m>|a| \le n</m>.
+          </p>
+        </statement>
       </definition>
 
       <p>

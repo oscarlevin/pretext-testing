@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <docinfo>
+    <macros>
+      \newcommand{\foo}{b^{ar}}
+    </macros>
+    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+  </docinfo>
+
+  <article xml:id="my-great-article">
+    <title>AMS Journal Sample</title>
+
+    <frontmatter>
+      <titlepage>
+        <author>
+          <personname>
+          Author One</personname>
+          <department>
+          <line>
+          Department of Mathematics</line>
+          <line>
+          Louisiana State University</line>
+          <line>
+          Baton Rouge, Louisiana 70803</line>
+          </department>
+          <email>xyz@math.university.edu</email>
+        </author>
+
+        <author>
+          <personname>
+          Author Two</personname>
+          <department>
+          <line>
+          Department of Mathematics</line>
+          <line>
+          Louisiana State University</line>
+          <line>
+          Baton Rouge, Louisiana 70803</line>
+          </department>
+          <email>xyz@math.university.edu</email>
+        </author>
+      </titlepage>
+
+      <abstract>
+        <p>
+          This paper is a sample prepared to illustrate the use of the American Mathematical Society's <latex/> document class <em>amsart</em> and publication-specific variants of that class for AMS-\LaTeX{} version 2.
+        </p>
+      </abstract>
+    </frontmatter>
+
+    <section xml:id="sec-special-section">
+      <title>Special Section</title>
+
+      This is an example of a special section head.<fn>Here is an example of a footnote.
+      Notice that this footnote text is running on so that it can stand as an example of how a footnote with separate paragraphs should be written.
+      And here is the beginning of the second paragraph.</fn>
+    </section>
+
+    <section xml:id="sec-this-is-a-numbered-first-level-section-head">
+      <title>This is a numbered first-level section head</title>
+
+      <introduction>
+        <p>
+          This is an example of a numbered first-level heading.
+        </p>
+      </introduction>
+
+
+      <subsection xml:id="subsec-subsection">
+        <title>Subsection</title>
+
+        <introduction>
+          <p>
+            This is an example of a numbered second-level heading.
+          </p>
+        </introduction>
+
+        <subsubsection>
+          <title>Third level title</title>
+
+          <p>
+            This is an example of a numbered third-level heading.
+          </p>
+
+          <lemma>
+            <p>
+              Let <m>f, g\in  A(X)</m> and let <m>E</m>, <m>F</m> be cozero sets in <m>X</m>.
+              <ol>
+                <li>
+                  <p>
+                    If <m>f</m> is <m>E</m>-regular and <m>F\subseteq E</m>, then <m>f</m> is <m>F</m>-regular.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If <m>f</m> is <m>E</m>-regular and <m>F</m>-regular, then <m>f</m> is <m>E\cup F</m>-regular.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    If <m>f(x)\ge c\gt 0</m> for all <m>x\in E</m>, then <m>f</m> is <m>E</m>-regular.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </lemma>
+
+          <p>
+            The following is an example of a proof.
+          </p>
+
+
+          <proof>
+            <p>
+              Set <m>j(\nu)=\max(I\backslash a(\nu))-1</m>.
+              Then we have
+              <me>
+                \sum_{i\notin a(\nu)}t_i\sim t_{j(\nu)+1} =\prod^{j(\nu)}_{j=0}(t_{j+1}/t_j).
+              </me>
+              Hence we have
+              <md>
+                <mrow>\prod_\nu\biggl(\sum_{i\notin a(\nu)}t_i\biggr)^{\abs{a(\nu-1)}-\abs{a(\nu)}} \amp \sim\prod_\nu\prod^{j(\nu)}_{j=0} (t_{j+1}/t_j)^{\abs{a(\nu-1)}-\abs{a(\nu)}}</mrow>
+                <mrow> \amp =\prod_{j\ge 0}(t_{j+1}/t_j)^{ \sum_{j(\nu)\ge j}(\abs{a(\nu-1)}-\abs{a(\nu)})}</mrow>
+              </md>
+            </p>
+
+            <p>
+              By definition, we have <m>a(\nu(j))\supset c(j)</m>.
+              Hence, <m>\abs{c(j)}=n-j</m> implies (5.4).
+              If <m>c(j)\notin a</m>, <m>a(\nu(j))c(j)</m> and hence we have (5.5).
+            </p>
+          </proof>
+        </subsubsection>
+      </subsection>
+    </section>
+  </article>
+</pretext>

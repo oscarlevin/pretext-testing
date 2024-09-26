@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+<book xml:id="a0000000001" >
+    <title>AMS Journal Sample</title>
+
+    <!-- Include frontmatter -->
+    <!-- <xi:include href="./frontmatter.ptx" /> -->
+
+    <p>
+  <title>AMS Journal Sample</title> 
+</p>
+<p>
+  <author>
+  Author One
+</author> Department of Mathematics, Louisiana State University, Baton Rouge, Louisiana 70803 Department of Mathematics and Statistics, Case Western Reserve University, Cleveland, Ohio 43403 xyz@math.university.edu <acknowledgement>
+  The first author was supported in part by NSF Grant #000000.
+</acknowledgement> 
+</p>
+<p>
+  <author>
+  Author Two
+</author> Mathematical Research Section, School of Mathematical Sciences, Australian National University, Canberra ACT 2601, Australia two@maths.univ.edu.au <acknowledgement>
+  Support information for the second author.
+</acknowledgement> 
+</p>
+<p>
+  [2020]Primary 54C40, 14E20; Secondary 46E25, 20C20 
+</p>
+<p>
+  <date>
+  January 1, 2001 and, in revised form, June 22, 2001.
+</date> 
+</p>
+<p>
+  This paper is dedicated to our advisors. 
+</p>
+<p>
+  Differential geometry, algebraic geometry 
+</p>
+<abstract>
+   This paper is a sample prepared to illustrate the use of the American Mathematical Society's <latex /> document class <!-- \texttt --><c>amsart</c> and publication-specific variants of that class for AMS-<latex /> version 2. 
+</abstract>
+<frontmatter>
+<titlepage>
+<title>AMS Journal Sample</title>
+<author>Author One</author>
+<author>Author Two</author>
+<date>January 1, 2001 and, in revised form, June 22, 2001.</date>
+<acknowledgement>Support information for the second author.</acknowledgement>
+</titlepage>
+</frontmatter>
+
+
+  <xi:include href="section-This-is-an-unnumbered-first-level-section-head.ptx"/>
+  <xi:include href="section-This-is-a-numbered-first-level-section-head.ptx"/>
+  <xi:include href="section-Some-more-list-types.ptx"/>
+
+    <!-- Include backmatter -->
+   <!-- <xi:include href="./backmatter.ptx" /> -->
+
+  </book>
+</pretext>

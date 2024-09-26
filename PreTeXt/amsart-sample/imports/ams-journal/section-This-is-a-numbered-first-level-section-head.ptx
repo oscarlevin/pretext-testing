@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="a0000000003" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>This is a numbered first-level section head</title>
+
+    <p>
+   This is an example of a numbered first-level heading. 
+</p>
+<subsection xml:id="a0000000005">
+  <title>This is a numbered second-level section head</title>
+
+  <p>
+   This is an example of a numbered second-level heading. 
+</p>
+
+
+</subsection>
+<subsection xml:id="a0000000006">
+  <title>This is an unnumbered second-level section head</title>
+
+  <p>
+   This is an example of an unnumbered second-level heading. 
+</p>
+<subsection xml:id="a0000000007">
+  <title>This is a numbered third-level section head</title
+  
+  <p>
+   This is an example of a numbered third-level heading. 
+</p>
+
+</subsection>
+<subsection xml:id="a0000000008">
+  <title>This is an unnumbered third-level section head</title
+  
+  <p>
+   This is an example of an unnumbered third-level heading. 
+</p>
+<p>
+  <lemma>
+  <statement>
+    <p>
+  Let <m>f, g\in A(X)</m> and let <m>E</m>, <m>F</m> be cozero sets in <m>X</m>. 
+</p>
+<ol>
+  <li><p>
+  If <m>f</m> is <m>E</m>-regular and <m>F\subseteq E</m>, then <m>f</m> is <m>F</m>-regular. 
+</p>
+</li>
+  <li><p>
+  If <m>f</m> is <m>E</m>-regular and <m>F</m>-regular, then <m>f</m> is <m>E\cup F</m>-regular. 
+</p>
+</li>
+  <li><p>
+  If <m>f(x)\ge c{\gt}0</m> for all <m>x\in E</m>, then <m>f</m> is <m>E</m>-regular. 
+</p>
+</li>
+</ol>
+
+  </statement>
+</lemma> 
+</p>
+<p>
+  The following is an example of a proof. 
+</p>
+<p>
+  <proof>
+  
+</proof> Set <m>j(\nu )=\max (I\backslash a(\nu ))-1</m>. Then we have 
+</p>
+<me>
+    \sum_{i\notin a(\nu )}t_i\sim t_{j(\nu )+1} =\prod^{j(\nu )}_{j=0}(t_{j+1}/t_j).  
+</me>
+<p>
+   Hence we have 
+</p>
+<men id="a0000000009">
+    egin{equation}  \begin{split} \end{split} \prod_\nu \biggl(\sum_{i\notin a(\nu )}t_i\biggr)^{\lvert a(\nu -1)\rvert -\lvert a(\nu )\rvert } & \sim \prod_\nu \prod^{j(\nu )}_{j=0} (t_{j+1}/t_j)^{\lvert a(\nu -1)\rvert -\lvert a(\nu )\rvert }\\ & =\prod_{j\ge 0}(t_{j+1}/t_j)^{ \sum_{j(\nu )\ge j}(\lvert a(\nu -1)\rvert -\lvert a(\nu )\rvert )}. \end{split} \end{equatio
+</men>
+<p>
+   By definition, we have <m>a(\nu (j))\supset c(j)</m>. Hence, <m>\lvert c(j)\rvert =n-j</m> implies (5.4). If <m>c(j)\notin a</m>, <m>a(\nu (j))c(j)</m> and hence we have (5.5). <proof>
+  
+</proof> 
+</p>
+<blockquote>
+   This is an example of an <sq>extract</sq>. The magnetization <m>M_0</m> of the Ising model is related to the local state probability <m>P(a):M_0=P(1)-P(-1)</m>. The equivalences are shown in Table&#160;<xref ref="section-This-is-a-numbered-first-level-section-head.ptx#eqtable">1</xref>. 
+</blockquote>
+<table xml:id="a0000000010">
+   <caption>
+   
+</caption>  <me>
+    \begin{array}{|c|c|c|} \hline & {-\infty }& {+\infty }\\ \hline {f_+(x,k)}& e^{\sqrt{-1}kx}+s_{12}(k)e^{-\sqrt{-1}kx}& s_{11}(k)e^{\sqrt{-1}kx}\\ \hline {f_-(x,k)}& s_{22}(k)e^{-\sqrt{-1}kx}& e^{-\sqrt{-1}kx}+s_{21}(k)e^{\sqrt{-1}kx}\\ \end{array}  
+</me> 
+</table>
+<p>
+  <definition>
+  <statement>
+    <p>
+  This is an example of a <sq>definition</sq> element. For <m>f\in A(X)</m>, we define 
+</p>
+<men id="a0000000011">
+    egin{equation}  \mathcal{Z} (f)=\{ E\in Z[X]: \text{$f$ is $E^c$-regular}\} . \end{equatio
+</men>
+
+  </statement>
+</definition> 
+</p>
+<p>
+  <remark>
+  <statement>
+    <p>
+  This is an example of a <sq>remark</sq> element. For <m>f\in A(X)</m>, we define 
+</p>
+<men id="a0000000012">
+    egin{equation}  \mathcal{Z} (f)=\{ E\in Z[X]: \text{$f$ is $E^c$-regular}\} . \end{equatio
+</men>
+
+  </statement>
+</remark> 
+</p>
+<p>
+  <example>
+  <statement>
+    <p>
+  This is an example of an <sq>example</sq> element. For <m>f\in A(X)</m>, we define 
+</p>
+<men id="a0000000013">
+    egin{equation}  \mathcal{Z} (f)=\{ E\in Z[X]: \text{$f$ is $E^c$-regular}\} . \end{equatio
+</men>
+
+  </statement>
+</example> 
+</p>
+<p>
+  <xca>
+  <statement>
+    <p>
+  This is an example of the <!-- \texttt --><c>xca</c> environment. This environment is used for exercises which occur within a section. 
+</p>
+
+  </statement>
+</xca> 
+</p>
+<p>
+  The following is an example of a numbered list. 
+</p>
+<ol>
+  <li><p>
+  First item. In the case where in <m>G</m> there is a sequence of subgroups 
+</p>
+<me>
+    G = G_0, G_1, G_2, \dots , G_k = e  
+</me>
+<p>
+   such that each is an invariant subgroup of <m>G_i</m>. 
+</p>
+</li>
+  <li><p>
+  Second item. Its action on an arbitrary element <m>X = \lambda^\alpha X_\alpha </m> has the form 
+</p>
+<men id="eq:action">
+    egin{equation} \label{eq:action} [e^\alpha X_\alpha , X] = e^\alpha \lambda^\beta [X_\alpha X_\beta ] = e^\alpha c^\gamma_{\alpha \beta } \lambda^\beta X_\gamma , \end{equatio
+</men>
+<ol>
+  <li><p>
+  First subitem. 
+</p>
+<me>
+    - 2\psi_2(e) = c_{\alpha \gamma }^\delta c_{\beta \delta }^\gamma e^\alpha e^\beta .  
+</me>
+</li>
+  <li><p>
+  Second subitem. 
+</p>
+<ol>
+  <li><p>
+  First subsubitem. In the case where in <m>G</m> there is a sequence of subgroups 
+</p>
+<me>
+    G = G_0, G_1, G_2, \ldots , G_k = e  
+</me>
+<p>
+   such that each subgroup <m>G_{i+1}</m> is an invariant subgroup of <m>G_i</m> and each quotient group <m>G_{i+1}/G_{i}</m> is abelian, the group <m>G</m> is called <!-- \textit --><em>solvable</em>. 
+</p>
+</li>
+  <li><p>
+  Second subsubitem. 
+</p>
+</li>
+</ol>
+</li>
+  <li><p>
+  Third subitem. 
+</p>
+</li>
+</ol>
+</li>
+  <li><p>
+  Third item. 
+</p>
+</li>
+</ol>
+<p>
+  Here is an example of a cite. See <xref ref="A"/>. 
+</p>
+<p>
+  <theorem>
+  <statement>
+    <p>
+  This is an example of a theorem. 
+</p>
+
+  </statement>
+</theorem> 
+</p>
+<p>
+  <theorem>
+  <title>Marcus Theorem</title>
+  <statement>
+    <p>
+   This is an example of a theorem with a parenthetical note in the heading. 
+</p>
+
+  </statement>
+</theorem> 
+</p>
+<figure xml:id="firstfig">
+  <p>
+   <!-- \parbox --><!-- \begin{center} -->
+  <!-- \fbox{ --><!-- } -->
+<!-- \end{center} -->
+<!-- } --> 
+</p>
+<caption>
+  This is an example of a figure caption with text. 
+</caption>
+
+
+</figure>
+<figure >
+  <p>
+   <!-- \parbox --><!-- \begin{center} -->
+  <!-- \fbox{ --><!-- } -->
+<!-- \end{center} -->
+<!-- } --> 
+</p>
+<caption>
+   
+</caption>
+
+
+</figure>
+
+</subsection>
+
+
+</subsection>
+
+
+</section>

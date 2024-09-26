@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="a0000000002" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>This is an unnumbered first-level section head</title>
+
+    <p>
+   This is an example of an unnumbered first-level heading. 
+</p>
+<p>
+  *THIS IS A SPECIAL SECTION HEAD This is an example of a special section head<fn>Here is an example of a footnote. Notice that this footnote text is running on so that it can stand as an example of how a footnote with separate paragraphs should be written. 
+And here is the beginning of the second paragraph.</fn>. 
+</p>
+
+
+</section>

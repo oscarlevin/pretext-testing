@@ -1710,9 +1710,11 @@
     <!-- <xsl:text>{</xsl:text>
     <xsl:apply-templates select="." mode="type-name"/>
     <xsl:text>}</xsl:text> -->
-    <xsl:text>[</xsl:text>
-    <xsl:apply-templates select="." mode="title-full"/>
-    <xsl:text>]</xsl:text>
+    <xsl:if test="title">
+        <xsl:text>[</xsl:text>
+        <xsl:apply-templates select="." mode="title-full"/>
+        <xsl:text>]</xsl:text>
+    </xsl:if>
     <!-- <xsl:if test="&THEOREM-FILTER; or &AXIOM-FILTER;">
         <xsl:text>{</xsl:text>
         <xsl:apply-templates select="." mode="creator-full" />
