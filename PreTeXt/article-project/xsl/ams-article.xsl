@@ -34,13 +34,11 @@
 
     <xsl:call-template name="latex-preamble-generic" />
     <!-- parameterize preamble template with "page-geometry" template conditioned on self::article etc -->
-    <xsl:call-template name="title-page-info-article" />
+    <!-- <xsl:call-template name="title-page-info-article" /> -->
     <xsl:text>\begin{document}&#xa;&#xa;</xsl:text>
 
     <xsl:call-template name="topmatter-amsart"/>
         
-    <xsl:text>\maketitle&#xa;</xsl:text>
-
 
     <xsl:apply-templates />
 
@@ -87,6 +85,15 @@
             <xsl:text>\makeatother%&#xa;</xsl:text> -->
         </xsl:when>
     </xsl:choose>
+
+    <!-- use hyperref.  Note, this might need to be removed for some specific journals -->
+
+    <xsl:text>%% Hyperref should be here, but likes to be loaded late&#xa;</xsl:text>
+    <xsl:text>%%&#xa;</xsl:text>
+    <xsl:text>\usepackage{hyperref}</xsl:text>
+
+    <!-- Not sure what xreffont does, but this should undo it. -->
+    <xsl:text>\newcommand{\xreffont}{\relax}&#xa;</xsl:text>
 
 
     <!-- #################################### -->
@@ -1515,21 +1522,7 @@
 </xsl:template>
 
 
-<!-- Divisions -->
 
-<xsl:template match="section|subsection|subsubsection">
-    <xsl:text>\</xsl:text>
-    <xsl:value-of select="local-name(.)"/>
-    <xsl:text>{</xsl:text>
-    <xsl:apply-templates select="." mode="title-full"/>
-    <xsl:text>}&#xa;&#xa;</xsl:text>
-    <xsl:apply-templates/>
-    <xsl:text>% end of </xsl:text>
-    <xsl:value-of select="local-name(.)"/>
-    <xsl:text>: </xsl:text>
-    <xsl:apply-templates select="." mode="title-full"/>
-    <xsl:text>&#xa;&#xa;</xsl:text>
-</xsl:template>
 
 <!-- Includes an "event" for presentations -->
 <xsl:template name="topmatter-amsart">
@@ -1551,8 +1544,45 @@
         <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
     <xsl:text>\date{</xsl:text><xsl:apply-templates select="frontmatter/titlepage/date" /><xsl:text>}&#xa;</xsl:text>
+    <xsl:apply-templates select="frontmatter/abstract" mode="topmatter"/>
+    <xsl:text>&#xa;\maketitle&#xa;&#xa;</xsl:text>
+    <xsl:text>%%% Start of main document %%%&#xa;&#xa;</xsl:text>
 </xsl:template>
 
+<!-- Articles may have an abstract in the frontmatter. We -->
+<!-- accept the LaTeX article class approach and switch   -->
+<!-- to a localization of the heading just prior to use.  -->
+<xsl:template match="article/frontmatter/abstract" mode="topmatter">
+    <xsl:text>\begin{abstract}%%%&#xa;</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>\end{abstract}&#xa;</xsl:text>
+</xsl:template>
+
+<xsl:template match="article/frontmatter/abstract" />
+
+<!-- Override this template to not add extra maketitle -->
+<xsl:template match="article/frontmatter/titlepage"/>
+
+<!-- Divisions -->
+
+<xsl:template match="section|subsection|subsubsection">
+    <xsl:text>\</xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:text>{</xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>}&#xa;&#xa;</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>% end of </xsl:text>
+    <xsl:value-of select="local-name(.)"/>
+    <xsl:text>: </xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>&#xa;&#xa;</xsl:text>
+</xsl:template>
+
+<!-- Override introductions, leaving just bare text -->
+<xsl:template match="introduction">
+    <xsl:apply-templates />
+</xsl:template>
 
 <!-- Theorems, Proofs, Definitions, Examples, Exercises -->
 
@@ -1646,5 +1676,95 @@
 
 <!-- <xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options"/> -->
 
+<!-- Figures and images -->
+
+<!-- Figures, Listings -->
+<!-- 0: enviroment name may be prefixed with "sub" -->
+<!-- 1: caption text                               -->
+<!-- 2: standard identifier for cross-references   -->
+<!-- 3: empty, or a hard-coded number from -common -->
+<xsl:template match="figure|listing">
+    <xsl:if test="@landscape and $b-latex-print">
+      <xsl:text>\begin{sidewaysfigure}%&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:text>\begin{</xsl:text>
+    <xsl:apply-templates select="." mode="environment-name"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:apply-templates select="." mode="type-name"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:apply-templates select="." mode="caption-full"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:apply-templates select="." mode="unique-id"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:if test="$b-latex-hardcode-numbers">
+        <xsl:apply-templates select="." mode="number"/>
+    </xsl:if>
+    <xsl:text>}%&#xa;</xsl:text>
+    <!-- images have margins and widths, so centering not needed -->
+    <!-- likewise, sidebyside and tabular will center themselves -->
+    <!-- Eventually everything in a figure should control itself -->
+    <!-- TODO: need to investigate more (poem? etc)              -->
+    <xsl:if test="self::figure and not(image or sidebyside or tabular)">
+        <xsl:text>\centering&#xa;</xsl:text>
+    </xsl:if>
+    <!-- TODO: process meta-data, then restrict contents -->
+    <!-- multiple, program|console                       -->
+    <xsl:apply-templates select="*"/>
+    <!-- reserve space for the caption -->
+    <xsl:text>\tcblower&#xa;</xsl:text>
+    <xsl:text>\end{</xsl:text>
+    <xsl:apply-templates select="." mode="environment-name"/>
+    <xsl:text>}%&#xa;</xsl:text>
+    <xsl:if test="@landscape and $b-latex-print">
+      <xsl:text>\end{sidewaysfigure}%&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:apply-templates select="." mode="pop-footnote-text"/>
+</xsl:template>
+
+<!-- Tables, (Named) Lists -->
+<!-- 0: enviroment name may be prefixed with "sub"  -->
+<!-- 1: title text, bolded here, not in environment -->
+<!-- 2: standard identifier for cross-references    -->
+<!-- 3: empty, or a hard-coded number from -common  -->
+<xsl:template match="table|list">
+    <xsl:if test="@landscape and $b-latex-print">
+      <xsl:text>\begin{sidewaystable}%&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:text>\begin{</xsl:text>
+    <xsl:apply-templates select="." mode="environment-name"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:apply-templates select="." mode="type-name"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:text>\textbf{</xsl:text>
+    <xsl:apply-templates select="." mode="title-full"/>
+    <xsl:text>}</xsl:text>
+    <xsl:text>}{</xsl:text>
+    <xsl:apply-templates select="." mode="unique-id"/>
+    <xsl:text>}{</xsl:text>
+    <xsl:if test="$b-latex-hardcode-numbers">
+        <xsl:apply-templates select="." mode="number"/>
+    </xsl:if>
+    <xsl:text>}%&#xa;</xsl:text>
+    <!-- A "list" has an introduction/conclusion, with a       -->
+    <!-- list of some type in-between, and these will all      -->
+    <!-- automatically word-wrap to fill the available width.  -->
+    <!-- TODO: process meta-data, then restrict contents -->
+    <!-- tabular, introduction|list|conclusion           -->
+    <xsl:apply-templates select="*"/>
+    <xsl:variable name="fig-placement">
+        <xsl:apply-templates select="." mode="figure-placement"/>
+    </xsl:variable>
+    <!-- title goes in lower part when in a sidebyside -->
+    <xsl:if test="($fig-placement = 'subnumber') or ($fig-placement = 'panel')">
+        <xsl:text>\tcblower&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:text>\end{</xsl:text>
+    <xsl:apply-templates select="." mode="environment-name"/>
+    <xsl:text>}%&#xa;</xsl:text>
+    <xsl:if test="@landscape and $b-latex-print">
+        <xsl:text>\end{sidewaystable}%&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:apply-templates select="." mode="pop-footnote-text"/>
+</xsl:template>
 
 </xsl:stylesheet>
