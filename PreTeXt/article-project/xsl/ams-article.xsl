@@ -1710,11 +1710,8 @@
     <!-- <xsl:text>{</xsl:text>
     <xsl:apply-templates select="." mode="type-name"/>
     <xsl:text>}</xsl:text> -->
-    <xsl:if test="title">
-        <xsl:text>[</xsl:text>
-        <xsl:apply-templates select="." mode="title-full"/>
-        <xsl:text>]</xsl:text>
-    </xsl:if>
+    <xsl:call-template name="env-title"/>
+
     <!-- <xsl:if test="&THEOREM-FILTER; or &AXIOM-FILTER;">
         <xsl:text>{</xsl:text>
         <xsl:apply-templates select="." mode="creator-full" />
@@ -1724,6 +1721,22 @@
     <xsl:text>\label{</xsl:text>
     <xsl:apply-templates select="." mode="unique-id"/>
     <xsl:text>}</xsl:text>
+</xsl:template>
+
+<xsl:template name="env-title">
+    <xsl:if test="title|creator">
+        <xsl:text>[</xsl:text>
+        <xsl:if test="title">
+            <xsl:apply-templates select="." mode="title-full"/>
+        </xsl:if>
+        <xsl:if test="(title) and (creator)">
+            <xsl:text>&#160;</xsl:text>
+        </xsl:if>
+        <xsl:if test="creator">
+            <xsl:apply-templates select="." mode="creator-full"/>
+        </xsl:if>
+        <xsl:text>]</xsl:text>
+    </xsl:if>
 </xsl:template>
 
 <!-- <xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options"/> -->

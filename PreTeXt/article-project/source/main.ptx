@@ -189,6 +189,7 @@
       </p>
 
       <theorem>
+        <creator>Folklore</creator>
         <p>
           Any ordered field <m>(F, \le)</m> has a unique (up to isomorphism) real closure.
         </p>
@@ -211,6 +212,10 @@
       </p>
 
       <theorem>
+        <title>Theorem Title</title>
+        <creator>Levin <xref ref="levin"/></creator>
+        
+        
         <p>
           Let <m>p(x)</m> be any polynomial with coefficients in a real closed field <m>R</m>.
           Then there is a sequence of polynomials
