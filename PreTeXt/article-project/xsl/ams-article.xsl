@@ -30,53 +30,21 @@
     <xsl:if test="$b-latex-draft-mode" >
         <xsl:text>draft,</xsl:text>
     </xsl:if>
-    <xsl:text>]{</xsl:text>
-    <xsl:value-of select="$document-class-prefix" />
-    <xsl:text>amsart}&#xa;</xsl:text>
+    <xsl:text>]{amsart}&#xa;&#xa;</xsl:text>
+
     <xsl:call-template name="latex-preamble-generic" />
     <!-- parameterize preamble template with "page-geometry" template conditioned on self::article etc -->
     <xsl:call-template name="title-page-info-article" />
-    <xsl:text>\begin{document}&#xa;</xsl:text>
-    <xsl:call-template name="text-alignment"/>
-    <xsl:call-template name="front-cover"/>
-    <!-- Target for xref to top-level element -->
-    <!-- immediately, or first in ToC         -->
-    <xsl:choose>
-        <xsl:when test="$b-has-toc">
-            <xsl:text>%% Target for xref to top-level element is ToC&#xa;</xsl:text>
-            <xsl:text>\addtocontents{toc}{</xsl:text>
-            <xsl:if test="$b-pageref">
-                <xsl:text>\protect\label{</xsl:text>
-                <xsl:apply-templates select="." mode="unique-id" />
-                <xsl:text>}</xsl:text>
-            </xsl:if>
-            <xsl:text>\protect\hypertarget{</xsl:text>
-            <xsl:apply-templates select="." mode="unique-id" />
-            <xsl:text>}{}</xsl:text>
-            <xsl:text>}&#xa;</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:text>%% Target for xref to top-level element is document start&#xa;</xsl:text>
-            <xsl:if test="$b-pageref">
-                <xsl:text>\label{</xsl:text>
-                <xsl:apply-templates select="." mode="unique-id" />
-                <xsl:text>}</xsl:text>
-            </xsl:if>
-            <xsl:text>\hypertarget{</xsl:text>
-            <xsl:apply-templates select="." mode="unique-id" />
-            <xsl:text>}{}&#xa;</xsl:text>
-        </xsl:otherwise>
-    </xsl:choose>
-    <!-- If no frontmatter/titlepage, then title is not printed       -->
-    <!-- so we make sure it happens here, else triggered by titlepage -->
-    <!-- If a title, we know it is page 1, so use empty style -->
-    <xsl:if test="title and not(frontmatter/titlepage)">
-        <xsl:text>\maketitle&#xa;</xsl:text>
-        <xsl:text>\thispagestyle{empty}&#xa;</xsl:text>
-    </xsl:if>
+    <xsl:text>\begin{document}&#xa;&#xa;</xsl:text>
+
+    <xsl:call-template name="topmatter-amsart"/>
+        
+    <xsl:text>\maketitle&#xa;</xsl:text>
+
+
     <xsl:apply-templates />
-    <xsl:call-template name="back-cover"/>
-    <xsl:text>\end{document}&#xa;</xsl:text>
+
+    <xsl:text>\end{document}&#xa;$#xa;</xsl:text>
 </xsl:template>
 
 
@@ -119,9 +87,14 @@
             <xsl:text>\makeatother%&#xa;</xsl:text> -->
         </xsl:when>
     </xsl:choose>
-    <!-- Following need to be mature, robust, powerful, flexible, well-maintained -->
+
+
+    <!-- #################################### -->
+    <!-- Theorem environments                 -->
+    <!-- #################################### -->
     
-    
+    <xsl:call-template name="latex-theorem-environments"/>
+
 <!--     
     <xsl:text>%% Default LaTeX packages&#xa;</xsl:text>
     <xsl:text>%%   1.  always employed (or nearly so) for some purpose, or&#xa;</xsl:text>
@@ -572,149 +545,6 @@
     <xsl:text>%%&#xa;</xsl:text>
  -->
 
-
-    <!-- <xsl:text>%% Division Titles, and Page Headers/Footers&#xa;</xsl:text> -->
-
-    <!-- The final mandatory argument of the titlesec \titleformat  -->
-    <!-- command is the "before-code", meaning before the text of   -->
-    <!-- the title.  For greater flexibility, the text of the title -->
-    <!-- can be referenced *explicitly* by macro parameter #1 in    -->
-    <!-- whatever code is placed into this argument.  This is       -->
-    <!-- accomplished with the "explicit" argument.                 -->
-    <!-- In particular, the numberless, chapter-level "Index" and   -->
-    <!-- "Contents" are generated semi-automatically with a macro,  -->
-    <!-- so PTX never sees the title (but can use built-in LaTeX    -->
-    <!-- facilities to change it to another language)               -->
-    <!-- "pagestyles" option is equivalent to loading the           -->
-    <!-- "titleps" package and have it execute cooperatively        -->
-
-
-<!-- 
-    <xsl:text>%% titlesec package, loading "titleps" package cooperatively&#xa;</xsl:text>
-    <xsl:text>%% See code comments about the necessity and purpose of "explicit" option.&#xa;</xsl:text>
-    <xsl:text>%% The "newparttoc" option causes a consistent entry for parts in the ToC &#xa;</xsl:text>
-    <xsl:text>%% file, but it is only effective if there is a \titleformat for \part.&#xa;</xsl:text>
-    <xsl:text>%% "pagestyles" loads the  titleps  package cooperatively.&#xa;</xsl:text>
-    <xsl:text>\usepackage[explicit, newparttoc, pagestyles]{titlesec}&#xa;</xsl:text>
-    <xsl:text>%% The companion titletoc package for the ToC.&#xa;</xsl:text>
-    <xsl:text>\usepackage{titletoc}&#xa;</xsl:text>
-     -->
-    
-    <!-- Necessary fix for chapter/appendix transition              -->
-    <!-- From titleps package author, 2013 post                     -->
-    <!-- https://tex.stackexchange.com/questions/117222/            -->
-    <!-- issue-with-titlesec-page-styles-and-appendix-in-book-class -->
-    <!-- Maybe this is a problem for an "article" as well?  Hints:  -->
-    <!-- https://tex.stackexchange.com/questions/319581/   issue-   -->
-    <!-- with-titlesec-section-styles-and-appendix-in-article-class -->
-
-    <!--     
-    <xsl:if test="$b-is-book">
-        <xsl:text>%% Fixes a bug with transition from chapters to appendices in a "book"&#xa;</xsl:text>
-        <xsl:text>%% See generating XSL code for more details about necessity&#xa;</xsl:text>
-        <xsl:text>\newtitlemark{\chaptertitlename}&#xa;</xsl:text>
-    </xsl:if>
-    <xsl:text>%% begin: customizations of page styles via the modal "titleps-style" template&#xa;</xsl:text>
-    <xsl:text>%% Designed to use commands from the LaTeX "titleps" package&#xa;</xsl:text>
-    <xsl:apply-templates select="$document-root" mode="titleps-style"/>
-    <xsl:text>%% end: customizations of page styles via the modal "titleps-style" template&#xa;</xsl:text>
-    <xsl:text>%%&#xa;</xsl:text>
-    
-    <xsl:text>%% Create globally-available macros to be provided for style writers&#xa;</xsl:text>
-    <xsl:text>%% These are redefined for each occurence of each division&#xa;</xsl:text>
-    <xsl:text>\newcommand{\divisionnameptx}{\relax}%&#xa;</xsl:text>
-    <xsl:text>\newcommand{\titleptx}{\relax}%&#xa;</xsl:text>
-    <xsl:text>\newcommand{\subtitleptx}{\relax}%&#xa;</xsl:text>
-    <xsl:text>\newcommand{\shortitleptx}{\relax}%&#xa;</xsl:text>
-    <xsl:text>\newcommand{\authorsptx}{\relax}%&#xa;</xsl:text>
-    <xsl:text>\newcommand{\epigraphptx}{\relax}%&#xa;</xsl:text>
- -->
-
-
-    <!-- Create xparse enviroments for each PTX division.          -->
-    <!-- The pervasive environments need qualification so          -->
-    <!-- that the right LaTeX divisions are created.               -->
-    <!-- These look like environments like "solutions-subsection"  -->
-    <!-- We want one (and only one) of each type that is necessary -->
-    <!-- For each line below think CAREFULLY about the level       -->
-    <!-- created, it is one level below what it might appear       -->
-    <!-- <xsl:variable name="division-reps" select="
-        ($document-root//acknowledgement)[1]|
-        ($document-root//foreword)[1]|
-        ($document-root//preface)[1]|
-        ($document-root//part)[1]|
-        ($document-root//chapter)[1]|
-        ($document-root//section)[1]|
-        ($document-root//subsection)[1]|
-        ($document-root//subsubsection)[1]|
-        ($document-root//subsubsection)[1]|
-        ($root/book/backmatter/appendix|$root/article/backmatter/appendix)[1]|
-        ($document-root//index)[1]|
-        ($document-root//chapter/exercises|$root/book/backmatter/appendix/exercises|$root/article/exercises)[1]|
-        ($document-root//section/exercises|$root/article/backmatter/appendix/exercises)[1]|
-        ($document-root//subsection/exercises)[1]|
-        ($document-root//subsubsection/exercises)[1]|
-        ($root/book/backmatter/solutions)[1]|
-        ($document-root//chapter/solutions|$root/article/solutions|$root/article/backmatter/solutions)[1]|
-        ($document-root//section/solutions)[1]|
-        ($document-root//subsection/solutions)[1]|
-        ($document-root//subsubsection/solutions)[1]|
-        ($document-root//chapter/worksheet|$root/article/worksheet)[1]|
-        ($document-root//section/worksheet)[1]|
-        ($document-root//subsection/worksheet)[1]|
-        ($document-root//subsubsection/worksheet)[1]|
-        ($document-root//chapter/reading-questions|$root/article/reading-questions)[1]|
-        ($document-root//section/reading-questions)[1]|
-        ($document-root//subsection/reading-questions)[1]|
-        ($document-root//subsubsection/reading-questions)[1]|
-        ($root/book/backmatter/glossary)[1]|
-        ($document-root//chapter/glossary|$root/article/backmatter/glossary|$root/book/backmatter/appendix/glossary)[1]|
-        ($document-root//section/glossary|$root/article/backmatter/appendix/glossary)[1]|
-        ($document-root//subsection/glossary)[1]|
-        ($document-root//subsubsection/glossary)[1]|
-        ($root/book/backmatter/references)[1]|
-        ($document-root//chapter/references|$root/article/references|$root/article/backmatter/references|$root/book/backmatter/appendix/references)[1]|
-        ($document-root//section/references|$root/article/backmatter/appendix/references)[1]|
-        ($document-root//subsection/references)[1]|
-        ($document-root//subsubsection/references)[1]"/>
-    <xsl:text>%% Create environments for possible occurences of each division&#xa;</xsl:text>
-    <xsl:for-each select="$division-reps">
-        <xsl:apply-templates select="." mode="environment"/>
-    </xsl:for-each>
-    <xsl:text>%%&#xa;</xsl:text>
- -->
-
-    <!-- <xsl:text>%% Styles for six traditional LaTeX divisions&#xa;</xsl:text> -->
-   
-    <!-- Create six title styles, part to paragraph     -->
-    <!-- NB: paragraph is like a "subsubsubsection"     -->
-    <!-- "titlesec" works on a level basis, so          -->
-    <!-- we just build all six named styles             -->
-    <!-- N.B.: we are using the LaTeX "subparagraph"    -->
-    <!-- traditional division for a PTX "paragraphs",   -->
-    <!-- but perhaps we can fake that with a tcolorbox, -->
-    <!-- since we don't allow it to be styled.          -->
- 
-<!--  
-    <xsl:call-template name="titlesec-part-style"/>
-    <xsl:call-template name="titlesec-chapter-style"/>
-    <xsl:call-template name="titlesec-section-style"/>
-    <xsl:call-template name="titlesec-subsection-style"/>
-    <xsl:call-template name="titlesec-subsubsection-style"/>
-    <xsl:call-template name="titlesec-paragraph-style"/>
-    <xsl:text>%%&#xa;</xsl:text>
-    <xsl:text>%% Styles for five traditional LaTeX divisions&#xa;</xsl:text>
--->
-    <!-- Create five title styles, part to subsubsection -->
- 
-<!--  
-    <xsl:call-template name="titletoc-part-style"/>
-    <xsl:call-template name="titletoc-chapter-style"/>
-    <xsl:call-template name="titletoc-section-style"/>
-    <xsl:call-template name="titletoc-subsection-style"/>
-    <xsl:call-template name="titletoc-subsubsection-style"/>
-    <xsl:text>%%&#xa;</xsl:text>
- -->
 
 
     <!-- ############### -->
@@ -1701,9 +1531,86 @@
     <xsl:text>&#xa;&#xa;</xsl:text>
 </xsl:template>
 
+<!-- Includes an "event" for presentations -->
+<xsl:template name="topmatter-amsart">
+    <xsl:text>%% Top matter information&#xa;&#xa;</xsl:text>
+    <xsl:text>\title{</xsl:text>
+    <xsl:apply-templates select="." mode="title-full" />
+    <xsl:if test="subtitle">
+        <xsl:text>\\&#xa;</xsl:text>
+        <!-- Trying to match author fontsize -->
+        <xsl:text>{\large </xsl:text>
+        <xsl:apply-templates select="." mode="subtitle" />
+        <xsl:text>}</xsl:text>
+    </xsl:if>
+    <xsl:text>}&#xa;</xsl:text>
+    <xsl:if test="frontmatter/titlepage/author or frontmatter/titlepage/editor">
+        <xsl:text>\author{</xsl:text>
+        <xsl:apply-templates select="frontmatter/titlepage/author" mode="article-info"/>
+        <xsl:apply-templates select="frontmatter/titlepage/editor" mode="article-info"/>
+        <xsl:text>}&#xa;</xsl:text>
+    </xsl:if>
+    <xsl:text>\date{</xsl:text><xsl:apply-templates select="frontmatter/titlepage/date" /><xsl:text>}&#xa;</xsl:text>
+</xsl:template>
+
 
 <!-- Theorems, Proofs, Definitions, Examples, Exercises -->
 
+<!-- Theorems have statement/proof structure                    -->
+<!-- Definitions have notation, which is handled elsewhere      -->
+<!-- Examples have no structure, or have statement and solution -->
+<!-- Exercises have hints, answers and solutions                -->
+
+<!-- For preamble -->
+<!-- For now, just include everything -->
+<!-- TODO: limit which ones to include by what is in document? -->
+<xsl:template name="latex-theorem-environments">
+    <xsl:text>%% Theorem-like environments&#xa;</xsl:text>
+    <xsl:text>\theoremstyle{plain}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{theorem}{Theorem}[section]&#xa;</xsl:text>
+    <xsl:text>\newtheorem{lemma}[theorem]{Lemma}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{corollary}[theorem]{Corollary}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{proposition}[theorem]{Proposition}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{claim}[theorem]{Claim}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{fact}[theorem]{Fact}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{identity}[theorem]{Identity}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{conjecture}[theorem]{Conjecture}&#xa;</xsl:text>
+    <xsl:text>&#xa;</xsl:text>
+
+    <xsl:text>\theoremstyle{definition}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{definition}[theorem]{Definition}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{axiom}[theorem]{Axiom}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{principle}[theorem]{Principle}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{heuristic}[theorem]{Heuristic}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{hypothesis}[theorem]{Hypothesis}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{assumption}[theorem]{Assumption}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{openproblem}[theorem]{Open problem}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{openquestion}[theorem]{Open question}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{algorithm}[theorem]{Algorithm}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{question}[theorem]{Question}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{activity}[theorem]{Activity}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{exercise}[theorem]{Exercise}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{investigation}[theorem]{Investigation}&#xa;</xsl:text>    
+    <xsl:text>\newtheorem{exploration}[theorem]{Exploration}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{problem}[theorem]{Problem}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{example}[theorem]{Example}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{project}[theorem]{Project}&#xa;</xsl:text>
+    <xsl:text>&#xa;</xsl:text>
+    
+    <xsl:text>\theoremstyle{remark}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{convention}[theorem]{Convention}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{warning}[theorem]{Warning}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{remark}[theorem]{Remark}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{insight}[theorem]{Insight}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{note}[theorem]{Note}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{observation}[theorem]{Observation}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{computation}[theorem]{Computation}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{technology}[theorem]{Technology}&#xa;</xsl:text>
+    <xsl:text>\newtheorem{data}[theorem]{Data}&#xa;</xsl:text>
+    <xsl:text>&#xa;</xsl:text>
+</xsl:template>
+
+<!-- In document -->
 <xsl:template match="&THEOREM-LIKE;|&AXIOM-LIKE;|&DEFINITION-LIKE;|&REMARK-LIKE;|&COMPUTATION-LIKE;|&OPENPROBLEM-LIKE;|&EXAMPLE-LIKE;|&PROJECT-LIKE;|&ASIDE-LIKE;|exercise[boolean(&INLINE-EXERCISE-FILTER;)]|assemblage" mode="block-options">
     <!-- <xsl:text>{</xsl:text>
     <xsl:apply-templates select="." mode="type-name"/>
