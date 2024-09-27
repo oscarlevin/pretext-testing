@@ -94,6 +94,9 @@
 
     <!-- Not sure what xreffont does, but this should undo it. -->
     <xsl:text>\newcommand{\xreffont}{\relax}&#xa;</xsl:text>
+    <!-- This is added to tabulars.  TODO: fix it properly. -->
+    <xsl:text>\newcommand{\tabularfont}{\relax}&#xa;</xsl:text>
+
 
 
     <!-- #################################### -->
@@ -855,53 +858,53 @@
     <!-- </xsl:if> -->
 <!--  -->
     <!-- Tables -->
-    <!-- <xsl:if test="$document-root//tabular"> -->
-        <!-- <xsl:text>%% For improved tables&#xa;</xsl:text> -->
-        <!-- <xsl:text>\usepackage{array}&#xa;</xsl:text> -->
-        <!-- <xsl:text>%% Some extra height on each row is desirable, especially with horizontal rules&#xa;</xsl:text> -->
-        <!-- <xsl:text>%% Increment determined experimentally&#xa;</xsl:text> -->
-        <!-- <xsl:text>\setlength{\extrarowheight}{0.2ex}&#xa;</xsl:text> -->
-        <!-- <xsl:text>%% Define variable thickness horizontal rules, full and partial&#xa;</xsl:text> -->
-        <!-- <xsl:text>%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package&#xa;</xsl:text> -->
+    <xsl:if test="$document-root//tabular">
+        <xsl:text>%% For improved tables&#xa;</xsl:text>
+        <xsl:text>\usepackage{array}&#xa;</xsl:text>
+        <xsl:text>%% Some extra height on each row is desirable, especially with horizontal rules&#xa;</xsl:text>
+        <xsl:text>%% Increment determined experimentally&#xa;</xsl:text>
+        <xsl:text>\setlength{\extrarowheight}{0.2ex}&#xa;</xsl:text>
+        <xsl:text>%% Define variable thickness horizontal rules, full and partial&#xa;</xsl:text>
+        <xsl:text>%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package&#xa;</xsl:text>
         <!-- http://tex.stackexchange.com/questions/119153/table-with-different-rule-widths -->
-        <!-- <xsl:text>\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}&#xa;</xsl:text> -->
+        <xsl:text>\newcommand{\hrulethin}  {\noalign{\hrule height 0.04em}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\hrulemedium}{\noalign{\hrule height 0.07em}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\hrulethick} {\noalign{\hrule height 0.11em}}&#xa;</xsl:text>
         <!-- http://tex.stackexchange.com/questions/24549/horizontal-rule-with-adjustable-height-behaving-like-clinen-m -->
         <!-- Could preserve/restore \arrayrulewidth on entry/exit to tabular -->
         <!-- But we'll get cleaner source with this built into macros        -->
         <!-- Could condition \setlength debacle on the use of extpfeil       -->
         <!-- arrows (see discussion below)                                   -->
-        <!-- <xsl:text>%% We preserve a copy of the \setlength package before other&#xa;</xsl:text> -->
-        <!-- <xsl:text>%% packages (extpfeil) get a chance to load packages that redefine it&#xa;</xsl:text> -->
-        <!-- <xsl:text>\let\oldsetlength\setlength&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newlength{\Oldarrayrulewidth}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\crulethin}[1]%&#xa;</xsl:text> -->
-        <!-- <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\crulemedium}[1]%&#xa;</xsl:text> -->
-        <!-- <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcommand{\crulethick}[1]%&#xa;</xsl:text> -->
-        <!-- <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%&#xa;</xsl:text> -->
-        <!-- <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}&#xa;</xsl:text> -->
+        <xsl:text>%% We preserve a copy of the \setlength package before other&#xa;</xsl:text>
+        <xsl:text>%% packages (extpfeil) get a chance to load packages that redefine it&#xa;</xsl:text>
+        <xsl:text>\let\oldsetlength\setlength&#xa;</xsl:text>
+        <xsl:text>\newlength{\Oldarrayrulewidth}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\crulethin}[1]%&#xa;</xsl:text>
+        <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}%&#xa;</xsl:text>
+        <xsl:text>\newcommand{\crulemedium}[1]%&#xa;</xsl:text>
+        <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}&#xa;</xsl:text>
+        <xsl:text>\newcommand{\crulethick}[1]%&#xa;</xsl:text>
+        <xsl:text>{\noalign{\global\oldsetlength{\Oldarrayrulewidth}{\arrayrulewidth}}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%&#xa;</xsl:text>
+        <xsl:text>\noalign{\global\oldsetlength{\arrayrulewidth}{\Oldarrayrulewidth}}}&#xa;</xsl:text>
         <!-- http://tex.stackexchange.com/questions/119153/table-with-different-rule-widths -->
-        <!-- <xsl:text>%% Single letter column specifiers defined via array package&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcolumntype{A}{!{\vrule width 0.04em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcolumntype{B}{!{\vrule width 0.07em}}&#xa;</xsl:text> -->
-        <!-- <xsl:text>\newcolumntype{C}{!{\vrule width 0.11em}}&#xa;</xsl:text> -->
+        <xsl:text>%% Single letter column specifiers defined via array package&#xa;</xsl:text>
+        <xsl:text>\newcolumntype{A}{!{\vrule width 0.04em}}&#xa;</xsl:text>
+        <xsl:text>\newcolumntype{B}{!{\vrule width 0.07em}}&#xa;</xsl:text>
+        <xsl:text>\newcolumntype{C}{!{\vrule width 0.11em}}&#xa;</xsl:text>
         <!-- naked tabulars work best in a tcolorbox -->
         <!-- <xsl:text>%% tcolorbox to place tabular outside of a sidebyside&#xa;</xsl:text> -->
         <!-- <xsl:text>\tcbset{ tabularboxstyle/.style={bwminimalstyle,} }&#xa;</xsl:text> -->
         <!-- <xsl:text>\newtcolorbox{tabularbox}[3]{tabularboxstyle, left skip=#1\linewidth, width=#2\linewidth,}&#xa;</xsl:text> -->
-    <!-- </xsl:if> -->
-    <!-- <xsl:if test="$document-root//cell/line"> -->
-        <!-- <xsl:text>\newcommand{\tablecelllines}[3]%&#xa;</xsl:text> -->
-        <!-- <xsl:text>{\begin{tabular}[#2]{@{}#1@{}}#3\end{tabular}}&#xa;</xsl:text> -->
-    <!-- </xsl:if> -->
+    </xsl:if>
+    <xsl:if test="$document-root//cell/line">
+        <xsl:text>\newcommand{\tablecelllines}[3]%&#xa;</xsl:text>
+        <xsl:text>{\begin{tabular}[#2]{@{}#1@{}}#3\end{tabular}}&#xa;</xsl:text>
+    </xsl:if>
     <!-- Numbering Footnotes -->
     <!-- <xsl:if test="$document-root//fn"> -->
         <!-- <xsl:text>%% Footnote Numbering&#xa;</xsl:text> -->
@@ -1579,10 +1582,16 @@
     <xsl:text>&#xa;&#xa;</xsl:text>
 </xsl:template>
 
-<!-- Override introductions, leaving just bare text -->
-<xsl:template match="introduction">
+<!-- Override introductions/conclusions, leaving just bare text -->
+<xsl:template match="introduction|conclusion">
     <xsl:apply-templates />
 </xsl:template>
+
+<!-- We just kill References for now; but latter we will do "bibliography" -->
+<xsl:template match="references">
+
+</xsl:template>
+
 
 <!-- Theorems, Proofs, Definitions, Examples, Exercises -->
 
@@ -1678,47 +1687,62 @@
 
 <!-- Figures and images -->
 
-<!-- Figures, Listings -->
+<!-- Figures -->
 <!-- 0: enviroment name may be prefixed with "sub" -->
 <!-- 1: caption text                               -->
 <!-- 2: standard identifier for cross-references   -->
 <!-- 3: empty, or a hard-coded number from -common -->
-<xsl:template match="figure|listing">
-    <xsl:if test="@landscape and $b-latex-print">
+<xsl:template match="figure">
+    <!-- <xsl:if test="@landscape and $b-latex-print">
       <xsl:text>\begin{sidewaysfigure}%&#xa;</xsl:text>
+    </xsl:if> -->
+    <xsl:text>\begin{figure}&#xa;</xsl:text>
+    <xsl:apply-templates select="*"/>
+    <xsl:if test="caption">
+        <xsl:text>\caption{</xsl:text>
+        <xsl:apply-templates select="." mode="caption-full"/>
+        <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
-    <xsl:text>\begin{</xsl:text>
-    <xsl:apply-templates select="." mode="environment-name"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:apply-templates select="." mode="type-name"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:apply-templates select="." mode="caption-full"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:apply-templates select="." mode="unique-id"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:if test="$b-latex-hardcode-numbers">
-        <xsl:apply-templates select="." mode="number"/>
+    <xsl:if test="xml:id|label">
+        <xsl:text>\label{</xsl:text>
+            <xsl:apply-templates select="." mode="unique-id"/>
+        <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
-    <xsl:text>}%&#xa;</xsl:text>
     <!-- images have margins and widths, so centering not needed -->
     <!-- likewise, sidebyside and tabular will center themselves -->
     <!-- Eventually everything in a figure should control itself -->
     <!-- TODO: need to investigate more (poem? etc)              -->
-    <xsl:if test="self::figure and not(image or sidebyside or tabular)">
+    <!-- <xsl:if test="self::figure and not(image or sidebyside or tabular)">
         <xsl:text>\centering&#xa;</xsl:text>
-    </xsl:if>
+    </xsl:if> -->
     <!-- TODO: process meta-data, then restrict contents -->
     <!-- multiple, program|console                       -->
-    <xsl:apply-templates select="*"/>
     <!-- reserve space for the caption -->
-    <xsl:text>\tcblower&#xa;</xsl:text>
-    <xsl:text>\end{</xsl:text>
-    <xsl:apply-templates select="." mode="environment-name"/>
-    <xsl:text>}%&#xa;</xsl:text>
-    <xsl:if test="@landscape and $b-latex-print">
+    <xsl:text>\end{figure}&#xa;&#xa;</xsl:text>
+    <!-- <xsl:if test="@landscape and $b-latex-print">
       <xsl:text>\end{sidewaysfigure}%&#xa;</xsl:text>
-    </xsl:if>
+    </xsl:if> -->
     <xsl:apply-templates select="." mode="pop-footnote-text"/>
+</xsl:template>
+
+<xsl:template match="image">
+    <xsl:apply-templates select="." mode="image-inclusion"/>
+</xsl:template>
+
+<!-- Override the default -->
+<!-- LaTeX Image Code (tikz, pgfplots, pstricks, etc) -->
+<!-- Clean indentation, drop into LaTeX               -->
+<!-- See "latex-image-preamble" for critical parts    -->
+<!-- Side-By-Side scaling happens there, could be here -->
+<!-- TODO: maybe these should be split into current v. legacy -->
+<xsl:template match="image[latex-image]" mode="image-inclusion">
+    <!-- tikz images go into a tcolorbox where \linewidth is reset. -->
+    <!-- grouping reins in the scope of any local graphics settings -->
+    <!-- we resize what tikz produces, to fill a containing box     -->
+    <!-- changes to accomodate resizing to fit requested layouts -->
+    <xsl:text>&#xa;</xsl:text>
+    <xsl:apply-templates select="latex-image"/>
+    <xsl:text>&#xa;</xsl:text>
 </xsl:template>
 
 <!-- Tables, (Named) Lists -->
@@ -1726,45 +1750,61 @@
 <!-- 1: title text, bolded here, not in environment -->
 <!-- 2: standard identifier for cross-references    -->
 <!-- 3: empty, or a hard-coded number from -common  -->
-<xsl:template match="table|list">
-    <xsl:if test="@landscape and $b-latex-print">
+<xsl:template match="table">
+    <!-- <xsl:if test="@landscape and $b-latex-print">
       <xsl:text>\begin{sidewaystable}%&#xa;</xsl:text>
+    </xsl:if> -->
+    <xsl:text>&#xa;\begin{table}&#xa;</xsl:text>
+    <xsl:if test="title">
+        <xsl:text>\caption{</xsl:text>
+        <xsl:apply-templates select="." mode="title-full"/>
+        <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
-    <xsl:text>\begin{</xsl:text>
-    <xsl:apply-templates select="." mode="environment-name"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:apply-templates select="." mode="type-name"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:text>\textbf{</xsl:text>
-    <xsl:apply-templates select="." mode="title-full"/>
-    <xsl:text>}</xsl:text>
-    <xsl:text>}{</xsl:text>
-    <xsl:apply-templates select="." mode="unique-id"/>
-    <xsl:text>}{</xsl:text>
-    <xsl:if test="$b-latex-hardcode-numbers">
-        <xsl:apply-templates select="." mode="number"/>
+    <xsl:if test="xml:id|label">
+        <xsl:text>\label{</xsl:text>
+        <xsl:apply-templates select="." mode="unique-id"/>
+        <xsl:text>}&#xa;</xsl:text>
     </xsl:if>
-    <xsl:text>}%&#xa;</xsl:text>
+    <xsl:apply-templates select="*"/>
+    <xsl:text>\end{table}&#xa;&#xa;</xsl:text>
+    <!-- <xsl:text></xsl:text> -->
+    <!-- <xsl:apply-templates select="." mode="environment-name"/> -->
+    <!-- <xsl:text>}{</xsl:text> -->
+    <!-- <xsl:apply-templates select="." mode="type-name"/> -->
+    <!-- <xsl:text>}{</xsl:text> -->
+    <!-- <xsl:text>\textbf{</xsl:text> -->
+    <!-- <xsl:apply-templates select="." mode="title-full"/> -->
+    <!-- <xsl:text>}</xsl:text> -->
+    <!-- <xsl:text>}{</xsl:text> -->
+    <!-- <xsl:apply-templates select="." mode="unique-id"/> -->
+    <!-- <xsl:text>}{</xsl:text> -->
+    <!-- <xsl:if test="$b-latex-hardcode-numbers"> -->
+        <!-- <xsl:apply-templates select="." mode="number"/> -->
+    <!-- </xsl:if> -->
+    <!-- <xsl:text>}%&#xa;</xsl:text> -->
     <!-- A "list" has an introduction/conclusion, with a       -->
     <!-- list of some type in-between, and these will all      -->
     <!-- automatically word-wrap to fill the available width.  -->
     <!-- TODO: process meta-data, then restrict contents -->
     <!-- tabular, introduction|list|conclusion           -->
-    <xsl:apply-templates select="*"/>
-    <xsl:variable name="fig-placement">
-        <xsl:apply-templates select="." mode="figure-placement"/>
-    </xsl:variable>
+    <!-- <xsl:apply-templates select="*"/> -->
+    <!-- <xsl:variable name="fig-placement"> -->
+        <!-- <xsl:apply-templates select="." mode="figure-placement"/> -->
+    <!-- </xsl:variable> -->
     <!-- title goes in lower part when in a sidebyside -->
-    <xsl:if test="($fig-placement = 'subnumber') or ($fig-placement = 'panel')">
-        <xsl:text>\tcblower&#xa;</xsl:text>
-    </xsl:if>
-    <xsl:text>\end{</xsl:text>
-    <xsl:apply-templates select="." mode="environment-name"/>
-    <xsl:text>}%&#xa;</xsl:text>
-    <xsl:if test="@landscape and $b-latex-print">
-        <xsl:text>\end{sidewaystable}%&#xa;</xsl:text>
-    </xsl:if>
+    <!-- <xsl:if test="($fig-placement = 'subnumber') or ($fig-placement = 'panel')"> -->
+        <!-- <xsl:text>\tcblower&#xa;</xsl:text> -->
+    <!-- </xsl:if> -->
+    <!-- <xsl:text>\end{</xsl:text> -->
+    <!-- <xsl:apply-templates select="." mode="environment-name"/> -->
+    <!-- <xsl:text>}%&#xa;</xsl:text> -->
+    <!-- <xsl:if test="@landscape and $b-latex-print"> -->
+        <!-- <xsl:text>\end{sidewaystable}%&#xa;</xsl:text> -->
+    <!-- </xsl:if> -->
     <xsl:apply-templates select="." mode="pop-footnote-text"/>
 </xsl:template>
+
+
+
 
 </xsl:stylesheet>
