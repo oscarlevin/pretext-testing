@@ -31,22 +31,44 @@
     <title>Sample PreTeXt Research Article</title>
 
     <frontmatter>
-      <titlepage>
+      <bibinfo>
         <author>
           <personname>
           Oscar Levin</personname>
+          <affiliation>
           <department>Mathematical Sciences</department>
           <institution>University of Northern Colorado</institution>
+          </affiliation>
           <email>oscar.levin@unco.edu</email>
+          <support>Supported by himself</support>
         </author>
 
         <author>
           <personname>
           Author Two</personname>
+          <affiliation>
           <department>Mathematical Fiction</department>
           <institution>University of Northern Nowhere</institution>
+          </affiliation>
           <email>author.two@madeup.edu</email>
+          <support>Supported by no one</support>
         </author>
+
+        <keywords authority="author">
+          <keyword>PreTeXt</keyword>
+          <keyword>research article</keyword>
+          <keyword>sample</keyword>
+        </keywords>
+
+        <keywords authority="msc" variant="2010">
+          <keyword>03D10</keyword>
+          <keyword>03D15</keyword>
+          <keyword>03D20</keyword>
+        </keywords>
+      </bibinfo>
+
+      <titlepage>
+        <titlepage-items/>
       </titlepage>
 
       <abstract>

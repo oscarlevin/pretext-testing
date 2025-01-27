@@ -3,7 +3,7 @@
     "xml.fileAssociations": [
         {
             "pattern": "**/source/**.ptx",
-            "systemId": "C:\\Users\\oscar.levin\\.ptx\\2.6.2\\core\\schema\\pretext.rng"
+            "systemId": "/home/oscar/.vscode/extensions/oscarlevin.pretext-tools-0.24.1/assets/schema/pretext-dev.rng"
         }
     ]
 }

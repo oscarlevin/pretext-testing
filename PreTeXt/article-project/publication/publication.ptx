@@ -4,4 +4,10 @@
     <source>
         <directories external="../assets" generated="../generated-assets"/>
     </source>
+
+    <common>
+        <chunking level="0"/>
+    </common>
+
+    <latex latex-style="amsart"/>
 </publication>

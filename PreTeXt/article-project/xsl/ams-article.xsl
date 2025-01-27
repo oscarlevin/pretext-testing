@@ -1629,13 +1629,13 @@
     <xsl:text>\newtheorem{question}[theorem]{Question}&#xa;</xsl:text>
     <xsl:text>\newtheorem{activity}[theorem]{Activity}&#xa;</xsl:text>
     <xsl:text>\newtheorem{exercise}[theorem]{Exercise}&#xa;</xsl:text>
-    <xsl:text>\newtheorem{investigation}[theorem]{Investigation}&#xa;</xsl:text>    
+    <xsl:text>\newtheorem{investigation}[theorem]{Investigation}&#xa;</xsl:text>
     <xsl:text>\newtheorem{exploration}[theorem]{Exploration}&#xa;</xsl:text>
     <xsl:text>\newtheorem{problem}[theorem]{Problem}&#xa;</xsl:text>
     <xsl:text>\newtheorem{example}[theorem]{Example}&#xa;</xsl:text>
     <xsl:text>\newtheorem{project}[theorem]{Project}&#xa;</xsl:text>
     <xsl:text>&#xa;</xsl:text>
-    
+
     <xsl:text>\theoremstyle{remark}&#xa;</xsl:text>
     <xsl:text>\newtheorem{convention}[theorem]{Convention}&#xa;</xsl:text>
     <xsl:text>\newtheorem{warning}[theorem]{Warning}&#xa;</xsl:text>
