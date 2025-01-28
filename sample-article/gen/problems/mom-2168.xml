@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="2168">
 <statement>
-<image width="50%"  pi:generated="problems/images/1f8e0896a14e2abba9ad8110fcaa6dfc.png" />
+<image width="50%"  pi:generated="problems/images/fe4373b517b59f845cabd02df0544020.png" />
 <p>
 Find the equation of the line in the form <m>\displaystyle{y}={m}{x}+{b}.</m></p>
 <p>
@@ -12,7 +12,7 @@ Answer: <m>\displaystyle{y}=</m> <fillin characters="10" />
 </p>
 </statement>
 <solution>
-<p><ul><li><m>\displaystyle{y}={2}{x}+{10}</m></li></ul></p>
+<p><ul><li><m>\displaystyle{y}={3}{x}-{10}</m></li></ul></p>
 </solution>
 </myopenmath>
 

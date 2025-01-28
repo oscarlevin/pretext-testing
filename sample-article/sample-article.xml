@@ -192,8 +192,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     HTML output.
     -->
     <article xml:id="derivatives" label="derivatives">
-        <title>Derivatives and Integrals</title>
+        <title>Derivatives and <m>\int_a^b</m> Integrals</title>
         <subtitle>An Annotated Discourse</subtitle>
+        <!--<shorttitle>D and I</shorttitle>-->
 
         <!--
         The frontmatter contains a variety of items that precede
