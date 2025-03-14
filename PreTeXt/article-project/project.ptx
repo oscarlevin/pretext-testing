@@ -6,7 +6,7 @@
     <stringparams debug.rs.dev="yes"/>
     </target>
     <target name="print" format="pdf" />
-    <target name="amsart" format="latex" xsl="ams-article.xsl" />
+    <target name="amsart" format="latex" />
     <target name="latex" format="latex" />
   </targets>
 </project>

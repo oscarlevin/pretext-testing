@@ -13,4 +13,5 @@
         <!-- <css style="default"/> -->
         <css theme="greeley"/>
     </html>
+    <latex latex-style="amsart"/>
 </publication>
