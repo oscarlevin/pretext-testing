@@ -1,3 +1,7 @@
+## Folders to ignore
+
+test-output/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
