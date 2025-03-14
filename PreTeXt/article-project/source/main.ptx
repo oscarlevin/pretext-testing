@@ -79,7 +79,9 @@
 
     <section xml:id="sec-introduction">
       <title>Introduction</title>
-
+      <subsection xml:id="subsec-first-off">
+        <title>First off...</title>
+        
       <p>
         The first section of a paper is often an introduction that includes a fair amount of background.
         It might also have a reference to a paper <xref ref="bib_cite2"/>.
@@ -106,6 +108,94 @@
         Then in <xref ref="sec-results"/> we have some initial results.
         And finally in <xref ref="sec-prelims"/> we have a conclusion.
       </p>
+      </subsection>
+      <subsection xml:id="subsec-plan">
+        <title>Plan</title>
+        <p>
+          Here is our plan for the paper.
+        </p>
+
+        <p>
+          First, we will add some latex.
+        </p>
+
+<p>
+  The following is an example of a numbered list.
+</p>
+
+<ol>
+  <li>
+    <p>
+      First item.
+      In the case where in <m>G</m> there is a sequence of subgroups
+      <me>
+        G = G_{0}, G_{1}, G_{2}, \dots, G_{k} = e
+      </me>
+      such that each is an invariant subgroup of <m>G_{i}</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      Second item.
+      Its action on an arbitrary element <m>X = \lambda^{\alpha} X_{\alpha}</m> has the form
+    </p><
+    me>\begin{equation}\label{eq:action}[e^{\alpha} X_{\alpha}, X] = e^{\alpha} \lambda^{\beta} [X_{\alpha} X_{\beta}] = e^{\alpha} c^{\gamma}_{\alpha \beta}\lambda^{\beta} X_{\gamma},\end{equation}
+  </me>
+
+  <p>
+    <ol>
+      <li>
+        <p>
+          First subitem.
+          <me>
+            - 2\psi_{2}(e) = c_{\alpha \gamma}^{\delta} c_{\beta \delta}^{\gamma} e^{\alpha} e^{\beta}.
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Second subitem.
+          <ol>
+            <li>
+              <p>
+                First subsubitem.
+                In the case where in <m>G</m> there is a sequence of subgroups
+                <me>
+                  G = G_{0}, G_{1}, G_{2}, \ldots, G_{k} = e
+                </me>
+                such that each subgroup <m>G_{i+1}</m> is an invariant subgroup of <m>G_{i}</m> and each quotient group <m>G_{i+1}/G_{i}</m> is abelian, the group <m>G</m> is called <em>solvable</em>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Second subsubitem.
+              </p>
+            </li>
+          </ol><
+          /p>
+        </li>
+
+        <li>
+          <p>
+            Third subitem.
+          </p>
+        </li>
+      </ol><
+      /p>
+    </li>
+
+    <li>
+      <p>
+        Third item.
+      </p>
+    </li>
+  </ol><p>That’s pretty neat!
+</p>
+
+      </subsection>
     </section>
 
     <section xml:id="sec-prelims">
@@ -354,7 +444,7 @@
           \end{tikzpicture}
         </latex-image>
       </image>
-      
+
       <tabular>
         <col right="minor"/><col/>
         <row bottom="minor" header="yes">

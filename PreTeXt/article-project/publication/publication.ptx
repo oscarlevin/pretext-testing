@@ -4,4 +4,13 @@
     <source>
         <directories external="../assets" generated="../generated-assets"/>
     </source>
+
+    <common>
+        <chunking level="0"/>
+    </common>
+
+    <html>
+        <!-- <css style="default"/> -->
+        <css theme="greeley"/>
+    </html>
 </publication>
