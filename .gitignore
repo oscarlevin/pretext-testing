@@ -1,6 +1,11 @@
 ## Folders to ignore
 
 test-output/
+**/gen*/
+**/logs/
+**/.cache/
+**/output/
+
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
