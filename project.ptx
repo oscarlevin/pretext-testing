@@ -10,6 +10,10 @@
       <target name="sa-portable" format="html" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-portable.xml" deploy="yes"/>
       <target name="sa-theme" format="html" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-theme.xml" deploy="yes"/>
 
+      <!-- Slide show testing -->
+
+      <target name="slides-web" format="revealjs" source="sample-slideshow/sample-slideshow.xml" publication="projects/sample-slideshow/publication.xml"/>
+
       <!-- Journal testing -->
       <target name="sa-ams" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ams.xml" deploy="yes"/>
       <target name="sa-trans" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-trans.xml" deploy="yes"/>

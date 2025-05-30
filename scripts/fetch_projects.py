@@ -36,6 +36,13 @@ def main():
             )
             print("Copied sample-article to projects directory.")
 
+            shutil.copytree(
+                Path(tmpdirname) / f"pretext-{last_core_commit}" / "examples" / "sample-slideshow",
+                Path("projects").resolve() / "sample-slideshow",
+                dirs_exist_ok=True,
+            )
+            print("Copied sample-slideshow to projects directory.")
+
     print("All done.")
 
 

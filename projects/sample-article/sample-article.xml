@@ -430,7 +430,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <idx sortby="quorum">sorted as if <q>Quorum</q></idx>
             <idx><h>units</h><h sortby="A">Z (<alert>sort as</alert> A)</h></idx>
             <idx><h>units</h><h sortby="Z">A (<alert>sort as</alert> Z)</h></idx>
-            <idx><c>verbatim text</c>, use sortby</idx>
+            <idx sortby="verbatim"><c>verbatim text</c>, use sortby</idx>
             <!-- keep this, collides with real "R" entry elsewhere -->
             <idx sortby="R"><m>\rho</m><ndash/>fibers</idx>
             <!-- test identical text, but variant upper- and lower-case  -->
@@ -3662,7 +3662,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <subsection>
                 <title><latex/> images</title>
-                <idx><latex/> image</idx>
+                <idx sortby="latex"><latex/> image</idx>
                 <idx><h>image</h><h><latex/> image</h></idx>
 
                 <p>There are several graphics engine packages that a <latex/> document can employ. Code from these packages renders diagrams automatically as part of normal processing of <latex/> files.  For HTML output the <c>pretext</c> script produces SVG versions of the pictures.  The script can also produce standalone <tex/> source files, PDFs, PNGs, and EPSs. The packages should be loaded in <c>docinfo/latex-image-preamble</c>, which is also where global package settings should be made. If any ampersands occur in your <latex/> code you should use the <c>\amp</c> macro pre-defined by <pretext/>. These first examples are from the <url href="http://www.texample.net/tikz/examples/" visual="www.texample.net/tikz/examples/">TeXample.net</url> site.  Note that any <latex/> macros used in the rest of your document may be employed in the <latex/>-standalone or Asymptote diagrams (with this feature coming to Sage graphics next?).</p>
@@ -5658,6 +5658,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li xml:id="cpu-definition">
                         <title>Central Processing Unit (CPU)</title>
                         <p>Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.</p>
+                        <p>This is a second paragraph that should appear indented in PDF output.</p>
                     </li>
 
                     <li>
@@ -5752,6 +5753,48 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li>
                         <title><c>main()</c> is a void function</title>
                         <p>A <c>dl</c> with <c>width="narrow"</c> might be a useful way to give commentary on a program listing.</p>
+                    </li>
+                </dl></p>
+
+                <p>You can nest description lists, though items might get crowded horizontally.  We expand our computer list a bit.
+                <dl>
+                    <li xml:id="cpu-definition-expanded">
+                        <title>Expanded CPU</title>
+                        <p>Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.<dl>
+                            <li>
+                                <title>Arithmetic</title>
+                                <p>The kind of computations that give a computer the name <q>computer.</q></p>
+                            </li>
+                            <li>
+                                <title>Logic</title>
+                                <p>Operations that make decisions, <q>if this, then that</q>, plus: and, or, and not.</p>
+                            </li>
+                            <li>
+                                <title>Memory</title>
+                                <p>Space to store information and results, permanently or temporarily.</p>
+                            </li>
+                        </dl></p>
+                        <p>This is a second paragraph that should appear indented in PDF output.</p>
+                    </li>
+
+                    <li>
+                        <title>Memory</title>
+                        <p>Provides storage for the instructions for the CPU and the data they manipulate.</p>
+                    </li>
+
+                    <li>
+                        <title>Input/Output (I/O)</title>
+                        <p>Communicates with the outside world and with mass storage devices (<eg/>, disks).</p>
+                    </li>
+
+                    <li>
+                        <title>Bus!</title>
+                        <p>A communication pathway with a protocol specifying exactly how the pathway is used. (The punctuation is just for testing.)</p>
+                    </li>
+
+                    <li>
+                        <title><m>\displaystyle \sum_{n=0}^\infty x^n = \frac{1}{1-x}</m></title>
+                        <p>A geometric series.  The formula is valid if <m>|x| &lt; 1</m>.</p>
                     </li>
                 </dl></p>
             </subsection>
@@ -8957,64 +9000,85 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <c>example.doenetml</c>, then include this file
                     within your <pretext/> document using
                     <c>&lt;xi:include parse="text" href="path/to/example.doenetml"/&gt;</c>.
+                    Altenatively, you can enclose your DoenetML in a <c>CDATA</c>, as we do below.
                 </p>
 
                 <figure xml:id="figure-doenetml">
                     <caption>DoenetML example</caption>
-                    <!-- 2024-04-25: This exact interactive appears in the sample book, for testing on Rynestone. -->
+                    <!-- 2024-04-25: This exact interactive appears in the sample book, for testing on Runestone. -->
                     <!-- A @label is preferred, since it is required for use on Runestone -->
                     <interactive label="interactive-doenetml-example" platform="doenetml" width="100%" aspect="3:2">
                         <slate surface="doenetml">
-                            &lt;p&gt;
-                            Adjust the vectors &lt;m&gt;\vec u&lt;/m&gt;, &lt;m&gt;\vec v&lt;/m&gt;, and &lt;m&gt;\vec w&lt;/m&gt; in the
-                            left graph to visualize the areas calculated by
-                            &lt;m&gt;\det[\vec u\hspace{0.5em}\vec w]&lt;/m&gt;, &lt;m&gt;\det[\vec v\hspace{0.5em}\vec w]&lt;/m&gt;,
-                            and
-                            &lt;m&gt;\det[\vec u+\vec v\hspace{0.5em}\vec w]&lt;/m&gt;.
-                          &lt;/p&gt;
-                          &lt;setup&gt;&lt;line through=&quot;(0,0) $v&quot; name=&quot;vLine&quot;/&gt;&lt;math simplify  name=&quot;c&quot;&gt;$cv.x/$v.x&lt;/math&gt;&lt;/setup&gt;
-                          &lt;sideBySide&gt;
-                            &lt;graph xmin=&quot;-4&quot; ymin=&quot;-4&quot; xmax=&quot;16&quot; ymax=&quot;16&quot;&gt;
-                              &lt;m draggable=&quot;false&quot; anchor=&quot;(10,14)&quot;&gt;
-                                \det[\vec u\hspace{0.5em}\vec w],
-                                \det[\vec v\hspace{0.5em}\vec w]
-                              &lt;/m&gt;
-                              &lt;point name=&quot;u&quot; styleNumber=&quot;3&quot;&gt;
-                                (6,2)
-                                &lt;label&gt;&lt;m&gt;\vec u&lt;/m&gt;&lt;/label&gt;
-                              &lt;/point&gt;
-                              &lt;point name=&quot;w&quot; styleNumber=&quot;3&quot;&gt;
-                                (3,7)
-                                &lt;label&gt;&lt;m&gt;\vec w&lt;/m&gt;&lt;/label&gt;
-                              &lt;/point&gt;
-                              &lt;point name=&quot;uPlusV&quot; styleNumber=&quot;4&quot;&gt;
-                                (9,5)
-                                &lt;label&gt;&lt;m&gt;\vec v&lt;/m&gt;&lt;/label&gt;
-                              &lt;/point&gt;
-                              &lt;polygon vertices=&quot;(0,0) $u $u+$w $w&quot; filled draggable=&quot;false&quot; styleNumber=&quot;3&quot;/&gt;
-                              &lt;polygon vertices=&quot;$u $uPlusV $uPlusV+$w $u+$w&quot; filled draggable=&quot;false&quot; styleNumber=&quot;4&quot;/&gt;
-                              &lt;lineSegment endpoints=&quot;(0,0) $uPlusV&quot; styleNumber=&quot;6&quot;/&gt;
-                              &lt;lineSegment endpoints=&quot;$w $uPlusV+$w&quot; styleNumber=&quot;6&quot;/&gt;
-                            &lt;/graph&gt;
-                            &lt;graph xmin=&quot;-4&quot; ymin=&quot;-4&quot; xmax=&quot;16&quot; ymax=&quot;16&quot;&gt;
-                              &lt;m draggable=&quot;false&quot; anchor=&quot;(12,14)&quot;&gt;
-                                \det[\vec u+\vec v\hspace{0.5em}\vec w]
-                              &lt;/m&gt;
-                              &lt;polygon vertices=&quot;(0,0) $uPlusV $uPlusV+$w $w&quot; filled draggable=&quot;false&quot; styleNumber=&quot;2&quot;/&gt;
-                              &lt;point draggable=&quot;false&quot; styleNumber=&quot;3&quot;&gt;
-                                $w
-                                &lt;label&gt;&lt;m&gt;\vec w&lt;/m&gt;&lt;/label&gt;
-                              &lt;/point&gt;
-                              &lt;point draggable=&quot;false&quot; styleNumber=&quot;4&quot;&gt;
-                                $uPlusV
-                                &lt;label&gt;&lt;m&gt;\vec u+\vec v&lt;/m&gt;&lt;/label&gt;
-                              &lt;/point&gt;
-                              &lt;lineSegment endpoints=&quot;(0,0) $u&quot; styleNumber=&quot;6&quot;/&gt;
-                              &lt;lineSegment endpoints=&quot;$u $uPlusV&quot; styleNumber=&quot;6&quot;/&gt;
-                              &lt;lineSegment endpoints=&quot;$w $w+$u&quot; styleNumber=&quot;6&quot;/&gt;
-                              &lt;lineSegment endpoints=&quot;$w+$u $w+$uPlusV&quot; styleNumber=&quot;6&quot;/&gt;
-                            &lt;/graph&gt;
-                          &lt;/sideBySide&gt;
+                            <![CDATA[
+                            <p>
+                                Adjust the vectors <m>\vec u</m>, <m>\vec v</m>, and <m>\vec w</m> in the left
+                                graph to visualize the areas calculated by
+                                <m>\det[\vec u\hspace{0.5em}\vec w]</m>, <m>\det[\vec v\hspace{0.5em}\vec w]</m>,
+                                and
+                                <m>\det[\vec u+\vec v\hspace{0.5em}\vec w]</m>.
+                            </p>
+                            <setup>
+                                <line through="(0,0) $v" name="vLine" />
+                                <math simplify="true" name="c">$cv.x/$v.x</math>
+                            </setup>
+                            <sideBySide>
+                                <graph xmin="-4" ymin="-4" xmax="16" ymax="16">
+                                    <m draggable="false" anchor="(10,14)">
+                                        \det[\vec u\hspace{0.5em}\vec w],
+                                        \det[\vec v\hspace{0.5em}\vec w]
+                                    </m>
+                                    <point name="u" styleNumber="3">
+                                        (6,2)
+                                        <label><m>\vec u</m></label>
+                                    </point>
+                                    <point name="w" styleNumber="3">
+                                        (3,7)
+                                        <label><m>\vec w</m></label>
+                                    </point>
+                                    <point name="uPlusV" styleNumber="4">
+                                        (9,5)
+                                        <label><m>\vec v</m></label>
+                                    </point>
+                                    <polygon
+                                        vertices="(0,0) $u $u+$w $w"
+                                        filled="true"
+                                        draggable="false"
+                                        styleNumber="3"
+                                    />
+                                    <polygon
+                                        vertices="$u $uPlusV $uPlusV+$w $u+$w"
+                                        filled="true"
+                                        draggable="false"
+                                        styleNumber="4"
+                                    />
+                                    <lineSegment endpoints="(0,0) $uPlusV" styleNumber="6" />
+                                    <lineSegment endpoints="$w $uPlusV+$w" styleNumber="6" />
+                                </graph>
+                                <graph xmin="-4" ymin="-4" xmax="16" ymax="16">
+                                    <m draggable="false" anchor="(12,14)">
+                                        \det[\vec u+\vec v\hspace{0.5em}\vec w]
+                                    </m>
+                                    <polygon
+                                        vertices="(0,0) $uPlusV $uPlusV+$w $w"
+                                        filled="true"
+                                        draggable="false"
+                                        styleNumber="2"
+                                    />
+                                    <point draggable="false" styleNumber="3">
+                                        $w
+                                        <label><m>\vec w</m></label>
+                                    </point>
+                                    <point draggable="false" styleNumber="4">
+                                        $uPlusV
+                                        <label><m>\vec u+\vec v</m></label>
+                                    </point>
+                                    <lineSegment endpoints="(0,0) $u" styleNumber="6" />
+                                    <lineSegment endpoints="$u $uPlusV" styleNumber="6" />
+                                    <lineSegment endpoints="$w $w+$u" styleNumber="6" />
+                                    <lineSegment endpoints="$w+$u $w+$uPlusV" styleNumber="6" />
+                                </graph>
+                            </sideBySide>
+                            ]]>
                         </slate>
                     </interactive>
                 </figure>
@@ -9316,24 +9380,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <feedback>
                         <p>Review <url href="https://www.britannica.com/list/25-decade-defining-events-in-us-history" visual="www.britannica.com/list/25-decade-defining-events-in-us-history">Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History</url>url.</p>
                     </feedback>
-                    <matches>
-                        <match order="4">
-                            <premise>Monroe Doctrine</premise>
+                    <cardsort>
+                        <match>
+                            <premise order="4">Monroe Doctrine</premise>
                             <response>1823</response>
                         </match>
-                        <match order="3">
-                            <premise>Haymarket Riot</premise>
+                        <match>
+                            <premise order="3">Haymarket Riot</premise>
                             <response>1886</response>
                         </match>
-                        <match order="1">
-                            <premise>Louisiana Purchase</premise>
+                        <match>
+                            <premise order="1">Louisiana Purchase</premise>
                             <response>1803</response>
                         </match>
-                        <match order="2">
-                            <premise>Battle of Gettysburg</premise>
+                        <match>
+                            <premise order="2">Battle of Gettysburg</premise>
                             <response>1863</response>
                         </match>
-                    </matches>
+                    </cardsort>
                 </exercise>
             </exercises>
 
@@ -9477,10 +9541,57 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </evaluation>
                 </exercise>
 
+                <exercise label="fillin-multi-answer-jscmp">
+                    <title>Fill-In, Multiple Strings, Custom Checker</title>
+
+                    <statement>
+                        <p>
+                            In order to apply the Integral Test to a sequence <m>\{a_n\}</m>,
+                            the function <m>a(n) = a_n</m> must be
+                            <fillin mode="string" answer="continuous"/>, <fillin mode="string" answer="positive"/><nbsp/>and <fillin mode="string" answer="decreasing"/>.
+                        </p>
+                    </statement>
+                    <evaluation>
+                        <evaluate>
+                            <test correct="yes">
+                                <jscmp><![CDATA[
+                                ["continuous","positive","decreasing"].includes(ans)
+                                ]]></jscmp>
+                            </test>
+                        </evaluate>
+                        <evaluate>
+                            <test correct="yes">
+                                <jscmp><![CDATA[
+                                ["continuous","positive","decreasing"].includes(ans) && !ans_array.slice(0,1).includes(ans)
+                                ]]></jscmp>
+                            </test>
+                            <test>
+                                <jscmp><![CDATA[
+                                ans_array.slice(0,1).includes(ans)
+                                ]]></jscmp>
+                                <feedback>You already gave that answer.</feedback>
+                            </test>
+                        </evaluate>
+                        <evaluate>
+                            <test correct="yes">
+                                <jscmp><![CDATA[
+                                ["continuous","positive","decreasing"].includes(ans) && !ans_array.slice(0,2).includes(ans)
+                                ]]></jscmp>
+                            </test>
+                            <test>
+                                <jscmp><![CDATA[
+                                ans_array.slice(0,2).includes(ans)
+                                ]]></jscmp>
+                                <feedback>You already gave that answer.</feedback>
+                            </test>
+                        </evaluate>
+                     </evaluation>
+                </exercise>
+
                 <exercise label="dynamic-fitb-simple-formula">
                     <title>Fill-In Formula (Dynamic)</title>
                     <statement>
-                        <p>Find a formula for a cubic function <m>f(x)</m> that roots at <m>x=<eval obj="x1"/></m>,  <m>x=<eval obj="x2"/></m>, and <m>x=<eval obj="x3"/></m> and so that <m>f(0)=<eval obj="y0"/></m>.</p>
+                        <p>Find a formula for a cubic function <m>f(x)</m> that has roots at <m>x=<eval obj="x1"/></m>,  <m>x=<eval obj="x2"/></m>, and <m>x=<eval obj="x3"/></m> and so that <m>f(0)=<eval obj="y0"/></m>.</p>
                         <p><m>f(x)=</m> <fillin name="st_cubic" mode="math" ansobj="cubic"/></p>
                     </statement>
                     <solution>
@@ -9678,7 +9789,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </introduction>
 
                 <listing xml:id="program-activecode-python">
-                    <caption>An interactive Python program, using <pubtitle>Runestone</pubtitle></caption>
+                    <title>An interactive Python program, using <pubtitle>Runestone</pubtitle></title>
                     <program xml:id="python-hello-world" label="python-hello-world" interactive='activecode' language="python">
                         <code>
                         print("Hello, World!")
@@ -9687,7 +9798,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </listing>
 
                 <listing xml:id="program-activecode-python-no-codelens">
-                    <caption>An interactive Python program without codelens.</caption>
+                    <title>An interactive Python program without codelens.</title>
                     <program xml:id="python-hello-world-no-codelens" label="python-hello-world-no-codelens" interactive='activecode' language="python" codelens="no">
                         <code>
                         print("Hello, World!")
@@ -9704,7 +9815,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </introduction>
 
                 <listing xml:id="program-codelens-python">
-                    <caption>A Python program, stepable with CodeLens</caption>
+                    <title>A Python program, stepable with CodeLens</title>
                     <program xml:id="python-hello-world-code-lens" label="python-hello-world-code-lens" interactive="codelens" language="python">
                         <code>
                         print('Hello, World!')
@@ -10640,10 +10751,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <p>Note that the above examples all have slightly different widths (theser are very evident in print with the frames).  As 2-D atomic objects, to place them in the narrative requires the layout features of a <c>sidebyside</c> element.  Then <c>width</c> and/or <c>margin</c> attributes will influence the width of the panel.</p>
 
-            <p>A <c>program</c> may also be nested inside a <c>listing</c>, which behaves similar to a <c>figure</c>.  You can provide a <c>caption</c>, and the listing will be numbered along with tables and figures.  This then makes it possible to cross-reference the listing, such as <xref ref="listing-c-hello" text="type-global"/>.  It also removes the requirement of wrapping the <c>program</c> in a <c>sidebyside</c>.  For technical reasons, the three examples above will not split across a page break in PDF output, but the placement inside a <c>listing</c> will allow splits, as you should see in at least one example following.</p>
+            <p>A <c>program</c> may also be nested inside a <c>listing</c>, which behaves similar to a <c>figure</c>.  You can provide a <c>title</c>, and the listing will be numbered along with tables and figures.  This then makes it possible to cross-reference the listing, such as <xref ref="listing-c-hello" text="type-global" />.  It also removes the requirement of wrapping the <c>program</c> in a <c>sidebyside</c>.  For technical reasons, the three examples above will not split across a page break in PDF output, but the placement inside a <c>listing</c> will allow splits, as you should see in at least one example following.</p>
 
             <listing xml:id="listing-c-hello">
-                <caption>C Version of <q>Hello, World!</q></caption>
+                <title>C Version of <q>Hello, World!</q></title>
                 <program language="c">
                     <code>
                     /* Hello World program */
@@ -10661,7 +10772,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>A <tag>program</tag> may include line numbers.</p>
 
             <listing xml:id="program-line-numbers">
-                <caption>A static Java program with line numbers</caption>
+                <title>A static Java program with line numbers</title>
                 <program interactive='no' language="java" line-numbers="yes">
                     <code>
                     import javax.swing.JFrame;  //Importing class JFrame
@@ -10683,7 +10794,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>A <tag>program</tag> may also include highlighted lines.</p>
 
             <listing xml:id="program-highlight-lines">
-                <caption>A static Java program with line numbers</caption>
+                <title>A static Java program with line numbers</title>
                 <program interactive='no' language="java" line-numbers="yes" highlight-lines="1,3-5">
                     <code>
                     import javax.swing.JFrame;  //Importing class JFrame
@@ -10705,6 +10816,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>Although a program should have a <tag>code</tag> element surrounding its code, we attempt to provide one when it is missing. This next sample tests that and intentionally has no leading or trailing newline inside the program.</p>
 
             <program languge="python">print("Hello world")</program>
+
+            <p>Sometimes it is nice to author an inline fragment of a program and have the styling of its text match that of a <tag>program</tag>. To do this we can use the <tag>pf</tag> tag (<q>program fragment</q>).  It is similar to a <tag>c</tag> element, but will be syntax highlighted according to either a <attr>language</attr> or the default language for <tag>programs</tag>. Here is an example in C: <pf language="c">printf("The cost is $%f.2", money);</pf>. And another that is in Python and tests problematic characters: <pf language="python">print("&amp; % $ # _ { } ~ ^ \")</pf>.</p>
 
             <p>If you are discussing algorithms in the abstract (or even concretely), you can set them off like a theorem, with a number, a title and a target for cross-references.  Sometimes you claim an algorithm produces something in particular, or has certain properties, such as a theoretical run time, so a proof may be included.  See the discussion just preceding about (limited) options for pseudo-code.</p>
 
@@ -10749,7 +10862,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>A specialized version of a program listing is an interactive command/response session at a command-line, where differing fonts are used to differentiate the system prompt, the user's commands, and the system's reaction.  A   <c>console</c> session may be used by itself inside a <c>sidebyside</c>, or it can be wrapped in a listing to get a number and a caption.  As elsewhere, you will need to escape ampersands and angle brackets (such as if you have a command using redirection), using <c>&amp;amp;</c>, <c>&amp;lt;</c>, and <c>&amp;gt;</c> in your source.</p>
 
             <listing xml:id="console-raspberry-pi">
-                <caption>Console Session: <c>int</c> and <c>float</c></caption>
+                <title>Console Session: <c>int</c> and <c>float</c></title>
                 <console prompt="pi@raspberrypi ~/progs/chap02 $ ">
                     <input>gcc -Wall -o intAndFloat intAndFloat.c</input>
                     <input>./intAndFloat</input>
@@ -10774,7 +10887,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>If your console input exceeds more than one line, you can author it across several lines and your choice of line breaks will be reflected in the rendering.  You can decide to indent lines after the first one for clarity, if desired.  You can also decide if your audience needs line-continuation characters or not.</p>
 
             <listing xml:id="console-raspberry-pi-multi">
-                <caption>Console Session: <c>int</c> and <c>float</c> (multi-line input)</caption>
+                <title>Console Session: <c>int</c> and <c>float</c> (multi-line input)</title>
                 <console prompt="pi@raspberrypi ~/progs/chap02 $ ">
                     <input>
                     gcc -Wall
@@ -10816,7 +10929,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>The next listing is just absurdity, to check various characters from <latex/> that are otherwise employed by the code supporting consoles, and some Latin-1 characters.  We test each in a prompt, input, and output.  We use <c>(*</c> and <c>*)</c> as sequences used to escape embedded <latex/> commands, so we test those also.</p>
 
             <listing>
-                <caption>Console Session: problematic <latex/> characters</caption>
+                <title>Console Session: problematic <latex /> characters</title>
                 <console>
                     <input prompt="A backslash \ here  ">A backslash \ here</input>
                     <output>A backslash \ here</output>
@@ -10847,7 +10960,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>We conclude this section with a longer example of a program listing, an assembly language program from Bob Plantz, included to test a <c>listing</c> breaking across pages in PDF output.</p>
 
             <listing>
-                <caption>A longer program listing</caption>
+                <title>A longer program listing</title>
                 <program>
                     <code>
                     @ structPass2.s
@@ -12656,7 +12769,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <caption>A <tag>listing</tag> and a <tag>list</tag></caption>
                 <sidebyside margins="5%" widths="40% 45%">
                     <listing>
-                        <caption>A statistical computation</caption>
+                        <title>A statistical computation</title>
                         <program language="r">
                             <code>
                             n_loops &lt;- 10
@@ -13067,7 +13180,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li>inside a <tag>sidebyside</tag>, with size and layout configured, and inside a <tag>figure</tag></li>
                     <li>inside a <tag>sidebyside</tag>, with size and layout configured, with each inside a <tag>listing</tag>, earning different numbers</li>
 
-                    <li>inside a <tag>figure</tag> inside a <tag>sidebyside</tag> inside a <tag>listing</tag>, with size and layout configured, with a number and caption, but now sub-numbered ((a), (b), (c),<ellipsis/>).</li>
+                    <li>inside a <tag>figure</tag> inside a <tag>sidebyside</tag> inside a <tag>listing</tag>, with size and layout configured, with a number and title, but now sub-numbered ((a), (b), (c),<ellipsis/>).</li>
                 </ol>Examples of each, and more.</p>
 
                <p>Programs can be realized in many forms, and can come from a variety of sources.  See <xref ref="section-video" text="type-global"/> for tests of some of that variety.  Here we are testing placement within surroundings and testing the schema for location.  But we do have two videos in each test, one provided as a local file and one embedded from a service.</p>
@@ -13154,10 +13267,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <input prompt="pi@raspberrypi ~/progs/chap02 $ "/>
                 </console>
 
-                <p>Two <tag>listing</tag>, with <tag>caption</tag>, and no layout control.</p>
+                <p>Two <tag>listing</tag>, with <tag>title</tag>, and no layout control.</p>
 
                 <listing>
-                    <caption>Hello, World! in C</caption>
+                    <title>Hello, World! in C</title>
                         <program language="c">
                             <code>
                             /* Hello World program */
@@ -13173,7 +13286,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </listing>
 
                 <listing>
-                    <caption>A console session on a Raspberry Pi</caption>
+                    <title>A console session on a Raspberry Pi</title>
                         <console>
                             <input prompt="pi@raspberrypi ~/progs/chap02 $ ">gcc -Wall -o intAndFloat intAndFloat.c</input>
                             <input prompt="pi@raspberrypi ~/progs/chap02 $ ">./intAndFloat</input>
@@ -13187,7 +13300,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>Same two <tag>listing</tag>, but now with layout control on the <tag>program</tag> and <tag>console</tag>.</p>
 
                 <listing>
-                    <caption>Hello, World! in C</caption>
+                    <title>Hello, World! in C</title>
                         <program language="c" margins="40% 20%" width="40%">
                             <code>
                             /* Hello World program */
@@ -13203,7 +13316,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </listing>
 
                 <listing>
-                    <caption>A console session on a Raspberry Pi</caption>
+                    <title>A console session on a Raspberry Pi</title>
                         <console margins="10% 10%">
                             <input prompt="pi@raspberrypi ~/progs/chap02 $ ">gcc -Wall -o intAndFloat intAndFloat.c</input>
                             <input prompt="pi@raspberrypi ~/progs/chap02 $ ">./intAndFloat</input>
@@ -13295,7 +13408,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <sidebyside margins="0% 0%" widths="35% 55%" valign="bottom">
                     <listing>
-                        <caption>Hello!</caption>
+                        <title>Hello!</title>
                         <program language="c">
                             <code>
                             /* Hello World program */
@@ -13310,7 +13423,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </program>
                     </listing>
                     <listing>
-                        <caption>Raspberry Pi</caption>
+                        <title>Raspberry Pi</title>
                         <console>
                             <input>gcc -Wall -o intAndFloat intAndFloat.c</input>
                             <input>./intAndFloat</input>
@@ -13322,14 +13435,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </listing>
                 </sidebyside>
 
-                <p>And again, the two-panel <tag>sidebyside</tag> of <tag>listing</tag>, but now inside a <tag>figure</tag> that has a number and a caption.  And then the <tag>listing</tag> are sub-numbered as (a) and (b).</p>
+                <p>And again, the two-panel <tag>sidebyside</tag> of <tag>listing</tag>, but now inside a <tag>figure</tag> that has a number and a title.  And then the <tag>listing</tag> are sub-numbered as (a) and (b).</p>
 
 
                 <figure>
                     <caption>Two Code Listings</caption>
                     <sidebyside margins="0% 0%" widths="35% 55%" valign="bottom">
                         <listing>
-                            <caption>Hello!</caption>
+                            <title>Hello!</title>
                             <program language="c">
                                 <code>
                                 /* Hello World program */
@@ -13344,7 +13457,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             </program>
                         </listing>
                         <listing>
-                            <caption>Raspberry Pi</caption>
+                            <title>Raspberry Pi</title>
                             <console>
                                 <input>gcc -Wall -o intAndFloat intAndFloat.c</input>
                                 <input>./intAndFloat</input>
@@ -14365,6 +14478,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </introduction>
                 <myopenmath problem="2168"/>
             </exercise>
+
+            <exercise>
+                <title>Geometry of a Cone</title>
+                <introduction>
+                    <p>This problem has two figures.  They come from the MOM server as SVG files.  These image files are then converted to PDF for static formats like PDF, and into PNG for formats like Kindle.</p>
+                </introduction>
+                <myopenmath problem="930582" params="maxtries=2"/>
+            </exercise>
         </section>
 
 
@@ -15299,7 +15420,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </exercise>
             </exercises>
 
-
             <references>
                 <title>More Reading</title>
 
@@ -15897,6 +16017,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <title>Multiple Specialized References</title>
 
                     <p>You might want to have lists of references, in the back, but with multiple such lists.  Make an <tag>appendix</tag> to hold them, give it some structure (for an <tag>article</tag>, a leading <tag>subsection</tag>, such as the one you are reading right now), then follow with multiple <tag>references</tag> divisions.  A typical citation will then look like: <xref ref="biblio-strang-article-tres"/>.</p>
+
+                    <!-- Notes to add once CSL processing is enabled: Note: we need at least one citation for an item to show up.  Note: look at the source to see sorting/reordering. -->
+                    <p>2025-05-23: currently testing citations to CSL-style references in the back matter.  These should go eventually somewhere besides right where the references are.<ul>
+                        <li>Judson: <xref ref="biblio-judson-aata"/></li>
+                        <li>Lay: <xref ref="biblio-lay-article"/></li>
+                        <li>Doe: <xref ref="citeproc-py-item-3"/></li>
+                        <li>Doe, later: <xref ref="citeproc-py-item-3-later"/></li>
+                        <li>Conrey/Farmer: <xref ref="conrey-farmer"/></li>
+                        <li>D'Arcus: <xref ref="citeproc-py-item-5"/></li>
+                        <li>Two, authored in-order: <xref ref="conrey-farmer citeproc-py-item-5"/></li>
+                        <li>Two, authored out-of-order: <xref ref="citeproc-py-item-5 conrey-farmer"/></li>
+                        <li>Three, authored reverse-order: <xref ref="biblio-lay-article biblio-judson-aata citeproc-py-item-3"/></li>
+                    </ul></p>
                 </subsection>
 
                 <references>
@@ -15908,7 +16041,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <references>
                     <title>Specialized References</title>
 
-                    <biblio type="raw" xml:id="biblio-strang-article-dos">Gilbert Strang, <title>The Fundamental Theorem of Linear Algebra</title>, <journal>The American Mathematical Monthly</journal> November 1993, <volume>100</volume> <number>9</number>, 848<ndash/>855.</biblio>
+                    <biblio type="raw" xml:id="biblio-judson-AATA">Tom Judson, <title>Abstract Algebra: Theory and Applications</title>.
+                    <note xml:id="note-judson-AATA"><p>Another online, open-source offering.</p></note>
+                    </biblio>
 
                     <biblio type="raw" xml:id="biblio-strang-article-tres">Gilbert Strang, <title>The Fundamental Theorem of Linear Algebra</title>, <journal>The American Mathematical Monthly</journal> November 1993, <volume>100</volume> <number>9</number>, 848<ndash/>855.</biblio>
                 </references>
@@ -15920,12 +16055,102 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <references xml:id="references-backmatter" label="references-backmatter">
                 <title>References</title>
 
-                <biblio type="raw" xml:id="biblio-judson-AATA">Tom Judson, <title>Abstract Algebra: Theory and Applications</title>.
-                <note xml:id="note-judson-AATA"><p>Another online, open-source offering.</p></note>
+                <!-- note lower-case on AATA! -->
+                <biblio xml:id="biblio-judson-aata" type="book">
+                    <author>
+                        <name>
+                            <given>Thomas</given>
+                            <family>Judson</family>
+                        </name>
+                    </author>
+                    <title>Abstract Algebra: Theory and Applications</title>
+                    <!-- "note" element not supported yet for CSL processing,     -->
+                    <!-- makes bad JSON. Add an @xml:id to test cross-referencing -->
+                    <note><p>Another online, open-source offering.</p></note>
                 </biblio>
 
-                <biblio type="raw" xml:id="biblio-lay-article">David C. Lay, <title>Subspaces and Echelon Forms</title>. <journal>The College Mathematics Journal</journal>, January 1993, <volume>24</volume> <number>1</number>, 57<ndash/>62.</biblio>
+                <biblio xml:id="biblio-lay-article" type="article">
+                    <author>
+                        <name>
+                            <given>David C.</given>
+                            <family>Lay</family>
+                        </name>
+                    </author>
+                    <title>Subspaces and Echelon Forms</title>
+                    <collection-title>The College Mathematics Journal</collection-title>
+                    <issued>
+                        <date year="1993" month="1"/>
+                    </issued>
+                    <volume>24</volume>
+                    <number>1</number>
+                    <page>57-62</page>
+                </biblio>
 
+                <!-- from test suite in citeproc.py JSON example program -->
+                <biblio xml:id="citeproc-py-item-3-later" type="book">
+                    <author>
+                        <name>
+                            <family>Doe</family>
+                            <given>John</given>
+                        </name>
+                    </author>
+                    <issued>
+                        <date year="1970" month="6" day="1"/>
+                    </issued>
+                    <title>Still Anonymous, But now Ibid</title>
+                </biblio>
+
+                <!-- from test suite in citeproc.py JSON example program -->
+                <biblio xml:id="citeproc-py-item-3" type="book">
+                    <author>
+                        <name>
+                            <family>Doe</family>
+                            <given>John</given>
+                        </name>
+                    </author>
+                    <issued>
+                        <date year="1965" month="6" day="1"/>
+                    </issued>
+                    <title>His Anonymous Life</title>
+                </biblio>
+
+                <biblio xml:id="conrey-farmer" type="article-journal">
+                    <author>
+                        <name>
+                            <family>Conrey</family>
+                            <given>J. B.</given>
+                        </name>
+                        <name>
+                            <family>Farmer</family>
+                            <given>D. W.</given>
+                        </name>
+                    </author>
+                    <title>Mean values of <m>L</m>-functions and symmetry</title>
+                    <collection-title>Internat. Math. Res. Notices</collection-title>
+                    <issued>
+                        <date year="2000"/>
+                    </issued>
+                    <volume>17</volume>
+                    <page>883-908</page>
+                </biblio>
+
+                <!-- from test suite in citeproc.py JSON example program -->
+                <biblio xml:id="citeproc-py-item-5" type="book">
+                    <author>
+                        <name>
+                            <family>D'Arcus</family>
+                            <given>Bruce</given>
+                            <static-ordering>false</static-ordering>
+                        </name>
+                    </author>
+                    <title>Boundaries of Dissent: Protest and State Power in the Media Age</title>
+                    <publisher>Routledge</publisher>
+                    <publisher-place>New York</publisher-place>
+                    <issued>
+                        <date year="2006"/>
+                    </issued>
+                    <URL>http://www.test01.com</URL>
+                </biblio>
             </references>
 
             <index label="the-index">
