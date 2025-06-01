@@ -25,7 +25,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <common>
         <!-- How deep to go for separate files, in HTML the -->
         <!-- default for an article with sections is 1      -->
-        <chunking level="1"/>
+        <chunking level="0"/>
         <!-- How deep to nest a Table of Contents, for an article   -->
         <!-- with subsections in HTML, the default is 2, but in the -->
         <!-- LateX conversion the default is no ToC at all.  So we  -->
@@ -95,7 +95,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- <knowl proof="no" example="no" example-solution="no" exercise-inline="no"/> -->
         <!-- Specify the theme for the HTML.                       -->
         <!-- See the guide for options                             -->
-        <css theme="denver"/>
+        <css theme="boulder"/>
         <!-- Magic IDs identify HTML pages to analytics services   -->
         <!-- Presence implies relevant Javascript will be added    -->
         <!-- StatCounter requires both values to be set            -->

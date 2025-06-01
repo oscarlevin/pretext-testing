@@ -23,7 +23,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Common Options -->
     <common>
-        <journal name="springer-nature"/>
         <!-- How deep to go for separate files, in HTML the -->
         <!-- default for an article with sections is 1      -->
         <chunking level="1"/>
@@ -70,7 +69,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <!--     favicon/favicon-16x16.png   -->
     <!-- in external images directory    -->
     <html favicon="simple">
-        <platform portable="no"/>
         <!-- links below images to open full-size, must be elected -->
         <asymptote links="yes"/>
         <!-- Several embedded calculators are available            -->
@@ -89,20 +87,20 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- are variable.  We exercise two such switches here,    -->
         <!-- the values are defaults so should make no discernable -->
         <!-- difference.                                           -->
-        <knowl example="no" remark="no" proof="no" example-solution="no" exercise-inline="no"/>
+        <knowl example="no" remark="no" proof="no" example-solution="no"/>
         <!-- While testing themes, it can be useful to turn off    -->
         <!-- all knowls. This next line attempts to do so.         -->
         <!-- Uncomment it to activate it.                          -->
         <!-- <knowl proof="no" example="no" example-solution="no" exercise-inline="no"/> -->
         <!-- Specify the theme for the HTML.                       -->
         <!-- See the guide for options                             -->
-        <css theme="denver"/>
+        <css theme="default-modern" palette="blue-red"/>
         <!-- Magic IDs identify HTML pages to analytics services   -->
         <!-- Presence implies relevant Javascript will be added    -->
         <!-- StatCounter requires both values to be set            -->
-        <!--<analytics google-gst="UA-48811660-1"
+        <analytics google-gst="UA-48811660-1"
                    statcounter-project="9664088"
-                   statcounter-security="6e60c510"/>-->
+                   statcounter-security="6e60c510"/>
         <!-- Google search, via masthead textbox is switched on    -->
         <!-- and associated with a Google account via CX number    -->
         <!-- <search google-cx=""/> -->
@@ -125,7 +123,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <!-- 10pt font is the default   -->
     <!-- draft mode default is "no" -->
     <!-- snapshot default is "no", but we elect to stress the supported package -->
-    <latex print="no" sides="two" font-size="10" draft="no" snapshot="no">
+    <latex print="no" sides="two" font-size="10" draft="no" snapshot="yes">
         <!-- these are the default alignments, given just as an example -->
         <!-- Even if you set  @crop-marks  to something like "letter" or "a4"    -->
         <!-- you may not see a change.  You need to use the  geometery  package  -->

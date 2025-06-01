@@ -1,13 +1,18 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2025-03-21T10:12:01-06:00       *%
+%*       on 2025-04-03T21:05:47-06:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
 %*         https://pretextbook.org          *%
 %*                                          *%
 %********************************************%
-\documentclass[twoside,10pt,]{article}
+% This document was created with the texstyle file "electron-j-combin.xml" to satisfy the requirements of the journal "Electronic Journal of Combinatorics."
+%
+%
+\documentclass{article}
+%
+% Required packages:
 \usepackage[amsmath]{e-jc}
 %% add a \support command as unnumbered footnote
 \let\svdthefootnote\thefootnote%
@@ -45,36 +50,32 @@
 \usepackage{xcolor}
 %% begin: defined colors, via xcolor package, for styling
 %% end: defined colors, via xcolor package, for styling
-%% Theorem-like environments
 %
-% amsthm package: redundant if using amsart documentclass, but required otherwise.
-\usepackage{amsthm}%
-%
-\theoremstyle{plain}
+\theoremstyle{plain}%
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{identity}[theorem]{Identity}
-
-\theoremstyle{definition}
-\newtheorem{inlineexercise}[theorem]{Checkpoint}
-\newtheorem{project}[theorem]{Project}
-\newtheorem{exploration}[theorem]{Exploration}
-\newtheorem{activity}[theorem]{Activity}
-\newtheorem{principle}[theorem]{Principle}
-\newtheorem{algorithm}[theorem]{Algorithm}
+%
+\theoremstyle{definition}%
 \newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{principle}[theorem]{Principle}
 \newtheorem{heuristic}[theorem]{Heuristic}
 \newtheorem{hypothesis}[theorem]{Hypothesis}
 \newtheorem{assumption}[theorem]{Assumption}
-\newtheorem{investigation}[theorem]{Investigation}
 \newtheorem{openproblem}[theorem]{Open Problem}
-
-\theoremstyle{remark}
-\newtheorem{technology}[theorem]{Technology}
-\newtheorem{convention}[theorem]{Convention}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{activity}[theorem]{Activity}
+\newtheorem{inlineexercise}[theorem]{Checkpoint}
+\newtheorem{investigation}[theorem]{Investigation}
+\newtheorem{exploration}[theorem]{Exploration}
+\newtheorem{project}[theorem]{Project}
+%
+\theoremstyle{remark}%
 \newtheorem{warning}[theorem]{Warning}
+\newtheorem{convention}[theorem]{Convention}
 \newtheorem{insight}[theorem]{Insight}
 \newtheorem{computation}[theorem]{Computation}
+\newtheorem{technology}[theorem]{Technology}
 \newtheorem{data}[theorem]{Data}
-
 %% Colored boxes, and much more, though mostly styling
 %% skins library provides "enhanced" skin, employing tikzpicture
 %% boxes may be configured as "breakable" or "unbreakable"
@@ -534,6 +535,7 @@ breakable,
 \tcbset{ programboxnumberedstyle/.style={programboxstyle, left=6ex} }
 \newtcblisting{program}[4]{programboxstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodestyle}}
 \newtcblisting{programnumbered}[4]{programboxnumberedstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodenumberedstyle}}
+\newcommand{\programfragment}[2]{\lstinline[language=#1, style=programcodestyle, basicstyle=\ttfamily]#2}
 %% Console session with prompt, input, output
 %% listings allows for escape sequences to enable LateX,
 %% so we bold the input commands via the following macro
@@ -622,6 +624,27 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \renewcommand{\alsoname}{See also}
 %% Package for tables (potentially) spanning multiple pages
 \usepackage{longtable}
+%% hyperref driver does not need to be specified, it will be detected
+%% Footnote marks in tcolorbox have broken linking under
+%% hyperref, so it is necessary to turn off all linking
+%% It *must* be given as a package option, not with \hypersetup
+\usepackage[hyperfootnotes=false]{hyperref}
+%% configure hyperref's  \href{}{}  and  \nolinkurl  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
+%% Hyperlinking active in electronic PDFs, all links without surrounding boxes and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+%% Less-clever names for hyperlinks are more reliable, *especially* for structural parts
+%% See comments in the code to learn more about the importance of this setting
+\hypersetup{hypertexnames=false}
+%%The  hypertexnames  setting then confuses the hyperlinking from the index
+%%This patch resolves the incorrect links, see code for StackExchange post.
+\makeatletter
+\patchcmd\Hy@EveryPageBoxHook{\Hy@EveryPageAnchor}{\Hy@hypertexnamestrue\Hy@EveryPageAnchor}{}{\fail}
+\makeatother
+\hypersetup{pdftitle={}}
+%% If you manually remove hyperref, leave in this next command
+%% This will allow LaTeX compilation, employing this no-op command
+\providecommand\phantomsection{}
 %% Division Numbering: Chapters, Sections, Subsections, etc
 %% Division numbers may be turned off at some level ("depth")
 %% A section *always* has depth 1, contrary to us counting from the document root
@@ -778,31 +801,37 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \newcommand{\gt}{>}
 \newcommand{\amp}{&}
 %% End: Author-provided macros
-\dateline{March 21, 2025}{TBD}{TBD}
-\MSC{00-01, 00-02, 00A99}%
-\Copyright{The author.}
+\dateline{April 3, 2025}{TBD}{TBD}
+\MSC{Primary 00-01, 00-02; Secondary 00A99}
 \title{Derivatives and Integrals\\
 {\small An Annotated Discourse}}
-\author{Robert Beezer\authornote{1}%
+\author{Robert Beezer\authornote{1}
 \and
-A. Second Author\authornote{2}%
-}%
+
+A. Second Author\authornote{2}}
 \authortext{1}{Department of Mathematics and Computer Science\\
 University of Puget Sound\\
 Tacoma, Washington, USA
-(\email{\href{mailto:beezer@pugetsound.edu}{\nolinkurl{beezer@pugetsound.edu}}})}%
+beezer@pugetsound.edu
+}
 \authortext{2}{Department of Mathematics\\
 University of Somewhere\\
 Anytown, USA
-(\email{\href{mailto:asauthor@example.edu}{\nolinkurl{asauthor@example.edu}}})}%
+asauthor@example.edu
+}
+%
+%
+%*********************************%
+%*      Begin Main Document      *%
+%*********************************%
+%
 \begin{document}
+%
 \maketitle
-\renewcommand*{\abstractname}{Abstract}
 \begin{abstract}
 This is a sample of many of the things you can do with PreTeXt.  Sometimes the math makes sense, sometimes it seems to be written in the first person, sort of like this Abstract.%
 \par\medskip
-\noindent{\bfseries Keywords}. samples, PreTeXt, testing document.
-\MSC{00-01, 00-02, 00A99}%
+\noindent\textbf{Keywords}. samples, PreTeXt, testing document
 \end{abstract}
 %
 %
@@ -817,7 +846,7 @@ We consider definite integrals of functions \(f(x)\).  For example,%
 \end{equation*}
 This is also a demonstration of the capabilities of \href{https://pretextbook.org}{PreTeXt}\footnote{\nolinkurl{pretextbook.org}\label{section-introduction-2-4}}.\label{section-introduction-2-5}%
 \par
-Generated: March 21, 2025, 10:12:17 (-06:00)%
+Generated: April 3, 2025, 21:06:03 (-06:00)%
 % end of section: Introduction
 %
 %
@@ -3201,7 +3230,7 @@ There are several graphics engine packages that a \LaTeX{} document can employ. 
     \node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}};
     \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5);
     \node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3283,7 +3312,7 @@ The next example began life in \href{http://www.frontiernet.net/\~eugene.ressler
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3327,7 +3356,7 @@ The pgfplots package was included in \mono{docinfo/latex-image-preamble}. Here, 
         ]{x^2 - y^2};
     \end{axis}\\
 };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3347,7 +3376,7 @@ It is still your responsibility to be sure this directory of external data files
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3366,7 +3395,7 @@ A Cartesian plot might benefit from having a \mono{<description>} with a \mono{<
         ]
         \addplot[only marks] coordinates {(1,5) (2,3) (3,8) (4,9) (5,5) (6,5) (7,8) (8,2) (9,3)};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3385,7 +3414,7 @@ The next image requires three passes with \LaTeX{} to get everything in place.  
         0 \amp 2 \amp 1 \amp 0 \amp 2
         \end{bNiceArray}$
     };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3721,7 +3750,7 @@ A \mono{tikz} image recycled from above, now 40\% width, with 40\% left margin, 
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margin, 40\% right margin, and no longer legible.%
@@ -3736,7 +3765,7 @@ A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margi
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 An Asymptote image, with zero layout control, so 100\% width.%
@@ -3893,666 +3922,6 @@ Description, good shortdescription, \mono{@decorative} set to \mono{yes}%
 \end{sidebyside}%
 % end of subsection: Accessibility
 % end of section: Graphics
-%
-%
-\typeout{************************************************}
-\typeout{Section 11 Further Reading}
-\typeout{************************************************}
-%
-\section{Further Reading}\label{section-further-reading}%
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 11.1 Specialized Subdivisions}
-\typeout{************************************************}
-%
-\subsection{Specialized Subdivisions}\label{section-further-reading-2}%
-In a longer work you might wish to have some references on a per-chapter basis, or similar.  You can make a ``references'' subdivision anywhere to hold bibliographic items, and you can reference the items like any other item.  For example, we can cite the article below \hyperlink{biblio-beezer-fcla}{[{\xreffont 11.4.3},~Chapter R]}, included an indication that a specific chapter may be relevant.%
-% end of subsection: Specialized Subdivisions
-% end of section: Further Reading
-%
-%
-\typeout{************************************************}
-\typeout{Section 12 List Calisthenics}
-\typeout{************************************************}
-%
-\section{List Calisthenics}\label{section-lists}%
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.1 Lists, Generally}
-\typeout{************************************************}
-%
-\subsection{Lists, Generally}\label{section-lists-2}%
-\index{ordered list}%
-\index{list!ordered}%
-\index{unordered list}%
-\index{list!unordered}%
-Use \mono{ol} to make an ordered list,\index{ordered list} and \mono{ul} to make an unordered (bulleted) list. In both cases, use \mono{li} for each entry.  If an entry contains more than one paragraph, then each must be wrapped in \mono{p}. \index{unordered list}\index{list!ordered}\index{list!unordered}%
-\par
-This section contains nested lists, to demonstrate how they get assigned labels (numbering, symbols). But we begin with two simple lists, demonstrating an ordered list and an unordered list. See the end of section for an example of a description list. Note in the source the optional use of a paragraph (\mono{p}) for the list items of the list of colors.%
-\par
-%
-\begin{enumerate}
-\item{}First.%
-\item{}Second\footnote{Footnote in an unstructured list item\label{section-lists-2-8-1-2-1}}.%
-\item{}Third.%
-\end{enumerate}
-%
-\begin{itemize}[label=\textbullet]
-\item{}Red\footnote{One of our favorite colors\label{section-lists-2-8-2-1-1-1}}%
-\item{}Green%
-\item{}Yellow%
-\item{}Purple%
-\end{itemize}
-%
-\par
-Next, we have a list with no customization and multiple levels to test the defaults.  \LaTeX{} allows a maximum of four levels of ordered\slash{}numbered lists, and a total of six levels if some unordered lists are mixed in.  Note that to have nested lists you \emph{must} structure your list items as paragraphs, since a list may only appear within a \mono{<p>} element.%
-\begin{enumerate}
-\item{}\lititle{A title on a top-level item.}\par%
-Level 1, first.%
-\item\hypertarget{list-two}{}Level 1, second.%
-\begin{enumerate}
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\begin{enumerate}
-\item{}Level 3, first.%
-\item\hypertarget{list-two-two-two}{}Level 3, second.%
-\begin{enumerate}
-\item{}Level 4, first.%
-\item{}Level 4, second.%
-\item\hypertarget{list-two-two-two-three}{}\lititle{Title on xref'ed list item.}\par%
-Level 4, third.%
-\end{enumerate}
-%
-\item{}Level 3, third.%
-\end{enumerate}
-%
-\item{}\lititle{A title on a nested item.}\par%
-Level 2, third.%
-\end{enumerate}
-%
-\item{}Level 1, third.%
-\end{enumerate}
-%
-\par
-Items in ordered lists (only) may be be give an \mono{xml:id} and then may be the target of an \mono{xref}.  We test three here, referencing down into the hierarchy above.  Level 1, second: \hyperlink{list-two}{{\xreffont 2}}.  Level 3, second: \hyperlink{list-two-two-two}{{\xreffont 2.b.ii}}.  Level 4, third: \hyperlink{list-two-two-two-three}{{\xreffont 2.b.ii.C}}.  Note that if a list item of an ordered list is contained within a list item of an unordered list, then its number will not be defined.%
-\par
-And now a four-level deep unordered list with the default labels supplied by PreTeXt (disc, circle, square, disc).  Again, the defalt order for Markdown\slash{}Jupyter (disc, square, circle, circle) is different than for \LaTeX{} and HTML (disc, circle, square, disc)%
-\begin{itemize}[label=\textbullet]
-\item{}\lititle{A title on a top-level item.}\par%
-Level 1, first.%
-\item{}Level 1, second.%
-\begin{itemize}[label=$\circ$]
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\begin{itemize}[label=$\blacksquare$]
-\item{}Level 3, first.%
-\item{}Level 3, second.%
-\begin{itemize}[label=\textbullet]
-\item{}Level 4, first.%
-\item{}Level 4, second.%
-\item{}Level 4, third.%
-\end{itemize}
-%
-\item{}\lititle{A title on a nested item.}\par%
-Level 2, third.%
-\end{itemize}
-%
-\item{}Level 2, third.%
-\end{itemize}
-%
-\item{}Level 1, third.%
-\end{itemize}
-%
-\par
-And a total of six levels with a mix of ordered and unordered lists, the most that out-of-the-box-\LaTeX{} is able to handle.%
-\begin{enumerate}
-\item{}Level 1, first.%
-\item{}Level 1, second.%
-\begin{enumerate}
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\begin{itemize}[label=\textbullet]
-\item{}Level 3, first.%
-\item{}Level 3, second.%
-\begin{enumerate}
-\item{}Level 4, first.%
-\item{}Level 4, second.%
-\begin{enumerate}
-\item{}Level 5, first.%
-\item{}Level 5, second.%
-\begin{itemize}[label=$\circ$]
-\item{}Level 6, first.%
-\item{}Level 6, second.%
-\item{}Level 6, third.%
-\end{itemize}
-%
-\item{}Level 5, third.%
-\end{enumerate}
-%
-\item{}Level 4, third.%
-\end{enumerate}
-%
-\item{}Level 3, third.%
-\end{itemize}
-%
-\item{}Level 2, third.%
-\end{enumerate}
-%
-\item{}Level 1, third.%
-\end{enumerate}
-%
-\par
-Now, nested lists with the defaults replaced by custom choices.  First, an ordered list, three deep, upper Roman numerals, then upper-case Latin, then more traditional Arabic numerals on the three elements of the third level.  Note the adornments of the labels will not currently be rendered by \href{https://en.wikipedia.org/wiki/WebKit}{WebKit}\footnote{\nolinkurl{en.wikipedia.org/wiki/WebKit}\label{section-lists-2-13-2}}-based browsers (such as Safari) when viewing HTML output.%
-\begin{enumerate}[label={*\Roman**}]
-\item{}Level 1, first.%
-\item{}Level 1, second.%
-\begin{enumerate}[label={++\Alph*}]
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\begin{enumerate}[label={\arabic*)}]
-\item{}Level 3, first.%
-\item{}Level 3, second.%
-\item{}Level 3, third.%
-\end{enumerate}
-%
-\item{}Level 2, third.%
-\end{enumerate}
-%
-\item{}Level 1, third.%
-\end{enumerate}
-%
-\par
-A nested unordered list, with labels given as squares on the outer list and nothing (blank) on the inner lists.%
-\begin{itemize}[label=$\blacksquare$]
-\item{}Level 1, first.%
-\item{}Level 1, second.%
-\begin{itemize}[label=]
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\end{itemize}
-%
-\item{}Level 1, third.%
-\end{itemize}
-%
-\par
-A nested ordered list, to test intramural cross-references.%
-\begin{enumerate}
-\item{}Level 1, first.%
-\item\hypertarget{list-item-second}{}Level 1, second.%
-\begin{itemize}[label=]
-\item{}Level 2, first.%
-\item{}Level 2, second.%
-\end{itemize}
-%
-\item{}Level 1, third.  With a cross-reference to second list item, \hyperlink{list-item-second}{{\xreffont 2}}.%
-\item{}Level 1, fourth.  Whose number should not change when the knowl just prior is opened.%
-\end{enumerate}
-%
-\par
-An ordered list may begin at zero by using a numeral zero in the \mono{@label} attribute, instead of numeral one.%
-\begin{enumerate}[label={(\arabic*), start=0}]
-\item{}First%
-\item{}Second%
-\begin{enumerate}[label={-\arabic*-, start=0}]
-\item{}Uno%
-\item{}Dos%
-\item{}Tres%
-\end{enumerate}
-%
-\item{}Third%
-\end{enumerate}
-%
-\par
-The next definition is very poorly worded.  It is meant to test leading off with a list (bad form), for which \LaTeX{} normally begins right after the heading.%
-\begin{definition}[Group]\label{section-lists-2-18}%
-%
-\index{Group}%
-\index{group!definition}\index{paragraph!initial list}%
-\begin{enumerate}[label={\alph*)}]
-\item{}There is a binary operation, denoted ``\(\cdot\)''.%
-\item{}The operation is associative.%
-\item{}There is an identity element, \(e\).%
-\item{}For every element \(b\), there is an element \(c\) (the inverse), such that%
-\begin{equation*}
-b\cdot c=c\cdot b = e\text{.}
-\end{equation*}
-%
-\end{enumerate}
-%
-\par
-If these conditions are met for a set \(G\), then we say \(G\) is a \terminology{group}.%
-\end{definition}
-Exercises and References are specialized subdivisions you can put anywhere.  They are implemented as top-level lists, so should share behavior.  For example, an exercise may have many parts and when expressed as a list, should have the expected labels.%
-\par
-Similarly, References may have lists in their annotations.  Unlikely?  But possible.%
-\par
-The next two subdivisions are an Exercises subdivision and a References subdivision, which have lists within an exercise and a bibliographic item (respectively).%
-% end of subsection: Lists, Generally
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.2 List Spacing, I}
-\typeout{************************************************}
-%
-\subsection{List Spacing, I}\label{section-lists-3}%
-This is a short list that ends a subsection, so can be used to address the necessary spacing.  We also test two XML elements separated by a space (which should not go missing).%
-\begin{multicols}{2}
-\begin{enumerate}[label={(\alph*)}]
-\item{}One item.%
-\item{}\emph{Two} \alert{ducks}.%
-\item{}Three items.  Plus a few more words to check that long entries in a two column list look good.%
-\item{}Four items.%
-\item{}Another long entry that simultaneously tests that long entries look good in a list, and also tests an odd number of entries in a two column list.%
-\end{enumerate}
-\end{multicols}
-%
-% end of subsection: List Spacing, I
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.3 List Spacing, II}
-\typeout{************************************************}
-%
-\subsection{List Spacing, II}\label{section-lists-4}%
-This is another short list that ends a subsection, so can be used to address the necessary spacing.%
-\begin{multicols}{2}
-\begin{itemize}[label=\textbullet]
-\item{}Uno item.%
-\item{}Dos items.%
-\item{}Tres item.%
-\item{}Quattro items.%
-\end{itemize}
-\end{multicols}
-%
-\par
-And a paragraph after that list so that spacing can be checked.%
-% end of subsection: List Spacing, II
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.4 List items containing only inline math}
-\typeout{************************************************}
-%
-\subsection{List items containing only inline math}\label{test-second}%
-\begin{assemblage}[Testing list items containing only math.]\label{math-list-test}%
-%
-There are many places where it makes sense to have a list of mathematical terms, or possibly equations. For example, one might wish to provide a list of derivative formulas. With such lists, the author may wish to have display mathematics, but almost certainly they don't want it centered. One can work around this by using the \LaTeX{} \mono{\textbackslash{}displaystyle} command. However, it would be nice if a list item containing only math used display mode by default.%
-\par
-%
-\begin{enumerate}
-\item{}A list item containing some text in a paragraph, as well as some inline math: \(\int_a^b x^2\,dx = \frac{x^3}{3}\).%
-\item{}A list item with text and math \(\int_a^b x^2\,dx\), not in a paragraph.%
-\item{}\(\displaystyle \frac{d}{dx}\tan(x) = \sec^2(x) = \frac{1}{\cos^2(x)}\)%
-\item{}\(\displaystyle \sum_{i=0}^n r^i = \frac{1-r^{n+1}}{1-r}\)%
-\end{enumerate}
-\index{\(\int f(x)\,dx\)}\index{math in lists \(\frac{d}{dx}(\sin(x))=\cos(x)\)}%
-\par
-Now, a \mono{p} that isn't in a list, followed by a list that's in a \mono{p}.%
-\par
-%
-\begin{itemize}[label=\textbullet]
-\item{}\(\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}\) A list item starting with some math, followed by text, all in a \mono{p}%
-\item{}\(\displaystyle \frac{a}{b}\div \frac{c}{d} = \frac{ad}{bc}\)%
-\item{}\(\displaystyle \tan\theta = \frac{\sin\theta}{\cos\theta}\)%
-\end{itemize}
-%
-\end{assemblage}
-The above assemblage had some lists in it, just to see what will happen. While we're at it, we might try adding lists that are in a \mono{list}.%
-\begin{listptx}{List}{\textbf{A list of items, some of which contain math}}{test-second-4}{}%
-%
-\begin{enumerate}
-\item{}A first list item, containing some text. The next list item will contain only math, with the \mono{m} tag inline with the \mono{li} tag.%
-\item{}A list item with text and math \(\int_a^b x^2\,dx\), not in a paragraph.%
-\item{}\(\displaystyle \int_a^b f'(x)\, dx = f(b)-f(a)\)%
-\item{}The next two list items will contain, respectively, a list item containing only math, where the math is on a new line, then the same again, but with two new lines, and a list item containing math within a \mono{p}, first inline, and then after a line break.%
-\item{}\(\displaystyle \frac{d}{dx}\sec^{-1}(x) = \frac{1}{x\sqrt{x^2-1}}\)%
-\item{}\(\displaystyle \frac{d}{dx}\sec^{-1}(x) = \frac{1}{x\sqrt{x^2-1}}\)%
-\item{}\(\displaystyle \frac{d}{dx}\sec^{-1}(x) = \frac{1}{x\sqrt{x^2-1}}\)%
-\item{}\(\displaystyle \frac{d}{dx}\sec^{-1}(x) = \frac{1}{x\sqrt{x^2-1}}\)%
-\end{enumerate}
-\end{listptx}%
-And now, a list in a paragraph.%
-\par
-%
-\begin{itemize}[label=\textbullet]
-\item{}A paragraph that begins with text, then some math: \(\sum_{n=1}^\infty\frac{1}{n^2}=\frac{\pi^2}{6}\) And now some more text. The next two list items contain:%
-\begin{enumerate}
-\item{}Math only, inline.%
-\item{}Math only, with a newline.%
-\item{}Math only, but in a paragraph. Also the next item on this list has math, just to see what happens in a nested list.%
-\item{}\(\displaystyle \int_a^x \frac{d}{dt}f(t)\,dt = f(x)-f(a)\)%
-\end{enumerate}
-%
-\item{}\(\displaystyle \frac{a}{b}\div \frac{c}{d} = \frac{ad}{bc}\)%
-\item{}\(\displaystyle \tan\theta = \frac{\sin\theta}{\cos\theta}\)%
-\item{}\(\displaystyle \frac{a}{b}\gt \sum_{i=3}^{76}\frac{x^2}{y^2}\)%
-\end{itemize}
-%
-\par
-Inclusion of any text other than math will kill the automatic display style. For example, this would happen if one were to add punctuation after the math.%
-\par
-%
-\begin{itemize}[label=\textbullet]
-\item{}\(\int_a^b \frac{\sin(x)}{x}\,dx\),%
-\item{}\(\displaystyle \int_a^b \frac{\sin(x)}{x}\,dx\)%
-\end{itemize}
-%
-\par
-List items can have titles.  We try that here, along with testing list items structured with paragraphs.%
-\begin{itemize}[label=\textbullet]
-\item{}\lititle{With \mono{\textbackslash{}displaystyle} added automatically.}\par%
-\(\displaystyle \sum_{n=1}^\infty ar^n\)%
-\item{}\lititle{Two paragraphs.}\par%
-\(\sum_{n=1}^\infty ar^n\)%
-\par
-\(\sum_{n=1}^\infty ar^n\)%
-\item{}\lititle{One paragraph, extra text.}\par%
-So, \(\sum_{n=1}^\infty ar^n\)%
-\item{}\lititle{Two elements (only).}\par%
-\LaTeX{}\(\sum_{n=1}^\infty ar^n\)%
-\end{itemize}
-%
-% end of subsection: List items containing only inline math
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.5 Difficult List Items}
-\typeout{************************************************}
-%
-\subsection{Difficult List Items}\label{section-lists-6}%
-In \hyperref[test-second]{Subsection~{\xreffont\ref{test-second}}} we were careful about lone bits of math inside list items.  The \mono{<cd>} element is used with indentation, which is likely superfluous inside a list item that is already being indented.  Here we test lone \mono{<cd>} elements inside of list items in various configurations.%
-\par
-Unordered list, one-deep.%
-\begin{itemize}[label=\textbullet]
-\item{}%
-\begin{codedisplayleft}
-Foo Bar Foo
-Bar Foo Bar
-\end{codedisplayleft}
-%
-\item{}This list item is a long paragraph with a \mono{<cd>} in the middle which should be indented some to indicate its participation in the paragraph.%
-\begin{codedisplay}
-Foo Bar Foo
-Bar
-Bar Foo Bar
-Foo
-\end{codedisplay}
-This list item is a long paragraph with a \mono{<cd>} in the middle which should be indented some to indicate its participation in the paragraph.%
-\item{}%
-\begin{codedisplayleft}
-Foo Bar Foo
-Bar
-Bar Foo Bar
-Foo
-\end{codedisplayleft}
-%
-\end{itemize}
-%
-\par
-Intervening paragraph, to illuminate spacing at both the top and bottom of a list.  Intervening paragraph, to illuminate spacing at both the top and bottom of a list.  Intervening paragraph, to illuminate spacing at both the top and bottom of a list.  Intervening paragraph, to illuminate spacing at top and bottom of a list.%
-\par
-Ordered lists, two-deep, mixed.%
-\begin{enumerate}
-\item{}First item, outer level.%
-\begin{enumerate}
-\item{}%
-\begin{codedisplayleft}
-First inner item, cd only
-Foo Bar Foo
-Bar
-Bar Foo Bar
-Foo
-\end{codedisplayleft}
-%
-\item{}Second inner item, a paragraph in a list item.%
-\item{}%
-\begin{codedisplayleft}
-Third inner item, cd only
-Foo Bar Foo
-Foo Bar Foo
-Bar Foo Bar
-\end{codedisplayleft}
-%
-\end{enumerate}
-%
-\item{}%
-\begin{codedisplayleft}
-cd inside second item, outer level
-Bar
-Bar Foo Bar
-Foo
-\end{codedisplayleft}
-%
-\end{enumerate}
-%
-% end of subsection: Difficult List Items
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.6 Description Lists}
-\typeout{************************************************}
-%
-\subsection{Description Lists}\label{section-lists-7}%
-Use \mono{dl} to make a description list\index{description list}\index{list!description}. Inside of those tags, use \mono{li} for each entry. Then, use \mono{title} to specify the term being described and \mono{p} to specify the description.%
-\par
-A ``description'' list \index{description list}\index{list!description} has a short term or phrase that is prominent, followed by a short description.  It is modeled on the lists of similar structure in both \LaTeX{} and HTML.  It makes for a nice medium-weight way to define terms, somewhere in-between the \mono{term} tag which just makes a term prominent in a sentence, and a \mono{definition}, which is set off, has a heading, a number, and a title.  Do not try to manage the separation between the title and the description by employing punctuation (but you can include a question-mark or exclamation-point if necessary).  For example, do not include a colon to the end of the title.  This example is from Bob Plantz.%
-\begin{descriptionlist}
-\begin{dlimedium}{Central Processing Unit (CPU)}{cpu-definition}%
-Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.%
-\end{dlimedium}%
-\begin{dlimedium}{Memory}{section-lists-7-3-7-2}%
-Provides storage for the instructions for the CPU and the data they manipulate.%
-\end{dlimedium}%
-\begin{dlimedium}{Input\slash{}Output (I\slash{}O)}{section-lists-7-3-7-3}%
-Communicates with the outside world and with mass storage devices (e.g.\@, disks).%
-\end{dlimedium}%
-\begin{dlimedium}{Bus!}{bus-definition}%
-A communication pathway with a protocol specifying exactly how the pathway is used. (The punctuation is just for testing.)%
-\end{dlimedium}%
-\begin{dlimedium}{\(\displaystyle \sum_{n=0}^\infty x^n = \frac{1}{1-x}\)}{section-lists-7-3-7-5}%
-A geometric series.  The formula is valid if \(|x| < 1\).%
-\end{dlimedium}%
-\end{descriptionlist}
-%
-\par
-Some presentations can be assisted by a hint from the author about the lengths of the titles.  You can choose to provide a \mono{width} attribute on a \mono{dl} element with possible values \mono{narrow} and \mono{medium}. The value refers (somewhat confusingly) to the distance between the left margin and the description.  The default is \mono{medium}, which is illustrated above. Conversion to \LaTeX{} ignores the attribute.  An example with \mono{narrow}:%
-\begin{descriptionlist}
-\begin{dlinarrow}{Red}{section-lists-7-4-8-1}%
-The color of the sun at sunset.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Blue}{section-lists-7-4-8-2}%
-The color of a clear sky. Also a synonym for ``depressed or sad'', the title of a 1971 Joni Mitchell album (and more than a dozen other musical albums), the period of Picasso's work between 1901 and 1904, and much more!%
-\end{dlinarrow}%
-\begin{dlinarrow}{Aqua}{section-lists-7-4-8-3}%
-The color of shallow tropical waters.\footnotemark{}%
-\end{dlinarrow}%
-\footnotetext[4]{On a sunny day! (Testing footnotes in description lists for \LaTeX{} output.)\label{section-lists-7-4-8-3-2-1}}%
-\begin{dlinarrow}{Math \(x^2\)}{description-list-math-title}%
-Sorry, not a color but testing titles with math in them.%
-\end{dlinarrow}%
-\begin{dlinarrow}{``i'' before ``e'' except after ``c,'' unless it sounds like ``a'' as in ``neighbor'' and ``weigh''}{section-lists-7-4-8-5}%
-Get feisty about that weird counterfeit rule: seize the day and don't have a heifer, man.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Avocado}{section-lists-7-4-8-6}%
-Avocado is the the color with hex code \mono{\#568203}, and also the main ingredient in guacamole.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Magenta}{section-lists-7-4-8-7}%
-Magenta is a color, and a character in Rocky Horror.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Zymurgist}{section-lists-7-4-8-8}%
-A scientist who studies the chemical process of fermentation in brewing and distilling.  Also the alphabetically last 9-letter word in the English language.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Byzantium}{section-lists-7-4-8-9}%
-Byzantium is the the color with hex code \mono{\#702963}, and also an ancient Greek city which later became known as Constantinople, and today is called Istanbul.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Convection}{section-lists-7-4-8-10}%
-Circulating motion in a fluid.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Elementary}{section-lists-7-4-8-11}%
-No literary detective ever said ``Elementary my dear Watson.''  In particular, Sherlock Holmes never said that.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Understand}{section-lists-7-4-8-12}%
-Perceive the intended meaning of.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Washington}{section-lists-7-4-8-13}%
-A state, a district, the man on the US \textdollar{}1 bill and on the US quarter. Did you ever notice that on the US dime, the value is stated as ``one dime''? But how is one to know that a dime is worth 10 cents?%
-\end{dlinarrow}%
-\begin{dlinarrow}{Aquamarine}{section-lists-7-4-8-14}%
-Aquamarine is a color, and a mineral.%
-\end{dlinarrow}%
-\begin{dlinarrow}{Those who cannot remember the past are condemned to repeat it.}{section-lists-7-4-8-15}%
-George Santayana wrote those words in 1905.  A similar aphorism is misattributed to Winston Churchill.  The idea is embodied in the 4th principle: PreTeXt respects the good design practices which have been developed over the past centuries.%
-\end{dlinarrow}%
-\begin{dlinarrow}{\(\displaystyle \zeta(s) = \sum_{n=1}^\infty n^{-s} \)}{section-lists-7-4-8-16}%
-The Riemann \(\zeta\)-function is defined by a Dirichlet series, valid for \(\Re(s) > 1\).%
-\end{dlinarrow}%
-\begin{dlinarrow}{\mono{main()} is a void function}{section-lists-7-4-8-17}%
-A \mono{dl} with \mono{width=\textquotedbl{}narrow\textquotedbl{}} might be a useful way to give commentary on a program listing.%
-\end{dlinarrow}%
-\end{descriptionlist}
-%
-% end of subsection: Description Lists
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.7 Named Lists}
-\typeout{************************************************}
-%
-\subsection{Named Lists}\label{section-lists-8}%
-\index{named list}%
-\index{list!named}%
-A list can be wrapped with a \mono{<list>} element, so that it earns a number, can be given a title and have an introduction and conclusion.  Cross-references to individual list items get a bit involved as they are prefixed with the number of the list and then the number of the item, so conceivably you could get a number like \mono{4.5.3:2.a.ii}.  The colon is used to indicate the transition from the number of the list within divisions and the numbers coming from the list hierarchy, since it has two small dots.%
-\begin{listptx}{List}{\textbf{Colors of the Rainbow}}{list-colors-rainbow}{}%
-Because the colors are always in the same order, an ordered list is natural here.  The colors change continuously, but are often divided up into large ranges that human perception can easily distinguish.%
-%
-\begin{enumerate}
-\item{}Red%
-\item\hypertarget{rainbow-orange}{}Orange%
-\item{}Yellow%
-\item{}Green%
-\item{}Blue%
-\item{}Indigo%
-\item{}Violet%
-\end{enumerate}
-So some people use the acronym \acronym{ROY-G-BIV} to remember this sequence.%
-\end{listptx}%
-This next list is used for testing cross-references to it.  See \hyperref[section-cross-referencing]{Section~{\xreffont\ref{section-cross-referencing}}}.%
-\begin{listptx}{List}{\textbf{A named list of targets}}{list-to-reference}{}%
-This is the introduction to this named list, which references an item within, via the hybrid \mono{@text} attribute:  \hyperlink{target-item}{Item~B.c}.  At one time this paragraph was inadvertently centered\textemdash{}that bug has been fixed.%
-%
-\begin{enumerate}[label={\Alph*}]
-\item{}%
-\begin{enumerate}[label={\roman*}]
-\item{}A and i%
-\item{}A and ii%
-\item{}A and iii%
-\end{enumerate}
-%
-\item{}%
-\begin{enumerate}[label={\alph*}]
-\item{}B and a%
-\item{}B and b%
-\item\hypertarget{target-item}{}B and c (target of some cross-references)%
-\end{enumerate}
-%
-\item{}%
-\begin{itemize}[label=\textbullet]
-\item{}The next three cross-references point to a list item, just above.  It is interesting because the list is named, hence numbered.  The global reference uses the full number, while the local reference uses the number from within the list.  The hybrid reference recognizes that the target is within the same named list, so the number can be shorter.  An identical hybrid cross-reference appears within the \mono{<introduction>} to this list, an immediately following, but outside the \mono{<list>}.%
-\item{}Cross-reference within named list (\mono{global}): \hyperlink{target-item}{Item~{\xreffont 12.4:B.c}}%
-\item{}Cross-reference within named list (\mono{hybrid}): \hyperlink{target-item}{Item~B.c}%
-\item{}Cross-reference within named list (\mono{local}): \hyperlink{target-item}{Item~B.c}%
-\item{}%
-\begin{enumerate}[label={\arabic*}]
-\item{}C and bullet and 1%
-\item\hypertarget{target-no-number}{}C and bullet and 2%
-\item{}C and bullet and 3%
-\end{enumerate}
-%
-\item{}C and bullet%
-\item{}C and bullet%
-\end{itemize}
-%
-\end{enumerate}
-\end{listptx}%
-This is a paragraph just outside the preceding named list, which references an item within, via the hybrid \mono{@text} attribute:  \hyperlink{target-item}{Item~{\xreffont 12.4:B.c}}.%
-\par
-\index{list}This is a paragraph with three lists contained within it.  For HTML output we have to ``inside-out'' the lists.%
-\begin{enumerate}
-\item{}A one item ordered list.%
-\end{enumerate}
-In other words, the text before, after, and between, needs to each be encapsulated as an HTML \mono{p} element of its own.%
-\begin{itemize}[label=\textbullet]
-\item{}A one item unordered list.%
-\end{itemize}
-Including definition lists.%
-\begin{descriptionlist}
-\begin{dlimedium}{Define Me}{section-lists-8-9-6-1}%
-A one item definition list.%
-\end{dlimedium}%
-\end{descriptionlist}
-That's all!%
-\par
-A one item list, whose item is a paragraph with two contained ordered lists, separated by text.%
-\begin{itemize}[label=$\blacksquare$]
-\item{}Introductory text.%
-\begin{enumerate}[label={\Alph*}]
-\item{}First item, first list.%
-\end{enumerate}
-Intermediate text.%
-\begin{enumerate}[label={\alph*}]
-\item{}First item, second list.%
-\end{enumerate}
-Concluding text.%
-\end{itemize}
-%
-% end of subsection: Named Lists
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.8 Testing List Decompositions}
-\typeout{************************************************}
-%
-\subsection{Testing List Decompositions}\label{section-lists-9}%
-A list in a paragraph is a construction in HTML that browsers try to correct, which leads to unpredictable results, so we have to decompose an author's paragraph with lists into a sequence of HTML paragraphs, interrupted by lists.  This subsection is only relevant to HTML output, and only for testing.\index{paragraph!normal}%
-\par
-%
-\begin{enumerate}
-\item{}This paragraph opens with an ordered list.%
-\item{}Testing the id, and other info that should be at the top of the paragraph.%
-\end{enumerate}
-Now the paragraph continues, and we have an index item here, so we can test cross-references back here.\index{paragraph!opens with list}%
-% end of subsection: Testing List Decompositions
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 12.9 List Column Testing}
-\typeout{************************************************}
-%
-\subsection{List Column Testing}\label{section-lists-10}%
-This is a list arranged into two columns with some intentional layout challenges. The math is too long to fit in one column and can't be wrapped - it reduces the number of columns in its row. The long text items can be wrapped and stay within their column.%
-\begin{multicols}{2}
-\begin{enumerate}[label={(\alph*)}]
-\item{}One item.%
-\item{}\emph{Two} \alert{ducks}.%
-\item{}%
-\begin{alignat*}{5}
-3u \amp {}+{} 1v \amp {}+{} 3w \amp {}+{} 2x \amp {}+{} \amp  y \amp {}+{} \amp 3z \amp {}={} \amp 10\\
-2u \amp {}+{} 2v \amp {}-{} 2w \amp {}+{} x  \amp       \amp    \amp {}+{} \amp  z \amp {}={} \amp 6\\
-1u \amp {}-{} 3v \amp {}+{} 1w \amp {}+{} x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13
-\end{alignat*}
-%
-\item{}Short item.%
-\item{}A long item that can be wrapped over multiple lines.%
-\item{}Four items.%
-\item{}%
-\item{}Another long entry that simultaneously tests that long entries look good in a list, and also tests an odd number of entries in a two column list.%
-\end{enumerate}
-\end{multicols}
-%
-% end of subsection: List Column Testing
-% end of section: List Calisthenics
 %
 %
 \typeout{************************************************}
@@ -7858,14 +7227,14 @@ Here are two TikZ images, authored side-by-side.  The first has had its geometri
   \node at ( 210:2)   {Design};
   \node at ( 330:2)   {Coding};
   \node [font=\Large] {\LaTeX};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \begin{sbspanel}{0.25}%
 \begin{panelfigureptx}{Figure}{\TeX{} Work Flow}{section-side-by-side-8-5-2}{}%
 \noindent\resizebox{\linewidth}{!}{%
 \smartdiagram[circular diagram:clockwise]{Edit,
-pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}
+pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -8520,16 +7889,15 @@ Poems\index{poem} may be panels of a side-by-side layout.  Here we place some co
 \poemTitle{Fire and Ice}
 \index{Fire and Ice, Frost}%
 \begin{stanza}
-\poemlineleft{Some say the world will end in fire,}
-\poemlineleft{Some say in ice.}
-\poemlineleft{From what I've tasted of desire}
-\poemlineleft{I hold with those who favor fire.}
-\poemlineleft{But if it had to perish twice,}
-\poemlineleft{I think I know enough of hate}
-\poemlineleft{To say that for destruction ice}
-\poemlineleft{Is also great}
-\poemlineleft{And would suffice.}
-\end{stanza}
+Some say the world will end in fire,\\
+Some say in ice.\\
+From what I've tasted of desire\\
+I hold with those who favor fire.\\
+But if it had to perish twice,\\
+I think I know enough of hate\\
+To say that for destruction ice\\
+Is also great\\
+And would suffice.\end{stanza}
 \poemauthorleft{Robert Frost}
 \end{poem}
 \end{sbspanel}%
@@ -8547,21 +7915,20 @@ Poems are not horizontally-rigid, but they are not perfectly horizontally-flexib
 \poemTitle{Sonnet to Liberty}
 \index{Sonnet to Liberty, Wilde}%
 \begin{stanza}
-\poemlineleft{Not that I love thy children, whose dull eyes}
-\poemlineleft{See nothing save their own unlovely woe,}
-\poemlineleft{Whose minds know nothing, nothing care to know,}
-\poemlineleft{But that the roar of thy Democracies,}
-\poemlineleft{Thy reigns of Terror, thy great Anarchies,}
-\poemlineleft{Mirror my wildest passions like the sea,}
-\poemlineleft{And give my rage a brother! Liberty!}
-\poemlineleft{For this sake only do thy dissonant cries}
-\poemlineleft{Delight my discreet soul, else might all kings}
-\poemlineleft{By bloody knout or treacherous cannonades}
-\poemlineleft{Rob nations of their rights inviolate}
-\poemlineleft{And I remain unmoved-and yet, and yet,}
-\poemlineleft{These Christs that die upon the barricades,}
-\poemlineleft{God knows it I am with them, in some things.}
-\end{stanza}
+Not that I love thy children, whose dull eyes\\
+See nothing save their own unlovely woe,\\
+Whose minds know nothing, nothing care to know,\\
+But that the roar of thy Democracies,\\
+Thy reigns of Terror, thy great Anarchies,\\
+Mirror my wildest passions like the sea,\\
+And give my rage a brother! Liberty!\\
+For this sake only do thy dissonant cries\\
+Delight my discreet soul, else might all kings\\
+By bloody knout or treacherous cannonades\\
+Rob nations of their rights inviolate\\
+And I remain unmoved-and yet, and yet,\\
+These Christs that die upon the barricades,\\
+God knows it I am with them, in some things.\end{stanza}
 \poemauthorleft{Oscar Wilde}
 \end{poem}
 \end{sbspanel}%
@@ -8569,13 +7936,12 @@ Poems are not horizontally-rigid, but they are not perfectly horizontally-flexib
 \begin{poem}%
 \poemTitle{Sonnet to Liberty}
 \begin{stanza}
-\poemlineleft{Not that I love thy children, whose dull eyes}
-\poemlineleft{See nothing save their own unlovely woe,}
-\poemlineleft{Whose minds know nothing, nothing care to know,}
-\poemlineleft{But that the roar of thy Democracies,}
-\poemlineleft{Thy reigns of Terror, thy great Anarchies,}
-\poemlineleft{\textellipsis{}}
-\end{stanza}
+Not that I love thy children, whose dull eyes\\
+See nothing save their own unlovely woe,\\
+Whose minds know nothing, nothing care to know,\\
+But that the roar of thy Democracies,\\
+Thy reigns of Terror, thy great Anarchies,\\
+\textellipsis{}\end{stanza}
 \poemauthorleft{Oscar Wilde}
 \end{poem}
 \end{sbspanel}%
@@ -8626,20 +7992,19 @@ A long poem, when placed into a \mono{sidebyside} will not fit onto a physical p
 \poemTitle{The Stolen Child}
 \index{Stolen Child, The, Yeats}%
 \begin{stanza}
-\poemlineleft{Where dips the rocky highland}
-\poemlineleft{Of Sleuth Wood in the lake,}
-\poemlineleft{There lies a leafy island}
-\poemlineleft{Where flapping herons wake}
-\poemlineleft{The drowsy water-rats;}
-\poemlineleft{There we've hid our faery vats,}
-\poemlineleft{Full of berries}
-\poemlineleft{And of reddest stolen cherries.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where dips the rocky highland\\
+Of Sleuth Wood in the lake,\\
+There lies a leafy island\\
+Where flapping herons wake\\
+The drowsy water-rats;\\
+There we've hid our faery vats,\\
+Full of berries\\
+And of reddest stolen cherries.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8651,23 +8016,22 @@ Some commentary on Stanza One.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Where the wave of moonlight glosses}
-\poemlineleft{The dim grey sands with light,}
-\poemlineleft{Far off by furthest Rosses}
-\poemlineleft{We foot it all the night,}
-\poemlineleft{Weaving olden dances,}
-\poemlineleft{Mingling hands and mingling glances}
-\poemlineleft{Till the moon has taken flight;}
-\poemlineleft{To and fro we leap}
-\poemlineleft{And chase the frothy bubbles,}
-\poemlineleft{While the world is full of troubles}
-\poemlineleft{And is anxious in its sleep.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where the wave of moonlight glosses\\
+The dim grey sands with light,\\
+Far off by furthest Rosses\\
+We foot it all the night,\\
+Weaving olden dances,\\
+Mingling hands and mingling glances\\
+Till the moon has taken flight;\\
+To and fro we leap\\
+And chase the frothy bubbles,\\
+While the world is full of troubles\\
+And is anxious in its sleep.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8679,22 +8043,21 @@ Some commentary on Stanza Two.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Where the wandering water gushes}
-\poemlineleft{From the hills above Glen-Car,}
-\poemlineleft{In pools among the rushes}
-\poemlineleft{That scarce could bathe a star,}
-\poemlineleft{We seek for slumbering trout}
-\poemlineleft{And whispering in their ears}
-\poemlineleft{Give them unquiet dreams;}
-\poemlineleft{Leaning softly out}
-\poemlineleft{From ferns that drop their tears}
-\poemlineleft{Over the young streams.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where the wandering water gushes\\
+From the hills above Glen-Car,\\
+In pools among the rushes\\
+That scarce could bathe a star,\\
+We seek for slumbering trout\\
+And whispering in their ears\\
+Give them unquiet dreams;\\
+Leaning softly out\\
+From ferns that drop their tears\\
+Over the young streams.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8706,20 +8069,19 @@ Some commentary on Stanza Three.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Away with us he's going,}
-\poemlineleft{The solemn-eyed:}
-\poemlineleft{He'll hear no more the lowing}
-\poemlineleft{Of the calves on the warm hillside}
-\poemlineleft{Or the kettle on the hob}
-\poemlineleft{Sing peace into his breast,}
-\poemlineleft{Or see the brown mice bob}
-\poemlineleft{Round and round the oatmeal-chest.}
-\poemlineleft{For he comes, the human child,}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{From a world more full of weeping than he}
-\poemlineleft{can understand.}
-\end{stanza}
+Away with us he's going,\\
+The solemn-eyed:\\
+He'll hear no more the lowing\\
+Of the calves on the warm hillside\\
+Or the kettle on the hob\\
+Sing peace into his breast,\\
+Or see the brown mice bob\\
+Round and round the oatmeal-chest.\\
+For he comes, the human child,\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+From a world more full of weeping than he\\
+can understand.\end{stanza}
 \poemauthorleft{William Butler Yeats}
 \end{poem}
 \end{sbspanel}%
@@ -9269,23 +8631,22 @@ Note that these two chunks of verbatim text will very likely exceed the right si
 \begin{poem}%
 \poemTitle{To A Friend Whose Work Has Come To Nothing}
 \begin{stanza}
-\poemlineleft{Now all the truth is out,}
-\poemlineleft{Be secret and take defeat}
-\poemlineleft{From any brazen throat,}
-\poemlineleft{For how can you compete,}
-\poemlineleft{Being honour bred, with one}
-\poemlineleft{Who, were it proved he lies,}
-\poemlineleft{Were neither shamed in his own}
-\poemlineleft{Nor in his neighbours' eyes?}
-\poemlineleft{Bred to a harder thing}
-\poemlineleft{Than Triumph, turn away}
-\poemlineleft{And like a laughing string}
-\poemlineleft{Whereon mad fingers play}
-\poemlineleft{Amid a place of stone,}
-\poemlineleft{Be secret and exult,}
-\poemlineleft{Because of all things known}
-\poemlineleft{That is most difficult.}
-\end{stanza}
+Now all the truth is out,\\
+Be secret and take defeat\\
+From any brazen throat,\\
+For how can you compete,\\
+Being honour bred, with one\\
+Who, were it proved he lies,\\
+Were neither shamed in his own\\
+Nor in his neighbours' eyes?\\
+Bred to a harder thing\\
+Than Triumph, turn away\\
+And like a laughing string\\
+Whereon mad fingers play\\
+Amid a place of stone,\\
+Be secret and exult,\\
+Because of all things known\\
+That is most difficult.\end{stanza}
 \poemauthorleft{William Butler Yeats}
 \end{poem}
 \end{sbspanel}%
@@ -9446,51 +8807,47 @@ There is support for poems via the \mono{poem}\index{poem} tag, which can contai
 \poemTitle{The Charge of the Light Brigade}
 \index{Charge of the Light Brigade, The, Tennyson}%
 \begin{stanza}
-\poemlineleft{Half a league, half a league,}
-\poemlineleft{Half a league onward,}
-\poemlineleft{All in the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\poemlineleft{``Forward, the Light Brigade!}
-\poemlineleft{Charge for the guns!'' he said:}
-\poemlineleft{Into the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\end{stanza}
+Half a league, half a league,\\
+Half a league onward,\\
+All in the valley of Death\\
+Rode the six hundred.\\
+``Forward, the Light Brigade!\\
+Charge for the guns!'' he said:\\
+Into the valley of Death\\
+Rode the six hundred.\end{stanza}
 \begin{stanza}
 \index{Charge of the Light Brigade!second stanza}%
-\poemlineleft{``Forward, the Light Brigade!''}
-\poemlineleft{Was there a man dismay'd?}
-\poemlineleft{Not tho' the soldier knew}
-\poemlineleft{Someone had blunder'd:}
-\poemlineleft{Theirs not to make reply,}
-\poemlineleft{Theirs not to reason why,}
-\poemlineleft{Theirs but to do and die:}
-\poemlineleft{Into the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\end{stanza}
+``Forward, the Light Brigade!''\\
+Was there a man dismay'd?\\
+Not tho' the soldier knew\\
+Someone had blunder'd:\\
+Theirs not to make reply,\\
+Theirs not to reason why,\\
+Theirs but to do and die:\\
+Into the valley of Death\\
+Rode the six hundred.\end{stanza}
 \poemauthorleft{Alfred Lord Tennyson}
 \end{poem}
 Ken Levasseur, who teaches at UMass-Lowell, has limericks in his Applied Discrete Structures textbook.  When he reported that they were unable to be the target of a cross-reference, Karl-Dieter Crisman penned the following limerick.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{CS students studying in Lowell}
-\poemlineleft{Required their books to have soul.}
-\poemlineleft{Along came their teacher}
-\poemlineleft{Who asked for this feature:}
-\poemlineleft{A poem that lives in a knowl.}
-\end{stanza}
+CS students studying in Lowell\\
+Required their books to have soul.\\
+Along came their teacher\\
+Who asked for this feature:\\
+A poem that lives in a knowl.\end{stanza}
 \poemauthorleft{Karl-Dieter Crisman}
 \end{poem}
 And when yours truly tried to joke about poetry on \href{https://github.com/PreTeXtBook/pretext-cli/issues/182}{GitHub CLI \#182}\footnote{\nolinkurl{https://github.com/PreTeXtBook/pretext-cli/issues/182}\label{section-poetry-6-2}}, back came:%
 \begin{poem}\label{limerick-clontz}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{There once was a maintainer named Rob}
-\poemlineleft{Who told bad jokes while on the job}
-\poemlineleft{While they were lame}
-\poemlineleft{You could say the same}
-\poemlineleft{Of Steven's limericks that cause you to sob}
-\end{stanza}
+There once was a maintainer named Rob\\
+Who told bad jokes while on the job\\
+While they were lame\\
+You could say the same\\
+Of Steven's limericks that cause you to sob\end{stanza}
 \poemauthorleft{Steven Clontz}
 \end{poem}
 % end of section: Poetry
@@ -10815,13 +10172,13 @@ This is a \emph{test} with two inline exercises containing MyOpenMath (MOM) prob
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-Try to evaluate \(\displaystyle-{\left(-{25}\right)}^{{-{3}{/}{2}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
+Try to evaluate \(\displaystyle-{\left(-{8}\right)}^{{-{2}{/}{3}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
 \par
 The value is \fillintext{20}  %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-3-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}DNE%
+\item{}\(\displaystyle \displaystyle-\frac{{1}}{{4}}\)%
 \end{itemize}
 %
 \end{inlineexercise}%
@@ -10829,39 +10186,28 @@ The value is \fillintext{20}  %
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-You wish to determine if there is a  linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.05}\). You have the following bivariate data set.%
+You wish to determine if there is a negative linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.001}\). You have the following bivariate data set.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{ll}
 x&y\tabularnewline[0pt]
-59&-231.8\tabularnewline[0pt]
-63.4&16.7\tabularnewline[0pt]
-69.5&-33\tabularnewline[0pt]
-58.1&30.4\tabularnewline[0pt]
-35.6&-150.5\tabularnewline[0pt]
-66.8&204.8\tabularnewline[0pt]
-57.8&149.2\tabularnewline[0pt]
-68&126.6\tabularnewline[0pt]
-71.6&-185.9\tabularnewline[0pt]
-41.7&-71.8\tabularnewline[0pt]
-27.5&353.9\tabularnewline[0pt]
-51.9&52.2\tabularnewline[0pt]
-55.1&-228.4\tabularnewline[0pt]
-40&906\tabularnewline[0pt]
-44.5&-137.9\tabularnewline[0pt]
-67.4&202.9\tabularnewline[0pt]
-31.5&-363.7\tabularnewline[0pt]
-71.7&-196.2\tabularnewline[0pt]
-41.7&243.9\tabularnewline[0pt]
-45.5&-402\tabularnewline[0pt]
-46.6&487.7\tabularnewline[0pt]
-55&-139.8\tabularnewline[0pt]
-63.4&-305.2\tabularnewline[0pt]
-47.3&354.8
+38.7&27.5\tabularnewline[0pt]
+72.1&-3.1\tabularnewline[0pt]
+27.1&56.9\tabularnewline[0pt]
+25.1&30.8\tabularnewline[0pt]
+49.7&30\tabularnewline[0pt]
+26.4&54.1\tabularnewline[0pt]
+59.3&14.2\tabularnewline[0pt]
+58.4&14.9\tabularnewline[0pt]
+42.2&19.9\tabularnewline[0pt]
+43&40.7\tabularnewline[0pt]
+53.3&16.6\tabularnewline[0pt]
+58&14.1\tabularnewline[0pt]
+45.7&24.5
 \end{tabular}
 }%
 \end{center}%
-download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A59\%2C-231.8\%0A63.4\%2C16.7\%0A69.5\%2C-33\%0A58.1\%2C30.4\%0A35.6\%2C-150.5\%0A66.8\%2C204.8\%0A57.8\%2C149.2\%0A68\%2C126.6\%0A71.6\%2C-185.9\%0A41.7\%2C-71.8\%0A27.5\%2C353.9\%0A51.9\%2C52.2\%0A55.1\%2C-228.4\%0A40\%2C906\%0A44.5\%2C-137.9\%0A67.4\%2C202.9\%0A31.5\%2C-363.7\%0A71.7\%2C-196.2\%0A41.7\%2C243.9\%0A45.5\%2C-402\%0A46.6\%2C487.7\%0A55\%2C-139.8\%0A63.4\%2C-305.2\%0A47.3\%2C354.8}{Download CSV}\footnotemark{}%
+download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A38.7\%2C27.5\%0A72.1\%2C-3.1\%0A27.1\%2C56.9\%0A25.1\%2C30.8\%0A49.7\%2C30\%0A26.4\%2C54.1\%0A59.3\%2C14.2\%0A58.4\%2C14.9\%0A42.2\%2C19.9\%0A43\%2C40.7\%0A53.3\%2C16.6\%0A58\%2C14.1\%0A45.7\%2C24.5}{Download CSV}\footnotemark{}%
 \par
 What is the correlation coefficient for this data set?%
 \par
@@ -10881,25 +10227,25 @@ Your final conclusion is that...%
 \par
 %
 \begin{enumerate}
-\item{}There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.%
-\item{}There is insufficient sample evidence to support the claim the there is a  correlation between the two variables.%
+\item{}There is insufficient sample evidence to support the claim the there is a negative correlation between the two variables.%
+\item{}There is sufficient sample evidence to support the claim that there is a statistically significant negative correlation between the two variables.%
 \end{enumerate}
 %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-4-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}-0.196%
-\item{}0.3585%
-\item{}B: There is insufficient sample evidence to support the claim the there is a  correlation between the two variables.%
+\item{}-0.87%
+\item{}0.0001%
+\item{}B: There is sufficient sample evidence to support the claim that there is a statistically significant negative correlation between the two variables.%
 \end{itemize}
 %
 \end{inlineexercise}%
-\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A59\%2C-231.8\%0A63.4\%2C16.7\%0A69.5\%2C-33\%0A58.1\%2C30.4\%0A35.6\%2C-150.5\%0A66.8\%2C204.8\%0A57.8\%2C149.2\%0A68\%2C126.6\%0A71.6\%2C-185.9\%0A41.7\%2C-71.8\%0A27.5\%2C353.9\%0A51.9\%2C52.2\%0A55.1\%2C-228.4\%0A40\%2C906\%0A44.5\%2C-137.9\%0A67.4\%2C202.9\%0A31.5\%2C-363.7\%0A71.7\%2C-196.2\%0A41.7\%2C243.9\%0A45.5\%2C-402\%0A46.6\%2C487.7\%0A55\%2C-139.8\%0A63.4\%2C-305.2\%0A47.3\%2C354.8}\label{section-myopenmath-4-2-4-2}}%
+\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A38.7\%2C27.5\%0A72.1\%2C-3.1\%0A27.1\%2C56.9\%0A25.1\%2C30.8\%0A49.7\%2C30\%0A26.4\%2C54.1\%0A59.3\%2C14.2\%0A58.4\%2C14.9\%0A42.2\%2C19.9\%0A43\%2C40.7\%0A53.3\%2C16.6\%0A58\%2C14.1\%0A45.7\%2C24.5}\label{section-myopenmath-4-2-4-2}}%
 \begin{inlineexercise}[With an image]\label{section-myopenmath-5}%
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{generated/problems/images/240307428a9da062458bacb5c789ada7.png}
+\includegraphics[width=\linewidth]{generated/problems/images/1f8e0896a14e2abba9ad8110fcaa6dfc.png}
 \end{image}%
 Find the equation of the line in the form \(\displaystyle{y}={m}{x}+{b}.\)%
 \par
@@ -10909,7 +10255,7 @@ Answer: \(\displaystyle{y}=\) \fillintext{10}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-5-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}\(\displaystyle \displaystyle{y}=-{1}{x}-{6}\)%
+\item{}\(\displaystyle \displaystyle{y}={2}{x}+{10}\)%
 \end{itemize}
 %
 \end{inlineexercise}%
@@ -10950,78 +10296,7 @@ If you make PDF output you will notice an increased amount of control over layou
 % end of introduction
 % end of section: Worksheets
 %
-%
-\typeout{************************************************}
-\typeout{Section 36 Exercises, One Subsection}
-\typeout{************************************************}
-%
-\section{Exercises, One Subsection}\label{section-exercises-single}%
-This \mono{<section>} of the sample article demonstrates an ``unstructured division.''  There are no \mono{<subsection>}, you are just reading the first two paragraphs, followed by some nonsense text.  Then there is a \emph{single} \mono{<exercises>} division.  Note that this division is not numbered (since it is unique within the \mono{<section>}).  And a cross-reference to one of the contained \mono{<exercise>} will be numbered as a member of the \mono{<section>}, \hyperlink{exercise-challenging-one-unstructured}{Exercise~{\xreffont 36.4}}.%
-\par
-If you use the unstructured form of a division, \emph{and} have both inline and divisional exercises, there is a potential to form ambiguous cross-references.  To wit, check that \hyperref[duplicate-inline]{{\xreffont\ref{duplicate-inline}}} and \hyperlink{duplicate-divisional}{{\xreffont 36.2}} are really different exercises (which you are \emph{unable to do} if you are reading this in print!).  The solution is to include the type of exercise in the reference, which will assist everybody, but especially your print readers:  \hyperref[duplicate-inline]{Checkpoint~{\xreffont\ref{duplicate-inline}}} and \hyperlink{duplicate-divisional}{Exercise~{\xreffont 36.2}}.%
-\par
-Compare this section with the similar \hyperref[section-exercises-multiple]{Section~{\xreffont\ref{section-exercises-multiple}}}, next.  The following text is mostly nonsense, just for testing purposes.%
-\begin{inlineexercise}[Inline One]\label{section-exercises-single-5}%
-%
-Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.%
-\end{inlineexercise}%
-Pellentesque nec condimentum ligula, quis interdum mauris. Ut sed urna lacinia, aliquam arcu id, faucibus nisi. Suspendisse potenti. Curabitur in erat ultricies, condimentum mi nec, vehicula mauris. Duis faucibus risus fermentum velit hendrerit, non laoreet massa maximus. Donec bibendum elit ac lectus lobortis luctus. Ut finibus, dolor ut euismod tristique, ligula tortor tempus arcu, finibus semper purus erat ut ligula. Aenean accumsan ut ante vel euismod.%
-\begin{inlineexercise}[Inline Two]\label{duplicate-inline}%
-%
-Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.%
-\end{inlineexercise}%
-\begin{theorem}[Major Result]\label{section-exercises-single-8}%
-%
-Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.%
-\end{theorem}
-\begin{inlineexercise}[Inline Three]\label{section-exercises-single-9}%
-%
-Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.%
-\end{inlineexercise}%
-% end of section: Exercises, One Subsection
-%
-%
-\typeout{************************************************}
-\typeout{Section 38 Exercises, Multiple Subsections}
-\typeout{************************************************}
-%
-\section{Exercises, Multiple Subsections}\label{section-exercises-multiple}%
-% Introduction
-This \mono{<section>} of the sample article demonstrates a ``structured division.''  You are reading the introduction to the division, then there is a faux \mono{<subsection>}, followed by three \mono{<exercises>} divisions.  Note that the three are numbered as if they are also fellow\mono{<subsection>}.  And a cross-reference to one of the contained \mono{<exercise>} will be numbered use the number of the \mono{<subsection>}, \hyperlink{exercise-challenging-one-structured}{Exercise~{\xreffont 38.3.1}}.%
-\par
-Compare this section with the similar \hyperref[section-exercises-single]{Section~{\xreffont\ref{section-exercises-single}}}, previous.  The following text is mostly nonsense, just for testing purposes.%
-% end of introduction
-%
-%
-\typeout{************************************************}
-\typeout{Subsection 38.1 Faux Subsection}
-\typeout{************************************************}
-%
-\subsection{Faux Subsection}\label{section-exercises-multiple-3}%
-\begin{inlineexercise}[Inline One]\label{section-exercises-multiple-3-2}%
-%
-Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.%
-\end{inlineexercise}%
-Pellentesque nec condimentum ligula, quis interdum mauris. Ut sed urna lacinia, aliquam arcu id, faucibus nisi. Suspendisse potenti. Curabitur in erat ultricies, condimentum mi nec, vehicula mauris. Duis faucibus risus fermentum velit hendrerit, non laoreet massa maximus. Donec bibendum elit ac lectus lobortis luctus. Ut finibus, dolor ut euismod tristique, ligula tortor tempus arcu, finibus semper purus erat ut ligula. Aenean accumsan ut ante vel euismod.%
-\begin{inlineexercise}[Inline Two]\label{section-exercises-multiple-3-4}%
-%
-Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.%
-\end{inlineexercise}%
-\begin{theorem}[Major Result]\label{section-exercises-multiple-3-5}%
-%
-Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.%
-\end{theorem}
-\begin{inlineexercise}[Inline Three]\label{exercise-duplicate-inline}%
-%
-Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.%
-\end{inlineexercise}%
-% end of subsection: Faux Subsection
-% end of section: Exercises, Multiple Subsections
-%
-\appendix%
-%
-%% A lineskip in table of contents as a transition to the appendices
-\addtocontents{toc}{\vspace{\normalbaselineskip}}%
+% Appendices
 %
 %
 \typeout{************************************************}
@@ -11297,28 +10572,5 @@ You might want to have lists of references, in the back, but with multiple such 
 \bibitem[2]{biblio-strang-article-tres}\hypertarget{biblio-strang-article-tres}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
 \end{thebibliography}
 % end of appendix: Multiple References
-%% A lineskip in table of contents as a transition to the rest of the backmatter
-\addtocontents{toc}{\vspace{\normalbaselineskip}}
 %
-%
-%
-\typeout{************************************************}
-\typeout{References  References}
-\typeout{************************************************}
-%
-\bibliographystyle{amsplain}
-\begin{thebibliography}{99}
-\bibitem[1]{biblio-judson-AATA}\hypertarget{biblio-judson-AATA}{}Tom Judson, \textit{Abstract Algebra: Theory and Applications}. \par\hypertarget{note-judson-AATA}{}%
-Another online, open-source offering.%
-
-\bibitem[2]{biblio-lay-article}\hypertarget{biblio-lay-article}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
-\end{thebibliography}
-%
-%% The index is here, setup is all in preamble
-%% Index locators are cross-references, so same font here
-{\xreffont\printindex}
-%
-\begin{backcolophon}{Colophon}{colophon-back}%
-This article was authored in, and produced with, PreTeXt.  It is typeset with the Latin Modern font.%
-\end{backcolophon}%
 \end{document}

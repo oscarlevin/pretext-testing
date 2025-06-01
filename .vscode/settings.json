@@ -3,7 +3,8 @@
     "xml.fileAssociations": [
         {
             "pattern": "**/source/**.ptx",
-            "systemId": "c:\\Users\\oscar.levin\\.vscode\\extensions\\oscarlevin.pretext-tools-0.25.0\\assets\\schema\\pretext-dev.rng"
+            "systemId": "/home/oscar/.vscode/extensions/oscarlevin.pretext-tools-0.25.4/assets/schema/pretext-dev.rng"
         }
-    ]
+    ],
+    "getting-started-sample.sampleSetting": true
 }

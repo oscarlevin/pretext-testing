@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2025-03-17T22:22:53-06:00       *%
+%*       on 2025-04-03T21:07:24-06:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -546,6 +546,7 @@ breakable,
 \tcbset{ programboxnumberedstyle/.style={programboxstyle, left=6ex} }
 \newtcblisting{program}[4]{programboxstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodestyle}}
 \newtcblisting{programnumbered}[4]{programboxnumberedstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodenumberedstyle}}
+\newcommand{\programfragment}[2]{\lstinline[language=#1, style=programcodestyle, basicstyle=\ttfamily]#2}
 %% Console session with prompt, input, output
 %% listings allows for escape sequences to enable LateX,
 %% so we bold the input commands via the following macro
@@ -824,16 +825,22 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \author{Robert Beezer}
 \address{Department of Mathematics and Computer Science\\
 University of Puget Sound\\
-Tacoma, Washington, USA}
-\email{\href{mailto:beezer@pugetsound.edu}{\nolinkurl{beezer@pugetsound.edu}}}
+Tacoma, Washington, USA
+}
+\email{beezer@pugetsound.edu
+}
 \thanks{Statement about support received by the first author.}
 \author{A. Second Author}
 \address{Department of Mathematics\\
 University of Somewhere\\
-Anytown, USA}
-\email{\href{mailto:asauthor@example.edu}{\nolinkurl{asauthor@example.edu}}}
+Anytown, USA
+}
+\email{asauthor@example.edu
+}
 \thanks{Statement about support received by the second author.}
 \subjclass[2010]{Primary 00-01, 00-02; Secondary 00A99}
+\date{April 3, 2025}
+\keywords{samples, PreTeXt, testing document}
 \begin{abstract}
 This is a sample of many of the things you can do with PreTeXt.  Sometimes the math makes sense, sometimes it seems to be written in the first person, sort of like this Abstract.%
 \end{abstract}
@@ -851,7 +858,7 @@ We consider definite integrals of functions \(f(x)\).  For example,%
 \end{equation*}
 This is also a demonstration of the capabilities of \href{https://pretextbook.org}{PreTeXt}\footnote{\nolinkurl{pretextbook.org}\label{section-introduction-2-4}}.\label{section-introduction-2-5}%
 \par
-Generated: March 17, 2025, 22:23:08 (-06:00)%
+Generated: April 3, 2025, 21:07:40 (-06:00)%
 % end of section: Introduction
 %
 %
@@ -3235,7 +3242,7 @@ There are several graphics engine packages that a \LaTeX{} document can employ. 
     \node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}};
     \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5);
     \node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3317,7 +3324,7 @@ The next example began life in \href{http://www.frontiernet.net/\~eugene.ressler
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3361,7 +3368,7 @@ The pgfplots package was included in \mono{docinfo/latex-image-preamble}. Here, 
         ]{x^2 - y^2};
     \end{axis}\\
 };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3381,7 +3388,7 @@ It is still your responsibility to be sure this directory of external data files
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3400,7 +3407,7 @@ A Cartesian plot might benefit from having a \mono{<description>} with a \mono{<
         ]
         \addplot[only marks] coordinates {(1,5) (2,3) (3,8) (4,9) (5,5) (6,5) (7,8) (8,2) (9,3)};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3419,7 +3426,7 @@ The next image requires three passes with \LaTeX{} to get everything in place.  
         0 \amp 2 \amp 1 \amp 0 \amp 2
         \end{bNiceArray}$
     };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3755,7 +3762,7 @@ A \mono{tikz} image recycled from above, now 40\% width, with 40\% left margin, 
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margin, 40\% right margin, and no longer legible.%
@@ -3770,7 +3777,7 @@ A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margi
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 An Asymptote image, with zero layout control, so 100\% width.%
@@ -7232,14 +7239,14 @@ Here are two TikZ images, authored side-by-side.  The first has had its geometri
   \node at ( 210:2)   {Design};
   \node at ( 330:2)   {Coding};
   \node [font=\Large] {\LaTeX};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \begin{sbspanel}{0.25}%
 \begin{panelfigureptx}{Figure}{\TeX{} Work Flow}{section-side-by-side-8-5-2}{}%
 \noindent\resizebox{\linewidth}{!}{%
 \smartdiagram[circular diagram:clockwise]{Edit,
-pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}
+pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -7894,16 +7901,15 @@ Poems\index{poem} may be panels of a side-by-side layout.  Here we place some co
 \poemTitle{Fire and Ice}
 \index{Fire and Ice, Frost}%
 \begin{stanza}
-\poemlineleft{Some say the world will end in fire,}
-\poemlineleft{Some say in ice.}
-\poemlineleft{From what I've tasted of desire}
-\poemlineleft{I hold with those who favor fire.}
-\poemlineleft{But if it had to perish twice,}
-\poemlineleft{I think I know enough of hate}
-\poemlineleft{To say that for destruction ice}
-\poemlineleft{Is also great}
-\poemlineleft{And would suffice.}
-\end{stanza}
+Some say the world will end in fire,\\
+Some say in ice.\\
+From what I've tasted of desire\\
+I hold with those who favor fire.\\
+But if it had to perish twice,\\
+I think I know enough of hate\\
+To say that for destruction ice\\
+Is also great\\
+And would suffice.\end{stanza}
 \poemauthorleft{Robert Frost}
 \end{poem}
 \end{sbspanel}%
@@ -7921,21 +7927,20 @@ Poems are not horizontally-rigid, but they are not perfectly horizontally-flexib
 \poemTitle{Sonnet to Liberty}
 \index{Sonnet to Liberty, Wilde}%
 \begin{stanza}
-\poemlineleft{Not that I love thy children, whose dull eyes}
-\poemlineleft{See nothing save their own unlovely woe,}
-\poemlineleft{Whose minds know nothing, nothing care to know,}
-\poemlineleft{But that the roar of thy Democracies,}
-\poemlineleft{Thy reigns of Terror, thy great Anarchies,}
-\poemlineleft{Mirror my wildest passions like the sea,}
-\poemlineleft{And give my rage a brother! Liberty!}
-\poemlineleft{For this sake only do thy dissonant cries}
-\poemlineleft{Delight my discreet soul, else might all kings}
-\poemlineleft{By bloody knout or treacherous cannonades}
-\poemlineleft{Rob nations of their rights inviolate}
-\poemlineleft{And I remain unmoved-and yet, and yet,}
-\poemlineleft{These Christs that die upon the barricades,}
-\poemlineleft{God knows it I am with them, in some things.}
-\end{stanza}
+Not that I love thy children, whose dull eyes\\
+See nothing save their own unlovely woe,\\
+Whose minds know nothing, nothing care to know,\\
+But that the roar of thy Democracies,\\
+Thy reigns of Terror, thy great Anarchies,\\
+Mirror my wildest passions like the sea,\\
+And give my rage a brother! Liberty!\\
+For this sake only do thy dissonant cries\\
+Delight my discreet soul, else might all kings\\
+By bloody knout or treacherous cannonades\\
+Rob nations of their rights inviolate\\
+And I remain unmoved-and yet, and yet,\\
+These Christs that die upon the barricades,\\
+God knows it I am with them, in some things.\end{stanza}
 \poemauthorleft{Oscar Wilde}
 \end{poem}
 \end{sbspanel}%
@@ -7943,13 +7948,12 @@ Poems are not horizontally-rigid, but they are not perfectly horizontally-flexib
 \begin{poem}%
 \poemTitle{Sonnet to Liberty}
 \begin{stanza}
-\poemlineleft{Not that I love thy children, whose dull eyes}
-\poemlineleft{See nothing save their own unlovely woe,}
-\poemlineleft{Whose minds know nothing, nothing care to know,}
-\poemlineleft{But that the roar of thy Democracies,}
-\poemlineleft{Thy reigns of Terror, thy great Anarchies,}
-\poemlineleft{\textellipsis{}}
-\end{stanza}
+Not that I love thy children, whose dull eyes\\
+See nothing save their own unlovely woe,\\
+Whose minds know nothing, nothing care to know,\\
+But that the roar of thy Democracies,\\
+Thy reigns of Terror, thy great Anarchies,\\
+\textellipsis{}\end{stanza}
 \poemauthorleft{Oscar Wilde}
 \end{poem}
 \end{sbspanel}%
@@ -8000,20 +8004,19 @@ A long poem, when placed into a \mono{sidebyside} will not fit onto a physical p
 \poemTitle{The Stolen Child}
 \index{Stolen Child, The, Yeats}%
 \begin{stanza}
-\poemlineleft{Where dips the rocky highland}
-\poemlineleft{Of Sleuth Wood in the lake,}
-\poemlineleft{There lies a leafy island}
-\poemlineleft{Where flapping herons wake}
-\poemlineleft{The drowsy water-rats;}
-\poemlineleft{There we've hid our faery vats,}
-\poemlineleft{Full of berries}
-\poemlineleft{And of reddest stolen cherries.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where dips the rocky highland\\
+Of Sleuth Wood in the lake,\\
+There lies a leafy island\\
+Where flapping herons wake\\
+The drowsy water-rats;\\
+There we've hid our faery vats,\\
+Full of berries\\
+And of reddest stolen cherries.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8025,23 +8028,22 @@ Some commentary on Stanza One.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Where the wave of moonlight glosses}
-\poemlineleft{The dim grey sands with light,}
-\poemlineleft{Far off by furthest Rosses}
-\poemlineleft{We foot it all the night,}
-\poemlineleft{Weaving olden dances,}
-\poemlineleft{Mingling hands and mingling glances}
-\poemlineleft{Till the moon has taken flight;}
-\poemlineleft{To and fro we leap}
-\poemlineleft{And chase the frothy bubbles,}
-\poemlineleft{While the world is full of troubles}
-\poemlineleft{And is anxious in its sleep.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where the wave of moonlight glosses\\
+The dim grey sands with light,\\
+Far off by furthest Rosses\\
+We foot it all the night,\\
+Weaving olden dances,\\
+Mingling hands and mingling glances\\
+Till the moon has taken flight;\\
+To and fro we leap\\
+And chase the frothy bubbles,\\
+While the world is full of troubles\\
+And is anxious in its sleep.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8053,22 +8055,21 @@ Some commentary on Stanza Two.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Where the wandering water gushes}
-\poemlineleft{From the hills above Glen-Car,}
-\poemlineleft{In pools among the rushes}
-\poemlineleft{That scarce could bathe a star,}
-\poemlineleft{We seek for slumbering trout}
-\poemlineleft{And whispering in their ears}
-\poemlineleft{Give them unquiet dreams;}
-\poemlineleft{Leaning softly out}
-\poemlineleft{From ferns that drop their tears}
-\poemlineleft{Over the young streams.}
-\poemlineleft{Come away, O human child!}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{For the world's more full of weeping than you}
-\poemlineleft{can understand.}
-\end{stanza}
+Where the wandering water gushes\\
+From the hills above Glen-Car,\\
+In pools among the rushes\\
+That scarce could bathe a star,\\
+We seek for slumbering trout\\
+And whispering in their ears\\
+Give them unquiet dreams;\\
+Leaning softly out\\
+From ferns that drop their tears\\
+Over the young streams.\\
+Come away, O human child!\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+For the world's more full of weeping than you\\
+can understand.\end{stanza}
 \end{poem}
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
@@ -8080,20 +8081,19 @@ Some commentary on Stanza Three.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{Away with us he's going,}
-\poemlineleft{The solemn-eyed:}
-\poemlineleft{He'll hear no more the lowing}
-\poemlineleft{Of the calves on the warm hillside}
-\poemlineleft{Or the kettle on the hob}
-\poemlineleft{Sing peace into his breast,}
-\poemlineleft{Or see the brown mice bob}
-\poemlineleft{Round and round the oatmeal-chest.}
-\poemlineleft{For he comes, the human child,}
-\poemlineleft{To the waters and the wild}
-\poemlineleft{With a faery, hand in hand,}
-\poemlineleft{From a world more full of weeping than he}
-\poemlineleft{can understand.}
-\end{stanza}
+Away with us he's going,\\
+The solemn-eyed:\\
+He'll hear no more the lowing\\
+Of the calves on the warm hillside\\
+Or the kettle on the hob\\
+Sing peace into his breast,\\
+Or see the brown mice bob\\
+Round and round the oatmeal-chest.\\
+For he comes, the human child,\\
+To the waters and the wild\\
+With a faery, hand in hand,\\
+From a world more full of weeping than he\\
+can understand.\end{stanza}
 \poemauthorleft{William Butler Yeats}
 \end{poem}
 \end{sbspanel}%
@@ -8643,23 +8643,22 @@ Note that these two chunks of verbatim text will very likely exceed the right si
 \begin{poem}%
 \poemTitle{To A Friend Whose Work Has Come To Nothing}
 \begin{stanza}
-\poemlineleft{Now all the truth is out,}
-\poemlineleft{Be secret and take defeat}
-\poemlineleft{From any brazen throat,}
-\poemlineleft{For how can you compete,}
-\poemlineleft{Being honour bred, with one}
-\poemlineleft{Who, were it proved he lies,}
-\poemlineleft{Were neither shamed in his own}
-\poemlineleft{Nor in his neighbours' eyes?}
-\poemlineleft{Bred to a harder thing}
-\poemlineleft{Than Triumph, turn away}
-\poemlineleft{And like a laughing string}
-\poemlineleft{Whereon mad fingers play}
-\poemlineleft{Amid a place of stone,}
-\poemlineleft{Be secret and exult,}
-\poemlineleft{Because of all things known}
-\poemlineleft{That is most difficult.}
-\end{stanza}
+Now all the truth is out,\\
+Be secret and take defeat\\
+From any brazen throat,\\
+For how can you compete,\\
+Being honour bred, with one\\
+Who, were it proved he lies,\\
+Were neither shamed in his own\\
+Nor in his neighbours' eyes?\\
+Bred to a harder thing\\
+Than Triumph, turn away\\
+And like a laughing string\\
+Whereon mad fingers play\\
+Amid a place of stone,\\
+Be secret and exult,\\
+Because of all things known\\
+That is most difficult.\end{stanza}
 \poemauthorleft{William Butler Yeats}
 \end{poem}
 \end{sbspanel}%
@@ -8820,51 +8819,47 @@ There is support for poems via the \mono{poem}\index{poem} tag, which can contai
 \poemTitle{The Charge of the Light Brigade}
 \index{Charge of the Light Brigade, The, Tennyson}%
 \begin{stanza}
-\poemlineleft{Half a league, half a league,}
-\poemlineleft{Half a league onward,}
-\poemlineleft{All in the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\poemlineleft{``Forward, the Light Brigade!}
-\poemlineleft{Charge for the guns!'' he said:}
-\poemlineleft{Into the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\end{stanza}
+Half a league, half a league,\\
+Half a league onward,\\
+All in the valley of Death\\
+Rode the six hundred.\\
+``Forward, the Light Brigade!\\
+Charge for the guns!'' he said:\\
+Into the valley of Death\\
+Rode the six hundred.\end{stanza}
 \begin{stanza}
 \index{Charge of the Light Brigade!second stanza}%
-\poemlineleft{``Forward, the Light Brigade!''}
-\poemlineleft{Was there a man dismay'd?}
-\poemlineleft{Not tho' the soldier knew}
-\poemlineleft{Someone had blunder'd:}
-\poemlineleft{Theirs not to make reply,}
-\poemlineleft{Theirs not to reason why,}
-\poemlineleft{Theirs but to do and die:}
-\poemlineleft{Into the valley of Death}
-\poemlineleft{Rode the six hundred.}
-\end{stanza}
+``Forward, the Light Brigade!''\\
+Was there a man dismay'd?\\
+Not tho' the soldier knew\\
+Someone had blunder'd:\\
+Theirs not to make reply,\\
+Theirs not to reason why,\\
+Theirs but to do and die:\\
+Into the valley of Death\\
+Rode the six hundred.\end{stanza}
 \poemauthorleft{Alfred Lord Tennyson}
 \end{poem}
 Ken Levasseur, who teaches at UMass-Lowell, has limericks in his Applied Discrete Structures textbook.  When he reported that they were unable to be the target of a cross-reference, Karl-Dieter Crisman penned the following limerick.%
 \begin{poem}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{CS students studying in Lowell}
-\poemlineleft{Required their books to have soul.}
-\poemlineleft{Along came their teacher}
-\poemlineleft{Who asked for this feature:}
-\poemlineleft{A poem that lives in a knowl.}
-\end{stanza}
+CS students studying in Lowell\\
+Required their books to have soul.\\
+Along came their teacher\\
+Who asked for this feature:\\
+A poem that lives in a knowl.\end{stanza}
 \poemauthorleft{Karl-Dieter Crisman}
 \end{poem}
 And when yours truly tried to joke about poetry on \href{https://github.com/PreTeXtBook/pretext-cli/issues/182}{GitHub CLI \#182}\footnote{\nolinkurl{https://github.com/PreTeXtBook/pretext-cli/issues/182}\label{section-poetry-6-2}}, back came:%
 \begin{poem}\label{limerick-clontz}%
 \poemTitle{}
 \begin{stanza}
-\poemlineleft{There once was a maintainer named Rob}
-\poemlineleft{Who told bad jokes while on the job}
-\poemlineleft{While they were lame}
-\poemlineleft{You could say the same}
-\poemlineleft{Of Steven's limericks that cause you to sob}
-\end{stanza}
+There once was a maintainer named Rob\\
+Who told bad jokes while on the job\\
+While they were lame\\
+You could say the same\\
+Of Steven's limericks that cause you to sob\end{stanza}
 \poemauthorleft{Steven Clontz}
 \end{poem}
 % end of section: Poetry
@@ -10189,13 +10184,13 @@ This is a \emph{test} with two inline exercises containing MyOpenMath (MOM) prob
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-Try to evaluate \(\displaystyle-{\left(-{36}\right)}^{{-{1}{/}{2}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
+Try to evaluate \(\displaystyle-{\left(-{8}\right)}^{{-{2}{/}{3}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
 \par
 The value is \fillintext{20}  %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-3-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}DNE%
+\item{}\(\displaystyle \displaystyle-\frac{{1}}{{4}}\)%
 \end{itemize}
 %
 \end{inlineexercise}%
@@ -10203,44 +10198,28 @@ The value is \fillintext{20}  %
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-You wish to determine if there is a  linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.05}\). You have the following bivariate data set.%
+You wish to determine if there is a negative linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.001}\). You have the following bivariate data set.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{ll}
 x&y\tabularnewline[0pt]
-40.3&16.5\tabularnewline[0pt]
-26.2&39.8\tabularnewline[0pt]
-73.1&-3.4\tabularnewline[0pt]
-54.9&14.8\tabularnewline[0pt]
-22.7&34\tabularnewline[0pt]
-43.7&38.5\tabularnewline[0pt]
-26&12.5\tabularnewline[0pt]
-32.3&42.3\tabularnewline[0pt]
-33.2&16.1\tabularnewline[0pt]
-23.6&40.4\tabularnewline[0pt]
-48.2&35.5\tabularnewline[0pt]
-54.7&22.1\tabularnewline[0pt]
-53.3&18.6\tabularnewline[0pt]
-44.9&11.5\tabularnewline[0pt]
-53.2&17\tabularnewline[0pt]
-14.6&17.5\tabularnewline[0pt]
-20&43.6\tabularnewline[0pt]
-42.6&16.3\tabularnewline[0pt]
-52.8&30.5\tabularnewline[0pt]
-34.1&35.7\tabularnewline[0pt]
-33&8.1\tabularnewline[0pt]
-44.7&9.7\tabularnewline[0pt]
-40.4&17.1\tabularnewline[0pt]
-44.2&4.5\tabularnewline[0pt]
-37.5&42.2\tabularnewline[0pt]
-68&23\tabularnewline[0pt]
-74.8&14.9\tabularnewline[0pt]
-50&39.9\tabularnewline[0pt]
-32.9&13.6
+38.7&27.5\tabularnewline[0pt]
+72.1&-3.1\tabularnewline[0pt]
+27.1&56.9\tabularnewline[0pt]
+25.1&30.8\tabularnewline[0pt]
+49.7&30\tabularnewline[0pt]
+26.4&54.1\tabularnewline[0pt]
+59.3&14.2\tabularnewline[0pt]
+58.4&14.9\tabularnewline[0pt]
+42.2&19.9\tabularnewline[0pt]
+43&40.7\tabularnewline[0pt]
+53.3&16.6\tabularnewline[0pt]
+58&14.1\tabularnewline[0pt]
+45.7&24.5
 \end{tabular}
 }%
 \end{center}%
-download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A40.3\%2C16.5\%0A26.2\%2C39.8\%0A73.1\%2C-3.4\%0A54.9\%2C14.8\%0A22.7\%2C34\%0A43.7\%2C38.5\%0A26\%2C12.5\%0A32.3\%2C42.3\%0A33.2\%2C16.1\%0A23.6\%2C40.4\%0A48.2\%2C35.5\%0A54.7\%2C22.1\%0A53.3\%2C18.6\%0A44.9\%2C11.5\%0A53.2\%2C17\%0A14.6\%2C17.5\%0A20\%2C43.6\%0A42.6\%2C16.3\%0A52.8\%2C30.5\%0A34.1\%2C35.7\%0A33\%2C8.1\%0A44.7\%2C9.7\%0A40.4\%2C17.1\%0A44.2\%2C4.5\%0A37.5\%2C42.2\%0A68\%2C23\%0A74.8\%2C14.9\%0A50\%2C39.9\%0A32.9\%2C13.6}{Download CSV}\footnotemark{}%
+download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A38.7\%2C27.5\%0A72.1\%2C-3.1\%0A27.1\%2C56.9\%0A25.1\%2C30.8\%0A49.7\%2C30\%0A26.4\%2C54.1\%0A59.3\%2C14.2\%0A58.4\%2C14.9\%0A42.2\%2C19.9\%0A43\%2C40.7\%0A53.3\%2C16.6\%0A58\%2C14.1\%0A45.7\%2C24.5}{Download CSV}\footnotemark{}%
 \par
 What is the correlation coefficient for this data set?%
 \par
@@ -10260,25 +10239,25 @@ Your final conclusion is that...%
 \par
 %
 \begin{enumerate}
-\item{}There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.%
-\item{}There is insufficient sample evidence to support the claim the there is a  correlation between the two variables.%
+\item{}There is insufficient sample evidence to support the claim the there is a negative correlation between the two variables.%
+\item{}There is sufficient sample evidence to support the claim that there is a statistically significant negative correlation between the two variables.%
 \end{enumerate}
 %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-4-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}-0.377%
-\item{}0.0437%
-\item{}A: There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.%
+\item{}-0.87%
+\item{}0.0001%
+\item{}B: There is sufficient sample evidence to support the claim that there is a statistically significant negative correlation between the two variables.%
 \end{itemize}
 %
 \end{inlineexercise}%
-\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A40.3\%2C16.5\%0A26.2\%2C39.8\%0A73.1\%2C-3.4\%0A54.9\%2C14.8\%0A22.7\%2C34\%0A43.7\%2C38.5\%0A26\%2C12.5\%0A32.3\%2C42.3\%0A33.2\%2C16.1\%0A23.6\%2C40.4\%0A48.2\%2C35.5\%0A54.7\%2C22.1\%0A53.3\%2C18.6\%0A44.9\%2C11.5\%0A53.2\%2C17\%0A14.6\%2C17.5\%0A20\%2C43.6\%0A42.6\%2C16.3\%0A52.8\%2C30.5\%0A34.1\%2C35.7\%0A33\%2C8.1\%0A44.7\%2C9.7\%0A40.4\%2C17.1\%0A44.2\%2C4.5\%0A37.5\%2C42.2\%0A68\%2C23\%0A74.8\%2C14.9\%0A50\%2C39.9\%0A32.9\%2C13.6}\label{section-myopenmath-4-2-4-2}}%
+\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A38.7\%2C27.5\%0A72.1\%2C-3.1\%0A27.1\%2C56.9\%0A25.1\%2C30.8\%0A49.7\%2C30\%0A26.4\%2C54.1\%0A59.3\%2C14.2\%0A58.4\%2C14.9\%0A42.2\%2C19.9\%0A43\%2C40.7\%0A53.3\%2C16.6\%0A58\%2C14.1\%0A45.7\%2C24.5}\label{section-myopenmath-4-2-4-2}}%
 \begin{inlineexercise}[With an image]\label{section-myopenmath-5}%
 %
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{generated/problems/images/804e1746f9fa3e455f999ccc9669941c.png}
+\includegraphics[width=\linewidth]{generated/problems/images/1f8e0896a14e2abba9ad8110fcaa6dfc.png}
 \end{image}%
 Find the equation of the line in the form \(\displaystyle{y}={m}{x}+{b}.\)%
 \par
@@ -10288,7 +10267,7 @@ Answer: \(\displaystyle{y}=\) \fillintext{10}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-5-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}\(\displaystyle \displaystyle{y}={1}{x}+{4}\)%
+\item{}\(\displaystyle \displaystyle{y}={2}{x}+{10}\)%
 \end{itemize}
 %
 \end{inlineexercise}%

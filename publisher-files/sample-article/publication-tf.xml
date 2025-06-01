@@ -23,7 +23,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Common Options -->
     <common>
-        <journal name="taylor-francis-general"/>
+        <journal name="taylor-francis"/>
         <!-- How deep to go for separate files, in HTML the -->
         <!-- default for an article with sections is 1      -->
         <chunking level="1"/>

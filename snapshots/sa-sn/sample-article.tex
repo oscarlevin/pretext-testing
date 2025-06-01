@@ -1,13 +1,13 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2025-03-23T11:28:01-06:00       *%
+%*       on 2025-04-03T21:04:59-06:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
 %*         https://pretextbook.org          *%
 %*                                          *%
 %********************************************%
-% This document was created with the texstyle file "springer-nature-gen.xml" to satisfy the requirements of the journal "General - All other Springer Nature journals."
+% This document was created with the texstyle file "springer-nature.xml" to satisfy the requirements of the journal "Springer Nature journals."
 %
 %
 \documentclass{sn-jnl}
@@ -21,7 +21,7 @@
 \usepackage{xcolor}%
 \usepackage{textcomp}%
 \usepackage{manyfoot}%
-\usepackage{booktabs}%      
+\usepackage{booktabs}%
 \usepackage{algorithm}%
 \usepackage{algorithmicx}%
 \usepackage{algpseudocode}%
@@ -560,6 +560,7 @@ breakable,
 \tcbset{ programboxnumberedstyle/.style={programboxstyle, left=6ex} }
 \newtcblisting{program}[4]{programboxstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodestyle}}
 \newtcblisting{programnumbered}[4]{programboxnumberedstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodenumberedstyle}}
+\newcommand{\programfragment}[2]{\lstinline[language=#1, style=programcodestyle, basicstyle=\ttfamily]#2}
 %% Console session with prompt, input, output
 %% listings allows for escape sequences to enable LateX,
 %% so we bold the input commands via the following macro
@@ -849,8 +850,7 @@ Tacoma, Washington, USA
 University of Somewhere\\
 Anytown, USA
 }
-\abstract{%
-This is a sample of many of the things you can do with PreTeXt.  Sometimes the math makes sense, sometimes it seems to be written in the first person, sort of like this Abstract.%
+\abstract{This is a sample of many of the things you can do with PreTeXt.  Sometimes the math makes sense, sometimes it seems to be written in the first person, sort of like this Abstract.%
 }
 \keywords{samples, PreTeXt, testing document}
 \pacs[2010]{Primary 00-01, 00-02; Secondary 00A99}
@@ -868,7 +868,7 @@ We consider definite integrals of functions \(f(x)\).  For example,%
 \end{equation*}
 This is also a demonstration of the capabilities of \href{https://pretextbook.org}{PreTeXt}\footnote{\nolinkurl{pretextbook.org}\label{section-introduction-2-4}}.\label{section-introduction-2-5}%
 \par
-Generated: March 23, 2025, 11:28:16 (-06:00)%
+Generated: April 3, 2025, 21:05:15 (-06:00)%
 % end of section: Introduction
 %
 %
@@ -3252,7 +3252,7 @@ There are several graphics engine packages that a \LaTeX{} document can employ. 
     \node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}};
     \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5);
     \node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3334,7 +3334,7 @@ The next example began life in \href{http://www.frontiernet.net/\~eugene.ressler
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3378,7 +3378,7 @@ The pgfplots package was included in \mono{docinfo/latex-image-preamble}. Here, 
         ]{x^2 - y^2};
     \end{axis}\\
 };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3398,7 +3398,7 @@ It is still your responsibility to be sure this directory of external data files
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3417,7 +3417,7 @@ A Cartesian plot might benefit from having a \mono{<description>} with a \mono{<
         ]
         \addplot[only marks] coordinates {(1,5) (2,3) (3,8) (4,9) (5,5) (6,5) (7,8) (8,2) (9,3)};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3436,7 +3436,7 @@ The next image requires three passes with \LaTeX{} to get everything in place.  
         0 \amp 2 \amp 1 \amp 0 \amp 2
         \end{bNiceArray}$
     };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3772,7 +3772,7 @@ A \mono{tikz} image recycled from above, now 40\% width, with 40\% left margin, 
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margin, 40\% right margin, and no longer legible.%
@@ -3787,7 +3787,7 @@ A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margi
 ]
 \addplot[blue] table {external/data/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 An Asymptote image, with zero layout control, so 100\% width.%
@@ -7249,14 +7249,14 @@ Here are two TikZ images, authored side-by-side.  The first has had its geometri
   \node at ( 210:2)   {Design};
   \node at ( 330:2)   {Coding};
   \node [font=\Large] {\LaTeX};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \begin{sbspanel}{0.25}%
 \begin{panelfigureptx}{Figure}{\TeX{} Work Flow}{section-side-by-side-8-5-2}{}%
 \noindent\resizebox{\linewidth}{!}{%
 \smartdiagram[circular diagram:clockwise]{Edit,
-pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}
+pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}%
 }%
 \tcblower
 \end{panelfigureptx}%

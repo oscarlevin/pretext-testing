@@ -2,13 +2,13 @@
 
 <project ptx-version="2" output-dir="test-output" source="projects" publication=".">
     <targets>
-      <target name="sa-web" format="html" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
+      <target name="sa-web" format="html" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes" />
       <target name="sa-tex" format="latex" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
       <target name="sb-web" format="html" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
       <target name="sb-tex" format="latex" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
 
       <target name="sa-portable" format="html" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-portable.xml" deploy="yes"/>
-      <target name="sa-theme" format="html" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-theme.xml" deploy="yes"/>
+      <target name="sa-theme" format="html" source="sample-research-article/sample-article.xml" publication="publisher-files/sample-article/publication-theme.xml" deploy="yes"/>
 
       <!-- Slide show testing -->
 
@@ -16,10 +16,11 @@
 
       <!-- Journal testing -->
       <target name="sa-ams" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ams.xml" deploy="yes"/>
-      <target name="sa-trans" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-trans.xml" deploy="yes"/>
+      <target name="sa-ams-pdf" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ams.xml" deploy="yes"/>
+      <target name="sa-trans" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-trans.xml" deploy="yes"/>
       <target name="sa-sn" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-sn.xml" deploy="yes"/>
-      <target name="sa-elsv" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-elsv.xml" deploy="yes"/>
-      <target name="sa-ejc" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ejc.xml" deploy="yes"/>
-      <target name="sa-tf" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-tf.xml" deploy="yes"/>
+      <target name="sa-elsv" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-elsv.xml" deploy="yes"/>
+      <target name="sa-ejc" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ejc.xml" deploy="yes"/>
+      <target name="sa-tf" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-tf.xml" deploy="yes"/>
     </targets>
   </project>

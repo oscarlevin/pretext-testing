@@ -25,7 +25,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     <common>
         <!-- How deep to go for separate files, in HTML the -->
         <!-- default for an article with sections is 1      -->
-        <chunking level="1"/>
+        <chunking level="0"/>
         <!-- How deep to nest a Table of Contents, for an article   -->
         <!-- with subsections in HTML, the default is 2, but in the -->
         <!-- LateX conversion the default is no ToC at all.  So we  -->
