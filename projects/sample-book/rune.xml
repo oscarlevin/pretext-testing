@@ -2712,6 +2712,46 @@ TEST_CASE( "Test the add function" ) {
             </hint>
         </exercise>
 
+        <exercise label="multiple-choice-randomized-forced-checkbox">
+            <title>Multiple-Choice, Randomized, One Answer but with Checkboxes</title>
+            <idx>stop signs</idx>
+            <statement>
+                <p>What color is a stop sign? [Static versions retain the order as authored.]</p>
+            </statement>
+            <choices randomize="yes" multiple-correct="yes">
+                <choice>
+                    <statement>
+                        <p>Green</p>
+                    </statement>
+                    <feedback>
+                        <p>Green means <q>go!</q>.</p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>Red</p>
+                    </statement>
+                    <feedback>
+                        <p>Red is universally used for prohibited activities or serious warnings.</p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>Yellow</p>
+                    </statement>
+                    <feedback>
+                        <p>Yellow means slow down.</p>
+                    </feedback>
+                </choice>
+            </choices>
+            <hint>
+                <p>What did you see last time you went driving?</p>
+            </hint>
+            <hint>
+                <p>Maybe go out for a drive?</p>
+            </hint>
+        </exercise>
+
         <exercise label="multiple-choice-randomized-multiple-answers">
             <title>Multiple-Choice, Randomized, Multiple Answers</title>
             <idx>stop signs</idx>
@@ -3483,6 +3523,25 @@ TEST_CASE( "Test the add function" ) {
                 <response xml:id="math"><em>Some</em> "Math": <m>\sin(x^2)</m></response>
             </matching>
         </exercise>
+
+        <exercise xml:id="cardsort-basic" label="cardsort-basic">
+            <title>Cardsort Problem, Basic Arithmetic</title>
+            <idx>matching US dates</idx>
+            <statement>
+                <p>This is a simple exercise to test some grading behavior.</p>
+            </statement>
+            <cardsort>
+                <match>
+                    <premise order="1">2 + 3</premise>
+                    <premise order="3">4 + 1</premise>
+                    <response>5</response>
+                </match>
+                <match>
+                    <premise order="2"><m>12 + 2</m></premise>
+                    <response>14</response>
+                </match>
+            </cardsort>
+        </exercise>
     </exercises>
 
     <exercises xml:id="clickable-area-exercises">
@@ -3577,20 +3636,32 @@ TEST_CASE( "Test the add function" ) {
     <exercises xml:id="select-exercises">
         <title>Select Exercises</title>
 
-        <exercise>
-            <statement>
-                <p>Mock exercise, just to say this is all testing, 2023-05-19.</p>
-            </statement>
-        </exercise>
+        <introduction>
+            <p>These <term>select</term> questions specify a list of extant questions, and the reader, or Runestone, selects questions from the list to be graded (in different ways). They are only really functional with a database of students in a course, i.e.<nbsp/>when hosted on Runestone.</p>
+        </introduction>
 
         <!-- Select one at random -->
         <exercise label="question-select">
-            <select questions="true-false-one multiple-choice-one matching-one"/>
+            <title>Three-way Select Question</title>
+            <select grade="random" questions="true-false-one multiple-choice-one matching-one"/>
         </exercise>
 
         <!-- Select according to a student's group (A or B) -->
         <exercise label="ab-experiment">
-            <select ab-experiment="true-false-one multiple-choice-one" experiment-name="sample-book"/>
+            <title>A/B Experiment Select Question</title>
+            <select grade="ab-experiment" questions="true-false-one multiple-choice-one" experiment-name="sample-book"/>
+        </exercise>
+
+        <!-- Select grades first alwys, others to view -->
+        <exercise label="toggle-first">
+            <title>Grade First Question</title>
+            <select grade="first" questions="true-false-one multiple-choice-one"/>
+        </exercise>
+
+        <!-- Select grades any one reader chooses -->
+        <exercise label="toggle-any">
+            <title>Grade Any Question</title>
+            <select grade="any" questions="true-false-one multiple-choice-one"/>
         </exercise>
 
     </exercises>
@@ -3750,8 +3821,12 @@ TEST_CASE( "Test the add function" ) {
         </interactive>
     </section>
 
-    <exercises xml:id="fill-in-exercises">
-        <title>Fill-In Exercises</title>
+    <exercises xml:id="fill-in-exercises-old">
+        <title>Fill-In Exercises (Old Style)</title>
+
+        <introduction>
+            <p>This section has <term>fill-in-the-blank</term> (<init>FITB</init>) exercises that use an old syntax.  They were designed for projects transitioning from Runestone's ReST syntax to <pretext/>.  So they are really only here for testing, and not for any sort of documentation.  They will not receive support or enhancements.  <foreign>Caveat emptor</foreign>.</p>
+        </introduction>
 
         <exercise label="fillin-integer">
             <title>Fill-In, Integer Answer</title>
@@ -3856,6 +3931,14 @@ TEST_CASE( "Test the add function" ) {
                 </var>
             </setup>
         </exercise>
+    </exercises>
+
+    <exercises xml:id="fill-in-exercises">
+        <title>Fill-In Exercises</title>
+
+        <introduction>
+            <p>This section has <term>fill-in-the-blank</term> (<init>FITB</init>) exercises using newer syntax, and the subject of active development.</p>
+        </introduction>
 
         <exercise label="fillin-numbers-many-tests">
             <title>Fill-In, New Markup Numbers</title>
@@ -3896,7 +3979,9 @@ TEST_CASE( "Test the add function" ) {
         <exercise label="fillin-strings-">
             <title>Fill-In, New Markup Strings</title>
             <statement>
-                <p>The word I'm thinking about is <q>magic</q>. What word am I thinking about? <fillin width="5" answer="magic"/> (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try <q>pizzazz</q>.")</p>
+                <p>The word I'm thinking about is hinted at by the image.</p>
+                <p><image source="cartoon-magic.jpg" width="50%"/></p>
+                <p>What word am I thinking about? <fillin width="5" answer="magic"/> (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try <q>pizzazz</q>.")</p>
             </statement>
             <evaluation>
                 <evaluate>
