@@ -2058,6 +2058,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <mrow>x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13.</mrow>
                 </md>Beautiful.</p>
 
+                <aside>
+                    <title>Overlap Test</title>
+                    <p>This is simply to test what happens when an aside bumps into something like the content below that may extend past the normal right content boundary. It likely only is of interest with the theme <c>default-modern</c>.</p>
+                </aside>
+
                 <p>A long equation, to check layout on various screen sizes.  This is Weil's <q>explicit formula</q> for the
                    Riemann <m>\zeta</m>-function:
                   <men>
@@ -14801,7 +14806,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </worksheet>
 
 
-            <worksheet label="worksheet-networks" top="3cm" bottom="100pt">
+            <worksheet label="worksheet-networks" top="3cm" bottom="1.2in">
                 <title>Networks Worksheet (no authored pages)</title>
                 <!-- <subtitle>An Activity Using Linear Algebra to Solve Network Applications</subtitle> -->
 
@@ -14853,7 +14858,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <p> Kirchoffs Current Law and Kirkoffs Voltage Law combined with Ohms Law gives for any circuit of resistors and sources a linear system that may (or may not) determine the currents.
                     </p>
                 </introduction>
-
 
                 <sidebyside width="45%" margins="0%">
                     <exercise workspace="1.5in">
@@ -15020,7 +15024,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </exercise>
             </worksheet>
 
-            <worksheet label="worksheet-networks-pages" top="3cm" bottom="100pt">
+            <worksheet label="worksheet-networks-pages" top="3cm" bottom="1.2in">
                 <title>Networks Worksheet (with authored pages)</title>
                 <!-- <subtitle>An Activity Using Linear Algebra to Solve Network Applications</subtitle> -->
 

@@ -6,16 +6,21 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SB Subgroups of a Cyclic Group</title>
-<meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
-<meta property="book:title" content="PreTeXt Sample Book">
-<meta property="book:author" content="Thomas W. Judson">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -87,13 +92,13 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
+<meta property="book:title" content="PreTeXt Sample Book">
+<meta property="book:author" content="Thomas W. Judson">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -116,20 +121,22 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.11';
+eBookConfig.runestone_version = '7.9.4';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.ee5a0b116b7d0991.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.e0c6d4592e23c667.css">
+<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book:</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
@@ -317,23 +324,25 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="short-answer-exercises.html" class="internal"><span class="codenumber">5.15</span> <span class="title">Short Answer Exercises</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="polling.html" class="internal"><span class="codenumber">5.16</span> <span class="title">Polling</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">5.17</span> <span class="title">DoenetML</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="rune-21.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Hodgepodge</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Exercises that are Timed</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.20</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-24.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Expedited Samples</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Splice Integration</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -363,13 +372,17 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cyclic-5"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.2</span><span class="space"> </span><span class="title">Subgroups of a Cyclic Group</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subgroups of a Cyclic Group</span>
 </h2>
-<div class="para" id="cyclic-5-2">We can ask some interesting questions about cyclic subgroups of a group and subgroups of a cyclic group.  If <span class="process-math">\(G\)</span> is a group, which subgroups of <span class="process-math">\(G\)</span> are cyclic? If <span class="process-math">\(G\)</span> is a cyclic group, what type of subgroups does <span class="process-math">\(G\)</span> possess?</div>
+<div class="para" id="cyclic-5-2">We can ask some interesting questions about cyclic subgroups of a group and subgroups of a cyclic group.  If <span class="process-math">\(G\)</span> is a group, which subgroups of <span class="process-math">\(G\)</span> are cyclic? If <span class="process-math">\(G\)</span> is a cyclic group, what type of subgroups does <span class="process-math">\(G\)</span> possess?<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="theorem-cyclic-subgroups"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="theorem-cyclic-subgroups-1-1">Every subgroup of a cyclic group is cyclic.</div></article><details id="theorem-cyclic-subgroups-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem-cyclic-subgroups-2-1">The main tools used in this proof are the division algorithm and the Principle of Well-Ordering. Let <span class="process-math">\(G\)</span> be a cyclic group generated by <span class="process-math">\(a\)</span> and suppose that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> If <span class="process-math">\(H = \{ e \}\text{,}\)</span> then trivially <span class="process-math">\(H\)</span> is cyclic. Suppose that <span class="process-math">\(H\)</span> contains some other element <span class="process-math">\(g\)</span> distinct from the identity. Then <span class="process-math">\(g\)</span> can be written as <span class="process-math">\(a^n\)</span> for some integer <span class="process-math">\(n\text{.}\)</span> Since <span class="process-math">\(H\)</span> is a subgroup, <span class="process-math">\(g^{-1} = a^{n}\)</span> must also be in <span class="process-math">\(H\text{.}\)</span>  Since either <span class="process-math">\(n\)</span> or <span class="process-math">\(-n\)</span> is positive, we can assume that <span class="process-math">\(H\)</span> contains positive powers of <span class="process-math">\(a\)</span> and <span class="process-math">\(n \gt 0\text{.}\)</span> Let <span class="process-math">\(m\)</span> be the smallest natural number such that <span class="process-math">\(a^m \in H\text{.}\)</span> Such an <span class="process-math">\(m\)</span> exists by the Principle of Well-Ordering.</div>
+<div class="para" id="theorem-cyclic-subgroups-1-1">Every subgroup of a cyclic group is cyclic.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-cyclic-subgroups-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.1"><a href="#theorem-cyclic-subgroups" title="Copy heading and permalink for Theorem 4.2.1" aria-label="Copy heading and permalink for Theorem 4.2.1">🔗</a></div></article><details id="theorem-cyclic-subgroups-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem-cyclic-subgroups-2-1">The main tools used in this proof are the division algorithm and the Principle of Well-Ordering. Let <span class="process-math">\(G\)</span> be a cyclic group generated by <span class="process-math">\(a\)</span> and suppose that <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{.}\)</span> If <span class="process-math">\(H = \{ e \}\text{,}\)</span> then trivially <span class="process-math">\(H\)</span> is cyclic. Suppose that <span class="process-math">\(H\)</span> contains some other element <span class="process-math">\(g\)</span> distinct from the identity. Then <span class="process-math">\(g\)</span> can be written as <span class="process-math">\(a^n\)</span> for some integer <span class="process-math">\(n\text{.}\)</span> Since <span class="process-math">\(H\)</span> is a subgroup, <span class="process-math">\(g^{-1} = a^{n}\)</span> must also be in <span class="process-math">\(H\text{.}\)</span>  Since either <span class="process-math">\(n\)</span> or <span class="process-math">\(-n\)</span> is positive, we can assume that <span class="process-math">\(H\)</span> contains positive powers of <span class="process-math">\(a\)</span> and <span class="process-math">\(n \gt 0\text{.}\)</span> Let <span class="process-math">\(m\)</span> be the smallest natural number such that <span class="process-math">\(a^m \in H\text{.}\)</span> Such an <span class="process-math">\(m\)</span> exists by the Principle of Well-Ordering.<div class="autopermalink" data-description="Paragraph"><a href="#theorem-cyclic-subgroups-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="theorem-cyclic-subgroups-2-2">
 <div class="para">We claim that <span class="process-math">\(h = a^m\)</span> is a generator for <span class="process-math">\(H\text{.}\)</span>  We must show that every <span class="process-math">\(h' \in H\)</span> can be written as a power of <span class="process-math">\(h\text{.}\)</span> Since <span class="process-math">\(h' \in H\)</span> and <span class="process-math">\(H\)</span> is a subgroup of <span class="process-math">\(G\text{,}\)</span> <span class="process-math">\(h' = a^k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> Using the division algorithm, we can find numbers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(k = mq +r\)</span> where <span class="process-math">\(0 \leq r \lt m\text{;}\)</span> hence,</div>
 <div class="displaymath process-math">
@@ -385,15 +398,19 @@ h' = a^k = a^{mq} =  h^q
 </div>
 <div class="para">and <span class="process-math">\(H\)</span> is generated by <span class="process-math">\(h\text{.}\)</span>
 </div>
-</div></article></details><article class="corollary theorem-like" id="cyclic-5-4"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#theorem-cyclic-subgroups-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.1.1"><a href="#theorem-cyclic-subgroups-2" title="Copy heading and permalink for Proof 4.2.1.1" aria-label="Copy heading and permalink for Proof 4.2.1.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cyclic-5-4"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="cyclic-5-4-1-1">The subgroups of <span class="process-math">\({\mathbb Z}\)</span> are exactly <span class="process-math">\(n{\mathbb Z}\)</span> for <span class="process-math">\(n = 0, 1, 2,\ldots\text{.}\)</span>
-</div></article><article class="proposition theorem-like" id="proposition-cyclic-subgrp-order"><h3 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span>
+<div class="para" id="cyclic-5-4-1-1">The subgroups of <span class="process-math">\({\mathbb Z}\)</span> are exactly <span class="process-math">\(n{\mathbb Z}\)</span> for <span class="process-math">\(n = 0, 1, 2,\ldots\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cyclic-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 4.2.2"><a href="#cyclic-5-4" title="Copy heading and permalink for Corollary 4.2.2" aria-label="Copy heading and permalink for Corollary 4.2.2">🔗</a></div></article><article class="proposition theorem-like" id="proposition-cyclic-subgrp-order"><h3 class="heading">
+<span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="proposition-cyclic-subgrp-order-1-1">Let <span class="process-math">\(G\)</span> be a cyclic group of order <span class="process-math">\(n\)</span> and suppose that <span class="process-math">\(a\)</span> is a generator for  <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(a^k=e\)</span> if and only if <span class="process-math">\(n\)</span> divides <span class="process-math">\(k\text{.}\)</span>
-</div></article><details id="proposition-cyclic-subgrp-order-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="proposition-cyclic-subgrp-order-2-1">
+<div class="para" id="proposition-cyclic-subgrp-order-1-1">Let <span class="process-math">\(G\)</span> be a cyclic group of order <span class="process-math">\(n\)</span> and suppose that <span class="process-math">\(a\)</span> is a generator for  <span class="process-math">\(G\text{.}\)</span> Then <span class="process-math">\(a^k=e\)</span> if and only if <span class="process-math">\(n\)</span> divides <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-cyclic-subgrp-order-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proposition 4.2.3"><a href="#proposition-cyclic-subgrp-order" title="Copy heading and permalink for Proposition 4.2.3" aria-label="Copy heading and permalink for Proposition 4.2.3">🔗</a></div></article><details id="proposition-cyclic-subgrp-order-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="proposition-cyclic-subgrp-order-2-1">
 <div class="para">First suppose that <span class="process-math">\(a^k=e\text{.}\)</span> By the division algorithm, <span class="process-math">\(k = nq + r\)</span> where <span class="process-math">\(0 \leq r \lt n\text{;}\)</span> hence,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -402,6 +419,7 @@ e = a^k = a^{nq + r} = a^{nq} a^r = e a^r = a^r\text{.}
 </div>
 <div class="para">Since the smallest positive integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(a^m = e\)</span> is <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(r= 0\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-cyclic-subgrp-order-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="proposition-cyclic-subgrp-order-2-2">
 <div class="para">Conversely, if <span class="process-math">\(n\)</span> divides <span class="process-math">\(k\text{,}\)</span> then <span class="process-math">\(k=ns\)</span> for some integer <span class="process-math">\(s\text{.}\)</span> Consequently,</div>
@@ -410,17 +428,22 @@ e = a^k = a^{nq + r} = a^{nq} a^r = e a^r = a^r\text{.}
 a^k = a^{ns} = (a^n)^s = e^s = e\text{.}
 \end{equation*}
 </div>
-</div></article></details><article class="theorem theorem-like" id="theorem-cyclic-orders"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.2.4</span><span class="period">.</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#proposition-cyclic-subgrp-order-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.3.1"><a href="#proposition-cyclic-subgrp-order-2" title="Copy heading and permalink for Proof 4.2.3.1" aria-label="Copy heading and permalink for Proof 4.2.3.1">🔗</a></div></article></details><article class="theorem theorem-like" id="theorem-cyclic-orders"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="theorem-cyclic-orders-1-1">Let <span class="process-math">\(G\)</span> be a cyclic group of order <span class="process-math">\(n\)</span> and suppose that <span class="process-math">\(a \in G\)</span> is a generator of the group.  If <span class="process-math">\(b = a^k\text{,}\)</span> then the order of <span class="process-math">\(b\)</span> is <span class="process-math">\(n/d\text{,}\)</span> where <span class="process-math">\(d = \gcd(k,n)\text{.}\)</span>
-</div></article><details id="theorem-cyclic-orders-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem-cyclic-orders-2-1">We wish to find the smallest integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(e = b^m = a^{km}\text{.}\)</span> By <a href="cyclic-5.html#proposition-cyclic-subgrp-order" class="xref" data-knowl="./knowl/xref/proposition-cyclic-subgrp-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, this is the smallest integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n\)</span> divides <span class="process-math">\(km\)</span> or, equivalently, <span class="process-math">\(n/d\)</span> divides <span class="process-math">\(m(k/d)\text{.}\)</span>  Since <span class="process-math">\(d\)</span> is the greatest common divisor of <span class="process-math">\(n\)</span> and <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(n/d\)</span> and <span class="process-math">\(k/d\)</span> are relatively prime. Hence, for <span class="process-math">\(n/d\)</span> to divide <span class="process-math">\(m(k/d)\)</span> it must divide <span class="process-math">\(m\text{.}\)</span>  The smallest such <span class="process-math">\(m\)</span> is <span class="process-math">\(n/d\text{.}\)</span>
-</div></article></details><article class="corollary theorem-like" id="corollary-cyclic-modngenerators"><h3 class="heading">
-<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">4.2.5</span><span class="period">.</span>
+<div class="para" id="theorem-cyclic-orders-1-1">Let <span class="process-math">\(G\)</span> be a cyclic group of order <span class="process-math">\(n\)</span> and suppose that <span class="process-math">\(a \in G\)</span> is a generator of the group.  If <span class="process-math">\(b = a^k\text{,}\)</span> then the order of <span class="process-math">\(b\)</span> is <span class="process-math">\(n/d\text{,}\)</span> where <span class="process-math">\(d = \gcd(k,n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-cyclic-orders-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.4"><a href="#theorem-cyclic-orders" title="Copy heading and permalink for Theorem 4.2.4" aria-label="Copy heading and permalink for Theorem 4.2.4">🔗</a></div></article><details id="theorem-cyclic-orders-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="theorem-cyclic-orders-2-1">We wish to find the smallest integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(e = b^m = a^{km}\text{.}\)</span> By <a href="cyclic-5.html#proposition-cyclic-subgrp-order" class="xref" data-knowl="./knowl/xref/proposition-cyclic-subgrp-order.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 4.2.3">Proposition 4.2.3</a>, this is the smallest integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n\)</span> divides <span class="process-math">\(km\)</span> or, equivalently, <span class="process-math">\(n/d\)</span> divides <span class="process-math">\(m(k/d)\text{.}\)</span>  Since <span class="process-math">\(d\)</span> is the greatest common divisor of <span class="process-math">\(n\)</span> and <span class="process-math">\(k\text{,}\)</span> <span class="process-math">\(n/d\)</span> and <span class="process-math">\(k/d\)</span> are relatively prime. Hence, for <span class="process-math">\(n/d\)</span> to divide <span class="process-math">\(m(k/d)\)</span> it must divide <span class="process-math">\(m\text{.}\)</span>  The smallest such <span class="process-math">\(m\)</span> is <span class="process-math">\(n/d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#theorem-cyclic-orders-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.4.1"><a href="#theorem-cyclic-orders-2" title="Copy heading and permalink for Proof 4.2.4.1" aria-label="Copy heading and permalink for Proof 4.2.4.1">🔗</a></div></article></details><article class="corollary theorem-like" id="corollary-cyclic-modngenerators"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
-<div class="para" id="corollary-cyclic-modngenerators-1-1">The generators of <span class="process-math">\({\mathbb Z}_n\)</span> are the integers <span class="process-math">\(r\)</span> such that <span class="process-math">\(1 \leq r \lt n\)</span> and <span class="process-math">\(\gcd(r,n) =  1\text{.}\)</span>
-</div></article><details id="example-cyclic-z16" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">A Finite Cyclic Group of Order <span class="process-math">\(16\)</span>.</span>
+<div class="para" id="corollary-cyclic-modngenerators-1-1">The generators of <span class="process-math">\({\mathbb Z}_n\)</span> are the integers <span class="process-math">\(r\)</span> such that <span class="process-math">\(1 \leq r \lt n\)</span> and <span class="process-math">\(\gcd(r,n) =  1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#corollary-cyclic-modngenerators-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 4.2.5"><a href="#corollary-cyclic-modngenerators" title="Copy heading and permalink for Corollary 4.2.5" aria-label="Copy heading and permalink for Corollary 4.2.5">🔗</a></div></article><details id="example-cyclic-z16" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A Finite Cyclic Group of Order <span class="process-math">\(16\)</span>.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-cyclic-z16-2">
 <div class="para">Let us examine the group <span class="process-math">\({\mathbb Z}_{16}\text{.}\)</span>  The numbers 1, 3, 5, 7, 9, 11, 13, and 15 are the elements of <span class="process-math">\({\mathbb Z}_{16}\)</span> that are relatively prime to 16.  Each of these elements generates <span class="process-math">\({\mathbb Z}_{16}\text{.}\)</span> For example,</div>
 <div class="displaymath process-math" id="example-cyclic-z16-2-4">
@@ -432,8 +455,10 @@ a^k = a^{ns} = (a^n)^s = e^s = e\text{.}
 13 \cdot 9 &amp; =  5 &amp; 14 \cdot 9 &amp; = 14 &amp;   15 \cdot 9 &amp; = 7\text{.}
 \end{align*}
 </div>
-</div></article></details></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#example-cyclic-z16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.2.6: A Finite Cyclic Group of Order 16"><a href="#example-cyclic-z16" title="Copy heading and permalink for Example 4.2.6: A Finite Cyclic Group of Order 16" aria-label="Copy heading and permalink for Example 4.2.6: A Finite Cyclic Group of Order 16">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.2: Subgroups of a Cyclic Group"><a href="#cyclic-5" title="Copy heading and permalink for Section 4.2: Subgroups of a Cyclic Group" aria-label="Copy heading and permalink for Section 4.2: Subgroups of a Cyclic Group">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="cyclic-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cyclic-6.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>

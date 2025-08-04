@@ -565,7 +565,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "1.4",
   "title": "Exercises",
-  "body": " Exercises   Warm-up   This is a meaningless subdivision of the exercises for the sake of testing output.    Suppose that  Describe each of the following sets.          If , , , and , list all of the elements in each of the following sets.         (a) ; (d) .    Find an example of two nonempty sets and for which is true.    Prove and .    Prove and .    Prove .   If , then either or . Thus, and . Hence, . Therefore, . Conversely, if , then and . Thus, or is in both and . So and therefore . Hence, .    Prove .    Prove if and only if .    Prove .    Prove .   .    Prove .    Prove .    Prove .    Prove .   .     More Exercises   This is a meaningless subdivision of the exercises for the sake of testing output.    Prove .    Prove .    Which of the following relations define a mapping? In each case, supply a reason why is or is not a mapping.          Determine which of the following functions are one-to-one and which are onto. If the function is not onto, determine its range.   defined by  defined by  defined by  defined by    (a) is one-to-one but not onto. . (c) is neither one-to-one nor onto. .    Let and be invertible mappings; that is, mappings such that and exist. Show that .     Define a function that is one-to-one but not onto.  Define a function that is onto but not one-to-one.    (a) .    Prove the relation defined on by if is an equivalence relation.    Let and be maps.   If and are both one-to-one functions, show that is one-to-one.  If is onto, show that is onto.  If is one-to-one, show that is one-to-one.  If is one-to-one and is onto, show that is one-to-one.  If is onto and is one-to-one, show that is onto.    (a) Let . Then . Thus, and , so is one-to-one. (b) Let , then for some . Since , is onto.    Define a function on the real numbers by What are the domain and range of ? What is the inverse of ? Compute and .    Let be a map with and .   Prove .  Prove . Give an example in which equality fails.  Prove , where  Prove .  Prove .    (a) Let . Then there exists an such that . Hence, or . Therefore, . Consequently, . Conversely, if , then or . Hence, there exists an or there exists an such that . Thus, there exists an such that . Therefore, , and .    Determine whether or not the following relations are equivalence relations on the given set. If the relation is an equivalence relation, describe the partition given by it. If the relation is not an equivalence relation, state why it fails to be one.   in if  in if  in if  in if     Define a relation on by stating that if and only if . Show that is reflexive and transitive but not symmetric.    Show that an matrix gives rise to a well-defined map from to .    Find the error in the following argument by providing a counterexample. The reflexive property is redundant in the axioms for an equivalence relation. If , then by the symmetric property. Using the transitive property, we can deduce that .    Let and define if .   Projective Real Line  Define a relation on by letting if there exists a nonzero real number such that . Prove that defines an equivalence relation on . What are the corresponding equivalence classes? This equivalence relation defines the projective line, denoted by , which is very important in geometry.    "
+  "body": " Exercises   Warm-up   This is a meaningless subdivision of the exercises for the sake of testing output.     Suppose that  Describe each of the following sets.              If , , , and , list all of the elements in each of the following sets.          (a) ; (d) .      Find an example of two nonempty sets and for which is true.      Prove and .      Prove and .      Prove .    If , then either or . Thus, and . Hence, . Therefore, . Conversely, if , then and . Thus, or is in both and . So and therefore . Hence, .      Prove .      Prove if and only if .      Prove .      Prove .    .      Prove .      Prove .      Prove .      Prove .    .      More Exercises   This is a meaningless subdivision of the exercises for the sake of testing output.     Prove .      Prove .      Which of the following relations define a mapping? In each case, supply a reason why is or is not a mapping.              Determine which of the following functions are one-to-one and which are onto. If the function is not onto, determine its range.   defined by  defined by  defined by  defined by     (a) is one-to-one but not onto. . (c) is neither one-to-one nor onto. .      Let and be invertible mappings; that is, mappings such that and exist. Show that .       Define a function that is one-to-one but not onto.  Define a function that is onto but not one-to-one.     (a) .      Prove the relation defined on by if is an equivalence relation.      Let and be maps.   If and are both one-to-one functions, show that is one-to-one.  If is onto, show that is onto.  If is one-to-one, show that is one-to-one.  If is one-to-one and is onto, show that is one-to-one.  If is onto and is one-to-one, show that is onto.     (a) Let . Then . Thus, and , so is one-to-one. (b) Let , then for some . Since , is onto.      Define a function on the real numbers by What are the domain and range of ? What is the inverse of ? Compute and .        Let be a map with and .   Prove .  Prove . Give an example in which equality fails.  Prove , where  Prove .  Prove .     (a) Let . Then there exists an such that . Hence, or . Therefore, . Consequently, . Conversely, if , then or . Hence, there exists an or there exists an such that . Thus, there exists an such that . Therefore, , and .      Determine whether or not the following relations are equivalence relations on the given set. If the relation is an equivalence relation, describe the partition given by it. If the relation is not an equivalence relation, state why it fails to be one.   in if  in if  in if  in if         Define a relation on by stating that if and only if . Show that is reflexive and transitive but not symmetric.      Show that an matrix gives rise to a well-defined map from to .      Find the error in the following argument by providing a counterexample. The reflexive property is redundant in the axioms for an equivalence relation. If , then by the symmetric property. Using the transitive property, we can deduce that .     Let and define if .     Projective Real Line   Define a relation on by letting if there exists a nonzero real number such that . Prove that defines an equivalence relation on . What are the corresponding equivalence classes? This equivalence relation defines the projective line, denoted by , which is very important in geometry.     "
 },
 {
   "id": "exercises-sets-2-3",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.1",
   "title": "",
-  "body": " Suppose that  Describe each of the following sets.        "
+  "body": "  Suppose that  Describe each of the following sets.           "
 },
 {
   "id": "exercises-sets-2-4",
@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.2",
   "title": "",
-  "body": " If , , , and , list all of the elements in each of the following sets.         (a) ; (d) .  "
+  "body": "  If , , , and , list all of the elements in each of the following sets.          (a) ; (d) .   "
 },
 {
   "id": "exercises-sets-2-5",
@@ -592,7 +592,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.3",
   "title": "",
-  "body": " Find an example of two nonempty sets and for which is true.  "
+  "body": "  Find an example of two nonempty sets and for which is true.   "
 },
 {
   "id": "exercises-sets-2-6",
@@ -601,7 +601,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.4",
   "title": "",
-  "body": " Prove and .  "
+  "body": "  Prove and .   "
 },
 {
   "id": "exercises-sets-2-7",
@@ -610,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.5",
   "title": "",
-  "body": " Prove and .  "
+  "body": "  Prove and .   "
 },
 {
   "id": "exercises-sets-2-8",
@@ -619,7 +619,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.6",
   "title": "",
-  "body": " Prove .   If , then either or . Thus, and . Hence, . Therefore, . Conversely, if , then and . Thus, or is in both and . So and therefore . Hence, .  "
+  "body": "  Prove .    If , then either or . Thus, and . Hence, . Therefore, . Conversely, if , then and . Thus, or is in both and . So and therefore . Hence, .   "
 },
 {
   "id": "exercises-sets-2-9",
@@ -628,7 +628,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.7",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-2-10",
@@ -637,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.8",
   "title": "",
-  "body": " Prove if and only if .  "
+  "body": "  Prove if and only if .   "
 },
 {
   "id": "exercises-sets-2-11",
@@ -646,7 +646,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.9",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-2-12",
@@ -655,7 +655,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.10",
   "title": "",
-  "body": " Prove .   .  "
+  "body": "  Prove .    .   "
 },
 {
   "id": "exercises-sets-2-13",
@@ -664,7 +664,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.11",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-2-14",
@@ -673,7 +673,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.12",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-2-15",
@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.13",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-2-16",
@@ -691,7 +691,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.14",
   "title": "",
-  "body": " Prove .   .  "
+  "body": "  Prove .    .   "
 },
 {
   "id": "exercises-sets-3-3",
@@ -700,7 +700,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.15",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-3-4",
@@ -709,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.16",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-sets-3-5",
@@ -718,7 +718,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.17",
   "title": "",
-  "body": " Which of the following relations define a mapping? In each case, supply a reason why is or is not a mapping.        "
+  "body": "  Which of the following relations define a mapping? In each case, supply a reason why is or is not a mapping.           "
 },
 {
   "id": "exercises-sets-3-6",
@@ -727,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.18",
   "title": "",
-  "body": " Determine which of the following functions are one-to-one and which are onto. If the function is not onto, determine its range.   defined by  defined by  defined by  defined by    (a) is one-to-one but not onto. . (c) is neither one-to-one nor onto. .  "
+  "body": "  Determine which of the following functions are one-to-one and which are onto. If the function is not onto, determine its range.   defined by  defined by  defined by  defined by     (a) is one-to-one but not onto. . (c) is neither one-to-one nor onto. .   "
 },
 {
   "id": "exercises-sets-3-7",
@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.19",
   "title": "",
-  "body": " Let and be invertible mappings; that is, mappings such that and exist. Show that .  "
+  "body": "  Let and be invertible mappings; that is, mappings such that and exist. Show that .   "
 },
 {
   "id": "exercises-sets-3-8",
@@ -745,7 +745,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.20",
   "title": "",
-  "body": "  Define a function that is one-to-one but not onto.  Define a function that is onto but not one-to-one.    (a) .  "
+  "body": "   Define a function that is one-to-one but not onto.  Define a function that is onto but not one-to-one.     (a) .   "
 },
 {
   "id": "exercises-sets-3-9",
@@ -754,7 +754,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.21",
   "title": "",
-  "body": " Prove the relation defined on by if is an equivalence relation.  "
+  "body": "  Prove the relation defined on by if is an equivalence relation.   "
 },
 {
   "id": "exercises-sets-3-10",
@@ -763,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.22",
   "title": "",
-  "body": " Let and be maps.   If and are both one-to-one functions, show that is one-to-one.  If is onto, show that is onto.  If is one-to-one, show that is one-to-one.  If is one-to-one and is onto, show that is one-to-one.  If is onto and is one-to-one, show that is onto.    (a) Let . Then . Thus, and , so is one-to-one. (b) Let , then for some . Since , is onto.  "
+  "body": "  Let and be maps.   If and are both one-to-one functions, show that is one-to-one.  If is onto, show that is onto.  If is one-to-one, show that is one-to-one.  If is one-to-one and is onto, show that is one-to-one.  If is onto and is one-to-one, show that is onto.     (a) Let . Then . Thus, and , so is one-to-one. (b) Let , then for some . Since , is onto.   "
 },
 {
   "id": "exercises-sets-3-11",
@@ -772,7 +772,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.23",
   "title": "",
-  "body": " Define a function on the real numbers by What are the domain and range of ? What is the inverse of ? Compute and .  "
+  "body": "  Define a function on the real numbers by What are the domain and range of ? What is the inverse of ? Compute and .     "
 },
 {
   "id": "exercises-sets-3-12",
@@ -781,7 +781,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.24",
   "title": "",
-  "body": " Let be a map with and .   Prove .  Prove . Give an example in which equality fails.  Prove , where  Prove .  Prove .    (a) Let . Then there exists an such that . Hence, or . Therefore, . Consequently, . Conversely, if , then or . Hence, there exists an or there exists an such that . Thus, there exists an such that . Therefore, , and .  "
+  "body": "  Let be a map with and .   Prove .  Prove . Give an example in which equality fails.  Prove , where  Prove .  Prove .     (a) Let . Then there exists an such that . Hence, or . Therefore, . Consequently, . Conversely, if , then or . Hence, there exists an or there exists an such that . Thus, there exists an such that . Therefore, , and .   "
 },
 {
   "id": "exercises-sets-3-13",
@@ -790,7 +790,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.25",
   "title": "",
-  "body": " Determine whether or not the following relations are equivalence relations on the given set. If the relation is an equivalence relation, describe the partition given by it. If the relation is not an equivalence relation, state why it fails to be one.   in if  in if  in if  in if   "
+  "body": "  Determine whether or not the following relations are equivalence relations on the given set. If the relation is an equivalence relation, describe the partition given by it. If the relation is not an equivalence relation, state why it fails to be one.   in if  in if  in if  in if      "
 },
 {
   "id": "exercises-sets-3-14",
@@ -799,7 +799,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.26",
   "title": "",
-  "body": " Define a relation on by stating that if and only if . Show that is reflexive and transitive but not symmetric.  "
+  "body": "  Define a relation on by stating that if and only if . Show that is reflexive and transitive but not symmetric.   "
 },
 {
   "id": "exercises-sets-3-15",
@@ -808,7 +808,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.27",
   "title": "",
-  "body": " Show that an matrix gives rise to a well-defined map from to .  "
+  "body": "  Show that an matrix gives rise to a well-defined map from to .   "
 },
 {
   "id": "exercises-sets-3-16",
@@ -817,7 +817,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.28",
   "title": "",
-  "body": " Find the error in the following argument by providing a counterexample. The reflexive property is redundant in the axioms for an equivalence relation. If , then by the symmetric property. Using the transitive property, we can deduce that .    Let and define if .  "
+  "body": "  Find the error in the following argument by providing a counterexample. The reflexive property is redundant in the axioms for an equivalence relation. If , then by the symmetric property. Using the transitive property, we can deduce that .     Let and define if .   "
 },
 {
   "id": "exercises-sets-3-17",
@@ -826,7 +826,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.4.29",
   "title": "Projective Real Line.",
-  "body": "Projective Real Line  Define a relation on by letting if there exists a nonzero real number such that . Prove that defines an equivalence relation on . What are the corresponding equivalence classes? This equivalence relation defines the projective line, denoted by , which is very important in geometry.  "
+  "body": " Projective Real Line   Define a relation on by letting if there exists a nonzero real number such that . Prove that defines an equivalence relation on . What are the corresponding equivalence classes? This equivalence relation defines the projective line, denoted by , which is very important in geometry.   "
 },
 {
   "id": "sets-sage-exercises",
@@ -835,7 +835,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "1.5",
   "title": "Sage Exercises",
-  "body": " Sage Exercises   This exercise is just about making sure you know how to use Sage. Login to a Sage Notebook server and create a new worksheet. Do some non-trivial computation, maybe a pretty plot or some gruesome numerical computation to an insane precision. Create an interesting list and experiment with it some. Maybe include some nicely formatted text or tex using the included mini-word-processor of the Sage Notebook (hover until a blue bar appears between cells and then shift-click).  Use whatever mechanism your instructor has in place for submitting your work. Or save your worksheet and then trade worksheets via email (or another electronic method) with a classmate.   "
+  "body": " Sage Exercises    This exercise is just about making sure you know how to use Sage. Login to a Sage Notebook server and create a new worksheet. Do some non-trivial computation, maybe a pretty plot or some gruesome numerical computation to an insane precision. Create an interesting list and experiment with it some. Maybe include some nicely formatted text or tex using the included mini-word-processor of the Sage Notebook (hover until a blue bar appears between cells and then shift-click).  Use whatever mechanism your instructor has in place for submitting your work. Or save your worksheet and then trade worksheets via email (or another electronic method) with a classmate.    "
 },
 {
   "id": "sets-sage-exercises-2",
@@ -844,7 +844,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "1.5.1",
   "title": "",
-  "body": " This exercise is just about making sure you know how to use Sage. Login to a Sage Notebook server and create a new worksheet. Do some non-trivial computation, maybe a pretty plot or some gruesome numerical computation to an insane precision. Create an interesting list and experiment with it some. Maybe include some nicely formatted text or tex using the included mini-word-processor of the Sage Notebook (hover until a blue bar appears between cells and then shift-click).  Use whatever mechanism your instructor has in place for submitting your work. Or save your worksheet and then trade worksheets via email (or another electronic method) with a classmate.  "
+  "body": "  This exercise is just about making sure you know how to use Sage. Login to a Sage Notebook server and create a new worksheet. Do some non-trivial computation, maybe a pretty plot or some gruesome numerical computation to an insane precision. Create an interesting list and experiment with it some. Maybe include some nicely formatted text or tex using the included mini-word-processor of the Sage Notebook (hover until a blue bar appears between cells and then shift-click).  Use whatever mechanism your instructor has in place for submitting your work. Or save your worksheet and then trade worksheets via email (or another electronic method) with a classmate.   "
 },
 {
   "id": "sets-8",
@@ -1078,7 +1078,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "2.4",
   "title": "Exercises",
-  "body": " Exercises   Prove that for .   The base case, is true.  Assume that is true. Then and so is true. Thus, is true for all positive integers .    Prove that for .    Prove that for .   The base case, is true. Assume is true. Then , so is true. Thus, is true for all positive integers .    Prove that for .    Prove that is divisible by 3 for .    Prove that is divisible by 99 for .    Show that    Use induction to prove that for .    Prove the Leibniz rule for , where is the th derivative of ; that is, show that   Follow the proof in .    Prove that for .    If is a nonnegative real number, then show that for .   The base case, is true. Assume is true. Then so is true. Therefore, is true for all positive integers .   Power Sets  Let be a set. Define the power set of , denoted , to be the set of all subsets of . power set of For example, For every positive integer , show that a set with exactly elements has a power set with exactly elements.    Prove that the two principles of mathematical induction stated in are equivalent.    Show that the Principle of Well-Ordering for the natural numbers implies that 1 is the smallest natural number. Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction; that is, show that if such that and whenever , then .    For each of the following pairs of numbers and , calculate and find integers and such that .   14 and 39  234 and 165  1739 and 9923  471 and 562  23,771 and 19,945  and 3754     Let and be nonzero integers. If there exist integers and such that , show that and are relatively prime.    Fibonacci Numbers  The Fibonacci numbers are We can define them inductively by , , and for .   Prove that .  Prove that , .  Prove that .  Show that .  Prove that and are relatively prime.    For and use mathematical induction. Show that , , and . Use part . Use part and .    Let and be integers such that . Let and be integers such that . Prove that    Let be relatively prime. If is a perfect square, prove that and must both be perfect squares.   Use the Fundamental Theorem of Arithmetic.    Using the division algorithm, show that every perfect square is of the form or for some nonnegative integer .    Suppose that are pairwise relatively prime and that  Prove that , , and are odd and is even.    Let . Use the division algorithm to prove that every integer is congruent mod to precisely one of the integers . Conclude that if is an integer, then there is exactly one in such that and . Hence, the integers are indeed partitioned by congruence mod .    Define the least common multiple of two nonzero integers and , denoted by , to be the nonnegative integer such that both and divide , and if and divide any other integer , then also divides . the least common multiple of and Prove that any two integers and have a unique least common multiple.   Let , . Then , since . By the Principle of Well-Ordering, contains a least element . To show uniqueness, suppose that and for some . By the division algorithm, there exist unique integers and such that , where . Since and divide both , and , it must be the case that and both divide . Thus, by the minimality of . Therefore, .    If and , prove that .    Show that if and only if .    Prove that if and only if for integers , , and .    Let . Prove that if and , then .   Since , there exist integers and such that . Thus, . Since divides both and itself, must divide .    Let . Prove that if is prime, then must also be prime.    Prove that there are an infinite number of primes of the form .   Every prime must be of the form 2, 3, , or . Suppose there are only finitely many primes of the form .    Prove that there are an infinite number of primes of the form .    Using the fact that 2 is prime, show that there do not exist integers and such that . Demonstrate that therefore cannot be a rational number.   "
+  "body": " Exercises    Prove that for .    The base case, is true.  Assume that is true. Then and so is true. Thus, is true for all positive integers .      Prove that for .      Prove that for .    The base case, is true. Assume is true. Then , so is true. Thus, is true for all positive integers .      Prove that for .      Prove that is divisible by 3 for .      Prove that is divisible by 99 for .      Show that      Use induction to prove that for .      Prove the Leibniz rule for , where is the th derivative of ; that is, show that    Follow the proof in .      Prove that for .      If is a nonnegative real number, then show that for .    The base case, is true. Assume is true. Then so is true. Therefore, is true for all positive integers .     Power Sets   Let be a set. Define the power set of , denoted , to be the set of all subsets of . power set of For example, For every positive integer , show that a set with exactly elements has a power set with exactly elements.      Prove that the two principles of mathematical induction stated in are equivalent.      Show that the Principle of Well-Ordering for the natural numbers implies that 1 is the smallest natural number. Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction; that is, show that if such that and whenever , then .      For each of the following pairs of numbers and , calculate and find integers and such that .   14 and 39  234 and 165  1739 and 9923  471 and 562  23,771 and 19,945  and 3754       Let and be nonzero integers. If there exist integers and such that , show that and are relatively prime.      Fibonacci Numbers   The Fibonacci numbers are We can define them inductively by , , and for .   Prove that .  Prove that , .  Prove that .  Show that .  Prove that and are relatively prime.     For and use mathematical induction. Show that , , and . Use part . Use part and .      Let and be integers such that . Let and be integers such that . Prove that      Let be relatively prime. If is a perfect square, prove that and must both be perfect squares.    Use the Fundamental Theorem of Arithmetic.      Using the division algorithm, show that every perfect square is of the form or for some nonnegative integer .      Suppose that are pairwise relatively prime and that  Prove that , , and are odd and is even.      Let . Use the division algorithm to prove that every integer is congruent mod to precisely one of the integers . Conclude that if is an integer, then there is exactly one in such that and . Hence, the integers are indeed partitioned by congruence mod .      Define the least common multiple of two nonzero integers and , denoted by , to be the nonnegative integer such that both and divide , and if and divide any other integer , then also divides . the least common multiple of and Prove that any two integers and have a unique least common multiple.    Let , . Then , since . By the Principle of Well-Ordering, contains a least element . To show uniqueness, suppose that and for some . By the division algorithm, there exist unique integers and such that , where . Since and divide both , and , it must be the case that and both divide . Thus, by the minimality of . Therefore, .      If and , prove that .      Show that if and only if .      Prove that if and only if for integers , , and .      Let . Prove that if and , then .    Since , there exist integers and such that . Thus, . Since divides both and itself, must divide .      Let . Prove that if is prime, then must also be prime.      Prove that there are an infinite number of primes of the form .    Every prime must be of the form 2, 3, , or . Suppose there are only finitely many primes of the form .      Prove that there are an infinite number of primes of the form .      Using the fact that 2 is prime, show that there do not exist integers and such that . Demonstrate that therefore cannot be a rational number.    "
 },
 {
   "id": "exercises-integers-2",
@@ -1087,7 +1087,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.1",
   "title": "",
-  "body": " Prove that for .   The base case, is true.  Assume that is true. Then and so is true. Thus, is true for all positive integers .  "
+  "body": "  Prove that for .    The base case, is true.  Assume that is true. Then and so is true. Thus, is true for all positive integers .   "
 },
 {
   "id": "exercises-integers-3",
@@ -1096,7 +1096,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.2",
   "title": "",
-  "body": " Prove that for .  "
+  "body": "  Prove that for .   "
 },
 {
   "id": "exercises-integers-4",
@@ -1105,7 +1105,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.3",
   "title": "",
-  "body": " Prove that for .   The base case, is true. Assume is true. Then , so is true. Thus, is true for all positive integers .  "
+  "body": "  Prove that for .    The base case, is true. Assume is true. Then , so is true. Thus, is true for all positive integers .   "
 },
 {
   "id": "exercises-integers-5",
@@ -1114,7 +1114,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.4",
   "title": "",
-  "body": " Prove that for .  "
+  "body": "  Prove that for .   "
 },
 {
   "id": "exercises-integers-6",
@@ -1123,7 +1123,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.5",
   "title": "",
-  "body": " Prove that is divisible by 3 for .  "
+  "body": "  Prove that is divisible by 3 for .   "
 },
 {
   "id": "exercises-integers-7",
@@ -1132,7 +1132,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.6",
   "title": "",
-  "body": " Prove that is divisible by 99 for .  "
+  "body": "  Prove that is divisible by 99 for .   "
 },
 {
   "id": "exercises-integers-8",
@@ -1141,7 +1141,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.7",
   "title": "",
-  "body": " Show that  "
+  "body": "  Show that   "
 },
 {
   "id": "exercises-integers-9",
@@ -1150,7 +1150,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.8",
   "title": "",
-  "body": " Use induction to prove that for .  "
+  "body": "  Use induction to prove that for .   "
 },
 {
   "id": "exercises-integers-10",
@@ -1159,7 +1159,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.9",
   "title": "",
-  "body": " Prove the Leibniz rule for , where is the th derivative of ; that is, show that   Follow the proof in .  "
+  "body": "  Prove the Leibniz rule for , where is the th derivative of ; that is, show that    Follow the proof in .   "
 },
 {
   "id": "exercises-integers-11",
@@ -1168,7 +1168,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.10",
   "title": "",
-  "body": " Prove that for .  "
+  "body": "  Prove that for .   "
 },
 {
   "id": "exercises-integers-12",
@@ -1177,7 +1177,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.11",
   "title": "",
-  "body": " If is a nonnegative real number, then show that for .   The base case, is true. Assume is true. Then so is true. Therefore, is true for all positive integers .  "
+  "body": "  If is a nonnegative real number, then show that for .    The base case, is true. Assume is true. Then so is true. Therefore, is true for all positive integers .   "
 },
 {
   "id": "exercises-integers-13",
@@ -1186,7 +1186,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.12",
   "title": "Power Sets.",
-  "body": "Power Sets  Let be a set. Define the power set of , denoted , to be the set of all subsets of . power set of For example, For every positive integer , show that a set with exactly elements has a power set with exactly elements.  "
+  "body": " Power Sets   Let be a set. Define the power set of , denoted , to be the set of all subsets of . power set of For example, For every positive integer , show that a set with exactly elements has a power set with exactly elements.   "
 },
 {
   "id": "exercises-integers-14",
@@ -1195,7 +1195,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.13",
   "title": "",
-  "body": " Prove that the two principles of mathematical induction stated in are equivalent.  "
+  "body": "  Prove that the two principles of mathematical induction stated in are equivalent.   "
 },
 {
   "id": "exercises-integers-15",
@@ -1204,7 +1204,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.14",
   "title": "",
-  "body": " Show that the Principle of Well-Ordering for the natural numbers implies that 1 is the smallest natural number. Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction; that is, show that if such that and whenever , then .  "
+  "body": "  Show that the Principle of Well-Ordering for the natural numbers implies that 1 is the smallest natural number. Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction; that is, show that if such that and whenever , then .   "
 },
 {
   "id": "exercises-integers-16",
@@ -1213,7 +1213,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.15",
   "title": "",
-  "body": " For each of the following pairs of numbers and , calculate and find integers and such that .   14 and 39  234 and 165  1739 and 9923  471 and 562  23,771 and 19,945  and 3754   "
+  "body": "  For each of the following pairs of numbers and , calculate and find integers and such that .   14 and 39  234 and 165  1739 and 9923  471 and 562  23,771 and 19,945  and 3754    "
 },
 {
   "id": "exercise-integers-gcd-1",
@@ -1222,7 +1222,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.16",
   "title": "",
-  "body": " Let and be nonzero integers. If there exist integers and such that , show that and are relatively prime.  "
+  "body": "  Let and be nonzero integers. If there exist integers and such that , show that and are relatively prime.   "
 },
 {
   "id": "exercises-integers-18",
@@ -1231,7 +1231,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.17",
   "title": "Fibonacci Numbers.",
-  "body": "Fibonacci Numbers  The Fibonacci numbers are We can define them inductively by , , and for .   Prove that .  Prove that , .  Prove that .  Show that .  Prove that and are relatively prime.    For and use mathematical induction. Show that , , and . Use part . Use part and .  "
+  "body": " Fibonacci Numbers   The Fibonacci numbers are We can define them inductively by , , and for .   Prove that .  Prove that , .  Prove that .  Show that .  Prove that and are relatively prime.     For and use mathematical induction. Show that , , and . Use part . Use part and .   "
 },
 {
   "id": "exercises-integers-19",
@@ -1240,7 +1240,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.18",
   "title": "",
-  "body": " Let and be integers such that . Let and be integers such that . Prove that  "
+  "body": "  Let and be integers such that . Let and be integers such that . Prove that   "
 },
 {
   "id": "exercises-integers-20",
@@ -1249,7 +1249,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.19",
   "title": "",
-  "body": " Let be relatively prime. If is a perfect square, prove that and must both be perfect squares.   Use the Fundamental Theorem of Arithmetic.  "
+  "body": "  Let be relatively prime. If is a perfect square, prove that and must both be perfect squares.    Use the Fundamental Theorem of Arithmetic.   "
 },
 {
   "id": "exercises-integers-21",
@@ -1258,7 +1258,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.20",
   "title": "",
-  "body": " Using the division algorithm, show that every perfect square is of the form or for some nonnegative integer .  "
+  "body": "  Using the division algorithm, show that every perfect square is of the form or for some nonnegative integer .   "
 },
 {
   "id": "exercises-integers-22",
@@ -1267,7 +1267,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.21",
   "title": "",
-  "body": " Suppose that are pairwise relatively prime and that  Prove that , , and are odd and is even.  "
+  "body": "  Suppose that are pairwise relatively prime and that  Prove that , , and are odd and is even.   "
 },
 {
   "id": "exercises-integers-23",
@@ -1276,7 +1276,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.22",
   "title": "",
-  "body": " Let . Use the division algorithm to prove that every integer is congruent mod to precisely one of the integers . Conclude that if is an integer, then there is exactly one in such that and . Hence, the integers are indeed partitioned by congruence mod .  "
+  "body": "  Let . Use the division algorithm to prove that every integer is congruent mod to precisely one of the integers . Conclude that if is an integer, then there is exactly one in such that and . Hence, the integers are indeed partitioned by congruence mod .   "
 },
 {
   "id": "exercises-integers-24",
@@ -1285,7 +1285,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.23",
   "title": "",
-  "body": " Define the least common multiple of two nonzero integers and , denoted by , to be the nonnegative integer such that both and divide , and if and divide any other integer , then also divides . the least common multiple of and Prove that any two integers and have a unique least common multiple.   Let , . Then , since . By the Principle of Well-Ordering, contains a least element . To show uniqueness, suppose that and for some . By the division algorithm, there exist unique integers and such that , where . Since and divide both , and , it must be the case that and both divide . Thus, by the minimality of . Therefore, .  "
+  "body": "  Define the least common multiple of two nonzero integers and , denoted by , to be the nonnegative integer such that both and divide , and if and divide any other integer , then also divides . the least common multiple of and Prove that any two integers and have a unique least common multiple.    Let , . Then , since . By the Principle of Well-Ordering, contains a least element . To show uniqueness, suppose that and for some . By the division algorithm, there exist unique integers and such that , where . Since and divide both , and , it must be the case that and both divide . Thus, by the minimality of . Therefore, .   "
 },
 {
   "id": "exercise-integers-lcm-gcd",
@@ -1294,7 +1294,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.24",
   "title": "",
-  "body": " If and , prove that .  "
+  "body": "  If and , prove that .   "
 },
 {
   "id": "exercises-integers-26",
@@ -1303,7 +1303,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.25",
   "title": "",
-  "body": " Show that if and only if .  "
+  "body": "  Show that if and only if .   "
 },
 {
   "id": "exercises-integers-27",
@@ -1312,7 +1312,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.26",
   "title": "",
-  "body": " Prove that if and only if for integers , , and .  "
+  "body": "  Prove that if and only if for integers , , and .   "
 },
 {
   "id": "exercises-integers-28",
@@ -1321,7 +1321,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.27",
   "title": "",
-  "body": " Let . Prove that if and , then .   Since , there exist integers and such that . Thus, . Since divides both and itself, must divide .  "
+  "body": "  Let . Prove that if and , then .    Since , there exist integers and such that . Thus, . Since divides both and itself, must divide .   "
 },
 {
   "id": "exercises-integers-29",
@@ -1330,7 +1330,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.28",
   "title": "",
-  "body": " Let . Prove that if is prime, then must also be prime.  "
+  "body": "  Let . Prove that if is prime, then must also be prime.   "
 },
 {
   "id": "exercises-integers-30",
@@ -1339,7 +1339,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.29",
   "title": "",
-  "body": " Prove that there are an infinite number of primes of the form .   Every prime must be of the form 2, 3, , or . Suppose there are only finitely many primes of the form .  "
+  "body": "  Prove that there are an infinite number of primes of the form .    Every prime must be of the form 2, 3, , or . Suppose there are only finitely many primes of the form .   "
 },
 {
   "id": "exercises-integers-31",
@@ -1348,7 +1348,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.30",
   "title": "",
-  "body": " Prove that there are an infinite number of primes of the form .  "
+  "body": "  Prove that there are an infinite number of primes of the form .   "
 },
 {
   "id": "exercises-integers-32",
@@ -1357,7 +1357,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.4.31",
   "title": "",
-  "body": " Using the fact that 2 is prime, show that there do not exist integers and such that . Demonstrate that therefore cannot be a rational number.  "
+  "body": "  Using the fact that 2 is prime, show that there do not exist integers and such that . Demonstrate that therefore cannot be a rational number.   "
 },
 {
   "id": "integers-7",
@@ -1366,7 +1366,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "2.5",
   "title": "Programming Exercises",
-  "body": " Programming Exercises  The Sieve of Eratosthenes Sieve of Eratosthenes  One method of computing all of the prime numbers less than a certain fixed positive integer is to list all of the numbers such that . Begin by eliminating all of the multiples of 2. Next eliminate all of the multiples of 3. Now eliminate all of the multiples of 5. Notice that 4 has already been crossed out. Continue in this manner, noticing that we do not have to go all the way to ; it suffices to stop at . Using this method, compute all of the prime numbers less than . We can also use this method to find all of the integers that are relatively prime to an integer . Simply eliminate the prime factors of and all of their multiples. Using this method, find all of the numbers that are relatively prime to . Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer .   Ackermann's function  Let . Ackermann's function is the function defined by the equations .  Use this definition to compute . Write a program to evaluate Ackermann's function. Modify the program to count the number of statements executed in the program when Ackermann's function is evaluated. How many statements are executed in the evaluation of ? What about ?    Write a computer program that will implement the Euclidean algorithm. The program should accept two positive integers and as input and should output as well as integers and such that .   "
+  "body": " Programming Exercises   The Sieve of Eratosthenes  Sieve of Eratosthenes   One method of computing all of the prime numbers less than a certain fixed positive integer is to list all of the numbers such that . Begin by eliminating all of the multiples of 2. Next eliminate all of the multiples of 3. Now eliminate all of the multiples of 5. Notice that 4 has already been crossed out. Continue in this manner, noticing that we do not have to go all the way to ; it suffices to stop at . Using this method, compute all of the prime numbers less than . We can also use this method to find all of the integers that are relatively prime to an integer . Simply eliminate the prime factors of and all of their multiples. Using this method, find all of the numbers that are relatively prime to . Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer .     Ackermann's function   Let . Ackermann's function is the function defined by the equations .  Use this definition to compute . Write a program to evaluate Ackermann's function. Modify the program to count the number of statements executed in the program when Ackermann's function is evaluated. How many statements are executed in the evaluation of ? What about ?      Write a computer program that will implement the Euclidean algorithm. The program should accept two positive integers and as input and should output as well as integers and such that .    "
 },
 {
   "id": "sieve-primes",
@@ -1375,7 +1375,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.5.1",
   "title": "The Sieve of Eratosthenes.",
-  "body": "The Sieve of Eratosthenes Sieve of Eratosthenes  One method of computing all of the prime numbers less than a certain fixed positive integer is to list all of the numbers such that . Begin by eliminating all of the multiples of 2. Next eliminate all of the multiples of 3. Now eliminate all of the multiples of 5. Notice that 4 has already been crossed out. Continue in this manner, noticing that we do not have to go all the way to ; it suffices to stop at . Using this method, compute all of the prime numbers less than . We can also use this method to find all of the integers that are relatively prime to an integer . Simply eliminate the prime factors of and all of their multiples. Using this method, find all of the numbers that are relatively prime to . Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer .  "
+  "body": " The Sieve of Eratosthenes  Sieve of Eratosthenes   One method of computing all of the prime numbers less than a certain fixed positive integer is to list all of the numbers such that . Begin by eliminating all of the multiples of 2. Next eliminate all of the multiples of 3. Now eliminate all of the multiples of 5. Notice that 4 has already been crossed out. Continue in this manner, noticing that we do not have to go all the way to ; it suffices to stop at . Using this method, compute all of the prime numbers less than . We can also use this method to find all of the integers that are relatively prime to an integer . Simply eliminate the prime factors of and all of their multiples. Using this method, find all of the numbers that are relatively prime to . Using the Sieve of Eratosthenes, write a program that will compute all of the primes less than an integer .   "
 },
 {
   "id": "integers-7-3",
@@ -1384,7 +1384,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.5.2",
   "title": "",
-  "body": "Ackermann's function  Let . Ackermann's function is the function defined by the equations .  Use this definition to compute . Write a program to evaluate Ackermann's function. Modify the program to count the number of statements executed in the program when Ackermann's function is evaluated. How many statements are executed in the evaluation of ? What about ?  "
+  "body": " Ackermann's function   Let . Ackermann's function is the function defined by the equations .  Use this definition to compute . Write a program to evaluate Ackermann's function. Modify the program to count the number of statements executed in the program when Ackermann's function is evaluated. How many statements are executed in the evaluation of ? What about ?   "
 },
 {
   "id": "integers-7-4",
@@ -1393,7 +1393,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.5.3",
   "title": "",
-  "body": " Write a computer program that will implement the Euclidean algorithm. The program should accept two positive integers and as input and should output as well as integers and such that .  "
+  "body": "  Write a computer program that will implement the Euclidean algorithm. The program should accept two positive integers and as input and should output as well as integers and such that .   "
 },
 {
   "id": "integers-sage-exercises",
@@ -1402,7 +1402,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "2.6",
   "title": "Sage Exercises",
-  "body": " Sage Exercises   These exercises are about investigating basic properties of the integers, something we will frequently do when investigating groups. Use the editing capabilities of a Sage worksheet to annotate and explain your work.    Use the next_prime() command to construct two different 8-digit prime numbers and save them in variables named a and b .    Use the .is_prime() method to verify that your primes a and b are really prime.    Verify that is the greatest common divisor of your two primes from the previous exercises.    Find two integers that make a linear combination of your two primes equal to . Include a verification of your result.    Determine a factorization into powers of primes for .    Write a compute cell that defines the same value of c again, and then defines a candidate divisor of c named d . The third line of the cell should return True if and only if d is a divisor of c . Illustrate the use of your cell by testing your code with and in a new copy of the cell, testing your code with .   "
+  "body": " Sage Exercises   These exercises are about investigating basic properties of the integers, something we will frequently do when investigating groups. Use the editing capabilities of a Sage worksheet to annotate and explain your work.     Use the next_prime() command to construct two different 8-digit prime numbers and save them in variables named a and b .      Use the .is_prime() method to verify that your primes a and b are really prime.      Verify that is the greatest common divisor of your two primes from the previous exercises.      Find two integers that make a linear combination of your two primes equal to . Include a verification of your result.      Determine a factorization into powers of primes for .      Write a compute cell that defines the same value of c again, and then defines a candidate divisor of c named d . The third line of the cell should return True if and only if d is a divisor of c . Illustrate the use of your cell by testing your code with and in a new copy of the cell, testing your code with .    "
 },
 {
   "id": "integers-sage-exercises-3",
@@ -1411,7 +1411,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.1",
   "title": "",
-  "body": " Use the next_prime() command to construct two different 8-digit prime numbers and save them in variables named a and b .  "
+  "body": "  Use the next_prime() command to construct two different 8-digit prime numbers and save them in variables named a and b .   "
 },
 {
   "id": "integers-sage-exercises-4",
@@ -1420,7 +1420,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.2",
   "title": "",
-  "body": " Use the .is_prime() method to verify that your primes a and b are really prime.  "
+  "body": "  Use the .is_prime() method to verify that your primes a and b are really prime.   "
 },
 {
   "id": "integers-sage-exercises-5",
@@ -1429,7 +1429,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.3",
   "title": "",
-  "body": " Verify that is the greatest common divisor of your two primes from the previous exercises.  "
+  "body": "  Verify that is the greatest common divisor of your two primes from the previous exercises.   "
 },
 {
   "id": "integers-sage-exercises-6",
@@ -1438,7 +1438,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.4",
   "title": "",
-  "body": " Find two integers that make a linear combination of your two primes equal to . Include a verification of your result.  "
+  "body": "  Find two integers that make a linear combination of your two primes equal to . Include a verification of your result.   "
 },
 {
   "id": "integers-sage-exercises-7",
@@ -1447,7 +1447,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.5",
   "title": "",
-  "body": " Determine a factorization into powers of primes for .  "
+  "body": "  Determine a factorization into powers of primes for .   "
 },
 {
   "id": "integers-sage-exercises-8",
@@ -1456,7 +1456,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "2.6.6",
   "title": "",
-  "body": " Write a compute cell that defines the same value of c again, and then defines a candidate divisor of c named d . The third line of the cell should return True if and only if d is a divisor of c . Illustrate the use of your cell by testing your code with and in a new copy of the cell, testing your code with .  "
+  "body": "  Write a compute cell that defines the same value of c again, and then defines a candidate divisor of c named d . The third line of the cell should return True if and only if d is a divisor of c . Illustrate the use of your cell by testing your code with and in a new copy of the cell, testing your code with .   "
 },
 {
   "id": "integers-9",
@@ -1834,7 +1834,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "3.5",
   "title": "Exercises",
-  "body": " Exercises   Find all satisfying each of the following equations.           (a) ; (c) ; (e) .    Which of the following multiplication tables defined on the set form a group? Support your answer in each case.         (a) Not a group; (c) a group.    Write out Cayley tables for groups formed by the symmetries of a rectangle and for . How many elements are in each group? Are the groups the same? Why or why not?    Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?    Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by .    Give a multiplication table for the group .      Let and define a binary operation on by . Prove that is an abelian group.    Give an example of two elements and in with .   Pick two matrices. Almost any pair will work.    Prove that the product of two matrices in has determinant one.     Prove that the set of matrices of the form is a group under matrix multiplication. This group, known as the Heisenberg group , is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by    Prove that in . Use this result to show that the binary operation in the group is closed; that is, if and are in , then .    Let . Define a binary operation on by Prove that is a group under this operation. This group is important in algebraic coding theory.    Show that is a group under the operation of multiplication.    Given the groups and , let . Define a binary operation on by . Show that is a group under this operation.    Prove or disprove that every group containing six elements is abelian.   There is a nonabelian group containing six elements.    Give a specific example of some group and elements where .   Look at the symmetry group of an equilateral triangle or a square.    Give an example of three different groups with eight elements. Why are the groups different?   The are five different groups of order 8.    Show that there are permutations of a set containing items.   Let be in . All of the s must be distinct. There are ways to choose , ways to choose , , 2 ways to choose , and only one way to choose . Therefore, we can form in ways.    Show that for all .    Prove that there is a multiplicative identity for the integers modulo :    For each find an element such that    Show that addition and multiplication mod $n$ are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod .    Show that addition and multiplication mod are associative operations.    Show that multiplication distributes over addition modulo :    Let and be elements in a group . Prove that for .      Let be the group of units in . If , prove that there is an element such that and .    Prove that the inverse of is .    Prove the remainder of : if is a group and , then the equation has a unique solution in .    Prove .    Prove the right and left cancellation laws for a group ; that is, show that in the group , implies and implies for elements .    Show that if for all elements in a group , then must be abelian.   Since , we know that .    Show that if is a finite group of even order, then there is an such that is not the identity and .    Let be a group and suppose that for all and in . Prove that is an abelian group.    Find all the subgroups of . Use this information to show that is not the same group as . (See for a short description of the product of groups.)    Find all the subgroups of the symmetry group of an equilateral triangle.   , , , , , .    Compute the subgroups of the symmetry group of a square.    Let . Show that is a subgroup of .    Let and . Prove that is a subgroup of . Show that these subgroups are the only subgroups of .    Let . Prove that is a subgroup of .    where . Prove that is a subgroup of .    Prove that is a subgroup of under the group operation of multiplication.   The identity of is . Since , is closed under multiplication. Finally, .    Let be the group of matrices under addition and Prove that is a subgroup of .    Prove or disprove: , the set of matrices with integer entries and determinant one, is a subgroup of .    List the subgroups of the quaternion group, .    Prove that the intersection of two subgroups of a group is also a subgroup of .    Prove or disprove: If and are subgroups of a group , then is a subgroup of .   Look at .    Prove or disprove: If and are subgroups of a group , then is a subgroup of . What if is abelian?    Let be a group and . Show that is a subgroup of . This subgroup is called the center of . the center of a group    Let and be elements of a group . If and , prove that .   Since , it must be the case that , and we can conclude that .    Give an example of an infinite group in which every nontrivial subgroup is infinite.      If for all and in , prove that must be abelian.    Prove or disprove: Every proper subgroup of an nonabelian group is nonabelian.    Let be a subgroup of and Prove is a subgroup of . This subgroup is called the centralizer of in .    Let be a subgroup of . If , show that is also a subgroup of .     In each group, how many solutions are there to ?     , odd.         , even.         , odd.         , even.         This is an odd-numbered exercise with tasks.   What is ?       This task has subtasks.   What is ?       What is ?        This is an even-numbered exercise with tasks.   What is ?       This task has subtasks.   What is ?       What is ?       "
+  "body": " Exercises    Find all satisfying each of the following equations.            (a) ; (c) ; (e) .      Which of the following multiplication tables defined on the set form a group? Support your answer in each case.          (a) Not a group; (c) a group.      Write out Cayley tables for groups formed by the symmetries of a rectangle and for . How many elements are in each group? Are the groups the same? Why or why not?      Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?      Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by .      Give a multiplication table for the group .         Let and define a binary operation on by . Prove that is an abelian group.      Give an example of two elements and in with .    Pick two matrices. Almost any pair will work.      Prove that the product of two matrices in has determinant one.       Prove that the set of matrices of the form is a group under matrix multiplication. This group, known as the Heisenberg group , is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by      Prove that in . Use this result to show that the binary operation in the group is closed; that is, if and are in , then .      Let . Define a binary operation on by Prove that is a group under this operation. This group is important in algebraic coding theory.      Show that is a group under the operation of multiplication.      Given the groups and , let . Define a binary operation on by . Show that is a group under this operation.      Prove or disprove that every group containing six elements is abelian.    There is a nonabelian group containing six elements.      Give a specific example of some group and elements where .    Look at the symmetry group of an equilateral triangle or a square.      Give an example of three different groups with eight elements. Why are the groups different?    The are five different groups of order 8.      Show that there are permutations of a set containing items.    Let be in . All of the s must be distinct. There are ways to choose , ways to choose , , 2 ways to choose , and only one way to choose . Therefore, we can form in ways.      Show that for all .      Prove that there is a multiplicative identity for the integers modulo :      For each find an element such that      Show that addition and multiplication mod $n$ are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod .      Show that addition and multiplication mod are associative operations.      Show that multiplication distributes over addition modulo :      Let and be elements in a group . Prove that for .         Let be the group of units in . If , prove that there is an element such that and .      Prove that the inverse of is .      Prove the remainder of : if is a group and , then the equation has a unique solution in .      Prove .      Prove the right and left cancellation laws for a group ; that is, show that in the group , implies and implies for elements .      Show that if for all elements in a group , then must be abelian.    Since , we know that .      Show that if is a finite group of even order, then there is an such that is not the identity and .      Let be a group and suppose that for all and in . Prove that is an abelian group.      Find all the subgroups of . Use this information to show that is not the same group as . (See for a short description of the product of groups.)      Find all the subgroups of the symmetry group of an equilateral triangle.    , , , , , .      Compute the subgroups of the symmetry group of a square.      Let . Show that is a subgroup of .      Let and . Prove that is a subgroup of . Show that these subgroups are the only subgroups of .      Let . Prove that is a subgroup of .      where . Prove that is a subgroup of .      Prove that is a subgroup of under the group operation of multiplication.    The identity of is . Since , is closed under multiplication. Finally, .      Let be the group of matrices under addition and Prove that is a subgroup of .      Prove or disprove: , the set of matrices with integer entries and determinant one, is a subgroup of .      List the subgroups of the quaternion group, .      Prove that the intersection of two subgroups of a group is also a subgroup of .      Prove or disprove: If and are subgroups of a group , then is a subgroup of .    Look at .      Prove or disprove: If and are subgroups of a group , then is a subgroup of . What if is abelian?      Let be a group and . Show that is a subgroup of . This subgroup is called the center of . the center of a group      Let and be elements of a group . If and , prove that .    Since , it must be the case that , and we can conclude that .      Give an example of an infinite group in which every nontrivial subgroup is infinite.        If for all and in , prove that must be abelian.      Prove or disprove: Every proper subgroup of an nonabelian group is nonabelian.      Let be a subgroup of and Prove is a subgroup of . This subgroup is called the centralizer of in .      Let be a subgroup of . If , show that is also a subgroup of .      In each group, how many solutions are there to ?      , odd.            , even.            , odd.            , even.            This is an odd-numbered exercise with tasks.     What is ?           This task has subtasks.     What is ?           What is ?             This is an even-numbered exercise with tasks.     What is ?           This task has subtasks.     What is ?           What is ?           "
 },
 {
   "id": "exercises-groups-2",
@@ -1843,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.1",
   "title": "",
-  "body": " Find all satisfying each of the following equations.           (a) ; (c) ; (e) .  "
+  "body": "  Find all satisfying each of the following equations.            (a) ; (c) ; (e) .   "
 },
 {
   "id": "exercises-groups-3",
@@ -1852,7 +1852,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.2",
   "title": "",
-  "body": " Which of the following multiplication tables defined on the set form a group? Support your answer in each case.         (a) Not a group; (c) a group.  "
+  "body": "  Which of the following multiplication tables defined on the set form a group? Support your answer in each case.          (a) Not a group; (c) a group.   "
 },
 {
   "id": "exercise-groups-rectangle-symmetries",
@@ -1861,7 +1861,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.3",
   "title": "",
-  "body": " Write out Cayley tables for groups formed by the symmetries of a rectangle and for . How many elements are in each group? Are the groups the same? Why or why not?  "
+  "body": "  Write out Cayley tables for groups formed by the symmetries of a rectangle and for . How many elements are in each group? Are the groups the same? Why or why not?   "
 },
 {
   "id": "exercises-groups-5",
@@ -1870,7 +1870,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.4",
   "title": "",
-  "body": " Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?  "
+  "body": "  Describe the symmetries of a rhombus and prove that the set of symmetries forms a group. Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus. Are the symmetries of a rectangle and those of a rhombus the same?   "
 },
 {
   "id": "exercises-groups-6",
@@ -1879,7 +1879,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.5",
   "title": "",
-  "body": " Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by .  "
+  "body": "  Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by .   "
 },
 {
   "id": "exercises-groups-7",
@@ -1888,7 +1888,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.6",
   "title": "",
-  "body": " Give a multiplication table for the group .    "
+  "body": "  Give a multiplication table for the group .      "
 },
 {
   "id": "exercises-groups-8",
@@ -1897,7 +1897,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.7",
   "title": "",
-  "body": " Let and define a binary operation on by . Prove that is an abelian group.  "
+  "body": "  Let and define a binary operation on by . Prove that is an abelian group.   "
 },
 {
   "id": "exercises-groups-9",
@@ -1906,7 +1906,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.8",
   "title": "",
-  "body": " Give an example of two elements and in with .   Pick two matrices. Almost any pair will work.  "
+  "body": "  Give an example of two elements and in with .    Pick two matrices. Almost any pair will work.   "
 },
 {
   "id": "exercises-groups-10",
@@ -1915,7 +1915,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.9",
   "title": "",
-  "body": " Prove that the product of two matrices in has determinant one.  "
+  "body": "  Prove that the product of two matrices in has determinant one.   "
 },
 {
   "id": "exercises-groups-11",
@@ -1924,7 +1924,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.10",
   "title": "",
-  "body": " Prove that the set of matrices of the form is a group under matrix multiplication. This group, known as the Heisenberg group , is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by  "
+  "body": "  Prove that the set of matrices of the form is a group under matrix multiplication. This group, known as the Heisenberg group , is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by   "
 },
 {
   "id": "exercises-groups-12",
@@ -1933,7 +1933,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.11",
   "title": "",
-  "body": " Prove that in . Use this result to show that the binary operation in the group is closed; that is, if and are in , then .  "
+  "body": "  Prove that in . Use this result to show that the binary operation in the group is closed; that is, if and are in , then .   "
 },
 {
   "id": "exercises-groups-13",
@@ -1942,7 +1942,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.12",
   "title": "",
-  "body": " Let . Define a binary operation on by Prove that is a group under this operation. This group is important in algebraic coding theory.  "
+  "body": "  Let . Define a binary operation on by Prove that is a group under this operation. This group is important in algebraic coding theory.   "
 },
 {
   "id": "exercises-groups-14",
@@ -1951,7 +1951,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.13",
   "title": "",
-  "body": " Show that is a group under the operation of multiplication.  "
+  "body": "  Show that is a group under the operation of multiplication.   "
 },
 {
   "id": "exercises-groups-15",
@@ -1960,7 +1960,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.14",
   "title": "",
-  "body": " Given the groups and , let . Define a binary operation on by . Show that is a group under this operation.  "
+  "body": "  Given the groups and , let . Define a binary operation on by . Show that is a group under this operation.   "
 },
 {
   "id": "exercises-groups-16",
@@ -1969,7 +1969,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.15",
   "title": "",
-  "body": " Prove or disprove that every group containing six elements is abelian.   There is a nonabelian group containing six elements.  "
+  "body": "  Prove or disprove that every group containing six elements is abelian.    There is a nonabelian group containing six elements.   "
 },
 {
   "id": "exercises-groups-17",
@@ -1978,7 +1978,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.16",
   "title": "",
-  "body": " Give a specific example of some group and elements where .   Look at the symmetry group of an equilateral triangle or a square.  "
+  "body": "  Give a specific example of some group and elements where .    Look at the symmetry group of an equilateral triangle or a square.   "
 },
 {
   "id": "exercises-groups-18",
@@ -1987,7 +1987,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.17",
   "title": "",
-  "body": " Give an example of three different groups with eight elements. Why are the groups different?   The are five different groups of order 8.  "
+  "body": "  Give an example of three different groups with eight elements. Why are the groups different?    The are five different groups of order 8.   "
 },
 {
   "id": "exercises-groups-19",
@@ -1996,7 +1996,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.18",
   "title": "",
-  "body": " Show that there are permutations of a set containing items.   Let be in . All of the s must be distinct. There are ways to choose , ways to choose , , 2 ways to choose , and only one way to choose . Therefore, we can form in ways.  "
+  "body": "  Show that there are permutations of a set containing items.    Let be in . All of the s must be distinct. There are ways to choose , ways to choose , , 2 ways to choose , and only one way to choose . Therefore, we can form in ways.   "
 },
 {
   "id": "exercises-groups-20",
@@ -2005,7 +2005,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.19",
   "title": "",
-  "body": " Show that for all .  "
+  "body": "  Show that for all .   "
 },
 {
   "id": "exercises-groups-21",
@@ -2014,7 +2014,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.20",
   "title": "",
-  "body": " Prove that there is a multiplicative identity for the integers modulo :  "
+  "body": "  Prove that there is a multiplicative identity for the integers modulo :   "
 },
 {
   "id": "exercises-groups-22",
@@ -2023,7 +2023,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.21",
   "title": "",
-  "body": " For each find an element such that  "
+  "body": "  For each find an element such that   "
 },
 {
   "id": "exercises-groups-23",
@@ -2032,7 +2032,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.22",
   "title": "",
-  "body": " Show that addition and multiplication mod $n$ are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod .  "
+  "body": "  Show that addition and multiplication mod $n$ are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod .   "
 },
 {
   "id": "exercises-groups-24",
@@ -2041,7 +2041,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.23",
   "title": "",
-  "body": " Show that addition and multiplication mod are associative operations.  "
+  "body": "  Show that addition and multiplication mod are associative operations.   "
 },
 {
   "id": "exercises-groups-25",
@@ -2050,7 +2050,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.24",
   "title": "",
-  "body": " Show that multiplication distributes over addition modulo :  "
+  "body": "  Show that multiplication distributes over addition modulo :   "
 },
 {
   "id": "exercises-groups-26",
@@ -2059,7 +2059,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.25",
   "title": "",
-  "body": " Let and be elements in a group . Prove that for .    "
+  "body": "  Let and be elements in a group . Prove that for .      "
 },
 {
   "id": "exercises-groups-27",
@@ -2068,7 +2068,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.26",
   "title": "",
-  "body": " Let be the group of units in . If , prove that there is an element such that and .  "
+  "body": "  Let be the group of units in . If , prove that there is an element such that and .   "
 },
 {
   "id": "exercises-groups-28",
@@ -2077,7 +2077,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.27",
   "title": "",
-  "body": " Prove that the inverse of is .  "
+  "body": "  Prove that the inverse of is .   "
 },
 {
   "id": "exercises-groups-29",
@@ -2086,7 +2086,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.28",
   "title": "",
-  "body": " Prove the remainder of : if is a group and , then the equation has a unique solution in .  "
+  "body": "  Prove the remainder of : if is a group and , then the equation has a unique solution in .   "
 },
 {
   "id": "exercises-groups-30",
@@ -2095,7 +2095,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.29",
   "title": "",
-  "body": " Prove .  "
+  "body": "  Prove .   "
 },
 {
   "id": "exercises-groups-31",
@@ -2104,7 +2104,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.30",
   "title": "",
-  "body": " Prove the right and left cancellation laws for a group ; that is, show that in the group , implies and implies for elements .  "
+  "body": "  Prove the right and left cancellation laws for a group ; that is, show that in the group , implies and implies for elements .   "
 },
 {
   "id": "exercises-groups-32",
@@ -2113,7 +2113,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.31",
   "title": "",
-  "body": " Show that if for all elements in a group , then must be abelian.   Since , we know that .  "
+  "body": "  Show that if for all elements in a group , then must be abelian.    Since , we know that .   "
 },
 {
   "id": "exercises-groups-33",
@@ -2122,7 +2122,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.32",
   "title": "",
-  "body": " Show that if is a finite group of even order, then there is an such that is not the identity and .  "
+  "body": "  Show that if is a finite group of even order, then there is an such that is not the identity and .   "
 },
 {
   "id": "exercises-groups-34",
@@ -2131,7 +2131,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.33",
   "title": "",
-  "body": " Let be a group and suppose that for all and in . Prove that is an abelian group.  "
+  "body": "  Let be a group and suppose that for all and in . Prove that is an abelian group.   "
 },
 {
   "id": "exercises-groups-35",
@@ -2140,7 +2140,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.34",
   "title": "",
-  "body": " Find all the subgroups of . Use this information to show that is not the same group as . (See for a short description of the product of groups.)  "
+  "body": "  Find all the subgroups of . Use this information to show that is not the same group as . (See for a short description of the product of groups.)   "
 },
 {
   "id": "exercises-groups-36",
@@ -2149,7 +2149,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.35",
   "title": "",
-  "body": " Find all the subgroups of the symmetry group of an equilateral triangle.   , , , , , .  "
+  "body": "  Find all the subgroups of the symmetry group of an equilateral triangle.    , , , , , .   "
 },
 {
   "id": "exercises-groups-37",
@@ -2158,7 +2158,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.36",
   "title": "",
-  "body": " Compute the subgroups of the symmetry group of a square.  "
+  "body": "  Compute the subgroups of the symmetry group of a square.   "
 },
 {
   "id": "exercises-groups-38",
@@ -2167,7 +2167,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.37",
   "title": "",
-  "body": " Let . Show that is a subgroup of .  "
+  "body": "  Let . Show that is a subgroup of .   "
 },
 {
   "id": "exercises-groups-39",
@@ -2176,7 +2176,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.38",
   "title": "",
-  "body": " Let and . Prove that is a subgroup of . Show that these subgroups are the only subgroups of .  "
+  "body": "  Let and . Prove that is a subgroup of . Show that these subgroups are the only subgroups of .   "
 },
 {
   "id": "exercise-groups-circle-group",
@@ -2185,7 +2185,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.39",
   "title": "",
-  "body": " Let . Prove that is a subgroup of .  "
+  "body": "  Let . Prove that is a subgroup of .   "
 },
 {
   "id": "exercises-groups-41",
@@ -2194,7 +2194,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.40",
   "title": "",
-  "body": " where . Prove that is a subgroup of .  "
+  "body": "  where . Prove that is a subgroup of .   "
 },
 {
   "id": "exercises-groups-42",
@@ -2203,7 +2203,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.41",
   "title": "",
-  "body": " Prove that is a subgroup of under the group operation of multiplication.   The identity of is . Since , is closed under multiplication. Finally, .  "
+  "body": "  Prove that is a subgroup of under the group operation of multiplication.    The identity of is . Since , is closed under multiplication. Finally, .   "
 },
 {
   "id": "exercises-groups-43",
@@ -2212,7 +2212,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.42",
   "title": "",
-  "body": " Let be the group of matrices under addition and Prove that is a subgroup of .  "
+  "body": "  Let be the group of matrices under addition and Prove that is a subgroup of .   "
 },
 {
   "id": "exercises-groups-44",
@@ -2221,7 +2221,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.43",
   "title": "",
-  "body": " Prove or disprove: , the set of matrices with integer entries and determinant one, is a subgroup of .  "
+  "body": "  Prove or disprove: , the set of matrices with integer entries and determinant one, is a subgroup of .   "
 },
 {
   "id": "exercises-groups-45",
@@ -2230,7 +2230,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.44",
   "title": "",
-  "body": " List the subgroups of the quaternion group, .  "
+  "body": "  List the subgroups of the quaternion group, .   "
 },
 {
   "id": "exercises-groups-46",
@@ -2239,7 +2239,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.45",
   "title": "",
-  "body": " Prove that the intersection of two subgroups of a group is also a subgroup of .  "
+  "body": "  Prove that the intersection of two subgroups of a group is also a subgroup of .   "
 },
 {
   "id": "exercises-groups-47",
@@ -2248,7 +2248,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.46",
   "title": "",
-  "body": " Prove or disprove: If and are subgroups of a group , then is a subgroup of .   Look at .  "
+  "body": "  Prove or disprove: If and are subgroups of a group , then is a subgroup of .    Look at .   "
 },
 {
   "id": "exercises-groups-48",
@@ -2257,7 +2257,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.47",
   "title": "",
-  "body": " Prove or disprove: If and are subgroups of a group , then is a subgroup of . What if is abelian?  "
+  "body": "  Prove or disprove: If and are subgroups of a group , then is a subgroup of . What if is abelian?   "
 },
 {
   "id": "exercises-groups-49",
@@ -2266,7 +2266,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.48",
   "title": "",
-  "body": " Let be a group and . Show that is a subgroup of . This subgroup is called the center of . the center of a group  "
+  "body": "  Let be a group and . Show that is a subgroup of . This subgroup is called the center of . the center of a group   "
 },
 {
   "id": "exercises-groups-50",
@@ -2275,7 +2275,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.49",
   "title": "",
-  "body": " Let and be elements of a group . If and , prove that .   Since , it must be the case that , and we can conclude that .  "
+  "body": "  Let and be elements of a group . If and , prove that .    Since , it must be the case that , and we can conclude that .   "
 },
 {
   "id": "exercises-groups-51",
@@ -2284,7 +2284,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.50",
   "title": "",
-  "body": " Give an example of an infinite group in which every nontrivial subgroup is infinite.  "
+  "body": "  Give an example of an infinite group in which every nontrivial subgroup is infinite.   "
 },
 {
   "id": "exercises-groups-52",
@@ -2293,7 +2293,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.51",
   "title": "",
-  "body": " If for all and in , prove that must be abelian.  "
+  "body": "  If for all and in , prove that must be abelian.   "
 },
 {
   "id": "exercises-groups-53",
@@ -2302,7 +2302,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.52",
   "title": "",
-  "body": " Prove or disprove: Every proper subgroup of an nonabelian group is nonabelian.  "
+  "body": "  Prove or disprove: Every proper subgroup of an nonabelian group is nonabelian.   "
 },
 {
   "id": "exercises-groups-54",
@@ -2311,7 +2311,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.53",
   "title": "",
-  "body": " Let be a subgroup of and Prove is a subgroup of . This subgroup is called the centralizer of in .  "
+  "body": "  Let be a subgroup of and Prove is a subgroup of . This subgroup is called the centralizer of in .   "
 },
 {
   "id": "exercises-groups-55",
@@ -2320,7 +2320,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.54",
   "title": "",
-  "body": " Let be a subgroup of . If , show that is also a subgroup of .  "
+  "body": "  Let be a subgroup of . If , show that is also a subgroup of .   "
 },
 {
   "id": "exercises-groups-56-2",
@@ -2329,7 +2329,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.55",
   "title": "",
-  "body": "  , odd.      "
+  "body": "   , odd.        "
 },
 {
   "id": "exercises-groups-56-3",
@@ -2338,7 +2338,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.56",
   "title": "",
-  "body": "  , even.      "
+  "body": "   , even.        "
 },
 {
   "id": "exercises-groups-56-4",
@@ -2347,7 +2347,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.57",
   "title": "",
-  "body": "  , odd.      "
+  "body": "   , odd.        "
 },
 {
   "id": "exercises-groups-56-5",
@@ -2356,7 +2356,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.58",
   "title": "",
-  "body": "  , even.      "
+  "body": "   , even.        "
 },
 {
   "id": "exercises-groups-57",
@@ -2365,7 +2365,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.59",
   "title": "",
-  "body": " This is an odd-numbered exercise with tasks.   What is ?       This task has subtasks.   What is ?       What is ?      "
+  "body": "  This is an odd-numbered exercise with tasks.     What is ?           This task has subtasks.     What is ?           What is ?          "
 },
 {
   "id": "exercises-groups-58",
@@ -2374,7 +2374,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.5.60",
   "title": "",
-  "body": " This is an even-numbered exercise with tasks.   What is ?       This task has subtasks.   What is ?       What is ?      "
+  "body": "  This is an even-numbered exercise with tasks.     What is ?           This task has subtasks.     What is ?           What is ?          "
 },
 {
   "id": "groups-9",
@@ -2383,7 +2383,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "3.6",
   "title": "Additional Exercises: Detecting Errors",
-  "body": " Additional Exercises: Detecting Errors       UPC Symbols  Universal Product Code Universal Product Code (UPC) symbols are found on most products in grocery and retail stores. The UPC symbol is a 12-digit code identifying the manufacturer of a product and the product itself ( ). The first 11 digits contain information about the product; the twelfth digit is used for error detection. If is a valid UPC number, then .   Show that the UPC number 0-50000-30042-6, which appears in , is a valid UPC number.  Show that the number 0-50000-30043-6 is not a valid UPC number.  Write a formula to calculate the check digit, , in the UPC number.  The UPC error detection scheme can detect most transposition errors; that is, it can determine if two digits have been interchanged. Show that the transposition error 0-05000-30042-6 is not detected. Find a transposition error that is detected. Can you find a general rule for the types of transposition errors that can be detected?   Write a program that will determine whether or not a UPC number is valid.    A UPC code      It is often useful to use an inner product notation for this type of error detection scheme; hence, we will use the notion to mean .  Suppose that is an error detection scheme for the -digit identification number , where . Prove that all single-digit errors are detected if and only if for .    Let be an error detection scheme for the -digit identification number , where . Prove that all transposition errors of two digits and are detected if and only if for and between 1 and .   ISBN Codes  Every book has an International Standard Book Number International standard book number (ISBN) code. This is a 10-digit code indicating the book's publisher and title. The tenth digit is a check digit satisfying . One problem is that might have to be a 10 to make the inner product zero; in this case, 11 digits would be needed to make this scheme work. Therefore, the character X is used for the eleventh digit. So ISBN 3-540-96035-X is a valid ISBN code.   Is ISBN 0-534-91500-0 a valid ISBN code? What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?  Does this method detect all single-digit errors? What about all transposition errors?  How many different ISBN codes are there?  Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.  A publisher has houses in Germany and the United States. Its German prefix is 3-540 . If its United States prefix will be 0-abc , find abc such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is 3 and English is 0 . The next group of numbers identifies the publisher, and the last group identifies the specific book.    "
+  "body": " Additional Exercises: Detecting Errors        UPC Symbols   Universal Product Code Universal Product Code (UPC) symbols are found on most products in grocery and retail stores. The UPC symbol is a 12-digit code identifying the manufacturer of a product and the product itself ( ). The first 11 digits contain information about the product; the twelfth digit is used for error detection. If is a valid UPC number, then .   Show that the UPC number 0-50000-30042-6, which appears in , is a valid UPC number.  Show that the number 0-50000-30043-6 is not a valid UPC number.  Write a formula to calculate the check digit, , in the UPC number.  The UPC error detection scheme can detect most transposition errors; that is, it can determine if two digits have been interchanged. Show that the transposition error 0-05000-30042-6 is not detected. Find a transposition error that is detected. Can you find a general rule for the types of transposition errors that can be detected?   Write a program that will determine whether or not a UPC number is valid.    A UPC code        It is often useful to use an inner product notation for this type of error detection scheme; hence, we will use the notion to mean .  Suppose that is an error detection scheme for the -digit identification number , where . Prove that all single-digit errors are detected if and only if for .      Let be an error detection scheme for the -digit identification number , where . Prove that all transposition errors of two digits and are detected if and only if for and between 1 and .     ISBN Codes   Every book has an International Standard Book Number International standard book number (ISBN) code. This is a 10-digit code indicating the book's publisher and title. The tenth digit is a check digit satisfying . One problem is that might have to be a 10 to make the inner product zero; in this case, 11 digits would be needed to make this scheme work. Therefore, the character X is used for the eleventh digit. So ISBN 3-540-96035-X is a valid ISBN code.   Is ISBN 0-534-91500-0 a valid ISBN code? What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?  Does this method detect all single-digit errors? What about all transposition errors?  How many different ISBN codes are there?  Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.  A publisher has houses in Germany and the United States. Its German prefix is 3-540 . If its United States prefix will be 0-abc , find abc such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is 3 and English is 0 . The next group of numbers identifies the publisher, and the last group identifies the specific book.     "
 },
 {
   "id": "groups-9-2",
@@ -2392,7 +2392,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.6.1",
   "title": "UPC Symbols.",
-  "body": "UPC Symbols  Universal Product Code Universal Product Code (UPC) symbols are found on most products in grocery and retail stores. The UPC symbol is a 12-digit code identifying the manufacturer of a product and the product itself ( ). The first 11 digits contain information about the product; the twelfth digit is used for error detection. If is a valid UPC number, then .   Show that the UPC number 0-50000-30042-6, which appears in , is a valid UPC number.  Show that the number 0-50000-30043-6 is not a valid UPC number.  Write a formula to calculate the check digit, , in the UPC number.  The UPC error detection scheme can detect most transposition errors; that is, it can determine if two digits have been interchanged. Show that the transposition error 0-05000-30042-6 is not detected. Find a transposition error that is detected. Can you find a general rule for the types of transposition errors that can be detected?   Write a program that will determine whether or not a UPC number is valid.    A UPC code    "
+  "body": " UPC Symbols   Universal Product Code Universal Product Code (UPC) symbols are found on most products in grocery and retail stores. The UPC symbol is a 12-digit code identifying the manufacturer of a product and the product itself ( ). The first 11 digits contain information about the product; the twelfth digit is used for error detection. If is a valid UPC number, then .   Show that the UPC number 0-50000-30042-6, which appears in , is a valid UPC number.  Show that the number 0-50000-30043-6 is not a valid UPC number.  Write a formula to calculate the check digit, , in the UPC number.  The UPC error detection scheme can detect most transposition errors; that is, it can determine if two digits have been interchanged. Show that the transposition error 0-05000-30042-6 is not detected. Find a transposition error that is detected. Can you find a general rule for the types of transposition errors that can be detected?   Write a program that will determine whether or not a UPC number is valid.    A UPC code     "
 },
 {
   "id": "groups-9-3",
@@ -2401,7 +2401,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.6.2",
   "title": "",
-  "body": " It is often useful to use an inner product notation for this type of error detection scheme; hence, we will use the notion to mean .  Suppose that is an error detection scheme for the -digit identification number , where . Prove that all single-digit errors are detected if and only if for .  "
+  "body": "  It is often useful to use an inner product notation for this type of error detection scheme; hence, we will use the notion to mean .  Suppose that is an error detection scheme for the -digit identification number , where . Prove that all single-digit errors are detected if and only if for .   "
 },
 {
   "id": "groups-9-4",
@@ -2410,7 +2410,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.6.3",
   "title": "",
-  "body": " Let be an error detection scheme for the -digit identification number , where . Prove that all transposition errors of two digits and are detected if and only if for and between 1 and .  "
+  "body": "  Let be an error detection scheme for the -digit identification number , where . Prove that all transposition errors of two digits and are detected if and only if for and between 1 and .   "
 },
 {
   "id": "groups-9-5",
@@ -2419,7 +2419,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.6.4",
   "title": "ISBN Codes.",
-  "body": "ISBN Codes  Every book has an International Standard Book Number International standard book number (ISBN) code. This is a 10-digit code indicating the book's publisher and title. The tenth digit is a check digit satisfying . One problem is that might have to be a 10 to make the inner product zero; in this case, 11 digits would be needed to make this scheme work. Therefore, the character X is used for the eleventh digit. So ISBN 3-540-96035-X is a valid ISBN code.   Is ISBN 0-534-91500-0 a valid ISBN code? What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?  Does this method detect all single-digit errors? What about all transposition errors?  How many different ISBN codes are there?  Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.  A publisher has houses in Germany and the United States. Its German prefix is 3-540 . If its United States prefix will be 0-abc , find abc such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is 3 and English is 0 . The next group of numbers identifies the publisher, and the last group identifies the specific book.   "
+  "body": " ISBN Codes   Every book has an International Standard Book Number International standard book number (ISBN) code. This is a 10-digit code indicating the book's publisher and title. The tenth digit is a check digit satisfying . One problem is that might have to be a 10 to make the inner product zero; in this case, 11 digits would be needed to make this scheme work. Therefore, the character X is used for the eleventh digit. So ISBN 3-540-96035-X is a valid ISBN code.   Is ISBN 0-534-91500-0 a valid ISBN code? What about ISBN 0-534-91700-0 and ISBN 0-534-19500-0?  Does this method detect all single-digit errors? What about all transposition errors?  How many different ISBN codes are there?  Write a computer program that will calculate the check digit for the first nine digits of an ISBN code.  A publisher has houses in Germany and the United States. Its German prefix is 3-540 . If its United States prefix will be 0-abc , find abc such that the rest of the ISBN code will be the same for a book printed in Germany and in the United States. Under the ISBN coding method the first digit identifies the language; German is 3 and English is 0 . The next group of numbers identifies the publisher, and the last group identifies the specific book.    "
 },
 {
   "id": "groups-sage-exercises",
@@ -2428,7 +2428,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "3.7",
   "title": "Sage Exercises",
-  "body": " Sage Exercises   These exercises are about becoming comfortable working with groups in Sage.    Create the groups CyclicPermutationGroup(8) and DihedralGroup(4) and name these groups C and D , respectively. We will understand these constructions better shortly, but for now just understand that both objects you create are actually groups.    Check that C and D have the same size by using the .order() method. Determine which group is abelian, and which is not, by using the .is_abelian() method.    Use the .cayley_table() method to create the Cayley table for each group.    Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables. In other words, what is {\\em different} about these two groups that you can see in the Cayley tables? (In the Sage notebook, a Shift-click on a blue bar will bring up a mini-word-processor, and you can use use dollar signs to embed mathematics formatted using tex syntax.)    For C locate the one subgroup of order . The group D has three subgroups of order . Select one of the three subgroups of D that has a different structure than the subgroup you obtained from C .  The .subgroups() method will give you a list of all of the subgroups to help you get started. A Cayley table will help you tell the difference between the two subgroups. What properties of these tables did you use to determine the difference in the structure of the subgroups?    The .subgroup(elt_list) method of a group will create the smallest subgroup containing the specified elements of the group, when given the elements as a list elt_list . Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise. The equality comparison, == , can be used to test if two subgroups are equal.   "
+  "body": " Sage Exercises   These exercises are about becoming comfortable working with groups in Sage.     Create the groups CyclicPermutationGroup(8) and DihedralGroup(4) and name these groups C and D , respectively. We will understand these constructions better shortly, but for now just understand that both objects you create are actually groups.      Check that C and D have the same size by using the .order() method. Determine which group is abelian, and which is not, by using the .is_abelian() method.      Use the .cayley_table() method to create the Cayley table for each group.      Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables. In other words, what is {\\em different} about these two groups that you can see in the Cayley tables? (In the Sage notebook, a Shift-click on a blue bar will bring up a mini-word-processor, and you can use use dollar signs to embed mathematics formatted using tex syntax.)      For C locate the one subgroup of order . The group D has three subgroups of order . Select one of the three subgroups of D that has a different structure than the subgroup you obtained from C .  The .subgroups() method will give you a list of all of the subgroups to help you get started. A Cayley table will help you tell the difference between the two subgroups. What properties of these tables did you use to determine the difference in the structure of the subgroups?      The .subgroup(elt_list) method of a group will create the smallest subgroup containing the specified elements of the group, when given the elements as a list elt_list . Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise. The equality comparison, == , can be used to test if two subgroups are equal.    "
 },
 {
   "id": "groups-sage-exercises-3",
@@ -2437,7 +2437,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.1",
   "title": "",
-  "body": " Create the groups CyclicPermutationGroup(8) and DihedralGroup(4) and name these groups C and D , respectively. We will understand these constructions better shortly, but for now just understand that both objects you create are actually groups.  "
+  "body": "  Create the groups CyclicPermutationGroup(8) and DihedralGroup(4) and name these groups C and D , respectively. We will understand these constructions better shortly, but for now just understand that both objects you create are actually groups.   "
 },
 {
   "id": "groups-sage-exercises-4",
@@ -2446,7 +2446,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.2",
   "title": "",
-  "body": " Check that C and D have the same size by using the .order() method. Determine which group is abelian, and which is not, by using the .is_abelian() method.  "
+  "body": "  Check that C and D have the same size by using the .order() method. Determine which group is abelian, and which is not, by using the .is_abelian() method.   "
 },
 {
   "id": "groups-sage-exercises-5",
@@ -2455,7 +2455,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.3",
   "title": "",
-  "body": " Use the .cayley_table() method to create the Cayley table for each group.  "
+  "body": "  Use the .cayley_table() method to create the Cayley table for each group.   "
 },
 {
   "id": "groups-sage-exercises-6",
@@ -2464,7 +2464,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.4",
   "title": "",
-  "body": " Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables. In other words, what is {\\em different} about these two groups that you can see in the Cayley tables? (In the Sage notebook, a Shift-click on a blue bar will bring up a mini-word-processor, and you can use use dollar signs to embed mathematics formatted using tex syntax.)  "
+  "body": "  Write a nicely formatted discussion identifying differences between the two groups that are discernible in properties of their Cayley tables. In other words, what is {\\em different} about these two groups that you can see in the Cayley tables? (In the Sage notebook, a Shift-click on a blue bar will bring up a mini-word-processor, and you can use use dollar signs to embed mathematics formatted using tex syntax.)   "
 },
 {
   "id": "groups-sage-exercises-7",
@@ -2473,7 +2473,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.5",
   "title": "",
-  "body": " For C locate the one subgroup of order . The group D has three subgroups of order . Select one of the three subgroups of D that has a different structure than the subgroup you obtained from C .  The .subgroups() method will give you a list of all of the subgroups to help you get started. A Cayley table will help you tell the difference between the two subgroups. What properties of these tables did you use to determine the difference in the structure of the subgroups?  "
+  "body": "  For C locate the one subgroup of order . The group D has three subgroups of order . Select one of the three subgroups of D that has a different structure than the subgroup you obtained from C .  The .subgroups() method will give you a list of all of the subgroups to help you get started. A Cayley table will help you tell the difference between the two subgroups. What properties of these tables did you use to determine the difference in the structure of the subgroups?   "
 },
 {
   "id": "groups-sage-exercises-8",
@@ -2482,7 +2482,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "3.7.6",
   "title": "",
-  "body": " The .subgroup(elt_list) method of a group will create the smallest subgroup containing the specified elements of the group, when given the elements as a list elt_list . Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise. The equality comparison, == , can be used to test if two subgroups are equal.  "
+  "body": "  The .subgroup(elt_list) method of a group will create the smallest subgroup containing the specified elements of the group, when given the elements as a list elt_list . Use this command to discover the shortest list of elements necessary to recreate the subgroups you found in the previous exercise. The equality comparison, == , can be used to test if two subgroups are equal.   "
 },
 {
   "id": "groups-11",
@@ -2662,7 +2662,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Cyclic Groups of Complex Numbers",
-  "body": " Cyclic Groups of Complex Numbers  The complex numbers are defined as , where . If , then is the real part of and is the imaginary part of .  To add two complex numbers and , we just add the corresponding real and imaginary parts: . Remembering that , we multiply complex numbers just like polynomials. The product of and is .  Every nonzero complex number has a multiplicative inverse; that is, there exists a such that . If , then . The complex conjugate Conjugate, complex of a complex number is defined to be . The absolute value or modulus of is .   Complex Number Operations  Let and . Then and . Also, .    Rectangular coordinates of a complex number       There are several ways of graphically representing complex numbers. We can represent a complex number as an ordered pair on the plane where is the (or real) coordinate and is the (or imaginary) coordinate. This is called the rectangular or Cartesian representation. The rectangular representations of , , and are depicted in .   Polar coordinates of a complex number       Nonzero complex numbers can also be represented using polar coordinates . To specify any nonzero point on the plane, it suffices to give an angle from the positive axis in the counterclockwise direction and a distance from the origin, as in . We can see that . Hence, and . We sometimes abbreviate as . To assure that the representation of is well-defined, we also require that . If the measurement is in radians, then .      Complex Numbers in Polar Form  Suppose that . Then and . Hence, the rectangular representation is .  Conversely, if we are given a rectangular representation of a complex number, it is often useful to know the number's polar representation. If , then and , so .   The polar representation of a complex number makes it easy to find products and powers of complex numbers. The proof of the following proposition is straightforward and is left as an exercise.    Let and be two nonzero complex numbers. Then .     Multiplication of Complex Numbers in Polar Form  If and , then .    DeMoivre  DeMoivre's Theorem   Let be a nonzero complex number. Then for .    We will use induction on (see ). For the theorem is trivial. Assume that the theorem is true for all such that . Then .     Powers of Complex Numbers  Suppose that and we wish to compute . Rather than computing directly, it is much easier to switch to polar coordinates and calculate using DeMoivre's Theorem: .   The multiplicative group of the complex numbers, , possesses some interesting subgroups. Whereas and have no interesting subgroups of finite order, has many. We first consider the circle group Group circle , . The following proposition is a direct result of .   the circle group     The circle group is a subgroup of .    Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that . Then is a subgroup of the circle group. Also, , , , and are exactly those complex numbers that satisfy the equation . The complex numbers satisfying the equation are called the th roots of unity th root of unity .    If , then the th roots of unity are , where . Furthermore, the th roots of unity form a cyclic subgroup of of order    By DeMoivre's Theorem, . The 's are distinct since the numbers are all distinct and are greater than or equal to 0 but less than . We will leave the proof that the th roots of unity form a cyclic subgroup of as an exercise.    A generator for the group of the th roots of unity is called a primitive th root of unity Primitive th root of unity .   Roots of Unity  The 8th roots of unity can be represented as eight equally spaced points on the unit circle ( ). The primitive 8th roots of unity are    8th roots of unity       We interrupt this exposition to repeat the previous diagram, wrapped as different figure with a different caption. The TikZ code to produce these diagrams lives in an external file, tikz\/cyclic-roots-unity.tex , which is pure text, freed from any need to format for XML processing. So, in particular, there is no need to escape ampersands and angle brackets, nor is there employment of the CDATA mechanism. But the real value is that there is just one version to edit, and any changes will be reflected in both copies.   Repeat: 8th roots of unity      "
+  "body": " Cyclic Groups of Complex Numbers  The complex numbers are defined as , where . If , then is the real part of and is the imaginary part of .  To add two complex numbers and , we just add the corresponding real and imaginary parts: . Remembering that , we multiply complex numbers just like polynomials. The product of and is .  Every nonzero complex number has a multiplicative inverse; that is, there exists a such that . If , then . The complex conjugate Conjugate, complex of a complex number is defined to be . The absolute value or modulus of is .   Complex Number Operations  Let and . Then and . Also, .    Rectangular coordinates of a complex number       There are several ways of graphically representing complex numbers. We can represent a complex number as an ordered pair on the plane where is the (or real) coordinate and is the (or imaginary) coordinate. This is called the rectangular or Cartesian representation. The rectangular representations of , , and are depicted in .   Polar coordinates of a complex number       Nonzero complex numbers can also be represented using polar coordinates . To specify any nonzero point on the plane, it suffices to give an angle from the positive axis in the counterclockwise direction and a distance from the origin, as in . We can see that . Hence, and . We sometimes abbreviate as . To assure that the representation of is well-defined, we also require that . If the measurement is in radians, then .      Complex Numbers in Polar Form  Suppose that . Then and . Hence, the rectangular representation is .  Conversely, if we are given a rectangular representation of a complex number, it is often useful to know the number's polar representation. If , then and , so .   The polar representation of a complex number makes it easy to find products and powers of complex numbers. The proof of the following proposition is straightforward and is left as an exercise.    Let and be two nonzero complex numbers. Then .     Multiplication of Complex Numbers in Polar Form  If and , then .    DeMoivre  DeMoivre's Theorem   Let be a nonzero complex number. Then for .    We will use induction on (see ). For the theorem is trivial. Assume that the theorem is true for all such that . Then .     Powers of Complex Numbers  Suppose that and we wish to compute . Rather than computing directly, it is much easier to switch to polar coordinates and calculate using DeMoivre's Theorem: .   The multiplicative group of the complex numbers, , possesses some interesting subgroups. Whereas and have no interesting subgroups of finite order, has many. We first consider the circle group Group circle , . The following proposition is a direct result of .   the circle group     The circle group is a subgroup of .    Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that . Then is a subgroup of the circle group. Also, , , , and are exactly those complex numbers that satisfy the equation . The complex numbers satisfying the equation are called the th roots of unity th root of unity .    If , then the th roots of unity are , where . Furthermore, the th roots of unity form a cyclic subgroup of of order    By DeMoivre's Theorem, . The 's are distinct since the numbers are all distinct and are greater than or equal to 0 but less than . We will leave the proof that the th roots of unity form a cyclic subgroup of as an exercise.    A generator for the group of the th roots of unity is called a primitive th root of unity Primitive th root of unity .   Roots of Unity  The 8th roots of unity can be represented as eight equally spaced points on the unit circle ( ). The primitive 8th roots of unity are    8th roots of unity       We interrupt this exposition to repeat the previous diagram, wrapped as different figure with a different caption. The TikZ code to produce these diagrams lives in an external file, tikz\/cyclic-roots-unity.tex , which is pure text, freed from any need to format for XML processing. So, in particular, there is no need to escape ampersands and angle brackets, nor is there employment of the CDATA mechanism. But the real value is that there is just one version to edit, and any changes will be reflected in both copies.   Repeat: 8th roots of unity      Another version of this diagram, authored in , is also included in .   8th roots of unity, authored in     alignments=['se','ne','ne','nw','sw','sw','sw','se']  labels=['1',r'\\omega','i',r'\\omega^3','-1',r'\\omega^5','-i',r'\\omega^7']  f(t)=(cos(pi*t\/4),sin(pi*t\/4))        ${labels[k]}         "
 },
 {
   "id": "cyclic-6-2",
@@ -2845,6 +2845,15 @@ var ptx_lunr_docs = [
   "body": " Repeat: 8th roots of unity     "
 },
 {
+  "id": "prefigure-rtsunity",
+  "level": "2",
+  "url": "cyclic-6.html#prefigure-rtsunity",
+  "type": "Figure",
+  "number": "4.3.14",
+  "title": "",
+  "body": " 8th roots of unity, authored in     alignments=['se','ne','ne','nw','sw','sw','sw','se']  labels=['1',r'\\omega','i',r'\\omega^3','-1',r'\\omega^5','-i',r'\\omega^7']  f(t)=(cos(pi*t\/4),sin(pi*t\/4))        ${labels[k]}        "
+},
+{
   "id": "cyclic-7",
   "level": "1",
   "url": "cyclic-7.html",
@@ -2878,7 +2887,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "4.5",
   "title": "Exercises",
-  "body": " Exercises   Prove or disprove each of the following statements.   All of the generators of are prime.  is cyclic.  is cyclic.  If every proper subgroup of a group is cyclic, then is a cyclic group.  A group with a finite number of subgroups is finite.     Find the order of each of the following elements.       72 in  312 in     List all of the elements in each of the following subgroups.   The subgroup of generated by 7  The subgroup of generated by 15  All subgroups of  All subgroups of  All subgroups of  All subgroups of  The subgroup generated by 3 in  The subgroup generated by 5 in  The subgroup of generated by 7  The subgroup of generated by where  The subgroup of generated by  The subgroup of generated by  The subgroup of generated by     Find the subgroups of generated by each of the following matrices.            Find the order of every element in .    Find the order of every element in the symmetry group of the square, .    What are all of the cyclic subgroups of the quaternion group, ?    List all of the cyclic subgroups of .    List every generator of each subgroup of order 8 in .    Find all elements of finite order in each of the following groups. Here the indicates the set with zero removed.         If in a group , what are the possible orders of ?    Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about generators?    For , which groups are cyclic? Make a conjecture as to what is true in general. Can you prove your conjecture?    Let be elements in . Show that and have finite orders but does not.    Evaluate each of the following.            Convert the following complex numbers to the form .          Change the following complex numbers to polar representation.            Calculate each of the following expressions.             Prove each of the following statements.            List and graph the 6th roots of unity. What are the generators of this group? What are the primitive 6th roots of unity?    List and graph the 5th roots of unity. What are the generators of this group? What are the primitive 5th roots of unity?    Calculate each of the following.          Let . Prove the following statements.   The order of is the same as the order of .  For all , .  The order of is the same as the order of .     Let and be distinct primes. How many generators does have?    Let be prime and be a positive integer. How many generators does have?    Prove that has no nontrivial subgroups if is prime.    If and have orders 15 and 16 respectively in a group , what is the order of ?    Let be an element in a group . What is a generator for the subgroup ?    Prove that has an even number of generators for .    Suppose that is a group and let , . Prove that if and with , then .     Let be an abelian group. Show that the elements of finite order in form a subgroup. This subgroup is called the torsion subgroup of .    Let be a finite cyclic group of order generated by . Show that if where , then must be a generator of .    If is an abelian group that contains a pair of cyclic subgroups of order 2, show that must contain a subgroup of order 4. Does this subgroup have to be cyclic?    Let be an abelian group of order where . If contains elements and of order and respectively, then show that is cyclic.    Prove that the subgroups of are exactly for .    Prove that the generators of are the integers such that and .    Prove that if has no proper nontrivial subgroups, then is a cyclic group.    Prove that the order of an element in a cyclic group must divide the order of the group.    Prove that if is a cyclic group of order and , then must have a subgroup of order .    For what integers is an th root of unity?    If and are two nonzero complex numbers, show that    Prove that the circle group is a subgroup of .    Prove that the th roots of unity form a cyclic subgroup of of order .    Let . Prove that and if and only if for .    Let . If , prove that the order of is infinite.    Let be in where . Prove that the order of is infinite.   "
+  "body": " Exercises    Prove or disprove each of the following statements.   All of the generators of are prime.  is cyclic.  is cyclic.  If every proper subgroup of a group is cyclic, then is a cyclic group.  A group with a finite number of subgroups is finite.       Find the order of each of the following elements.       72 in  312 in       List all of the elements in each of the following subgroups.   The subgroup of generated by 7  The subgroup of generated by 15  All subgroups of  All subgroups of  All subgroups of  All subgroups of  The subgroup generated by 3 in  The subgroup generated by 5 in  The subgroup of generated by 7  The subgroup of generated by where  The subgroup of generated by  The subgroup of generated by  The subgroup of generated by       Find the subgroups of generated by each of the following matrices.              Find the order of every element in .      Find the order of every element in the symmetry group of the square, .      What are all of the cyclic subgroups of the quaternion group, ?      List all of the cyclic subgroups of .      List every generator of each subgroup of order 8 in .      Find all elements of finite order in each of the following groups. Here the indicates the set with zero removed.           If in a group , what are the possible orders of ?      Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about generators?      For , which groups are cyclic? Make a conjecture as to what is true in general. Can you prove your conjecture?      Let be elements in . Show that and have finite orders but does not.      Evaluate each of the following.              Convert the following complex numbers to the form .            Change the following complex numbers to polar representation.              Calculate each of the following expressions.               Prove each of the following statements.              List and graph the 6th roots of unity. What are the generators of this group? What are the primitive 6th roots of unity?      List and graph the 5th roots of unity. What are the generators of this group? What are the primitive 5th roots of unity?      Calculate each of the following.            Let . Prove the following statements.   The order of is the same as the order of .  For all , .  The order of is the same as the order of .       Let and be distinct primes. How many generators does have?      Let be prime and be a positive integer. How many generators does have?      Prove that has no nontrivial subgroups if is prime.      If and have orders 15 and 16 respectively in a group , what is the order of ?      Let be an element in a group . What is a generator for the subgroup ?      Prove that has an even number of generators for .      Suppose that is a group and let , . Prove that if and with , then .       Let be an abelian group. Show that the elements of finite order in form a subgroup. This subgroup is called the torsion subgroup of .      Let be a finite cyclic group of order generated by . Show that if where , then must be a generator of .      If is an abelian group that contains a pair of cyclic subgroups of order 2, show that must contain a subgroup of order 4. Does this subgroup have to be cyclic?      Let be an abelian group of order where . If contains elements and of order and respectively, then show that is cyclic.      Prove that the subgroups of are exactly for .      Prove that the generators of are the integers such that and .      Prove that if has no proper nontrivial subgroups, then is a cyclic group.      Prove that the order of an element in a cyclic group must divide the order of the group.      Prove that if is a cyclic group of order and , then must have a subgroup of order .      For what integers is an th root of unity?      If and are two nonzero complex numbers, show that      Prove that the circle group is a subgroup of .      Prove that the th roots of unity form a cyclic subgroup of of order .      Let . Prove that and if and only if for .      Let . If , prove that the order of is infinite.      Let be in where . Prove that the order of is infinite.    "
 },
 {
   "id": "exercises-cyclic-2",
@@ -2887,7 +2896,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.1",
   "title": "",
-  "body": " Prove or disprove each of the following statements.   All of the generators of are prime.  is cyclic.  is cyclic.  If every proper subgroup of a group is cyclic, then is a cyclic group.  A group with a finite number of subgroups is finite.   "
+  "body": "  Prove or disprove each of the following statements.   All of the generators of are prime.  is cyclic.  is cyclic.  If every proper subgroup of a group is cyclic, then is a cyclic group.  A group with a finite number of subgroups is finite.    "
 },
 {
   "id": "exercises-cyclic-3",
@@ -2896,7 +2905,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.2",
   "title": "",
-  "body": " Find the order of each of the following elements.       72 in  312 in   "
+  "body": "  Find the order of each of the following elements.       72 in  312 in    "
 },
 {
   "id": "exercises-cyclic-4",
@@ -2905,7 +2914,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.3",
   "title": "",
-  "body": " List all of the elements in each of the following subgroups.   The subgroup of generated by 7  The subgroup of generated by 15  All subgroups of  All subgroups of  All subgroups of  All subgroups of  The subgroup generated by 3 in  The subgroup generated by 5 in  The subgroup of generated by 7  The subgroup of generated by where  The subgroup of generated by  The subgroup of generated by  The subgroup of generated by   "
+  "body": "  List all of the elements in each of the following subgroups.   The subgroup of generated by 7  The subgroup of generated by 15  All subgroups of  All subgroups of  All subgroups of  All subgroups of  The subgroup generated by 3 in  The subgroup generated by 5 in  The subgroup of generated by 7  The subgroup of generated by where  The subgroup of generated by  The subgroup of generated by  The subgroup of generated by    "
 },
 {
   "id": "exercises-cyclic-5",
@@ -2914,7 +2923,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.4",
   "title": "",
-  "body": " Find the subgroups of generated by each of the following matrices.          "
+  "body": "  Find the subgroups of generated by each of the following matrices.           "
 },
 {
   "id": "exercises-cyclic-6",
@@ -2923,7 +2932,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.5",
   "title": "",
-  "body": " Find the order of every element in .  "
+  "body": "  Find the order of every element in .   "
 },
 {
   "id": "exercises-cyclic-7",
@@ -2932,7 +2941,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.6",
   "title": "",
-  "body": " Find the order of every element in the symmetry group of the square, .  "
+  "body": "  Find the order of every element in the symmetry group of the square, .   "
 },
 {
   "id": "exercises-cyclic-8",
@@ -2941,7 +2950,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.7",
   "title": "",
-  "body": " What are all of the cyclic subgroups of the quaternion group, ?  "
+  "body": "  What are all of the cyclic subgroups of the quaternion group, ?   "
 },
 {
   "id": "exercises-cyclic-9",
@@ -2950,7 +2959,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.8",
   "title": "",
-  "body": " List all of the cyclic subgroups of .  "
+  "body": "  List all of the cyclic subgroups of .   "
 },
 {
   "id": "exercises-cyclic-10",
@@ -2959,7 +2968,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.9",
   "title": "",
-  "body": " List every generator of each subgroup of order 8 in .  "
+  "body": "  List every generator of each subgroup of order 8 in .   "
 },
 {
   "id": "exercises-cyclic-11",
@@ -2968,7 +2977,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.10",
   "title": "",
-  "body": " Find all elements of finite order in each of the following groups. Here the indicates the set with zero removed.       "
+  "body": "  Find all elements of finite order in each of the following groups. Here the indicates the set with zero removed.        "
 },
 {
   "id": "exercises-cyclic-12",
@@ -2977,7 +2986,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.11",
   "title": "",
-  "body": " If in a group , what are the possible orders of ?  "
+  "body": "  If in a group , what are the possible orders of ?   "
 },
 {
   "id": "exercises-cyclic-13",
@@ -2986,7 +2995,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.12",
   "title": "",
-  "body": " Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about generators?  "
+  "body": "  Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about generators?   "
 },
 {
   "id": "exercises-cyclic-14",
@@ -2995,7 +3004,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.13",
   "title": "",
-  "body": " For , which groups are cyclic? Make a conjecture as to what is true in general. Can you prove your conjecture?  "
+  "body": "  For , which groups are cyclic? Make a conjecture as to what is true in general. Can you prove your conjecture?   "
 },
 {
   "id": "exercises-cyclic-15",
@@ -3004,7 +3013,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.14",
   "title": "",
-  "body": " Let be elements in . Show that and have finite orders but does not.  "
+  "body": "  Let be elements in . Show that and have finite orders but does not.   "
 },
 {
   "id": "exercises-cyclic-16",
@@ -3013,7 +3022,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.15",
   "title": "",
-  "body": " Evaluate each of the following.          "
+  "body": "  Evaluate each of the following.           "
 },
 {
   "id": "exercises-cyclic-17",
@@ -3022,7 +3031,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.16",
   "title": "",
-  "body": " Convert the following complex numbers to the form .        "
+  "body": "  Convert the following complex numbers to the form .         "
 },
 {
   "id": "exercises-cyclic-18",
@@ -3031,7 +3040,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.17",
   "title": "",
-  "body": " Change the following complex numbers to polar representation.          "
+  "body": "  Change the following complex numbers to polar representation.           "
 },
 {
   "id": "exercises-cyclic-19",
@@ -3040,7 +3049,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.18",
   "title": "",
-  "body": " Calculate each of the following expressions.           "
+  "body": "  Calculate each of the following expressions.            "
 },
 {
   "id": "exercises-cyclic-20",
@@ -3049,7 +3058,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.19",
   "title": "",
-  "body": " Prove each of the following statements.          "
+  "body": "  Prove each of the following statements.           "
 },
 {
   "id": "exercises-cyclic-21",
@@ -3058,7 +3067,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.20",
   "title": "",
-  "body": " List and graph the 6th roots of unity. What are the generators of this group? What are the primitive 6th roots of unity?  "
+  "body": "  List and graph the 6th roots of unity. What are the generators of this group? What are the primitive 6th roots of unity?   "
 },
 {
   "id": "exercises-cyclic-22",
@@ -3067,7 +3076,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.21",
   "title": "",
-  "body": " List and graph the 5th roots of unity. What are the generators of this group? What are the primitive 5th roots of unity?  "
+  "body": "  List and graph the 5th roots of unity. What are the generators of this group? What are the primitive 5th roots of unity?   "
 },
 {
   "id": "exercises-cyclic-23",
@@ -3076,7 +3085,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.22",
   "title": "",
-  "body": " Calculate each of the following.        "
+  "body": "  Calculate each of the following.         "
 },
 {
   "id": "exercises-cyclic-24",
@@ -3085,7 +3094,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.23",
   "title": "",
-  "body": " Let . Prove the following statements.   The order of is the same as the order of .  For all , .  The order of is the same as the order of .   "
+  "body": "  Let . Prove the following statements.   The order of is the same as the order of .  For all , .  The order of is the same as the order of .    "
 },
 {
   "id": "exercises-cyclic-25",
@@ -3094,7 +3103,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.24",
   "title": "",
-  "body": " Let and be distinct primes. How many generators does have?  "
+  "body": "  Let and be distinct primes. How many generators does have?   "
 },
 {
   "id": "exercises-cyclic-26",
@@ -3103,7 +3112,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.25",
   "title": "",
-  "body": " Let be prime and be a positive integer. How many generators does have?  "
+  "body": "  Let be prime and be a positive integer. How many generators does have?   "
 },
 {
   "id": "exercises-cyclic-27",
@@ -3112,7 +3121,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.26",
   "title": "",
-  "body": " Prove that has no nontrivial subgroups if is prime.  "
+  "body": "  Prove that has no nontrivial subgroups if is prime.   "
 },
 {
   "id": "exercises-cyclic-28",
@@ -3121,7 +3130,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.27",
   "title": "",
-  "body": " If and have orders 15 and 16 respectively in a group , what is the order of ?  "
+  "body": "  If and have orders 15 and 16 respectively in a group , what is the order of ?   "
 },
 {
   "id": "exercises-cyclic-29",
@@ -3130,7 +3139,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.28",
   "title": "",
-  "body": " Let be an element in a group . What is a generator for the subgroup ?  "
+  "body": "  Let be an element in a group . What is a generator for the subgroup ?   "
 },
 {
   "id": "exercises-cyclic-30",
@@ -3139,7 +3148,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.29",
   "title": "",
-  "body": " Prove that has an even number of generators for .  "
+  "body": "  Prove that has an even number of generators for .   "
 },
 {
   "id": "exercises-cyclic-31",
@@ -3148,7 +3157,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.30",
   "title": "",
-  "body": " Suppose that is a group and let , . Prove that if and with , then .  "
+  "body": "  Suppose that is a group and let , . Prove that if and with , then .   "
 },
 {
   "id": "exercises-cyclic-32",
@@ -3157,7 +3166,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.31",
   "title": "",
-  "body": " Let be an abelian group. Show that the elements of finite order in form a subgroup. This subgroup is called the torsion subgroup of .  "
+  "body": "  Let be an abelian group. Show that the elements of finite order in form a subgroup. This subgroup is called the torsion subgroup of .   "
 },
 {
   "id": "exercises-cyclic-33",
@@ -3166,7 +3175,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.32",
   "title": "",
-  "body": " Let be a finite cyclic group of order generated by . Show that if where , then must be a generator of .  "
+  "body": "  Let be a finite cyclic group of order generated by . Show that if where , then must be a generator of .   "
 },
 {
   "id": "exercises-cyclic-34",
@@ -3175,7 +3184,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.33",
   "title": "",
-  "body": " If is an abelian group that contains a pair of cyclic subgroups of order 2, show that must contain a subgroup of order 4. Does this subgroup have to be cyclic?  "
+  "body": "  If is an abelian group that contains a pair of cyclic subgroups of order 2, show that must contain a subgroup of order 4. Does this subgroup have to be cyclic?   "
 },
 {
   "id": "exercises-cyclic-35",
@@ -3184,7 +3193,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.34",
   "title": "",
-  "body": " Let be an abelian group of order where . If contains elements and of order and respectively, then show that is cyclic.  "
+  "body": "  Let be an abelian group of order where . If contains elements and of order and respectively, then show that is cyclic.   "
 },
 {
   "id": "exercises-cyclic-36",
@@ -3193,7 +3202,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.35",
   "title": "",
-  "body": " Prove that the subgroups of are exactly for .  "
+  "body": "  Prove that the subgroups of are exactly for .   "
 },
 {
   "id": "exercises-cyclic-37",
@@ -3202,7 +3211,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.36",
   "title": "",
-  "body": " Prove that the generators of are the integers such that and .  "
+  "body": "  Prove that the generators of are the integers such that and .   "
 },
 {
   "id": "exercises-cyclic-38",
@@ -3211,7 +3220,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.37",
   "title": "",
-  "body": " Prove that if has no proper nontrivial subgroups, then is a cyclic group.  "
+  "body": "  Prove that if has no proper nontrivial subgroups, then is a cyclic group.   "
 },
 {
   "id": "exercises-cyclic-39",
@@ -3220,7 +3229,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.38",
   "title": "",
-  "body": " Prove that the order of an element in a cyclic group must divide the order of the group.  "
+  "body": "  Prove that the order of an element in a cyclic group must divide the order of the group.   "
 },
 {
   "id": "cyclic-exercise-subgroups-exist",
@@ -3229,7 +3238,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.39",
   "title": "",
-  "body": " Prove that if is a cyclic group of order and , then must have a subgroup of order .  "
+  "body": "  Prove that if is a cyclic group of order and , then must have a subgroup of order .   "
 },
 {
   "id": "exercises-cyclic-41",
@@ -3238,7 +3247,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.40",
   "title": "",
-  "body": " For what integers is an th root of unity?  "
+  "body": "  For what integers is an th root of unity?   "
 },
 {
   "id": "exercises-cyclic-42",
@@ -3247,7 +3256,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.41",
   "title": "",
-  "body": " If and are two nonzero complex numbers, show that  "
+  "body": "  If and are two nonzero complex numbers, show that   "
 },
 {
   "id": "exercises-cyclic-43",
@@ -3256,7 +3265,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.42",
   "title": "",
-  "body": " Prove that the circle group is a subgroup of .  "
+  "body": "  Prove that the circle group is a subgroup of .   "
 },
 {
   "id": "exercises-cyclic-44",
@@ -3265,7 +3274,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.43",
   "title": "",
-  "body": " Prove that the th roots of unity form a cyclic subgroup of of order .  "
+  "body": "  Prove that the th roots of unity form a cyclic subgroup of of order .   "
 },
 {
   "id": "exercises-cyclic-45",
@@ -3274,7 +3283,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.44",
   "title": "",
-  "body": " Let . Prove that and if and only if for .  "
+  "body": "  Let . Prove that and if and only if for .   "
 },
 {
   "id": "exercises-cyclic-46",
@@ -3283,7 +3292,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.45",
   "title": "",
-  "body": " Let . If , prove that the order of is infinite.  "
+  "body": "  Let . If , prove that the order of is infinite.   "
 },
 {
   "id": "exercises-cyclic-47",
@@ -3292,7 +3301,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.5.46",
   "title": "",
-  "body": " Let be in where . Prove that the order of is infinite.  "
+  "body": "  Let be in where . Prove that the order of is infinite.   "
 },
 {
   "id": "cyclic-9",
@@ -3301,7 +3310,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "4.6",
   "title": "Programming Exercises",
-  "body": " Programming Exercises   Write a computer program that will write any decimal number as the sum of distinct powers of 2. What is the largest integer that your program will handle?    Write a computer program to calculate by the method of repeated squares. What are the largest values of and that your program will accept?   "
+  "body": " Programming Exercises    Write a computer program that will write any decimal number as the sum of distinct powers of 2. What is the largest integer that your program will handle?      Write a computer program to calculate by the method of repeated squares. What are the largest values of and that your program will accept?    "
 },
 {
   "id": "cyclic-9-2",
@@ -3310,7 +3319,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.6.1",
   "title": "",
-  "body": " Write a computer program that will write any decimal number as the sum of distinct powers of 2. What is the largest integer that your program will handle?  "
+  "body": "  Write a computer program that will write any decimal number as the sum of distinct powers of 2. What is the largest integer that your program will handle?   "
 },
 {
   "id": "cyclic-9-3",
@@ -3319,7 +3328,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.6.2",
   "title": "",
-  "body": " Write a computer program to calculate by the method of repeated squares. What are the largest values of and that your program will accept?  "
+  "body": "  Write a computer program to calculate by the method of repeated squares. What are the largest values of and that your program will accept?   "
 },
 {
   "id": "cyclic-sage-exercises",
@@ -3328,7 +3337,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "4.7",
   "title": "Sage Exercises",
-  "body": " Sage Exercises   This group of exercises is about the group of units mod , , which is sometimes cyclic, sometimes not. There are some commands in Sage that will answer some of these questions very quickly, but instead of using those now, just use the basic techniques described. The idea here is to just work with elements, and lists of elements, to discern the subgroup structure of these groups.    Execute the statement R = Integers(40) to create the set [0,1,2,...,39] This is a group under addition mod , which we will ignore. Instead we are interested in the subset of elements which have an inverse under multiplication mod . Determine how big this subgroup is by executing the command R.unit_group_order() , and then obtain a list of these elements with R.list_of_elements_of_multiplicative_group() .    You can create elements of this group by coercing regular integers into U , such as with the statement a = U(7) . (Don't confuse this with our mathematical notation .) This will tell Sage that you want to view as an element of , subject to the corresponding operations. Determine the elements of the cyclic subgroup of generated by with a list comprehension as follows:   What is the order of in ?    The group is cyclic. Using only the Sage commands described previously, use Sage to find a generator for this group. Now using only theorems about the structure of cyclic groups, describe each of the subgroups of by specifying its order and by giving an explicit generator. Do not repeat any of the subgroups in other words, present each subgroup exactly once. You can use Sage to check your work on the subgroups, but your answer about the subgroups should rely only on theorems and be a nicely written paragraph with a table, etc.    The group is not cyclic. Again, using only the Sage commands described previously, use computations to provide irrefutable evidence of this. How many of the different subgroups of can you list?    Again, using only the Sage commands described previously, explore the structure of for various values of and see if you can formulate an interesting conjecture about some basic property of this group. (Yes, this is a very open-ended question, but this is ultimately the real power of exploring mathematics with Sage.)   "
+  "body": " Sage Exercises   This group of exercises is about the group of units mod , , which is sometimes cyclic, sometimes not. There are some commands in Sage that will answer some of these questions very quickly, but instead of using those now, just use the basic techniques described. The idea here is to just work with elements, and lists of elements, to discern the subgroup structure of these groups.     Execute the statement R = Integers(40) to create the set [0,1,2,...,39] This is a group under addition mod , which we will ignore. Instead we are interested in the subset of elements which have an inverse under multiplication mod . Determine how big this subgroup is by executing the command R.unit_group_order() , and then obtain a list of these elements with R.list_of_elements_of_multiplicative_group() .      You can create elements of this group by coercing regular integers into U , such as with the statement a = U(7) . (Don't confuse this with our mathematical notation .) This will tell Sage that you want to view as an element of , subject to the corresponding operations. Determine the elements of the cyclic subgroup of generated by with a list comprehension as follows:   What is the order of in ?      The group is cyclic. Using only the Sage commands described previously, use Sage to find a generator for this group. Now using only theorems about the structure of cyclic groups, describe each of the subgroups of by specifying its order and by giving an explicit generator. Do not repeat any of the subgroups in other words, present each subgroup exactly once. You can use Sage to check your work on the subgroups, but your answer about the subgroups should rely only on theorems and be a nicely written paragraph with a table, etc.      The group is not cyclic. Again, using only the Sage commands described previously, use computations to provide irrefutable evidence of this. How many of the different subgroups of can you list?      Again, using only the Sage commands described previously, explore the structure of for various values of and see if you can formulate an interesting conjecture about some basic property of this group. (Yes, this is a very open-ended question, but this is ultimately the real power of exploring mathematics with Sage.)    "
 },
 {
   "id": "cyclic-sage-exercises-3",
@@ -3337,7 +3346,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.7.1",
   "title": "",
-  "body": " Execute the statement R = Integers(40) to create the set [0,1,2,...,39] This is a group under addition mod , which we will ignore. Instead we are interested in the subset of elements which have an inverse under multiplication mod . Determine how big this subgroup is by executing the command R.unit_group_order() , and then obtain a list of these elements with R.list_of_elements_of_multiplicative_group() .  "
+  "body": "  Execute the statement R = Integers(40) to create the set [0,1,2,...,39] This is a group under addition mod , which we will ignore. Instead we are interested in the subset of elements which have an inverse under multiplication mod . Determine how big this subgroup is by executing the command R.unit_group_order() , and then obtain a list of these elements with R.list_of_elements_of_multiplicative_group() .   "
 },
 {
   "id": "cyclic-sage-exercises-4",
@@ -3346,7 +3355,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.7.2",
   "title": "",
-  "body": " You can create elements of this group by coercing regular integers into U , such as with the statement a = U(7) . (Don't confuse this with our mathematical notation .) This will tell Sage that you want to view as an element of , subject to the corresponding operations. Determine the elements of the cyclic subgroup of generated by with a list comprehension as follows:   What is the order of in ?  "
+  "body": "  You can create elements of this group by coercing regular integers into U , such as with the statement a = U(7) . (Don't confuse this with our mathematical notation .) This will tell Sage that you want to view as an element of , subject to the corresponding operations. Determine the elements of the cyclic subgroup of generated by with a list comprehension as follows:   What is the order of in ?   "
 },
 {
   "id": "cyclic-sage-exercises-5",
@@ -3355,7 +3364,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.7.3",
   "title": "",
-  "body": " The group is cyclic. Using only the Sage commands described previously, use Sage to find a generator for this group. Now using only theorems about the structure of cyclic groups, describe each of the subgroups of by specifying its order and by giving an explicit generator. Do not repeat any of the subgroups in other words, present each subgroup exactly once. You can use Sage to check your work on the subgroups, but your answer about the subgroups should rely only on theorems and be a nicely written paragraph with a table, etc.  "
+  "body": "  The group is cyclic. Using only the Sage commands described previously, use Sage to find a generator for this group. Now using only theorems about the structure of cyclic groups, describe each of the subgroups of by specifying its order and by giving an explicit generator. Do not repeat any of the subgroups in other words, present each subgroup exactly once. You can use Sage to check your work on the subgroups, but your answer about the subgroups should rely only on theorems and be a nicely written paragraph with a table, etc.   "
 },
 {
   "id": "cyclic-sage-exercises-6",
@@ -3364,7 +3373,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.7.4",
   "title": "",
-  "body": " The group is not cyclic. Again, using only the Sage commands described previously, use computations to provide irrefutable evidence of this. How many of the different subgroups of can you list?  "
+  "body": "  The group is not cyclic. Again, using only the Sage commands described previously, use computations to provide irrefutable evidence of this. How many of the different subgroups of can you list?   "
 },
 {
   "id": "cyclic-sage-exercises-7",
@@ -3373,7 +3382,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "4.7.5",
   "title": "",
-  "body": " Again, using only the Sage commands described previously, explore the structure of for various values of and see if you can formulate an interesting conjecture about some basic property of this group. (Yes, this is a very open-ended question, but this is ultimately the real power of exploring mathematics with Sage.)  "
+  "body": "  Again, using only the Sage commands described previously, explore the structure of for various values of and see if you can formulate an interesting conjecture about some basic property of this group. (Yes, this is a very open-ended question, but this is ultimately the real power of exploring mathematics with Sage.)   "
 },
 {
   "id": "cyclic-11",
@@ -3399,7 +3408,7 @@ var ptx_lunr_docs = [
   "url": "inactive-code.html#inactive-code-3",
   "type": "Listing",
   "number": "5.1.1",
-  "title": "",
+  "title": "A static Java program with highlighted lines",
   "body": " A static Java program with highlighted lines   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
 },
 {
@@ -3408,7 +3417,7 @@ var ptx_lunr_docs = [
   "url": "inactive-code.html#inactive-code-5",
   "type": "Listing",
   "number": "5.1.2",
-  "title": "",
+  "title": "Python program, relying on default programs language",
   "body": " Python program, relying on default programs language   def say_hello(): print(\"Hello, World!\") say_hello()   "
 },
 {
@@ -3418,7 +3427,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "ActiveCode",
-  "body": " ActiveCode  Programs in supported languages are made interactive in HTML when interactive is set to activecode . Some languages can be made interactive on any server, while others require being served from Runestone servers. See Interactive Programs Capabilities in the PreTeXt Guide for a list of what languages are supported in which environs.   An interactive Python program, using Runestone   print(\"Hello, World!\")     An interactive JavaScript program, using Runestone   document.write('Hello, world!');    Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify compiler-args and linker-args or interpreter-args as appropriate to the language. Default values for those options can be set in <docinfo\/programs> - any defaults set there will be used for any program that lacks the corresponding attribute.   A C++ program with compiler-args and stdin  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane     Java Hello, World , with flags   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    An Octave program will also only be interactive if hosted on a Runestone server. Octave is meant to be a drop-in replacement for Matlab.   A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)    A language not supported by Runestone Services will always be rendered static.   A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.    A program can have a <preamble> and\/or <postamble> which are added to the code that the user writes before it is run. They are visible by default, but can be made invisible with visible set to \"no\" . When visible, the code editor will prevent those regions from being modified. The indentation for lines in the preamble\/code\/postamble elements will be calculated relative to each other - make sure to indent them all to a similar extent. (In the source for the sample below, the # TODO... is intentially indented one stop extra so that the user's code is part of the add function.  <tests> are similar to <postamble> in that it represents code that is added to the users submission. However, <tests> is intended specifically for unit testing code (see examples below for unit testing in Python, Java, C++, SQL). Tests are invisble by default and can be made visible with visible set to \"yes\" . For historical reasons, the indentation of the <tests> is treated separately from the rest of the program.   A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    Here is the same Python program from the previous section, but now with a <preamble> and <postamble> that are invisible. The user will not see the code that is added to their submission. Not actually useful in this case, but it might be if you wanted to hide boilerplate setup from the reader.   A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    The following Python program is in a <listing> since we will want to reference it shortly. The program does not do very much, it just defines four variables whose values are lists of statistics. It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an language and is relying on the default one specified in <docinfo\/programs>   A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]    Now a programming exercise. The program upcoming is going to include all the code of the program preceding. This is accomplished with an include attribute on the including program whose value is the xml:id of the included program. So by running the next program, it should pass all of its three tests (for example another example using unit tests, see ). Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.  You'll see nothing that tells the reader that the one chunk of code is prefacing the other. And in static formats it might be even less obvious. So you will want to say something to alert the reader. Here it is easy: includes all the code from .  This program also makes use of autorun to execute on page load and the codelens to disable the codelens feature.  A Python program, including another  Compute the total amount of money loaned and store it in the variable loan_total .   loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()   Exact same exercise again, but now we include two programs. We first get the simple Hello, world! program at and then the same program defining the variables with lists of statistics at . So the output just includes the extra result from the print() statement.  This program also makes use of hidecode to initially keep the code hidden and download to enable a file download of the program (that includes all the included code).  A Python program, including two others  Compute the total amount of money loaned and store it in the variable loan_total .   loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()   Here is an activecode with language set to sql uses the database to load a SQLite database file.  An SQL program that uses an SQLite database file  Select all the columns of all the rows in the test database table.   SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35   A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing.  "
+  "body": " ActiveCode  Programs in supported languages are made interactive in HTML when interactive is set to activecode . Some languages can be made interactive on any server, while others require being served from Runestone servers. See Interactive Programs Capabilities in the PreTeXt Guide for a list of what languages are supported in which environs.   An interactive Python program, using Runestone   print(\"Hello, World!\")    Otherwise they are rendered as text with syntax coloring. Either way, if a language is not specified, docinfo\/programs\/@language will be checked to determine what language to assume the code is written in.   An interactive Python program, using Runestone   print(\"Hello, World!\")    A C program will only be interactive if hosted on a Runestone server.   An C program, interactive on a Runestone server   #include <stdio.h> int main(void) { puts(\"Hello, world!\"); }    A Java program will only be interactive if hosted on a Runestone server.   Informal Java Hello, World  A Java program, interactive on a Runestone server   \"hi\" in Java  public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }    Javascript programs are made interactive in HTML, on request.   An interactive JavaScript program, using Runestone   document.write('Hello, world!');    Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify compiler-args and linker-args or interpreter-args as appropriate to the language. Default values for those options can be set in <docinfo\/programs> - any defaults set there will be used for any program that lacks the corresponding attribute.   A C++ program with compiler-args and stdin  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane     A static Java program   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    An Octave program will also only be interactive if hosted on a Runestone server. Octave is meant to be a drop-in replacement for Matlab.   A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)    A language not supported by Runestone Services will always be rendered static.   A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.    The highlight-lines works on ActiveCode programs, but the highlighted lines are only shown when viewing the initial code. Any version of the code that the reader has edited may have shifted lines of code and thus highlighting might affect the wrong lines, causing confusion.  def add(a, b): return a + b # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")  A program can have a <preamble> and\/or <postamble> which are added to the code that the user writes before it is run. They are visible by default, but can be made invisible with visible set to \"no\" . When visible, the code editor will prevent those regions from being modified. The indentation for lines in the preamble\/code\/postamble elements will be calculated relative to each other - make sure to indent them all to a similar extent. (In the source for the sample below, the # TODO... is intentially indented one stop extra so that the user's code is part of the add function.  <tests> are similar to <postamble> in that it represents code that is added to the users submission. However, <tests> is intended specifically for unit testing code (see examples below for unit testing in Python, Java, C++, SQL). Tests are invisble by default and can be made visible with visible set to \"yes\" . For historical reasons, the indentation of the <tests> is treated separately from the rest of the program.   A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    Here is the same Python program from the previous section, but now with a <preamble> and <postamble> that are invisible. The user will not see the code that is added to their submission. Not actually useful in this case, but it might be if you wanted to hide boilerplate setup from the reader.   A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    The following Python program is in a <listing> since we will want to reference it shortly. The program does not do very much, it just defines four variables whose values are lists of statistics. It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an language and is relying on the default one specified in <docinfo\/programs>   A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]    An ActiveCode running on the Runestone server (rather than in a browser) can be provided with attributes that are flags to influence the compiler and linker, as in this <program> recycled from before.   A Java program, interactive on a Runestone server, with compiler and linker flags   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    Now a programming exercise. The program upcoming is going to include all the code of the program preceding. This is accomplished with an include attribute on the including program whose value is the xml:id of the included program. So by running the next program, it should pass all of its three tests (for example another example using unit tests, see ). Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.  You'll see nothing that tells the reader that the one chunk of code is prefacing the other. And in static formats it might be even less obvious. So you will want to say something to alert the reader. Here it is easy: includes all the code from .  This program also makes use of autorun to execute on page load and the codelens to disable the codelens feature.   A Python program, including another   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()    Exact same exercise again, but now we include two programs. We first get the simple Hello, world! program at and then the same program defining the variables with lists of statistics at . So the output just includes the extra result from the print() statement.  This program also makes use of hidecode to initially keep the code hidden and download to enable a file download of the program (that includes all the included code).   A Python program, including two others   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()    Here is an activecode with language set to sql uses the database to load a SQLite database file.   An SQL program that uses an SQLite database file   Select all the columns of all the rows in the test database table.    SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35    Now a C++ program that is spread across multiple files. This example will only be interactive on a Runestone server.  First, we have a .h file that defines an filename . It has an xml:id so other elements can reference it. It also has an label which is it's unique identifier in the Runestone database. (The label is intentionally different than the xml:id for demonstration purposes, but they can be the same.) The filename is used to indicate what to name to use when the contents of the element are written to a file on the server - other program code and\/or tools on the server can look for it using this name. The filename need not be unique we could have multiple programs with filename=\"add.h\" . As we will see below, the author specifies which version of a file should be used in any given location with its unique xml:id.  The <program> is inside of a <listing> so that we have a place to add a caption and so that we can reference the code sample, including that caption, with an <xref> from elsewhere. Note that the <listing> has both a <caption> and a <title> . The <caption> will be rendered with the program. The <title> will not appear locally. It will be used if an <xref> links to the <listing> using text=\"title\"   add.h (version 1)  int add(int a, int b);   Next, a .cpp file. Note that because it is part of an exercise, the label is applied to the exercise that contains it. The xml:id and filename still belong on the program itself.  It also has extra-compiler-args . These will be added to any default compiler args for the book. In this case, the -c indicates that we only want to compile this file when it is Run and not try to link it or actually run it.    You can leave this code as is or modify it. When you click Run , the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.   int add(int a, int b) { return a + b; }   Finally, the core program. add-files is used to specify (by xml:id) the files that need to be added to the program directory. compile-also specifies files that must be compiled with this source file (they will be assumed to be also part of add-files ). Notice that when using add-files to reference code we want to include, we use the xml:id of the target program - it has the contents we want to include. When making a textual reference with an <xref> we can't link to the program, as it lacks the contextual information required to create a valid reference. Instead, we should link to a listing (or some other container) that surrounds the code, like this: or  #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }  Note that there is a cross page test of add-files located in  A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing.  "
 },
 {
   "id": "program-activecode-python",
@@ -3426,43 +3435,70 @@ var ptx_lunr_docs = [
   "url": "activecode.html#program-activecode-python",
   "type": "Listing",
   "number": "5.2.1",
-  "title": "",
+  "title": "An interactive Python program, using <span class=\"booktitle\">Runestone<\/span>",
   "body": " An interactive Python program, using Runestone   print(\"Hello, World!\")   "
+},
+{
+  "id": "program-activecode-python2",
+  "level": "2",
+  "url": "activecode.html#program-activecode-python2",
+  "type": "Listing",
+  "number": "5.2.2",
+  "title": "An interactive Python program, using <span class=\"booktitle\">Runestone<\/span>",
+  "body": " An interactive Python program, using Runestone   print(\"Hello, World!\")   "
+},
+{
+  "id": "program-activecode-c",
+  "level": "2",
+  "url": "activecode.html#program-activecode-c",
+  "type": "Listing",
+  "number": "5.2.3",
+  "title": "An C program, interactive on a <span class=\"booktitle\">Runestone<\/span> server",
+  "body": " An C program, interactive on a Runestone server   #include <stdio.h> int main(void) { puts(\"Hello, world!\"); }   "
+},
+{
+  "id": "program-activecode-java",
+  "level": "2",
+  "url": "activecode.html#program-activecode-java",
+  "type": "Listing",
+  "number": "5.2.4",
+  "title": "Informal Java “Hello, World”A Java program, interactive on a <span class=\"booktitle\">Runestone<\/span> server",
+  "body": " Informal Java Hello, World  A Java program, interactive on a Runestone server   \"hi\" in Java  public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }   "
 },
 {
   "id": "program-activecode-javascript",
   "level": "2",
   "url": "activecode.html#program-activecode-javascript",
   "type": "Listing",
-  "number": "5.2.2",
-  "title": "",
+  "number": "5.2.5",
+  "title": "An interactive JavaScript program, using <span class=\"booktitle\">Runestone<\/span>",
   "body": " An interactive JavaScript program, using Runestone   document.write('Hello, world!');   "
 },
 {
-  "id": "activecode-6",
+  "id": "activecode-13",
   "level": "2",
-  "url": "activecode.html#activecode-6",
+  "url": "activecode.html#activecode-13",
   "type": "Listing",
-  "number": "5.2.3",
-  "title": "",
+  "number": "5.2.6",
+  "title": "A C++ program with compiler-args and stdin",
   "body": " A C++ program with compiler-args and stdin  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane   "
 },
 {
-  "id": "program-activecode-java-flags",
+  "id": "program-static-java",
   "level": "2",
-  "url": "activecode.html#program-activecode-java-flags",
+  "url": "activecode.html#program-static-java",
   "type": "Listing",
-  "number": "5.2.4",
-  "title": "",
-  "body": " Java Hello, World , with flags   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
+  "number": "5.2.7",
+  "title": "A static Java program",
+  "body": " A static Java program   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
 },
 {
   "id": "program-activecode-octave",
   "level": "2",
   "url": "activecode.html#program-activecode-octave",
   "type": "Listing",
-  "number": "5.2.5",
-  "title": "",
+  "number": "5.2.8",
+  "title": "A simple Octave program",
   "body": " A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)   "
 },
 {
@@ -3470,26 +3506,26 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#program-mistake-pascal",
   "type": "Listing",
-  "number": "5.2.6",
-  "title": "",
+  "number": "5.2.9",
+  "title": "A Pascal program that cannot be interactive on Runestone",
   "body": " A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.   "
 },
 {
-  "id": "activecode-14",
+  "id": "activecode-23",
   "level": "2",
-  "url": "activecode.html#activecode-14",
+  "url": "activecode.html#activecode-23",
   "type": "Listing",
-  "number": "5.2.7",
-  "title": "",
+  "number": "5.2.10",
+  "title": "A Python program with preamble\/postamble",
   "body": " A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")   "
 },
 {
-  "id": "activecode-16",
+  "id": "activecode-25",
   "level": "2",
-  "url": "activecode.html#activecode-16",
+  "url": "activecode.html#activecode-25",
   "type": "Listing",
-  "number": "5.2.8",
-  "title": "",
+  "number": "5.2.11",
+  "title": "A Python program with invisible pre\/post ambles",
   "body": " A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")   "
 },
 {
@@ -3497,14 +3533,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#listing-python-included",
   "type": "Listing",
-  "number": "5.2.9",
-  "title": "",
+  "number": "5.2.12",
+  "title": "A Python program that defines some statistics",
   "body": " A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]   "
 },
 {
-  "id": "activecode-19",
+  "id": "program-activecode-java-flags",
   "level": "2",
-  "url": "activecode.html#activecode-19",
+  "url": "activecode.html#program-activecode-java-flags",
+  "type": "Listing",
+  "number": "5.2.13",
+  "title": "A Java program, interactive on a <span class=\"booktitle\">Runestone<\/span> server, with compiler and linker flags",
+  "body": " A Java program, interactive on a Runestone server, with compiler and linker flags   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
+},
+{
+  "id": "activecode-30",
+  "level": "2",
+  "url": "activecode.html#activecode-30",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3515,27 +3560,45 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#exercise-python-including",
   "type": "Checkpoint",
-  "number": "5.2.10",
+  "number": "5.2.14",
   "title": "A Python program, including another.",
-  "body": "A Python program, including another  Compute the total amount of money loaned and store it in the variable loan_total .   loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()  "
+  "body": " A Python program, including another   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()   "
 },
 {
   "id": "exercise-python-including-two",
   "level": "2",
   "url": "activecode.html#exercise-python-including-two",
   "type": "Checkpoint",
-  "number": "5.2.11",
+  "number": "5.2.15",
   "title": "A Python program, including two others.",
-  "body": "A Python program, including two others  Compute the total amount of money loaned and store it in the variable loan_total .   loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()  "
+  "body": " A Python program, including two others   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()   "
 },
 {
   "id": "exercise-sql-using-db",
   "level": "2",
   "url": "activecode.html#exercise-sql-using-db",
   "type": "Checkpoint",
-  "number": "5.2.12",
+  "number": "5.2.16",
   "title": "An SQL program that uses an SQLite database file.",
-  "body": "An SQL program that uses an SQLite database file  Select all the columns of all the rows in the test database table.   SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35  "
+  "body": " An SQL program that uses an SQLite database file   Select all the columns of all the rows in the test database table.    SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35   "
+},
+{
+  "id": "addh-v1-listing",
+  "level": "2",
+  "url": "activecode.html#addh-v1-listing",
+  "type": "Listing",
+  "number": "5.2.17",
+  "title": "add.h (version 1)",
+  "body": " add.h (version 1)  int add(int a, int b);  "
+},
+{
+  "id": "addcpp-v1",
+  "level": "2",
+  "url": "activecode.html#addcpp-v1",
+  "type": "Checkpoint",
+  "number": "5.2.18",
+  "title": "",
+  "body": "  You can leave this code as is or modify it. When you click Run , the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.   int add(int a, int b) { return a + b; }  "
 },
 {
   "id": "code-lens",
@@ -3552,7 +3615,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#program-codelens-python",
   "type": "Listing",
   "number": "5.3.1",
-  "title": "",
+  "title": "A Python program, stepable with CodeLens",
   "body": " A Python program, stepable with CodeLens   print('Hello, World!')   "
 },
 {
@@ -3561,7 +3624,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#program-codelens-c",
   "type": "Listing",
   "number": "5.3.2",
-  "title": "",
+  "title": "An C program, stepable with CodeLens",
   "body": " An C program, stepable with CodeLens   #include <stdio.h> int main(void) { puts(\"Hello, World!\"); }   "
 },
 {
@@ -3570,7 +3633,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#program-codelens-java",
   "type": "Listing",
   "number": "5.3.3",
-  "title": "",
+  "title": "A Java program, stepable with CodeLens",
   "body": " A Java program, stepable with CodeLens   public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }   "
 },
 {
@@ -3579,7 +3642,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#sieve-python",
   "type": "Listing",
   "number": "5.3.4",
-  "title": "",
+  "title": "Sieve of Eratosthenes<details class=\"ptx-footnote\" aria-live=\"polite\" id=\"sieve-python-1-2\"><summary class=\"ptx-footnote__number\" title=\"Footnote 5.3.1\"><sup> 1 <\/sup><\/summary><div class=\"ptx-footnote__contents\" id=\"sieve-python-1-2\"><code class=\"code-inline tex2jax_ignore\">www.tutorialspoint.com\/python-program-for-sieve-of-eratosthenes<\/code><\/div><\/details>, Java",
   "body": " Sieve of Eratosthenes , Java   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)   "
 },
 {
@@ -3588,7 +3651,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#sieve-cpp",
   "type": "Listing",
   "number": "5.3.5",
-  "title": "",
+  "title": "Sieve of Eratosthenes<details class=\"ptx-footnote\" aria-live=\"polite\" id=\"sieve-cpp-1-2\"><summary class=\"ptx-footnote__number\" title=\"Footnote 5.3.2\"><sup> 2 <\/sup><\/summary><div class=\"ptx-footnote__contents\" id=\"sieve-cpp-1-2\"><code class=\"code-inline tex2jax_ignore\">www.tutorialspoint.com\/cplusplus-program-to-implement-sieve-of-eratosthenes-to-generate-prime-numbers-between-given-range<\/code><\/div><\/details>, C++",
   "body": " Sieve of Eratosthenes , C++   #include <stdio.h> const int len = 20; int main() { int arr[20] = {0}; for (int i = 2; i < len; i++) { for (int j = i * i; j < len; j+=i) { arr[j - 1] = 1; } } for (int i = 1; i < len; i++) { if (arr[i - 1] == 0) printf(\" %d\", i); } }   "
 },
 {
@@ -3597,7 +3660,7 @@ var ptx_lunr_docs = [
   "url": "code-lens.html#sieve-java",
   "type": "Listing",
   "number": "5.3.6",
-  "title": "",
+  "title": "Sieve of Eratosthenes<details class=\"ptx-footnote\" aria-live=\"polite\" id=\"sieve-java-1-2\"><summary class=\"ptx-footnote__number\" title=\"Footnote 5.3.3\"><sup> 3 <\/sup><\/summary><div class=\"ptx-footnote__contents\" id=\"sieve-java-1-2\"><code class=\"code-inline tex2jax_ignore\">www.tutorialspoint.com\/Sieve-of-Eratosthenes-in-java<\/code><\/div><\/details>, Java",
   "body": " Sieve of Eratosthenes , Java   public class SievePrimeFactors { public static void main(String args[]) { int num = 20; boolean[] bool = new boolean[num]; for (int i = 0; i< bool.length; i++) { bool[i] = true; } for (int i = 2; i < Math.sqrt(num); i++) { if(bool[i] == true) { for(int j = (i*i); j < num; j = j+i) { bool[j] = false; } } } System.out.println(\"List of prime numbers: \"); for (int i = 2; i< bool.length; i++) { if(bool[i]==true) { System.out.println(i); } } } }   "
 },
 {
@@ -3607,7 +3670,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Coding Exercises",
-  "body": " Coding Exercises  Program listings can be more that just live demonstrations, they can be exercises. The first two also occur in the sample article where they just get a static rendering, if at all.  Inline Coding Exercise, No Help  An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.  We didn't really ask you to do anything.  Inline Coding Exercise, Partial  Similar to above, but we provide a starting point for the exercise.   #include <stdio.h> int main(void)   We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)     Activity Coding Exercise   Similar to above, but now as a complete Python program inside an <activity> . This demonstrates the possibility to use any project-like block ( <project> , <activity> , <exploration> , <investigation> ), but not in the case when structured with <task> . (There is an empty <tests> element here, designed to test relief for an error this will cause on a Runestone server.)    for i in range(10): print(i)     We're still not really sure.   An Exercise with a Static Program  Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)   We're not really sure. Still.  Unit testing can be used to automatically evaluate student work. Unit testing frameworks are available for Python, Java, and C++  Coding Exercise, with Unit Tests  Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]   def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()   We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)    Java Exercise, with Unit Tests  Unit tests for Java can be written using junit.   public class StudentCode { public static void main(String[] args) { for(int count = 2; count $lt;= 10; count++) { System.out.println(count); } } public int adder(int a, int b) { return a+b; } }  import static org.junit.Assert.*; import org.junit.After; import org.junit.Before; import org.junit.Test; import java.io.*; import java.nio.file.Files; import java.nio.file.Paths; public class ForLoopTestTester extends CodeTestHelper { \/* Example test for main method - should pass *\/ @Test public void testMain() throws IOException { \/\/ I wrote a method to run a method and send back the output - only works with String[] args for now String output = getMethodOutput(\"main\"); String expect = \"2\\n3\\n4\\n5\\n6\\n7\\n8\\n9\\n10\\n\"; assertEquals(\"Output doesn't match\", cleanString(expect), cleanString (output)); } @Test public void testAdder() throws IOException { StudentCode s = new StudentCode(); String msg = createMessage(\"Adding 2+2\", \"\"+4, \"\"+s.adder(2,2)); System.out.println(\"testing s.adder(2,2)\"); assertEquals(msg, 4, s.adder(2,2)); assertEquals(\"adding 3+3\", 6, s.adder(3,3)); } @Test public void testContent() throws IOException { String content = new String ( Files.readAllBytes( Paths.get(\"StudentCode. java\"))); } }   C++ Exercise, with Unit Tests  Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).   \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }   For simple programs, or languages without an available unit testing framework, input-output testing can be done instead. IO testing can only be done on languages that are run on a Runestone server (Java\/C\/C++\/Octave\/Python3).  C++ Exercise, with IO Tests  Read in an integer n . Print out a n by n square of asterisks.   #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****     "
+  "body": " Coding Exercises  Program listings can be more that just live demonstrations, they can be exercises. The first two also occur in the sample article where they just get a static rendering, if at all.   Inline Coding Exercise, No Help   An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.    We didn't really ask you to do anything.    Inline Coding Exercise, Partial   Similar to above, but we provide a starting point for the exercise.    #include <stdio.h> int main(void)    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)      Activity Coding Exercise   Similar to above, but now as a complete Python program inside an <activity> . This demonstrates the possibility to use any project-like block ( <project> , <activity> , <exploration> , <investigation> ), but not in the case when structured with <task> . (There is an empty <tests> element here, designed to test relief for an error this will cause on a Runestone server.)    for i in range(10): print(i)     We're still not really sure.    An Exercise with a Static Program   Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)    We're not really sure. Still.   Unit testing can be used to automatically evaluate student work. Unit testing frameworks are available for Python, Java, and C++   Coding Exercise, with Unit Tests   Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]    def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)      Java Exercise, with Unit Tests   Unit tests for Java can be written using junit.    public class Test1 { public static void main(String[] args) { boolean isRaining = true; if (isRaining) { System.out.println(\"Take an umbrella!\"); } System.out.println(\"Drive carefully\"); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; public class RunestoneTests extends CodeTestHelper { @Test public void testMain() throws IOException { String output = getMethodOutput(\"main\"); String expect = \"Take an umbrella! \\nDrive carefully\"; boolean passed = getResults(expect, output, \"Expected output from main\"); assertTrue(passed); } }     C++ Exercise, with Unit Tests   Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).    \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }    For simple programs, or languages without an available unit testing framework, input-output testing can be done instead. IO testing can only be done on languages that are run on a Runestone server (Java\/C\/C++\/Octave\/Python3).   C++ Exercise, with IO Tests   Read in an integer n . Print out a n by n square of asterisks.    #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****      "
 },
 {
   "id": "coding-exercise-blank",
@@ -3616,7 +3679,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.1",
   "title": "Inline Coding Exercise, No Help.",
-  "body": "Inline Coding Exercise, No Help  An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.  We didn't really ask you to do anything. "
+  "body": " Inline Coding Exercise, No Help   An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.    We didn't really ask you to do anything.  "
 },
 {
   "id": "coding-exercise-partial-one",
@@ -3625,7 +3688,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.2",
   "title": "Inline Coding Exercise, Partial.",
-  "body": "Inline Coding Exercise, Partial  Similar to above, but we provide a starting point for the exercise.   #include <stdio.h> int main(void)   We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)   "
+  "body": " Inline Coding Exercise, Partial   Similar to above, but we provide a starting point for the exercise.    #include <stdio.h> int main(void)    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)    "
 },
 {
   "id": "coding-exercise-partial-two",
@@ -3643,7 +3706,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.3",
   "title": "An Exercise with a Static Program.",
-  "body": "An Exercise with a Static Program  Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)   We're not really sure. Still. "
+  "body": " An Exercise with a Static Program   Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)    We're not really sure. Still.  "
 },
 {
   "id": "coding-exercise-python-unit-test",
@@ -3652,7 +3715,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.4",
   "title": "Coding Exercise, with Unit Tests.",
-  "body": "Coding Exercise, with Unit Tests  Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]   def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()   We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)   "
+  "body": " Coding Exercise, with Unit Tests   Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]    def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)    "
 },
 {
   "id": "coding-exercise-java-unit-test",
@@ -3661,7 +3724,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.5",
   "title": "Java Exercise, with Unit Tests.",
-  "body": "Java Exercise, with Unit Tests  Unit tests for Java can be written using junit.   public class StudentCode { public static void main(String[] args) { for(int count = 2; count $lt;= 10; count++) { System.out.println(count); } } public int adder(int a, int b) { return a+b; } }  import static org.junit.Assert.*; import org.junit.After; import org.junit.Before; import org.junit.Test; import java.io.*; import java.nio.file.Files; import java.nio.file.Paths; public class ForLoopTestTester extends CodeTestHelper { \/* Example test for main method - should pass *\/ @Test public void testMain() throws IOException { \/\/ I wrote a method to run a method and send back the output - only works with String[] args for now String output = getMethodOutput(\"main\"); String expect = \"2\\n3\\n4\\n5\\n6\\n7\\n8\\n9\\n10\\n\"; assertEquals(\"Output doesn't match\", cleanString(expect), cleanString (output)); } @Test public void testAdder() throws IOException { StudentCode s = new StudentCode(); String msg = createMessage(\"Adding 2+2\", \"\"+4, \"\"+s.adder(2,2)); System.out.println(\"testing s.adder(2,2)\"); assertEquals(msg, 4, s.adder(2,2)); assertEquals(\"adding 3+3\", 6, s.adder(3,3)); } @Test public void testContent() throws IOException { String content = new String ( Files.readAllBytes( Paths.get(\"StudentCode. java\"))); } }  "
+  "body": " Java Exercise, with Unit Tests   Unit tests for Java can be written using junit.    public class Test1 { public static void main(String[] args) { boolean isRaining = true; if (isRaining) { System.out.println(\"Take an umbrella!\"); } System.out.println(\"Drive carefully\"); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; public class RunestoneTests extends CodeTestHelper { @Test public void testMain() throws IOException { String output = getMethodOutput(\"main\"); String expect = \"Take an umbrella! \\nDrive carefully\"; boolean passed = getResults(expect, output, \"Expected output from main\"); assertTrue(passed); } }   "
 },
 {
   "id": "coding-exercise-cpp-unit-test",
@@ -3670,7 +3733,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.6",
   "title": "C++ Exercise, with Unit Tests.",
-  "body": "C++ Exercise, with Unit Tests  Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).   \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }  "
+  "body": " C++ Exercise, with Unit Tests   Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).    \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }   "
 },
 {
   "id": "coding-exercise-cpp-io-tests",
@@ -3679,7 +3742,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.4.7",
   "title": "C++ Exercise, with IO Tests.",
-  "body": "C++ Exercise, with IO Tests  Read in an integer n . Print out a n by n square of asterisks.   #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****    "
+  "body": " C++ Exercise, with IO Tests   Read in an integer n . Print out a n by n square of asterisks.    #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****     "
 },
 {
   "id": "data-files",
@@ -3688,21 +3751,21 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.5",
   "title": "Data Files",
-  "body": " Data Files  In the following file of climate data, the first column is Year, second column is Global Average Temperature (Celcius), and the third column is Global Emmisions C02 (Giga-tons). [Normally you might place this inside a block with the <datafile> .]    1850 -0.37 2.24E-7 1860 -0.34 3.94E-7 1870 -0.28 6.6E-7 1880 -0.24 1.1 1890 -0.42 1.72 1900 -0.2 2.38 1910 -0.49 3.34 1920 -0.25 4.01 1930 -0.14 4.53 1940 0.01 5.5 1950 -0.17 6.63 1960 -0.05 10.5 1970 -0.03 16 1980 0.09 20.3 1990 0.3 22.6 2000 0.29 24.9 2010 0.56 32.7 2019 0.74 33.3    ccfile = open(\"ccdata1.txt\", \"r\") for aline in ccfile: values = aline.split() print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.') ccfile.close()     Stack Overflow Developer Survey  [A data file can go lots of places. But to make it more prominent, and easy to cross-reference, it would be natural to put it into a <data> block.]  Now that you are experienced with working with files lets look at a bit of the data set. The survey had 98,855 respondents. We will work with a sample of 2000 of those responses for this lab. In addition we have narrowed down the questions from 129 to just 13. The columns we have included in this data set are:  Respondent  Country  JobSatisfaction  UndergradMajor  ConvertedSalary  Exercise  Gender  RaceEthnicity  EducationParents  HoursOutside  Age  LastNewJob  LanguageWorkedWith            import image img = image.Image(\"luther-bell.jpg\") print(img.getWidth()) print(img.getHeight()) p = img.getPixel(45, 55) print(p.getRed(), p.getGreen(), p.getBlue())    Golden Gate Bridge Image processing  This image has a Creative Commons license, but we've lost track of the exact terms.  [Now a data file and a program to process it, all bundled up inside a <computation> , since an <example> gets knowled and the ActiveCode does not fill.]      This program changes every pixel of the image.   import image img = image.Image(\"golden_gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,15) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) newred = p.red * 1.4 newgreen = p.green * .75 newblue = p.blue * 1.1 newpixel = image.Pixel(newred, newgreen, newblue) img.setPixel(col, row, newpixel) img.draw(win) win.exitonclick()    The examples above all use Python, which will run in your browser. Other languages will only run when a project is hosted on Runestone Academy servers. And in this case there is a small twist. You need to indicate which existing <datafile> your program needs, even if that seems obvious by reading the code. Use a datafile attribute on <program> that has a list of filenames. These are the filenames you set via the filename attribute of the <datafile> element, and are the names you use in your program's code. As before, no path information is neede, nor allowed.  [2023-02-21: testing for single files first, list of several not yet implemented.]  When the language attribute of a <program> is set to python3 that means in-browser Python is not good enough, and you want the greater power and flexibility of having your code run on a Runestone Academy server. So this is our first example of using the datafile attribute.  The data file is an abbreviated version of the example above, just to be different. And is not editable.   1900 -0.2 2.38 1910 -0.49 3.34 1920 -0.25 4.01 1930 -0.14 4.53 1940 0.01 5.5 1950 -0.17 6.63 1960 -0.05 10.5 1970 -0.03 16 1980 0.09 20.3 1990 0.3 22.6 2000 0.29 24.9 2010 0.56 32.7 2019 0.74 33.3   The program is identical to the above, but we specify python3 as the language, and use the smaller file. So this example is only active when this content is hosted on a Runestone Academy server.   ccfile = open(\"ccdata2.txt\", \"r\") for aline in ccfile: values = aline.split() print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.') ccfile.close()   [2023-02-24 Testing Java with multiple data files]   Flowers  Two flower images as <datafile> for use in upcoming Java program.            import java.awt.*; import java.awt.font.*; import java.awt.geom.*; import java.awt.image.BufferedImage; import java.text.*; import java.util.*; import java.util.List; \/** * A class that represents a picture. This class inherits from * SimplePicture and allows the student to add functionality to * the Picture class. * * @author Barbara Ericson ericson@cc.gatech.edu *\/ public class Picture extends SimplePicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Constructor that takes no arguments *\/ public Picture () { \/* not needed but use it to show students the implicit call to super() * child constructors always call a parent constructor *\/ super(); } \/** * Constructor that takes a file name and creates the picture * @param fileName the name of the file to create the picture from *\/ public Picture(String fileName) { \/\/ let the parent class handle this fileName super(fileName); } \/** * Constructor that takes the height and width * @param height the height of the desired picture * @param width the width of the desired picture *\/ public Picture(int width, int height) { \/\/ let the parent class handle this width and height super(width,height); } \/** * Constructor that takes a picture and creates a * copy of that picture * @param copyPicture the picture to copy *\/ public Picture(Picture copyPicture) { \/\/ let the parent class do the copy super(copyPicture); } \/** * Constructor that takes a buffered image * @param image the buffered image to use *\/ public Picture(BufferedImage image) { super(image); } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to return a string with information about this picture. * @return a string with information about the picture such as fileName, * height and width. *\/ public String toString() { String output = \"Picture, filename \" + getFileName() + \" height \" + getHeight() + \" width \" + getWidth(); return output; } \/** zeroBlue() method sets the blue values at all pixels to zero *\/ public void zeroBlue() { Pixel[][] pixels = this.getPixels2D(); for (Pixel[] rowArray : pixels) { for (Pixel p: rowArray) { p.setBlue(0); } } } \/* mirrorVertical() *\/ public void mirrorVertical() { Pixel[][] pixels = this.getPixels2D(); Pixel leftPixel = null; Pixel rightPixel = null; int width = pixels[0].length; for (int row = 0; row < pixels.length; row++) { for (int col = 0; col < width \/ 2; col++) { leftPixel = pixels[row][col]; rightPixel = pixels[row][width - 1 - col]; rightPixel.setColor(leftPixel.getColor()); } } } \/** copy from the passed fromPic to the * specified startRow and startCol in the * current picture * @param fromPic the picture to copy from * @param startRow the start row to copy to * @param startCol the start col to copy to *\/ public void copy(Picture fromPic, int startRow, int startCol) { Pixel fromPixel = null; Pixel toPixel = null; Pixel[][] toPixels = this.getPixels2D(); Pixel[][] fromPixels = fromPic.getPixels2D(); for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; fromRow++, toRow++) { for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length && toCol < toPixels[0].length; fromCol++, toCol++) { fromPixel = fromPixels[fromRow][fromCol]; toPixel = toPixels[toRow][toCol]; toPixel.setColor(fromPixel.getColor()); } } } public void createCollage() { \/\/ You can also try butterfly.jpg and snowflake.jpg Picture flower1 = new Picture(\"flower1.jpg\"); Picture flower2 = new Picture(\"flower2.jpg\"); this.copy(flower1,0,0); this.copy(flower2,100,0); this.copy(flower1,200,0); Picture flowerNoBlue = new Picture(flower2); flowerNoBlue.zeroBlue(); this.copy(flowerNoBlue,300,0); this.copy(flower1,400,0); this.copy(flower2,500,0); this.mirrorVertical(); this.show(); } \/* Main method for testing *\/ public static void main(String[] args) { Picture p = new Picture(500,500); p.createCollage(); } }     The following is experimental, as of 2023-07-05, and needs some organization, plus some credit to CSAwesome and Barb Ericson.        import java.awt.Image; import java.awt.image.BufferedImage; \/** * Interface to describe a digital picture. A digital picture can have an * associated file name. It can have a title. It has pixels * associated with it and you can get and set the pixels. You * can get an Image from a picture or a BufferedImage. You can load * it from a file name or image. You can show a picture. You can * explore a picture. You can create a new image for it. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public interface DigitalPicture { public String getFileName(); \/\/ get the file name that the picture came from public String getTitle(); \/\/ get the title of the picture public void setTitle(String title); \/\/ set the title of the picture public int getWidth(); \/\/ get the width of the picture in pixels public int getHeight(); \/\/ get the height of the picture in pixels public Image getImage(); \/\/ get the image from the picture public BufferedImage getBufferedImage(); \/\/ get the buffered image public int getBasicPixel(int x, int y); \/\/ get the pixel information as an int public void setBasicPixel(int x, int y, int rgb); \/\/ set the pixel information public Pixel getPixel(int x, int y); \/\/ get the pixel information as an object public Pixel[] getPixels(); \/\/ get all pixels in row-major order public Pixel[][] getPixels2D(); \/\/ get 2-D array of pixels in row-major order public void load(Image image); \/\/ load the image into the picture public boolean load(String fileName); \/\/ load the picture from a file public void show(); \/\/ show the picture public boolean write(String fileName); \/\/ write out a file } import java.awt.Color; \/** * Class that references a pixel in a picture. Pixel * stands for picture element where picture is * abbreviated pix. A pixel has a column (x) and * row (y) location in a picture. A pixel knows how * to get and set the red, green, blue, and alpha * values in the picture. A pixel also knows how to get * and set the color using a Color object. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public class Pixel { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ fields \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** the digital picture this pixel belongs to *\/ private DigitalPicture picture; \/** the x (column) location of this pixel in the picture; (0,0) is top left *\/ private int x; \/** the y (row) location of this pixel in the picture; (0,0) is top left *\/ private int y; \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * A constructor that takes the x and y location for the pixel and * the picture the pixel is coming from * @param picture the picture that the pixel is in * @param x the x location of the pixel in the picture * @param y the y location of the pixel in the picture *\/ public Pixel(DigitalPicture picture, int x, int y) { \/\/ set the picture this.picture = picture; \/\/ set the x location this.x = x; \/\/ set the y location this.y = y; } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to get the x location of this pixel. * @return the x location of the pixel in the picture *\/ public int getX() { return x; } \/** * Method to get the y location of this pixel. * @return the y location of the pixel in the picture *\/ public int getY() { return y; } \/** * Method to get the row (y value) * @return the row (y value) of the pixel in the picture *\/ public int getRow() { return y; } \/** * Method to get the column (x value) * @return the column (x value) of the pixel *\/ public int getCol() { return x; } \/** * Method to get the amount of alpha (transparency) at this pixel. * It will be from 0-255. * @return the amount of alpha (transparency) *\/ public int getAlpha() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the alpha value (starts at 25 so shift right 24) \/\/ then and it with all 1's for the first 8 bits to keep \/\/ end up with from 0 to 255 int alpha = (value >> 24) & 0xff; return alpha; } \/** * Method to get the amount of red at this pixel. It will be * from 0-255 with 0 being no red and 255 being as much red as * you can have. * @return the amount of red from 0 for none to 255 for max *\/ public int getRed() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the red value (starts at 17 so shift right 16) \/\/ then AND it with all 1's for the first 8 bits to \/\/ end up with a resulting value from 0 to 255 int red = (value >> 16) & 0xff; return red; } \/** * Method to get the red value from a pixel represented as an int * @param value the color value as an int * @return the amount of red *\/ public static int getRed(int value) { int red = (value >> 16) & 0xff; return red; } \/** * Method to get the amount of green at this pixel. It will be * from 0-255 with 0 being no green and 255 being as much green as * you can have. * @return the amount of green from 0 for none to 255 for max *\/ public int getGreen() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the green value (starts at 9 so shift right 8) int green = (value >> 8) & 0xff; return green; } \/** * Method to get the green value from a pixel represented as an int * @param value the color value as an int * @return the amount of green *\/ public static int getGreen(int value) { int green = (value >> 8) & 0xff; return green; } \/** * Method to get the amount of blue at this pixel. It will be * from 0-255 with 0 being no blue and 255 being as much blue as * you can have. * @return the amount of blue from 0 for none to 255 for max *\/ public int getBlue() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the blue value (starts at 0 so no shift required) int blue = value & 0xff; return blue; } \/** * Method to get the blue value from a pixel represented as an int * @param value the color value as an int * @return the amount of blue *\/ public static int getBlue(int value) { int blue = value & 0xff; return blue; } \/** * Method to get a color object that represents the color at this pixel. * @return a color object that represents the pixel color *\/ public Color getColor() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the red value (starts at 17 so shift right 16) \/\/ then AND it with all 1's for the first 8 bits to \/\/ end up with a resulting value from 0 to 255 int red = (value >> 16) & 0xff; \/\/ get the green value (starts at 9 so shift right 8) int green = (value >> 8) & 0xff; \/\/ get the blue value (starts at 0 so no shift required) int blue = value & 0xff; return new Color(red,green,blue); } \/** * Method to set the pixel color to the passed in color object. * @param newColor the new color to use *\/ public void setColor(Color newColor) { \/\/ set the red, green, and blue values int red = newColor.getRed(); int green = newColor.getGreen(); int blue = newColor.getBlue(); \/\/ update the associated picture updatePicture(this.getAlpha(),red,green,blue); } \/** * Method to update the picture based on the passed color * values for this pixel * @param alpha the alpha (transparency) at this pixel * @param red the red value for the color at this pixel * @param green the green value for the color at this pixel * @param blue the blue value for the color at this pixel *\/ public void updatePicture(int alpha, int red, int green, int blue) { \/\/ create a 32 bit int with alpha, red, green blue from left to right int value = (alpha << 24) + (red << 16) + (green << 8) + blue; \/\/ update the picture with the int value picture.setBasicPixel(x,y,value); } \/** * Method to correct a color value to be within 0 to 255 * @param the value to use * @return a value within 0 to 255 *\/ private static int correctValue(int value) { if (value < 0) value = 0; if (value > 255) value = 255; return value; } \/** * Method to set the red to a new red value * @param value the new value to use *\/ public void setRed(int value) { \/\/ set the red value to the corrected value int red = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), red, getGreen(), getBlue()); } \/** * Method to set the green to a new green value * @param value the value to use *\/ public void setGreen(int value) { \/\/ set the green value to the corrected value int green = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), getRed(), green, getBlue()); } \/** * Method to set the blue to a new blue value * @param value the new value to use *\/ public void setBlue(int value) { \/\/ set the blue value to the corrected value int blue = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), getRed(), getGreen(), blue); } \/** * Method to set the alpha (transparency) to a new alpha value * @param value the new value to use *\/ public void setAlpha(int value) { \/\/ make sure that the alpha is from 0 to 255 int alpha = correctValue(value); \/\/ update the associated picture updatePicture(alpha, getRed(), getGreen(), getBlue()); } \/** * Method to get the distance between this pixel's color and the passed color * @param testColor the color to compare to * @return the distance between this pixel's color and the passed color *\/ public double colorDistance(Color testColor) { double redDistance = this.getRed() - testColor.getRed(); double greenDistance = this.getGreen() - testColor.getGreen(); double blueDistance = this.getBlue() - testColor.getBlue(); double distance = Math.sqrt(redDistance * redDistance + greenDistance * greenDistance + blueDistance * blueDistance); return distance; } \/** * Method to compute the color distances between two color objects * @param color1 a color object * @param color2 a color object * @return the distance between the two colors *\/ public static double colorDistance(Color color1,Color color2) { double redDistance = color1.getRed() - color2.getRed(); double greenDistance = color1.getGreen() - color2.getGreen(); double blueDistance = color1.getBlue() - color2.getBlue(); double distance = Math.sqrt(redDistance * redDistance + greenDistance * greenDistance + blueDistance * blueDistance); return distance; } \/** * Method to get the average of the colors of this pixel * @return the average of the red, green, and blue values *\/ public double getAverage() { double average = (getRed() + getGreen() + getBlue()) \/ 3.0; return average; } \/** * Method to return a string with information about this pixel * @return a string with information about this pixel *\/ public String toString() { return \"Pixel row=\" + getRow() + \" col=\" + getCol() + \" red=\" + getRed() + \" green=\" + getGreen() + \" blue=\" + getBlue(); } } import javax.imageio.ImageIO; import java.awt.image.BufferedImage; import javax.swing.ImageIcon; import java.awt.*; import java.io.*; import java.awt.geom.*; import java.io.ByteArrayOutputStream; \/\/import javax.xml.bind.DatatypeConverter; import java.util.Base64; import java.util.Scanner; \/** * A class that represents a simple picture. A simple picture may have * an associated file name and a title. A simple picture has pixels, * width, and height. A simple picture uses a BufferedImage to * hold the pixels. You can also explore a simple picture. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public class SimplePicture implements DigitalPicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Fields \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * the file name associated with the simple picture *\/ private String fileName; \/** * the path name for the file *\/ private String pathName; \/** * the title of the simple picture *\/ private String title; \/** * buffered image to hold pixels for the simple picture *\/ private BufferedImage bufferedImage; \/** * extension for this file (jpg or bmp) *\/ private String extension; \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * A Constructor that takes no arguments. It creates a picture with * a width of 200 and a height of 100 that is all white. * A no-argument constructor must be given in order for a class to * be able to be subclassed. By default all subclasses will implicitly * call this in their parent's no-argument constructor unless a * different call to super() is explicitly made as the first line * of code in a constructor. *\/ public SimplePicture() {this(200,100);} \/** * A Constructor that takes a file name and uses the file to create * a picture * @param fileName the file name to use in creating the picture *\/ public SimplePicture(String fileName) { \/\/ load the picture into the buffered image load(fileName); } \/** * A constructor that takes the width and height desired for a picture and * creates a buffered image of that size. This constructor doesn't * show the picture. The pixels will all be white. * @param width the desired width * @param height the desired height *\/ public SimplePicture(int width, int height) { bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB); title = \"None\"; fileName = \"None\"; extension = \"jpg\"; setAllPixelsToAColor(Color.white); } \/** * A constructor that takes the width and height desired for a picture and * creates a buffered image of that size. It also takes the * color to use for the background of the picture. * @param width the desired width * @param height the desired height * @param theColor the background color for the picture *\/ public SimplePicture(int width, int height, Color theColor) { this(width,height); setAllPixelsToAColor(theColor); } \/** * A Constructor that takes a picture to copy information from * @param copyPicture the picture to copy from *\/ public SimplePicture(SimplePicture copyPicture) { if (copyPicture.fileName != null) { this.fileName = new String(copyPicture.fileName); this.extension = copyPicture.extension; } if (copyPicture.title != null) this.title = new String(copyPicture.title); if (copyPicture.bufferedImage != null) { this.bufferedImage = new BufferedImage(copyPicture.getWidth(), copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB); this.copyPicture(copyPicture); } } \/** * A constructor that takes a buffered image * @param image the buffered image *\/ public SimplePicture(BufferedImage image) { this.bufferedImage = image; title = \"None\"; fileName = \"None\"; extension = \"jpg\"; } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to get the extension for this picture * @return the extension (jpg, bmp, giff, etc) *\/ public String getExtension() { return extension; } \/** * Method that will copy all of the passed source picture into * the current picture object * @param sourcePicture the picture object to copy *\/ public void copyPicture(SimplePicture sourcePicture) { Pixel sourcePixel = null; Pixel targetPixel = null; \/\/ loop through the columns for (int sourceX = 0, targetX = 0; sourceX < sourcePicture.getWidth() && targetX < this.getWidth(); sourceX++, targetX++) { \/\/ loop through the rows for (int sourceY = 0, targetY = 0; sourceY < sourcePicture.getHeight() && targetY < this.getHeight(); sourceY++, targetY++) { sourcePixel = sourcePicture.getPixel(sourceX,sourceY); targetPixel = this.getPixel(targetX,targetY); targetPixel.setColor(sourcePixel.getColor()); } } } \/** * Method to set the color in the picture to the passed color * @param color the color to set to *\/ public void setAllPixelsToAColor(Color color) { \/\/ loop through all x for (int x = 0; x < this.getWidth(); x++) { \/\/ loop through all y for (int y = 0; y < this.getHeight(); y++) { getPixel(x,y).setColor(color); } } } \/** * Method to get the buffered image * @return the buffered image *\/ public BufferedImage getBufferedImage() { return bufferedImage; } \/** * Method to get a graphics object for this picture to use to draw on * @return a graphics object to use for drawing *\/ public Graphics getGraphics() { return bufferedImage.getGraphics(); } \/** * Method to get a Graphics2D object for this picture which can * be used to do 2D drawing on the picture *\/ public Graphics2D createGraphics() { return bufferedImage.createGraphics(); } \/** * Method to get the file name associated with the picture * @return the file name associated with the picture *\/ public String getFileName() { return fileName; } \/** * Method to set the file name * @param name the full pathname of the file *\/ public void setFileName(String name) { fileName = name; } \/** * Method to get the title of the picture * @return the title of the picture *\/ public String getTitle() { return title; } \/** * Method to set the title for the picture * @param title the title to use for the picture *\/ public void setTitle(String title) { this.title = title; } \/** * Method to get the width of the picture in pixels * @return the width of the picture in pixels *\/ public int getWidth() { return bufferedImage.getWidth(); } \/** * Method to get the height of the picture in pixels * @return the height of the picture in pixels *\/ public int getHeight() { return bufferedImage.getHeight(); } \/** * Method to get an image from the picture * @return the buffered image since it is an image *\/ public Image getImage() { return bufferedImage; } \/** * Method to return the pixel value as an int for the given x and y location * @param x the x coordinate of the pixel * @param y the y coordinate of the pixel * @return the pixel value as an integer (alpha, red, green, blue) *\/ public int getBasicPixel(int x, int y) { return bufferedImage.getRGB(x,y); } \/** * Method to set the value of a pixel in the picture from an int * @param x the x coordinate of the pixel * @param y the y coordinate of the pixel * @param rgb the new rgb value of the pixel (alpha, red, green, blue) *\/ public void setBasicPixel(int x, int y, int rgb) { bufferedImage.setRGB(x,y,rgb); } \/** * Method to get a pixel object for the given x and y location * @param x the x location of the pixel in the picture * @param y the y location of the pixel in the picture * @return a Pixel object for this location *\/ public Pixel getPixel(int x, int y) { \/\/ create the pixel object for this picture and the given x and y location Pixel pixel = new Pixel(this,x,y); return pixel; } \/** * Method to get a one-dimensional array of Pixels for this simple picture * @return a one-dimensional array of Pixel objects starting with y=0 * to y=height-1 and x=0 to x=width-1. *\/ public Pixel[] getPixels() { int width = getWidth(); int height = getHeight(); Pixel[] pixelArray = new Pixel[width * height]; \/\/ loop through height rows from top to bottom for (int row = 0; row < height; row++) for (int col = 0; col < width; col++) pixelArray[row * width + col] = new Pixel(this,col,row); return pixelArray; } \/** * Method to get a two-dimensional array of Pixels for this simple picture * @return a two-dimensional array of Pixel objects in row-major order. *\/ public Pixel[][] getPixels2D() { int width = getWidth(); int height = getHeight(); Pixel[][] pixelArray = new Pixel[height][width]; \/\/ loop through height rows from top to bottom for (int row = 0; row < height; row++) for (int col = 0; col < width; col++) pixelArray[row][col] = new Pixel(this,col,row); return pixelArray; } \/** * Method to load the buffered image with the passed image * @param image the image to use *\/ public void load(Image image) { \/\/ get a graphics context to use to draw on the buffered image Graphics2D graphics2d = bufferedImage.createGraphics(); \/\/ draw the image on the buffered image starting at 0,0 graphics2d.drawImage(image,0,0,null); \/\/ show the new image show(); } \/** * Method to show the picture in a picture frame *\/ public void show() { try { ByteArrayOutputStream output = new ByteArrayOutputStream(); ImageIO.write(this.bufferedImage, \"png\", output); String result = Base64.getEncoder().encodeToString(output.toByteArray()); \/\/BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray()); System.out.println(\"&lt;img src=\\'data:image\/\" + this.extension + \";base64,\" + result + \"\\'\/>\"); } catch (IOException e) { System.out.println(\"Errors occured in image conversion\"); } } \/** * Method to open a picture explorer on a copy (in memory) of this * simple picture *\/ \/* public void explore() { \/\/ create a copy of the current picture and explore it new PictureExplorer(new SimplePicture(this)); } *\/ \/** * Method to load the picture from the passed file name * @param fileName the file name to use to load the picture from * @throws IOException if the picture isn't found *\/ public void loadOrFail(String fileName) throws IOException { \/\/ set the current picture's file name this.fileName = fileName; \/\/ set the extension int posDot = fileName.lastIndexOf('.'); if (posDot >= 0) this.extension = fileName.substring(posDot + 1); \/\/ get file location String[] paths = fileName.split(\"\/\"); this.pathName = \"\"; if(paths.length != 1) { for(int i = 0; i < paths.length - 1; i++) { this.pathName = this.pathName + paths[i] + \"\/\"; } } \/\/ if the current title is null use the file name if (title == null) title = fileName; File file = new File(this.fileName); if (!file.canRead()) { throw new IOException(this.fileName + \" could not be opened. Check that you specified the path\"); } this.bufferedImage = ImageIO.read(file); } \/** * Method to read the contents of the picture from a filename * without throwing errors * @param fileName the name of the file to write the picture to * @return true if success else false *\/ public boolean load(String fileName) { try { this.loadOrFail(fileName); return true; } catch (Exception ex) { System.out.println(\"There was an error trying to open \" + fileName); bufferedImage = new BufferedImage(600,200, BufferedImage.TYPE_INT_RGB); addMessage(\"Couldn't load \" + fileName,5,100); return false; } } \/** * Method to load the picture from the passed file name * this just calls load(fileName) and is for name compatibility * @param fileName the file name to use to load the picture from * @return true if success else false *\/ public boolean loadImage(String fileName) { return load(fileName); } \/** * Method to draw a message as a string on the buffered image * @param message the message to draw on the buffered image * @param xPos the x coordinate of the leftmost point of the string * @param yPos the y coordinate of the bottom of the string *\/ public void addMessage(String message, int xPos, int yPos) { \/\/ get a graphics context to use to draw on the buffered image Graphics2D graphics2d = bufferedImage.createGraphics(); \/\/ set the color to white graphics2d.setPaint(Color.white); \/\/ set the font to Helvetica bold style and size 16 graphics2d.setFont(new Font(\"Helvetica\",Font.BOLD,16)); \/\/ draw the message graphics2d.drawString(message,xPos,yPos); } \/** * Method to draw a string at the given location on the picture * @param text the text to draw * @param xPos the left x for the text * @param yPos the top y for the text *\/ public void drawString(String text, int xPos, int yPos) { addMessage(text,xPos,yPos); } \/** * Method to create a new picture by scaling the current * picture by the given x and y factors * @param xFactor the amount to scale in x * @param yFactor the amount to scale in y * @return the resulting picture *\/ public Picture scale(double xFactor, double yFactor) { \/\/ set up the scale transform AffineTransform scaleTransform = new AffineTransform(); scaleTransform.scale(xFactor,yFactor); \/\/ create a new picture object that is the right size Picture result = new Picture((int) (getHeight() * yFactor), (int) (getWidth() * xFactor)); \/\/ get the graphics 2d object to draw on the result Graphics graphics = result.getGraphics(); Graphics2D g2 = (Graphics2D) graphics; \/\/ draw the current image onto the result image scaled g2.drawImage(this.getImage(),scaleTransform,null); return result; } \/** * Method to create a new picture of the passed width. * The aspect ratio of the width and height will stay * the same. * @param width the desired width * @return the resulting picture *\/ public Picture getPictureWithWidth(int width) { \/\/ set up the scale transform double xFactor = (double) width \/ this.getWidth(); Picture result = scale(xFactor,xFactor); return result; } \/** * Method to create a new picture of the passed height. * The aspect ratio of the width and height will stay * the same. * @param height the desired height * @return the resulting picture *\/ public Picture getPictureWithHeight(int height) { \/\/ set up the scale transform double yFactor = (double) height \/ this.getHeight(); Picture result = scale(yFactor,yFactor); return result; } \/** * Method to load a picture from a file name and show it in a picture frame * @param fileName the file name to load the picture from * @return true if success else false *\/ public boolean loadPictureAndShowIt(String fileName) { boolean result = true; \/\/ the default is that it worked \/\/ try to load the picture into the buffered image from the file name result = load(fileName); \/\/ show the picture in a picture frame show(); return result; } \/** * Method to write the contents of the picture to a file with * the passed name * @param fileName the name of the file to write the picture to *\/ public void writeOrFail(String fileName) throws IOException { String extension = this.extension; \/\/ the default is current \/\/ create the file object File file = new File(this.pathName + fileName); \/\/File fileLoc = file.getParentFile(); \/\/ directory name \/\/ if there is no parent directory use the current media dir \/\/if (fileLoc == null) \/\/{ \/\/fileName = FileChooser.getMediaPath(fileName); \/\/file = new File(fileName); \/\/fileLoc = file.getParentFile(); \/\/} \/\/ check that you can write to the directory \/\/if (!fileLoc.canWrite()) { \/\/ throw new IOException(fileName + \/\/ \" could not be opened. Check to see if you can write to the directory.\"); \/\/} \/\/ get the extension int posDot = fileName.indexOf('.'); if (posDot >= 0) extension = fileName.substring(posDot + 1); \/\/ write the contents of the buffered image to the file ImageIO.write(bufferedImage, extension, file); } \/** * Method to write the contents of the picture to a file with * the passed name without throwing errors * @param fileName the name of the file to write the picture to * @return true if success else false *\/ public boolean write(String fileName) { try { this.writeOrFail(fileName); return true; } catch (Exception ex) { System.out.println(\"There was an error trying to write \" + fileName); ex.printStackTrace(); return false; } } \/** * Method to get the coordinates of the enclosing rectangle after this * transformation is applied to the current picture * @return the enclosing rectangle *\/ public Rectangle2D getTransformEnclosingRect(AffineTransform trans) { int width = getWidth(); int height = getHeight(); double maxX = width - 1; double maxY = height - 1; double minX, minY; Point2D.Double p1 = new Point2D.Double(0,0); Point2D.Double p2 = new Point2D.Double(maxX,0); Point2D.Double p3 = new Point2D.Double(maxX,maxY); Point2D.Double p4 = new Point2D.Double(0,maxY); Point2D.Double result = new Point2D.Double(0,0); Rectangle2D.Double rect = null; \/\/ get the new points and min x and y and max x and y trans.deltaTransform(p1,result); minX = result.getX(); maxX = result.getX(); minY = result.getY(); maxY = result.getY(); trans.deltaTransform(p2,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); trans.deltaTransform(p3,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); trans.deltaTransform(p4,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); \/\/ create the bounding rectangle to return rect = new Rectangle2D.Double(minX,minY,maxX - minX + 1, maxY - minY + 1); return rect; } \/** * Method to get the coordinates of the enclosing rectangle after this * transformation is applied to the current picture * @return the enclosing rectangle *\/ public Rectangle2D getTranslationEnclosingRect(AffineTransform trans) { return getTransformEnclosingRect(trans); } \/** * Method to return a string with information about this picture * @return a string with information about the picture *\/ public String toString() { String output = \"Simple Picture, filename \" + fileName + \" height \" + getHeight() + \" width \" + getWidth(); return output; } } \/\/ end of SimplePicture class     import java.awt.*; import java.awt.font.*; import java.awt.geom.*; import java.awt.image.BufferedImage; import java.text.*; import java.util.*; import java.util.List; \/** * A class that represents a picture. This class inherits from * SimplePicture and allows the student to add functionality to * the Picture class. * * @author Barbara Ericson ericson@cc.gatech.edu *\/ public class Picture extends SimplePicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Constructor that takes no arguments *\/ public Picture () { \/* not needed but use it to show students the implicit call to super() * child constructors always call a parent constructor *\/ super(); } \/** * Constructor that takes a file name and creates the picture * @param fileName the name of the file to create the picture from *\/ public Picture(String fileName) { \/\/ let the parent class handle this fileName super(fileName); } \/** * Constructor that takes the height and width * @param height the height of the desired picture * @param width the width of the desired picture *\/ public Picture(int height, int width) { \/\/ let the parent class handle this width and height super(width,height); } \/** * Constructor that takes a picture and creates a * copy of that picture * @param copyPicture the picture to copy *\/ public Picture(Picture copyPicture) { \/\/ let the parent class do the copy super(copyPicture); } \/** * Constructor that takes a buffered image * @param image the buffered image to use *\/ public Picture(BufferedImage image) { super(image); } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to return a string with information about this picture. * @return a string with information about the picture such as fileName, * height and width. *\/ public String toString() { String output = \"Picture, filename \" + getFileName() + \" height \" + getHeight() + \" width \" + getWidth(); return output; } \/** zeroBlue() method sets the blue values at all pixels to zero *\/ public void zeroBlue() { Pixel[][] pixels = this.getPixels2D(); for (Pixel[] rowArray : pixels) { for (Pixel p: rowArray) { p.setBlue(0); } } } \/* keepOnlyBlue() method sets the blue values at all pixels to zero. Add new method here and call it from main. *\/ \/* Main method for testing *\/ public static void main(String[] args) { Picture pict = new Picture(\"beach.jpg\"); pict.show(); pict.zeroBlue(); \/\/ Change this to call keepOnlyBlue() pict.show(); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; import java.util.List; import java.util.ArrayList; import java.util.Arrays; public class RunestoneTests extends CodeTestHelper { @Test public void test1() { String target = \"public void keepOnlyBlue()\"; boolean passed = checkCodeContains(\"keepOnlyBlue() method\",target); assertTrue(passed); } @Test public void test1b() { String target = \".keepOnlyBlue()\"; boolean passed = checkCodeContains(\"Call to keepOnlyBlue() in main\",target); assertTrue(passed); } @Test public void test2() { String target = \".setGreen(0);\"; boolean passed = checkCodeContains(\"keepOnlyBlue() setting green pixels to the number 0\",target); assertTrue(passed); } @Test public void test2b() { String target = \".setRed(0);\"; boolean passed = checkCodeContains(\"keepOnlyBlue() setting red pixels to the number 0\",target); assertTrue(passed); } @Test public void test3() { String target = \"for\"; String code = getCode(); int index = code.indexOf(\"public void keepOnlyBlue()\"); boolean passed = false; if (index > 0) { code = code.substring(index); int num = countOccurences(code, target); passed = num >= 2; } getResults(\"true\", \"\"+passed, \"Checking that keepOnlyBlue() contains 2 for loops\", passed); assertTrue(passed); } }   "
+  "body": " Data Files  In the following file of climate data, the first column is Year, second column is Global Average Temperature (Celcius), and the third column is Global Emmisions C02 (Giga-tons). [Normally you might place this inside a block with the <datafile> .]    1850 -0.37 2.24E-7 1860 -0.34 3.94E-7 1870 -0.28 6.6E-7 1880 -0.24 1.1 1890 -0.42 1.72 1900 -0.2 2.38 1910 -0.49 3.34 1920 -0.25 4.01 1930 -0.14 4.53 1940 0.01 5.5 1950 -0.17 6.63 1960 -0.05 10.5 1970 -0.03 16 1980 0.09 20.3 1990 0.3 22.6 2000 0.29 24.9 2010 0.56 32.7 2019 0.74 33.3   Browser based programs are automatically given access to data files by their filename.   ccfile = open(\"ccdata1.txt\", \"r\") for aline in ccfile: values = aline.split() print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.') ccfile.close()     Stack Overflow Developer Survey  [A data file can go lots of places. But to make it more prominent, and easy to cross-reference, it would be natural to put it into a <data> block.]  Now that you are experienced with working with files lets look at a bit of the data set. The survey had 98,855 respondents. We will work with a sample of 2000 of those responses for this lab. In addition we have narrowed down the questions from 129 to just 13. The columns we have included in this data set are:  Respondent  Country  JobSatisfaction  UndergradMajor  ConvertedSalary  Exercise  Gender  RaceEthnicity  EducationParents  HoursOutside  Age  LastNewJob  LanguageWorkedWith            import image img = image.Image(\"luther-bell.jpg\") print(img.getWidth()) print(img.getHeight()) p = img.getPixel(45, 55) print(p.getRed(), p.getGreen(), p.getBlue())    Golden Gate Bridge Image processing  This image has a Creative Commons license, but we've lost track of the exact terms.  [Now a data file and a program to process it, all bundled up inside a <computation> , since an <example> gets knowled and the ActiveCode does not fill.]      This program changes every pixel of the image.   import image img = image.Image(\"golden_gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,15) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) newred = p.red * 1.4 newgreen = p.green * .75 newblue = p.blue * 1.1 newpixel = image.Pixel(newred, newgreen, newblue) img.setPixel(col, row, newpixel) img.draw(win) win.exitonclick()    The examples above all use Python, which will run in your browser. Other languages will only run when a project is hosted on Runestone Academy servers. And in this case there is a small twist. You need to indicate which existing <datafile> your program needs, even if that seems obvious by reading the code. To do this, make sure each datafile has an xml:id and then use the add-files attribute on <program> to specify a list of xml:id's that you want to be available. These datafiles will be written to the program's working directory using the filename specified by the filename attribute of the <datafile> element, and are the names you use in your program's code. As before, no path information is needed, nor allowed.  When the language attribute of a <program> is set to python3 that means in-browser Python is not good enough, and you want the greater power and flexibility of having your code run on a Runestone Academy server. So this is our first example of using the datafile attribute.  The data file is an abbreviated version of the example above, just to be different. And is not editable.   1900 -0.2 2.38 1910 -0.49 3.34 1920 -0.25 4.01 1930 -0.14 4.53 1940 0.01 5.5 1950 -0.17 6.63 1960 -0.05 10.5 1970 -0.03 16 1980 0.09 20.3 1990 0.3 22.6 2000 0.29 24.9 2010 0.56 32.7 2019 0.74 33.3   The program is identical to the above, but we specify python3 as the language, and use the smaller file. So this example is only active when this content is hosted on a Runestone Academy server.   ccfile = open(\"ccdata2.txt\", \"r\") for aline in ccfile: values = aline.split() print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.') ccfile.close()   [2023-02-24 Testing Java with multiple data files]   Flowers  Two flower images as <datafile> for use in upcoming Java program.            import java.awt.*; import java.awt.font.*; import java.awt.geom.*; import java.awt.image.BufferedImage; import java.text.*; import java.util.*; import java.util.List; \/** * A class that represents a picture. This class inherits from * SimplePicture and allows the student to add functionality to * the Picture class. * * @author Barbara Ericson ericson@cc.gatech.edu *\/ public class Picture extends SimplePicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Constructor that takes no arguments *\/ public Picture () { \/* not needed but use it to show students the implicit call to super() * child constructors always call a parent constructor *\/ super(); } \/** * Constructor that takes a file name and creates the picture * @param fileName the name of the file to create the picture from *\/ public Picture(String fileName) { \/\/ let the parent class handle this fileName super(fileName); } \/** * Constructor that takes the height and width * @param height the height of the desired picture * @param width the width of the desired picture *\/ public Picture(int width, int height) { \/\/ let the parent class handle this width and height super(width,height); } \/** * Constructor that takes a picture and creates a * copy of that picture * @param copyPicture the picture to copy *\/ public Picture(Picture copyPicture) { \/\/ let the parent class do the copy super(copyPicture); } \/** * Constructor that takes a buffered image * @param image the buffered image to use *\/ public Picture(BufferedImage image) { super(image); } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to return a string with information about this picture. * @return a string with information about the picture such as fileName, * height and width. *\/ public String toString() { String output = \"Picture, filename \" + getFileName() + \" height \" + getHeight() + \" width \" + getWidth(); return output; } \/** zeroBlue() method sets the blue values at all pixels to zero *\/ public void zeroBlue() { Pixel[][] pixels = this.getPixels2D(); for (Pixel[] rowArray : pixels) { for (Pixel p: rowArray) { p.setBlue(0); } } } \/* mirrorVertical() *\/ public void mirrorVertical() { Pixel[][] pixels = this.getPixels2D(); Pixel leftPixel = null; Pixel rightPixel = null; int width = pixels[0].length; for (int row = 0; row < pixels.length; row++) { for (int col = 0; col < width \/ 2; col++) { leftPixel = pixels[row][col]; rightPixel = pixels[row][width - 1 - col]; rightPixel.setColor(leftPixel.getColor()); } } } \/** copy from the passed fromPic to the * specified startRow and startCol in the * current picture * @param fromPic the picture to copy from * @param startRow the start row to copy to * @param startCol the start col to copy to *\/ public void copy(Picture fromPic, int startRow, int startCol) { Pixel fromPixel = null; Pixel toPixel = null; Pixel[][] toPixels = this.getPixels2D(); Pixel[][] fromPixels = fromPic.getPixels2D(); for (int fromRow = 0, toRow = startRow; fromRow < fromPixels.length && toRow < toPixels.length; fromRow++, toRow++) { for (int fromCol = 0, toCol = startCol; fromCol < fromPixels[0].length && toCol < toPixels[0].length; fromCol++, toCol++) { fromPixel = fromPixels[fromRow][fromCol]; toPixel = toPixels[toRow][toCol]; toPixel.setColor(fromPixel.getColor()); } } } public void createCollage() { \/\/ You can also try butterfly.jpg and snowflake.jpg Picture flower1 = new Picture(\"flower1.jpg\"); Picture flower2 = new Picture(\"flower2.jpg\"); this.copy(flower1,0,0); this.copy(flower2,100,0); this.copy(flower1,200,0); Picture flowerNoBlue = new Picture(flower2); flowerNoBlue.zeroBlue(); this.copy(flowerNoBlue,300,0); this.copy(flower1,400,0); this.copy(flower2,500,0); this.mirrorVertical(); this.show(); } \/* Main method for testing *\/ public static void main(String[] args) { Picture p = new Picture(500,500); p.createCollage(); } }     The following is experimental, as of 2023-07-05, and needs some organization, plus some credit to CSAwesome and Barb Ericson.        import java.awt.Image; import java.awt.image.BufferedImage; \/** * Interface to describe a digital picture. A digital picture can have an * associated file name. It can have a title. It has pixels * associated with it and you can get and set the pixels. You * can get an Image from a picture or a BufferedImage. You can load * it from a file name or image. You can show a picture. You can * explore a picture. You can create a new image for it. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public interface DigitalPicture { public String getFileName(); \/\/ get the file name that the picture came from public String getTitle(); \/\/ get the title of the picture public void setTitle(String title); \/\/ set the title of the picture public int getWidth(); \/\/ get the width of the picture in pixels public int getHeight(); \/\/ get the height of the picture in pixels public Image getImage(); \/\/ get the image from the picture public BufferedImage getBufferedImage(); \/\/ get the buffered image public int getBasicPixel(int x, int y); \/\/ get the pixel information as an int public void setBasicPixel(int x, int y, int rgb); \/\/ set the pixel information public Pixel getPixel(int x, int y); \/\/ get the pixel information as an object public Pixel[] getPixels(); \/\/ get all pixels in row-major order public Pixel[][] getPixels2D(); \/\/ get 2-D array of pixels in row-major order public void load(Image image); \/\/ load the image into the picture public boolean load(String fileName); \/\/ load the picture from a file public void show(); \/\/ show the picture public boolean write(String fileName); \/\/ write out a file } import java.awt.Color; \/** * Class that references a pixel in a picture. Pixel * stands for picture element where picture is * abbreviated pix. A pixel has a column (x) and * row (y) location in a picture. A pixel knows how * to get and set the red, green, blue, and alpha * values in the picture. A pixel also knows how to get * and set the color using a Color object. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public class Pixel { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ fields \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** the digital picture this pixel belongs to *\/ private DigitalPicture picture; \/** the x (column) location of this pixel in the picture; (0,0) is top left *\/ private int x; \/** the y (row) location of this pixel in the picture; (0,0) is top left *\/ private int y; \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * A constructor that takes the x and y location for the pixel and * the picture the pixel is coming from * @param picture the picture that the pixel is in * @param x the x location of the pixel in the picture * @param y the y location of the pixel in the picture *\/ public Pixel(DigitalPicture picture, int x, int y) { \/\/ set the picture this.picture = picture; \/\/ set the x location this.x = x; \/\/ set the y location this.y = y; } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to get the x location of this pixel. * @return the x location of the pixel in the picture *\/ public int getX() { return x; } \/** * Method to get the y location of this pixel. * @return the y location of the pixel in the picture *\/ public int getY() { return y; } \/** * Method to get the row (y value) * @return the row (y value) of the pixel in the picture *\/ public int getRow() { return y; } \/** * Method to get the column (x value) * @return the column (x value) of the pixel *\/ public int getCol() { return x; } \/** * Method to get the amount of alpha (transparency) at this pixel. * It will be from 0-255. * @return the amount of alpha (transparency) *\/ public int getAlpha() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the alpha value (starts at 25 so shift right 24) \/\/ then and it with all 1's for the first 8 bits to keep \/\/ end up with from 0 to 255 int alpha = (value >> 24) & 0xff; return alpha; } \/** * Method to get the amount of red at this pixel. It will be * from 0-255 with 0 being no red and 255 being as much red as * you can have. * @return the amount of red from 0 for none to 255 for max *\/ public int getRed() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the red value (starts at 17 so shift right 16) \/\/ then AND it with all 1's for the first 8 bits to \/\/ end up with a resulting value from 0 to 255 int red = (value >> 16) & 0xff; return red; } \/** * Method to get the red value from a pixel represented as an int * @param value the color value as an int * @return the amount of red *\/ public static int getRed(int value) { int red = (value >> 16) & 0xff; return red; } \/** * Method to get the amount of green at this pixel. It will be * from 0-255 with 0 being no green and 255 being as much green as * you can have. * @return the amount of green from 0 for none to 255 for max *\/ public int getGreen() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the green value (starts at 9 so shift right 8) int green = (value >> 8) & 0xff; return green; } \/** * Method to get the green value from a pixel represented as an int * @param value the color value as an int * @return the amount of green *\/ public static int getGreen(int value) { int green = (value >> 8) & 0xff; return green; } \/** * Method to get the amount of blue at this pixel. It will be * from 0-255 with 0 being no blue and 255 being as much blue as * you can have. * @return the amount of blue from 0 for none to 255 for max *\/ public int getBlue() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the blue value (starts at 0 so no shift required) int blue = value & 0xff; return blue; } \/** * Method to get the blue value from a pixel represented as an int * @param value the color value as an int * @return the amount of blue *\/ public static int getBlue(int value) { int blue = value & 0xff; return blue; } \/** * Method to get a color object that represents the color at this pixel. * @return a color object that represents the pixel color *\/ public Color getColor() { \/* get the value at the location from the picture as a 32 bit int * with alpha, red, green, blue each taking 8 bits from left to right *\/ int value = picture.getBasicPixel(x,y); \/\/ get the red value (starts at 17 so shift right 16) \/\/ then AND it with all 1's for the first 8 bits to \/\/ end up with a resulting value from 0 to 255 int red = (value >> 16) & 0xff; \/\/ get the green value (starts at 9 so shift right 8) int green = (value >> 8) & 0xff; \/\/ get the blue value (starts at 0 so no shift required) int blue = value & 0xff; return new Color(red,green,blue); } \/** * Method to set the pixel color to the passed in color object. * @param newColor the new color to use *\/ public void setColor(Color newColor) { \/\/ set the red, green, and blue values int red = newColor.getRed(); int green = newColor.getGreen(); int blue = newColor.getBlue(); \/\/ update the associated picture updatePicture(this.getAlpha(),red,green,blue); } \/** * Method to update the picture based on the passed color * values for this pixel * @param alpha the alpha (transparency) at this pixel * @param red the red value for the color at this pixel * @param green the green value for the color at this pixel * @param blue the blue value for the color at this pixel *\/ public void updatePicture(int alpha, int red, int green, int blue) { \/\/ create a 32 bit int with alpha, red, green blue from left to right int value = (alpha << 24) + (red << 16) + (green << 8) + blue; \/\/ update the picture with the int value picture.setBasicPixel(x,y,value); } \/** * Method to correct a color value to be within 0 to 255 * @param the value to use * @return a value within 0 to 255 *\/ private static int correctValue(int value) { if (value < 0) value = 0; if (value > 255) value = 255; return value; } \/** * Method to set the red to a new red value * @param value the new value to use *\/ public void setRed(int value) { \/\/ set the red value to the corrected value int red = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), red, getGreen(), getBlue()); } \/** * Method to set the green to a new green value * @param value the value to use *\/ public void setGreen(int value) { \/\/ set the green value to the corrected value int green = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), getRed(), green, getBlue()); } \/** * Method to set the blue to a new blue value * @param value the new value to use *\/ public void setBlue(int value) { \/\/ set the blue value to the corrected value int blue = correctValue(value); \/\/ update the pixel value in the picture updatePicture(getAlpha(), getRed(), getGreen(), blue); } \/** * Method to set the alpha (transparency) to a new alpha value * @param value the new value to use *\/ public void setAlpha(int value) { \/\/ make sure that the alpha is from 0 to 255 int alpha = correctValue(value); \/\/ update the associated picture updatePicture(alpha, getRed(), getGreen(), getBlue()); } \/** * Method to get the distance between this pixel's color and the passed color * @param testColor the color to compare to * @return the distance between this pixel's color and the passed color *\/ public double colorDistance(Color testColor) { double redDistance = this.getRed() - testColor.getRed(); double greenDistance = this.getGreen() - testColor.getGreen(); double blueDistance = this.getBlue() - testColor.getBlue(); double distance = Math.sqrt(redDistance * redDistance + greenDistance * greenDistance + blueDistance * blueDistance); return distance; } \/** * Method to compute the color distances between two color objects * @param color1 a color object * @param color2 a color object * @return the distance between the two colors *\/ public static double colorDistance(Color color1,Color color2) { double redDistance = color1.getRed() - color2.getRed(); double greenDistance = color1.getGreen() - color2.getGreen(); double blueDistance = color1.getBlue() - color2.getBlue(); double distance = Math.sqrt(redDistance * redDistance + greenDistance * greenDistance + blueDistance * blueDistance); return distance; } \/** * Method to get the average of the colors of this pixel * @return the average of the red, green, and blue values *\/ public double getAverage() { double average = (getRed() + getGreen() + getBlue()) \/ 3.0; return average; } \/** * Method to return a string with information about this pixel * @return a string with information about this pixel *\/ public String toString() { return \"Pixel row=\" + getRow() + \" col=\" + getCol() + \" red=\" + getRed() + \" green=\" + getGreen() + \" blue=\" + getBlue(); } } import javax.imageio.ImageIO; import java.awt.image.BufferedImage; import javax.swing.ImageIcon; import java.awt.*; import java.io.*; import java.awt.geom.*; import java.io.ByteArrayOutputStream; \/\/import javax.xml.bind.DatatypeConverter; import java.util.Base64; import java.util.Scanner; \/** * A class that represents a simple picture. A simple picture may have * an associated file name and a title. A simple picture has pixels, * width, and height. A simple picture uses a BufferedImage to * hold the pixels. You can also explore a simple picture. * * @author Barb Ericson ericson@cc.gatech.edu *\/ public class SimplePicture implements DigitalPicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Fields \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * the file name associated with the simple picture *\/ private String fileName; \/** * the path name for the file *\/ private String pathName; \/** * the title of the simple picture *\/ private String title; \/** * buffered image to hold pixels for the simple picture *\/ private BufferedImage bufferedImage; \/** * extension for this file (jpg or bmp) *\/ private String extension; \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * A Constructor that takes no arguments. It creates a picture with * a width of 200 and a height of 100 that is all white. * A no-argument constructor must be given in order for a class to * be able to be subclassed. By default all subclasses will implicitly * call this in their parent's no-argument constructor unless a * different call to super() is explicitly made as the first line * of code in a constructor. *\/ public SimplePicture() {this(200,100);} \/** * A Constructor that takes a file name and uses the file to create * a picture * @param fileName the file name to use in creating the picture *\/ public SimplePicture(String fileName) { \/\/ load the picture into the buffered image load(fileName); } \/** * A constructor that takes the width and height desired for a picture and * creates a buffered image of that size. This constructor doesn't * show the picture. The pixels will all be white. * @param width the desired width * @param height the desired height *\/ public SimplePicture(int width, int height) { bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB); title = \"None\"; fileName = \"None\"; extension = \"jpg\"; setAllPixelsToAColor(Color.white); } \/** * A constructor that takes the width and height desired for a picture and * creates a buffered image of that size. It also takes the * color to use for the background of the picture. * @param width the desired width * @param height the desired height * @param theColor the background color for the picture *\/ public SimplePicture(int width, int height, Color theColor) { this(width,height); setAllPixelsToAColor(theColor); } \/** * A Constructor that takes a picture to copy information from * @param copyPicture the picture to copy from *\/ public SimplePicture(SimplePicture copyPicture) { if (copyPicture.fileName != null) { this.fileName = new String(copyPicture.fileName); this.extension = copyPicture.extension; } if (copyPicture.title != null) this.title = new String(copyPicture.title); if (copyPicture.bufferedImage != null) { this.bufferedImage = new BufferedImage(copyPicture.getWidth(), copyPicture.getHeight(), BufferedImage.TYPE_INT_RGB); this.copyPicture(copyPicture); } } \/** * A constructor that takes a buffered image * @param image the buffered image *\/ public SimplePicture(BufferedImage image) { this.bufferedImage = image; title = \"None\"; fileName = \"None\"; extension = \"jpg\"; } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ Methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to get the extension for this picture * @return the extension (jpg, bmp, giff, etc) *\/ public String getExtension() { return extension; } \/** * Method that will copy all of the passed source picture into * the current picture object * @param sourcePicture the picture object to copy *\/ public void copyPicture(SimplePicture sourcePicture) { Pixel sourcePixel = null; Pixel targetPixel = null; \/\/ loop through the columns for (int sourceX = 0, targetX = 0; sourceX < sourcePicture.getWidth() && targetX < this.getWidth(); sourceX++, targetX++) { \/\/ loop through the rows for (int sourceY = 0, targetY = 0; sourceY < sourcePicture.getHeight() && targetY < this.getHeight(); sourceY++, targetY++) { sourcePixel = sourcePicture.getPixel(sourceX,sourceY); targetPixel = this.getPixel(targetX,targetY); targetPixel.setColor(sourcePixel.getColor()); } } } \/** * Method to set the color in the picture to the passed color * @param color the color to set to *\/ public void setAllPixelsToAColor(Color color) { \/\/ loop through all x for (int x = 0; x < this.getWidth(); x++) { \/\/ loop through all y for (int y = 0; y < this.getHeight(); y++) { getPixel(x,y).setColor(color); } } } \/** * Method to get the buffered image * @return the buffered image *\/ public BufferedImage getBufferedImage() { return bufferedImage; } \/** * Method to get a graphics object for this picture to use to draw on * @return a graphics object to use for drawing *\/ public Graphics getGraphics() { return bufferedImage.getGraphics(); } \/** * Method to get a Graphics2D object for this picture which can * be used to do 2D drawing on the picture *\/ public Graphics2D createGraphics() { return bufferedImage.createGraphics(); } \/** * Method to get the file name associated with the picture * @return the file name associated with the picture *\/ public String getFileName() { return fileName; } \/** * Method to set the file name * @param name the full pathname of the file *\/ public void setFileName(String name) { fileName = name; } \/** * Method to get the title of the picture * @return the title of the picture *\/ public String getTitle() { return title; } \/** * Method to set the title for the picture * @param title the title to use for the picture *\/ public void setTitle(String title) { this.title = title; } \/** * Method to get the width of the picture in pixels * @return the width of the picture in pixels *\/ public int getWidth() { return bufferedImage.getWidth(); } \/** * Method to get the height of the picture in pixels * @return the height of the picture in pixels *\/ public int getHeight() { return bufferedImage.getHeight(); } \/** * Method to get an image from the picture * @return the buffered image since it is an image *\/ public Image getImage() { return bufferedImage; } \/** * Method to return the pixel value as an int for the given x and y location * @param x the x coordinate of the pixel * @param y the y coordinate of the pixel * @return the pixel value as an integer (alpha, red, green, blue) *\/ public int getBasicPixel(int x, int y) { return bufferedImage.getRGB(x,y); } \/** * Method to set the value of a pixel in the picture from an int * @param x the x coordinate of the pixel * @param y the y coordinate of the pixel * @param rgb the new rgb value of the pixel (alpha, red, green, blue) *\/ public void setBasicPixel(int x, int y, int rgb) { bufferedImage.setRGB(x,y,rgb); } \/** * Method to get a pixel object for the given x and y location * @param x the x location of the pixel in the picture * @param y the y location of the pixel in the picture * @return a Pixel object for this location *\/ public Pixel getPixel(int x, int y) { \/\/ create the pixel object for this picture and the given x and y location Pixel pixel = new Pixel(this,x,y); return pixel; } \/** * Method to get a one-dimensional array of Pixels for this simple picture * @return a one-dimensional array of Pixel objects starting with y=0 * to y=height-1 and x=0 to x=width-1. *\/ public Pixel[] getPixels() { int width = getWidth(); int height = getHeight(); Pixel[] pixelArray = new Pixel[width * height]; \/\/ loop through height rows from top to bottom for (int row = 0; row < height; row++) for (int col = 0; col < width; col++) pixelArray[row * width + col] = new Pixel(this,col,row); return pixelArray; } \/** * Method to get a two-dimensional array of Pixels for this simple picture * @return a two-dimensional array of Pixel objects in row-major order. *\/ public Pixel[][] getPixels2D() { int width = getWidth(); int height = getHeight(); Pixel[][] pixelArray = new Pixel[height][width]; \/\/ loop through height rows from top to bottom for (int row = 0; row < height; row++) for (int col = 0; col < width; col++) pixelArray[row][col] = new Pixel(this,col,row); return pixelArray; } \/** * Method to load the buffered image with the passed image * @param image the image to use *\/ public void load(Image image) { \/\/ get a graphics context to use to draw on the buffered image Graphics2D graphics2d = bufferedImage.createGraphics(); \/\/ draw the image on the buffered image starting at 0,0 graphics2d.drawImage(image,0,0,null); \/\/ show the new image show(); } \/** * Method to show the picture in a picture frame *\/ public void show() { try { ByteArrayOutputStream output = new ByteArrayOutputStream(); ImageIO.write(this.bufferedImage, \"png\", output); String result = Base64.getEncoder().encodeToString(output.toByteArray()); \/\/BH: using Base64 instead of DatatypeConverter.printBase64Binary(output.toByteArray()); System.out.println(\"&lt;img src=\\'data:image\/\" + this.extension + \";base64,\" + result + \"\\'\/>\"); } catch (IOException e) { System.out.println(\"Errors occured in image conversion\"); } } \/** * Method to open a picture explorer on a copy (in memory) of this * simple picture *\/ \/* public void explore() { \/\/ create a copy of the current picture and explore it new PictureExplorer(new SimplePicture(this)); } *\/ \/** * Method to load the picture from the passed file name * @param fileName the file name to use to load the picture from * @throws IOException if the picture isn't found *\/ public void loadOrFail(String fileName) throws IOException { \/\/ set the current picture's file name this.fileName = fileName; \/\/ set the extension int posDot = fileName.lastIndexOf('.'); if (posDot >= 0) this.extension = fileName.substring(posDot + 1); \/\/ get file location String[] paths = fileName.split(\"\/\"); this.pathName = \"\"; if(paths.length != 1) { for(int i = 0; i < paths.length - 1; i++) { this.pathName = this.pathName + paths[i] + \"\/\"; } } \/\/ if the current title is null use the file name if (title == null) title = fileName; File file = new File(this.fileName); if (!file.canRead()) { throw new IOException(this.fileName + \" could not be opened. Check that you specified the path\"); } this.bufferedImage = ImageIO.read(file); } \/** * Method to read the contents of the picture from a filename * without throwing errors * @param fileName the name of the file to write the picture to * @return true if success else false *\/ public boolean load(String fileName) { try { this.loadOrFail(fileName); return true; } catch (Exception ex) { System.out.println(\"There was an error trying to open \" + fileName); bufferedImage = new BufferedImage(600,200, BufferedImage.TYPE_INT_RGB); addMessage(\"Couldn't load \" + fileName,5,100); return false; } } \/** * Method to load the picture from the passed file name * this just calls load(fileName) and is for name compatibility * @param fileName the file name to use to load the picture from * @return true if success else false *\/ public boolean loadImage(String fileName) { return load(fileName); } \/** * Method to draw a message as a string on the buffered image * @param message the message to draw on the buffered image * @param xPos the x coordinate of the leftmost point of the string * @param yPos the y coordinate of the bottom of the string *\/ public void addMessage(String message, int xPos, int yPos) { \/\/ get a graphics context to use to draw on the buffered image Graphics2D graphics2d = bufferedImage.createGraphics(); \/\/ set the color to white graphics2d.setPaint(Color.white); \/\/ set the font to Helvetica bold style and size 16 graphics2d.setFont(new Font(\"Helvetica\",Font.BOLD,16)); \/\/ draw the message graphics2d.drawString(message,xPos,yPos); } \/** * Method to draw a string at the given location on the picture * @param text the text to draw * @param xPos the left x for the text * @param yPos the top y for the text *\/ public void drawString(String text, int xPos, int yPos) { addMessage(text,xPos,yPos); } \/** * Method to create a new picture by scaling the current * picture by the given x and y factors * @param xFactor the amount to scale in x * @param yFactor the amount to scale in y * @return the resulting picture *\/ public Picture scale(double xFactor, double yFactor) { \/\/ set up the scale transform AffineTransform scaleTransform = new AffineTransform(); scaleTransform.scale(xFactor,yFactor); \/\/ create a new picture object that is the right size Picture result = new Picture((int) (getHeight() * yFactor), (int) (getWidth() * xFactor)); \/\/ get the graphics 2d object to draw on the result Graphics graphics = result.getGraphics(); Graphics2D g2 = (Graphics2D) graphics; \/\/ draw the current image onto the result image scaled g2.drawImage(this.getImage(),scaleTransform,null); return result; } \/** * Method to create a new picture of the passed width. * The aspect ratio of the width and height will stay * the same. * @param width the desired width * @return the resulting picture *\/ public Picture getPictureWithWidth(int width) { \/\/ set up the scale transform double xFactor = (double) width \/ this.getWidth(); Picture result = scale(xFactor,xFactor); return result; } \/** * Method to create a new picture of the passed height. * The aspect ratio of the width and height will stay * the same. * @param height the desired height * @return the resulting picture *\/ public Picture getPictureWithHeight(int height) { \/\/ set up the scale transform double yFactor = (double) height \/ this.getHeight(); Picture result = scale(yFactor,yFactor); return result; } \/** * Method to load a picture from a file name and show it in a picture frame * @param fileName the file name to load the picture from * @return true if success else false *\/ public boolean loadPictureAndShowIt(String fileName) { boolean result = true; \/\/ the default is that it worked \/\/ try to load the picture into the buffered image from the file name result = load(fileName); \/\/ show the picture in a picture frame show(); return result; } \/** * Method to write the contents of the picture to a file with * the passed name * @param fileName the name of the file to write the picture to *\/ public void writeOrFail(String fileName) throws IOException { String extension = this.extension; \/\/ the default is current \/\/ create the file object File file = new File(this.pathName + fileName); \/\/File fileLoc = file.getParentFile(); \/\/ directory name \/\/ if there is no parent directory use the current media dir \/\/if (fileLoc == null) \/\/{ \/\/fileName = FileChooser.getMediaPath(fileName); \/\/file = new File(fileName); \/\/fileLoc = file.getParentFile(); \/\/} \/\/ check that you can write to the directory \/\/if (!fileLoc.canWrite()) { \/\/ throw new IOException(fileName + \/\/ \" could not be opened. Check to see if you can write to the directory.\"); \/\/} \/\/ get the extension int posDot = fileName.indexOf('.'); if (posDot >= 0) extension = fileName.substring(posDot + 1); \/\/ write the contents of the buffered image to the file ImageIO.write(bufferedImage, extension, file); } \/** * Method to write the contents of the picture to a file with * the passed name without throwing errors * @param fileName the name of the file to write the picture to * @return true if success else false *\/ public boolean write(String fileName) { try { this.writeOrFail(fileName); return true; } catch (Exception ex) { System.out.println(\"There was an error trying to write \" + fileName); ex.printStackTrace(); return false; } } \/** * Method to get the coordinates of the enclosing rectangle after this * transformation is applied to the current picture * @return the enclosing rectangle *\/ public Rectangle2D getTransformEnclosingRect(AffineTransform trans) { int width = getWidth(); int height = getHeight(); double maxX = width - 1; double maxY = height - 1; double minX, minY; Point2D.Double p1 = new Point2D.Double(0,0); Point2D.Double p2 = new Point2D.Double(maxX,0); Point2D.Double p3 = new Point2D.Double(maxX,maxY); Point2D.Double p4 = new Point2D.Double(0,maxY); Point2D.Double result = new Point2D.Double(0,0); Rectangle2D.Double rect = null; \/\/ get the new points and min x and y and max x and y trans.deltaTransform(p1,result); minX = result.getX(); maxX = result.getX(); minY = result.getY(); maxY = result.getY(); trans.deltaTransform(p2,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); trans.deltaTransform(p3,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); trans.deltaTransform(p4,result); minX = Math.min(minX,result.getX()); maxX = Math.max(maxX,result.getX()); minY = Math.min(minY,result.getY()); maxY = Math.max(maxY,result.getY()); \/\/ create the bounding rectangle to return rect = new Rectangle2D.Double(minX,minY,maxX - minX + 1, maxY - minY + 1); return rect; } \/** * Method to get the coordinates of the enclosing rectangle after this * transformation is applied to the current picture * @return the enclosing rectangle *\/ public Rectangle2D getTranslationEnclosingRect(AffineTransform trans) { return getTransformEnclosingRect(trans); } \/** * Method to return a string with information about this picture * @return a string with information about the picture *\/ public String toString() { String output = \"Simple Picture, filename \" + fileName + \" height \" + getHeight() + \" width \" + getWidth(); return output; } } \/\/ end of SimplePicture class     import java.awt.*; import java.awt.font.*; import java.awt.geom.*; import java.awt.image.BufferedImage; import java.text.*; import java.util.*; import java.util.List; \/** * A class that represents a picture. This class inherits from * SimplePicture and allows the student to add functionality to * the Picture class. * * @author Barbara Ericson ericson@cc.gatech.edu *\/ public class Picture extends SimplePicture { \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ constructors \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Constructor that takes no arguments *\/ public Picture () { \/* not needed but use it to show students the implicit call to super() * child constructors always call a parent constructor *\/ super(); } \/** * Constructor that takes a file name and creates the picture * @param fileName the name of the file to create the picture from *\/ public Picture(String fileName) { \/\/ let the parent class handle this fileName super(fileName); } \/** * Constructor that takes the height and width * @param height the height of the desired picture * @param width the width of the desired picture *\/ public Picture(int height, int width) { \/\/ let the parent class handle this width and height super(width,height); } \/** * Constructor that takes a picture and creates a * copy of that picture * @param copyPicture the picture to copy *\/ public Picture(Picture copyPicture) { \/\/ let the parent class do the copy super(copyPicture); } \/** * Constructor that takes a buffered image * @param image the buffered image to use *\/ public Picture(BufferedImage image) { super(image); } \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ methods \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \/** * Method to return a string with information about this picture. * @return a string with information about the picture such as fileName, * height and width. *\/ public String toString() { String output = \"Picture, filename \" + getFileName() + \" height \" + getHeight() + \" width \" + getWidth(); return output; } \/** zeroBlue() method sets the blue values at all pixels to zero *\/ public void zeroBlue() { Pixel[][] pixels = this.getPixels2D(); for (Pixel[] rowArray : pixels) { for (Pixel p: rowArray) { p.setBlue(0); } } } \/* keepOnlyBlue() method sets the blue values at all pixels to zero. Add new method here and call it from main. *\/ \/* Main method for testing *\/ public static void main(String[] args) { Picture pict = new Picture(\"beach.jpg\"); pict.show(); pict.zeroBlue(); \/\/ Change this to call keepOnlyBlue() pict.show(); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; import java.util.List; import java.util.ArrayList; import java.util.Arrays; public class RunestoneTests extends CodeTestHelper { @Test public void test1() { String target = \"public void keepOnlyBlue()\"; boolean passed = checkCodeContains(\"keepOnlyBlue() method\",target); assertTrue(passed); } @Test public void test1b() { String target = \".keepOnlyBlue()\"; boolean passed = checkCodeContains(\"Call to keepOnlyBlue() in main\",target); assertTrue(passed); } @Test public void test2() { String target = \".setGreen(0);\"; boolean passed = checkCodeContains(\"keepOnlyBlue() setting green pixels to the number 0\",target); assertTrue(passed); } @Test public void test2b() { String target = \".setRed(0);\"; boolean passed = checkCodeContains(\"keepOnlyBlue() setting red pixels to the number 0\",target); assertTrue(passed); } @Test public void test3() { String target = \"for\"; String code = getCode(); int index = code.indexOf(\"public void keepOnlyBlue()\"); boolean passed = false; if (index > 0) { code = code.substring(index); int num = countOccurences(code, target); passed = num >= 2; } getResults(\"true\", \"\"+passed, \"Checking that keepOnlyBlue() contains 2 for loops\", passed); assertTrue(passed); } }   "
 },
 {
-  "id": "data-files-5",
+  "id": "data-files-6",
   "level": "2",
-  "url": "data-files.html#data-files-5",
+  "url": "data-files.html#data-files-6",
   "type": "Data",
   "number": "5.5.1",
   "title": "Stack Overflow Developer Survey.",
   "body": " Stack Overflow Developer Survey  [A data file can go lots of places. But to make it more prominent, and easy to cross-reference, it would be natural to put it into a <data> block.]  Now that you are experienced with working with files lets look at a bit of the data set. The survey had 98,855 respondents. We will work with a sample of 2000 of those responses for this lab. In addition we have narrowed down the questions from 129 to just 13. The columns we have included in this data set are:  Respondent  Country  JobSatisfaction  UndergradMajor  ConvertedSalary  Exercise  Gender  RaceEthnicity  EducationParents  HoursOutside  Age  LastNewJob  LanguageWorkedWith      "
 },
 {
-  "id": "data-files-8",
+  "id": "data-files-9",
   "level": "2",
-  "url": "data-files.html#data-files-8",
+  "url": "data-files.html#data-files-9",
   "type": "Computation",
   "number": "5.5.2",
   "title": "Golden Gate Bridge Image processing.",
@@ -3733,7 +3796,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.7",
   "title": "Deeper",
-  "body": " Deeper   This is a stub of a <section> , but it contains two <subsection> which each contain a PROJECT-LIKE item that includes a <program> element, and thus is a coding exercise. This tests migration to the Runestone assignment area, though Runestone only has divisions two-deep ( chapter and subchapter , so both will show up associated with the same <section> this one.  The first is a start of a C program, so will only be interactive on a Runestone server. The second is a Python program, so will be interactive in all HTML outputs.    Subsection One  An <activity> next. This one has a <program> so will be made interactive whenever possible.   Activity in a Subsection   We would suggest you do something here.    #include <stdio.h> int main(void)    Nothing suggests this next <project> is interactive.   Project in a Subsection   You would work this project on paper, most likely. It is never interactive since there is no indication of a desire for that, even if hosted on a capable platform.  A little bit of markup, to test a bug: . (The bug was only apparent under a deprecated method for specify a question to be an interactive short-answer question on Runestone Academy.)      Subsection Two  An <exploration> next.   Exploration in a Subsection   We would suggest now that you explore something here. In this case we simply provide a CodeLens, which would be graded as an interaction .    for i in range(10): print(i)    The next simple <exercise> will be a short answer question on a capable interactive platform since we have included a <response> element.  Inline Exercise in a Subsection  I am an interactive short answer question, but only on a capable platform.    "
+  "body": " Deeper   This is a stub of a <section> , but it contains two <subsection> which each contain a PROJECT-LIKE item that includes a <program> element, and thus is a coding exercise. This tests migration to the Runestone assignment area, though Runestone only has divisions two-deep ( chapter and subchapter , so both will show up associated with the same <section> this one.  The first is a start of a C program, so will only be interactive on a Runestone server. The second is a Python program, so will be interactive in all HTML outputs.    Subsection One  An <activity> next. This one has a <program> so will be made interactive whenever possible.   Activity in a Subsection   We would suggest you do something here.    #include <stdio.h> int main(void)    Nothing suggests this next <project> is interactive.   Project in a Subsection   You would work this project on paper, most likely. It is never interactive since there is no indication of a desire for that, even if hosted on a capable platform.  A little bit of markup, to test a bug: . (The bug was only apparent under a deprecated method for specify a question to be an interactive short-answer question on Runestone Academy.)      Subsection Two  An <exploration> next.   Exploration in a Subsection   We would suggest now that you explore something here. In this case we simply provide a CodeLens, which would be graded as an interaction .    for i in range(10): print(i)    The next simple <exercise> will be a short answer question on a capable interactive platform since we have included a <response> element.   Inline Exercise in a Subsection   I am an interactive short answer question, but only on a capable platform.      "
 },
 {
   "id": "activity-in-subsection",
@@ -3769,7 +3832,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.7.1",
   "title": "Inline Exercise in a Subsection.",
-  "body": "Inline Exercise in a Subsection  I am an interactive short answer question, but only on a capable platform.  "
+  "body": " Inline Exercise in a Subsection   I am an interactive short answer question, but only on a capable platform.    "
 },
 {
   "id": "true-false-exercises",
@@ -3778,7 +3841,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.8",
   "title": "True\/False Exercises",
-  "body": " True\/False Exercises  True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
+  "body": " True\/False Exercises   True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?    "
 },
 {
   "id": "vector-space-dimension",
@@ -3787,7 +3850,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.8.1",
   "title": "True\/False.",
-  "body": "True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?  "
+  "body": " True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
 },
 {
   "id": "exercises-groupwork",
@@ -3796,7 +3859,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.9",
   "title": "Multiple Choice Exercises",
-  "body": " Multiple Choice Exercises   When this <exercises> division is hosted on Runestone Academy, it will be enabled for group work. See group selection and submission features are at the end of the division. See for more detail. (2024-07-24: experimental.)   Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?   Multiple-Choice, Not Randomized, Multiple Answers stop signs  Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)     Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.     Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   Multiple-Choice, Randomized, One Answer stop signs  What color is a stop sign? [Static versions retain the order as authored.]     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?   Multiple-Choice, Randomized, Multiple Answers stop signs  Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.) [Static versions retain the order as authored.]     Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.     Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   Mathematical Multiple-Choice, Not Randomized, Multiple Answers stop signs  Which of the following is an antiderivative of ?        Remember that when we write on an antiderivative that this is the way we communicate that there are many possible derivatives, but they all differ by a constant .         The derivative given in the statement of the problem looks exactly like an application of the chain rule to .         Take a derivative on to see that this answer is correct. Extra credit: does this answer differ by a constant when subtracted from either of the other two correct answers?         The antiderivative of a product is not the product of the antiderivatives. Use the product rule to take a derivative and see that this answer is not correct.     You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find a single correct answer.   "
+  "body": " Multiple Choice Exercises   When this <exercises> division is hosted on Runestone Academy, it will be enabled for group work. See group selection and submission features are at the end of the division. See for more detail. (2024-07-24: experimental.)    Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Multiple-Choice, Math in Feedback   What is the coefficient on in ?           Have you accounted for the and that are in the original binomial?           What should the exponents on and be when you expand ?           Have you included something of the form in your computations?           Correct! Using the binomial theorem, we get a term containing the monomial by taking two of the first term, and two of the second term in the expansion of , and so this term is equal to .       Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?     Multiple-Choice, Randomized, One Answer  stop signs   What color is a stop sign? [Static versions retain the order as authored.]      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Multiple-Choice, Randomized, One Answer but with Checkboxes  stop signs   What color is a stop sign? [Static versions retain the order as authored.]      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      Yellow    Yellow means slow down.      What did you see last time you went driving?    Maybe go out for a drive?     Multiple-Choice, Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.) [Static versions retain the order as authored.]      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?     Mathematical Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which of the following is an antiderivative of ?         Remember that when we write on an antiderivative that this is the way we communicate that there are many possible derivatives, but they all differ by a constant .         The derivative given in the statement of the problem looks exactly like an application of the chain rule to .         Take a derivative on to see that this answer is correct. Extra credit: does this answer differ by a constant when subtracted from either of the other two correct answers?         The antiderivative of a product is not the product of the antiderivatives. Use the product rule to take a derivative and see that this answer is not correct.      You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find a single correct answer.     Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?  Note: we are experimenting with choices in columns (2025-05-17). Three columns here.           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      Purple    Hmmmmmmm.      Pink    I have never seen a pink road sign!      What did you see last time you went driving?    Maybe go out for a drive?    "
 },
 {
   "id": "multiple-choice-not-randomized",
@@ -3805,43 +3868,70 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.9.1",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
-  "body": "Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  "
+  "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
+},
+{
+  "id": "multiple-choice-feedback-math",
+  "level": "2",
+  "url": "exercises-groupwork.html#multiple-choice-feedback-math",
+  "type": "Exercise",
+  "number": "5.9.2",
+  "title": "Multiple-Choice, Math in Feedback.",
+  "body": " Multiple-Choice, Math in Feedback   What is the coefficient on in ?           Have you accounted for the and that are in the original binomial?           What should the exponents on and be when you expand ?           Have you included something of the form in your computations?           Correct! Using the binomial theorem, we get a term containing the monomial by taking two of the first term, and two of the second term in the expansion of , and so this term is equal to .     "
 },
 {
   "id": "multiple-choice-multiple-answers",
   "level": "2",
   "url": "exercises-groupwork.html#multiple-choice-multiple-answers",
   "type": "Exercise",
-  "number": "5.9.2",
+  "number": "5.9.3",
   "title": "Multiple-Choice, Not Randomized, Multiple Answers.",
-  "body": "Multiple-Choice, Not Randomized, Multiple Answers stop signs  Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)     Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.     Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?  "
+  "body": " Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   "
 },
 {
   "id": "multiple-choice-randomized",
   "level": "2",
   "url": "exercises-groupwork.html#multiple-choice-randomized",
   "type": "Exercise",
-  "number": "5.9.3",
+  "number": "5.9.4",
   "title": "Multiple-Choice, Randomized, One Answer.",
-  "body": "Multiple-Choice, Randomized, One Answer stop signs  What color is a stop sign? [Static versions retain the order as authored.]     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  "
+  "body": " Multiple-Choice, Randomized, One Answer  stop signs   What color is a stop sign? [Static versions retain the order as authored.]      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
+},
+{
+  "id": "multiple-choice-randomized-forced-checkbox",
+  "level": "2",
+  "url": "exercises-groupwork.html#multiple-choice-randomized-forced-checkbox",
+  "type": "Exercise",
+  "number": "5.9.5",
+  "title": "Multiple-Choice, Randomized, One Answer but with Checkboxes.",
+  "body": " Multiple-Choice, Randomized, One Answer but with Checkboxes  stop signs   What color is a stop sign? [Static versions retain the order as authored.]      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      Yellow    Yellow means slow down.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
 {
   "id": "multiple-choice-randomized-multiple-answers",
   "level": "2",
   "url": "exercises-groupwork.html#multiple-choice-randomized-multiple-answers",
   "type": "Exercise",
-  "number": "5.9.4",
+  "number": "5.9.6",
   "title": "Multiple-Choice, Randomized, Multiple Answers.",
-  "body": "Multiple-Choice, Randomized, Multiple Answers stop signs  Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.) [Static versions retain the order as authored.]     Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.     Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?  "
+  "body": " Multiple-Choice, Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.) [Static versions retain the order as authored.]      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   "
 },
 {
   "id": "mathematical-multiple-choice-multiple-answers",
   "level": "2",
   "url": "exercises-groupwork.html#mathematical-multiple-choice-multiple-answers",
   "type": "Exercise",
-  "number": "5.9.5",
+  "number": "5.9.7",
   "title": "Mathematical Multiple-Choice, Not Randomized, Multiple Answers.",
-  "body": "Mathematical Multiple-Choice, Not Randomized, Multiple Answers stop signs  Which of the following is an antiderivative of ?        Remember that when we write on an antiderivative that this is the way we communicate that there are many possible derivatives, but they all differ by a constant .         The derivative given in the statement of the problem looks exactly like an application of the chain rule to .         Take a derivative on to see that this answer is correct. Extra credit: does this answer differ by a constant when subtracted from either of the other two correct answers?         The antiderivative of a product is not the product of the antiderivatives. Use the product rule to take a derivative and see that this answer is not correct.     You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find a single correct answer.  "
+  "body": " Mathematical Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which of the following is an antiderivative of ?         Remember that when we write on an antiderivative that this is the way we communicate that there are many possible derivatives, but they all differ by a constant .         The derivative given in the statement of the problem looks exactly like an application of the chain rule to .         Take a derivative on to see that this answer is correct. Extra credit: does this answer differ by a constant when subtracted from either of the other two correct answers?         The antiderivative of a product is not the product of the antiderivatives. Use the product rule to take a derivative and see that this answer is not correct.      You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find a single correct answer.   "
+},
+{
+  "id": "multiple-choice-columns",
+  "level": "2",
+  "url": "exercises-groupwork.html#multiple-choice-columns",
+  "type": "Exercise",
+  "number": "5.9.8",
+  "title": "Multiple-Choice, Not Randomized, One Answer.",
+  "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?  Note: we are experimenting with choices in columns (2025-05-17). Three columns here.           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      Purple    Hmmmmmmm.      Pink    I have never seen a pink road sign!      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
 {
   "id": "parsons-exercises",
@@ -3850,7 +3940,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.10",
   "title": "Parsons Exercises",
-  "body": " Parsons Exercises  Parsons Problem, Mathematical Proof even numbers  Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .   Dorothy will not be much help with this proof.  Parsons Problem, Partial Ordering  Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.    import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)    Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    Parsons Problem with executable  Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.        def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg   print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p)  Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    Parsons Problem, Mathematical Proof, Numbered Blocks even numbers  Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .   Dorothy will not be much help with this proof.  Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    "
+  "body": " Parsons Exercises   Parsons Problem, Mathematical Proof  even numbers   Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.    Parsons Problem, Partial Ordering   Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.     import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)      Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem with executable   Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.         def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg      print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image    img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p)    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem, Mathematical Proof, Numbered Blocks  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    Dorothy will not be much help with this proof.    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)     "
 },
 {
   "id": "number-theory-proof",
@@ -3859,7 +3949,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.1",
   "title": "Parsons Problem, Mathematical Proof.",
-  "body": "Parsons Problem, Mathematical Proof even numbers  Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .   Dorothy will not be much help with this proof. "
+  "body": " Parsons Problem, Mathematical Proof  even numbers   Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.  "
 },
 {
   "id": "parsons-with-partial-order",
@@ -3868,7 +3958,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.2",
   "title": "Parsons Problem, Partial Ordering.",
-  "body": "Parsons Problem, Partial Ordering  Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.    import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)   "
+  "body": " Parsons Problem, Partial Ordering   Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.     import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)    "
 },
 {
   "id": "prime-number-program-indent-yes",
@@ -3877,7 +3967,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.3",
   "title": "Parsons Problem, Programming.",
-  "body": "Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)   "
+  "body": " Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    "
 },
 {
   "id": "parsons-with-executable",
@@ -3886,7 +3976,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.4",
   "title": "Parsons Problem with executable.",
-  "body": "Parsons Problem with executable  Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.        def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg   print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p) "
+  "body": " Parsons Problem with executable   Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.         def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg      print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image    img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p)  "
 },
 {
   "id": "prime-number-program-indent-no",
@@ -3895,7 +3985,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.5",
   "title": "Parsons Problem, Programming.",
-  "body": "Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)   "
+  "body": " Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    "
 },
 {
   "id": "number-theory-proof-numbered-left",
@@ -3904,7 +3994,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.6",
   "title": "Parsons Problem, Mathematical Proof, Numbered Blocks.",
-  "body": "Parsons Problem, Mathematical Proof, Numbered Blocks even numbers  Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .   Dorothy will not be much help with this proof. "
+  "body": " Parsons Problem, Mathematical Proof, Numbered Blocks  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    Dorothy will not be much help with this proof.  "
 },
 {
   "id": "prime-number-program-numbered-right",
@@ -3913,7 +4003,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.10.7",
   "title": "Parsons Problem, Programming.",
-  "body": "Parsons Problem, Programming prime numbers Sieve of Eratosthenes  The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .    n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)   "
+  "body": " Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    "
 },
 {
   "id": "horizontal-parsons-exercises",
@@ -3922,7 +4012,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.11",
   "title": "Horizontal Parsons Exercises",
-  "body": " Horizontal Parsons Exercises  Parsons Problem, SQL statement  Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   Parsons Problem, Python import  This is testing that horizontal parsons get the default programming language from docinfo\/parsons\/@language .   from  math  import  pi   Parsons Problem, SQL statement, no randomization  Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.   SELECT  *  FROM  test   Parsons Problem, SQL statement, automatic feedback  Form the SQL statement by rearranging the four blocks.   SELECT  *  FROM  test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 42  Parsons Problem, Natural Language  Form the sentence often used to show font samples. You can reuse blocks as needed.    quick  brown  fox  jumped  over  the  lazy  dog   Parsons Problem, Natural Language, with Distractors  Form the sentence often used to show font samples. Again, but now with distractors.    quick  brown  fox  jumped  foo  over  the  lazy  bar  dog   Parsons Problem, SQL statement, reusable  Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).   SELECT  *  FROM  test   "
+  "body": " Horizontal Parsons Exercises   Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test     Parsons Problem, Python import   This is testing that horizontal parsons get the default programming language from docinfo\/parsons\/@language .    from  math  import  pi     Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test     Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42    Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog     Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog     Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test    "
 },
 {
   "id": "horizontal-parson-sql-statement-simple",
@@ -3931,7 +4021,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.1",
   "title": "Parsons Problem, SQL statement.",
-  "body": "Parsons Problem, SQL statement  Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test  "
+  "body": " Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test   "
 },
 {
   "id": "horizontal-parson-python-test",
@@ -3940,7 +4030,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.2",
   "title": "Parsons Problem, Python import.",
-  "body": "Parsons Problem, Python import  This is testing that horizontal parsons get the default programming language from docinfo\/parsons\/@language .   from  math  import  pi  "
+  "body": " Parsons Problem, Python import   This is testing that horizontal parsons get the default programming language from docinfo\/parsons\/@language .    from  math  import  pi   "
 },
 {
   "id": "horizontal-parson-sql-statement-no-randomize",
@@ -3949,7 +4039,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.3",
   "title": "Parsons Problem, SQL statement, no randomization.",
-  "body": "Parsons Problem, SQL statement, no randomization  Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.   SELECT  *  FROM  test  "
+  "body": " Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test   "
 },
 {
   "id": "horizontal-parson-sql-statement-with-db",
@@ -3958,7 +4048,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.4",
   "title": "Parsons Problem, SQL statement, automatic feedback.",
-  "body": "Parsons Problem, SQL statement, automatic feedback  Form the SQL statement by rearranging the four blocks.   SELECT  *  FROM  test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 42 "
+  "body": " Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42  "
 },
 {
   "id": "horizontal-parson-natural",
@@ -3967,7 +4057,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.5",
   "title": "Parsons Problem, Natural Language.",
-  "body": "Parsons Problem, Natural Language  Form the sentence often used to show font samples. You can reuse blocks as needed.    quick  brown  fox  jumped  over  the  lazy  dog  "
+  "body": " Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog   "
 },
 {
   "id": "horizontal-parson-natural-distractor",
@@ -3976,7 +4066,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.6",
   "title": "Parsons Problem, Natural Language, with Distractors.",
-  "body": "Parsons Problem, Natural Language, with Distractors  Form the sentence often used to show font samples. Again, but now with distractors.    quick  brown  fox  jumped  foo  over  the  lazy  bar  dog  "
+  "body": " Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog   "
 },
 {
   "id": "horizontal-parson-sql-statement-reusable",
@@ -3985,7 +4075,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.11.7",
   "title": "Parsons Problem, SQL statement, reusable.",
-  "body": "Parsons Problem, SQL statement, reusable  Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).   SELECT  *  FROM  test  "
+  "body": " Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test   "
 },
 {
   "id": "matching-exercises",
@@ -3994,7 +4084,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.12",
   "title": "Matching Exercises",
-  "body": " Matching Exercises   Matching Problem, Dates matching US dates  Match each event in United States history with the year it happened.   Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.    Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863    Matching Problem, Derivatives matching derivatives  Match each function with its derivative.   Did you compute the derivative of each function in the premises (left column)?                Matching Problem, Linear Algebra matching bases and subspaces  Match each subspace with a basis for that subspace. (You may assume that each set is really a basis for at least one of the subspaces.)   Each putative basis is a subset of exactly one of the three subspaces. So for each subspace, two of the three sets can be ruled out by simply testing that the vectors of the basis are members of the subspace, via the membership criteria.                For openers, a basis for a subspace must be a subset of the subspace.   Matching Problem, Function Types matching function types  Sort the following functions into their correct categories. [Ed. As of 2024-10-07 the following problem is not expected to render and function properly. It is here to aid development work. Nothing to see here.]   Review Active Prelude to Calculus url.    Linear       Quadratic       Exponential     Power      "
+  "body": " Matching Exercises   Matching exercises come in two varieties. Their differences are most noticeable in interactive versions.   Cardsort  A <cardsort> asks users to match items in a 1-1 or many-1 fashion. The interactive version of these involves dragging card s from the left column (the <premise> s) into containers on the right (the <response> s).    Matching  A <matching> interactive asks users to form connections between the <premise> s in the left column and the <response> s on the right. This format supports many-many matches.        Cardsort Problem, Dates  matching US dates   Match each event in United States history with the year it happened.    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863      Cardsort Problem, Derivatives  matching derivatives   Match each function with its derivative.    Did you compute the derivative of each function in the premises (left column)?                   Cardsort Problem, Linear Algebra  matching bases and subspaces   Match each subspace with a basis for that subspace. (You may assume that each set is really a basis for at least one of the subspaces.)    Each putative basis is a subset of exactly one of the three subspaces. So for each subspace, two of the three sets can be ruled out by simply testing that the vectors of the basis are members of the subspace, via the membership criteria.                  For openers, a basis for a subspace must be a subset of the subspace.     Cardsort Problem, Function Types  matching function types   Sort the following functions into their correct categories.    Review Active Prelude to Calculus url.     Linear       Quadratic       Exponential     Power        Matching Problem, Playing Cards  matching playing cards   Associate each playing card with every applicable property.    This one should not be very hard. And we have a gratuitous image to test the use of HTML in this component.     Jack of Hearts  Ace of Spades  Queen of Spades  King of Clubs  Queen of Diamonds   Ace  King  Queen  Jack  Heart  Diamond  Club  Spade     Matching Problem, Popular Music History  matching music history   Drag each performer onto every applicable category.    Paul McCartney, Ringo Starr, Eric Clapton, Elton John. Jethro Tull is the name of a band, not a performer, and its best-known member would be the flautist Ian Anderson.    Paul  Ringo  Eric  Elton  Jethro   Beatle  Yardbirds  Guitarist  Drummer  Flautist  Harpist  Pianist  Some \"Math\":     Cardsort Problem, Basic Arithmetic  matching US dates   This is a simple exercise to test some grading behavior.     2 + 3  4 + 1  5     14     "
 },
 {
   "id": "matching-dates",
@@ -4002,8 +4092,8 @@ var ptx_lunr_docs = [
   "url": "matching-exercises.html#matching-dates",
   "type": "Exercise",
   "number": "5.12.1",
-  "title": "Matching Problem, Dates.",
-  "body": "Matching Problem, Dates matching US dates  Match each event in United States history with the year it happened.   Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.    Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863   "
+  "title": "Cardsort Problem, Dates.",
+  "body": " Cardsort Problem, Dates  matching US dates   Match each event in United States history with the year it happened.    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863    "
 },
 {
   "id": "matching-derivatives",
@@ -4011,8 +4101,8 @@ var ptx_lunr_docs = [
   "url": "matching-exercises.html#matching-derivatives",
   "type": "Exercise",
   "number": "5.12.2",
-  "title": "Matching Problem, Derivatives.",
-  "body": "Matching Problem, Derivatives matching derivatives  Match each function with its derivative.   Did you compute the derivative of each function in the premises (left column)?               "
+  "title": "Cardsort Problem, Derivatives.",
+  "body": " Cardsort Problem, Derivatives  matching derivatives   Match each function with its derivative.    Did you compute the derivative of each function in the premises (left column)?                 "
 },
 {
   "id": "matching-bases",
@@ -4020,8 +4110,8 @@ var ptx_lunr_docs = [
   "url": "matching-exercises.html#matching-bases",
   "type": "Exercise",
   "number": "5.12.3",
-  "title": "Matching Problem, Linear Algebra.",
-  "body": "Matching Problem, Linear Algebra matching bases and subspaces  Match each subspace with a basis for that subspace. (You may assume that each set is really a basis for at least one of the subspaces.)   Each putative basis is a subset of exactly one of the three subspaces. So for each subspace, two of the three sets can be ruled out by simply testing that the vectors of the basis are members of the subspace, via the membership criteria.                For openers, a basis for a subspace must be a subset of the subspace.  "
+  "title": "Cardsort Problem, Linear Algebra.",
+  "body": " Cardsort Problem, Linear Algebra  matching bases and subspaces   Match each subspace with a basis for that subspace. (You may assume that each set is really a basis for at least one of the subspaces.)    Each putative basis is a subset of exactly one of the three subspaces. So for each subspace, two of the three sets can be ruled out by simply testing that the vectors of the basis are members of the subspace, via the membership criteria.                  For openers, a basis for a subspace must be a subset of the subspace.   "
 },
 {
   "id": "matching-function-types",
@@ -4029,8 +4119,35 @@ var ptx_lunr_docs = [
   "url": "matching-exercises.html#matching-function-types",
   "type": "Exercise",
   "number": "5.12.4",
-  "title": "Matching Problem, Function Types.",
-  "body": "Matching Problem, Function Types matching function types  Sort the following functions into their correct categories. [Ed. As of 2024-10-07 the following problem is not expected to render and function properly. It is here to aid development work. Nothing to see here.]   Review Active Prelude to Calculus url.    Linear       Quadratic       Exponential     Power     "
+  "title": "Cardsort Problem, Function Types.",
+  "body": " Cardsort Problem, Function Types  matching function types   Sort the following functions into their correct categories.    Review Active Prelude to Calculus url.     Linear       Quadratic       Exponential     Power      "
+},
+{
+  "id": "matching-playing-cards",
+  "level": "2",
+  "url": "matching-exercises.html#matching-playing-cards",
+  "type": "Exercise",
+  "number": "5.12.5",
+  "title": "Matching Problem, Playing Cards.",
+  "body": " Matching Problem, Playing Cards  matching playing cards   Associate each playing card with every applicable property.    This one should not be very hard. And we have a gratuitous image to test the use of HTML in this component.     Jack of Hearts  Ace of Spades  Queen of Spades  King of Clubs  Queen of Diamonds   Ace  King  Queen  Jack  Heart  Diamond  Club  Spade   "
+},
+{
+  "id": "matching-music-history",
+  "level": "2",
+  "url": "matching-exercises.html#matching-music-history",
+  "type": "Exercise",
+  "number": "5.12.6",
+  "title": "Matching Problem, Popular Music History.",
+  "body": " Matching Problem, Popular Music History  matching music history   Drag each performer onto every applicable category.    Paul McCartney, Ringo Starr, Eric Clapton, Elton John. Jethro Tull is the name of a band, not a performer, and its best-known member would be the flautist Ian Anderson.    Paul  Ringo  Eric  Elton  Jethro   Beatle  Yardbirds  Guitarist  Drummer  Flautist  Harpist  Pianist  Some \"Math\":   "
+},
+{
+  "id": "cardsort-basic",
+  "level": "2",
+  "url": "matching-exercises.html#cardsort-basic",
+  "type": "Exercise",
+  "number": "5.12.7",
+  "title": "Cardsort Problem, Basic Arithmetic.",
+  "body": " Cardsort Problem, Basic Arithmetic  matching US dates   This is a simple exercise to test some grading behavior.     2 + 3  4 + 1  5     14    "
 },
 {
   "id": "clickable-area-exercises",
@@ -4039,7 +4156,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.13",
   "title": "Clickable Area Exercises",
-  "body": " Clickable Area Exercises  Clickable Areas, Regular Text  Identify (by clicking, or by circling) all of the nouns in this quotation by Eleanor Roosevelt.   The future belongs to those who believe in the beauty of their  dreams .   The incorrect words are pronouns.   Clickable Areas, Code  Identify (by clicking, or by circling) all of the assignment statements in this Python function.   def main():   x = 4  for i in range(5):   y = i   if y > 2:  print(y)   Remember, the operator = is used for assignment.   Clickable Areas, Text in a Table  A two-dimensional array was created in Python with the list comprehension:  [[0 for x in range(3)] for y in range(2)]  Then the values were (mostly) changed from zeros and the final array is shown below.  Identify (by clicking, or by circling) all of the boolean values in the array.      42  True  'towel'    'true'  0  False    This second table has no <area> , in order to test CSS for tables.    42  True  'towel'    'true'  0  False     Python boolean variables are True and False . A value in quotation marks is a string, not a boolean.   Python boolean variables begin with capital latters.   "
+  "body": " Clickable Area Exercises   Clickable Areas, Regular Text   Identify (by clicking, or by circling) all of the nouns in this quotation by Eleanor Roosevelt.    The future belongs to those who believe in the beauty of their  dreams .    The incorrect words are pronouns.     Clickable Areas, Code   Identify (by clicking, or by circling) all of the assignment statements in this Python function.    def main():   x = 4  for i in range(5):   y = i   if y > 2:  print(y)    Remember, the operator = is used for assignment.     Clickable Areas, Text in a Table   A two-dimensional array was created in Python with the list comprehension:  [[0 for x in range(3)] for y in range(2)]  Then the values were (mostly) changed from zeros and the final array is shown below.  Identify (by clicking, or by circling) all of the boolean values in the array.       42  True  'towel'    'true'  0  False    This second table has no <area> , in order to test CSS for tables.    42  True  'towel'    'true'  0  False      Python boolean variables begin with capital latters.    Python boolean variables are True and False . A value in quotation marks is a string, not a boolean.    "
 },
 {
   "id": "clickable-text",
@@ -4048,7 +4165,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.13.1",
   "title": "Clickable Areas, “Regular” Text.",
-  "body": "Clickable Areas, Regular Text  Identify (by clicking, or by circling) all of the nouns in this quotation by Eleanor Roosevelt.   The future belongs to those who believe in the beauty of their  dreams .   The incorrect words are pronouns.  "
+  "body": " Clickable Areas, Regular Text   Identify (by clicking, or by circling) all of the nouns in this quotation by Eleanor Roosevelt.    The future belongs to those who believe in the beauty of their  dreams .    The incorrect words are pronouns.   "
 },
 {
   "id": "clickable-code",
@@ -4057,7 +4174,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.13.2",
   "title": "Clickable Areas, Code.",
-  "body": "Clickable Areas, Code  Identify (by clicking, or by circling) all of the assignment statements in this Python function.   def main():   x = 4  for i in range(5):   y = i   if y > 2:  print(y)   Remember, the operator = is used for assignment.  "
+  "body": " Clickable Areas, Code   Identify (by clicking, or by circling) all of the assignment statements in this Python function.    def main():   x = 4  for i in range(5):   y = i   if y > 2:  print(y)    Remember, the operator = is used for assignment.   "
 },
 {
   "id": "clickable-table",
@@ -4066,7 +4183,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.13.3",
   "title": "Clickable Areas, Text in a Table.",
-  "body": "Clickable Areas, Text in a Table  A two-dimensional array was created in Python with the list comprehension:  [[0 for x in range(3)] for y in range(2)]  Then the values were (mostly) changed from zeros and the final array is shown below.  Identify (by clicking, or by circling) all of the boolean values in the array.      42  True  'towel'    'true'  0  False    This second table has no <area> , in order to test CSS for tables.    42  True  'towel'    'true'  0  False     Python boolean variables are True and False . A value in quotation marks is a string, not a boolean.   Python boolean variables begin with capital latters.  "
+  "body": " Clickable Areas, Text in a Table   A two-dimensional array was created in Python with the list comprehension:  [[0 for x in range(3)] for y in range(2)]  Then the values were (mostly) changed from zeros and the final array is shown below.  Identify (by clicking, or by circling) all of the boolean values in the array.       42  True  'towel'    'true'  0  False    This second table has no <area> , in order to test CSS for tables.    42  True  'towel'    'true'  0  False      Python boolean variables begin with capital latters.    Python boolean variables are True and False . A value in quotation marks is a string, not a boolean.   "
 },
 {
   "id": "select-exercises",
@@ -4075,34 +4192,52 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.14",
   "title": "Select Exercises",
-  "body": " Select Exercises   Mock exercise, just to say this is all testing, 2023-05-19.       "
+  "body": " Select Exercises   These select questions specify a list of extant questions, and the reader, or Runestone, selects questions from the list to be graded (in different ways). They are only really functional with a database of students in a course, i.e. when hosted on Runestone.    Three-way Select Question Runestone-only: exercise to grade will be automatically chosen by Runestone from , , or .   A\/B Experiment Select Question Runestone-only: an A\/B experiment (named sample-book ) with as (A) and as (B).   Grade First Question Runestone-only: a toggle question where the question graded is always the first of , or .   Grade Any Question Runestone-only: a toggle question where the question graded is any question chosen by the reader from , or .  "
 },
 {
-  "id": "select-exercises-2",
+  "id": "select-exercises-2-1",
   "level": "2",
-  "url": "select-exercises.html#select-exercises-2",
-  "type": "Exercise",
-  "number": "5.14.1",
+  "url": "select-exercises.html#select-exercises-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
   "title": "",
-  "body": " Mock exercise, just to say this is all testing, 2023-05-19.  "
+  "body": "select "
 },
 {
   "id": "question-select",
   "level": "2",
   "url": "select-exercises.html#question-select",
   "type": "Exercise",
-  "number": "5.14.2",
-  "title": "",
-  "body": ""
+  "number": "5.14.1",
+  "title": "Three-way Select Question.",
+  "body": "Three-way Select Question Runestone-only: exercise to grade will be automatically chosen by Runestone from , , or . "
 },
 {
   "id": "ab-experiment",
   "level": "2",
   "url": "select-exercises.html#ab-experiment",
   "type": "Exercise",
+  "number": "5.14.2",
+  "title": "A\/B Experiment Select Question.",
+  "body": "A\/B Experiment Select Question Runestone-only: an A\/B experiment (named sample-book ) with as (A) and as (B). "
+},
+{
+  "id": "toggle-first",
+  "level": "2",
+  "url": "select-exercises.html#toggle-first",
+  "type": "Exercise",
   "number": "5.14.3",
-  "title": "",
-  "body": ""
+  "title": "Grade First Question.",
+  "body": "Grade First Question Runestone-only: a toggle question where the question graded is always the first of , or . "
+},
+{
+  "id": "toggle-any",
+  "level": "2",
+  "url": "select-exercises.html#toggle-any",
+  "type": "Exercise",
+  "number": "5.14.4",
+  "title": "Grade Any Question.",
+  "body": "Grade Any Question Runestone-only: a toggle question where the question graded is any question chosen by the reader from , or . "
 },
 {
   "id": "short-answer-exercises",
@@ -4111,7 +4246,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.15",
   "title": "Short Answer Exercises",
-  "body": " Short Answer Exercises  Short Answer  This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.   "
+  "body": " Short Answer Exercises   Short Answer   This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.     "
 },
 {
   "id": "short-answer-question",
@@ -4120,7 +4255,7 @@ var ptx_lunr_docs = [
   "type": "Exercise",
   "number": "5.15.1",
   "title": "Short Answer.",
-  "body": "Short Answer  This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.  "
+  "body": " Short Answer   This sample book is configured to make some simple questions interactive on a capable platform, by adding a <response> element as a signal.    "
 },
 {
   "id": "polling",
@@ -4150,182 +4285,218 @@ var ptx_lunr_docs = [
   "body": " DoenetML  This preliminary DoenetML example is for testing use on a Runestone server, where it will use the SPLICE protocol to report out events. To the reader, it should behave identically when not on a Runestone server.    "
 },
 {
-  "id": "fill-in-exercises",
+  "id": "fill-in-exercises-old",
   "level": "1",
-  "url": "fill-in-exercises.html",
+  "url": "fill-in-exercises-old.html",
   "type": "Exercises",
   "number": "5.18",
-  "title": "Fill-In Exercises",
-  "body": " Fill-In Exercises  Fill-In, Integer Answer  The game of bowling uses pins that you try to knock down. (This answer blank has been set to be very wide.)      Arranged in a triangle, there are pins, a so-called triangular number.      Close ! You may have used hexadecimal notation, when you did not really mean to.      Incorrect.      Fill-In, String and Number Answers  Complete the following line of a Python program so that it will declare an integer variable age with an initial value of 5 . (These two answer blanks have been set to be very short.)   age =  ;      A variable of type int is appropriate for whole number ages.      Remember that Java uses just the first three letters of the word integer to define an integral type.        An integer variable may be initialized to a value.      Use 5 as the initial value of the variable.      Fill-In, Case-Insensitive Answer  The word is the opposite of yes . (Try a mixture of upper and lower-case letters.)      The correct answers are no, No, nO, and NO.    Incorrect.     Fill-In, Decimal Answer  The decimal number is an approximation of to within three significant figures. ( Wikipedia ).       Any value in the interval is correct.      Incorrect. Did you provide three significant figures ?      Fill-In, New Markup Numbers  I love . What number am I thinking of, accurate to two decimal places?       The decimal approximation of is , but to two decimal places we write .      Your answer is within 0.1 of the value I wanted.      That is a reasonable guess, but no.      You chose a value between 3 and 4.      You chose a value that rounds to 3.     Fill-In, New Markup Strings  The word I'm thinking about is magic . What word am I thinking about? (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try pizzazz .\")           Some of the characters used the wrong case.     [0-9]+  You typed a word made out of digits.      Your answer includes the correct word but has extra text.     z.+z  Your answer includes text surrounded by z's.     Fill-In, Javascript test of numbers  What is an example of a prime number less than 20?     [2, 3, 5, 7, 11, 13, 17, 19].includes(Number(ans))  Any number from the list is a prime number less than 20.    function(){ const val=Number(ans); if (val <= 0) { return \"You need to give a positive integer.\" } if (val >= 20) { return \"The integer must be less than 20.\" } for (let i=2; i<=3; i++) { if (val % i == 0) { return `Your answer is composite; for example, it is divisible by ${i}.` } } return false; }()     Fill-In, Javascript test of strings  What is an example of a palindrome?     function(){ const r1 = new RegExp(\"^\\\\w+$\"); var result=r1.test(ans); if (result) { let revAns = ans.split(\"\").reverse().join(\"\"); result = (ans === revAns); } return result; }()  Any word that is the same forward and backward is a palindrome.    \\w+\\s\\w+  Your response needs to be a single word.     Fill-In, Simple Randomization with Numbers  What is the square of ?   v.myNum=RNG.randDiscrete(2, 12, 1); v.mySquare=v.myNum**2;         You responded with the original number. Now square it.     Fill-In, Dynamic Math with Simple Numerical Answer  Solve the equation to get the value of .            -b    m*x+b    -b\/m         {{b}}\/{{m}}  Check for a sign error while isolating .     We want to isolate the in the equation . Because addition of is the last operation, we apply the inverse by adding to both sides. The new, but equivalent equation is now . Dividing both sides of the equation by , we obtain the solution .   Fill-In, Dynamic Math with Formulas as Answers  Consider the function . Find and .   and           n-1    n-2       a*x^n+b                      You confused which derivative is which.          You confused which derivative is which.     The derivative of a constant is zero, so . The term is a power, so the power rule gives us . Putting this together, we find . Applying the power rule a second time, we find .   Fill-In, Dynamic Math with Interdependent Formula Checking  Consider the function . Find two nontrivial functions and so that .   and                    a*x^n+b    c*x+d    x             is not allowed for nontrivial compositions.                    You have composed in the wrong order.       is not allowed for nontrivial compositions.                            Noticing that the expression appears inside parentheses with a power, it makes sense to think of that as the inner function, defining . The outer function describes what happens to that. If we imagined replacing the formula with a box and then call that box our variable , we find the outer function is given by .  This is not the only non-trivial composition. Can you find others?   "
+  "title": "Fill-In Exercises (Old Style)",
+  "body": " Fill-In Exercises (Old Style)   This section has fill-in-the-blank ( FITB ) exercises that use an old syntax. They were designed for projects transitioning from Runestone's ReST syntax to PreTeXt . So they are really only here for testing, and not for any sort of documentation. They will not receive support or enhancements. Caveat emptor .    Fill-In, Integer Answer   The game of bowling uses pins that you try to knock down. (This answer blank has been set to be very wide.)       Arranged in a triangle, there are pins, a so-called triangular number.      Close ! You may have used hexadecimal notation, when you did not really mean to.      Incorrect.        Fill-In, String and Number Answers   Complete the following line of a Python program so that it will declare an integer variable age with an initial value of 5 . (These two answer blanks have been set to be very short.)   age =  ;       A variable of type int is appropriate for whole number ages.      Remember that Java uses just the first three letters of the word integer to define an integral type.        An integer variable may be initialized to a value.      Use 5 as the initial value of the variable.        Fill-In, Case-Insensitive Answer   The word is the opposite of yes . (Try a mixture of upper and lower-case letters.)       The correct answers are no, No, nO, and NO.    Incorrect.       Fill-In, Decimal Answer   The decimal number is an approximation of to within three significant figures. ( Wikipedia ).        Any value in the interval is correct.      Incorrect. Did you provide three significant figures ?       "
+},
+{
+  "id": "fill-in-exercises-old-2-1",
+  "level": "2",
+  "url": "fill-in-exercises-old.html#fill-in-exercises-old-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "fill-in-the-blank "
 },
 {
   "id": "fillin-integer",
   "level": "2",
-  "url": "fill-in-exercises.html#fillin-integer",
+  "url": "fill-in-exercises-old.html#fillin-integer",
   "type": "Exercise",
   "number": "5.18.1",
   "title": "Fill-In, Integer Answer.",
-  "body": "Fill-In, Integer Answer  The game of bowling uses pins that you try to knock down. (This answer blank has been set to be very wide.)      Arranged in a triangle, there are pins, a so-called triangular number.      Close ! You may have used hexadecimal notation, when you did not really mean to.      Incorrect.     "
+  "body": " Fill-In, Integer Answer   The game of bowling uses pins that you try to knock down. (This answer blank has been set to be very wide.)       Arranged in a triangle, there are pins, a so-called triangular number.      Close ! You may have used hexadecimal notation, when you did not really mean to.      Incorrect.      "
 },
 {
   "id": "fillin-string-integer",
   "level": "2",
-  "url": "fill-in-exercises.html#fillin-string-integer",
+  "url": "fill-in-exercises-old.html#fillin-string-integer",
   "type": "Exercise",
   "number": "5.18.2",
   "title": "Fill-In, String and Number Answers.",
-  "body": "Fill-In, String and Number Answers  Complete the following line of a Python program so that it will declare an integer variable age with an initial value of 5 . (These two answer blanks have been set to be very short.)   age =  ;      A variable of type int is appropriate for whole number ages.      Remember that Java uses just the first three letters of the word integer to define an integral type.        An integer variable may be initialized to a value.      Use 5 as the initial value of the variable.     "
+  "body": " Fill-In, String and Number Answers   Complete the following line of a Python program so that it will declare an integer variable age with an initial value of 5 . (These two answer blanks have been set to be very short.)   age =  ;       A variable of type int is appropriate for whole number ages.      Remember that Java uses just the first three letters of the word integer to define an integral type.        An integer variable may be initialized to a value.      Use 5 as the initial value of the variable.      "
 },
 {
   "id": "fillin-case-insensitive",
   "level": "2",
-  "url": "fill-in-exercises.html#fillin-case-insensitive",
+  "url": "fill-in-exercises-old.html#fillin-case-insensitive",
   "type": "Exercise",
   "number": "5.18.3",
   "title": "Fill-In, Case-Insensitive Answer.",
-  "body": "Fill-In, Case-Insensitive Answer  The word is the opposite of yes . (Try a mixture of upper and lower-case letters.)      The correct answers are no, No, nO, and NO.    Incorrect.    "
+  "body": " Fill-In, Case-Insensitive Answer   The word is the opposite of yes . (Try a mixture of upper and lower-case letters.)       The correct answers are no, No, nO, and NO.    Incorrect.     "
 },
 {
   "id": "fillin-decimal",
   "level": "2",
-  "url": "fill-in-exercises.html#fillin-decimal",
+  "url": "fill-in-exercises-old.html#fillin-decimal",
   "type": "Exercise",
   "number": "5.18.4",
   "title": "Fill-In, Decimal Answer.",
-  "body": "Fill-In, Decimal Answer  The decimal number is an approximation of to within three significant figures. ( Wikipedia ).       Any value in the interval is correct.      Incorrect. Did you provide three significant figures ?     "
+  "body": " Fill-In, Decimal Answer   The decimal number is an approximation of to within three significant figures. ( Wikipedia ).        Any value in the interval is correct.      Incorrect. Did you provide three significant figures ?      "
+},
+{
+  "id": "fill-in-exercises",
+  "level": "1",
+  "url": "fill-in-exercises.html",
+  "type": "Exercises",
+  "number": "5.19",
+  "title": "Fill-In Exercises",
+  "body": " Fill-In Exercises   This section has fill-in-the-blank ( FITB ) exercises using newer syntax, and the subject of active development.    Fill-In, New Markup Numbers   I love . What number am I thinking of, accurate to two decimal places?        The decimal approximation of is , but to two decimal places we write .      Your answer is within 0.1 of the value I wanted.      That is a reasonable guess, but no.      You chose a value between 3 and 4.      You chose a value that rounds to 3.       Fill-In, New Markup Strings   The word I'm thinking about is hinted at by the image.   What word am I thinking about? (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try pizzazz .\")            Some of the characters used the wrong case.     [0-9]+  You typed a word made out of digits.      Your answer includes the correct word but has extra text.     z.+z  Your answer includes text surrounded by z's.     Do you really need a hint? Carefully reread the question.    Fill-In, Javascript test of numbers   What is an example of a prime number less than 20?      [2, 3, 5, 7, 11, 13, 17, 19].includes(Number(ans))  Any number from the list is a prime number less than 20.    function(){ const val=Number(ans); if (val <= 0) { return \"You need to give a positive integer.\" } if (val >= 20) { return \"The integer must be less than 20.\" } for (let i=2; i<=3; i++) { if (val % i == 0) { return `Your answer is composite; for example, it is divisible by ${i}.` } } return false; }()       Fill-In, Javascript test of strings   What is an example of a palindrome?      function(){ const r1 = new RegExp(\"^\\\\w+$\"); var result=r1.test(ans); if (result) { let revAns = ans.split(\"\").reverse().join(\"\"); result = (ans === revAns); } return result; }()  Any word that is the same forward and backward is a palindrome.    \\w+\\s\\w+  Your response needs to be a single word.       Fill-In, Simple Randomization with Numbers   What is the square of ?    v.myNum=RNG.randDiscrete(2, 12, 1); v.mySquare=v.myNum**2;          You responded with the original number. Now square it.       Fill-In, Dynamic Math with Simple Numerical Answer   Solve the equation to get the value of .      We want to isolate the in the equation . Because addition of is the last operation, we apply the inverse by adding to both sides. The new, but equivalent equation is now . Dividing both sides of the equation by , we obtain the solution .           -b    m*x+b    -b\/m          {{b}}\/{{m}}  Check for a sign error while isolating .       Fill-In, Dynamic Math with Formulas as Answers   Consider the function . Find and .   and     The derivative of a constant is zero, so . The term is a power, so the power rule gives us . Putting this together, we find . Applying the power rule a second time, we find .           n-1    n-2       a*x^n+b                       You confused which derivative is which.          You confused which derivative is which.       Fill-In, Dynamic Math with Interdependent Formula Checking   Consider the function . Find two nontrivial functions and so that .   and     Noticing that the expression appears inside parentheses with a power, it makes sense to think of that as the inner function, defining . The outer function describes what happens to that. If we imagined replacing the formula with a box and then call that box our variable , we find the outer function is given by .  This is not the only non-trivial composition. Can you find others?                    a*x^n+b    c*x+d    x              is not allowed for nontrivial compositions.                    You have composed in the wrong order.       is not allowed for nontrivial compositions.                             "
+},
+{
+  "id": "fill-in-exercises-2-1",
+  "level": "2",
+  "url": "fill-in-exercises.html#fill-in-exercises-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "fill-in-the-blank "
 },
 {
   "id": "fillin-numbers-many-tests",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-numbers-many-tests",
   "type": "Exercise",
-  "number": "5.18.5",
+  "number": "5.19.1",
   "title": "Fill-In, New Markup Numbers.",
-  "body": "Fill-In, New Markup Numbers  I love . What number am I thinking of, accurate to two decimal places?       The decimal approximation of is , but to two decimal places we write .      Your answer is within 0.1 of the value I wanted.      That is a reasonable guess, but no.      You chose a value between 3 and 4.      You chose a value that rounds to 3.    "
+  "body": " Fill-In, New Markup Numbers   I love . What number am I thinking of, accurate to two decimal places?        The decimal approximation of is , but to two decimal places we write .      Your answer is within 0.1 of the value I wanted.      That is a reasonable guess, but no.      You chose a value between 3 and 4.      You chose a value that rounds to 3.     "
 },
 {
   "id": "fillin-strings-",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-strings-",
   "type": "Exercise",
-  "number": "5.18.6",
+  "number": "5.19.2",
   "title": "Fill-In, New Markup Strings.",
-  "body": "Fill-In, New Markup Strings  The word I'm thinking about is magic . What word am I thinking about? (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try pizzazz .\")           Some of the characters used the wrong case.     [0-9]+  You typed a word made out of digits.      Your answer includes the correct word but has extra text.     z.+z  Your answer includes text surrounded by z's.    "
+  "body": " Fill-In, New Markup Strings   The word I'm thinking about is hinted at by the image.   What word am I thinking about? (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try pizzazz .\")            Some of the characters used the wrong case.     [0-9]+  You typed a word made out of digits.      Your answer includes the correct word but has extra text.     z.+z  Your answer includes text surrounded by z's.     Do you really need a hint? Carefully reread the question.  "
 },
 {
   "id": "ex-demo-jscmp-primes",
   "level": "2",
   "url": "fill-in-exercises.html#ex-demo-jscmp-primes",
   "type": "Exercise",
-  "number": "5.18.7",
+  "number": "5.19.3",
   "title": "Fill-In, Javascript test of numbers.",
-  "body": "Fill-In, Javascript test of numbers  What is an example of a prime number less than 20?     [2, 3, 5, 7, 11, 13, 17, 19].includes(Number(ans))  Any number from the list is a prime number less than 20.    function(){ const val=Number(ans); if (val <= 0) { return \"You need to give a positive integer.\" } if (val >= 20) { return \"The integer must be less than 20.\" } for (let i=2; i<=3; i++) { if (val % i == 0) { return `Your answer is composite; for example, it is divisible by ${i}.` } } return false; }()    "
+  "body": " Fill-In, Javascript test of numbers   What is an example of a prime number less than 20?      [2, 3, 5, 7, 11, 13, 17, 19].includes(Number(ans))  Any number from the list is a prime number less than 20.    function(){ const val=Number(ans); if (val <= 0) { return \"You need to give a positive integer.\" } if (val >= 20) { return \"The integer must be less than 20.\" } for (let i=2; i<=3; i++) { if (val % i == 0) { return `Your answer is composite; for example, it is divisible by ${i}.` } } return false; }()     "
 },
 {
   "id": "fillin-jscmp-palindrome",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-jscmp-palindrome",
   "type": "Exercise",
-  "number": "5.18.8",
+  "number": "5.19.4",
   "title": "Fill-In, Javascript test of strings.",
-  "body": "Fill-In, Javascript test of strings  What is an example of a palindrome?     function(){ const r1 = new RegExp(\"^\\\\w+$\"); var result=r1.test(ans); if (result) { let revAns = ans.split(\"\").reverse().join(\"\"); result = (ans === revAns); } return result; }()  Any word that is the same forward and backward is a palindrome.    \\w+\\s\\w+  Your response needs to be a single word.    "
+  "body": " Fill-In, Javascript test of strings   What is an example of a palindrome?      function(){ const r1 = new RegExp(\"^\\\\w+$\"); var result=r1.test(ans); if (result) { let revAns = ans.split(\"\").reverse().join(\"\"); result = (ans === revAns); } return result; }()  Any word that is the same forward and backward is a palindrome.    \\w+\\s\\w+  Your response needs to be a single word.     "
 },
 {
   "id": "fillin-random-simple",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-random-simple",
   "type": "Exercise",
-  "number": "5.18.9",
+  "number": "5.19.5",
   "title": "Fill-In, Simple Randomization with Numbers.",
-  "body": "Fill-In, Simple Randomization with Numbers  What is the square of ?   v.myNum=RNG.randDiscrete(2, 12, 1); v.mySquare=v.myNum**2;         You responded with the original number. Now square it.    "
+  "body": " Fill-In, Simple Randomization with Numbers   What is the square of ?    v.myNum=RNG.randDiscrete(2, 12, 1); v.mySquare=v.myNum**2;          You responded with the original number. Now square it.     "
 },
 {
   "id": "fillin-math-solve-equation",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-math-solve-equation",
   "type": "Exercise",
-  "number": "5.18.10",
+  "number": "5.19.6",
   "title": "Fill-In, Dynamic Math with Simple Numerical Answer.",
-  "body": "Fill-In, Dynamic Math with Simple Numerical Answer  Solve the equation to get the value of .            -b    m*x+b    -b\/m         {{b}}\/{{m}}  Check for a sign error while isolating .     We want to isolate the in the equation . Because addition of is the last operation, we apply the inverse by adding to both sides. The new, but equivalent equation is now . Dividing both sides of the equation by , we obtain the solution .  "
+  "body": " Fill-In, Dynamic Math with Simple Numerical Answer   Solve the equation to get the value of .      We want to isolate the in the equation . Because addition of is the last operation, we apply the inverse by adding to both sides. The new, but equivalent equation is now . Dividing both sides of the equation by , we obtain the solution .           -b    m*x+b    -b\/m          {{b}}\/{{m}}  Check for a sign error while isolating .     "
 },
 {
   "id": "fillin-math-find-derivatives",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-math-find-derivatives",
   "type": "Exercise",
-  "number": "5.18.11",
+  "number": "5.19.7",
   "title": "Fill-In, Dynamic Math with Formulas as Answers.",
-  "body": "Fill-In, Dynamic Math with Formulas as Answers  Consider the function . Find and .   and           n-1    n-2       a*x^n+b                      You confused which derivative is which.          You confused which derivative is which.     The derivative of a constant is zero, so . The term is a power, so the power rule gives us . Putting this together, we find . Applying the power rule a second time, we find .  "
+  "body": " Fill-In, Dynamic Math with Formulas as Answers   Consider the function . Find and .   and     The derivative of a constant is zero, so . The term is a power, so the power rule gives us . Putting this together, we find . Applying the power rule a second time, we find .           n-1    n-2       a*x^n+b                       You confused which derivative is which.          You confused which derivative is which.     "
 },
 {
   "id": "fillin-math-decompose-function",
   "level": "2",
   "url": "fill-in-exercises.html#fillin-math-decompose-function",
   "type": "Exercise",
-  "number": "5.18.12",
+  "number": "5.19.8",
   "title": "Fill-In, Dynamic Math with Interdependent Formula Checking.",
-  "body": "Fill-In, Dynamic Math with Interdependent Formula Checking  Consider the function . Find two nontrivial functions and so that .   and                    a*x^n+b    c*x+d    x             is not allowed for nontrivial compositions.                    You have composed in the wrong order.       is not allowed for nontrivial compositions.                            Noticing that the expression appears inside parentheses with a power, it makes sense to think of that as the inner function, defining . The outer function describes what happens to that. If we imagined replacing the formula with a box and then call that box our variable , we find the outer function is given by .  This is not the only non-trivial composition. Can you find others?  "
+  "body": " Fill-In, Dynamic Math with Interdependent Formula Checking   Consider the function . Find two nontrivial functions and so that .   and     Noticing that the expression appears inside parentheses with a power, it makes sense to think of that as the inner function, defining . The outer function describes what happens to that. If we imagined replacing the formula with a box and then call that box our variable , we find the outer function is given by .  This is not the only non-trivial composition. Can you find others?                    a*x^n+b    c*x+d    x              is not allowed for nontrivial compositions.                    You have composed in the wrong order.       is not allowed for nontrivial compositions.                            "
 },
 {
-  "id": "rune-21",
+  "id": "runestone-hodgepodge",
   "level": "1",
-  "url": "rune-21.html",
+  "url": "runestone-hodgepodge.html",
   "type": "Exercises",
-  "number": "5.19",
+  "number": "5.20",
   "title": "Hodgepodge",
-  "body": " Hodgepodge  With Tasks in an Exercises Division  Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.  True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   Explain your reasoning in the previous question.   "
+  "body": " Hodgepodge    This is a test of accessing program resources across pages by relying on what is in the database.   #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }    With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      "
+},
+{
+  "id": "multifile-program-2",
+  "level": "2",
+  "url": "runestone-hodgepodge.html#multifile-program-2",
+  "type": "Exercise",
+  "number": "5.20.1",
+  "title": "",
+  "body": "  This is a test of accessing program resources across pages by relying on what is in the database.   #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }  "
 },
 {
   "id": "true-false-exercise-with-tasks-in-exercises",
   "level": "2",
-  "url": "rune-21.html#true-false-exercise-with-tasks-in-exercises",
+  "url": "runestone-hodgepodge.html#true-false-exercise-with-tasks-in-exercises",
   "type": "Exercise",
-  "number": "5.19.1",
+  "number": "5.20.2",
   "title": "With Tasks in an Exercises Division.",
-  "body": "With Tasks in an Exercises Division  Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.  True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   Explain your reasoning in the previous question.  "
+  "body": " With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.     "
 },
 {
   "id": "exercises-timed",
   "level": "1",
   "url": "exercises-timed.html",
   "type": "Section",
-  "number": "5.20",
+  "number": "5.21",
   "title": "Exercises that are Timed",
-  "body": " Exercises that are Timed  This is a section that merely explains and holds an <exercises> division, which will be at the level of a <subsection> . There is a time-limit attribute on <exercises> , set to the value 10 , which implies (a) the collection of (two) exercises is a timed exam when hosted on Runestone, and (b) a student will have 10 minutes to complete the collection.  Showing results, showing feedback, displaying a timer, and allowing pausing are all enabled by default. To disable any of these features, set the corresponding attributes on the <exercises> division, results , feedback , timer , pause , to the value no . As a test, we have turned off pausing. Don't panic!  Of course, if you are not viewing this while online and hosted on a Runestone server, then these exercises will not look any different than in other places.  (Since this is an unstructured division, the number of the <exercises> is not displayed when born. It does have a number, which is the same as the enclosing <section> . To wit: versus .)   Timed Exercises   You have 10 minutes to do these exercises when hosted online on a Runestone server.   True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?    "
+  "body": " Exercises that are Timed  This is a section that merely explains and holds an <exercises> division, which will be at the level of a <subsection> . There is a time-limit attribute on <exercises> , set to the value 10 , which implies (a) the collection of (two) exercises is a timed exam when hosted on Runestone, and (b) a student will have 10 minutes to complete the collection.  Showing results, showing feedback, displaying a timer, and allowing pausing are all enabled by default. To disable any of these features, set the corresponding attributes on the <exercises> division, results , feedback , timer , pause , to the value no . As a test, we have turned off pausing. Don't panic!  Of course, if you are not viewing this while online and hosted on a Runestone server, then these exercises will not look any different than in other places.  (Since this is an unstructured division, the number of the <exercises> is not displayed when born. It does have a number, which is the same as the enclosing <section> . To wit: versus .)  If you prefer that a given <section> has more than one <exercises> within it (timed or not), realize that you must then structure your <section> with a ssequence of <subsection> as peers of the multiple <exercises> you desire.   Timed Exercises   You have 10 minutes to do these exercises when hosted online on a Runestone server.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?     Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     "
 },
 {
   "id": "vector-space-dimension-timed",
   "level": "2",
   "url": "exercises-timed.html#vector-space-dimension-timed",
   "type": "Exercise",
-  "number": "5.20.1",
+  "number": "5.21.1",
   "title": "True\/False.",
-  "body": "True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?  "
+  "body": " True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
 },
 {
   "id": "multiple-choice-not-randomized-timed",
   "level": "2",
   "url": "exercises-timed.html#multiple-choice-not-randomized-timed",
   "type": "Exercise",
-  "number": "5.20.2",
+  "number": "5.21.2",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
-  "body": "Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  "
+  "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
 {
   "id": "interactive-projects",
   "level": "1",
   "url": "interactive-projects.html",
   "type": "Section",
-  "number": "5.21",
+  "number": "5.22",
   "title": "Projects and Friends",
-  "body": " Projects and Friends  PROJECT-LIKE refers to the elements\/blocks <project> , <activity> , <activity> , and <exploration> . They are very similar to <exercise> , and here we stress that they can be interactive in all the same ways an <exercise> can. Key differences are that they are blocks, and so are peers of other blocks like paragraphs and examples, and are children of divisions. By default they have their own numbering scheme, though we expect this to convert to an elective behavior.  Both <exercise> and PROJECT-LIKE can be structured with <task> . It would be natural to have a <project> with multiple <task> , each a possibly different interactive problem type. We expect that to be possible soon. For now, <exercise> and <project> (and friends) need to be structured with a <statement> (and their associated signal) in order to be interactive.   Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?    Now an <exercise> with three <task> . Since the middle one is a short-answer question, it will only be interactive on a capable platform.  True\/False and Explain  Structured with task, we can have an introduction, but this does not migrate with the interactive portions.  True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   Explain your reasoning in the previous question.  Matching Problem, Dates matching US dates  Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)   Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.    Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863    Now an <exploration> nested two-deep with the same two questions , two times each, just for testing purposes.   Exploring Two-Deep  First Iterations of Each Multiple-Choice, Not Randomized, One Answer (First Copy) stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  Python ActiveCode (First Copy)  Run the following program and observe the information provided at each step.   for i in range(10): print(i)  We're still not really sure.  Second Iterations of Each Multiple-Choice, Not Randomized, One Answer (Second Copy) stop signs  What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  Python ActiveCode (Second Copy)  Run the following program and observe the information provided at each step.   for i in range(10): print(i)  We're still not really sure.   This is an <exercise> which has been structured deeply with <task> . It is here to allow for testing a tabbed viewer presentation in online outputs.  A very structured exercise  This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A super-simple task This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. A title of a task that has a subtask with an <answer> for the Solutions  This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A task with a title and an <answer> for the Solutions  A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.   With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.   A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  First subsubtask. Short paragraph. A second three-deep subsubtask! Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   First answer. In interdum suscipit ullamcorper.   Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   "
+  "body": " Projects and Friends  PROJECT-LIKE refers to the elements\/blocks <project> , <activity> , <activity> , and <exploration> . They are very similar to <exercise> , and here we stress that they can be interactive in all the same ways an <exercise> can. Key differences are that they are blocks, and so are peers of other blocks like paragraphs and examples, and are children of divisions. By default they have their own numbering scheme, though we expect this to convert to an elective behavior.  Both <exercise> and PROJECT-LIKE can be structured with <task> . It would be natural to have a <project> with multiple <task> , each a possibly different interactive problem type. We expect that to be possible soon. For now, <exercise> and <project> (and friends) need to be structured with a <statement> (and their associated signal) in order to be interactive.   Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?    Now an <exercise> with three <task> . Since the middle one is a short-answer question, it will only be interactive on a capable platform.   True\/False and Explain   Structured with task, we can have an introduction, but this does not migrate with the interactive portions.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Matching Problem, Dates  matching US dates   Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863      Now an <exploration> nested two-deep with the same two questions , two times each, just for testing purposes.   Exploring Two-Deep   First Iterations of Each   Multiple-Choice, Not Randomized, One Answer (First Copy)  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (First Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.     Second Iterations of Each   Multiple-Choice, Not Randomized, One Answer (Second Copy)  stop signs   What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")       Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (Second Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.     This is an <exercise> which has been structured deeply with <task> . It is here to allow for testing a tabbed viewer presentation in online outputs.   A very structured exercise   This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A super-simple task  This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A title of a task that has a subtask with an <answer> for the Solutions   This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A task with a title and an <answer> for the Solutions   A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.    With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.      A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First subsubtask. Short paragraph.    A second three-deep subsubtask!  Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First answer. In interdum suscipit ullamcorper.    Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    "
 },
 {
   "id": "activity-multiple-choice-multiple-answers",
   "level": "2",
   "url": "interactive-projects.html#activity-multiple-choice-multiple-answers",
   "type": "Activity",
-  "number": "5.21.1",
+  "number": "5.22.1",
   "title": "Multiple-Choice, Not Randomized, Multiple Answers.",
   "body": " Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   "
 },
@@ -4334,88 +4505,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "interactive-projects.html#true-false-exercise-with-tasks",
   "type": "Checkpoint",
-  "number": "5.21.1",
+  "number": "5.22.1",
   "title": "True\/False and Explain.",
-  "body": "True\/False and Explain  Structured with task, we can have an introduction, but this does not migrate with the interactive portions.  True\/False vector space  Every vector space has finite dimension.   The vector space of all polynomials with finite degree has a basis, , which is infinte.   , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   Explain your reasoning in the previous question.  Matching Problem, Dates matching US dates  Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)   Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.    Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863   "
+  "body": " True\/False and Explain   Structured with task, we can have an introduction, but this does not migrate with the interactive portions.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Matching Problem, Dates  matching US dates   Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863     "
 },
 {
   "id": "exploration-two-deep",
   "level": "2",
   "url": "interactive-projects.html#exploration-two-deep",
   "type": "Exploration",
-  "number": "5.21.2",
+  "number": "5.22.2",
   "title": "Exploring Two-Deep.",
-  "body": " Exploring Two-Deep  First Iterations of Each Multiple-Choice, Not Randomized, One Answer (First Copy) stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  Python ActiveCode (First Copy)  Run the following program and observe the information provided at each step.   for i in range(10): print(i)  We're still not really sure.  Second Iterations of Each Multiple-Choice, Not Randomized, One Answer (Second Copy) stop signs  What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  Python ActiveCode (Second Copy)  Run the following program and observe the information provided at each step.   for i in range(10): print(i)  We're still not really sure.  "
+  "body": " Exploring Two-Deep   First Iterations of Each   Multiple-Choice, Not Randomized, One Answer (First Copy)  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (First Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.     Second Iterations of Each   Multiple-Choice, Not Randomized, One Answer (Second Copy)  stop signs   What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")       Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (Second Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.    "
 },
 {
   "id": "very-structured-exercise",
   "level": "2",
   "url": "interactive-projects.html#very-structured-exercise",
   "type": "Checkpoint",
-  "number": "5.21.2",
-  "title": "A very structured exercise.",
-  "body": "A very structured exercise  This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A super-simple task This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. A title of a task that has a subtask with an <answer> for the Solutions  This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A task with a title and an <answer> for the Solutions  A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.   With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.   A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  First subsubtask. Short paragraph. A second three-deep subsubtask! Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis. In interdum suscipit ullamcorper In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   First answer. In interdum suscipit ullamcorper.   Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  "
-},
-{
-  "id": "rune-24",
-  "level": "1",
-  "url": "rune-24.html",
-  "type": "Section",
-  "number": "5.22",
-  "title": "Expedited Samples",
-  "body": " Expedited Samples  We hack in various interactive Runestone exercise types while PreTeXt markup evolves to cover more of Runestone's repertoire. In static output these will just produce a message. In HTML they may be interactive simply in a browser, or they may require being hosted on a Runestone server in order to perform.  CodeLens for a Python program:   CodeLens for a Java program. Supplied in source with trace data built beforehand on a Runestone server:   "
-},
-{
-  "id": "rune-24-4",
-  "level": "2",
-  "url": "rune-24.html#rune-24-4",
-  "type": "Checkpoint",
-  "number": "5.22.1",
-  "title": "",
-  "body": ""
-},
-{
-  "id": "rune-24-6",
-  "level": "2",
-  "url": "rune-24.html#rune-24-6",
-  "type": "Checkpoint",
   "number": "5.22.2",
-  "title": "",
-  "body": ""
+  "title": "A very structured exercise.",
+  "body": " A very structured exercise   This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A super-simple task  This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A title of a task that has a subtask with an <answer> for the Solutions   This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A task with a title and an <answer> for the Solutions   A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.    With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.      A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First subsubtask. Short paragraph.    A second three-deep subsubtask!  Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First answer. In interdum suscipit ullamcorper.    Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   "
 },
 {
   "id": "rune-25",
   "level": "1",
   "url": "rune-25.html",
-  "type": "Reading Questions",
+  "type": "Section",
   "number": "5.23",
+  "title": "Expedited Samples",
+  "body": " Expedited Samples  We hack in various interactive Runestone exercise types while PreTeXt markup evolves to cover more of Runestone's repertoire. In static output these will just produce a message. In HTML they may be interactive simply in a browser, or they may require being hosted on a Runestone server in order to perform.  CodeLens for a Python program:   CodeLens for a Java program. Supplied in source with trace data built beforehand on a Runestone server:   "
+},
+{
+  "id": "rune-25-4",
+  "level": "2",
+  "url": "rune-25.html#rune-25-4",
+  "type": "Checkpoint",
+  "number": "5.23.1",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "rune-25-6",
+  "level": "2",
+  "url": "rune-25.html#rune-25-6",
+  "type": "Checkpoint",
+  "number": "5.23.2",
+  "title": "",
+  "body": ""
+},
+{
+  "id": "rune-26",
+  "level": "1",
+  "url": "rune-26.html",
+  "type": "Reading Questions",
+  "number": "5.24",
   "title": "Reading Questions",
-  "body": "  This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.   Shouldn't be hard!    And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?   "
+  "body": "   This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.     Shouldn't be hard!      And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?     "
 },
 {
   "id": "simple-reading-question",
   "level": "2",
-  "url": "rune-25.html#simple-reading-question",
+  "url": "rune-26.html#simple-reading-question",
   "type": "Reading Question",
-  "number": "5.23.1",
+  "number": "5.24.1",
   "title": "",
-  "body": " This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.   Shouldn't be hard!  "
+  "body": "  This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.     Shouldn't be hard!   "
 },
 {
   "id": "second-reading-question",
   "level": "2",
-  "url": "rune-25.html#second-reading-question",
+  "url": "rune-26.html#second-reading-question",
   "type": "Reading Question",
-  "number": "5.23.2",
+  "number": "5.24.2",
   "title": "",
-  "body": " And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?  "
+  "body": "  And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?    "
 },
 {
   "id": "atomic-video",
   "level": "1",
   "url": "atomic-video.html",
   "type": "Section",
-  "number": "5.24",
+  "number": "5.25",
   "title": "YouTube Video Embedding",
   "body": " YouTube Video Embedding  An <video> can be placed in five different ways:  all by itself, as a peer of <p> typically, with layout control,  inside a <figure> , earning a number and caption,  inside a <sidebyside> , with size and layout configured,  inside a <figure> inside a <sidebyside> , with size and layout configured, with a number and caption, and  inside a <figure> inside a <sidebyside> inside a <figure> , with size and layout configured, with a number and caption, but now sub-numbered ((a), (b), (c), ).  Examples of each, and more.  A YouTube video is embedded much differently when hosted on a Runestone server, so that an API is available to report reader (student) interactions. We are testing here the various possibilities.  All by itsef, with no layout specified, so showing the default size and placement. Vivamus in congue massa. Morbi condimentum ac magna at accumsan. Vestibulum ac augue eu lorem semper gravida.   Width set at 40%, so equal margins and thus centered. Aenean faucibus augue tellus, et sollicitudin tortor finibus non. Maecenas semper dolor quis diam placerat, iaculis sollicitudin augue finibus. Vestibulum facilisis ligula lectus, ac tristique nisl aliquet non.   Asymmetric margins of 20% and 40% given, implying 40% width, equal to previous instance. Vivamus suscipit diam eget mi cursus viverra.   As a plain component of a <sidebyside> . Widths here are 20% and 30%, margins and gaps are automatic, default alignment on top edges. Nulla pharetra imperdiet elit, in sodales nibh blandit ultricies. Maecenas efficitur ac felis ut pharetra.      Inside a <figure> with no adjustments, so default behavior. Note how a <figure> occupies the entire width of the page, so then does the caption.   List Variables    Inside a <figure> with asymmetric (large) margins of 30% and 60%. Quisque finibus augue sit amet facilisis fringilla. Aenean faucibus augue tellus, et sollicitudin tortor finibus non.   List Variables    Inside figures inside a <sidebyside> . Same widths as previous <sidebyside> but alignment on bottoms of the panels, to partially align captions. Note how the captions are constrained in width by the width of the panels of the side-by-side.    List Variables     List Variables (Again)     Identical code to previous example, but now wrapped in an overall <figure> , which has its own caption and number, leaving the interior figures to be sub-numbered. Cross-references use the full number: .   Amalgamation of Videos    List Variables     List Variables  List Variables      "
 },
@@ -4424,7 +4595,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "atomic-video.html#atomic-video-13",
   "type": "Figure",
-  "number": "5.24.1",
+  "number": "5.25.1",
   "title": "",
   "body": " List Variables   "
 },
@@ -4433,7 +4604,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "atomic-video.html#atomic-video-15",
   "type": "Figure",
-  "number": "5.24.2",
+  "number": "5.25.2",
   "title": "",
   "body": " List Variables   "
 },
@@ -4442,7 +4613,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "atomic-video.html#atomic-video-17-1",
   "type": "Figure",
-  "number": "5.24.3",
+  "number": "5.25.3",
   "title": "",
   "body": " List Variables   "
 },
@@ -4451,7 +4622,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "atomic-video.html#atomic-video-17-2",
   "type": "Figure",
-  "number": "5.24.4",
+  "number": "5.25.4",
   "title": "",
   "body": " List Variables (Again)   "
 },
@@ -4460,7 +4631,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "atomic-video.html#atomic-video-19",
   "type": "Figure",
-  "number": "5.24.5",
+  "number": "5.25.5",
   "title": "",
   "body": " Amalgamation of Videos    List Variables     List Variables  List Variables     "
 },
@@ -4469,106 +4640,106 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-runestone-assignment-testing.html",
   "type": "Section",
-  "number": "5.25",
+  "number": "5.26",
   "title": "Runestone Assignment Testing",
-  "body": " Runestone Assignment Testing  This is a section that is specifically for testing when exercises are migrated to a Runestone Assignment page.    This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?    An Exercise Group   This introduction should appear ahead of each exercise when it shows up in the Runestone Assignment page.              a blue square   It has a table, and an image too, to check it all comes through.    What is ?     Two      Three      What is ?     Two      Four       What is ?    And a final paragraph in the section, and a chance to say there is a trailing <exercise> outside the <exercisegroup> .  "
+  "body": " Runestone Assignment Testing  This is a section that is specifically for testing when exercises are migrated to a Runestone Assignment page.     This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?     An Exercise Group   This introduction should appear ahead of each exercise when it shows up in the Runestone Assignment page.              a blue square   It has a table, and an image too, to check it all comes through.     What is ?      Two      Three        What is ?      Two      Four         What is ?     And a final paragraph in the section, and a chance to say there is a trailing <exercise> outside the <exercisegroup> .  "
 },
 {
   "id": "exercisegroup-exercise-zero",
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-zero",
   "type": "Exercise",
-  "number": "5.25.1",
+  "number": "5.26.1",
   "title": "",
-  "body": " This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?  "
+  "body": "  This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?   "
 },
 {
   "id": "exercisegroup-exercise-one",
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-one",
   "type": "Exercise",
-  "number": "5.25.2",
+  "number": "5.26.2",
   "title": "",
-  "body": " What is ?     Two      Three    "
+  "body": "  What is ?      Two      Three     "
 },
 {
   "id": "exercisegroup-exercise-two",
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-two",
   "type": "Exercise",
-  "number": "5.25.3",
+  "number": "5.26.3",
   "title": "",
-  "body": " What is ?     Two      Four    "
+  "body": "  What is ?      Two      Four     "
 },
 {
   "id": "exercisegroup-exercise-three",
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-three",
   "type": "Exercise",
-  "number": "5.25.4",
+  "number": "5.26.4",
   "title": "",
-  "body": " What is ?  "
+  "body": "  What is ?   "
 },
 {
   "id": "worksheet-groupwork",
   "level": "1",
   "url": "worksheet-groupwork.html",
   "type": "Worksheet",
-  "number": "5.26",
+  "number": "5.27",
   "title": "A “Group Work” Worksheet",
-  "body": " A Group Work Worksheet  This is a <worksheet> which has a groupwork attribute set to yes , along with a label attribute to assist with the Runestone database. Note, you can also set a groupsize attribute. When hosted on Runestone, the exercises within will be available for a group of students to submit together.  Multiple-Choice, Group Work stop signs group work  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?   Worksheets allow for material interleaved with the <exercise> throughout.  Parsons Problem, Group Work even numbers groupwork  Create a proof of the theorem: If is an even number, then .    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .   Dorothy will not be much help with this proof.  "
+  "body": " A Group Work Worksheet  This is a <worksheet> which has a groupwork attribute set to yes , along with a label attribute to assist with the Runestone database. Note, you can also set a groupsize attribute. When hosted on Runestone, the exercises within will be available for a group of students to submit together.   Multiple-Choice, Group Work  stop signs  group work   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?    Worksheets allow for material interleaved with the <exercise> throughout.   Parsons Problem, Group Work  even numbers  groupwork   Create a proof of the theorem: If is an even number, then .     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.   "
 },
 {
   "id": "groupwork-multiple-choice",
   "level": "2",
   "url": "worksheet-groupwork.html#groupwork-multiple-choice",
   "type": "Worksheet Exercise",
-  "number": "5.26.1",
+  "number": "5.27.1",
   "title": "Multiple-Choice, Group Work.",
-  "body": "Multiple-Choice, Group Work stop signs group work  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  "
+  "body": " Multiple-Choice, Group Work  stop signs  group work   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
 {
   "id": "groupwork-number-theory",
   "level": "2",
   "url": "worksheet-groupwork.html#groupwork-number-theory",
   "type": "Worksheet Exercise",
-  "number": "5.26.2",
+  "number": "5.27.2",
   "title": "Parsons Problem, Group Work.",
-  "body": "Parsons Problem, Group Work even numbers groupwork  Create a proof of the theorem: If is an even number, then .    Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .   Dorothy will not be much help with this proof. "
+  "body": " Parsons Problem, Group Work  even numbers  groupwork   Create a proof of the theorem: If is an even number, then .     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.  "
 },
 {
   "id": "exercises-title-groupwork",
   "level": "1",
   "url": "exercises-title-groupwork.html",
   "type": "Exercises",
-  "number": "5.27",
+  "number": "5.28",
   "title": "Group Exercises",
-  "body": "  This is an <exercises> division with no <title> , set as groupwork, and therefore its default title will automatically indicate it is meant for a group. Otherwise, it is not of any new interest.   Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?   "
+  "body": "  This is an <exercises> division with no <title> , set as groupwork, and therefore its default title will automatically indicate it is meant for a group. Otherwise, it is not of any new interest.    Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?    "
 },
 {
   "id": "multiple-choice-not-randomized-five",
   "level": "2",
   "url": "exercises-title-groupwork.html#multiple-choice-not-randomized-five",
   "type": "Exercise",
-  "number": "5.27.1",
+  "number": "5.28.1",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
-  "body": "Multiple-Choice, Not Randomized, One Answer stop signs  What color is a stop sign?     Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.     What did you see last time you went driving?   Maybe go out for a drive?  "
+  "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
 {
   "id": "splice-integration",
   "level": "1",
   "url": "splice-integration.html",
   "type": "Section",
-  "number": "5.28",
-  "title": "Splice Integration",
-  "body": " Splice Integration  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. The first uses CodeCheck . The remaing four are from the OpenDSA project.  They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.   CodeCheck iframe     Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise    "
+  "number": "5.29",
+  "title": "SPLICE Integration",
+  "body": " SPLICE Integration  SPLICE is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a protocol for an embedded iframe to communicate with its host page.  One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.  This first sample tests the ability of an iframe to ask for a new size.   The next uses CodeCheck .   CodeCheck iframe    And the remaing four are from the OpenDSA project.   Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise    "
 },
 {
   "id": "horstmann-codecheck",
   "level": "2",
   "url": "splice-integration.html#horstmann-codecheck",
   "type": "Figure",
-  "number": "5.28.1",
+  "number": "5.29.1",
   "title": "",
   "body": " CodeCheck iframe   "
 },
@@ -4577,7 +4748,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#opendsa-slideshow",
   "type": "Figure",
-  "number": "5.28.2",
+  "number": "5.29.2",
   "title": "",
   "body": " Stack pop slideshow   "
 },
@@ -4586,7 +4757,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-insert",
   "type": "Figure",
-  "number": "5.28.3",
+  "number": "5.29.3",
   "title": "",
   "body": " A List Insertion Exercise   "
 },
@@ -4595,7 +4766,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-bs",
   "type": "Figure",
-  "number": "5.28.4",
+  "number": "5.29.4",
   "title": "",
   "body": " A Binary Search Exercise   "
 },
@@ -4604,9 +4775,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-dijkstra",
   "type": "Figure",
-  "number": "5.28.5",
+  "number": "5.29.5",
   "title": "",
   "body": " Dijkstra's Algorithm Exercise   "
+},
+{
+  "id": "chapter-exam",
+  "level": "1",
+  "url": "chapter-exam.html",
+  "type": "Exercises",
+  "number": "5.30",
+  "title": "Timed Chapter Exam",
+  "body": " Timed Chapter Exam   This is an <exercises> division, as a peer of the <section> in this <chapter> of a <book> . It is also setup as a Runestone timed exam. So it is an example of how you might have a per-chapter exam. This contrasts with an earlier timed exam which is constructed as a per-section exam ( ). The exercises are the same here, but in a different order. As a test, this exam is pauseable and has a 15 minute time limit.    Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?    "
+},
+{
+  "id": "multiple-choice-not-randomized-timed-two",
+  "level": "2",
+  "url": "chapter-exam.html#multiple-choice-not-randomized-timed-two",
+  "type": "Exercise",
+  "number": "5.30.1",
+  "title": "Multiple-Choice, Not Randomized, One Answer.",
+  "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
+},
+{
+  "id": "vector-space-dimension-timed-two",
+  "level": "2",
+  "url": "chapter-exam.html#vector-space-dimension-timed-two",
+  "type": "Exercise",
+  "number": "5.30.2",
+  "title": "True\/False.",
+  "body": " True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
 },
 {
   "id": "backmatter-2",

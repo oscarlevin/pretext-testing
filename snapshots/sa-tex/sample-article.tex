@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2025-03-17T22:21:37-06:00       *%
+%*       on 2025-08-03T21:20:05-06:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -687,7 +687,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \label{#7}%
 }{}%
 %% Environment for a PTX "index" at the level of a LaTeX "section"
-\NewDocumentEnvironment{indexptx}{mmmmmmm}
+\NewDocumentEnvironment{index-section}{mmmmmmm}
 {%
 \renewcommand{\divisionnameptx}{#1}%
 \renewcommand{\titleptx}{#2}%
@@ -900,13 +900,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% Experimentally this seems just barely sufficient for a bold "888."
 %% Division exercises, not in exercise group
 \tcbset{ divisionexercisestyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, breakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Division exercises, in exercise group, no columns
 \tcbset{ divisionexerciseegstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, left skip=\egindent, breakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Division exercises, in exercise group with columns
 \tcbset{ divisionexerciseegcolstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, halign=flush left, unbreakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexerciseegcol}[4]{divisionexerciseegcolstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after upper={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexerciseegcol}[4]{divisionexerciseegcolstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after upper={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Worksheet exercises may have workspaces
 \newlength{\workspacestrutwidth}
 %% @workspace strut is invisible
@@ -1031,6 +1031,7 @@ breakable,
 \tcbset{ programboxnumberedstyle/.style={programboxstyle, left=6ex} }
 \newtcblisting{program}[4]{programboxstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodestyle}}
 \newtcblisting{programnumbered}[4]{programboxnumberedstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodenumberedstyle}}
+\newcommand{\programfragment}[2]{\lstinline[language=#1, style=programcodestyle, basicstyle=\ttfamily]#2}
 %% Console session with prompt, input, output
 %% listings allows for escape sequences to enable LateX,
 %% so we bold the input commands via the following macro
@@ -1063,6 +1064,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 %% (b) flush left works well in exceptions like list items, etc
 \DefineVerbatimEnvironment{codedisplayleft}{Verbatim}{}
 %% Multiple column, column-major lists
+%% ol, ul, contributors, PreTeXt index
 \usepackage{multicol}
 %% The rotating package provides sidewaysfigure and sidewaystables environments
 \usepackage{rotating}
@@ -1077,7 +1079,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \newlength{\dlititlewidth}
 \newlength{\dlimaxnarrowtitle}\setlength{\dlimaxnarrowtitle}{11ex}
 \newlength{\dlimaxmediumtitle}\setlength{\dlimaxmediumtitle}{18ex}
-\tcbset{ dlistyle/.style={sidebyside, sidebyside align=top seam, lower separated=false, bwminimalstyle, bottomtitle=0.75ex, after skip=1.5ex, boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt} }
+\tcbset{ dlistyle/.style={sidebyside, sidebyside align=top seam, lower separated=false, bwminimalstyle, bottomtitle=0.75ex, after skip=1.5ex, boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt, before lower app={\setparstyle\noindent}} }
 \tcbset{ dlinarrowstyle/.style={dlistyle, lefthand width=\dlimaxnarrowtitle, sidebyside gap=1ex, halign=flush left, righttitle=10ex} }
 \tcbset{ dlimediumstyle/.style={dlistyle, lefthand width=\dlimaxmediumtitle, sidebyside gap=4ex, halign=flush right} }
 \NewDocumentEnvironment{descriptionlist}{}{\par\vspace*{1.5ex}}{\par\vspace*{1.5ex}}%
@@ -1148,9 +1150,6 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 %% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
 \setcounter{secnumdepth}{3}
 %%
-%% AMS "proof" environment is no longer used, but we leave previously
-%% implemented \qedhere in place, should the LaTeX be recycled
-\newcommand{\qedhere}{\relax}
 %%
 %% A faux tcolorbox whose only purpose is to provide common numbering
 %% facilities for most blocks (possibly not projects, 2D displays)
@@ -1339,8 +1338,8 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \tcbset{ listptxstyle/.style={middle=1ex, blockspacingstyle, colback=white, colbacktitle=white, coltitle=black, colframe=black, titlerule=-0.3pt, toprule at break=-0.3pt, bottomrule at break=-0.3pt, sharp corners, fonttitle=\blocktitlefont} }
 \newtcolorbox[use counter from=block]{listptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, breakable, listptxstyle, before upper app={\setparstyle}, }
 %% listingptx: 2-D display structure
-\tcbset{ listingptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=block]{listingptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, listingptxstyle, }
+\tcbset{ listingptxstyle/.style={bwminimalstyle, blockspacingstyle, bottomtitle=2ex, fonttitle=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{listingptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, listingptxstyle, }
 %%
 %% tcolorbox, with styles, for (PANEL)FIGURE-LIKE
 %%
@@ -1354,7 +1353,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \tcbset{ panellistptxstyle/.style={middle=1ex, blockspacingstyle, colback=white, colbacktitle=white, coltitle=black, colframe=black, titlerule=-0.3pt, toprule at break=-0.3pt, bottomrule at break=-0.3pt, sharp corners, fonttitle=\blocktitlefont} }
 \newtcolorbox[use counter from=block]{panellistptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, breakable, panellistptxstyle, before upper app={\setparstyle}, }
 %% panellistingptx: 2-D display structure
-\tcbset{ panellistingptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\tcbset{ panellistingptxstyle/.style={bwminimalstyle, blockspacingstyle, bottomtitle=2ex, fonttitle=\blocktitlefont} }
 \newtcolorbox[use counter from=block]{panellistingptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panellistingptxstyle, }
 %%
 %% tcolorbox, with styles, for (SUB)FIGURE-LIKE
@@ -1375,7 +1374,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \newtcolorbox[use counter from=subdisplay]{sublistptx}[4]{lower separated=false, before lower={{\textbf{\StrSubstitute{\thetcbcounter}{\thetcb@cnt@block}{}}\space#2}}, phantomlabel={#3}, breakable, sublistptxstyle, before upper app={\setparstyle}, }
 \makeatother
 %% sublistingptx: 2-D display structure
-\tcbset{ sublistingptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\tcbset{ sublistingptxstyle/.style={bwminimalstyle, blockspacingstyle, bottomtitle=2ex, fonttitle=\blocktitlefont} }
 \makeatletter
 \newtcolorbox[use counter from=subdisplay]{sublistingptx}[4]{lower separated=false, before lower={{\textbf{\StrSubstitute{\thetcbcounter}{\thetcb@cnt@block}{}}\space#2}}, phantomlabel={#3}, unbreakable, sublistingptxstyle, }
 \makeatother
@@ -1418,6 +1417,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \usetikzlibrary{positioning}        % for Dave R's worksheet
 \usepackage{circuitikz}             % for Virgil P's worksheet
 \usepackage{nicematrix}             % for multi-run latex-image (label="latex-three-pass")
+\usepackage{siunitx}                % swim speeds in shark attack image
 %% If tikz has been loaded, replace ampersand with \amp macro
 \ifdefined\tikzset
     \tikzset{ampersand replacement = \amp}
@@ -1489,7 +1489,7 @@ Anytown, USA\\
 \href{mailto:asauthor@example.edu}{\nolinkurl{asauthor@example.edu}}\\
 Statement about support received by the second author.
 }
-\date{March 17, 2025}
+\date{August 3, 2025}
 \begin{document}
 %% bottom alignment is explicit, since it normally depends on oneside, twoside
 \raggedbottom
@@ -1518,7 +1518,7 @@ We consider definite integrals of functions \(f(x)\).  For example,%
 \end{equation*}
 This is also a demonstration of the capabilities of \href{https://pretextbook.org}{PreTeXt}\footnote{\nolinkurl{pretextbook.org}\label{section-introduction-2-4}}.\label{section-introduction-2-5}%
 \par
-Generated: March 17, 2025, 22:21:53 (-06:00)%
+Generated: August 3, 2025, 21:20:08 (-06:00)%
 \end{sectionptx}
 %
 %
@@ -1539,7 +1539,7 @@ If \(f(x)\) is continuous, and the derivative of \(F(x)\) is \(f(x)\), then%
 \begin{proof}{Proof}{}{theorem-FTC-4}
 Left to the reader.%
 \end{proof}
-You will find almost nothing about all this in the article \hyperlink{biblio-lay-article}{[{\xreffont 2}]}, nor in the book \hyperlink{biblio-judson-AATA}{[{\xreffont 1}]}, since they belong in some other article, but we can cite them out-of-order for practice anyway.%
+You will find almost nothing about all this in the article \hyperlink{biblio-lay-article}{[{\xreffont 2}]}, nor in the book \hyperlink{biblio-judson-AATA}{[{\xreffont J.3.1}]}, since they belong in some other article, but we can cite them out-of-order for practice anyway.%
 \par
 When we are writing we do not always know what we want to cite, or just where subsequent material will end up.  For example, we might want a citation to \mono{[provisional cross-reference: some textbook about the FTC]} or we might want to reference a later~\mono{[provisional cross-reference: chapter about DiffEq\textquotesingle{}s, and an\_underscore]}.%
 \par
@@ -1592,7 +1592,7 @@ Suppose that \(\frac{d}{dx}F(x)=f(x)\).  Then the \terminology{indefinite integr
 \index{quorum@sorted as if ``Quorum''}%
 \index{units!A@Z (\alert{sort as} A)}%
 \index{units!Z@A (\alert{sort as} Z)}%
-\index{\mono{verbatim text}, use sortby}%
+\index{verbatim@\mono{verbatim text}, use sortby}%
 \index{R@\(\rho\)\textendash{}fibers}%
 \index{Cayley graph}%
 \index{cayley graph}%
@@ -2029,6 +2029,7 @@ And distinctly different from a \mono{<note>} in a \mono{<biblio>}\footnotemark{
 \end{note}
 \footnotetext[2]{A gratuitous footnote to test prior bug confusing this with a \mono{<note>} in a \mono{<biblio>}.\label{note-remark-4-3}}%
 \begin{aside}{Aside}{An Aside with a \emph{Formatted} Title.}{an-aside}%
+\index{aside}%
 An \mono{<aside>} is similar to a remark, but is not as critical to the narrative.  It is not numbered, and so requires a title.  It can be the target of a cross-reference.  They are meant to be short, and so are not knowlized at their first appearance.  If the content is appropriate, these can be marked as \mono{<historical>} or \mono{<biographical>}, though longer items should use subdivisions (e.g.\@ sections, subsections) instead.%
 \end{aside}
 An \mono{<exercise>} can be structured with \mono{<task>}.%
@@ -2298,6 +2299,7 @@ A synonym for the acronym \acronym{FUBAR}.%
 \typeout{************************************************}
 %
 \begin{solutions-subsubsection}{Solutions}{Solutions for This Subsection}{}{Solutions for This Subsection}{}{}{solutions-subsection}
+\index{solutions!for a division}%
 \begin{introduction}{}%
 This is an introduction, where you might explain that this division of this subsection contains various hints, answers, solutions of inline exercises, divisional exercises, and\slash{}or project-like blocks.  See the source to see just how this solutions division was built.%
 \end{introduction}%
@@ -2896,15 +2898,17 @@ x  \amp       \amp    \amp {}+{} \amp  z \amp {}={} \amp 6\\
 x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13.
 \end{alignat*}
 Beautiful.%
-\par
+\begin{aside}{Aside}{Overlap Test.}{section-mathematics-4-8}%
+This is simply to test what happens when an aside bumps into something like the content below that may extend past the normal right content boundary. It likely only is of interest with the theme \mono{default-modern}.%
+\end{aside}
 A long equation, to check layout on various screen sizes.  This is Weil's ``explicit formula'' for the Riemann \(\zeta\)-function:%
 \begin{equation}
 \sum_\gamma S_-(\gamma) = \frac{\log Q}{\pi} \hat S_-(0)
 + \frac{1}{2\pi} \sum_{j=1}^d \Re\left\{ \int_{-\infty}^\infty \frac{\Gamma'}{\Gamma}\left(\frac{1}{4} + \frac{it}{2} + \mu_j\right)S_-(t) dt\right\}
-- \frac{d}{2\pi}\hat S_-(0)\log \pi\text{.}\label{section-mathematics-4-8-3}
+- \frac{d}{2\pi}\hat S_-(0)\log \pi\text{.}\label{section-mathematics-4-9-3}
 \end{equation}
 %
-\begin{example}{Example}{Excessive Display Mathematics.}{section-mathematics-4-9}%
+\begin{example}{Example}{Excessive Display Mathematics.}{section-mathematics-4-10}%
 In print versions, a long run of displayed equations often needs to be broken across pages.  If you are reading some other version of this, then there is nothing to see here.  But for \LaTeX{} output it could be interesting.  First, with no extra effort, this page-long display should break naturally, no matter how the preceding material changes.%
 \begin{gather*}
 x^2+y^2=z^2\\
@@ -2960,54 +2964,54 @@ m^2+n^2=p^2\text{.}
 \par
 In this version we have turned off page breaking for the entire display, but then allowed a break at every fourth equation, so you should see a reasonably attractive page break right after one of the \(m^2+n^2=p^2\) equations.%
 \begin{gather}
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-1}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-2}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-3}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-4}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-5}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-6}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-7}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-8}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-9}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-10}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-11}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-12}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-13}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-14}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-15}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-16}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-17}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-18}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-19}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-20}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-21}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-22}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-23}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-24}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-25}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-26}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-27}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-28}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-29}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-30}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-31}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-32}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-33}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-34}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-35}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-36}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-37}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-38}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-39}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-40}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-41}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-42}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-43}\\*
-m^2+n^2=p^2\label{section-mathematics-4-9-3-2-44}\\
-x^2+y^2=z^2\label{section-mathematics-4-9-3-2-45}\\*
-a^2+b^2=c^2\label{section-mathematics-4-9-3-2-46}\\*
-\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-47}\\*
-m^2+n^2=p^2\text{.}\label{section-mathematics-4-9-3-2-48}
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-1}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-2}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-3}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-4}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-5}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-6}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-7}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-8}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-9}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-10}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-11}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-12}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-13}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-14}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-15}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-16}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-17}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-18}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-19}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-20}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-21}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-22}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-23}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-24}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-25}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-26}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-27}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-28}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-29}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-30}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-31}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-32}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-33}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-34}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-35}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-36}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-37}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-38}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-39}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-40}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-41}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-42}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-43}\\*
+m^2+n^2=p^2\label{section-mathematics-4-10-3-2-44}\\
+x^2+y^2=z^2\label{section-mathematics-4-10-3-2-45}\\*
+a^2+b^2=c^2\label{section-mathematics-4-10-3-2-46}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-10-3-2-47}\\*
+m^2+n^2=p^2\text{.}\label{section-mathematics-4-10-3-2-48}
 \end{gather}
 %
 \par
@@ -3527,6 +3531,8 @@ Note that the angle brackets, \textlangle{} and \textrangle{}, are \emph{not} th
 \typeout{************************************************}
 %
 \begin{subsectionptx}{Subsection}{Characters, Symbols, and Constructions}{}{Characters, Symbols, and Constructions}{}{}{section-text-paragraphs-8}
+Verbatim, inline text, is accomplished with the \mono{<c>} element.  One special consideration: if your editor splits a line in the middle, we will fix it.  This sentence has \mono{two words} that we purposely split with a ``newline'' character in the middle.  In output you should see a space between the words.%
+\par
 Some keyboard characters are ambiguous.  Is the character \mono{\textquotesingle{}} an apostrophe or a right single quote?  We presume the former, ', and provide markup as an alternative for the latter (described above).  Is \mono{/} used to separate words, or to form a fraction?  We presume the former, \slash{}, and provide \mono{<solidus/>}, \textfractionsolidus{}, for the latter.  We test some other characters straight from our US keyboard (with two being escape sequences).%
 \par
 \textasciitilde{} \textasciigrave{} ! @ \# \textdollar{} \% \textasciicircum{} \& \textasteriskcentered{} ( ) \textunderscore{} - + = [ ] \textbraceleft{} \textbraceright{} \textbar{} \textbackslash{} ; : ' " , \textless{} . \textgreater{} ? \slash{}%
@@ -3541,7 +3547,7 @@ Now, when a character is nowhere to be found on your keyboard, we provide conven
 \par
 \textcopyright{}~~ \textcircledP{}~~ \textcopyleft{}~~ \textregistered{}~~ \texttrademark{}~~ \textservicemark{}~~ \textellipsis{}~~ \textperiodcentered{}~~ \swungdash{}~~ \textperthousand{}~~ \textpilcrow{}~~ \textsection{}~~ \textminus{}~~ \texttimes{}~~ \textfractionsolidus{}~~ \textdiv{}~~ \textpm{}%
 \par
-There are a few  common abbreviations of Latin phrases that can be achieved in HTML one way, and in \LaTeX{} with a slightly different mechanism.  These are due to \LaTeX{}'s treatment of a period (full stop), depending on its surroundings.  So not reserved characters, but just divergent treatment.  Using these will lead to the best quality in all your outputs.  See Will Robertson's informative and arcane \href{http://latex-alive.tumblr.com/post/827168808/correct-punctuation-spaces}{blog post}\footnote{\nolinkurl{latex-alive.tumblr.com/post/827168808}\label{section-text-paragraphs-8-9-4}} on the topic if you want the full story for the treatment of a full stop in \LaTeX{}.%
+There are a few  common abbreviations of Latin phrases that can be achieved in HTML one way, and in \LaTeX{} with a slightly different mechanism.  These are due to \LaTeX{}'s treatment of a period (full stop), depending on its surroundings.  So not reserved characters, but just divergent treatment.  Using these will lead to the best quality in all your outputs.  See Will Robertson's informative and arcane \href{http://latex-alive.tumblr.com/post/827168808/correct-punctuation-spaces}{blog post}\footnote{\nolinkurl{latex-alive.tumblr.com/post/827168808}\label{section-text-paragraphs-8-10-4}} on the topic if you want the full story for the treatment of a full stop in \LaTeX{}.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
@@ -3967,7 +3973,7 @@ For sighted readers, here is an example of a tactile version of one of the above
 \typeout{************************************************}
 %
 \begin{subsectionptx}{Subsection}{\LaTeX{} images}{}{\LaTeX{} images}{}{}{section-graphics-5}
-\index{\LaTeX{} image}%
+\index{latex@\LaTeX{} image}%
 \index{image!\LaTeX{} image}%
 There are several graphics engine packages that a \LaTeX{} document can employ. Code from these packages renders diagrams automatically as part of normal processing of \LaTeX{} files.  For HTML output the \mono{pretext} script produces SVG versions of the pictures.  The script can also produce standalone \TeX{} source files, PDFs, PNGs, and EPSs. The packages should be loaded in \mono{docinfo/latex-image-preamble}, which is also where global package settings should be made. If any ampersands occur in your \LaTeX{} code you should use the \mono{\textbackslash{}amp} macro pre-defined by PreTeXt. These first examples are from the \href{http://www.texample.net/tikz/examples/}{TeXample.net}\footnote{\nolinkurl{www.texample.net/tikz/examples/}\label{section-graphics-5-4-10}} site.  Note that any \LaTeX{} macros used in the rest of your document may be employed in the \LaTeX{}-standalone or Asymptote diagrams (with this feature coming to Sage graphics next?).%
 \begin{figureptx}{Figure}{TikZ Electronics Diagram}{figure-tikz-electronics}{}%
@@ -4049,7 +4055,7 @@ There are several graphics engine packages that a \LaTeX{} document can employ. 
     \node at (-0.5,1) [above=5mm, right=0mm] {\textsc{first-order noise shaper}};
     \draw [color=gray,thick](-0.5,-9) rectangle (12.5,-5);
     \node at (-0.5,-9) [below=5mm, right=0mm] {\textsc{second-order noise shaper}};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -4131,7 +4137,7 @@ The next example began life in \href{http://www.frontiernet.net/\~eugene.ressler
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -4175,14 +4181,12 @@ The pgfplots package was included in \mono{docinfo/latex-image-preamble}. Here, 
         ]{x^2 - y^2};
     \end{axis}\\
 };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
 \end{figureptx}%
-A plot might use a graphics language to draw the axes and grid, but the data might be from an experiment and live in an external file that you do not wish to place in your source.  Place such a file in a subdirectory directly below the directory where your master source file resides.  In the example below \mono{data} is the directory and \mono{hodgkin-huxley-data.dat} is the file with the data points.  You \emph{must} place the file in a subdirectory (it cannot reside next to your source file), but that directory may have subdirectories if you have many such files and want to organize them that way.  Then the \mono{--include} command-line argument to the \mono{pretext} script will manage the external files properly as it creates individual image files.%
-\par
-It is still your responsibility to be sure this directory of external data files follows your \LaTeX{} output to whatever directory you use to convert to a PDF and is in the right location for the relative path given in the XML source.  The discussion above only applies to generating individual image files, such as you would need for the HTML output.%
+A plot might use a graphics language to draw the axes and grid, but the data might be from an experiment and live in an external file that you do not wish to place in your source.  Place such a file in a subdirectory directly below the directory where your master source file resides.  Then indicate this directory in a \mono{docinfo/directories/@data} attribute of your source.  But you \emph{must} prefix the path with \mono{data/} as in the source below.%
 \begin{figureptx}{Figure}{External data in a pgfplots plot}{figure-pgfplots-data-demo}{}%
 \begin{image}{0}{1}{0}{}%
 \resizebox{\linewidth}{!}{%
@@ -4193,9 +4197,26 @@ It is still your responsibility to be sure this directory of external data files
     xlabel={time (ms)},
     ylabel={potential (V)},
 ]
-\addplot[blue] table {external/data/hodgkin-huxley-data.dat};
+\addplot[blue] table {data/dataplot/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
+}%
+\end{image}%
+\tcblower
+\end{figureptx}%
+The TikZ image in the next figure is made up from two \initialism{PNG} images (the shark and the swimmer), in addition to various TikZ commands.  The images reside in a source directory, \mono{numerical/attack}, so the image files (\mono{shark.png}, \mono{swimmer.png}) are prefixed in the TikZ code with \mono{data/attack} so the creation of the image will be successful.  This example is courtesy of Stephen Brown.%
+\begin{figureptx}{Figure}{An illustration of the shark trying to catch you as you swim to shore.}{figure-shark-attack}{}%
+\begin{image}{0}{1}{0}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+    \tikzset{ ragged border/.style={ decoration={random steps, segment length=1mm, amplitude=0.5mm}, decorate, } }
+    \fill[cyan!30] decorate[ragged border]{ (0,2) -- (8,2) } -- (8,0) -- (0,0) -- cycle;
+    \fill[yellow!30] decorate[ragged border]{ (8,2) -- (8,0) } -- (9,0) -- (9,2) -- cycle;
+    \draw (1.5,1) node {\scalebox{-0.2}[0.2]{\includegraphics{data/attack/shark.png}}};
+    \draw (5,1) node {\includegraphics[scale=0.05]{data/attack/swimmer.png}};
+    \draw[|-|] (1.5,3) node [above] {\(\SI{0}{m}\)} -- (5,3) node [above] {\(\SI{50}{m}\)};
+    \draw[|-|] (5,3) -- (8,3) node [above] {\(\SI{70}{m}\)};
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -4214,13 +4235,13 @@ A Cartesian plot might benefit from having a \mono{<description>} with a \mono{<
         ]
         \addplot[only marks] coordinates {(1,5) (2,3) (3,8) (4,9) (5,5) (6,5) (7,8) (8,2) (9,3)};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
 \end{figureptx}%
 The next image requires three passes with \LaTeX{} to get everything in place.  It is placed here to test that the code in the Pythion script correctly recognizes this requirement.%
-\begin{figureptx}{Figure}{A matrix with colored entries}{section-graphics-5-16}{}%
+\begin{figureptx}{Figure}{A matrix with colored entries}{section-graphics-5-17}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
 \resizebox{\linewidth}{!}{%
     \begin{tikzpicture}
@@ -4233,7 +4254,7 @@ The next image requires three passes with \LaTeX{} to get everything in place.  
         0 \amp 2 \amp 1 \amp 0 \amp 2
         \end{bNiceArray}$
     };
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -4569,7 +4590,7 @@ A \mono{tikz} image recycled from above, now 40\% width, with 40\% left margin, 
                 (.183,1.4) node [above] {$P_{01}$}
                 (.274,-.5) node [below] {$P_{11}$};
 \end{scope}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margin, 40\% right margin, and no longer legible.%
@@ -4582,9 +4603,9 @@ A \mono{pgfplot} image recycled from above, now 20\% width, with 40\% left margi
     xlabel={time (ms)},
     ylabel={potential (V)},
 ]
-\addplot[blue] table {external/data/hodgkin-huxley-data.dat};
+\addplot[blue] table {data/dataplot/hodgkin-huxley-data.dat};
 \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 An Asymptote image, with zero layout control, so 100\% width.%
@@ -4998,7 +5019,7 @@ Make a table and a graph for the function \(f(x)=x^2\).%
     \begin{axis}
         \addplot[domain=-1.5:4, blue, thick, {stealth}-{stealth}] {x^2};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \end{sidebyside}%
@@ -5016,14 +5037,15 @@ Make a table and a graph for the function \(f(x)=x^2\).%
 These items are here to test basic formatting of references.%
 \end{introduction}%
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{biblio-strang-article}\hypertarget{biblio-strang-article}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
-\bibitem[2]{CF}\hypertarget{CF}{}J. B. Conrey and D. W. Farmer,  \textit{Mean values of \(L\)-functions and symmetry},  Internat. Math. Res. Notices  no.\@\,17,  (2000)  pp.\@\,883-908.
+\bibitem[2]{CF}\hypertarget{CF}{}J. B. Conrey and D. W. Farmer, \textit{Mean values of \(L\)-functions and symmetry}, Internat. Math. Res. Notices no.\@\,17, (2000) pp.\@\,883-908.
 \bibitem[3]{biblio-beezer-fcla}\hypertarget{biblio-beezer-fcla}{}Robert A. Beezer, \textit{A First Course in Linear Algebra}, 3rd Edition, Congruent Press, 2012. \par%
 An online, open-source\footnote{A gratuitous footnote to test prior bug confusing this with a REMARK-LIKE \mono{<note>}.\label{biblio-beezer-fcla-2-1-1}} offering.%
 
-\bibitem[4]{Dav}\hypertarget{Dav}{}H. Davenport,  \textit{Multiplicative Number Theory},  GTM  \textbf{74}  Springer-Verlag New York, NY;  (2000)  xiv+177.  [A note may accompany a bibliographic item, such as saying the manuscript is under review.  But it cannot contain any formatting.]
+\bibitem[4]{Dav}\hypertarget{Dav}{}H. Davenport, \textit{Multiplicative Number Theory}, GTM \textbf{74} Springer-Verlag New York, NY; (2000) xiv+177. [A note may accompany a bibliographic item, such as saying the manuscript is under review.  But it cannot contain any formatting.]
 \bibitem[5]{biblio-rosswell-fictional}\hypertarget{biblio-rosswell-fictional}{}Alexander Rosswell, \textit{Diffeomorphisms of Penciled Fiber Bundles}, Mathematicians of America (2020), \textbf{2} no.\@\,6, 884\textendash{}888.
 \bibitem[6]{biblio-rosswell-fictional-two}\hypertarget{biblio-rosswell-fictional-two}{}Ibid.\@, \textit{Diffeomorphisms of Penciled Fiber Bundles, Part 2}, Mathematicians of America (2021), \textbf{3} no.\@\,4, 102\textendash{}103.
 \end{referencelist}
@@ -5461,6 +5483,8 @@ A ``description'' list \index{description list}\index{list!description} has a sh
 \begin{descriptionlist}
 \begin{dlimedium}{Central Processing Unit (CPU)}{cpu-definition}%
 Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.%
+\par
+This is a second paragraph that should appear indented in PDF output.%
 \end{dlimedium}%
 \begin{dlimedium}{Memory}{section-lists-7-3-7-2}%
 Provides storage for the instructions for the CPU and the data they manipulate.%
@@ -5531,6 +5555,40 @@ The Riemann \(\zeta\)-function is defined by a Dirichlet series, valid for \(\Re
 \begin{dlinarrow}{\mono{main()} is a void function}{section-lists-7-4-8-17}%
 A \mono{dl} with \mono{width=\textquotedbl{}narrow\textquotedbl{}} might be a useful way to give commentary on a program listing.%
 \end{dlinarrow}%
+\end{descriptionlist}
+%
+\par
+You can nest description lists, though items might get crowded horizontally.  We expand our computer list a bit.%
+\begin{descriptionlist}
+\begin{dlimedium}{Expanded CPU}{cpu-definition-expanded}%
+Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.%
+\begin{descriptionlist}
+\begin{dlimedium}{Arithmetic}{cpu-definition-expanded-2-1-1}%
+The kind of computations that give a computer the name ``computer.''%
+\end{dlimedium}%
+\begin{dlimedium}{Logic}{cpu-definition-expanded-2-1-2}%
+Operations that make decisions, ``if this, then that'', plus: and, or, and not.%
+\end{dlimedium}%
+\begin{dlimedium}{Memory}{cpu-definition-expanded-2-1-3}%
+Space to store information and results, permanently or temporarily.%
+\end{dlimedium}%
+\end{descriptionlist}
+%
+\par
+This is a second paragraph that should appear indented in PDF output.%
+\end{dlimedium}%
+\begin{dlimedium}{Memory}{section-lists-7-5-1-2}%
+Provides storage for the instructions for the CPU and the data they manipulate.%
+\end{dlimedium}%
+\begin{dlimedium}{Input\slash{}Output (I\slash{}O)}{section-lists-7-5-1-3}%
+Communicates with the outside world and with mass storage devices (e.g.\@, disks).%
+\end{dlimedium}%
+\begin{dlimedium}{Bus!}{section-lists-7-5-1-4}%
+A communication pathway with a protocol specifying exactly how the pathway is used. (The punctuation is just for testing.)%
+\end{dlimedium}%
+\begin{dlimedium}{\(\displaystyle \sum_{n=0}^\infty x^n = \frac{1}{1-x}\)}{section-lists-7-5-1-5}%
+A geometric series.  The formula is valid if \(|x| < 1\).%
+\end{dlimedium}%
 \end{descriptionlist}
 %
 \end{subsectionptx}
@@ -5717,7 +5775,8 @@ A small test of cross-references to subsidiary parts of exercises.  Exercise 1, 
 %
 \begin{references-subsection}{References}{References (with lists in Annotations)}{}{References (with lists in Annotations)}{}{}{section-lists-12}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{biblio-undetermined}\hypertarget{biblio-undetermined}{}Some book would be listed here. \par%
 Here is the annotation and an ordered list as part of that annotation.%
@@ -7148,7 +7207,7 @@ Second, the example from JC Bustamante.%
 \begin{subsectionptx}{Subsection}{DoenetML}{}{DoenetML}{}{}{interactive-doenetml}
 \href{https://doenet.org}{DoenetML}\footnote{\nolinkurl{doenet.org}\label{interactive-doenetml-2-2}} is a markup language inspired by PreTeXt for semantically describing interactive mathematics applets for the web. Use \mono{interactive[@platform=\textquotedbl{}doenetml\textquotedbl{}]} with a \mono{slate[@surface=\textquotedbl{}doenetml\textquotedbl{}]} to include DoenetML content within your document.%
 \par
-Since DoenetML is similar to, but not completely compatible with, XML, it cannot be authored directly within a PreTeXt document without painstakingly escaping every \mono{<} as \mono{\&lt;} and every \mono{\&} as \mono{\&amp;}. However, a convenient workflow to avoid this is to author your DoenetML in a separate file like \mono{example.doenetml}, then include this file within your PreTeXt document using \mono{<xi:include parse=\textquotedbl{}text\textquotedbl{} href=\textquotedbl{}path/to/example.doenetml\textquotedbl{}/>}.%
+Since DoenetML is similar to, but not completely compatible with, XML, it cannot be authored directly within a PreTeXt document without painstakingly escaping every \mono{<} as \mono{\&lt;} and every \mono{\&} as \mono{\&amp;}. However, a convenient workflow to avoid this is to author your DoenetML in a separate file like \mono{example.doenetml}, then include this file within your PreTeXt document using \mono{<xi:include parse=\textquotedbl{}text\textquotedbl{} href=\textquotedbl{}path/to/example.doenetml\textquotedbl{}/>}. Altenatively, you can enclose your DoenetML in a \mono{CDATA}, as we do below.%
 \begin{figureptx}{Figure}{DoenetML example}{figure-doenetml}{}%
 \begin{sidebyside}{2}{0.075}{0.075}{0.17}%
 \begin{sbspanel}{0.47}%
@@ -7370,9 +7429,9 @@ A True\slash{}False question.%
 \end{introduction}%
 \begin{divisionexercise}{1}{True\slash{}False.}{}{vector-space-dimension}%
 \index{vector space}%
-Every vector space has finite dimension.%
-\par
 True or False?%
+\par
+Every vector space has finite dimension.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-FTC]{{\xreffont\ref{theorem-FTC}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -7590,24 +7649,38 @@ Match each event in United States history with the year it happened.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-Monroe Doctrine&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1863\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1823
+Louisiana Purchase&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Battle of Gettysburg&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Haymarket Riot&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Monroe Doctrine&~~&1863
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionexercise}%
 \end{exercises-subsection}
 %
@@ -7706,12 +7779,17 @@ Complete the following line of a Python program so that it will declare an integ
 \par
 \fillintext{1}int\fillintext{1} \mono{age = } \fillintext{1}\(5\)\fillintext{1}\mono{;}%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{Fill-In Formula (Dynamic).}{}{dynamic-fitb-simple-formula}%
-Find a formula for a cubic function \(f(x)\) that roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
+\begin{divisionexercise}{2}{Fill-In, Multiple Strings, Custom Checker.}{}{fillin-multi-answer-jscmp}%
+In order to apply the Integral Test to a sequence \(\{a_n\}\), the function \(a(n) = a_n\) must be \fillintext{5}, \fillintext{5}~and \fillintext{5}.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-multi-answer-jscmp-3}{}\quad{}In order to apply the Integral Test to a sequence \(\{a_n\}\), the function \(a(n) = a_n\) must be \fillintext{1}continuous\fillintext{1}, \fillintext{1}positive\fillintext{1}~and \fillintext{1}decreasing\fillintext{1}.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{Fill-In Formula (Dynamic).}{}{dynamic-fitb-simple-formula}%
+Find a formula for a cubic function \(f(x)\) that has roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
 \par
 \(f(x)=\) \fillintext{5}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{dynamic-fitb-simple-formula-3}{}\quad{}Find a formula for a cubic function \(f(x)\) that roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
+\noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{dynamic-fitb-simple-formula-3}{}\quad{}Find a formula for a cubic function \(f(x)\) that has roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
 \par
 \(f(x)=\) \fillintext{1}\(-\frac{1}{4} \left(x+5\right) \left(x+2\right) \left(x-2\right)\)\fillintext{1}%
 \par\smallskip%
@@ -7737,7 +7815,7 @@ f(x)=-\frac{1}{4} \left(x+5\right) \left(x+2\right) \left(x-2\right)\text{.}
 \end{equation*}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{Decompose the Function.}{}{function-decomposition}%
+\begin{divisionexercise}{4}{Decompose the Function.}{}{function-decomposition}%
 Consider the function%
 \begin{equation*}
 h(x)=4 \left(-x-3\right)^{3}+5\text{.}
@@ -7780,17 +7858,15 @@ More interactive components, just for testing, no commentary.%
 \begin{introduction}{}%
 ActiveCode, Python program.%
 \end{introduction}%
-\begin{listingptx}{Listing}{An interactive Python program, using \pubtitle{Runestone}}{program-activecode-python}{}%
+\begin{listingptx}{Listing}{\textbf{An interactive Python program, using \pubtitle{Runestone}}}{program-activecode-python}{}%
 \begin{program}{Python}{0}{1}{0}
 print("Hello, World!")
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{An interactive Python program without codelens.}{program-activecode-python-no-codelens}{}%
+\begin{listingptx}{Listing}{\textbf{An interactive Python program without codelens.}}{program-activecode-python-no-codelens}{}%
 \begin{program}{Python}{0}{1}{0}
 print("Hello, World!")
 \end{program}
-\tcblower
 \end{listingptx}%
 \end{exercises-subsection}
 %
@@ -7803,11 +7879,10 @@ print("Hello, World!")
 \begin{introduction}{}%
 A steppable Python program.%
 \end{introduction}%
-\begin{listingptx}{Listing}{A Python program, stepable with CodeLens}{program-codelens-python}{}%
+\begin{listingptx}{Listing}{\textbf{A Python program, stepable with CodeLens}}{program-codelens-python}{}%
 \begin{program}{Python}{0}{1}{0}
 print('Hello, World!')
 \end{program}
-\tcblower
 \end{listingptx}%
 \end{exercises-subsection}
 %
@@ -8459,10 +8534,10 @@ Cross-references to exercises with hard-coded numbers should respect the supplie
 Here we form a list to test pointing at various structures.  Each of the following should open a knowl in the HTML version, otherwise it will be a traditional hyperlink (if possible).  Note that if a knowl opens, there will always be an ``in-context'' link which will take you to the actual location, should you have  wished instead to just go there.%
 \begin{itemize}[label=\textbullet]
 \item{}Footnotes: Fermat allusion at \hyperref[footnote-fermat]{{\xreffont 2.1}}.%
-\item{}Citations: Judson's AATA with annotation at \hyperlink{biblio-judson-AATA}{[{\xreffont 1}]}%
-\item{}Citations: Judson's AATA with autoname that should have zero effect \hyperlink{biblio-judson-AATA}{[{\xreffont 1}]}%
+\item{}Citations: Judson's AATA with annotation at \hyperlink{biblio-judson-AATA}{[{\xreffont J.3.1}]}%
+\item{}Citations: Judson's AATA with autoname that should have zero effect \hyperlink{biblio-judson-AATA}{[{\xreffont J.3.1}]}%
 \item{}Citations: In a \mono{<references>} division inside an appendix \hyperlink{biblio-strang-article-uno}{[{\xreffont J.2.1}]}%
-\item{}Note: just the annotation of previous citation at \hyperlink{note-judson-AATA}{{\xreffont 1.1}}%
+\item{}Note: just the annotation of previous citation at \hyperlink{note-judson-AATA}{{\xreffont J.3.1.1}}%
 \item{}Examples: Mystery derivative at \hyperref[example-mysterious]{{\xreffont\ref{example-mysterious}}}, or a question at \hyperref[sample-question]{{\xreffont\ref{sample-question}}}.%
 \item{}Definition-like: A mathematical statement with no proof \hyperref[principle-principle]{{\xreffont\ref{principle-principle}}}.%
 \item{}A numbered Note: \hyperref[note-remark]{{\xreffont\ref{note-remark}}}%
@@ -8534,7 +8609,7 @@ Variations on the above include multiple \mono{xml:id} as the value of a single 
 \begin{itemize}[label=\textbullet]
 \item{}Four theorems, with spaces, autonamed: \hyperref[theorem-FTC]{Theorem~{\xreffont\ref{theorem-FTC}}}, \hyperref[theorem-number-01]{Theorem~{\xreffont\ref{theorem-number-01}}}, \hyperref[theorem-number-02]{Theorem~{\xreffont\ref{theorem-number-02}}}, \hyperref[theorem-number-03]{Theorem~{\xreffont\ref{theorem-number-03}}}%
 \item{}Two equations, no spaces, autonamed: \hyperref[equation-alternate-FTC]{({\xreffont\ref{equation-alternate-FTC}})}, \hyperref[equation-use-FTC]{({\xreffont\ref{equation-use-FTC}})}%
-\item{}Two bibliographic items, no autoname: [\hyperlink{biblio-judson-AATA}{{\xreffont 1}}, \hyperlink{biblio-lay-article}{{\xreffont 2}}]%
+\item{}Two bibliographic items, no autoname: [\hyperlink{biblio-judson-AATA}{{\xreffont J.3.1}}, \hyperlink{biblio-lay-article}{{\xreffont 2}}]%
 \end{itemize}
 %
 \par
@@ -8544,7 +8619,7 @@ If you have a long list of items (such as homework exercises, not in an \mono{ex
 \item{}A range of equations: \hyperref[equation-use-FTC]{({\xreffont\ref{equation-use-FTC}})\textendash{}({\xreffont\ref{equation-conclude}})}%
 \item{}A system of equations, given as range from first to last: \hyperref[equation-system-begin]{({\xreffont\ref{equation-system-begin}})\textendash{}({\xreffont\ref{equation-system-end}})}%
 \item{}A range of sections, hand-named to be plural: Sections~\hyperref[section-sage-cells]{{\xreffont\ref{section-sage-cells}}\textendash{}{\xreffont\ref{section-cross-referencing}}}%
-\item{}A range of bibliographic items: \hyperlink{biblio-judson-AATA}{[{\xreffont 1}\textendash{}{\xreffont 2}]}%
+\item{}A range of bibliographic items: \hyperlink{biblio-judson-AATA}{[{\xreffont J.3.1}\textendash{}{\xreffont 2}]}%
 \end{itemize}
 %
 \par
@@ -8552,17 +8627,17 @@ The \mono{url}\index{url} element may be used to link to a data file, either ext
 \par
 For a link like the previous one, you might want to provide advice appropriate for your audience about using a context menu to download a file, or how to configure helper\slash{}viewer applications.%
 \par
-You can also provide a file yourself, but now it is your obligation to distribute the file with your document (\initialism{HTML}, \initialism{PDF}, etc.\@) and provide a relative link.  This creates some complications, such as making sure an electronic PDF has the associated file in the same place relative to the PDF file.  Of course, if you make a print PDF, this becomes impossible.  Here is a test example anyway, which is highly likely to be broken in a PDF (including at the PreTeXt project site) unless you build this example on your own computer, locally.  Here is a template from the Apache OpenOffice project, provided via the Public Documentation License (PDL):  \href{external/data/runningstatisticstemplate.ots}{Running Statistics Template}\footnote{\nolinkurl{external/data/runningstatisticstemplate.ots}\label{section-cross-referencing-18-6}}.%
+You can also provide a file yourself, but now it is your obligation to distribute the file with your document (\initialism{HTML}, \initialism{PDF}, etc.\@) and provide a relative link.  This creates some complications, such as making sure an electronic PDF has the associated file in the same place relative to the PDF file.  Of course, if you make a print PDF, this becomes impossible.  Here is a test example anyway, which is highly likely to be broken in a PDF (including at the PreTeXt project site) unless you build this example on your own computer, locally.  Here is a template from the Apache OpenOffice project, provided via the Public Documentation License (PDL):  \href{data/spreadsheet/runningstatisticstemplate.ots}{Running Statistics Template}\footnote{\nolinkurl{data/spreadsheet/runningstatisticstemplate.ots}\label{section-cross-referencing-18-6}}.%
 \par
 The next four paragraphs are each a single \mono{<dataurl>} element.  Explore the source and the output from different conversions.  Strictly for testing as of 2022-11-04.%
 \par
 Foo \href{http://go.microsoft.com/fwlink/?LinkID=521962}{Sample Excel Spreadsheet}\footnote{\nolinkurl{go.microsoft.com/fwlink/?LinkID=521962}\label{section-cross-referencing-20-2}} Bar%
 \par
-Foo \href{https://pretextbook.org/examples/sample-article/html/external/data/runningstatisticstemplate.ots}{Runners Template}\footnote{\nolinkurl{http://example.com}\label{section-cross-referencing-21-2}} Bar%
+Foo \href{https://pretextbook.org/examples/sample-article/html/external/data/spreadsheet/runningstatisticstemplate.ots}{Runners Template}\footnote{\nolinkurl{http://example.com}\label{section-cross-referencing-21-2}} Bar%
 \par
 Foo \href{http://go.microsoft.com/fwlink/?LinkID=521962}{Sample Excel Spreadsheet}\footnote{\nolinkurl{go.microsoft.com/fwlink/?LinkID=521962}\label{section-cross-referencing-22-2}} Bar%
 \par
-Foo \href{https://pretextbook.org/examples/sample-article/html/external/data/runningstatisticstemplate.ots}{Runners Template}\footnote{\nolinkurl{https://pretextbook.org/examples/sample-article/html/external/data/runningstatisticstemplate.ots}\label{section-cross-referencing-23-2}} Bar%
+Foo \href{https://pretextbook.org/examples/sample-article/html/external/data/spreadsheet/runningstatisticstemplate.ots}{Runners Template}\footnote{\nolinkurl{https://pretextbook.org/examples/sample-article/html/external/data/spreadsheet/runningstatisticstemplate.ots}\label{section-cross-referencing-23-2}} Bar%
 \par
 Testing of output positioning for xref's that are inside containers:%
 \begin{tableptx}{Table}{\textbf{Self-referential Xref In a table}}{self-referential-tabular-xref}{}%
@@ -8873,8 +8948,8 @@ Look in the \mono{pretext-common.xsl} file to see the strings to use to identify
 \par
 Note that the above examples all have slightly different widths (theser are very evident in print with the frames).  As 2-D atomic objects, to place them in the narrative requires the layout features of a \mono{sidebyside} element.  Then \mono{width} and\slash{}or \mono{margin} attributes will influence the width of the panel.%
 \par
-A \mono{program} may also be nested inside a \mono{listing}, which behaves similar to a \mono{figure}.  You can provide a \mono{caption}, and the listing will be numbered along with tables and figures.  This then makes it possible to cross-reference the listing, such as \hyperref[listing-c-hello]{Listing~{\xreffont\ref{listing-c-hello}}}.  It also removes the requirement of wrapping the \mono{program} in a \mono{sidebyside}.  For technical reasons, the three examples above will not split across a page break in PDF output, but the placement inside a \mono{listing} will allow splits, as you should see in at least one example following.%
-\begin{listingptx}{Listing}{C Version of ``Hello, World!''}{listing-c-hello}{}%
+A \mono{program} may also be nested inside a \mono{listing}, which behaves similar to a \mono{figure}.  You can provide a \mono{title}, and the listing will be numbered along with tables and figures.  This then makes it possible to cross-reference the listing, such as \hyperref[listing-c-hello]{Listing~{\xreffont\ref{listing-c-hello}}}.  It also removes the requirement of wrapping the \mono{program} in a \mono{sidebyside}.  For technical reasons, the three examples above will not split across a page break in PDF output, but the placement inside a \mono{listing} will allow splits, as you should see in at least one example following.%
+\begin{listingptx}{Listing}{\textbf{C Version of ``Hello, World!''}}{listing-c-hello}{}%
 \begin{program}{C}{0}{1}{0}
 /* Hello World program */
 
@@ -8885,10 +8960,9 @@ main()
     printf("Hello, World!");
 }
 \end{program}
-\tcblower
 \end{listingptx}%
 A \mono{<program>} may include line numbers.%
-\begin{listingptx}{Listing}{A static Java program with line numbers}{program-line-numbers}{}%
+\begin{listingptx}{Listing}{\textbf{A static Java program with line numbers}}{program-line-numbers}{}%
 \begin{programnumbered}{Java}{0}{1}{0}
 import javax.swing.JFrame;  //Importing class JFrame
 import javax.swing.JLabel;  //Importing class JLabel
@@ -8903,10 +8977,9 @@ public class HelloWorld {
     }
 }
 \end{programnumbered}
-\tcblower
 \end{listingptx}%
 A \mono{<program>} may also include highlighted lines.%
-\begin{listingptx}{Listing}{A static Java program with line numbers}{program-highlight-lines}{}%
+\begin{listingptx}{Listing}{\textbf{A static Java program with line numbers}}{program-highlight-lines}{}%
 \begin{programnumbered}{Java}{0}{1}{0}
 import javax.swing.JFrame;  //Importing class JFrame
 import javax.swing.JLabel;  //Importing class JLabel
@@ -8921,12 +8994,13 @@ public class HelloWorld {
     }
 }
 \end{programnumbered}
-\tcblower
 \end{listingptx}%
 Although a program should have a \mono{<code>} element surrounding its code, we attempt to provide one when it is missing. This next sample tests that and intentionally has no leading or trailing newline inside the program.%
 \begin{program}{none}{0}{1}{0}
 
 \end{program}
+Sometimes it is nice to author an inline fragment of a program and have the styling of its text match that of a \mono{<program>}. To do this we can use the \mono{<pf>} tag (``program fragment'').  It is similar to a \mono{<c>} element, but will be syntax highlighted according to either a \mono{@language} or the default language for \mono{<programs>}. Here is an example in C: \programfragment{C}{`printf("The cost is \$\%f.2", money);`}. And another that is in Python and tests problematic characters: \programfragment{Python}{`print("\& \% \$ \# \_ \{ \} \~ \^ \\")`}.%
+\par
 If you are discussing algorithms in the abstract (or even concretely), you can set them off like a theorem, with a number, a title and a target for cross-references.  Sometimes you claim an algorithm produces something in particular, or has certain properties, such as a theoretical run time, so a proof may be included.  See the discussion just preceding about (limited) options for pseudo-code.%
 \begin{algorithm}{Algorithm}{Sieve of Eratosthenes.}{}{algorithm-sieve-eratosthenes}%
 On input of a positive integer \mono{n} this algorithm will compute all the prime numbers up to, and including, \mono{n}.  It was named for Eratosthenes of Cyrene (ca.\@ 276 BC\textendash{}ca.\@ 195\slash{}194 BC) by Nicomachus (ca.\@ 60\textendash{}ca.\@ 120 CE) in \pubtitle{Introduction to Arithmetic}. (\href{http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes}{Wikipedia}\footnotemark{}, 2015)%
@@ -8953,25 +9027,24 @@ Each composite number is a multiple of some prime, and since no prime is ever re
 \footnotetext[2]{\nolinkurl{en.wikipedia.org/wiki/Sieve_of_Eratosthenes}\label{algorithm-sieve-eratosthenes-2-1-11}}%
 If you are writing about system-level software, you may need to write numbers in hexadecimal or binary.  Here we use a numbered, displayed equation (mathematics) and \LaTeX{} macros such as \mono{\textbackslash{}texttt} for a monospace text font, and \mono{\textbackslash{};} for spacing\slash{}grouping the bits of the binary number.%
 \begin{equation}
-\texttt{6C2A}_{16} = \texttt{0110}\;\texttt{1100}\;\texttt{0010}\;\texttt{1010}_{2}\label{section-programs-23-4}
+\texttt{6C2A}_{16} = \texttt{0110}\;\texttt{1100}\;\texttt{0010}\;\texttt{1010}_{2}\label{section-programs-24-4}
 \end{equation}
 If you use these constructions repeatedly, then some \LaTeX{} macros might be useful.  It might also be beneficial for us to add some PreTeXt markup for such numbers used in a paragraph\textemdash{}send us a feature request.%
 \begin{theorem}{Theorem}{}{}{theorem-detached}%
 This is a spurious theorem to break up the run of consecutive \mono{listing} so we might test the effect.%
 \end{theorem}
 And this is a spurious paragraph to prove that the theorem beforehand, and the proof following, are distinct from one another.%
-\begin{proof}{Proof}{}{section-programs-26}\space(\hyperref[theorem-detached]{Theorem~{\xreffont\ref{theorem-detached}}})\space
+\begin{proof}{Proof}{}{section-programs-27}\space(\hyperref[theorem-detached]{Theorem~{\xreffont\ref{theorem-detached}}})\space
 This is a proof that is authored ``detached.''  It is not associated with the theorem above in a way other than simply following it.%
 \end{proof}
 A specialized version of a program listing is an interactive command\slash{}response session at a command-line, where differing fonts are used to differentiate the system prompt, the user's commands, and the system's reaction.  A   \mono{console} session may be used by itself inside a \mono{sidebyside}, or it can be wrapped in a listing to get a number and a caption.  As elsewhere, you will need to escape ampersands and angle brackets (such as if you have a command using redirection), using \mono{\&amp;}, \mono{\&lt;}, and \mono{\&gt;} in your source.%
-\begin{listingptx}{Listing}{Console Session: \mono{int} and \mono{float}}{console-raspberry-pi}{}%
+\begin{listingptx}{Listing}{\textbf{Console Session: \mono{int} and \mono{float}}}{console-raspberry-pi}{}%
 \begin{console}{0}{1}{0}
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{./intAndFloat}*)
 The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
-\tcblower
 \end{listingptx}%
 Here is the plain version, some layout control.  We simply place a small margin on the left (at 4\% width).%
 \begin{console}{0.04}{0.92}{0.04}
@@ -8981,7 +9054,7 @@ The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
 If your console input exceeds more than one line, you can author it across several lines and your choice of line breaks will be reflected in the rendering.  You can decide to indent lines after the first one for clarity, if desired.  You can also decide if your audience needs line-continuation characters or not.%
-\begin{listingptx}{Listing}{Console Session: \mono{int} and \mono{float} (multi-line input)}{console-raspberry-pi-multi}{}%
+\begin{listingptx}{Listing}{\textbf{Console Session: \mono{int} and \mono{float} (multi-line input)}}{console-raspberry-pi-multi}{}%
 \begin{console}{0}{1}{0}
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{gcc -Wall}*)
 (*\consoleinput{    -o intAndFloat intAndFloat.c}*)
@@ -8989,7 +9062,6 @@ pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{./intAndFloat}*)
 The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
-\tcblower
 \end{listingptx}%
 A \mono{<console>} may specify a continuation symbol, as a prefix on every line but the first.%
 \begin{console}{0}{1}{0}
@@ -9006,7 +9078,7 @@ $ (*\consoleinput{}*)
 Notice in the HTML version of the above example that when you highlight all, or a portion, of the listing for a cut-and-paste that the prompts are not included.%
 \par
 The next listing is just absurdity, to check various characters from \LaTeX{} that are otherwise employed by the code supporting consoles, and some Latin-1 characters.  We test each in a prompt, input, and output.  We use \mono{(*} and \mono{*)} as sequences used to escape embedded \LaTeX{} commands, so we test those also.%
-\begin{listingptx}{Listing}{Console Session: problematic \LaTeX{} characters}{section-programs-37}{}%
+\begin{listingptx}{Listing}{\textbf{Console Session: problematic \LaTeX{} characters}}{section-programs-38}{}%
 \begin{console}{0}{1}{0}
 A backslash \ here  (*\consoleinput{A backslash \textbackslash{} here}*)
 A backslash \ here
@@ -9025,10 +9097,9 @@ The rest & % $ # _ ~ ^ of LaTeX
 Latin-1: ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß  (*\consoleinput{Latin-1: ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß}*)
 Latin-1: ÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞß
 \end{console}
-\tcblower
 \end{listingptx}%
 We conclude this section with a longer example of a program listing, an assembly language program from Bob Plantz, included to test a \mono{listing} breaking across pages in PDF output.%
-\begin{listingptx}{Listing}{A longer program listing}{section-programs-39}{}%
+\begin{listingptx}{Listing}{\textbf{A longer program listing}}{section-programs-40}{}%
 \begin{program}{none}{0}{1}{0}
 @ structPass2.s
 @ Allocates two structs and assigns a value to each field
@@ -9136,7 +9207,6 @@ dispAnIntAddr:
 dispOtherCharAddr:
         .word   dispOtherChar
 \end{program}
-\tcblower
 \end{listingptx}%
 \end{sectionptx}
 %
@@ -9470,14 +9540,14 @@ Here are two TikZ images, authored side-by-side.  The first has had its geometri
   \node at ( 210:2)   {Design};
   \node at ( 330:2)   {Coding};
   \node [font=\Large] {\LaTeX};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \begin{sbspanel}{0.25}%
 \begin{panelfigureptx}{Figure}{\TeX{} Work Flow}{section-side-by-side-8-5-2}{}%
 \noindent\resizebox{\linewidth}{!}{%
 \smartdiagram[circular diagram:clockwise]{Edit,
-pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}
+pdf\LaTeX, Bib\TeX/ biber, make\-index, pdf\LaTeX}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -10991,7 +11061,7 @@ Bee&Insect
 \begin{figureptx}{Figure}{A \mono{<listing>} and a \mono{<list>}}{section-side-by-side-gallery-16}{}%
 \begin{sidebyside}{2}{0.05}{0.05}{0.05}%
 \begin{sbspanel}{0.4}%
-\begin{sublistingptx}{Listing}{A statistical computation}{section-side-by-side-gallery-16-2-1}{}%
+\begin{sublistingptx}{Listing}{\textbf{A statistical computation}}{section-side-by-side-gallery-16-2-1}{}%
 \begin{program}{R}{0}{1}{0}
 n_loops <- 10
 x.means <- numeric(n_loops)
@@ -11522,7 +11592,7 @@ A \mono{<program>} and\slash{}or \mono{<console>} can be placed in at least six 
 \item{}inside a \mono{<sidebyside>}, with size and layout configured%
 \item{}inside a \mono{<sidebyside>}, with size and layout configured, and inside a \mono{<figure>}%
 \item{}inside a \mono{<sidebyside>}, with size and layout configured, with each inside a \mono{<listing>}, earning different numbers%
-\item{}inside a \mono{<figure>} inside a \mono{<sidebyside>} inside a \mono{<listing>}, with size and layout configured, with a number and caption, but now sub-numbered ((a), (b), (c),\textellipsis{}).%
+\item{}inside a \mono{<figure>} inside a \mono{<sidebyside>} inside a \mono{<listing>}, with size and layout configured, with a number and title, but now sub-numbered ((a), (b), (c),\textellipsis{}).%
 \end{enumerate}
 Examples of each, and more.%
 \par
@@ -11586,8 +11656,8 @@ pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{./intAndFloat}*)
 The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
-Two \mono{<listing>}, with \mono{<caption>}, and no layout control.%
-\begin{listingptx}{Listing}{Hello, World! in C}{atomic-program-18}{}%
+Two \mono{<listing>}, with \mono{<title>}, and no layout control.%
+\begin{listingptx}{Listing}{\textbf{Hello, World! in C}}{atomic-program-18}{}%
 \begin{program}{C}{0}{1}{0}
 /* Hello World program */
 
@@ -11598,19 +11668,17 @@ main()
     printf("Hello, World!");
 }
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{A console session on a Raspberry Pi}{atomic-program-19}{}%
+\begin{listingptx}{Listing}{\textbf{A console session on a Raspberry Pi}}{atomic-program-19}{}%
 \begin{console}{0}{1}{0}
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{./intAndFloat}*)
 The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
-\tcblower
 \end{listingptx}%
 Same two \mono{<listing>}, but now with layout control on the \mono{<program>} and \mono{<console>}.%
-\begin{listingptx}{Listing}{Hello, World! in C}{atomic-program-21}{}%
+\begin{listingptx}{Listing}{\textbf{Hello, World! in C}}{atomic-program-21}{}%
 \begin{program}{C}{0.4}{0.4}{0.2}
 /* Hello World program */
 
@@ -11621,16 +11689,14 @@ main()
     printf("Hello, World!");
 }
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{A console session on a Raspberry Pi}{atomic-program-22}{}%
+\begin{listingptx}{Listing}{\textbf{A console session on a Raspberry Pi}}{atomic-program-22}{}%
 \begin{console}{0.1}{0.8}{0.1}
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{./intAndFloat}*)
 The integer is 19088743 and the float is 19088.742188
 pi@raspberrypi ~/progs/chap02 $ (*\consoleinput{}*)
 \end{console}
-\tcblower
 \end{listingptx}%
 This \mono{<sidebyside>} gives each panel a 30\% width.  The remaining 10\% is apportioned for margins and separation.%
 \begin{sidebyside}{3}{0.0166666666666667}{0.0166666666666667}{0.0333333333333333}%
@@ -11707,7 +11773,7 @@ x.means
 Finally, a smaller \mono{<program>} and a smaller \mono{<console>}, each inside a \mono{<listing>}, as the two panels of a \mono{<sidebyside>} with no margins, and slightly different widths (to control word-wrapping).  The panels have been aligned vertically so their captions align.%
 \begin{sidebyside}{2}{0}{0}{0.1}%
 \begin{sbspanel}{0.35}[bottom]%
-\begin{panellistingptx}{Listing}{Hello!}{atomic-program-28-1}{}%
+\begin{panellistingptx}{Listing}{\textbf{Hello!}}{atomic-program-28-1}{}%
 \begin{program}{C}{0}{1}{0}
 /* Hello World program */
 
@@ -11722,7 +11788,7 @@ main()
 \end{panellistingptx}%
 \end{sbspanel}%
 \begin{sbspanel}{0.55}[bottom]%
-\begin{panellistingptx}{Listing}{Raspberry Pi}{atomic-program-28-2}{}%
+\begin{panellistingptx}{Listing}{\textbf{Raspberry Pi}}{atomic-program-28-2}{}%
 \begin{console}{0}{1}{0}
 $ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
 $ (*\consoleinput{./intAndFloat}*)
@@ -11734,11 +11800,11 @@ $ (*\consoleinput{}*)
 \end{sbspanel}%
 \end{sidebyside}%
 \par
-And again, the two-panel \mono{<sidebyside>} of \mono{<listing>}, but now inside a \mono{<figure>} that has a number and a caption.  And then the \mono{<listing>} are sub-numbered as (a) and (b).%
+And again, the two-panel \mono{<sidebyside>} of \mono{<listing>}, but now inside a \mono{<figure>} that has a number and a title.  And then the \mono{<listing>} are sub-numbered as (a) and (b).%
 \begin{figureptx}{Figure}{Two Code Listings}{atomic-program-30}{}%
 \begin{sidebyside}{2}{0}{0}{0.1}%
 \begin{sbspanel}{0.35}[bottom]%
-\begin{sublistingptx}{Listing}{Hello!}{atomic-program-30-2-1}{}%
+\begin{sublistingptx}{Listing}{\textbf{Hello!}}{atomic-program-30-2-1}{}%
 \begin{program}{C}{0}{1}{0}
 /* Hello World program */
 
@@ -11753,7 +11819,7 @@ main()
 \end{sublistingptx}%
 \end{sbspanel}%
 \begin{sbspanel}{0.55}[bottom]%
-\begin{sublistingptx}{Listing}{Raspberry Pi}{atomic-program-30-2-2}{}%
+\begin{sublistingptx}{Listing}{\textbf{Raspberry Pi}}{atomic-program-30-2-2}{}%
 \begin{console}{0}{1}{0}
 $ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
 $ (*\consoleinput{./intAndFloat}*)
@@ -12452,9 +12518,9 @@ This is a \emph{test} with two inline exercises containing MyOpenMath (MOM) prob
 \begin{inlineexercise}{Checkpoint}{Negative Numbers and Exponents.}{section-myopenmath-3}%
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-Try to evaluate \(\displaystyle-{\left(-{36}\right)}^{{-{1}{/}{2}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
+Try to evaluate \(\displaystyle-{\left(-{16}\right)}^{{-{5}{/}{4}}}\) without using a calculator. Enter your answer as an integer or reduced fraction (no decimals). Enter DNE if the number is not real.%
 \par
-The value is \fillintext{20}  %
+The value is   %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-3-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
@@ -12465,48 +12531,29 @@ The value is \fillintext{20}  %
 \begin{inlineexercise}{Checkpoint}{A Statistical Test.}{section-myopenmath-4}%
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \par
-You wish to determine if there is a  linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.05}\). You have the following bivariate data set.%
+You wish to determine if there is a  linear correlation between the two variables at a significance level of \(\displaystyle\alpha={0.001}\). You have the following bivariate data set.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{ll}
 x&y\tabularnewline[0pt]
-40.3&16.5\tabularnewline[0pt]
-26.2&39.8\tabularnewline[0pt]
-73.1&-3.4\tabularnewline[0pt]
-54.9&14.8\tabularnewline[0pt]
-22.7&34\tabularnewline[0pt]
-43.7&38.5\tabularnewline[0pt]
-26&12.5\tabularnewline[0pt]
-32.3&42.3\tabularnewline[0pt]
-33.2&16.1\tabularnewline[0pt]
-23.6&40.4\tabularnewline[0pt]
-48.2&35.5\tabularnewline[0pt]
-54.7&22.1\tabularnewline[0pt]
-53.3&18.6\tabularnewline[0pt]
-44.9&11.5\tabularnewline[0pt]
-53.2&17\tabularnewline[0pt]
-14.6&17.5\tabularnewline[0pt]
-20&43.6\tabularnewline[0pt]
-42.6&16.3\tabularnewline[0pt]
-52.8&30.5\tabularnewline[0pt]
-34.1&35.7\tabularnewline[0pt]
-33&8.1\tabularnewline[0pt]
-44.7&9.7\tabularnewline[0pt]
-40.4&17.1\tabularnewline[0pt]
-44.2&4.5\tabularnewline[0pt]
-37.5&42.2\tabularnewline[0pt]
-68&23\tabularnewline[0pt]
-74.8&14.9\tabularnewline[0pt]
-50&39.9\tabularnewline[0pt]
-32.9&13.6
+49.7&47.8\tabularnewline[0pt]
+39.4&95.4\tabularnewline[0pt]
+44&50.7\tabularnewline[0pt]
+68.1&-6.9\tabularnewline[0pt]
+69.4&-6.5\tabularnewline[0pt]
+45.5&71.4\tabularnewline[0pt]
+42&85.3\tabularnewline[0pt]
+86.6&-56.3\tabularnewline[0pt]
+59.5&20.8\tabularnewline[0pt]
+43.1&58.5
 \end{tabular}
 }%
 \end{center}%
-download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A40.3\%2C16.5\%0A26.2\%2C39.8\%0A73.1\%2C-3.4\%0A54.9\%2C14.8\%0A22.7\%2C34\%0A43.7\%2C38.5\%0A26\%2C12.5\%0A32.3\%2C42.3\%0A33.2\%2C16.1\%0A23.6\%2C40.4\%0A48.2\%2C35.5\%0A54.7\%2C22.1\%0A53.3\%2C18.6\%0A44.9\%2C11.5\%0A53.2\%2C17\%0A14.6\%2C17.5\%0A20\%2C43.6\%0A42.6\%2C16.3\%0A52.8\%2C30.5\%0A34.1\%2C35.7\%0A33\%2C8.1\%0A44.7\%2C9.7\%0A40.4\%2C17.1\%0A44.2\%2C4.5\%0A37.5\%2C42.2\%0A68\%2C23\%0A74.8\%2C14.9\%0A50\%2C39.9\%0A32.9\%2C13.6}{Download CSV}\footnotemark{}%
+download link provided here:  \href{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A49.7\%2C47.8\%0A39.4\%2C95.4\%0A44\%2C50.7\%0A68.1\%2C-6.9\%0A69.4\%2C-6.5\%0A45.5\%2C71.4\%0A42\%2C85.3\%0A86.6\%2C-56.3\%0A59.5\%2C20.8\%0A43.1\%2C58.5}{Download CSV}\footnotemark{}%
 \par
 What is the correlation coefficient for this data set?%
 \par
-       \emph{r} = \fillintext{10}%
+       \emph{r} = %
 \par
 (report answer accurate to at least 3 decimal places)%
 \par
@@ -12514,7 +12561,7 @@ To find the p-value for a correlation coefficient, you need to convert to a \emp
 \par
 What is the p-value for this correlation coefficient?%
 \par
-       p-value = \fillintext{12}%
+       p-value = %
 \par
 (report answer accurate to at least 4 decimal places)%
 \par
@@ -12529,27 +12576,48 @@ Your final conclusion is that...%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-4-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}-0.377%
-\item{}0.0437%
+\item{}-0.979%
+\item{}0%
 \item{}A: There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.%
 \end{itemize}
 %
 \end{inlineexercise}%
-\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A40.3\%2C16.5\%0A26.2\%2C39.8\%0A73.1\%2C-3.4\%0A54.9\%2C14.8\%0A22.7\%2C34\%0A43.7\%2C38.5\%0A26\%2C12.5\%0A32.3\%2C42.3\%0A33.2\%2C16.1\%0A23.6\%2C40.4\%0A48.2\%2C35.5\%0A54.7\%2C22.1\%0A53.3\%2C18.6\%0A44.9\%2C11.5\%0A53.2\%2C17\%0A14.6\%2C17.5\%0A20\%2C43.6\%0A42.6\%2C16.3\%0A52.8\%2C30.5\%0A34.1\%2C35.7\%0A33\%2C8.1\%0A44.7\%2C9.7\%0A40.4\%2C17.1\%0A44.2\%2C4.5\%0A37.5\%2C42.2\%0A68\%2C23\%0A74.8\%2C14.9\%0A50\%2C39.9\%0A32.9\%2C13.6}\label{section-myopenmath-4-2-4-2}}%
+\footnotetext[1]{\nolinkurl{denied:data:text/csv;charset=UTF-8,\%22x\%22\%2C\%22y\%22\%0A49.7\%2C47.8\%0A39.4\%2C95.4\%0A44\%2C50.7\%0A68.1\%2C-6.9\%0A69.4\%2C-6.5\%0A45.5\%2C71.4\%0A42\%2C85.3\%0A86.6\%2C-56.3\%0A59.5\%2C20.8\%0A43.1\%2C58.5}\label{section-myopenmath-4-2-4-2}}%
 \begin{inlineexercise}{Checkpoint}{With an image.}{section-myopenmath-5}%
 This is an introduction, providing articulation between the MOM problem and the contents of the text.  For example, you might cross-reference a result or example given previously.%
 \begin{image}{0.25}{0.5}{0.25}{}%
-\includegraphics[width=\linewidth]{generated/problems/images/804e1746f9fa3e455f999ccc9669941c.png}
+\includegraphics[width=\linewidth]{generated/problems/images/mom-2168-1.png}
 \end{image}%
 Find the equation of the line in the form \(\displaystyle{y}={m}{x}+{b}.\)%
 \par
-Answer: \(\displaystyle{y}=\) \fillintext{10}%
+Answer: \(\displaystyle{y}=\) %
 \par
  %
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-5-3}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}\(\displaystyle \displaystyle{y}={1}{x}+{4}\)%
+\item{}\(\displaystyle \displaystyle{y}={2}{x}+{10}\)%
+\end{itemize}
+%
+\end{inlineexercise}%
+\begin{inlineexercise}{Checkpoint}{Geometry of a Cone.}{section-myopenmath-6}%
+This problem has two figures.  They come from the MOM server as SVG files.  These image files are then converted to PDF for static formats like PDF, and into PNG for formats like Kindle.%
+\par
+The right circular conical tank shown has height 4.00 m and top radius \(\displaystyle{1.20}\) m. It is filled with water to a height of \(\displaystyle{3.60}\) m. The cross section is a right triangle with height 4.00 m and top side \(\displaystyle{1.20}\) m. Inside is another right triangle with height \(\displaystyle{3.60}\) m.%
+\begin{image}{0.3}{0.4}{0.3}{}%
+\includegraphics[width=\linewidth]{generated/problems/images/mom-930582-1.pdf}
+\end{image}%
+\begin{image}{0.3}{0.4}{0.3}{}%
+\includegraphics[width=\linewidth]{generated/problems/images/mom-930582-2.pdf}
+\end{image}%
+What is the volume of water?  m%
+\par
+How much water must be added to fill the tank?  \(\displaystyle\text{m}^{{3}}\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-6-3}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}4.4%
+\item{}1.63%
 \end{itemize}
 %
 \end{inlineexercise}%
@@ -12591,11 +12659,11 @@ If you make PDF output you will notice an increased amount of control over layou
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.1 A Geometric Prelude}
+\typeout{Worksheet 35.1 A Geometric Prelude (without authored pages)}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
-\begin{worksheet-subsection}{Worksheet}{A Geometric Prelude}{}{A Geometric Prelude}{}{}{worksheet-geometric-prelude}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{A Geometric Prelude (without authored pages)}{}{A Geometric Prelude (without authored pages)}{}{}{worksheet-geometric-prelude}
 \begin{objectives}{Objectives}{objectives}
 %
 \begin{itemize}[label=\textbullet]
@@ -12614,7 +12682,7 @@ It was known to Euclid, and probably earlier, that the midpoints of the sides of
 \begin{tikzpicture}[xscale=0.8, yscale=0.8]
  \draw[style={black, ultra thick}] (0,0) -- (5,0) -- (4,4) -- (2,5) -- (0,0);
  \draw[style={black, dashed, very thick}] (2.5, 0) -- (4.5, 2) -- (3, 4.5) -- (1, 2.5) -- (2.5, 0);
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -12635,7 +12703,7 @@ It was known to Euclid, and probably earlier, that the midpoints of the sides of
   %\node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
   %\node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
   % \node {$P$} (1.3333,0.6667);
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -12656,7 +12724,7 @@ It was known to Euclid, and probably earlier, that the midpoints of the sides of
   \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
   \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
   % \node {$P$} (1.3333,0.6667);
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \tcblower
 \end{panelfigureptx}%
@@ -12668,7 +12736,6 @@ In this exercise, we'll use vectors to show that the medians of any triangle (\h
 \begin{divisionexercise}{1}{}{4in}{ex-cyclic}%
 What is the value of \(\vec{A} + \vec{B} + \vec{C}\)?%
 \end{divisionexercise}%
-\clearpage
 \hyperref[figure-triangle-cyclic-medians]{Figure~{\xreffont\ref{figure-triangle-cyclic-medians}}} from the previous page is reproduced for your convenience.%
 \begin{figureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-copy}{}%
 \begin{image}{0.25}{0.5}{0.25}{}%
@@ -12686,7 +12753,7 @@ What is the value of \(\vec{A} + \vec{B} + \vec{C}\)?%
   \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
   \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
   % \node {$P$} (1.3333,0.6667);
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -12700,7 +12767,7 @@ Show that \(\vec{M}_{1} + \vec{M}_{2} + \vec{M}_{3} = 0\).%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.6}%
-\begin{divisionexercise}{3}{}{2in}{worksheet-geometric-prelude-5-3-2}%
+\begin{divisionexercise}{3}{}{2in}{worksheet-geometric-prelude-7-2}%
 To show that the point \(P\) exists (as the common intersection of the \(\vec{M}_{i}\)), show that%
 \begin{equation*}
 \vec{A} + \frac{2}{3} \vec{M}_{3} = \frac{2}{3} \vec{M}_{2} = \fillinmath{\frac{2}{3} \vec{M}_{1}-\vec{C}}\text{.}
@@ -12709,7 +12776,7 @@ To show that the point \(P\) exists (as the common intersection of the \(\vec{M}
 \end{divisionexercise}%
 \end{sbspanel}%
 \end{sidebyside}%
-\begin{divisionexercise}{4}{}{2.54cm}{worksheet-geometric-prelude-5-4}%
+\begin{divisionexercise}{4}{}{2.54cm}{worksheet-geometric-prelude-8}%
 If you have time, try to devise a vector proof of Euclid's result presented at the beginning of the workshop. Recall that a \terminology{parallelogram} is a four-sided polygon whose opposite sides are parallel.%
 \end{divisionexercise}%
 \begin{conclusion}{Wrap-up.}%
@@ -12720,11 +12787,140 @@ It's possible to do interesting things with vector arithmetic in a coordinate-fr
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.2 Networks Worksheet}
+\typeout{Worksheet 35.2 A Geometric Prelude (with authored pages)}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=3cm, bottom=100pt}
-\begin{worksheet-subsection}{Worksheet}{Networks Worksheet}{}{Networks Worksheet}{}{}{worksheet-networks}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{A Geometric Prelude (with authored pages)}{}{A Geometric Prelude (with authored pages)}{}{}{worksheet-geometric-prelude-pages}
+\begin{objectives}{Objectives}{objectives-pages}
+%
+\begin{itemize}[label=\textbullet]
+\item{}Practice visualizing vector addition%
+\item{}Use vectors without explicit coordinates%
+\end{itemize}
+\end{objectives}
+\begin{introduction}{}%
+This two-page worksheet was generously donated to the sample article by Dave Rosoff at a CuratedCourses workshop in August~2018.  It has the default (skinny) margins.%
+\par
+It was known to Euclid, and probably earlier, that the midpoints of the sides of any quadrilateral all lie in the same plane (even if the vertices of the quadrilateral do not). In fact, these midpoints are the vertices of a parallelogram, as pictured in \hyperref[figure-midpoints-of-quadrilateral]{Figure~{\xreffont\ref{figure-midpoints-of-quadrilateral}}}.%
+\begin{sidebyside}{3}{0.0166666666666667}{0.0166666666666667}{0.0333333333333333}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The midpoints of the sides of a quadrilateral are the vertices of a parallelogram.}{figure-midpoints-of-quadrilateral-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=0.8, yscale=0.8]
+ \draw[style={black, ultra thick}] (0,0) -- (5,0) -- (4,4) -- (2,5) -- (0,0);
+ \draw[style={black, dashed, very thick}] (2.5, 0) -- (4.5, 2) -- (3, 4.5) -- (1, 2.5) -- (2.5, 0);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The sides of a triangle presented as vectors.}{figure-triangle-cyclic-vectors-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  % \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+  %   {} -- (1.5,0) node[below right=0mm and 3mm] {$\vec{A}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+  %  {} -- (2,1) node[above left=5mm and 1mm] {$\vec{B}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+  %  {} -- (0.5,1) node[below left=1mm and 3mm] {$\vec{C}$};
+  %\node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  %\node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\par
+In this exercise, we'll use vectors to show that the medians of any triangle (\hyperref[figure-triangle-cyclic-vectors]{Figure~{\xreffont\ref{figure-triangle-cyclic-vectors}}}) intersect at a point. Recall that medians are the lines connecting the vertices of the triangle to the midpoints of their opposite edges, as in the figure. We'll do this in a few steps.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{4in}{ex-cyclic-pages}%
+What is the value of \(\vec{A} + \vec{B} + \vec{C}\)?%
+\end{divisionexercise}%
+\clearpage
+\hyperref[figure-triangle-cyclic-medians]{Figure~{\xreffont\ref{figure-triangle-cyclic-medians}}} from the previous page is reproduced for your convenience.%
+\begin{figureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-copy-pages}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\end{image}%
+\tcblower
+\end{figureptx}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{2}{}{4.5in}{exercise-vector-addition-pages}%
+Show that \(\vec{M}_{1} + \vec{M}_{2} + \vec{M}_{3} = 0\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercise-vector-addition-pages-2}{}\quad{}Use \hyperlink{ex-cyclic}{Worksheet Exercise~{\xreffont 35.1.1}}.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.6}%
+\begin{divisionexercise}{3}{}{2in}{worksheet-geometric-prelude-pages-5-3-2}%
+To show that the point \(P\) exists (as the common intersection of the \(\vec{M}_{i}\)), show that%
+\begin{equation*}
+\vec{A} + \frac{2}{3} \vec{M}_{3} = \frac{2}{3} \vec{M}_{2} = \fillinmath{\frac{2}{3} \vec{M}_{1}-\vec{C}}\text{.}
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{4}{}{2.54cm}{worksheet-geometric-prelude-pages-5-4}%
+If you have time, try to devise a vector proof of Euclid's result presented at the beginning of the workshop. Recall that a \terminology{parallelogram} is a four-sided polygon whose opposite sides are parallel.%
+\end{divisionexercise}%
+\begin{conclusion}{Wrap-up.}%
+It's possible to do interesting things with vector arithmetic in a coordinate-free way: we didn't specify an origin, or any entries of any vectors in the examples.%
+\end{conclusion}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 35.3 Networks Worksheet (no authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=3cm, bottom=1.2in}
+\begin{worksheet-subsection}{Worksheet}{Networks Worksheet (no authored pages)}{}{Networks Worksheet (no authored pages)}{}{}{worksheet-networks}
 \begin{introduction}{Basic laws for electrical circuits.}%
 This two-page worksheet was generously donated to the sample article by Virgil Pierce at a CuratedCourses workshop in August~2018.  It has default (skinny) left and right margins, but we have specified longer top and bottom margins, with the top being the larger of the two.%
 \begin{theorem}{Theorem}{Ohms Law.}{}{worksheet-networks-2-3}%
@@ -12756,7 +12952,7 @@ to[R, i=$I_1$, *-o](2,2);
 to[R, i=$I_2$, *-o](2,-2);
 \draw (-3, 0)
 to[R, i=$I_3$, o-*](0,0);
-\end{circuitikz}
+\end{circuitikz}%
 }%
 \end{image}%
 \end{example}
@@ -12769,10 +12965,9 @@ The sum of the voltages around any closed circuit (or subcircuit) is zero.%
 \end{theorem}
 Kirchoffs Current Law and Kirkoffs Voltage Law combined with Ohms Law gives for any circuit of resistors and sources a linear system that may (or may not) determine the currents.%
 \end{introduction}%
-\clearpage
 \begin{sidebyside}{2}{0}{0}{0.1}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{1}{}{1.5in}{worksheet-networks-4-1-1}%
+\begin{divisionexercise}{1}{}{1.5in}{worksheet-networks-3-1}%
 For the simple network pictured, calculuate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
 \noindent\resizebox{\linewidth}{!}{%
 \begin{circuitikz}
@@ -12785,12 +12980,12 @@ to[R, R=$3\quad \mbox{ohm}$](4,0)
 to[short](3,0)
 to[R, R=$3\quad \mbox{ohm}$](2,0)
 to[short](0,0);
-\end{circuitikz}
+\end{circuitikz}%
 }%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{2}{}{2in}{worksheet-networks-4-1-2}%
+\begin{divisionexercise}{2}{}{2in}{worksheet-networks-3-2}%
 Compare it with a parallel circuit network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
 \noindent\resizebox{\linewidth}{!}{%
 \begin{circuitikz}
@@ -12805,12 +13000,12 @@ to[R, R=$3\quad \mbox{ohm}$](5,0)
 to[short](0,0);
 \draw(4,0)
 to[R, R=$3\quad \mbox{ohm}$](4,3);
-\end{circuitikz}
+\end{circuitikz}%
 }%
 \end{divisionexercise}%
 \end{sbspanel}%
 \end{sidebyside}%
-\begin{divisionexercise}{3}{}{1in}{worksheet-networks-4-2}%
+\begin{divisionexercise}{3}{}{1in}{worksheet-networks-4}%
 Now for a more complicated network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
 \begin{image}{0}{1}{0}{}%
 \resizebox{\linewidth}{!}{%
@@ -12832,12 +13027,11 @@ to[short](0,0);
 to[R, R=$3\quad \mbox{ohm}$](4,3);
 \draw(8,0)
 to[R, R=$1\quad \mbox{ohm}$](8,3);
-\end{circuitikz}
+\end{circuitikz}%
 }%
 \end{image}%
 \end{divisionexercise}%
-\clearpage
-\begin{divisionexercise}{4}{}{3in}{worksheet-networks-5-1}%
+\begin{divisionexercise}{4}{}{3in}{worksheet-networks-5}%
 Now generalize these ideas to a context outside of electrical circuits. Consider the network of streets given in the diagram (with one-way directions as indicated).%
 \begin{image}{0.175}{0.65}{0.175}{}%
 \resizebox{\linewidth}{!}{%
@@ -12847,11 +13041,11 @@ Now generalize these ideas to a context outside of electrical circuits. Consider
     \draw[<-, very thick] (0, 4) -- (10, 4) node[midway, above]{Shelburne St};
     \draw[<-, very thick] (1, -1) -- (1, 5) node[midway, above, sloped]{Willow};
     \draw[->, very thick] (9, -1) -- (9, 5) node[midway, above, sloped]{Jay};
-    \end{tikzpicture}
+    \end{tikzpicture}%
 }%
 \end{image}%
 A traffic engineer counts the hourly flow of cars into and out of this network at the entrances.  They get (EB = East Bound; WB = West Bound):%
-\begin{tableptx}{Table}{\textbf{Estimated hourly traffic flow for the road network}}{worksheet-networks-5-1-1-4}{}%
+\begin{tableptx}{Table}{\textbf{Estimated hourly traffic flow for the road network}}{worksheet-networks-5-1-4}{}%
 \centering%
 {\tabularfont%
 \begin{tabular}{cccccc}
@@ -12868,7 +13062,155 @@ Use a variable for each segment inside of the network and set up a system of lin
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.3 Worksheet}
+\typeout{Worksheet 35.4 Networks Worksheet (with authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=3cm, bottom=1.2in}
+\begin{worksheet-subsection}{Worksheet}{Networks Worksheet (with authored pages)}{}{Networks Worksheet (with authored pages)}{}{}{worksheet-networks-pages}
+\begin{introduction}{Basic laws for electrical circuits.}%
+This two-page worksheet was generously donated to the sample article by Virgil Pierce at a CuratedCourses workshop in August~2018.  It has default (skinny) left and right margins, but we have specified longer top and bottom margins, with the top being the larger of the two.%
+\begin{theorem}{Theorem}{Ohms Law.}{}{worksheet-networks-pages-2-3}%
+The current through a resistor is proportional to the ratio of the \emph{Voltage} to the \emph{Resistance}%
+\begin{equation*}
+I = \frac{V}{R} 
+\end{equation*}
+Or for our purposes%
+\begin{equation*}
+I R = V 
+\end{equation*}
+%
+\end{theorem}
+\begin{theorem}{Theorem}{Kirchoffs Current Law.}{}{worksheet-networks-pages-2-4}%
+The sum of the currents in a network meeting at a point is zero.%
+\begin{equation*}
+\sum_{k=1}^n I_k = 0 
+\end{equation*}
+%
+\end{theorem}
+\begin{example}{Example}{Kirchoff's Current Law.}{worksheet-networks-pages-2-5}%
+For the circuit below \(I_1 + I_2 = I_3 \).%
+\begin{image}{0.3}{0.4}{0.3}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[R, i=$I_1$, *-o](2,2);
+\draw (0,0)
+to[R, i=$I_2$, *-o](2,-2);
+\draw (-3, 0)
+to[R, i=$I_3$, o-*](0,0);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{example}
+\begin{theorem}{Theorem}{Kirchoffs Voltage Law.}{}{worksheet-networks-pages-2-6}%
+The sum of the voltages around any closed circuit (or subcircuit) is zero.%
+\begin{equation*}
+\sum_{k=1}^n V_k = 0 
+\end{equation*}
+%
+\end{theorem}
+Kirchoffs Current Law and Kirkoffs Voltage Law combined with Ohms Law gives for any circuit of resistors and sources a linear system that may (or may not) determine the currents.%
+\end{introduction}%
+\clearpage
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{1}{}{1.5in}{worksheet-networks-pages-4-1-1}%
+For the simple network pictured, calculuate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](2,3)
+to[R, R=$4\quad \mbox{ohm}$] (3, 3)
+to[short](4,3)
+to[R, R=$3\quad \mbox{ohm}$](4,0)
+to[short](3,0)
+to[R, R=$3\quad \mbox{ohm}$](2,0)
+to[short](0,0);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{2}{}{2in}{worksheet-networks-pages-4-1-2}%
+Compare it with a parallel circuit network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4\quad \mbox{ohm}$](6,3)
+to[short](7,3)
+to[R, R=$3\quad \mbox{ohm}$](7,0)
+to[short](6,0)
+to[R, R=$3\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{3}{}{1in}{worksheet-networks-pages-4-2}%
+Now for a more complicated network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\begin{image}{0}{1}{0}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11 \quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4 \quad \mbox{ohm}$](6,3)
+to[short](9,3)
+to[R, R=$4 \quad \mbox{ohm}$](10,3)
+to[short](11,3)
+to[R, R=$3 \quad \mbox{ohm}$](11, 0)
+to[short](10,0)
+to[R, R=$2\quad \mbox{ohm}$](9,0)
+to[short](6,0)
+to[R, R=$2\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\draw(8,0)
+to[R, R=$1\quad \mbox{ohm}$](8,3);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{3in}{worksheet-networks-pages-5-1}%
+Now generalize these ideas to a context outside of electrical circuits. Consider the network of streets given in the diagram (with one-way directions as indicated).%
+\begin{image}{0.175}{0.65}{0.175}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[>=stealth]
+\draw[->, very thick] (0,0) -- (10, 0) node[midway, below]{East Bound Winooski Ave};
+\draw[<-, very thick] (0, 1) -- (10, 1) node[midway, above]{West Bound Winooski Ave};
+    \draw[<-, very thick] (0, 4) -- (10, 4) node[midway, above]{Shelburne St};
+    \draw[<-, very thick] (1, -1) -- (1, 5) node[midway, above, sloped]{Willow};
+    \draw[->, very thick] (9, -1) -- (9, 5) node[midway, above, sloped]{Jay};
+    \end{tikzpicture}%
+}%
+\end{image}%
+A traffic engineer counts the hourly flow of cars into and out of this network at the entrances.  They get (EB = East Bound; WB = West Bound):%
+\begin{tableptx}{Table}{\textbf{Estimated hourly traffic flow for the road network}}{worksheet-networks-pages-5-1-1-4}{}%
+\centering%
+{\tabularfont%
+\begin{tabular}{cccccc}
+{\bfseries{}}&{\bfseries{}EB Winooski}&{\bfseries{}WB Winooski}&{\bfseries{}Shelburne St}&{\bfseries{}Willow}&{\bfseries{}Jay}\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}into}}&50&400&0&10&50\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}out of}}&55&390&20&15&30
+\end{tabular}
+}%
+\end{tableptx}%
+Use a variable for each segment inside of the network and set up a system of linear equations restricting the flow. Solve the system.  Note that you should not get a unique solution as traffic should be able to flow through the network in various ways.%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 35.5 Worksheet}
 \typeout{************************************************}
 %
 \newgeometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
@@ -12878,19 +13220,19 @@ This is a mock one-page worksheet for testing purposes. We have specified an ove
 \end{introduction}%
 \begin{sidebyside}{2}{0}{0}{0.1}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{1}{}{1in}{worksheet-testing-2-1-1}%
+\begin{divisionexercise}{1}{}{1in}{worksheet-testing-2-1}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{2}{}{1in}{worksheet-testing-2-1-2}%
+\begin{divisionexercise}{2}{}{1in}{worksheet-testing-2-2}%
 Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \end{sidebyside}%
 \par
 A two-line paragraph interspersed to check on spacing, breaks and all that.%
-\begin{divisionexercise}{3}{A full-width exercise.}{1.5in}{worksheet-testing-2-3}%
+\begin{divisionexercise}{3}{A full-width exercise.}{1.5in}{worksheet-testing-4}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \par
 Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
@@ -12898,39 +13240,39 @@ Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristiq
 Another two-line paragraph interspersed to check on spacing, breaks and all that.%
 \begin{sidebyside}{3}{0}{0}{0.05}%
 \begin{sbspanel}{0.3}%
-\begin{divisionexercise}{4}{}{}{worksheet-testing-2-5-1}%
+\begin{divisionexercise}{4}{}{}{worksheet-testing-6-1}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.3}%
-\begin{divisionexercise}{5}{}{0.5in}{worksheet-testing-2-5-2}%
+\begin{divisionexercise}{5}{}{0.5in}{worksheet-testing-6-2}%
 Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.3}%
-\begin{divisionexercise}{6}{}{1in}{worksheet-testing-2-5-3}%
+\begin{divisionexercise}{6}{}{1in}{worksheet-testing-6-3}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \end{sidebyside}%
-\begin{activity}{Activity}{A Mock Activity.}{worksheet-testing-2-6}%
+\begin{activity}{Activity}{A Mock Activity.}{worksheet-testing-7}%
 The problem, as we see it.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{worksheet-testing-2-6-3}{}\quad{}A worksheet could have hints, no?  But no spacing. Note row below has widths set to balance the heights.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{worksheet-testing-7-3}{}\quad{}A worksheet could have hints, no?  But no spacing. Note row below has widths set to balance the heights.%
 \end{activity}%
 \begin{sidebyside}{3}{0}{0}{0.05}%
 \begin{sbspanel}{0.25}%
-\begin{divisionexercise}{7}{}{0.5in}{worksheet-testing-2-7-1}%
+\begin{divisionexercise}{7}{}{0.5in}{worksheet-testing-8-1}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.4}%
-\begin{divisionexercise}{8}{}{0.5in}{worksheet-testing-2-7-2}%
+\begin{divisionexercise}{8}{}{0.5in}{worksheet-testing-8-2}%
 Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.25}%
-\begin{divisionexercise}{9}{}{0.5in}{worksheet-testing-2-7-3}%
+\begin{divisionexercise}{9}{}{0.5in}{worksheet-testing-8-3}%
 Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
 \end{divisionexercise}%
 \end{sbspanel}%
@@ -12940,14 +13282,14 @@ Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.4 Dot products and projection}
+\typeout{Worksheet 35.6 Dot products and projection}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
 \begin{worksheet-subsection}{Worksheet}{Dot products and projection}{}{Dot products and projection}{}{}{worksheet-dot-products}
 \begin{sidebyside}{2}{0}{0}{0.1}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{1}{}{}{worksheet-dot-products-2-1-1}%
+\begin{divisionexercise}{1}{}{}{worksheet-dot-products-2-1}%
 Let \({\vec v}_1 = (-4,1)\), \({\vec v}_2 = (2,2)\), \({\vec v}_3 = (1,2,3)\), \({\vec v}_4 = (-2,1,0)\). Find the values of the following expressions:%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item{}\({\vec v}_1 \cdot {\vec v}_2 = \fillinmath{XXX}\)%
@@ -12964,16 +13306,15 @@ Let \({\vec v}_1 = (-4,1)\), \({\vec v}_2 = (2,2)\), \({\vec v}_3 = (1,2,3)\), \
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.45}%
-\begin{divisionexercise}{2}{}{3in}{worksheet-dot-products-2-1-2}%
+\begin{divisionexercise}{2}{}{3in}{worksheet-dot-products-2-2}%
 The vectors \(\vec a = (3,9)\) and \(\vec u = (4,2)\) are pictured below.  Derive the formula for projection on a line and use it to find the projection of \(\vec a\) on the line spanned by \(\vec u\). Also compute the length of the residual vector.%
 \noindent\includegraphics[width=\linewidth]{external/images/projection1.png}
 \end{divisionexercise}%
 \end{sbspanel}%
 \end{sidebyside}%
-\clearpage
 \begin{sidebyside}{2}{0}{0}{0.04}%
 \begin{sbspanel}{0.48}%
-\begin{divisionexercise}{3}{}{}{worksheet-dot-products-3-1-1}%
+\begin{divisionexercise}{3}{}{}{worksheet-dot-products-3-1}%
 Consider the vector equation%
 \begin{equation*}
 m \begin{bmatrix}2 \\ 5\end{bmatrix} = \begin{bmatrix}3 \\ 7\end{bmatrix}\text{.}
@@ -12994,7 +13335,7 @@ m \begin{bmatrix}2 \\ 5\end{bmatrix} = \begin{bmatrix}3 \\ 7\end{bmatrix}\text{.
 \end{divisionexercise}%
 \end{sbspanel}%
 \begin{sbspanel}{0.48}%
-\begin{divisionexercise}{4}{}{}{worksheet-dot-products-3-1-2}%
+\begin{divisionexercise}{4}{}{}{worksheet-dot-products-3-2}%
 Consider the system of equations%
 \begin{align*}
 3t \amp =5\\
@@ -13017,15 +13358,15 @@ Consider the system of equations%
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.5 Worksheet}
+\typeout{Worksheet 35.7 Worksheet}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
 \begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-activity-no-task}
-\begin{activity}{Activity}{}{worksheet-activity-no-task-1-1}%
+\begin{activity}{Activity}{}{worksheet-activity-no-task-1}%
 Just a simple activity here.%
 \end{activity}%
-\begin{activity}{Activity}{}{worksheet-activity-no-task-1-2}%
+\begin{activity}{Activity}{}{worksheet-activity-no-task-2}%
 Here is a second activity.%
 \end{activity}%
 \end{worksheet-subsection}
@@ -13033,12 +13374,12 @@ Here is a second activity.%
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.6 Worksheet}
+\typeout{Worksheet 35.8 Worksheet}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
 \begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-activity-with-task}
-\begin{activity}{Activity}{}{worksheet-activity-with-task-1-1}%
+\begin{activity}{Activity}{}{worksheet-activity-with-task-1}%
 This is going to be an activity with tasks.%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item{}Here is the first task.%
@@ -13055,7 +13396,7 @@ This is a conclusion that comes after the last task.%
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 35.7 Worksheet}
+\typeout{Worksheet 35.9 Worksheet}
 \typeout{************************************************}
 %
 \newgeometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
@@ -13067,71 +13408,70 @@ This is a mock worksheet for testing the use of \mono{@workspace} for \mono{<exe
 \textbf{Exercise Group.}\space\space%
 Do things to the following.%
 \begin{exercisegroupcol}{2}
-\begin{divisionexerciseegcol}{1}{}{1in}{worksheet-exercisegroup-2-1-2}%
+\begin{divisionexerciseegcol}{1}{}{1in}{worksheet-exercisegroup-2-2}%
 Apple%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{2}{}{1in}{worksheet-exercisegroup-2-1-3}%
+\begin{divisionexerciseegcol}{2}{}{1in}{worksheet-exercisegroup-2-3}%
 Banana%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{3}{}{1in}{worksheet-exercisegroup-2-1-4}%
+\begin{divisionexerciseegcol}{3}{}{1in}{worksheet-exercisegroup-2-4}%
 Cherry%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{4}{}{1in}{worksheet-exercisegroup-2-1-5}%
+\begin{divisionexerciseegcol}{4}{}{1in}{worksheet-exercisegroup-2-5}%
 Durian%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{5}{}{2in}{worksheet-exercisegroup-2-1-6}%
+\begin{divisionexerciseegcol}{5}{}{2in}{worksheet-exercisegroup-2-6}%
 Elderberry (with workspace override)%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{6}{}{1in}{worksheet-exercisegroup-2-1-7}%
+\begin{divisionexerciseegcol}{6}{}{1in}{worksheet-exercisegroup-2-7}%
 Fig%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{7}{}{1in}{worksheet-exercisegroup-2-1-8}%
+\begin{divisionexerciseegcol}{7}{}{1in}{worksheet-exercisegroup-2-8}%
 Guava%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{8}{}{1in}{worksheet-exercisegroup-2-1-9}%
+\begin{divisionexerciseegcol}{8}{}{1in}{worksheet-exercisegroup-2-9}%
 Habanero%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{9}{}{1in}{worksheet-exercisegroup-2-1-10}%
+\begin{divisionexerciseegcol}{9}{}{1in}{worksheet-exercisegroup-2-10}%
 I can't think of an ``I'' fruit.%
 \end{divisionexerciseegcol}%
-\begin{divisionexerciseegcol}{10}{}{1in}{worksheet-exercisegroup-2-1-11}%
+\begin{divisionexerciseegcol}{10}{}{1in}{worksheet-exercisegroup-2-11}%
 Jackfruit%
 \end{divisionexerciseegcol}%
 \end{exercisegroupcol}
 \par\medskip\noindent
-\clearpage
 \par\medskip\noindent%
 \textbf{Exercise Group.}\space\space%
 Now with one column, do things to the following.%
 \begin{exercisegroup}
-\begin{divisionexerciseeg}{11}{}{0.25in}{worksheet-exercisegroup-3-1-2}%
+\begin{divisionexerciseeg}{11}{}{0.25in}{worksheet-exercisegroup-3-2}%
 Apple%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{12}{}{0.25in}{worksheet-exercisegroup-3-1-3}%
+\begin{divisionexerciseeg}{12}{}{0.25in}{worksheet-exercisegroup-3-3}%
 Banana%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{13}{}{0.25in}{worksheet-exercisegroup-3-1-4}%
+\begin{divisionexerciseeg}{13}{}{0.25in}{worksheet-exercisegroup-3-4}%
 Cherry%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{14}{}{0.25in}{worksheet-exercisegroup-3-1-5}%
+\begin{divisionexerciseeg}{14}{}{0.25in}{worksheet-exercisegroup-3-5}%
 Durian%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{15}{}{2in}{worksheet-exercisegroup-3-1-6}%
+\begin{divisionexerciseeg}{15}{}{2in}{worksheet-exercisegroup-3-6}%
 Elderberry (with workspace override)%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{16}{}{0.25in}{worksheet-exercisegroup-3-1-7}%
+\begin{divisionexerciseeg}{16}{}{0.25in}{worksheet-exercisegroup-3-7}%
 Fig%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{17}{}{0.25in}{worksheet-exercisegroup-3-1-8}%
+\begin{divisionexerciseeg}{17}{}{0.25in}{worksheet-exercisegroup-3-8}%
 Guava%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{18}{}{0.25in}{worksheet-exercisegroup-3-1-9}%
+\begin{divisionexerciseeg}{18}{}{0.25in}{worksheet-exercisegroup-3-9}%
 Habanero%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{19}{}{0.25in}{worksheet-exercisegroup-3-1-10}%
+\begin{divisionexerciseeg}{19}{}{0.25in}{worksheet-exercisegroup-3-10}%
 I can't think of an ``I'' fruit.%
 \end{divisionexerciseeg}%
-\begin{divisionexerciseeg}{20}{}{0.25in}{worksheet-exercisegroup-3-1-11}%
+\begin{divisionexerciseeg}{20}{}{0.25in}{worksheet-exercisegroup-3-11}%
 Jackfruit%
 \end{divisionexerciseeg}%
 \end{exercisegroup}
@@ -13261,7 +13601,8 @@ Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auct
 Left intentionally blank, just checking sectioning.%
 \end{introduction}%
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{biblio-lay-article-repeat2}\hypertarget{biblio-lay-article-repeat2}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
 \end{referencelist}
@@ -13498,7 +13839,8 @@ x  \amp {}+{} \amp 3y \amp {}={} \amp 13
 Left intentionally blank, just checking sectioning.%
 \end{introduction}%
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{biblio-lay-article-repeat1}\hypertarget{biblio-lay-article-repeat1}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
 \end{referencelist}
@@ -13635,6 +13977,7 @@ This is some notation introduced in the article.  PreTeXt allows the ``notation 
 \typeout{************************************************}
 %
 \begin{solutions-section}{Appendix}{Solutions to Selected Exercises}{}{Solutions to Selected Exercises}{}{}{solutions-backmatter}
+\index{solutions!as an appendix}%
 \begin{introduction}{}%
 This is an introduction, where you might explain that this division of the back matter contains various hints, answers, solutions of inline exercises, divisional exercises, project-like blocks, worksheet exercises, and\slash{}or reading questions.  See the source to see just how this solutions division was built.%
 \end{introduction}%
@@ -13818,7 +14161,7 @@ And a bit more.%
     \begin{axis}
         \addplot[domain=-1.5:4, blue, thick, {stealth}-{stealth}] {x^2};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \end{sidebyside}%
@@ -13897,16 +14240,30 @@ print(primes)
 \noindent\textbf{\large{}16.5\space\textperiodcentered\space{}Matching}
 \begin{divisionsolution}{Exercise}{16.5.1}{Matching Problem, Dates.}{matching-dates}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\large{}16.6\space\textperiodcentered\space{}Clickable Area}
@@ -13940,9 +14297,13 @@ An integer variable may be initialized to a value.%
 \par
 \fillintext{1}int\fillintext{1} \mono{age = } \fillintext{1}\(5\)\fillintext{1}\mono{;}%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{17.2}{Fill-In Formula (Dynamic).}{dynamic-fitb-simple-formula}%
+\begin{divisionsolution}{Exercise}{17.2}{Fill-In, Multiple Strings, Custom Checker.}{fillin-multi-answer-jscmp}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{dynamic-fitb-simple-formula-3-back}{}\quad{}Find a formula for a cubic function \(f(x)\) that roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-multi-answer-jscmp-3-back}{}\quad{}In order to apply the Integral Test to a sequence \(\{a_n\}\), the function \(a(n) = a_n\) must be \fillintext{1}continuous\fillintext{1}, \fillintext{1}positive\fillintext{1}~and \fillintext{1}decreasing\fillintext{1}.%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{17.3}{Fill-In Formula (Dynamic).}{dynamic-fitb-simple-formula}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{dynamic-fitb-simple-formula-3-back}{}\quad{}Find a formula for a cubic function \(f(x)\) that has roots at \(x=-5\),  \(x=-2\), and \(x=2\) and so that \(f(0)=5\).%
 \par
 \(f(x)=\) \fillintext{1}\(-\frac{1}{4} \left(x+5\right) \left(x+2\right) \left(x-2\right)\)\fillintext{1}%
 \par\smallskip%
@@ -13968,7 +14329,7 @@ f(x)=-\frac{1}{4} \left(x+5\right) \left(x+2\right) \left(x-2\right)\text{.}
 \end{equation*}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{17.3}{Decompose the Function.}{function-decomposition}%
+\begin{divisionsolution}{Exercise}{17.4}{Decompose the Function.}{function-decomposition}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{function-decomposition-3-back}{}\quad{}Consider the function%
 \begin{equation*}
@@ -14009,8 +14370,8 @@ This is not the only non-trivial composition. Can you find others?%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-4-3-back}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}-0.377%
-\item{}0.0437%
+\item{}-0.979%
+\item{}0%
 \item{}A: There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.%
 \end{itemize}
 %
@@ -14019,15 +14380,29 @@ This is not the only non-trivial composition. Can you find others?%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-5-3-back}{}\quad{}%
 \begin{itemize}[label=\textbullet]
-\item{}\(\displaystyle \displaystyle{y}={1}{x}+{4}\)%
+\item{}\(\displaystyle \displaystyle{y}={2}{x}+{10}\)%
+\end{itemize}
+%
+\end{inlinesolution}%
+\begin{inlinesolution}{Checkpoint}{33.4}{Geometry of a Cone.}{section-myopenmath-6}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-myopenmath-6-3-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}4.4%
+\item{}1.63%
 \end{itemize}
 %
 \end{inlinesolution}%
 \par\medskip
 \noindent\textbf{\large{}35\space\textperiodcentered\space{}Worksheets\\
-35.1\space\textperiodcentered\space{}A Geometric Prelude}
+35.1\space\textperiodcentered\space{}A Geometric Prelude (without authored pages)}
 \begin{divisionsolution}{Worksheet Exercise}{35.1.2}{}{exercise-vector-addition}%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercise-vector-addition-2-back}{}\quad{}Use \hyperlink{ex-cyclic}{Worksheet Exercise~{\xreffont 35.1.1}}.%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\large{}35.2\space\textperiodcentered\space{}A Geometric Prelude (with authored pages)}
+\begin{divisionsolution}{Worksheet Exercise}{35.2.2}{}{exercise-vector-addition-pages}%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercise-vector-addition-pages-2-back}{}\quad{}Use \hyperlink{ex-cyclic}{Worksheet Exercise~{\xreffont 35.1.1}}.%
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\large{}37\space\textperiodcentered\space{}Exercise Section, Structured}
@@ -14099,6 +14474,7 @@ And a conclusion to this solutions division, which may not be readily apparent a
 \typeout{************************************************}
 %
 \begin{solutions-section}{Appendix}{Solutions to a Single Exercises Division}{}{Solutions to a Single Exercises Division}{}{}{solutions-single-exercises}
+\index{solutions!for one group of exercises}%
 \begin{introduction}{}%
 Sometimes you may want the solutions to exercises within a single \mono{<exercises>} division (or similar, like a \mono{<worksheet>}).  Default behavior in this situation can produce two titles, when just one would be sufficient.  Here we have used the \mono{@scope} attribute to point to a specific \mono{<exercises>}, and provided a (single) very specific \mono{<title>}.%
 \end{introduction}%
@@ -14139,6 +14515,7 @@ And a bit more.%
 \typeout{************************************************}
 %
 \begin{solutions-section}{Appendix}{All Solutions that are Answers}{}{All Solutions that are Answers}{}{}{solutions-answers}
+\index{solutions!all answers}%
 \begin{introduction}{}%
 The back matter solutions appendix requests every \mono{<answer>}, and only \mono{<answer>}, of all types of exercises: inline, divisional, worksheet, reading questions, and projects.  Now, as observed by Bruce Yoshiwara, it gets a bit tedious to see the ``Answer'' heading over and over in print, when every entry has that heading.  So we squelch it for you in print\slash{}PDF output.  (For \initialism{HTML} output we use knowls and need to have something to click on.  But perhaps for \initialism{EPUB} we should be more careful?)  Note that you might want to use a \mono{<title>}, or an \mono{<introduction>}, that explains which component of the exercises is being displayed, so there is no confusion.%
 \end{introduction}%
@@ -14267,7 +14644,7 @@ In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum 
     \begin{axis}
         \addplot[domain=-1.5:4, blue, thick, {stealth}-{stealth}] {x^2};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \end{sidebyside}%
@@ -14319,6 +14696,7 @@ The incorrect words are pronouns.%
 \typeout{************************************************}
 %
 \begin{solutions-section}{Appendix}{All Solutions that are Answers to Odd Exercises}{}{All Solutions that are Answers to Odd Exercises}{}{}{solutions-odd-answers}
+\index{solutions!all even answers}%
 \begin{introduction}{}%
 This should be identical to the previous collection of answers, \emph{except} only exercises with an even number are reported (via the \mono{@admit} attribute).%
 \end{introduction}%
@@ -14391,7 +14769,7 @@ This should be identical to the previous collection of answers, \emph{except} on
     \begin{axis}
         \addplot[domain=-1.5:4, blue, thick, {stealth}-{stealth}] {x^2};
     \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{sbspanel}%
 \end{sidebyside}%
@@ -14480,9 +14858,12 @@ We had an automatic list of theorems for just one section, back in \hyperref[sub
 \hyperref[theorem-number-13]{Theorem 31.17}& First Theorem\\
 \hyperref[theorem-number-14]{Theorem 31.18}& Second Theorem\\
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 35 Worksheets}\\[0.5ex]
-\hyperref[worksheet-networks-2-3]{Theorem 35.5}& Ohms Law\\
-\hyperref[worksheet-networks-2-4]{Theorem 35.6}& Kirchoffs Current Law\\
-\hyperref[worksheet-networks-2-6]{Theorem 35.8}& Kirchoffs Voltage Law\\
+\hyperref[worksheet-networks-2-3]{Theorem 35.9}& Ohms Law\\
+\hyperref[worksheet-networks-2-4]{Theorem 35.10}& Kirchoffs Current Law\\
+\hyperref[worksheet-networks-2-6]{Theorem 35.12}& Kirchoffs Voltage Law\\
+\hyperref[worksheet-networks-pages-2-3]{Theorem 35.14}& Ohms Law\\
+\hyperref[worksheet-networks-pages-2-4]{Theorem 35.15}& Kirchoffs Current Law\\
+\hyperref[worksheet-networks-pages-2-6]{Theorem 35.17}& Kirchoffs Voltage Law\\
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 36 Exercises, One Subsection}\\[0.5ex]
 \hyperref[section-exercises-single-8]{Theorem 36.3}& Major Result\\
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 38 Exercises, Multiple Subsections}\\[0.5ex]
@@ -14571,6 +14952,7 @@ And now a list of all the inline exercises, and including the title of every \mo
 \hyperref[section-myopenmath-3]{Checkpoint 33.1}& Negative Numbers and Exponents\\
 \hyperref[section-myopenmath-4]{Checkpoint 33.2}& A Statistical Test\\
 \hyperref[section-myopenmath-5]{Checkpoint 33.3}& With an image\\
+\hyperref[section-myopenmath-6]{Checkpoint 33.4}& Geometry of a Cone\\
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 34 Ancillaries}\\[0.5ex]
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 35 Worksheets}\\[0.5ex]
 \multicolumn{2}{l}{\null}\\[1.5ex] \multicolumn{2}{l}{\large Section 36 Exercises, One Subsection}\\[0.5ex]
@@ -14654,6 +15036,20 @@ Most all of the index entries below to page 2 (PDF output) are just from a suite
 %
 \begin{subsectionptx}{Subsection}{Multiple Specialized References}{}{Multiple Specialized References}{}{}{appendix-multiple-references-2}
 You might want to have lists of references, in the back, but with multiple such lists.  Make an \mono{<appendix>} to hold them, give it some structure (for an \mono{<article>}, a leading \mono{<subsection>}, such as the one you are reading right now), then follow with multiple \mono{<references>} divisions.  A typical citation will then look like: \hyperlink{biblio-strang-article-tres}{[{\xreffont J.3.2}]}.%
+\par
+2025-05-23: currently testing citations to CSL-style references in the back matter.  These should go eventually somewhere besides right where the references are.%
+\begin{itemize}[label=\textbullet]
+\item{}Judson: \hyperlink{biblio-judson-aata}{[{\xreffont 1}]}%
+\item{}Lay: \hyperlink{biblio-lay-article}{[{\xreffont 2}]}%
+\item{}Doe: \hyperlink{citeproc-py-item-3}{[{\xreffont 4}]}%
+\item{}Doe, later: \hyperlink{citeproc-py-item-3-later}{[{\xreffont 3}]}%
+\item{}Conrey\slash{}Farmer: \hyperlink{conrey-farmer}{[{\xreffont 5}]}%
+\item{}D'Arcus: \hyperlink{citeproc-py-item-5}{[{\xreffont 6}]}%
+\item{}Two, authored in-order: [\hyperlink{conrey-farmer}{{\xreffont 5}}, \hyperlink{citeproc-py-item-5}{{\xreffont 6}}]%
+\item{}Two, authored out-of-order: [\hyperlink{citeproc-py-item-5}{{\xreffont 6}}, \hyperlink{conrey-farmer}{{\xreffont 5}}]%
+\item{}Three, authored reverse-order: [\hyperlink{biblio-lay-article}{{\xreffont 2}}, \hyperlink{biblio-judson-aata}{{\xreffont 1}}, \hyperlink{citeproc-py-item-3}{{\xreffont 4}}]%
+\end{itemize}
+%
 \end{subsectionptx}
 %
 %
@@ -14663,7 +15059,8 @@ You might want to have lists of references, in the back, but with multiple such 
 %
 \begin{references-subsection}{References}{General References}{}{General References}{}{}{appendix-multiple-references-3}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{biblio-strang-article-uno}\hypertarget{biblio-strang-article-uno}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
 \end{referencelist}
@@ -14676,9 +15073,12 @@ You might want to have lists of references, in the back, but with multiple such 
 %
 \begin{references-subsection}{References}{Specialized References}{}{Specialized References}{}{}{appendix-multiple-references-4}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
-\bibitem[1]{biblio-strang-article-dos}\hypertarget{biblio-strang-article-dos}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
+\bibitem[1]{biblio-judson-AATA}\hypertarget{biblio-judson-AATA}{}Tom Judson, \textit{Abstract Algebra: Theory and Applications}. \par\hypertarget{note-judson-AATA}{}%
+Another online, open-source offering.%
+
 \bibitem[2]{biblio-strang-article-tres}\hypertarget{biblio-strang-article-tres}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
 \end{referencelist}
 \end{references-subsection}
@@ -14713,12 +15113,17 @@ A synonym for the acronym \acronym{FUBAR}.%
 %
 \begin{references-section-numberless}{References}{References}{}{References}{}{}{references-backmatter}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
-\bibitem[1]{biblio-judson-AATA}\hypertarget{biblio-judson-AATA}{}Tom Judson, \textit{Abstract Algebra: Theory and Applications}. \par\hypertarget{note-judson-AATA}{}%
+\bibitem[1]{biblio-judson-aata}\hypertarget{biblio-judson-aata}{}Judson, Thomas, \textit{Abstract Algebra: Theory and Applications}\par%
 Another online, open-source offering.%
 
-\bibitem[2]{biblio-lay-article}\hypertarget{biblio-lay-article}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
+\bibitem[2]{biblio-lay-article}\hypertarget{biblio-lay-article}{}Lay, David C., \textit{Subspaces and Echelon Forms}, The College Mathematics Journal (1993) \textbf{24} no. 1 57-62.
+\bibitem[3]{citeproc-py-item-3-later}\hypertarget{citeproc-py-item-3-later}{}Doe, John (1970), \textit{Still Anonymous, But now Ibid}.
+\bibitem[4]{citeproc-py-item-3}\hypertarget{citeproc-py-item-3}{}Doe, John (1965), \textit{His Anonymous Life}.
+\bibitem[5]{conrey-farmer}\hypertarget{conrey-farmer}{}Conrey, J. B. and D. W. Farmer, \textit{Mean values of \(L\)-functions and symmetry}, Internat. Math. Res. Notices (2000) \textbf{17} 883-908.
+\bibitem[6]{citeproc-py-item-5}\hypertarget{citeproc-py-item-5}{}D'Arcus, Bruce, \textit{Boundaries of Dissent: Protest and State Power in the Media Age}, Routledge, New York (2006) \mono{http:\slash{}\slash{}www.test01.com}.
 \end{referencelist}
 \end{references-section-numberless}
 %

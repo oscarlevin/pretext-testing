@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2025-03-17T22:22:06-06:00       *%
+%*       on 2025-08-03T21:20:34-06:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -498,7 +498,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \label{#7}%
 }{}%
 %% Environment for a PTX "index" at the level of a LaTeX "chapter"
-\NewDocumentEnvironment{indexptx}{mmmmmmm}
+\NewDocumentEnvironment{index-chapter}{mmmmmmm}
 {%
 \renewcommand{\divisionnameptx}{#1}%
 \renewcommand{\titleptx}{#2}%
@@ -644,13 +644,13 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% Experimentally this seems just barely sufficient for a bold "888."
 %% Division exercises, not in exercise group
 \tcbset{ divisionexercisestyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, breakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Division exercises, in exercise group, no columns
 \tcbset{ divisionexerciseegstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, left skip=\egindent, breakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Division exercises, in exercise group with columns
 \tcbset{ divisionexerciseegcolstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, halign=flush left, unbreakable, before upper app={\setparstyle} } }
-\newtcolorbox{divisionexerciseegcol}[4]{divisionexerciseegcolstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after upper={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3}\newline\vfill}{\par}}}
+\newtcolorbox{divisionexerciseegcol}[4]{divisionexerciseegcolstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after upper={\notblank{#3}{\par\rule{\workspacestrutwidth}{#3}\par\vfill}{\par}}}
 %% Equation Numbering
 %% Controlled by  numbering.equations.level  processing parameter
 %% No adjustment here implies document-wide numbering
@@ -749,6 +749,7 @@ breakable,
 \tcbset{ programboxnumberedstyle/.style={programboxstyle, left=6ex} }
 \newtcblisting{program}[4]{programboxstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodestyle}}
 \newtcblisting{programnumbered}[4]{programboxnumberedstyle, left skip=#2\linewidth, width=#3\linewidth, listing options={language=#1, style=programcodenumberedstyle}}
+\newcommand{\programfragment}[2]{\lstinline[language=#1, style=programcodestyle, basicstyle=\ttfamily]#2}
 %% The listings package as tcolorbox for Sage code
 %% We do as much styling as possible with tcolorbox, not listings
 %% Sage's blue is 50%, we go way lighter (blue!05 would also work)
@@ -770,6 +771,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 %% (b) flush left works well in exceptions like list items, etc
 \DefineVerbatimEnvironment{codedisplayleft}{Verbatim}{}
 %% Multiple column, column-major lists
+%% ol, ul, contributors, PreTeXt index
 \usepackage{multicol}
 %% More flexible list management, esp. for references
 %% But also for specifying labels (i.e. custom order) on nested lists
@@ -782,7 +784,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \newlength{\dlititlewidth}
 \newlength{\dlimaxnarrowtitle}\setlength{\dlimaxnarrowtitle}{11ex}
 \newlength{\dlimaxmediumtitle}\setlength{\dlimaxmediumtitle}{18ex}
-\tcbset{ dlistyle/.style={sidebyside, sidebyside align=top seam, lower separated=false, bwminimalstyle, bottomtitle=0.75ex, after skip=1.5ex, boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt} }
+\tcbset{ dlistyle/.style={sidebyside, sidebyside align=top seam, lower separated=false, bwminimalstyle, bottomtitle=0.75ex, after skip=1.5ex, boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt, before lower app={\setparstyle\noindent}} }
 \tcbset{ dlinarrowstyle/.style={dlistyle, lefthand width=\dlimaxnarrowtitle, sidebyside gap=1ex, halign=flush left, righttitle=10ex} }
 \tcbset{ dlimediumstyle/.style={dlistyle, lefthand width=\dlimaxmediumtitle, sidebyside gap=4ex, halign=flush right} }
 \NewDocumentEnvironment{descriptionlist}{}{\par\vspace*{1.5ex}}{\par\vspace*{1.5ex}}%
@@ -853,9 +855,6 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 %% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
 \setcounter{secnumdepth}{3}
 %%
-%% AMS "proof" environment is no longer used, but we leave previously
-%% implemented \qedhere in place, should the LaTeX be recycled
-\newcommand{\qedhere}{\relax}
 %%
 %% A faux tcolorbox whose only purpose is to provide common numbering
 %% facilities for most blocks (possibly not projects, 2D displays)
@@ -947,8 +946,8 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 \tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
 \newtcolorbox[use counter from=block]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
 %% listingptx: 2-D display structure
-\tcbset{ listingptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=block]{listingptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, listingptxstyle, }
+\tcbset{ listingptxstyle/.style={bwminimalstyle, blockspacingstyle, bottomtitle=2ex, fonttitle=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{listingptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, listingptxstyle, }
 %%
 %% tcolorbox, with styles, for (PANEL)FIGURE-LIKE
 %%
@@ -1076,7 +1075,7 @@ listing options={language=Python,breaklines=true,breakatwhitespace=true, extende
 {\normalsize Robert A. Beezer}\\[0.25\baselineskip]
 University of Puget Sound\\
 [3\baselineskip]
-{\Large March 17, 2025}\\}
+{\Large August 3, 2025}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
@@ -1240,7 +1239,7 @@ This real text has been used as the basis of a sample book for testing PreTeXt. 
 
 \draw (1.5,13) -- (1.5,14) -- (3.5,14);
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 Though there are no specific prerequisites for a course in abstract algebra, students who have had other higher-level courses in mathematics will generally be more prepared than those who have not, because they will possess a bit more mathematical sophistication. Occasionally, we shall assume some basic linear algebra; that is, we shall take for granted an elementary knowledge of matrices and determinants. This should present no great problem, since most students taking a course in abstract algebra have been introduced to matrices and determinants elsewhere in their career, if they have not already taken a sophomore or junior-level course in linear algebra.%
@@ -1431,7 +1430,7 @@ That's it.  Thanks everybody.%
 \begin{introduction}{}%
 A certain amount of mathematical maturity is necessary to find and study applications of abstract algebra.  A basic knowledge of set theory, mathematical induction, equivalence relations, and matrices is a must.  Even more important is the ability to read and understand mathematical proofs.  In this chapter we will outline the background needed for a course in abstract algebra.%
 \par
-It helps when testing to know when this sample document was generated: March 17, 2025, 22:22:09 (-06:00).%
+It helps when testing to know when this sample document was generated: August 3, 2025, 21:20:35 (-06:00).%
 \end{introduction}%
 %
 %
@@ -1740,7 +1739,7 @@ is called the \terminology{range}\index{Function!range of} or \terminology{image
 \node at (5.5,3) {$B$};
 \node at (3.5,3) {$g$};
 \node at (3.5,10) {$f$};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -1805,7 +1804,7 @@ Given two functions, we can construct a new function by using the range of the f
 \draw [->] (-2.5,0) -- (2.5,1.5);
 \draw [->] (-2.5,-1.5) -- (2.5,-1.5);
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -2578,7 +2577,8 @@ Use whatever mechanism your instructor has in place for submitting your work.  O
 %
 \begin{references-section}{References}{References and Suggested Readings}{}{References and Suggested Readings}{}{}{sets-8}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{sets-8-2}\hypertarget{sets-8-2}{}  Artin, M. \textit{Abstract Algebra}. 2nd ed. Pearson, Upper Saddle River, NJ, 2011.
 \bibitem[2]{sets-8-3}\hypertarget{sets-8-3}{}  Childs, L. \textit{A Concrete Introduction to Higher Algebra}. 2nd ed. Springer-Verlag, New York, 1995.
@@ -3430,7 +3430,8 @@ Write a compute cell that defines the same value of \mono{c} again, and then def
 %
 \begin{references-section}{References}{References and Suggested Readings}{}{References and Suggested Readings}{}{}{integers-9}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{integers-9-2}\hypertarget{integers-9-2}{} Brookshear, J. G. \textit{Theory of Computation: Formal Languages, Automata, and Complexity}.  Benjamin\slash{}Cummings, Redwood City, CA, 1989. Shows the relationships of the theoretical aspects of computer science to set theory and the integers.
 \bibitem[2]{integers-9-3}\hypertarget{integers-9-3}{}  Hardy, G. H. and Wright, E. M. \textit{An Introduction to the Theory of Numbers}.  6th ed. Oxford University Press, New York, 2008.
@@ -3632,7 +3633,7 @@ Conversely, suppose that there exists an integer \(b\) such that \(ab  \equiv 1 
 \node [above,left] at (1.25,7) {$A$};
 \node [below,left] at (1.25,6) {$D$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -3727,7 +3728,7 @@ A \terminology{symmetry} of a geometric figure is a rearrangement of the figure 
 \node at (5,17.1) {$B$};
 \node [right] at (7,16) {$ id = \begin{pmatrix}A & B & C \\ A & B & C\end{pmatrix}$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -5024,7 +5025,8 @@ The \mono{.subgroup(elt\_list)} method of a group will create the smallest subgr
 %
 \begin{references-section}{References}{References and Suggested Readings}{}{References and Suggested Readings}{}{}{groups-11}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{groups-11-2}\hypertarget{groups-11-2}{}Burnside, W. \textit{Theory of Groups of Finite Order}. 2nd ed. Cambridge University Press, Cambridge, 1911; Dover, New York, 1953.  A classic.  Also available at books.google.com.
 \bibitem[2]{groups-11-3}\hypertarget{groups-11-3}{}Gallian, J. A. and Winters, S. ``Modular Arithmetic in the Marketplace,'' \textit{The American Mathematical Monthly} \textbf{95} (1988): 548\textendash{}51.
@@ -5115,7 +5117,7 @@ Not every group is a cyclic group.  Consider the symmetry group of an equilatera
 \node at (6, 0) {$\{  \identity, \mu_3 \}$};
 \node at (3, 1.5) {$S_3$};
 \node at (3,-1.5) {$\{ \identity \}$};
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -5260,7 +5262,7 @@ z^{-1} & = \frac{2}{13} - \frac{3}{13}i\\
 \filldraw[fill=black, draw=black] (1,-2) circle (0.05cm);
 \node [right] at (1, -2) {$z_2 = 1 -  2i$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -5285,7 +5287,7 @@ There are several ways of graphically representing complex numbers. We can repre
 \node [above] at (35:3) {$r$};
 \node [right] at (17:2) {$\theta$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -5435,7 +5437,7 @@ The 8th roots of unity can be represented as eight equally spaced points on the 
 \node [left] at (0,-1.15) {$-i$};
 \node [right] at (315:1) {$\omega^7$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 \tcblower
@@ -5476,8 +5478,15 @@ We interrupt this exposition to repeat the previous diagram, wrapped as differen
 \node [left] at (0,-1.15) {$-i$};
 \node [right] at (315:1) {$\omega^7$};
 
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
+\end{image}%
+\tcblower
+\end{figureptx}%
+Another version of this diagram, authored in PreFigure, is also included in \hyperref[prefigure-rtsunity]{Figure~{\xreffont\ref{prefigure-rtsunity}}}.%
+\begin{figureptx}{Figure}{8th roots of unity, authored in PreFigure}{prefigure-rtsunity}{}%
+\begin{image}{0.15}{0.7}{0.15}{}%
+\includegraphics[width=\linewidth]{generated/prefigure/prefigure-rtsunity.pdf}%
 \end{image}%
 \tcblower
 \end{figureptx}%
@@ -5916,7 +5925,8 @@ Again, using only the Sage commands described previously, explore the structure 
 %
 \begin{references-section}{References}{References and Suggested Readings}{}{References and Suggested Readings}{}{}{cyclic-11}
 %% If this is a top-level references
-%%   you can replace with "thebibliography" environment
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
 \begin{referencelist}
 \bibitem[1]{cyclic-11-2}\hypertarget{cyclic-11-2}{}Koblitz, N. \textit{A Course in Number Theory and Cryptography}. 2nd ed. Springer, New York, 1994.
 \bibitem[2]{biblio-pomerance-1990}\hypertarget{biblio-pomerance-1990}{}Pomerance, C. ``Cryptology and Computational Number Theory\textemdash{}An Introduction,'' in \textit{Cryptology and Computational Number Theory}, Pomerance, C., ed. Proceedings of Symposia in Applied Mathematics, vol. 42, American Mathematical Society, Providence, RI, 1990.  This book gives an excellent account of how the method of repeated squares is used in cryptography.
@@ -5944,7 +5954,7 @@ Some of these samples only function if hosted on a Runestone server. To see thos
 %
 \begin{sectionptx}{Section}{Programs}{}{Programs}{}{}{inactive-code}
 First, some samples of programs that are not interactive. They will be syntax highlighted if a valid \mono{@language} is specified. Optionally, lines can be numbered and selected lines highlighted.%
-\begin{listingptx}{Listing}{A static Java program with highlighted lines}{inactive-code-3}{}%
+\begin{listingptx}{Listing}{\textbf{A static Java program with highlighted lines}}{inactive-code-3}{}%
 \begin{programnumbered}{Java}{0}{1}{0}
 import javax.swing.JFrame;  //Importing class JFrame
 import javax.swing.JLabel;  //Importing class JLabel
@@ -5959,17 +5969,15 @@ public class HelloWorld {
     }
 }
 \end{programnumbered}
-\tcblower
 \end{listingptx}%
 Instead of specifying \mono{@language} on each program, a default can be specified at \mono{docinfo/programs/@language}. That value will be used for any program that lacks a \mono{@language} attribute. This sample does not specify it's own \mono{@language} and is relying on the default set in this book.%
-\begin{listingptx}{Listing}{Python program, relying on default programs language}{inactive-code-5}{}%
+\begin{listingptx}{Listing}{\textbf{Python program, relying on default programs language}}{inactive-code-5}{}%
 \begin{programnumbered}{Python}{0}{1}{0}
 def say_hello():
     print("Hello, World!")
 
 say_hello()
 \end{programnumbered}
-\tcblower
 \end{listingptx}%
 \end{sectionptx}
 %
@@ -5980,20 +5988,46 @@ say_hello()
 %
 \begin{sectionptx}{Section}{ActiveCode}{}{ActiveCode}{}{}{activecode}
 Programs in supported languages are made interactive in HTML when \mono{@interactive} is set to \mono{activecode}. Some languages can be made interactive on any server, while others require being served from Runestone servers. See \href{https://pretextbook.org/doc/guide/html/topic-program-console.html\#interactive-program-capabilities}{Interactive Programs Capabilities in the PreTeXt Guide}\footnote{\nolinkurl{pretextbook.org/doc/guide/html/topic-program-console.html\#interactive-program-capabilities}\label{activecode-2-4}} for a list of what languages are supported in which environs.%
-\begin{listingptx}{Listing}{An interactive Python program, using \pubtitle{Runestone}}{program-activecode-python}{}%
+\begin{listingptx}{Listing}{\textbf{An interactive Python program, using \pubtitle{Runestone}}}{program-activecode-python}{}%
 \begin{program}{Python}{0}{1}{0}
 print("Hello, World!")
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{An interactive JavaScript program, using \pubtitle{Runestone}}{program-activecode-javascript}{}%
+Otherwise they are rendered as text with syntax coloring. Either way, if a \mono{@language} is not specified, \mono{docinfo/programs/@language} will be checked to determine what language to assume the code is written in.%
+\begin{listingptx}{Listing}{\textbf{An interactive Python program, using \pubtitle{Runestone}}}{program-activecode-python2}{}%
+\begin{program}{Python}{0}{1}{0}
+print("Hello, World!")
+\end{program}
+\end{listingptx}%
+A C program will only be interactive if hosted on a Runestone server.%
+\begin{listingptx}{Listing}{\textbf{An C program, interactive on a \pubtitle{Runestone} server}}{program-activecode-c}{}%
+\begin{program}{C}{0}{1}{0}
+#include <stdio.h>
+
+int main(void)
+{
+    puts("Hello, world!");
+}
+\end{program}
+\end{listingptx}%
+A Java program will only be interactive if hosted on a Runestone server.%
+\begin{listingptx}{Listing}{\textbf{Informal Java ``Hello, World''A Java program, interactive on a \pubtitle{Runestone} server}}{program-activecode-java}{}%
+\begin{program}{Java}{0}{1}{0}
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hi world!");
+    }
+}
+\end{program}
+\end{listingptx}%
+Javascript programs are made interactive in HTML, on request.%
+\begin{listingptx}{Listing}{\textbf{An interactive JavaScript program, using \pubtitle{Runestone}}}{program-activecode-javascript}{}%
 \begin{program}{none}{0}{1}{0}
 document.write('Hello, world!');
 \end{program}
-\tcblower
 \end{listingptx}%
 Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify \mono{@compiler-args} and \mono{@linker-args} or \mono{@interpreter-args} as appropriate to the language. Default values for those options can be set in \mono{<docinfo\textbackslash{}slash\{\}programs>} - any defaults set there will be used for any program that lacks the corresponding attribute.%
-\begin{listingptx}{Listing}{A C++ program with compiler-args and stdin}{activecode-6}{}%
+\begin{listingptx}{Listing}{\textbf{A C++ program with compiler-args and stdin}}{activecode-13}{}%
 It may be convenient to set \mono{@compiler-args} and \mono{@linker-args} at the book level in \mono{<docinfo\textbackslash{}slash\{\}programs>}. Values specified in that location will be used for any \mono{<program>} that does not override the values by specifying its own attributes.%
 \begin{program}{C++}{0}{1}{0}
 #include <iostream>
@@ -6006,9 +6040,8 @@ int main() {
     return 0;
 }
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{Java ``Hello, World'', with flags}{program-activecode-java-flags}{}%
+\begin{listingptx}{Listing}{\textbf{A static Java program}}{program-static-java}{}%
 \begin{program}{Java}{0}{1}{0}
 import javax.swing.JFrame;  //Importing class JFrame
 import javax.swing.JLabel;  //Importing class JLabel
@@ -6023,30 +6056,39 @@ public class HelloWorld {
     }
 }
 \end{program}
-\tcblower
 \end{listingptx}%
 An Octave program will also only be interactive if hosted on a Runestone server.  Octave is meant to be a drop-in replacement for Matlab.%
-\begin{listingptx}{Listing}{A simple Octave program}{program-activecode-octave}{}%
+\begin{listingptx}{Listing}{\textbf{A simple Octave program}}{program-activecode-octave}{}%
 \begin{program}{Octave}{0}{1}{0}
 x = 2 + 2
 printf("%d\n", x)
 \end{program}
-\tcblower
 \end{listingptx}%
 A language not supported by Runestone Services will always be rendered static.%
-\begin{listingptx}{Listing}{A Pascal program that cannot be interactive on Runestone}{program-mistake-pascal}{}%
+\begin{listingptx}{Listing}{\textbf{A Pascal program that cannot be interactive on Runestone}}{program-mistake-pascal}{}%
 \begin{program}{Pascal}{0}{1}{0}
 program HelloWorld;
 begin
   WriteLn('Hello, world!');
 end.
 \end{program}
-\tcblower
 \end{listingptx}%
+The \mono{@highlight-lines} works on ActiveCode programs, but the highlighted lines are only shown when viewing the initial code. Any version of the code that the reader has edited may have shifted lines of code and thus highlighting might affect the wrong lines, causing confusion.%
+\begin{program}{Python}{0}{1}{0}
+def add(a, b):
+    return a + b
+
+# Use the function
+result = add(2, 3)
+if result == 5:
+    print("Test passed")
+else:
+    print("Test failed")
+\end{program}
 A program can have a \mono{<preamble>} and\slash{}or \mono{<postamble>} which are added to the code that the user writes before it is run. They are visible by default, but can be made invisible with \mono{@visible} set to \mono{\textquotedbl{}no\textquotedbl{}}. When visible, the code editor will prevent those regions from being modified. The indentation for lines in the \mono{preamble/code/postamble} elements will be calculated relative to each other - make sure to indent them all to a similar extent. (In the source for the sample below, the \mono{\# TODO...} is intentially indented one stop extra so that the user's code is part of the \mono{add} function.%
 \par
 \mono{<tests>} are similar to \mono{<postamble>} in that it represents code that is added to the users submission. However, \mono{<tests>} is intended specifically for unit testing code (see examples below for unit testing in Python, Java, C++, SQL). Tests are invisble by default and can be made visible with \mono{@visible} set to \mono{\textquotedbl{}yes\textquotedbl{}}. For historical reasons, the indentation of the \mono{<tests>} is treated separately from the rest of the program.%
-\begin{listingptx}{Listing}{A Python program with preamble\slash{}postamble}{activecode-14}{}%
+\begin{listingptx}{Listing}{\textbf{A Python program with preamble\slash{}postamble}}{activecode-23}{}%
 \begin{program}{Python}{0}{1}{0}
 def add(a, b):
     # TODO - complete the add function
@@ -6058,17 +6100,15 @@ if result == 5:
 else:
     print("Test failed")
 \end{program}
-\tcblower
 \end{listingptx}%
 Here is the same Python program from the previous section, but now with a \mono{<preamble>} and \mono{<postamble>} that are invisible.  The user will not see the code that is added to their submission.  Not actually useful in this case, but it might be if you wanted to hide boilerplate setup from the reader.%
-\begin{listingptx}{Listing}{A Python program with invisible pre\slash{}post ambles}{activecode-16}{}%
+\begin{listingptx}{Listing}{\textbf{A Python program with invisible pre\slash{}post ambles}}{activecode-25}{}%
 \begin{program}{Python}{0}{1}{0}
 # TODO - complete the add function
 \end{program}
-\tcblower
 \end{listingptx}%
 The following Python program is in a \mono{<listing>} since we will want to reference it shortly.  The program does not do very much, it just defines four variables whose values are lists of statistics.  It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an \mono{@language} and is relying on the default one specified in \mono{<docinfo\textbackslash{}slash\{\}programs>}%
-\begin{listingptx}{Listing}{A Python program that defines some statistics}{listing-python-included}{}%
+\begin{listingptx}{Listing}{\textbf{A Python program that defines some statistics}}{listing-python-included}{}%
 \begin{program}{Python}{0}{1}{0}
 loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0]
 
@@ -6078,7 +6118,23 @@ time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 
 
 num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]
 \end{program}
-\tcblower
+\end{listingptx}%
+An ActiveCode running on the Runestone server (rather than in a browser) can be provided with attributes that are flags to influence the compiler and linker, as in this \mono{<program>} recycled from before.%
+\begin{listingptx}{Listing}{\textbf{A Java program, interactive on a \pubtitle{Runestone} server, with compiler and linker flags}}{program-activecode-java-flags}{}%
+\begin{program}{Java}{0}{1}{0}
+import javax.swing.JFrame;  //Importing class JFrame
+import javax.swing.JLabel;  //Importing class JLabel
+public class HelloWorld {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();           //Creating frame
+        frame.setTitle("Hi!");                 //Setting title frame
+        frame.add(new JLabel("Hello, world!"));//Adding text to frame
+        frame.pack();                          //Setting size to smallest
+        frame.setLocationRelativeTo(null);     //Centering frame
+        frame.setVisible(true);                //Showing frame
+    }
+}
+\end{program}
 \end{listingptx}%
 Now a programming exercise.  The program upcoming is going to \terminology{include} all the code of the program preceding.  This is accomplished with an \mono{@include} attribute on the \emph{including} program whose value is the \mono{@xml:id} of the \emph{included} program.  So by running the next program, it should pass all of its three tests (for example another example using unit tests, see \hyperref[coding-exercise-python-unit-test]{Checkpoint~{\xreffont\ref{coding-exercise-python-unit-test}}}).  Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.%
 \par
@@ -6113,6 +6169,40 @@ Select all the columns of all the rows in the \mono{test} database table.%
 SELECT * FROM test
 \end{program}
 \end{inlineexercise}%
+Now a C++ program that is spread across multiple files. This example will only be interactive on a Runestone server.%
+\par
+First, we have a \mono{.h} file that defines an \mono{@filename}. It has an \mono{@xml:id} so other elements can reference it. It also has an \mono{@label} which is it's unique identifier in the Runestone database. (The label is intentionally different than the xml:id for demonstration purposes, but they can be the same.) The \mono{@filename} is used to indicate what to name to use when the contents of the element are written to a file on the server - other program code and\slash{}or tools on the server can look for it using this name. The \mono{@filename} need not be unique\textemdash{}we could have multiple programs with \mono{@filename=\textquotedbl{}add.h\textquotedbl{}}. As we will see below, the author specifies which ``version'' of a file should be used in any given location with its unique xml:id.%
+\par
+The \mono{<program>} is inside of a \mono{<listing>} so that we have a place to add a caption and so that we can reference the code sample, including that caption, with an \mono{<xref>} from elsewhere. Note that the \mono{<listing>} has both a \mono{<caption>} and a \mono{<title>}. The \mono{<caption>} will be rendered with the program. The \mono{<title>} will not appear locally. It will be used if an \mono{<xref>} links to the \mono{<listing>} using \mono{@text=\textquotedbl{}title\textquotedbl{}}%
+\begin{listingptx}{Listing}{\textbf{add.h (version 1)}}{addh-v1-listing}{}%
+\begin{program}{C++}{0}{1}{0}
+int add(int a, int b);
+\end{program}
+\end{listingptx}%
+Next, a \mono{.cpp} file. Note that because it is part of an exercise, the \mono{@label} is applied to the exercise that contains it. The \mono{@xml:id} and \mono{@filename} still belong on the program itself.%
+\par
+It also has \mono{@extra-compiler-args}. These will be added to any default compiler args for the book. In this case, the \mono{-c} indicates that we only want to compile this file when it is ``Run'' and not try to link it or actually run it.%
+\begin{inlineexercise}{Checkpoint}{}{addcpp-v1}%
+You can leave this code as is or modify it. When you click ``Run'', the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.%
+\begin{program}{C++}{0}{1}{0}
+int add(int a, int b) {
+    return a + b;
+}
+\end{program}
+\end{inlineexercise}%
+Finally, the core program. \mono{@add-files} is used to specify (by xml:id) the files that need to be added to the program directory. \mono{@compile-also} specifies files that must be compiled with this source file (they will be assumed to be also part of \mono{@add-files}). Notice that when using \mono{@add-files} to reference code we want to include, we use the xml:id of the target program - it has the contents we want to include. When making a textual reference with an \mono{<xref>} we can't link to the program, as it lacks the contextual information required to create a valid reference. Instead, we should link to a listing (or some other container) that surrounds the code, like this: \hyperref[addh-v1-listing]{Listing~{\xreffont\ref{addh-v1-listing}}} or \hyperref[addh-v1-listing]{add.h (version 1)}%
+\begin{program}{C++}{0}{1}{0}
+#include "add.h"
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 1;
+    int b = 2;
+    cout << "The sum of " << a << " and " << b << " is " << add(a, b) << endl;
+}
+\end{program}
+Note that there is a cross page test of \mono{@add-files} located in \hyperref[runestone-hodgepodge]{Exercises~{\xreffont\ref{runestone-hodgepodge}}}%
+\par
 A nonsense paragraph just to check on spacing.  A nonsense paragraph just to check on spacing.  A nonsense paragraph just to check on spacing.  A nonsense paragraph just to check on spacing.%
 \end{sectionptx}
 %
@@ -6123,13 +6213,12 @@ A nonsense paragraph just to check on spacing.  A nonsense paragraph just to che
 %
 \begin{sectionptx}{Section}{Code Lens}{}{Code Lens}{}{}{code-lens}
 CodeLens is an interactive tool for following program execution, much like a debugger, without the ability to influence flow control or variable values.  For use without a server, traces must be computed beforehand.  First, we have some trivial programs, to provide minimal testing.%
-\begin{listingptx}{Listing}{A Python program, stepable with CodeLens}{program-codelens-python}{}%
+\begin{listingptx}{Listing}{\textbf{A Python program, stepable with CodeLens}}{program-codelens-python}{}%
 \begin{program}{Python}{0}{1}{0}
 print('Hello, World!')
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{An C program, stepable with CodeLens}{program-codelens-c}{}%
+\begin{listingptx}{Listing}{\textbf{An C program, stepable with CodeLens}}{program-codelens-c}{}%
 \begin{program}{C}{0}{1}{0}
 #include <stdio.h>
 
@@ -6138,9 +6227,8 @@ int main(void)
     puts("Hello, World!");
 }
 \end{program}
-\tcblower
 \end{listingptx}%
-\begin{listingptx}{Listing}{A Java program, stepable with CodeLens}{program-codelens-java}{}%
+\begin{listingptx}{Listing}{\textbf{A Java program, stepable with CodeLens}}{program-codelens-java}{}%
 \begin{program}{Java}{0}{1}{0}
 public class HelloWorld {
     public static void main(String[] args) {
@@ -6148,10 +6236,9 @@ public class HelloWorld {
     }
 }
 \end{program}
-\tcblower
 \end{listingptx}%
 Now some moderately more complicated programs to find teh prime numbers less than \(20\).  We do not vouch for the quality of these, or even their correctness!%
-\begin{listingptx}{Listing}{\href{https://www.tutorialspoint.com/python-program-for-sieve-of-eratosthenes}{Sieve of Eratosthenes}\protect\footnotemark{}, Java}{sieve-python}{}%
+\begin{listingptx}{Listing}{\textbf{Sieve of Eratosthenes\protect\footnotemark{}, Java}}{sieve-python}{}%
 \begin{program}{Python}{0}{1}{0}
 def SieveOfEratosthenes(n):
    # array of type boolean with True values in it
@@ -6176,10 +6263,9 @@ if __name__=='__main__':
    print ("The prime numbers smaller than or equal to", n,"is")
    SieveOfEratosthenes(n)
 \end{program}
-\tcblower
 \end{listingptx}%
 \footnotetext[1]{\nolinkurl{www.tutorialspoint.com/python-program-for-sieve-of-eratosthenes}\label{sieve-python-1-2}}%
-\begin{listingptx}{Listing}{\href{https://www.tutorialspoint.com/cplusplus-program-to-implement-sieve-of-eratosthenes-to-generate-prime-numbers-between-given-range}{Sieve of Eratosthenes}\protect\footnotemark{}, C++}{sieve-cpp}{}%
+\begin{listingptx}{Listing}{\textbf{Sieve of Eratosthenes\protect\footnotemark{}, C++}}{sieve-cpp}{}%
 \begin{program}{C++}{0}{1}{0}
 #include <stdio.h>
 const int len = 20;
@@ -6196,10 +6282,9 @@ int main() {
    }
 }
 \end{program}
-\tcblower
 \end{listingptx}%
 \footnotetext[2]{\nolinkurl{www.tutorialspoint.com/cplusplus-program-to-implement-sieve-of-eratosthenes-to-generate-prime-numbers-between-given-range}\label{sieve-cpp-1-2}}%
-\begin{listingptx}{Listing}{\href{https://www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java}{Sieve of Eratosthenes}\protect\footnotemark{}, Java}{sieve-java}{}%
+\begin{listingptx}{Listing}{\textbf{Sieve of Eratosthenes\protect\footnotemark{}, Java}}{sieve-java}{}%
 \begin{program}{Java}{0}{1}{0}
 public class SievePrimeFactors  {
    public static void main(String args[]) {
@@ -6225,7 +6310,6 @@ public class SievePrimeFactors  {
    }
 }
 \end{program}
-\tcblower
 \end{listingptx}%
 \footnotetext[3]{\nolinkurl{www.tutorialspoint.com/Sieve-of-Eratosthenes-in-java}\label{sieve-java-1-2}}%
 \end{sectionptx}
@@ -6295,19 +6379,17 @@ int main(void)
 \end{inlineexercise}%
 \begin{inlineexercise}{Checkpoint}{Java Exercise, with Unit Tests.}{coding-exercise-java-unit-test}%
 Unit tests for Java can be written using junit.%
-\begin{program}{C++}{0}{1}{0}
-public class StudentCode
+\begin{program}{Java}{0}{1}{0}
+public class Test1
 {
     public static void main(String[] args)
     {
-        for(int count = 2; count $lt;= 10; count++)
+        boolean isRaining = true;
+        if (isRaining)
         {
-            System.out.println(count);
+            System.out.println("Take an umbrella!");
         }
-    }
-
-    public int adder(int a, int b) {
-        return a+b;
+        System.out.println("Drive carefully");
     }
 }
 \end{program}
@@ -6373,6 +6455,7 @@ Data: ccdata1.txt
 2010     0.56     32.7
 2019     0.74     33.3
 \end{preformatted}
+Browser based programs are automatically given access to data files by their filename.%
 \begin{program}{Python}{0}{1}{0}
 ccfile = open("ccdata1.txt", "r")
 
@@ -6382,7 +6465,7 @@ for aline in ccfile:
 
 ccfile.close()
 \end{program}
-\begin{data}{Data}{Stack Overflow Developer Survey.}{data-files-6}%
+\begin{data}{Data}{Stack Overflow Developer Survey.}{data-files-7}%
 [A data file can go lots of places.  But to make it more prominent, and easy to cross-reference, it would be natural to put it into a \mono{<data>} block.]%
 \par
 Now that you are experienced with working with files lets look at a bit of the data set. The survey had 98,855 respondents. We will work with a sample of 2000 of those responses for this lab. In addition we have narrowed down the questions from 129 to just 13.  The columns we have included in this data set are:%
@@ -6434,7 +6517,7 @@ print(img.getHeight())
 p = img.getPixel(45, 55)
 print(p.getRed(), p.getGreen(), p.getBlue())
 \end{program}
-\begin{computation}{Computation}{Golden Gate Bridge Image processing.}{data-files-10}%
+\begin{computation}{Computation}{Golden Gate Bridge Image processing.}{data-files-11}%
 This image has a Creative Commons license, but we've lost track of the exact terms.%
 \par
 [Now a data file and a program to process it, all bundled up inside a \mono{<computation>}, since an \mono{<example>} gets knowled and the ActiveCode does not fill.]%
@@ -6472,9 +6555,7 @@ img.draw(win)
 win.exitonclick()
 \end{program}
 \end{computation}
-The examples above all use Python, which will run in your browser.   Other languages will only run when a project is hosted on Runestone Academy servers.  And in this case there is a small twist.  You need to indicate which existing \mono{<datafile>} your program needs, even if that seems obvious by reading the code.  Use a \mono{@datafile} attribute on \mono{<program>} that has a list of filenames.  These are the filenames you set via the \mono{@filename} attribute of the \mono{<datafile>} element, and are the names you use in your program's code.  As before, no path information is neede, nor allowed.%
-\par
-[2023-02-21: testing for single files first, list of several not yet implemented.]%
+The examples above all use Python, which will run in your browser.   Other languages will only run when a project is hosted on Runestone Academy servers.  And in this case there is a small twist.  You need to indicate which existing \mono{<datafile>} your program needs, even if that seems obvious by reading the code.  To do this, make sure each datafile has an \mono{@xml:id} and then use the \mono{@add-files} attribute on \mono{<program>} to specify a list of xml:id's that you want to be available.  These datafiles will be written to the program's working directory using the filename specified by the \mono{@filename} attribute of the \mono{<datafile>} element, and are the names you use in your program's code.  As before, no path information is needed, nor allowed.%
 \par
 When the \mono{@language} attribute of a \mono{<program>} is set to \mono{python3} that means in-browser Python is not good enough, and you want the greater power and flexibility of having your code run on a Runestone Academy server.  So this is our first example of using the \mono{@datafile} attribute.%
 \par
@@ -6930,9 +7011,9 @@ I am an interactive short answer question, but only on a capable platform.%
 \begin{exercises-section}{Exercises}{True\slash{}False Exercises}{}{True\slash{}False Exercises}{}{}{true-false-exercises}
 \begin{divisionexercise}{1}{True\slash{}False.}{}{vector-space-dimension}%
 \index{vector space}%
-Every vector space has finite dimension.%
-\par
 True or False?%
+\par
+Every vector space has finite dimension.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -6951,7 +7032,7 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 %
 \begin{exercises-section}{Exercises}{Multiple Choice Exercises}{}{Multiple Choice Exercises}{}{}{exercises-groupwork}
 \begin{introduction}{}%
-When this \mono{<exercises>} division is hosted on Runestone Academy, it will be enabled for group work.  See group selection and submission features are at the end of the division.  See \mono{[cross-reference to target(s) \textquotedbl{}worksheet-groupwork\textquotedbl{} missing or not unique]} for more detail.  (2024-07-24: experimental.)%
+When this \mono{<exercises>} division is hosted on Runestone Academy, it will be enabled for group work.  See group selection and submission features are at the end of the division.  See \hyperref[worksheet-groupwork]{Worksheet~{\xreffont\ref{worksheet-groupwork}}} for more detail.  (2024-07-24: experimental.)%
 \end{introduction}%
 \begin{divisionexercise}{1}{Multiple-Choice, Not Randomized, One Answer.}{}{multiple-choice-not-randomized}%
 \index{stop signs}%
@@ -6982,7 +7063,38 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{Multiple-Choice, Not Randomized, Multiple Answers.}{}{multiple-choice-multiple-answers}%
+\begin{divisionexercise}{2}{Multiple-Choice, Math in Feedback.}{}{multiple-choice-feedback-math}%
+What is the coefficient on \(x^4y^4\) in \((2x+5xy^2)^4\)?%
+\par
+%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\(\displaystyle 6\)%
+\item{}\(\displaystyle 60\)%
+\item{}\(\displaystyle 100\)%
+\item{}\(\displaystyle 600\)%
+\end{enumerate}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-feedback-math-3}{}\quad{}D.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-feedback-math-4}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Have you accounted for the \(2\) and \(5\) that are in the original binomial?%
+\item{}\lititle{Incorrect.}\par%
+What should the exponents on \(2\) and \(5\) be when you expand \((2x+5xy^2)^4\)?%
+\item{}\lititle{Incorrect.}\par%
+Have you included something of the form \(\binom{n}{k}\) in your computations?%
+\item{}\lititle{Correct.}\par%
+Correct! Using the binomial theorem, we get a term containing the monomial \(x^4y^4\) by taking two of the first term, and two of the second term in the expansion of \((2x+5xy^2)^4\), and so this term is equal to%
+\begin{equation*}
+\binom{4}{2} (2x)^2 (5xy^2)^2 = 6 \cdot 2^2 5^2 x^4 y^4 = 600 x^4 y^4\text{.}
+\end{equation*}
+%
+\end{enumerate}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{Multiple-Choice, Not Randomized, Multiple Answers.}{}{multiple-choice-multiple-answers}%
 \index{stop signs}%
 Which colors might be found in a rainbow?  (Note that the radio buttons now allow multiple buttons to be selected.)%
 \par
@@ -7012,7 +7124,7 @@ Yes, green is one of the colors.%
 \end{enumerate}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{Multiple-Choice, Randomized, One Answer.}{}{multiple-choice-randomized}%
+\begin{divisionexercise}{4}{Multiple-Choice, Randomized, One Answer.}{}{multiple-choice-randomized}%
 \index{stop signs}%
 What color is a stop sign? [Static versions retain the order as authored.]%
 \par
@@ -7041,7 +7153,36 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{Multiple-Choice, Randomized, Multiple Answers.}{}{multiple-choice-randomized-multiple-answers}%
+\begin{divisionexercise}{5}{Multiple-Choice, Randomized, One Answer but with Checkboxes.}{}{multiple-choice-randomized-forced-checkbox}%
+\index{stop signs}%
+What color is a stop sign? [Static versions retain the order as authored.]%
+\par
+%
+\begin{enumerate}[label={\Alph*.}]
+\item{}Green%
+\item{}Red%
+\item{}Yellow%
+\end{enumerate}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-forced-checkbox-4}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-randomized-forced-checkbox-5}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-randomized-forced-checkbox-6}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-randomized-forced-checkbox-7}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+Yellow means slow down.%
+\end{enumerate}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{Multiple-Choice, Randomized, Multiple Answers.}{}{multiple-choice-randomized-multiple-answers}%
 \index{stop signs}%
 Which colors might be found in a rainbow?  (Note that the radio buttons now allow multiple buttons to be selected.) [Static versions retain the order as authored.]%
 \par
@@ -7071,7 +7212,7 @@ Yes, green is one of the colors.%
 \end{enumerate}
 %
 \end{divisionexercise}%
-\begin{divisionexercise}{5}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{}{mathematical-multiple-choice-multiple-answers}%
+\begin{divisionexercise}{7}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{}{mathematical-multiple-choice-multiple-answers}%
 \index{stop signs}%
 Which of the following is an antiderivative of \(2\sin(x)\cos(x)\)?%
 \par
@@ -7098,6 +7239,45 @@ The derivative given in the statement of the problem looks exactly like an appli
 Take a derivative on \(-\cos^2(x)\) to see that this answer is correct.  Extra credit: does this answer ``differ by a constant'' when subtracted from either of the other two correct answers?%
 \item{}\lititle{Incorrect.}\par%
 The antiderivative of a product is not the product of the antiderivatives.  Use the product rule to take a derivative and see that this answer is not correct.%
+\end{enumerate}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{Multiple-Choice, Not Randomized, One Answer.}{}{multiple-choice-columns}%
+\index{stop signs}%
+What color is a stop sign?%
+\par
+Note: we are experimenting with choices in columns (2025-05-17).  Three columns here.%
+\par
+%
+\begin{multicols}{3}
+\begin{enumerate}[label={\Alph*.}]
+\item{}Green%
+\item{}Red%
+\item{}White%
+\item{}Purple%
+\item{}Pink%
+\end{enumerate}
+\end{multicols}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-columns-4}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-columns-5}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-columns-6}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-columns-7}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\item{}\lititle{Incorrect.}\par%
+Hmmmmmmm.%
+\item{}\lititle{Incorrect.}\par%
+I have never seen a pink road sign!%
 \end{enumerate}
 %
 \end{divisionexercise}%
@@ -7682,105 +7862,321 @@ SELECT * FROM test
 \typeout{************************************************}
 %
 \begin{exercises-section}{Exercises}{Matching Exercises}{}{Matching Exercises}{}{}{matching-exercises}
-\begin{divisionexercise}{1}{Matching Problem, Dates.}{}{matching-dates}%
+\begin{introduction}{}%
+Matching exercises come in two varieties. Their differences are most noticeable in interactive versions.%
+\begin{descriptionlist}
+\begin{dlimedium}{Cardsort}{matching-exercises-2-1-1-1}%
+A \mono{<cardsort>} asks users to match items in a 1-1 or many-1 fashion. The interactive version of these involves dragging ``card''s from the left column (the \mono{<premise>}s) into containers on the right (the \mono{<response>}s).%
+\end{dlimedium}%
+\begin{dlimedium}{Matching}{matching-exercises-2-1-1-2}%
+A \mono{<matching>} interactive asks users to form connections between the \mono{<premise>}s in the left column and the \mono{<response>}s on the right. This format supports many-many matches.%
+\end{dlimedium}%
+\end{descriptionlist}
+%
+\end{introduction}%
+\begin{divisionexercise}{1}{Cardsort Problem, Dates.}{}{matching-dates}%
 \index{matching US dates}%
 Match each event in United States history with the year it happened.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-Monroe Doctrine&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1863\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1823
+Louisiana Purchase&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Battle of Gettysburg&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Haymarket Riot&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Monroe Doctrine&~~&1863
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{Matching Problem, Derivatives.}{}{matching-derivatives}%
+\begin{divisionexercise}{2}{Cardsort Problem, Derivatives.}{}{matching-derivatives}%
 \index{matching derivatives}%
 Match each function with its derivative.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
 \(x^3-6x^2+5\)&~~&\(3x^2-12x\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(x^{-3}\)&~~&\(2x+2\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\((x+1)^2\)&~~&\(-3x^{-4}\)
+\((x+1)^2\)&~~&\(-3x^{-4}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(x^{-3}\)&~~&\(2x+2\)
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(x^3-6x^2+5\)&~~&\(3x^2-12x\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(x^{-3}\)&~~&\(-3x^{-4}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\((x+1)^2\)&~~&\(2x+2\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(3x^2-12x\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^3-6x^2+5\)%
+\end{itemize}
+%
+\item{}\(-3x^{-4}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^{-3}\)%
+\end{itemize}
+%
+\item{}\(2x+2\)%
+\begin{itemize}[label=$\circ$]
+\item{}\((x+1)^2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{Matching Problem, Linear Algebra.}{}{matching-bases}%
+\begin{divisionexercise}{3}{Cardsort Problem, Linear Algebra.}{}{matching-bases}%
 \index{matching bases and subspaces}%
 Match each subspace with a basis for that subspace. (You may assume that each set is really a basis for at least one of the subspaces.)%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)&~~&
+\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)&~~&\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{matching-bases-4}{}\quad{}For openers, a basis for a subspace must be a \emph{subset} of the subspace.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)&~~&\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionexercise}%
-\begin{divisionexercise}{4}{Matching Problem, Function Types.}{}{matching-function-types}%
+\begin{divisionexercise}{4}{Cardsort Problem, Function Types.}{}{matching-function-types}%
 \index{matching function types}%
-Sort the following functions into their correct categories. [Ed. As of 2024-10-07 the following problem is not expected to render and function properly.  It is here to aid development work.  Nothing to see here.]%
+Sort the following functions into their correct categories.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-\(y=5x+3\)\(\pi x - 6y = \sqrt{2}\)\(y=\frac{-1}{2}x+e\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3-x\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=2^x\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3\)\(y=\sqrt{x}\)&~~&
+\(y=2^x\)&~~&Linear\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(y=x^3\)&~~&Quadratic\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(y=\sqrt{x}\)&~~&Exponential\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(y=5x+3\)&~~&Power\tabularnewline\crulethin{1-1}
+\(\pi x - 6y = \sqrt{2}\)&~~&\tabularnewline\crulethin{1-1}
+\(y=\frac{-1}{2}x+e\)&~~&\tabularnewline\crulethin{1-1}
+\(y=x^3-x\)&~~&
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4}{}\quad{}\begin{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Linear%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=5x+3\)%
+\item{}\(\pi x - 6y = \sqrt{2}\)%
+\item{}\(y=\frac{-1}{2}x+e\)%
+\end{itemize}
+%
+\item{}Quadratic%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3-x\)%
+\end{itemize}
+%
+\item{}Exponential%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=2^x\)%
+\end{itemize}
+%
+\item{}Power%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3\)%
+\item{}\(y=\sqrt{x}\)%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{Matching Problem, Playing Cards.}{}{matching-playing-cards}%
+\index{matching!playing cards}%
+Associate each playing card with every applicable property.%
+\begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-\(y=5x+3\)\(\pi x - 6y = \sqrt{2}\)\(y=\frac{-1}{2}x+e\)&~~&Linear\tabularnewline\crulethin{1-1}\crulethin{3-3}
-&~~&Quadratic\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3-x\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=2^x\)&~~&Exponential\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3\)\(y=\sqrt{x}\)&~~&Power
+Jack of Hearts&~~&Spade\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Ace of Spades&~~&Club\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Queen of Spades&~~&Diamond\tabularnewline\crulethin{1-1}\crulethin{3-3}
+King of Clubs&~~&Heart\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Queen of Diamonds&~~&Jack\tabularnewline\crulethin{3-3}
+&~~&Queen\tabularnewline\crulethin{3-3}
+&~~&King\tabularnewline\crulethin{3-3}
+&~~&Ace
 \end{tabular}
 }%
 \end{center}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-playing-cards-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Ace%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\end{itemize}
+%
+\item{}King%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Queen%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Spades%
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Jack%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Heart%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Diamond%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Club%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Spade%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\item{}Queen of Spades%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{Matching Problem, Popular Music History.}{}{matching-music-history}%
+\index{matching music history}%
+Drag each performer onto every applicable category.%
+\begin{center}%
+{\tabularfont%
+\begin{tabular}{lll}
+Paul&~~&Beatle\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Ringo&~~&Yardbirds\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Eric&~~&Guitarist\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Elton&~~&Drummer\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Jethro&~~&Flautist\tabularnewline\crulethin{3-3}
+&~~&Harpist\tabularnewline\crulethin{3-3}
+&~~&Pianist\tabularnewline\crulethin{3-3}
+&~~&\emph{Some} "Math": \(\sin(x^2)\)
+\end{tabular}
+}%
+\end{center}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-music-history-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Beatle%
+\begin{itemize}[label=$\circ$]
+\item{}Paul%
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Yardbirds%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Guitarist%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Drummer%
+\begin{itemize}[label=$\circ$]
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Flautist%
+\item{}Harpist%
+\item{}Pianist%
+\begin{itemize}[label=$\circ$]
+\item{}Elton%
+\end{itemize}
+%
+\item{}\emph{Some} "Math": \(\sin(x^2)\)%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}Jethro%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{Cardsort Problem, Basic Arithmetic.}{}{cardsort-basic}%
+\index{matching US dates}%
+This is a simple exercise to test some grading behavior.%
+\begin{center}%
+{\tabularfont%
+\begin{tabular}{lll}
+2 + 3&~~&5\tabularnewline\crulethin{1-1}\crulethin{3-3}
+\(12 + 2\)&~~&14\tabularnewline\crulethin{1-1}
+4 + 1&~~&
+\end{tabular}
+}%
+\end{center}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{cardsort-basic-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}5%
+\begin{itemize}[label=$\circ$]
+\item{}2 + 3%
+\item{}4 + 1%
+\end{itemize}
+%
+\item{}14%
+\begin{itemize}[label=$\circ$]
+\item{}\(12 + 2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionexercise}%
 \end{exercises-section}
 %
@@ -7874,12 +8270,20 @@ This second table has no \mono{<area>}, in order to test CSS for tables.%
 \typeout{************************************************}
 %
 \begin{exercises-section}{Exercises}{Select Exercises}{}{Select Exercises}{}{}{select-exercises}
-\begin{divisionexercise}{1}{}{}{select-exercises-2}%
-Mock exercise, just to say this is all testing, 2023-05-19.%
+\begin{introduction}{}%
+These \terminology{select} questions specify a list of extant questions, and the reader, or Runestone, selects questions from the list to be graded (in different ways). They are only really functional with a database of students in a course, i.e.~when hosted on Runestone.%
+\end{introduction}%
+\begin{divisionexercise}{1}{Three-way Select Question.}{}{question-select}%
+Runestone-only: exercise to grade will be automatically chosen by Runestone from \hyperlink{vector-space-dimension}{Exercise~{\xreffont 5.8.1}}, \hyperlink{multiple-choice-not-randomized}{Exercise~{\xreffont 5.9.1}}, or \hyperlink{matching-dates}{Exercise~{\xreffont 5.12.1}}.%
 \end{divisionexercise}%
-\begin{divisionexercise}{2}{}{}{question-select}%
+\begin{divisionexercise}{2}{A\slash{}B Experiment Select Question.}{}{ab-experiment}%
+Runestone-only: an A\slash{}B experiment (named \mono{sample-book}) with \hyperlink{vector-space-dimension}{Exercise~{\xreffont 5.8.1}} as (A) and \hyperlink{multiple-choice-not-randomized}{Exercise~{\xreffont 5.9.1}} as (B).%
 \end{divisionexercise}%
-\begin{divisionexercise}{3}{}{}{ab-experiment}%
+\begin{divisionexercise}{3}{Grade First Question.}{}{toggle-first}%
+Runestone-only: a toggle question where the question graded is \emph{always} the first of \hyperlink{vector-space-dimension}{Exercise~{\xreffont 5.8.1}}, or \hyperlink{multiple-choice-not-randomized}{Exercise~{\xreffont 5.9.1}}.%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{Grade Any Question.}{}{toggle-any}%
+Runestone-only: a toggle question where the question graded is \emph{any} question chosen by the reader from \hyperlink{vector-space-dimension}{Exercise~{\xreffont 5.8.1}}, or \hyperlink{multiple-choice-not-randomized}{Exercise~{\xreffont 5.9.1}}.%
 \end{divisionexercise}%
 \end{exercises-section}
 %
@@ -7996,10 +8400,13 @@ This preliminary DoenetML example is for testing use on a Runestone server, wher
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 5.18 Fill-In Exercises}
+\typeout{Exercises 5.18 Fill-In Exercises (Old Style)}
 \typeout{************************************************}
 %
-\begin{exercises-section}{Exercises}{Fill-In Exercises}{}{Fill-In Exercises}{}{}{fill-in-exercises}
+\begin{exercises-section}{Exercises}{Fill-In Exercises (Old Style)}{}{Fill-In Exercises (Old Style)}{}{}{fill-in-exercises-old}
+\begin{introduction}{}%
+This section has \terminology{fill-in-the-blank} (\initialism{FITB}) exercises that use an old syntax.  They were designed for projects transitioning from Runestone's ReST syntax to PreTeXt.  So they are really only here for testing, and not for any sort of documentation.  They will not receive support or enhancements.  \textit{Caveat emptor}.%
+\end{introduction}%
 \begin{divisionexercise}{1}{Fill-In, Integer Answer.}{}{fillin-integer}%
 The game of bowling uses \fillintext{28} pins that you try to knock down. (This answer blank has been set to be very wide.)%
 \par\smallskip%
@@ -8034,7 +8441,18 @@ Any value in the interval \(0.333\pm 0.0005\) is correct.%
 \end{divisionexercise}%
 \footnotetext[1]{\nolinkurl{en.wikipedia.org/wiki/Significant_figures}\label{fillin-decimal-2-1-4}}%
 \footnotetext[2]{\nolinkurl{en.wikipedia.org/wiki/Significant_figures}\label{fillin-decimal-3-1-6}}%
-\begin{divisionexercise}{5}{Fill-In, New Markup Numbers.}{}{fillin-numbers-many-tests}%
+\end{exercises-section}
+%
+%
+\typeout{************************************************}
+\typeout{Exercises 5.19 Fill-In Exercises}
+\typeout{************************************************}
+%
+\begin{exercises-section}{Exercises}{Fill-In Exercises}{}{Fill-In Exercises}{}{}{fill-in-exercises}
+\begin{introduction}{}%
+This section has \terminology{fill-in-the-blank} (\initialism{FITB}) exercises using newer syntax, and the subject of active development.%
+\end{introduction}%
+\begin{divisionexercise}{1}{Fill-In, New Markup Numbers.}{}{fillin-numbers-many-tests}%
 I love \(\pi\). What number am I thinking of, accurate to two decimal places?%
 \par
 \fillintext{5}%
@@ -8045,31 +8463,47 @@ I love \(\pi\). What number am I thinking of, accurate to two decimal places?%
 \par
 The decimal approximation of \(\pi\) is \(3.1415926535\ldots\), but to two decimal places we write \(3.14\).%
 \end{divisionexercise}%
-\begin{divisionexercise}{6}{Fill-In, New Markup Strings.}{}{fillin-strings-}%
-The word I'm thinking about is ``magic''. What word am I thinking about? \fillintext{5} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
+\begin{divisionexercise}{2}{Fill-In, New Markup Strings.}{}{fillin-strings-}%
+The word I'm thinking about is hinted at by the image.%
+\par
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/cartoon-magic.jpg}
+\end{image}%
+%
+\par
+What word am I thinking about? \fillintext{5} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--3}{}\quad{}The word I'm thinking about is ``magic''. What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{fillin-strings--3}{}\quad{}Do you really need a hint? Carefully reread the question.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--4}{}\quad{}The word I'm thinking about is hinted at by the image.%
+\par
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/cartoon-magic.jpg}
+\end{image}%
+%
+\par
+What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
 \end{divisionexercise}%
-\begin{divisionexercise}{7}{Fill-In, Javascript test of numbers.}{}{ex-demo-jscmp-primes}%
+\begin{divisionexercise}{3}{Fill-In, Javascript test of numbers.}{}{ex-demo-jscmp-primes}%
 What is an example of a prime number less than 20? \fillintext{5}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{ex-demo-jscmp-primes-3}{}\quad{}What is an example of a prime number less than 20? \fillintext{1}13\fillintext{1}%
 \par
 Any number from the list \(\{2, 3, 5, 7, 11, 13, 17, 19\}\) is a prime number less than 20.%
 \end{divisionexercise}%
-\begin{divisionexercise}{8}{Fill-In, Javascript test of strings.}{}{fillin-jscmp-palindrome}%
+\begin{divisionexercise}{4}{Fill-In, Javascript test of strings.}{}{fillin-jscmp-palindrome}%
 What is an example of a palindrome? \fillintext{5}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-jscmp-palindrome-3}{}\quad{}What is an example of a palindrome? \fillintext{1}radar\fillintext{1}%
 \par
 Any word that is the same forward and backward is a palindrome.%
 \end{divisionexercise}%
-\begin{divisionexercise}{9}{Fill-In, Simple Randomization with Numbers.}{}{fillin-random-simple}%
+\begin{divisionexercise}{5}{Fill-In, Simple Randomization with Numbers.}{}{fillin-random-simple}%
 What is the square of \(x=7\)? \(x^2=\)\fillintext{5}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-random-simple-3}{}\quad{}What is the square of \(x=7\)? \(x^2=\)\fillintext{1}\(49\)\fillintext{1}%
 \end{divisionexercise}%
-\begin{divisionexercise}{10}{Fill-In, Dynamic Math with Simple Numerical Answer.}{}{fillin-math-solve-equation}%
+\begin{divisionexercise}{6}{Fill-In, Dynamic Math with Simple Numerical Answer.}{}{fillin-math-solve-equation}%
 Solve the equation%
 \begin{equation*}
 -2 x-6=0
@@ -8088,7 +8522,7 @@ to get the value of \(x\).%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-solve-equation-4}{}\quad{}We want to isolate the \(x\) in the equation \(-2 x-6=0\). Because addition of \(-6\) is the last operation, we apply the inverse by adding \(6\) to both sides. The new, but equivalent equation is now \(-2x = 6\). Dividing both sides of the equation by \(-2\), we obtain the solution \(x=-3\).%
 \end{divisionexercise}%
-\begin{divisionexercise}{11}{Fill-In, Dynamic Math with Formulas as Answers.}{}{fillin-math-find-derivatives}%
+\begin{divisionexercise}{7}{Fill-In, Dynamic Math with Formulas as Answers.}{}{fillin-math-find-derivatives}%
 Consider the function \(f(x)=-1 x^{5}-10\). Find \(f'(x)\) and \(f''(x)\).%
 \par
 \(f'(x) = \) \fillintext{15} and \(f''(x)=\) \fillintext{15}%
@@ -8099,7 +8533,7 @@ Consider the function \(f(x)=-1 x^{5}-10\). Find \(f'(x)\) and \(f''(x)\).%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-find-derivatives-4}{}\quad{}The derivative of a constant is zero, so \(\frac{d}{dx}[-10]=0\). The term \(x^{5}\) is a power, so the power rule gives us \(\frac{d}{dx}[x^{5}]=5x^{4}\). Putting this together, we find \(f'(x)=-\left(5 x^{4}\right)\). Applying the power rule a second time, we find \(f''(x)=-\left(20 x^{3}\right)\).%
 \end{divisionexercise}%
-\begin{divisionexercise}{12}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{}{fillin-math-decompose-function}%
+\begin{divisionexercise}{8}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{}{fillin-math-decompose-function}%
 Consider the function%
 \begin{equation*}
 h(x)=4 \left(-x-3\right)^{3}+5\text{.}
@@ -8124,17 +8558,30 @@ This is not the only non-trivial composition. Can you find others?%
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 5.19 Hodgepodge}
+\typeout{Exercises 5.20 Hodgepodge}
 \typeout{************************************************}
 %
-\begin{exercises-section}{Exercises}{Hodgepodge}{}{Hodgepodge}{}{}{rune-21}
-\begin{divisionexercise}{1}{With Tasks in an Exercises Division.}{}{true-false-exercise-with-tasks-in-exercises}%
+\begin{exercises-section}{Exercises}{Hodgepodge}{}{Hodgepodge}{}{}{runestone-hodgepodge}
+\begin{divisionexercise}{1}{}{}{multifile-program-2}%
+This is a test of accessing program resources across pages by relying on what is in the database.%
+\begin{program}{C++}{0}{1}{0}
+#include "add.h"
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 1;
+    int b = 2;
+    cout << "The sum of " << a << " and " << b << " is " << add(a, b) << endl;
+}
+\end{program}
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{With Tasks in an Exercises Division.}{}{true-false-exercise-with-tasks-in-exercises}%
 Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an \mono{<exercise>} inside of an \mono{<exercises>} division.%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item{}\lititle{True\slash{}False.}\par%
-Every vector space has finite dimension.%
-\par
 True or False?%
+\par
+Every vector space has finite dimension.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{true-false-task-in-exercises-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -8150,7 +8597,7 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.20 Exercises that are Timed}
+\typeout{Section 5.21 Exercises that are Timed}
 \typeout{************************************************}
 %
 \begin{sectionptx}{Section}{Exercises that are Timed}{}{Exercises that are Timed}{}{}{exercises-timed}
@@ -8160,11 +8607,13 @@ Showing results, showing feedback, displaying a timer, and allowing pausing are 
 \par
 Of course, if you are not viewing this while online and hosted on a Runestone server, then these exercises will not look any different than in other places.%
 \par
-(Since this is an unstructured division, the number of the \mono{<exercises>} is not displayed when born.  It does \emph{have} a number, which is the same as the enclosing \mono{<section>}.  To wit: \hyperref[exercises-timed]{Section~{\xreffont\ref{exercises-timed}}} versus \hyperlink{timed-exercises}{Exercises~{\xreffont 5.20}}.)%
+(Since this is an unstructured division, the number of the \mono{<exercises>} is not displayed when born.  It does \emph{have} a number, which is the same as the enclosing \mono{<section>}.  To wit: \hyperref[exercises-timed]{Section~{\xreffont\ref{exercises-timed}}} versus \hyperlink{timed-exercises}{Exercises~{\xreffont 5.21}}.)%
+\par
+If you prefer that a given \mono{<section>} has more than one \mono{<exercises>} within it (timed or not), realize that you must then structure your \mono{<section>} with a ssequence of \mono{<subsection>} as peers of the multiple \mono{<exercises>} you desire.%
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 5.20 Timed Exercises}
+\typeout{Exercises 5.21 Timed Exercises}
 \typeout{************************************************}
 %
 \begin{exercises-subsection-numberless}{Exercises}{Timed Exercises}{}{Timed Exercises}{}{}{timed-exercises}
@@ -8173,9 +8622,9 @@ You have 10 minutes to do these exercises when hosted online on a Runestone serv
 \end{introduction}%
 \begin{divisionexercise}{1}{True\slash{}False.}{}{vector-space-dimension-timed}%
 \index{vector space}%
-Every vector space has finite dimension.%
-\par
 True or False?%
+\par
+Every vector space has finite dimension.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -8219,7 +8668,7 @@ White might be hard to see.%
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.21 Projects and Friends}
+\typeout{Section 5.22 Projects and Friends}
 \typeout{************************************************}
 %
 \begin{sectionptx}{Section}{Projects and Friends}{}{Projects and Friends}{}{}{interactive-projects}
@@ -8261,9 +8710,9 @@ Now an \mono{<exercise>} with three \mono{<task>}.  Since the middle one is a sh
 Structured with task, we can have an introduction, but this does not migrate with the interactive portions.%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item{}\lititle{True\slash{}False.}\par%
-Every vector space has finite dimension.%
-\par
 True or False?%
+\par
+Every vector space has finite dimension.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{true-false-task-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -8278,24 +8727,38 @@ Match each event in United States history with the year it happened. (We are rec
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{lll}
-Monroe Doctrine&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1863\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1823
+Louisiana Purchase&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Battle of Gettysburg&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Haymarket Riot&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
+Monroe Doctrine&~~&1863
 \end{tabular}
 }%
 \end{center}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-task-4}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-task-4}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{enumerate}%
 \end{inlineexercise}%
 Now an \mono{<exploration>} nested two-deep with \emph{the same two questions}, two times each, just for testing purposes.%
@@ -8454,28 +8917,28 @@ This is a conclusion where you could summarize the exercise.  In interdum suscip
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.22 Expedited Samples}
+\typeout{Section 5.23 Expedited Samples}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Section}{Expedited Samples}{}{Expedited Samples}{}{}{rune-24}
+\begin{sectionptx}{Section}{Expedited Samples}{}{Expedited Samples}{}{}{rune-25}
 We hack in various interactive Runestone exercise types while PreTeXt markup evolves to cover more of Runestone's repertoire.  In static output these will just produce a message.  In \initialism{HTML} they may be interactive simply in a browser, or they may require being hosted on a Runestone server in order to perform.%
 \par
 CodeLens for a Python program:%
-\begin{inlineexercise}{Checkpoint}{}{rune-24-4}%
+\begin{inlineexercise}{Checkpoint}{}{rune-25-4}%
 An interactive Runestone problem goes here, but there is not yet a static representation.%
 \end{inlineexercise}%
 CodeLens for a Java program.  Supplied in source with trace data built beforehand on a Runestone server:%
-\begin{inlineexercise}{Checkpoint}{}{rune-24-6}%
+\begin{inlineexercise}{Checkpoint}{}{rune-25-6}%
 An interactive Runestone problem goes here, but there is not yet a static representation.%
 \end{inlineexercise}%
 \end{sectionptx}
 %
 %
 \typeout{************************************************}
-\typeout{Reading Questions 5.23 Reading Questions}
+\typeout{Reading Questions 5.24 Reading Questions}
 \typeout{************************************************}
 %
-\begin{reading-questions-section}{Reading Questions}{Reading Questions}{}{Reading Questions}{}{}{rune-25}
+\begin{reading-questions-section}{Reading Questions}{Reading Questions}{}{Reading Questions}{}{}{rune-26}
 \begin{divisionexercise}{1}{}{}{simple-reading-question}%
 This is a simple question.  Does this look like a short answer question?%
 \par
@@ -8490,7 +8953,7 @@ And a second reading question, so we can test having more than one.  Specificall
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.24 YouTube Video Embedding}
+\typeout{Section 5.25 YouTube Video Embedding}
 \typeout{************************************************}
 %
 \begin{sectionptx}{Section}{YouTube Video Embedding}{}{YouTube Video Embedding}{}{}{atomic-video}
@@ -8639,7 +9102,7 @@ Identical code to previous example, but now wrapped in an overall \mono{<figure>
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.25 Runestone Assignment Testing}
+\typeout{Section 5.26 Runestone Assignment Testing}
 \typeout{************************************************}
 %
 \begin{sectionptx}{Section}{Runestone Assignment Testing}{}{Runestone Assignment Testing}{}{}{section-runestone-assignment-testing}
@@ -8647,7 +9110,7 @@ This is a section that is specifically for testing when exercises are migrated t
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 5.25 Exercises}
+\typeout{Exercises 5.26 Exercises}
 \typeout{************************************************}
 %
 \begin{exercises-subsection-numberless}{Exercises}{Exercises}{}{Exercises}{}{}{section-runestone-assignment-testing-3}
@@ -8669,7 +9132,7 @@ This introduction should appear ahead of each exercise when it shows up in the R
 \resizebox{\linewidth}{!}{%
 \begin{tikzpicture}
     \draw[fill=blue!20] (0,0) -| (1,1) -| cycle;
-\end{tikzpicture}
+\end{tikzpicture}%
 }%
 \end{image}%
 It has a table, and an image too, to check it all comes through.%
@@ -8727,10 +9190,10 @@ And a final paragraph in the section, and a chance to say there is a trailing \m
 %
 %
 \typeout{************************************************}
-\typeout{Worksheet 5.26 A ``Group Work'' Worksheet}
+\typeout{Worksheet 5.27 A ``Group Work'' Worksheet}
 \typeout{************************************************}
 %
-\newgeometry{left=1.25cm, right=1.25cm, top=1.25cm, bottom=1.25cm}
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
 \begin{worksheet-section}{Worksheet}{A ``Group Work'' Worksheet}{}{A ``Group Work'' Worksheet}{}{}{worksheet-groupwork}
 This is a \mono{<worksheet>} which has a \mono{@groupwork} attribute set to \mono{yes}, along with a \mono{@label} attribute to assist with the Runestone database.  Note, you can also set a \mono{@groupsize} attribute.  When hosted on Runestone, the exercises within will be available for a group of students to submit together.%
 \begin{divisionexercise}{1}{Multiple-Choice, Group Work.}{}{groupwork-multiple-choice}%
@@ -8815,7 +9278,7 @@ This is a superfluous second paragraph in this block.%
 %
 %
 \typeout{************************************************}
-\typeout{Exercises 5.27 Group Exercises}
+\typeout{Exercises 5.28 Group Exercises}
 \typeout{************************************************}
 %
 \begin{exercises-section}{Exercises}{Group Exercises}{}{Group Exercises}{}{}{exercises-title-groupwork}
@@ -8855,13 +9318,30 @@ White might be hard to see.%
 %
 %
 \typeout{************************************************}
-\typeout{Section 5.28 Splice Integration}
+\typeout{Section 5.29 SPLICE Integration}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Section}{Splice Integration}{}{Splice Integration}{}{}{splice-integration}
-These are examples that use the \href{https://cssplice.org/slcp/index.html}{SPLICE}\footnote{\nolinkurl{cssplice.org/slcp}\label{splice-integration-2-2}} protocol for communicating with a server, such as Runestone.  The first uses \href{https://codecheck.io}{CodeCheck}\footnote{\nolinkurl{codecheck.io}\label{splice-integration-2-4}}.  The remaing four are from the \href{https://opendsax.cs.vt.edu/}{OpenDSA}\footnote{\nolinkurl{opendsax.cs.vt.edu}\label{splice-integration-2-6}} project.%
+\begin{sectionptx}{Section}{SPLICE Integration}{}{SPLICE Integration}{}{}{splice-integration}
+\href{https://cssplice.org/}{SPLICE}\footnote{\nolinkurl{cssplice.org}\label{splice-integration-2-2}} is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a \href{https://cssplice.org/slcp/index.html}{protocol}\footnote{\nolinkurl{cssplice.org/slcp}\label{splice-integration-2-4}} for an embedded iframe to communicate with its host page.%
 \par
-They are all integrated into this PreTeXt book as an \mono{<interactive>} that uses an \mono{@iframe} attribute to embed an iframe from some other server.%
+One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.%
+\par
+These are examples that use the \href{https://cssplice.org/slcp/index.html}{SPLICE}\footnote{\nolinkurl{cssplice.org/slcp}\label{splice-integration-4-2}} protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an \mono{<interactive>} that uses an \mono{@iframe} attribute to embed an iframe from some other server.%
+\par
+This first sample tests the ability of an iframe to ask for a new size.%
+\begin{sidebyside}{2}{0.075}{0.075}{0.17}%
+\begin{sbspanel}{0.47}%
+\noindent\includegraphics[width=\linewidth]{generated/preview/splice-resize-example-preview.png}
+\end{sbspanel}%
+\begin{sbspanel}{0.21}%
+\noindent\includegraphics[width=\linewidth]{generated/qrcode/splice-resize-example.png}
+\href{https://pretextbook.org/examples/noparts/decorative/html/splice-resize-example.html}{Standalone}%
+\par
+\href{https://pretextbook.org/examples/noparts/decorative/html/splice-resize-example-if.html}{Embed}%
+\end{sbspanel}%
+\end{sidebyside}%
+\par
+The next uses \href{https://codecheck.io}{CodeCheck}\footnote{\nolinkurl{codecheck.io}\label{splice-integration-7-2}}.%
 \begin{figureptx}{Figure}{CodeCheck \mono{iframe}}{horstmann-codecheck}{}%
 \begin{sidebyside}{2}{0.075}{0.075}{0.17}%
 \begin{sbspanel}{0.47}%
@@ -8874,6 +9354,7 @@ They are all integrated into this PreTeXt book as an \mono{<interactive>} that u
 \end{sidebyside}%
 \tcblower
 \end{figureptx}%
+And the remaing four are from the \href{https://opendsax.cs.vt.edu/}{OpenDSA}\footnote{\nolinkurl{opendsax.cs.vt.edu}\label{splice-integration-9-2}} project.%
 \begin{figureptx}{Figure}{Stack pop slideshow}{opendsa-slideshow}{}%
 \begin{sidebyside}{2}{0.075}{0.075}{0.17}%
 \begin{sbspanel}{0.47}%
@@ -8923,6 +9404,60 @@ They are all integrated into this PreTeXt book as an \mono{<interactive>} that u
 \tcblower
 \end{figureptx}%
 \end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Exercises 5.30 Timed Chapter Exam}
+\typeout{************************************************}
+%
+\begin{exercises-section}{Exercises}{Timed Chapter Exam}{}{Timed Chapter Exam}{}{}{chapter-exam}
+\begin{introduction}{}%
+This is an \mono{<exercises>} division, as a peer of the \mono{<section>} in this \mono{<chapter>} of a \mono{<book>}.  It is also setup as a Runestone timed exam.  So it is an example of how you might have a per-chapter exam.  This contrasts with an earlier timed exam which is constructed as a per-section exam (\hyperlink{timed-exercises}{Exercises~{\xreffont 5.21}}).  The exercises are the same here, but in a different order.  As a test, this exam is ``pauseable'' and has a 15 minute time limit.%
+\end{introduction}%
+\begin{divisionexercise}{1}{Multiple-Choice, Not Randomized, One Answer.}{}{multiple-choice-not-randomized-timed-two}%
+\index{stop signs}%
+What color is a stop sign?%
+\par
+%
+\begin{enumerate}[label={\Alph*.}]
+\item{}Green%
+\item{}Red%
+\item{}White%
+\end{enumerate}
+%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-timed-two-4}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-not-randomized-timed-two-5}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-not-randomized-timed-two-6}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-not-randomized-timed-two-7}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\end{enumerate}
+%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{True\slash{}False.}{}{vector-space-dimension-timed-two}%
+\index{vector space}%
+True or False?%
+\par
+Every vector space has finite dimension.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-two-4}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{vector-space-dimension-timed-two-5}{}\quad{}False.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{vector-space-dimension-timed-two-6}{}\quad{}False.%
+\par
+The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
+\end{divisionexercise}%
+\end{exercises-section}
 \end{chapterptx}
 %
 \appendix%
@@ -9126,26 +9661,45 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.3}{Multiple-Choice, Randomized, One Answer.}{multiple-choice-randomized}%
+\begin{divisionsolution}{Exercise}{5.9.3}{Multiple-Choice, Not Randomized, Multiple Answers.}{multiple-choice-multiple-answers}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-4-back}{}\quad{}What did you see last time you went driving?%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{multiple-choice-multiple-answers-4-back}{}\quad{}Do you know the acronym\textellipsis{}\acronym{ROY G BIV} for the colors of a rainbow, and their order?%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-randomized-5-back}{}\quad{}Maybe go out for a drive?%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-multiple-answers-5-back}{}\quad{}A, B, D.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-randomized-6-back}{}\quad{}B.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-multiple-answers-6-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Correct.}\par%
+Red is a definitely one of the colors.%
+\item{}\lititle{Correct.}\par%
+Yes, yellow is correct.%
+\item{}\lititle{Incorrect.}\par%
+Remember the acronym\textellipsis{}\acronym{ROY G BIV}.  ``B'' stands for blue.%
+\item{}\lititle{Correct.}\par%
+Yes, green is one of the colors.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.5}{Multiple-Choice, Randomized, One Answer but with Checkboxes.}{multiple-choice-randomized-forced-checkbox}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-randomized-7-back}{}\quad{}%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-forced-checkbox-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-randomized-forced-checkbox-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-randomized-forced-checkbox-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-randomized-forced-checkbox-7-back}{}\quad{}%
 \begin{enumerate}[label={\Alph*.}]
 \item{}\lititle{Incorrect.}\par%
 Green means ``go!''.%
 \item{}\lititle{Correct.}\par%
 Red is universally used for prohibited activities or serious warnings.%
 \item{}\lititle{Incorrect.}\par%
-White might be hard to see.%
+Yellow means slow down.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.5}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{mathematical-multiple-choice-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.7}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{mathematical-multiple-choice-multiple-answers}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{mathematical-multiple-choice-multiple-answers-4-back}{}\quad{}You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find \emph{a single} correct answer.%
 \par\smallskip%
@@ -9262,32 +9816,123 @@ SELECT * FROM test
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.12\space\textperiodcentered\space{}Matching Exercises}
-\begin{divisionsolution}{Exercise}{5.12.1}{Matching Problem, Dates.}{matching-dates}%
+\begin{divisionsolution}{Exercise}{5.12.1}{Cardsort Problem, Dates.}{matching-dates}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.12.3}{Matching Problem, Linear Algebra.}{matching-bases}%
+\begin{divisionsolution}{Exercise}{5.12.3}{Cardsort Problem, Linear Algebra.}{matching-bases}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{matching-bases-4-back}{}\quad{}For openers, a basis for a subspace must be a \emph{subset} of the subspace.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)&~~&\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.5}{Matching Problem, Playing Cards.}{matching-playing-cards}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-playing-cards-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Ace%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\end{itemize}
+%
+\item{}King%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Queen%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Spades%
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Jack%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Heart%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Diamond%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Club%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Spade%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\item{}Queen of Spades%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.7}{Cardsort Problem, Basic Arithmetic.}{cardsort-basic}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{cardsort-basic-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}5%
+\begin{itemize}[label=$\circ$]
+\item{}2 + 3%
+\item{}4 + 1%
+\end{itemize}
+%
+\item{}14%
+\begin{itemize}[label=$\circ$]
+\item{}\(12 + 2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.13\space\textperiodcentered\space{}Clickable Area Exercises}
@@ -9326,7 +9971,7 @@ This second table has no \mono{<area>}, in order to test CSS for tables.%
 \end{center}%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises}
+\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises (Old Style)}
 \begin{divisionsolution}{Exercise}{5.18.1}{Fill-In, Integer Answer.}{fillin-integer}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-integer-3-back}{}\quad{}The game of bowling uses \fillintext{1}\(10\)\fillintext{1} pins that you try to knock down. (This answer blank has been set to be very wide.)%
@@ -9337,7 +9982,9 @@ Arranged in a triangle, there are \(1+2+3+4 = 10\) pins, a so-called \terminolog
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-case-insensitive-3-back}{}\quad{}The word \fillintext{1}no\fillintext{1} is the opposite of ``yes''.  (Try a mixture of upper and lower-case letters.)%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.5}{Fill-In, New Markup Numbers.}{fillin-numbers-many-tests}%
+\par\medskip
+\noindent\textbf{\Large{}5.19\space\textperiodcentered\space{}Fill-In Exercises}
+\begin{divisionsolution}{Exercise}{5.19.1}{Fill-In, New Markup Numbers.}{fillin-numbers-many-tests}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-numbers-many-tests-3-back}{}\quad{}I love \(\pi\). What number am I thinking of, accurate to two decimal places?%
 \par
@@ -9345,17 +9992,17 @@ Arranged in a triangle, there are \(1+2+3+4 = 10\) pins, a so-called \terminolog
 \par
 The decimal approximation of \(\pi\) is \(3.1415926535\ldots\), but to two decimal places we write \(3.14\).%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.7}{Fill-In, Javascript test of numbers.}{ex-demo-jscmp-primes}%
+\begin{divisionsolution}{Exercise}{5.19.3}{Fill-In, Javascript test of numbers.}{ex-demo-jscmp-primes}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{ex-demo-jscmp-primes-3-back}{}\quad{}What is an example of a prime number less than 20? \fillintext{1}13\fillintext{1}%
 \par
 Any number from the list \(\{2, 3, 5, 7, 11, 13, 17, 19\}\) is a prime number less than 20.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.9}{Fill-In, Simple Randomization with Numbers.}{fillin-random-simple}%
+\begin{divisionsolution}{Exercise}{5.19.5}{Fill-In, Simple Randomization with Numbers.}{fillin-random-simple}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-random-simple-3-back}{}\quad{}What is the square of \(x=7\)? \(x^2=\)\fillintext{1}\(49\)\fillintext{1}%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.11}{Fill-In, Dynamic Math with Formulas as Answers.}{fillin-math-find-derivatives}%
+\begin{divisionsolution}{Exercise}{5.19.7}{Fill-In, Dynamic Math with Formulas as Answers.}{fillin-math-find-derivatives}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-find-derivatives-3-back}{}\quad{}Consider the function \(f(x)=-1 x^{5}-10\). Find \(f'(x)\) and \(f''(x)\).%
 \par
@@ -9364,25 +10011,10 @@ Any number from the list \(\{2, 3, 5, 7, 11, 13, 17, 19\}\) is a prime number le
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-find-derivatives-4-back}{}\quad{}The derivative of a constant is zero, so \(\frac{d}{dx}[-10]=0\). The term \(x^{5}\) is a power, so the power rule gives us \(\frac{d}{dx}[x^{5}]=5x^{4}\). Putting this together, we find \(f'(x)=-\left(5 x^{4}\right)\). Applying the power rule a second time, we find \(f''(x)=-\left(20 x^{3}\right)\).%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.19\space\textperiodcentered\space{}Hodgepodge}
-\begin{divisionsolution}{Exercise}{5.19.1}{With Tasks in an Exercises Division.}{true-false-exercise-with-tasks-in-exercises}%
-\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
-\item[(a)]\lititle{True\slash{}False.}\par%
-\par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{true-false-task-in-exercises-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
-\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{true-false-task-in-exercises-5-back}{}\quad{}False.%
-\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{true-false-task-in-exercises-6-back}{}\quad{}False.%
-\par
-The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
-\end{enumerate}%
-\end{divisionsolution}%
-\par\medskip
-\noindent\textbf{\Large{}5.20\space\textperiodcentered\space{}Exercises that are Timed}
+\noindent\textbf{\Large{}5.21\space\textperiodcentered\space{}Exercises that are Timed}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Timed Exercises}
-\begin{divisionsolution}{Exercise}{5.20.1}{True\slash{}False.}{vector-space-dimension-timed}%
+\begin{divisionsolution}{Exercise}{5.21.1}{True\slash{}False.}{vector-space-dimension-timed}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -9393,12 +10025,12 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.25\space\textperiodcentered\space{}Runestone Assignment Testing}
+\noindent\textbf{\Large{}5.26\space\textperiodcentered\space{}Runestone Assignment Testing}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Exercises}
 \subparagraph[{An Exercise Group}]{An Exercise Group.}
 \begin{exercisegroup}
-\begin{divisionsolutioneg}{Exercise}{5.25.3}{}{exercisegroup-exercise-two}%
+\begin{divisionsolutioneg}{Exercise}{5.26.3}{}{exercisegroup-exercise-two}%
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{exercisegroup-exercise-two-2-back}{}\quad{}B.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{exercisegroup-exercise-two-3-back}{}\quad{}%
@@ -9413,8 +10045,8 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 \end{exercisegroup}
 \par\medskip\noindent
 \par\medskip
-\noindent\textbf{\Large{}5.27\space\textperiodcentered\space{}Group Exercises}
-\begin{divisionsolution}{Exercise}{5.27.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-five}%
+\noindent\textbf{\Large{}5.28\space\textperiodcentered\space{}Group Exercises}
+\begin{divisionsolution}{Exercise}{5.28.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-five}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-five-4-back}{}\quad{}What did you see last time you went driving?%
 \par\smallskip%
@@ -9423,6 +10055,27 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-not-randomized-five-6-back}{}\quad{}B.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-not-randomized-five-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\Large{}5.30\space\textperiodcentered\space{}Timed Chapter Exam}
+\begin{divisionsolution}{Exercise}{5.30.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed-two}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-timed-two-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-not-randomized-timed-two-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-not-randomized-timed-two-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-not-randomized-timed-two-7-back}{}\quad{}%
 \begin{enumerate}[label={\Alph*.}]
 \item{}\lititle{Incorrect.}\par%
 Green means ``go!''.%
@@ -9533,26 +10186,47 @@ be in \(S_n\). All of the \(a_i\)s must be distinct. There are \(n\) ways to cho
 \par\medskip
 \noindent\textbf{\Large{}5\space\textperiodcentered\space{}Runestone Testing\\
 5.9\space\textperiodcentered\space{}Multiple Choice Exercises}
-\begin{divisionsolution}{Exercise}{5.9.2}{Multiple-Choice, Not Randomized, Multiple Answers.}{multiple-choice-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.2}{Multiple-Choice, Math in Feedback.}{multiple-choice-feedback-math}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{multiple-choice-multiple-answers-4-back}{}\quad{}Do you know the acronym\textellipsis{}\acronym{ROY G BIV} for the colors of a rainbow, and their order?%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-feedback-math-3-back}{}\quad{}D.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-multiple-answers-5-back}{}\quad{}A, B, D.%
-\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-multiple-answers-6-back}{}\quad{}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-feedback-math-4-back}{}\quad{}%
 \begin{enumerate}[label={\Alph*.}]
-\item{}\lititle{Correct.}\par%
-Red is a definitely one of the colors.%
-\item{}\lititle{Correct.}\par%
-Yes, yellow is correct.%
 \item{}\lititle{Incorrect.}\par%
-Remember the acronym\textellipsis{}\acronym{ROY G BIV}.  ``B'' stands for blue.%
+Have you accounted for the \(2\) and \(5\) that are in the original binomial?%
+\item{}\lititle{Incorrect.}\par%
+What should the exponents on \(2\) and \(5\) be when you expand \((2x+5xy^2)^4\)?%
+\item{}\lititle{Incorrect.}\par%
+Have you included something of the form \(\binom{n}{k}\) in your computations?%
 \item{}\lititle{Correct.}\par%
-Yes, green is one of the colors.%
+Correct! Using the binomial theorem, we get a term containing the monomial \(x^4y^4\) by taking two of the first term, and two of the second term in the expansion of \((2x+5xy^2)^4\), and so this term is equal to%
+\begin{equation*}
+\binom{4}{2} (2x)^2 (5xy^2)^2 = 6 \cdot 2^2 5^2 x^4 y^4 = 600 x^4 y^4\text{.}
+\end{equation*}
+%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.4}{Multiple-Choice, Randomized, Multiple Answers.}{multiple-choice-randomized-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.4}{Multiple-Choice, Randomized, One Answer.}{multiple-choice-randomized}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-randomized-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-randomized-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-randomized-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.6}{Multiple-Choice, Randomized, Multiple Answers.}{multiple-choice-randomized-multiple-answers}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{multiple-choice-randomized-multiple-answers-4-back}{}\quad{}Do you know the acronym\textellipsis{}\acronym{ROY G BIV} for the colors of a rainbow, and their order?%
 \par\smallskip%
@@ -9568,6 +10242,29 @@ Yes, yellow is correct.%
 Remember the acronym\textellipsis{}\acronym{ROY G BIV}.  ``B'' stands for blue.%
 \item{}\lititle{Correct.}\par%
 Yes, green is one of the colors.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.8}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-columns}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-columns-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-columns-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-columns-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-columns-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\item{}\lititle{Incorrect.}\par%
+Hmmmmmmm.%
+\item{}\lititle{Incorrect.}\par%
+I have never seen a pink road sign!%
 \end{enumerate}
 %
 \end{divisionsolution}%
@@ -9646,31 +10343,99 @@ the quick brown fox jumped over the lazy dog
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.12\space\textperiodcentered\space{}Matching Exercises}
-\begin{divisionsolution}{Exercise}{5.12.2}{Matching Problem, Derivatives.}{matching-derivatives}%
+\begin{divisionsolution}{Exercise}{5.12.2}{Cardsort Problem, Derivatives.}{matching-derivatives}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(x^3-6x^2+5\)&~~&\(3x^2-12x\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(x^{-3}\)&~~&\(-3x^{-4}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\((x+1)^2\)&~~&\(2x+2\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(3x^2-12x\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^3-6x^2+5\)%
+\end{itemize}
+%
+\item{}\(-3x^{-4}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^{-3}\)%
+\end{itemize}
+%
+\item{}\(2x+2\)%
+\begin{itemize}[label=$\circ$]
+\item{}\((x+1)^2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.12.4}{Matching Problem, Function Types.}{matching-function-types}%
+\begin{divisionsolution}{Exercise}{5.12.4}{Cardsort Problem, Function Types.}{matching-function-types}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(y=5x+3\)\(\pi x - 6y = \sqrt{2}\)\(y=\frac{-1}{2}x+e\)&~~&Linear\tabularnewline\crulethin{1-1}\crulethin{3-3}
-&~~&Quadratic\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3-x\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=2^x\)&~~&Exponential\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3\)\(y=\sqrt{x}\)&~~&Power
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Linear%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=5x+3\)%
+\item{}\(\pi x - 6y = \sqrt{2}\)%
+\item{}\(y=\frac{-1}{2}x+e\)%
+\end{itemize}
+%
+\item{}Quadratic%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3-x\)%
+\end{itemize}
+%
+\item{}Exponential%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=2^x\)%
+\end{itemize}
+%
+\item{}Power%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3\)%
+\item{}\(y=\sqrt{x}\)%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.6}{Matching Problem, Popular Music History.}{matching-music-history}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-music-history-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Beatle%
+\begin{itemize}[label=$\circ$]
+\item{}Paul%
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Yardbirds%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Guitarist%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Drummer%
+\begin{itemize}[label=$\circ$]
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Flautist%
+\item{}Harpist%
+\item{}Pianist%
+\begin{itemize}[label=$\circ$]
+\item{}Elton%
+\end{itemize}
+%
+\item{}\emph{Some} "Math": \(\sin(x^2)\)%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}Jethro%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.13\space\textperiodcentered\space{}Clickable Area Exercises}
@@ -9681,7 +10446,7 @@ the quick brown fox jumped over the lazy dog
 Remember, the operator \mono{=} is used for assignment.%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises}
+\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises (Old Style)}
 \begin{divisionsolution}{Exercise}{5.18.2}{Fill-In, String and Number Answers.}{fillin-string-integer}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-string-integer-3-back}{}\quad{}Complete the following line of a Python program so that it will declare an integer variable \mono{age} with an initial value of \mono{5}. (These two answer blanks have been set to be very short.)%
@@ -9698,17 +10463,28 @@ An integer variable may be initialized to a value.%
 \par
 Any value in the interval \(0.333\pm 0.0005\) is correct.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.6}{Fill-In, New Markup Strings.}{fillin-strings-}%
+\par\medskip
+\noindent\textbf{\Large{}5.19\space\textperiodcentered\space{}Fill-In Exercises}
+\begin{divisionsolution}{Exercise}{5.19.2}{Fill-In, New Markup Strings.}{fillin-strings-}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--3-back}{}\quad{}The word I'm thinking about is ``magic''. What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{fillin-strings--3-back}{}\quad{}Do you really need a hint? Carefully reread the question.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--4-back}{}\quad{}The word I'm thinking about is hinted at by the image.%
+\par
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/cartoon-magic.jpg}
+\end{image}%
+%
+\par
+What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.8}{Fill-In, Javascript test of strings.}{fillin-jscmp-palindrome}%
+\begin{divisionsolution}{Exercise}{5.19.4}{Fill-In, Javascript test of strings.}{fillin-jscmp-palindrome}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-jscmp-palindrome-3-back}{}\quad{}What is an example of a palindrome? \fillintext{1}radar\fillintext{1}%
 \par
 Any word that is the same forward and backward is a palindrome.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.10}{Fill-In, Dynamic Math with Simple Numerical Answer.}{fillin-math-solve-equation}%
+\begin{divisionsolution}{Exercise}{5.19.6}{Fill-In, Dynamic Math with Simple Numerical Answer.}{fillin-math-solve-equation}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-solve-equation-3-back}{}\quad{}Solve the equation%
 \begin{equation*}
@@ -9720,7 +10496,7 @@ to get the value of \(x\).%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-solve-equation-4-back}{}\quad{}We want to isolate the \(x\) in the equation \(-2 x-6=0\). Because addition of \(-6\) is the last operation, we apply the inverse by adding \(6\) to both sides. The new, but equivalent equation is now \(-2x = 6\). Dividing both sides of the equation by \(-2\), we obtain the solution \(x=-3\).%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.12}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{fillin-math-decompose-function}%
+\begin{divisionsolution}{Exercise}{5.19.8}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{fillin-math-decompose-function}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-decompose-function-3-back}{}\quad{}Consider the function%
 \begin{equation*}
@@ -9735,10 +10511,25 @@ Find two nontrivial functions \(f(x)\) and \(g(x)\) so that \(h(x) = f(g(x))\).%
 This is not the only non-trivial composition. Can you find others?%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.20\space\textperiodcentered\space{}Exercises that are Timed}
+\noindent\textbf{\Large{}5.20\space\textperiodcentered\space{}Hodgepodge}
+\begin{divisionsolution}{Exercise}{5.20.2}{With Tasks in an Exercises Division.}{true-false-exercise-with-tasks-in-exercises}%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item[(a)]\lititle{True\slash{}False.}\par%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{true-false-task-in-exercises-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{true-false-task-in-exercises-5-back}{}\quad{}False.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{true-false-task-in-exercises-6-back}{}\quad{}False.%
+\par
+The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
+\end{enumerate}%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\Large{}5.21\space\textperiodcentered\space{}Exercises that are Timed}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Timed Exercises}
-\begin{divisionsolution}{Exercise}{5.20.2}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed}%
+\begin{divisionsolution}{Exercise}{5.21.2}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-timed-4-back}{}\quad{}What did you see last time you went driving?%
 \par\smallskip%
@@ -9758,12 +10549,12 @@ White might be hard to see.%
 %
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.25\space\textperiodcentered\space{}Runestone Assignment Testing}
+\noindent\textbf{\Large{}5.26\space\textperiodcentered\space{}Runestone Assignment Testing}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Exercises}
 \subparagraph[{An Exercise Group}]{An Exercise Group.}
 \begin{exercisegroup}
-\begin{divisionsolutioneg}{Exercise}{5.25.2}{}{exercisegroup-exercise-one}%
+\begin{divisionsolutioneg}{Exercise}{5.26.2}{}{exercisegroup-exercise-one}%
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{exercisegroup-exercise-one-2-back}{}\quad{}A.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{exercisegroup-exercise-one-3-back}{}\quad{}%
@@ -9777,6 +10568,18 @@ White might be hard to see.%
 \end{divisionsolutioneg}%
 \end{exercisegroup}
 \par\medskip\noindent
+\par\medskip
+\noindent\textbf{\Large{}5.30\space\textperiodcentered\space{}Timed Chapter Exam}
+\begin{divisionsolution}{Exercise}{5.30.2}{True\slash{}False.}{vector-space-dimension-timed-two}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-two-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{vector-space-dimension-timed-two-5-back}{}\quad{}False.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{vector-space-dimension-timed-two-6-back}{}\quad{}False.%
+\par
+The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
+\end{divisionsolution}%
 \end{solutions-chapter}
 %
 %
@@ -9999,7 +10802,28 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.2}{Multiple-Choice, Not Randomized, Multiple Answers.}{multiple-choice-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.2}{Multiple-Choice, Math in Feedback.}{multiple-choice-feedback-math}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-feedback-math-3-back}{}\quad{}D.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-feedback-math-4-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Have you accounted for the \(2\) and \(5\) that are in the original binomial?%
+\item{}\lititle{Incorrect.}\par%
+What should the exponents on \(2\) and \(5\) be when you expand \((2x+5xy^2)^4\)?%
+\item{}\lititle{Incorrect.}\par%
+Have you included something of the form \(\binom{n}{k}\) in your computations?%
+\item{}\lititle{Correct.}\par%
+Correct! Using the binomial theorem, we get a term containing the monomial \(x^4y^4\) by taking two of the first term, and two of the second term in the expansion of \((2x+5xy^2)^4\), and so this term is equal to%
+\begin{equation*}
+\binom{4}{2} (2x)^2 (5xy^2)^2 = 6 \cdot 2^2 5^2 x^4 y^4 = 600 x^4 y^4\text{.}
+\end{equation*}
+%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.3}{Multiple-Choice, Not Randomized, Multiple Answers.}{multiple-choice-multiple-answers}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{multiple-choice-multiple-answers-4-back}{}\quad{}Do you know the acronym\textellipsis{}\acronym{ROY G BIV} for the colors of a rainbow, and their order?%
 \par\smallskip%
@@ -10018,7 +10842,7 @@ Yes, green is one of the colors.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.3}{Multiple-Choice, Randomized, One Answer.}{multiple-choice-randomized}%
+\begin{divisionsolution}{Exercise}{5.9.4}{Multiple-Choice, Randomized, One Answer.}{multiple-choice-randomized}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-4-back}{}\quad{}What did you see last time you went driving?%
 \par\smallskip%
@@ -10037,7 +10861,26 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.4}{Multiple-Choice, Randomized, Multiple Answers.}{multiple-choice-randomized-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.5}{Multiple-Choice, Randomized, One Answer but with Checkboxes.}{multiple-choice-randomized-forced-checkbox}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-randomized-forced-checkbox-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-randomized-forced-checkbox-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-randomized-forced-checkbox-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-randomized-forced-checkbox-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+Yellow means slow down.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.6}{Multiple-Choice, Randomized, Multiple Answers.}{multiple-choice-randomized-multiple-answers}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{multiple-choice-randomized-multiple-answers-4-back}{}\quad{}Do you know the acronym\textellipsis{}\acronym{ROY G BIV} for the colors of a rainbow, and their order?%
 \par\smallskip%
@@ -10056,7 +10899,7 @@ Yes, green is one of the colors.%
 \end{enumerate}
 %
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.9.5}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{mathematical-multiple-choice-multiple-answers}%
+\begin{divisionsolution}{Exercise}{5.9.7}{Mathematical Multiple-Choice, Not Randomized, Multiple Answers.}{mathematical-multiple-choice-multiple-answers}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{mathematical-multiple-choice-multiple-answers-4-back}{}\quad{}You can take a derivative on any one of the choices to see if it is correct or not, rather than using techniques of integration to find \emph{a single} correct answer.%
 \par\smallskip%
@@ -10072,6 +10915,29 @@ The derivative given in the statement of the problem looks exactly like an appli
 Take a derivative on \(-\cos^2(x)\) to see that this answer is correct.  Extra credit: does this answer ``differ by a constant'' when subtracted from either of the other two correct answers?%
 \item{}\lititle{Incorrect.}\par%
 The antiderivative of a product is not the product of the antiderivatives.  Use the product rule to take a derivative and see that this answer is not correct.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.9.8}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-columns}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-columns-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-columns-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-columns-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-columns-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\item{}\lititle{Incorrect.}\par%
+Hmmmmmmm.%
+\item{}\lititle{Incorrect.}\par%
+I have never seen a pink road sign!%
 \end{enumerate}
 %
 \end{divisionsolution}%
@@ -10242,58 +11108,217 @@ SELECT * FROM test
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.12\space\textperiodcentered\space{}Matching Exercises}
-\begin{divisionsolution}{Exercise}{5.12.1}{Matching Problem, Dates.}{matching-dates}%
+\begin{divisionsolution}{Exercise}{5.12.1}{Cardsort Problem, Dates.}{matching-dates}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-Monroe Doctrine&~~&1823\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Haymarket Riot&~~&1886\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Louisiana Purchase&~~&1803\tabularnewline\crulethin{1-1}\crulethin{3-3}
-Battle of Gettysburg&~~&1863
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-dates-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}1823%
+\begin{itemize}[label=$\circ$]
+\item{}Monroe Doctrine%
+\end{itemize}
+%
+\item{}1886%
+\begin{itemize}[label=$\circ$]
+\item{}Haymarket Riot%
+\end{itemize}
+%
+\item{}1803%
+\begin{itemize}[label=$\circ$]
+\item{}Louisiana Purchase%
+\end{itemize}
+%
+\item{}1863%
+\begin{itemize}[label=$\circ$]
+\item{}Battle of Gettysburg%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.12.2}{Matching Problem, Derivatives.}{matching-derivatives}%
+\begin{divisionsolution}{Exercise}{5.12.2}{Cardsort Problem, Derivatives.}{matching-derivatives}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(x^3-6x^2+5\)&~~&\(3x^2-12x\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(x^{-3}\)&~~&\(-3x^{-4}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\((x+1)^2\)&~~&\(2x+2\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-derivatives-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(3x^2-12x\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^3-6x^2+5\)%
+\end{itemize}
+%
+\item{}\(-3x^{-4}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(x^{-3}\)%
+\end{itemize}
+%
+\item{}\(2x+2\)%
+\begin{itemize}[label=$\circ$]
+\item{}\((x+1)^2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.12.3}{Matching Problem, Linear Algebra.}{matching-bases}%
+\begin{divisionsolution}{Exercise}{5.12.3}{Cardsort Problem, Linear Algebra.}{matching-bases}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{matching-bases-4-back}{}\quad{}For openers, a basis for a subspace must be a \emph{subset} of the subspace.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)&~~&\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)&~~&\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-bases-5-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 3, -2, -2 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid - y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle -4, 3, 3\rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -3x - 5y + z = 0\right\}\)%
+\end{itemize}
+%
+\item{}\(\left\{\langle 3, -2, -2 \rangle, \langle 5, -4, -5 \rangle\right\}\)%
+\begin{itemize}[label=$\circ$]
+\item{}\(\left\{\langle x,y,z\rangle\mid -2x - 5y + 2z = 0\right\}\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.12.4}{Matching Problem, Function Types.}{matching-function-types}%
+\begin{divisionsolution}{Exercise}{5.12.4}{Cardsort Problem, Function Types.}{matching-function-types}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4-back}{}\quad{}\begin{center}%
-{\tabularfont%
-\begin{tabular}{lll}
-\(y=5x+3\)\(\pi x - 6y = \sqrt{2}\)\(y=\frac{-1}{2}x+e\)&~~&Linear\tabularnewline\crulethin{1-1}\crulethin{3-3}
-&~~&Quadratic\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3-x\)&~~&\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=2^x\)&~~&Exponential\tabularnewline\crulethin{1-1}\crulethin{3-3}
-\(y=x^3\)\(y=\sqrt{x}\)&~~&Power
-\end{tabular}
-}%
-\end{center}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-function-types-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Linear%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=5x+3\)%
+\item{}\(\pi x - 6y = \sqrt{2}\)%
+\item{}\(y=\frac{-1}{2}x+e\)%
+\end{itemize}
+%
+\item{}Quadratic%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3-x\)%
+\end{itemize}
+%
+\item{}Exponential%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=2^x\)%
+\end{itemize}
+%
+\item{}Power%
+\begin{itemize}[label=$\circ$]
+\item{}\(y=x^3\)%
+\item{}\(y=\sqrt{x}\)%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.5}{Matching Problem, Playing Cards.}{matching-playing-cards}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-playing-cards-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Ace%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\end{itemize}
+%
+\item{}King%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Queen%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Spades%
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Jack%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Heart%
+\begin{itemize}[label=$\circ$]
+\item{}Jack of Hearts%
+\end{itemize}
+%
+\item{}Diamond%
+\begin{itemize}[label=$\circ$]
+\item{}Queen of Diamonds%
+\end{itemize}
+%
+\item{}Club%
+\begin{itemize}[label=$\circ$]
+\item{}King of Clubs%
+\end{itemize}
+%
+\item{}Spade%
+\begin{itemize}[label=$\circ$]
+\item{}Ace of Spades%
+\item{}Queen of Spades%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.6}{Matching Problem, Popular Music History.}{matching-music-history}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{matching-music-history-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}Beatle%
+\begin{itemize}[label=$\circ$]
+\item{}Paul%
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Yardbirds%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Guitarist%
+\begin{itemize}[label=$\circ$]
+\item{}Eric%
+\end{itemize}
+%
+\item{}Drummer%
+\begin{itemize}[label=$\circ$]
+\item{}Ringo%
+\end{itemize}
+%
+\item{}Flautist%
+\item{}Harpist%
+\item{}Pianist%
+\begin{itemize}[label=$\circ$]
+\item{}Elton%
+\end{itemize}
+%
+\item{}\emph{Some} "Math": \(\sin(x^2)\)%
+\item{}(uncategorized)%
+\begin{itemize}[label=$\circ$]
+\item{}Jethro%
+\end{itemize}
+%
+\end{itemize}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.12.7}{Cardsort Problem, Basic Arithmetic.}{cardsort-basic}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{cardsort-basic-4-back}{}\quad{}%
+\begin{itemize}[label=\textbullet]
+\item{}5%
+\begin{itemize}[label=$\circ$]
+\item{}2 + 3%
+\item{}4 + 1%
+\end{itemize}
+%
+\item{}14%
+\begin{itemize}[label=$\circ$]
+\item{}\(12 + 2\)%
+\end{itemize}
+%
+\end{itemize}
+%
 \end{divisionsolution}%
 \par\medskip
 \noindent\textbf{\Large{}5.13\space\textperiodcentered\space{}Clickable Area Exercises}
@@ -10338,7 +11363,7 @@ This second table has no \mono{<area>}, in order to test CSS for tables.%
 \end{center}%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises}
+\noindent\textbf{\Large{}5.18\space\textperiodcentered\space{}Fill-In Exercises (Old Style)}
 \begin{divisionsolution}{Exercise}{5.18.1}{Fill-In, Integer Answer.}{fillin-integer}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-integer-3-back}{}\quad{}The game of bowling uses \fillintext{1}\(10\)\fillintext{1} pins that you try to knock down. (This answer blank has been set to be very wide.)%
@@ -10365,7 +11390,9 @@ An integer variable may be initialized to a value.%
 \par
 Any value in the interval \(0.333\pm 0.0005\) is correct.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.5}{Fill-In, New Markup Numbers.}{fillin-numbers-many-tests}%
+\par\medskip
+\noindent\textbf{\Large{}5.19\space\textperiodcentered\space{}Fill-In Exercises}
+\begin{divisionsolution}{Exercise}{5.19.1}{Fill-In, New Markup Numbers.}{fillin-numbers-many-tests}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-numbers-many-tests-3-back}{}\quad{}I love \(\pi\). What number am I thinking of, accurate to two decimal places?%
 \par
@@ -10373,27 +11400,36 @@ Any value in the interval \(0.333\pm 0.0005\) is correct.%
 \par
 The decimal approximation of \(\pi\) is \(3.1415926535\ldots\), but to two decimal places we write \(3.14\).%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.6}{Fill-In, New Markup Strings.}{fillin-strings-}%
+\begin{divisionsolution}{Exercise}{5.19.2}{Fill-In, New Markup Strings.}{fillin-strings-}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--3-back}{}\quad{}The word I'm thinking about is ``magic''. What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{fillin-strings--3-back}{}\quad{}Do you really need a hint? Carefully reread the question.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-strings--4-back}{}\quad{}The word I'm thinking about is hinted at by the image.%
+\par
+\begin{image}{0.25}{0.5}{0.25}{}%
+\includegraphics[width=\linewidth]{external/cartoon-magic.jpg}
+\end{image}%
+%
+\par
+What word am I thinking about? \fillintext{1}magic\fillintext{1} (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try ``pizzazz''.")%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.7}{Fill-In, Javascript test of numbers.}{ex-demo-jscmp-primes}%
+\begin{divisionsolution}{Exercise}{5.19.3}{Fill-In, Javascript test of numbers.}{ex-demo-jscmp-primes}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{ex-demo-jscmp-primes-3-back}{}\quad{}What is an example of a prime number less than 20? \fillintext{1}13\fillintext{1}%
 \par
 Any number from the list \(\{2, 3, 5, 7, 11, 13, 17, 19\}\) is a prime number less than 20.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.8}{Fill-In, Javascript test of strings.}{fillin-jscmp-palindrome}%
+\begin{divisionsolution}{Exercise}{5.19.4}{Fill-In, Javascript test of strings.}{fillin-jscmp-palindrome}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-jscmp-palindrome-3-back}{}\quad{}What is an example of a palindrome? \fillintext{1}radar\fillintext{1}%
 \par
 Any word that is the same forward and backward is a palindrome.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.9}{Fill-In, Simple Randomization with Numbers.}{fillin-random-simple}%
+\begin{divisionsolution}{Exercise}{5.19.5}{Fill-In, Simple Randomization with Numbers.}{fillin-random-simple}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{fillin-random-simple-3-back}{}\quad{}What is the square of \(x=7\)? \(x^2=\)\fillintext{1}\(49\)\fillintext{1}%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.10}{Fill-In, Dynamic Math with Simple Numerical Answer.}{fillin-math-solve-equation}%
+\begin{divisionsolution}{Exercise}{5.19.6}{Fill-In, Dynamic Math with Simple Numerical Answer.}{fillin-math-solve-equation}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-solve-equation-3-back}{}\quad{}Solve the equation%
 \begin{equation*}
@@ -10405,7 +11441,7 @@ to get the value of \(x\).%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-solve-equation-4-back}{}\quad{}We want to isolate the \(x\) in the equation \(-2 x-6=0\). Because addition of \(-6\) is the last operation, we apply the inverse by adding \(6\) to both sides. The new, but equivalent equation is now \(-2x = 6\). Dividing both sides of the equation by \(-2\), we obtain the solution \(x=-3\).%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.11}{Fill-In, Dynamic Math with Formulas as Answers.}{fillin-math-find-derivatives}%
+\begin{divisionsolution}{Exercise}{5.19.7}{Fill-In, Dynamic Math with Formulas as Answers.}{fillin-math-find-derivatives}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-find-derivatives-3-back}{}\quad{}Consider the function \(f(x)=-1 x^{5}-10\). Find \(f'(x)\) and \(f''(x)\).%
 \par
@@ -10413,7 +11449,7 @@ to get the value of \(x\).%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 2}.\hypertarget{fillin-math-find-derivatives-4-back}{}\quad{}The derivative of a constant is zero, so \(\frac{d}{dx}[-10]=0\). The term \(x^{5}\) is a power, so the power rule gives us \(\frac{d}{dx}[x^{5}]=5x^{4}\). Putting this together, we find \(f'(x)=-\left(5 x^{4}\right)\). Applying the power rule a second time, we find \(f''(x)=-\left(20 x^{3}\right)\).%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.18.12}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{fillin-math-decompose-function}%
+\begin{divisionsolution}{Exercise}{5.19.8}{Fill-In, Dynamic Math with Interdependent Formula Checking.}{fillin-math-decompose-function}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution 1}.\hypertarget{fillin-math-decompose-function-3-back}{}\quad{}Consider the function%
 \begin{equation*}
@@ -10428,8 +11464,8 @@ Find two nontrivial functions \(f(x)\) and \(g(x)\) so that \(h(x) = f(g(x))\).%
 This is not the only non-trivial composition. Can you find others?%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.19\space\textperiodcentered\space{}Hodgepodge}
-\begin{divisionsolution}{Exercise}{5.19.1}{With Tasks in an Exercises Division.}{true-false-exercise-with-tasks-in-exercises}%
+\noindent\textbf{\Large{}5.20\space\textperiodcentered\space{}Hodgepodge}
+\begin{divisionsolution}{Exercise}{5.20.2}{With Tasks in an Exercises Division.}{true-false-exercise-with-tasks-in-exercises}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item[(a)]\lititle{True\slash{}False.}\par%
 \par\smallskip%
@@ -10443,10 +11479,10 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 \end{enumerate}%
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.20\space\textperiodcentered\space{}Exercises that are Timed}
+\noindent\textbf{\Large{}5.21\space\textperiodcentered\space{}Exercises that are Timed}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Timed Exercises}
-\begin{divisionsolution}{Exercise}{5.20.1}{True\slash{}False.}{vector-space-dimension-timed}%
+\begin{divisionsolution}{Exercise}{5.21.1}{True\slash{}False.}{vector-space-dimension-timed}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
 \par\smallskip%
@@ -10456,7 +11492,7 @@ The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,
 \par
 The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
 \end{divisionsolution}%
-\begin{divisionsolution}{Exercise}{5.20.2}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed}%
+\begin{divisionsolution}{Exercise}{5.21.2}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-timed-4-back}{}\quad{}What did you see last time you went driving?%
 \par\smallskip%
@@ -10476,12 +11512,12 @@ White might be hard to see.%
 %
 \end{divisionsolution}%
 \par\medskip
-\noindent\textbf{\Large{}5.25\space\textperiodcentered\space{}Runestone Assignment Testing}
+\noindent\textbf{\Large{}5.26\space\textperiodcentered\space{}Runestone Assignment Testing}
 \par\medskip
 \noindent\textbf{\large{}\textperiodcentered\space{}Exercises}
 \subparagraph[{An Exercise Group}]{An Exercise Group.}
 \begin{exercisegroup}
-\begin{divisionsolutioneg}{Exercise}{5.25.2}{}{exercisegroup-exercise-one}%
+\begin{divisionsolutioneg}{Exercise}{5.26.2}{}{exercisegroup-exercise-one}%
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{exercisegroup-exercise-one-2-back}{}\quad{}A.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{exercisegroup-exercise-one-3-back}{}\quad{}%
@@ -10493,7 +11529,7 @@ White might be hard to see.%
 \end{enumerate}
 %
 \end{divisionsolutioneg}%
-\begin{divisionsolutioneg}{Exercise}{5.25.3}{}{exercisegroup-exercise-two}%
+\begin{divisionsolutioneg}{Exercise}{5.26.3}{}{exercisegroup-exercise-two}%
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{exercisegroup-exercise-two-2-back}{}\quad{}B.%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{exercisegroup-exercise-two-3-back}{}\quad{}%
@@ -10508,8 +11544,8 @@ White might be hard to see.%
 \end{exercisegroup}
 \par\medskip\noindent
 \par\medskip
-\noindent\textbf{\Large{}5.27\space\textperiodcentered\space{}Group Exercises}
-\begin{divisionsolution}{Exercise}{5.27.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-five}%
+\noindent\textbf{\Large{}5.28\space\textperiodcentered\space{}Group Exercises}
+\begin{divisionsolution}{Exercise}{5.28.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-five}%
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-five-4-back}{}\quad{}What did you see last time you went driving?%
 \par\smallskip%
@@ -10527,6 +11563,37 @@ Red is universally used for prohibited activities or serious warnings.%
 White might be hard to see.%
 \end{enumerate}
 %
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\Large{}5.30\space\textperiodcentered\space{}Timed Chapter Exam}
+\begin{divisionsolution}{Exercise}{5.30.1}{Multiple-Choice, Not Randomized, One Answer.}{multiple-choice-not-randomized-timed-two}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 1}.\hypertarget{multiple-choice-not-randomized-timed-two-4-back}{}\quad{}What did you see last time you went driving?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint 2}.\hypertarget{multiple-choice-not-randomized-timed-two-5-back}{}\quad{}Maybe go out for a drive?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{multiple-choice-not-randomized-timed-two-6-back}{}\quad{}B.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{multiple-choice-not-randomized-timed-two-7-back}{}\quad{}%
+\begin{enumerate}[label={\Alph*.}]
+\item{}\lititle{Incorrect.}\par%
+Green means ``go!''.%
+\item{}\lititle{Correct.}\par%
+Red is universally used for prohibited activities or serious warnings.%
+\item{}\lititle{Incorrect.}\par%
+White might be hard to see.%
+\end{enumerate}
+%
+\end{divisionsolution}%
+\begin{divisionsolution}{Exercise}{5.30.2}{True\slash{}False.}{vector-space-dimension-timed-two}%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{vector-space-dimension-timed-two-4-back}{}\quad{}\(P_n\), the vector space of polynomials with degree at most \(n\), has dimension \(n+1\) by \hyperref[theorem-exponent-laws]{Theorem~{\xreffont\ref{theorem-exponent-laws}}}.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter \(n\)?%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{vector-space-dimension-timed-two-5-back}{}\quad{}False.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{vector-space-dimension-timed-two-6-back}{}\quad{}False.%
+\par
+The vector space of all polynomials with finite degree has a basis, \(B = \{1,x,x^2,x^3,\dots\}\), which is infinte.%
 \end{divisionsolution}%
 \end{solutions-chapter}
 %

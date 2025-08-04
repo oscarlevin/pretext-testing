@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr" data-legacy-colorscheme="blue_red" data-darkmode="disabled">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-legacy                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Demo Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/css/theme-default-legacy.min.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="My Demo Book">
+<meta property="book:author" content="Me">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib/jquery.sticky.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib/jquery.espy.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/pretext.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/pretext_add_on.js?x=1"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/prefix-runtime.cc203fa52565b593.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/prefix-runestone.014cb392a13bd045.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/pretext-webwork/2.17/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/themes/prism.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.css" integrity="sha512-cbQXwDFK7lj2Fqfkuxbo5iD1dSbLlJGXGpfTDqbggqjHJeyzx88I3rfwjS38WJag/ihH7lzuGlGHpDBymLirZQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.css" integrity="sha512-nXlJLUeqPMp1Q3+Bd8Qds8tXeRVQscMscwysJm821C++9w6WtsFbJjPenZ8cQVMXyqSAismveQJc0C1splFDCA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/pretext_search.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-demo-book.html"><span class="title">My Demo Book</span> <span class="subtitle">An demo of PreTeXt features</span></a></h1>
+<p class="byline">Me</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="#backmatter-5" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="#frontmatter" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="#front-colophon" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="#frontmatter-4" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="#frontmatter-5" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="#frontmatter-preface" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="#frontmatter-7" class="internal"><span class="title">Not just that..</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-first-without-spaces" class="internal"><span class="codenumber">1</span> <span class="title">My First Chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="#sec-first-intro" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction to First Chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="#subsec-a-subsection" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A subsection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="#subsec-another-subsection" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Another Subsection</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-first-examples" class="internal"><span class="codenumber">1.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="#ex-first" class="internal"><span class="codenumber">1.3</span> <span class="title">My Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="#ch-empty" class="internal"><span class="codenumber">2</span> <span class="title">(No title)</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-features" class="internal"><span class="codenumber">3</span> <span class="title">Features</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-features-blocks" class="internal"><span class="codenumber">3.1</span> <span class="title">Environments and Blocks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-generate" class="internal"><span class="codenumber">4</span> <span class="title">PreTeXt features that require generation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-latex-image" class="internal"><span class="codenumber">4.1</span> <span class="title">LaTeX-Image Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-sageplot" class="internal"><span class="codenumber">4.2</span> <span class="title">SagePlot Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-asymptote" class="internal"><span class="codenumber">4.3</span> <span class="title">Asymptote Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-webwork" class="internal"><span class="codenumber">4.4</span> <span class="title">WeBWorK Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-mom" class="internal"><span class="codenumber">4.5</span> <span class="title">MyOpenMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-youtube" class="internal"><span class="codenumber">4.6</span> <span class="title">YouTube Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-interactive" class="internal"><span class="codenumber">4.7</span> <span class="title">Interactive Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-codelens" class="internal"><span class="codenumber">4.8</span> <span class="title">Codelens Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="#backmatter" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="#backmatter-2" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="#backmatter-3" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="#backmatter-4" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="#backmatter-5" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="#backmatter-6" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="my-demo-book"><section class="frontmatter" id="frontmatter"><h2 class="heading">
+<span class="title">My Demo Book</span><span class="subtitle">An demo of PreTeXt features</span>
+</h2>
+<div class="author">
+<div class="author-name">Me</div>
+<div class="author-info">My department<br>My school</div>
+</div>
+<div class="date">August 3, 2025</div>
+<section class="colophon" id="front-colophon"><h3 class="heading hide-type">
+<span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
+</h3>
+<div class="credit">
+<b class="title">Website</b> <a class="external" href="https://pretextbook.org" target="_blank">My Website</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-1-3-2"><summary class="ptx-footnote__number" title="Footnote 0.0.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-1-3-2"><code class="code-inline tex2jax_ignore">pretextbook.org</code></div></details>
+</div>
+<div class="para copyright">©2020–2022 Me</div>
+<div class="para license"> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a><details class="ptx-footnote" aria-live="polite" id="frontmatter-1-4-3-2"><summary class="ptx-footnote__number" title="Footnote 0.0.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="frontmatter-1-4-3-2"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by-sa/4.0</code></div></details>
+</div>
+<div class="autopermalink" data-description="Colophon"><a href="#front-colophon" title="Copy heading and permalink for Colophon" aria-label="Copy heading and permalink for Colophon">🔗</a></div></section><section class="dedication" id="frontmatter-4"><h3 class="heading hide-type">
+<span class="type">Dedication</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedication</span>
+</h3>
+<div class="para" id="frontmatter-4-1">For ...<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Dedication"><a href="#frontmatter-4" title="Copy heading and permalink for Dedication" aria-label="Copy heading and permalink for Dedication">🔗</a></div></section><section class="acknowledgement" id="frontmatter-5"><h3 class="heading hide-type">
+<span class="type">Acknowledgements</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Acknowledgements</span>
+</h3>
+<div class="para" id="frontmatter-5-1">I would like to thank...<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Acknowledgements"><a href="#frontmatter-5" title="Copy heading and permalink for Acknowledgements" aria-label="Copy heading and permalink for Acknowledgements">🔗</a></div></section><section class="preface" id="frontmatter-preface"><h3 class="heading hide-type">
+<span class="type">Preface</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preface</span>
+</h3>
+<div class="para" id="frontmatter-preface-1">About this book:<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-preface-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Preface"><a href="#frontmatter-preface" title="Copy heading and permalink for Preface" aria-label="Copy heading and permalink for Preface">🔗</a></div></section><section class="preface" id="frontmatter-7"><h3 class="heading hide-type">
+<span class="type">Preface</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Not just that..</span>
+</h3>
+<div class="para" id="frontmatter-7-2">I still have more to say!<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Preface: Not just that.."><a href="#frontmatter-7" title="Copy heading and permalink for Preface: Not just that.." aria-label="Copy heading and permalink for Preface: Not just that..">🔗</a></div></section><div class="autopermalink" data-description="Front Matter"><a href="#frontmatter" title="Copy heading and permalink for Front Matter" aria-label="Copy heading and permalink for Front Matter">🔗</a></div></section><section class="chapter" id="ch-first-without-spaces"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span>
+</h2>
+<section class="introduction" id="ch-first-without-spaces-2"><div class="para" id="ch-first-without-spaces-2-1">This is the introduction to the chapter<div class="autopermalink" data-description="Paragraph"><a href="#ch-first-without-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="section" id="sec-first-intro"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to First Chapter</span>
+</h3>
+<section class="introduction" id="sec-first-intro-2"><div class="para" id="sec-first-intro-2-1">Intro to section, because we will have subsections.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-first-intro-2-2">Another paragraph of the introduction.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-a-subsection"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A subsection</span>
+</h4>
+<div class="para" id="subsec-a-subsection-2">Content of the subsection.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-a-subsection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-a-subsection-3">More content.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-a-subsection-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.1: A subsection"><a href="#subsec-a-subsection" title="Copy heading and permalink for Subsection 1.1.1: A subsection" aria-label="Copy heading and permalink for Subsection 1.1.1: A subsection">🔗</a></div></section><section class="subsection" id="subsec-another-subsection"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Subsection</span>
+</h4>
+<div class="para" id="subsec-another-subsection-2">Text with some math: <span class="process-math">\(\sin(x) = \cos(x)\)</span> only for some values of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-another-subsection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.2: Another Subsection"><a href="#subsec-another-subsection" title="Copy heading and permalink for Subsection 1.1.2: Another Subsection" aria-label="Copy heading and permalink for Subsection 1.1.2: Another Subsection">🔗</a></div></section><section class="conclusion" id="sec-first-intro-5"><div class="para" id="sec-first-intro-5-1">After the last subsection, you might have a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Section 1.1: Introduction to First Chapter"><a href="#sec-first-intro" title="Copy heading and permalink for Section 1.1: Introduction to First Chapter" aria-label="Copy heading and permalink for Section 1.1: Introduction to First Chapter">🔗</a></div></section><section class="section" id="sec-first-examples"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples</span>
+</h3>
+<div class="para" id="sec-first-examples-2">Here is an example:<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-first-examples-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-first-examples-3-1-1">The statement of the example, since it will have a solution.  What is the solution?<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-first-examples-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-first-examples-3-2-1">This is the solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.1.1"><a href="#sec-first-examples-3-2" title="Copy heading and permalink for Solution 1.2.1.1" aria-label="Copy heading and permalink for Solution 1.2.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.2.1"><a href="#sec-first-examples-3" title="Copy heading and permalink for Example 1.2.1" aria-label="Copy heading and permalink for Example 1.2.1">🔗</a></div></article></details><div class="para" id="sec-first-examples-4">Here is another example, but without a solution<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-first-examples-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-first-examples-5-1">This is an example of an example without a solution (or hint or answer) so the paragraph doesn’t need to be inside a statement tag.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.2"><a href="#sec-first-examples-5" title="Copy heading and permalink for Example 1.2.2" aria-label="Copy heading and permalink for Example 1.2.2">🔗</a></div></article></details><div class="para" id="sec-first-examples-6">Although the next things are not examples, they give examples of blocks that are not examples.  First a theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-first-examples-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Theorem Title.</span>
+</h4>
+<div class="para" id="thm-first-examples-theorem-2-1">This is the statement of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#thm-first-examples-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.3: Theorem Title"><a href="#thm-first-examples-theorem" title="Copy heading and permalink for Theorem 1.2.3: Theorem Title" aria-label="Copy heading and permalink for Theorem 1.2.3: Theorem Title">🔗</a></div></article><details id="thm-first-examples-theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-first-examples-theorem-3-1">And this is its proof.<div class="autopermalink" data-description="Paragraph"><a href="#thm-first-examples-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.3.1"><a href="#thm-first-examples-theorem-3" title="Copy heading and permalink for Proof 1.2.3.1" aria-label="Copy heading and permalink for Proof 1.2.3.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-first-examples-corollary"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="cor-first-examples-corollary-1-1">A corollary that doesn’t need a proof.<div class="autopermalink" data-description="Paragraph"><a href="#cor-first-examples-corollary-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.2.4"><a href="#cor-first-examples-corollary" title="Copy heading and permalink for Corollary 1.2.4" aria-label="Copy heading and permalink for Corollary 1.2.4">🔗</a></div></article><div class="para" id="sec-first-examples-9">Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="remark-first-examples-context"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Larger Context.</span>
+</h4>
+<div class="para" id="remark-first-examples-context-2">Comment to the reader here.<div class="autopermalink" data-description="Paragraph"><a href="#remark-first-examples-context-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 1.2.5: Larger Context"><a href="#remark-first-examples-context" title="Copy heading and permalink for Remark 1.2.5: Larger Context" aria-label="Copy heading and permalink for Remark 1.2.5: Larger Context">🔗</a></div></article><div class="para" id="sec-first-examples-11">Of course, if you want more information, you might see <a href="#thm-first-examples-theorem" class="internal" title="Theorem 1.2.3: Theorem Title">Theorem 1.2.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.2: Examples"><a href="#sec-first-examples" title="Copy heading and permalink for Section 1.2: Examples" aria-label="Copy heading and permalink for Section 1.2: Examples">🔗</a></div></section><section class="exercises" id="ex-first"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-first-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-first-2-1-1">Is this an exercise?<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-first-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-first-2-2-1">Yes.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.1"><a href="#ex-first-2-2" title="Copy heading and permalink for Answer 1.3.1.1" aria-label="Copy heading and permalink for Answer 1.3.1.1">🔗</a></div>
+</div></details><details id="ex-first-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-first-2-3-1">It is, but not a very good one.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3.1.1"><a href="#ex-first-2-3" title="Copy heading and permalink for Solution 1.3.1.1" aria-label="Copy heading and permalink for Solution 1.3.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Exercise 1.3.1"><a href="#ex-first-2" title="Copy heading and permalink for Exercise 1.3.1" aria-label="Copy heading and permalink for Exercise 1.3.1">🔗</a></div></article><article class="exercise exercise-like" id="ex-first-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-first-3-1-1">Another, with a hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-first-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="ex-first-3-2-1">The hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.3.2.1"><a href="#ex-first-3-2" title="Copy heading and permalink for Hint 1.3.2.1" aria-label="Copy heading and permalink for Hint 1.3.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1.3.2"><a href="#ex-first-3" title="Copy heading and permalink for Exercise 1.3.2" aria-label="Copy heading and permalink for Exercise 1.3.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.3: My Exercises"><a href="#ex-first" title="Copy heading and permalink for Exercises 1.3: My Exercises" aria-label="Copy heading and permalink for Exercises 1.3: My Exercises">🔗</a></div></section><div class="autopermalink" data-description="Chapter 1: My First Chapter"><a href="#ch-first-without-spaces" title="Copy heading and permalink for Chapter 1: My First Chapter" aria-label="Copy heading and permalink for Chapter 1: My First Chapter">🔗</a></div></section><section class="chapter" id="ch-empty"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(No title)</span>
+</h2>
+<div class="para" id="ch-empty-2">Try adding your own content here! This chapter doesn’t have sections.<div class="autopermalink" data-description="Paragraph"><a href="#ch-empty-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Chapter 2: (No title)"><a href="#ch-empty" title="Copy heading and permalink for Chapter 2: (No title)" aria-label="Copy heading and permalink for Chapter 2: (No title)">🔗</a></div></section><section class="chapter" id="ch-features"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Features</span>
+</h2>
+<section class="section" id="sec-features-blocks"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Environments and Blocks</span>
+</h3>
+<article class="theorem theorem-like" id="sec-features-blocks-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec-features-blocks-2-1-1">Theorem statement.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.1"><a href="#sec-features-blocks-2" title="Copy heading and permalink for Theorem 3.1.1" aria-label="Copy heading and permalink for Theorem 3.1.1">🔗</a></div></article><details id="sec-features-blocks-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-features-blocks-2-2-1">Proof of theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.1.1"><a href="#sec-features-blocks-2-2" title="Copy heading and permalink for Proof 3.1.1.1" aria-label="Copy heading and permalink for Proof 3.1.1.1">🔗</a></div></article></details><details id="sec-features-blocks-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"> <div class="para" id="sec-features-blocks-3-1-2">Statement of example<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-features-blocks-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-features-blocks-3-2-1">The solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-features-blocks-3-2-2">Another paragraph.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1.2.1"><a href="#sec-features-blocks-3-2" title="Copy heading and permalink for Solution 3.1.2.1" aria-label="Copy heading and permalink for Solution 3.1.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.1.2"><a href="#sec-features-blocks-3" title="Copy heading and permalink for Example 3.1.2" aria-label="Copy heading and permalink for Example 3.1.2">🔗</a></div></article></details><div class="para" id="sec-features-blocks-4">Now a figure.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec-features-blocks-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/frog.jpg" class="contained" alt="A nice-looking frog with a longish description."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A frog<div class="autopermalink" data-description="Figure 3.1.3"><a href="#sec-features-blocks-5" title="Copy heading and permalink for Figure 3.1.3" aria-label="Copy heading and permalink for Figure 3.1.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 3.1: Environments and Blocks"><a href="#sec-features-blocks" title="Copy heading and permalink for Section 3.1: Environments and Blocks" aria-label="Copy heading and permalink for Section 3.1: Environments and Blocks">🔗</a></div></section><div class="autopermalink" data-description="Chapter 3: Features"><a href="#ch-features" title="Copy heading and permalink for Chapter 3: Features" aria-label="Copy heading and permalink for Chapter 3: Features">🔗</a></div></section><section class="chapter" id="ch-generate"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PreTeXt features that require generation</span>
+</h2>
+<section class="introduction" id="ch-generate-2"><div class="para" id="ch-generate-2-1">Here we demonstrate various kinds of assets.<div class="autopermalink" data-description="Paragraph"><a href="#ch-generate-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="section" id="sec-latex-image"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">LaTeX-Image Example</span>
+</h3>
+<figure class="figure figure-like" id="fig-tikz"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 61 58" role="img" class="contained" aria-label="A 5-cycle"><title>A 5-cycle</title><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M-26.95966 8.75974-16.66179-22.93315H16.66179L26.95966 8.75974 0 28.3468-26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M-24.9671 8.75974C-24.9671 9.86021-25.85918 10.75229-26.95966 10.75229-28.06012 10.75229-28.95221 9.86021-28.95221 8.75974-28.95221 7.65927-28.06012 6.76718-26.95966 6.76718-25.85918 6.76718-24.9671 7.65927-24.9671 8.75974ZM-26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M-14.66924-22.93315C-14.66924-21.83267-15.56131-20.9406-16.66179-20.9406-17.76225-20.9406-18.65434-21.83267-18.65434-22.93315-18.65434-24.03362-17.76225-24.9257-16.66179-24.9257-15.56131-24.9257-14.66924-24.03362-14.66924-22.93315ZM-16.66179-22.93315"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M18.65434-22.93315C18.65434-21.83267 17.76225-20.9406 16.66179-20.9406 15.56131-20.9406 14.66924-21.83267 14.66924-22.93315 14.66924-24.03362 15.56131-24.9257 16.66179-24.9257 17.76225-24.9257 18.65434-24.03362 18.65434-22.93315ZM16.66179-22.93315"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M28.95221 8.75974C28.95221 9.86021 28.06012 10.75229 26.95966 10.75229 25.85918 10.75229 24.9671 9.86021 24.9671 8.75974 24.9671 7.65927 25.85918 6.76718 26.95966 6.76718 28.06012 6.76718 28.95221 7.65927 28.95221 8.75974ZM26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M1.99255 28.3468C1.99255 29.44728 1.10046 30.33936 0 30.33936-1.10046 30.33936-1.99255 29.44728-1.99255 28.3468-1.99255 27.24634-1.10046 26.35425 0 26.35425 1.10046 26.35425 1.99255 27.24634 1.99255 28.3468ZM0 28.3468"></path></svg></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph <span class="process-math">\(C_5\)</span> made by TikZ<div class="autopermalink" data-description="Figure 4.1.1"><a href="#fig-tikz" title="Copy heading and permalink for Figure 4.1.1" aria-label="Copy heading and permalink for Figure 4.1.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.1: LaTeX-Image Example"><a href="#sec-latex-image" title="Copy heading and permalink for Section 4.1: LaTeX-Image Example" aria-label="Copy heading and permalink for Section 4.1: LaTeX-Image Example">🔗</a></div></section><section class="section" id="sec-sageplot"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">SagePlot Examples</span>
+</h3>
+<figure class="figure figure-like" id="fig-sage2d"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/sageplot-example-diagram.svg" role="img" class="contained" alt="A parabola"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The parabola <span class="process-math">\(y=x^2\)</span> made by SageMath<div class="autopermalink" data-description="Figure 4.2.1"><a href="#fig-sage2d" title="Copy heading and permalink for Figure 4.2.1" aria-label="Copy heading and permalink for Figure 4.2.1">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="fig-sage3d"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><iframe width="480" height="480" src="generated/sageplot/sageplot3d-example-diagram.html"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The paraboloid <span class="process-math">\(z=x^2+y^2\)</span> made by SageMath<div class="autopermalink" data-description="Figure 4.2.2"><a href="#fig-sage3d" title="Copy heading and permalink for Figure 4.2.2" aria-label="Copy heading and permalink for Figure 4.2.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.2: SagePlot Examples"><a href="#sec-sageplot" title="Copy heading and permalink for Section 4.2: SagePlot Examples" aria-label="Copy heading and permalink for Section 4.2: SagePlot Examples">🔗</a></div></section><section class="section" id="sec-asymptote"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Asymptote Example</span>
+</h3>
+<figure class="figure figure-like" id="fig-asymptote"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">
+<div class="asymptote-box" style="padding-top: 50.2204856696948%"><iframe src="generated/asymptote/cflag.html" class="asymptote"></iframe></div>
+<div class="image-archive"><a href="generated/asymptote/cflag.asy">asy</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Canada<div class="autopermalink" data-description="Figure 4.3.1"><a href="#fig-asymptote" title="Copy heading and permalink for Figure 4.3.1" aria-label="Copy heading and permalink for Figure 4.3.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.3: Asymptote Example"><a href="#sec-asymptote" title="Copy heading and permalink for Section 4.3: Asymptote Example" aria-label="Copy heading and permalink for Section 4.3: Asymptote Example">🔗</a></div></section><section class="section" id="sec-webwork"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">WeBWorK Example</span>
+</h3>
+<details id="sec-webwork-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="RE9DVU1FTlQoKTsKbG9hZE1hY3JvcygiUEdzdGFuZGFyZC5wbCIsIlBHTUwucGwiLCJBbnN3ZXJGb3JtYXRIZWxwLnBsIiwiUEdjb3Vyc2UucGwiLCk7VEVYVChiZWdpbnByb2JsZW0oKSk7CkNvbnRleHQoJ051bWVyaWMnKTskYSA9IENvbXB1dGUocmFuZG9tKDEsIDksIDEpKTsKJGIgPSBDb21wdXRlKHJhbmRvbSgxLCA5LCAxKSk7CiRjID0gJGEgKyAkYjsKCkJFR0lOX1BHTUwKQ29tcHV0ZSB0aGUgc3VtIG9mIFtgCiAgICAgICAgICAgICAgICBbJGFdCiAgICAgICAgICAgIGBdIGFuZCBbYAogICAgICAgICAgICAgICAgWyRiXQogICAgICAgICAgICBcdGV4dHs6fWBdCgpbYFskYV0gKyBbJGJdID1gXSBbX117JGN9ezV9CgoKRU5EX1BHTUwKCkJFR0lOX1BHTUxfSElOVApBZGQgW2AKICAgICAgICAgICAgICAgIFskYV0KICAgICAgICAgICAgYF0gYW5kIFtgCiAgICAgICAgICAgICAgICBbJGJdCiAgICAgICAgICAgIGBdIHRvZ2V0aGVyLgoKCkVORF9QR01MX0hJTlQKCkJFR0lOX1BHTUxfU09MVVRJT04KW2BbJGFdICsgWyRiXSA9IFskY11cdGV4dHsufWBdCgoKRU5EX1BHTUxfU09MVVRJT04KCkVORERPQ1VNRU5UKCk7" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-2-1-1-1">Compute the sum of <span class="process-math">\({2}\)</span> and <span class="process-math">\({4}
+\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-2-1-1-2">
+<span class="process-math">\({2} + {4} =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="extracted-webwork-2-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="extracted-webwork-2-1-2-1">Add <span class="process-math">\({2}\)</span> and <span class="process-math">\({4}\)</span> together.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.4.1.1"><a href="#extracted-webwork-2-1-2" title="Copy heading and permalink for Hint 4.4.1.1" aria-label="Copy heading and permalink for Hint 4.4.1.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.4.1"><a href="#sec-webwork-2" title="Copy heading and permalink for Checkpoint 4.4.1" aria-label="Copy heading and permalink for Checkpoint 4.4.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.4: WeBWorK Example"><a href="#sec-webwork" title="Copy heading and permalink for Section 4.4: WeBWorK Example" aria-label="Copy heading and permalink for Section 4.4: WeBWorK Example">🔗</a></div></section><section class="section" id="sec-mom"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">MyOpenMath</span>
+</h3>
+<details id="sec-mom-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sec-mom-2-1"><div class="para" id="sec-mom-2-1-1">Here is a problem from MyOpenMath.<div class="autopermalink" data-description="Paragraph"><a href="#sec-mom-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="momsec-mom-2-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momsec-mom-2-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=2572&amp;frame_id=momsec-mom-2-2"></iframe></div>
+<div class="autopermalink" data-description="Checkpoint 4.5.1"><a href="#sec-mom-2" title="Copy heading and permalink for Checkpoint 4.5.1" aria-label="Copy heading and permalink for Checkpoint 4.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.5: MyOpenMath"><a href="#sec-mom" title="Copy heading and permalink for Section 4.5: MyOpenMath" aria-label="Copy heading and permalink for Section 4.5: MyOpenMath">🔗</a></div></section><section class="section" id="sec-youtube"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">YouTube Example</span>
+</h3>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&amp;modestbranding=1&amp;rel=0" id="sec-youtube-2"></iframe></div>
+<div class="autopermalink" data-description="Section 4.6: YouTube Example"><a href="#sec-youtube" title="Copy heading and permalink for Section 4.6: YouTube Example" aria-label="Copy heading and permalink for Section 4.6: YouTube Example">🔗</a></div></section><section class="section" id="sec-interactive"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interactive Example</span>
+</h3>
+<figure class="figure figure-like" id="sec-interactive-2"><iframe id="interactive-infinity" width="360" height="360" src="interactive-infinity-if.html"></iframe><div class="instructions"><details id="interactive-infinity-2" class="solution-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Instructions<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><div class="solution-like knowl__content">
+<div class="para" id="interactive-infinity-2-1">Drag the sliders to change the pattern, and drag any of the four red corners to change the overall shape.<div class="autopermalink" data-description="Paragraph"><a href="#interactive-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Instructions"><a href="#interactive-infinity-2" title="Copy heading and permalink for Instructions" aria-label="Copy heading and permalink for Instructions">🔗</a></div>
+</div></details></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Infinity, from the JSXGraph Showcase<div class="autopermalink" data-description="Figure 4.7.1"><a href="#sec-interactive-2" title="Copy heading and permalink for Figure 4.7.1" aria-label="Copy heading and permalink for Figure 4.7.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.7: Interactive Example"><a href="#sec-interactive" title="Copy heading and permalink for Section 4.7: Interactive Example" aria-label="Copy heading and permalink for Section 4.7: Interactive Example">🔗</a></div></section><section class="section" id="sec-codelens"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Codelens Example</span>
+</h3>
+<figure class="listing figure-like" id="sieve-python"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Finding primes<div class="autopermalink" data-description="Listing 4.8.1: Finding primes"><a href="#sieve-python" title="Copy heading and permalink for Listing 4.8.1: Finding primes" aria-label="Copy heading and permalink for Listing 4.8.1: Finding primes">🔗</a></div></figcaption><div class="listing__contents"><div class="ptx-runestone-container"><div class="runestone codelens">
+<div class="cd_section" data-component="codelens" data-question_label=""><div class="pytutorVisualizer" id="rs-sieve-codelens-python" data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'></div></div>
+<script src="generated/trace/sieve-codelens-python.js"></script>
+</div></div></div></figure><div class="autopermalink" data-description="Section 4.8: Codelens Example"><a href="#sec-codelens" title="Copy heading and permalink for Section 4.8: Codelens Example" aria-label="Copy heading and permalink for Section 4.8: Codelens Example">🔗</a></div></section><div class="autopermalink" data-description="Chapter 4: PreTeXt features that require generation"><a href="#ch-generate" title="Copy heading and permalink for Chapter 4: PreTeXt features that require generation" aria-label="Copy heading and permalink for Chapter 4: PreTeXt features that require generation">🔗</a></div></section><section class="backmatter" id="backmatter"><section class="solutions" id="backmatter-2"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selected Hints</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.3: My Exercises">
+<span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span><br><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para">The hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.3.2.1"><a href="#ex-first-3-2" title="Copy heading and permalink for Hint 1.3.2.1" aria-label="Copy heading and permalink for Hint 1.3.2.1">🔗</a></div>
+</div></details></div></article><div class="autopermalink" data-description="Appendix A: Selected Hints"><a href="#backmatter-2" title="Copy heading and permalink for Appendix A: Selected Hints" aria-label="Copy heading and permalink for Appendix A: Selected Hints">🔗</a></div></section><section class="solutions" id="backmatter-3"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selected Solutions</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.3: My Exercises">
+<span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span><br><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">It is, but not a very good one.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3.1.1"><a href="#ex-first-2-3" title="Copy heading and permalink for Solution 1.3.1.1" aria-label="Copy heading and permalink for Solution 1.3.1.1">🔗</a></div>
+</div></details></div></article><div class="autopermalink" data-description="Appendix B: Selected Solutions"><a href="#backmatter-3" title="Copy heading and permalink for Appendix B: Selected Solutions" aria-label="Copy heading and permalink for Appendix B: Selected Solutions">🔗</a></div></section><section class="appendix" id="backmatter-4"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">C</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">List of Symbols</span>
+</h3>
+<table class="notation-list"><tr>
+<th>Symbol</th>
+<th>Description</th>
+<th>Location</th>
+</tr></table>
+<div class="autopermalink" data-description="Appendix C: List of Symbols"><a href="#backmatter-4" title="Copy heading and permalink for Appendix C: List of Symbols" aria-label="Copy heading and permalink for Appendix C: List of Symbols">🔗</a></div></section><section class="index" id="backmatter-5"><h3 class="heading hide-type">
+<span class="type">Index</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Index</span>
+</h3>
+<div class="indexletter" id="indexletter-t"><div class="indexitem">Testing<span class="indexknowl"> <a href="#sec-features-blocks-3" class="internal" title="Example 3.1.2">Example</a></span>
+</div></div>
+<div class="autopermalink" data-description="Index: Index"><a href="#backmatter-5" title="Copy heading and permalink for Index: Index" aria-label="Copy heading and permalink for Index: Index">🔗</a></div></section><section class="colophon" id="backmatter-6"><h3 class="heading hide-type">
+<span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
+</h3>
+<div class="para" id="backmatter-6-1">This book was authored in PreTeXt.<div class="autopermalink" data-description="Paragraph"><a href="#backmatter-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Colophon"><a href="#backmatter-6" title="Copy heading and permalink for Colophon" aria-label="Copy heading and permalink for Colophon">🔗</a></div></section><div class="autopermalink" data-description="Back Matter: Backmatter"><a href="#backmatter" title="Copy heading and permalink for Back Matter: Backmatter" aria-label="Copy heading and permalink for Back Matter: Backmatter">🔗</a></div></section><div class="autopermalink" data-description="Book: My Demo Book"><a href="#my-demo-book" title="Copy heading and permalink for Book: My Demo Book" aria-label="Copy heading and permalink for Book: My Demo Book">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<script>var ptx_lunr_search_style = "textbook";
+var ptx_lunr_docs = [
+{
+  "id": "my-demo-book",
+  "level": "1",
+  "url": "#my-demo-book",
+  "type": "Book",
+  "number": "",
+  "title": "My Demo Book",
+  "body": "  My Demo Book  An demo of PreTeXt features     Me My department My school  My Website  copyright     For ...    I would like to thank...      About this book:     Not just that..  I still have more to say!          My First Chapter     This is the introduction to the chapter        Introduction to First Chapter   Intro to section, because we will have subsections.  Another paragraph of the introduction.    A subsection  Content of the subsection.  More content.    Another Subsection  Text with some math: only for some values of .    After the last subsection, you might have a conclusion.     Examples  Here is an example:    The statement of the example, since it will have a solution. What is the solution?    This is the solution.    Here is another example, but without a solution   This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.   Although the next things are not examples, they give examples of blocks that are not examples. First a theorem.   Theorem Title   This is the statement of the theorem.    And this is its proof.      A corollary that doesn't need a proof.    Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.   Larger Context  Comment to the reader here.   Of course, if you want more information, you might see .      My Exercises    Is this an exercise?    Yes.    It is, but not a very good one.      Another, with a hint.    The hint.          (No title)  Try adding your own content here! This chapter doesn't have sections.         Features   Environments and Blocks This is a paragraph. \\begin{definition} The definition of a definition. \\term{Defined term}. \\textbf{Bold text}. \\end{definition} \\begin{theorem} Theorem statement. \\end{theorem} \\begin{proof} Proof of theorem. \\end{proof} \\par Another paragraph.   Theorem statement.    Proof of theorem.      Testing  Statement of example    The solution. Another paragraph.   Now a figure.   A frog   A nice-looking frog with a longish description.           PreTeXt features that require generation   Here we demonstrate various kinds of assets.    LaTeX-Image Example   The graph made by TikZ   A 5-cycle       SagePlot Examples   The parabola made by SageMath   A parabola      The paraboloid made by SageMath   A paraboloid       Asymptote Example   Canada   Image of a Canadian flag       WeBWorK Example     Compute the sum of and     Add and together.                 MyOpenMath    Here is a problem from MyOpenMath.       YouTube Example     Interactive Example    Infinity, from the JSXGraph Showcase      Codelens Example   Finding primes   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)        Backmatter   Selected Hints    Selected Solutions    List of Symbols     Index     This book was authored in PreTeXt .    "
+},
+{
+  "id": "sec-first-examples-3",
+  "level": "2",
+  "url": "#sec-first-examples-3",
+  "type": "Example",
+  "number": "1.2.1",
+  "title": "",
+  "body": "  The statement of the example, since it will have a solution. What is the solution?    This is the solution.   "
+},
+{
+  "id": "sec-first-examples-5",
+  "level": "2",
+  "url": "#sec-first-examples-5",
+  "type": "Example",
+  "number": "1.2.2",
+  "title": "",
+  "body": " This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.  "
+},
+{
+  "id": "thm-first-examples-theorem",
+  "level": "2",
+  "url": "#thm-first-examples-theorem",
+  "type": "Theorem",
+  "number": "1.2.3",
+  "title": "Theorem Title.",
+  "body": " Theorem Title   This is the statement of the theorem.    And this is its proof.   "
+},
+{
+  "id": "cor-first-examples-corollary",
+  "level": "2",
+  "url": "#cor-first-examples-corollary",
+  "type": "Corollary",
+  "number": "1.2.4",
+  "title": "",
+  "body": "  A corollary that doesn't need a proof.   "
+},
+{
+  "id": "remark-first-examples-context",
+  "level": "2",
+  "url": "#remark-first-examples-context",
+  "type": "Remark",
+  "number": "1.2.5",
+  "title": "Larger Context.",
+  "body": " Larger Context  Comment to the reader here.  "
+},
+{
+  "id": "ex-first-2",
+  "level": "2",
+  "url": "#ex-first-2",
+  "type": "Exercise",
+  "number": "1.3.1",
+  "title": "",
+  "body": "  Is this an exercise?    Yes.    It is, but not a very good one.   "
+},
+{
+  "id": "ex-first-3",
+  "level": "2",
+  "url": "#ex-first-3",
+  "type": "Exercise",
+  "number": "1.3.2",
+  "title": "",
+  "body": "  Another, with a hint.    The hint.   "
+},
+{
+  "id": "sec-features-blocks-2",
+  "level": "2",
+  "url": "#sec-features-blocks-2",
+  "type": "Theorem",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Theorem statement.    Proof of theorem.   "
+},
+{
+  "id": "sec-features-blocks-3",
+  "level": "2",
+  "url": "#sec-features-blocks-3",
+  "type": "Example",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Testing  Statement of example    The solution. Another paragraph.   "
+},
+{
+  "id": "sec-features-blocks-5",
+  "level": "2",
+  "url": "#sec-features-blocks-5",
+  "type": "Figure",
+  "number": "3.1.3",
+  "title": "",
+  "body": " A frog   A nice-looking frog with a longish description.   "
+},
+{
+  "id": "fig-tikz",
+  "level": "2",
+  "url": "#fig-tikz",
+  "type": "Figure",
+  "number": "4.1.1",
+  "title": "",
+  "body": " The graph made by TikZ   A 5-cycle    "
+},
+{
+  "id": "fig-sage2d",
+  "level": "2",
+  "url": "#fig-sage2d",
+  "type": "Figure",
+  "number": "4.2.1",
+  "title": "",
+  "body": " The parabola made by SageMath   A parabola    "
+},
+{
+  "id": "fig-sage3d",
+  "level": "2",
+  "url": "#fig-sage3d",
+  "type": "Figure",
+  "number": "4.2.2",
+  "title": "",
+  "body": " The paraboloid made by SageMath   A paraboloid    "
+},
+{
+  "id": "fig-asymptote",
+  "level": "2",
+  "url": "#fig-asymptote",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Canada   Image of a Canadian flag    "
+},
+{
+  "id": "sec-webwork-2",
+  "level": "2",
+  "url": "#sec-webwork-2",
+  "type": "Checkpoint",
+  "number": "4.4.1",
+  "title": "",
+  "body": "   Compute the sum of and     Add and together.              "
+},
+{
+  "id": "sec-mom-2",
+  "level": "2",
+  "url": "#sec-mom-2",
+  "type": "Checkpoint",
+  "number": "4.5.1",
+  "title": "",
+  "body": "  Here is a problem from MyOpenMath.    "
+},
+{
+  "id": "sec-interactive-2",
+  "level": "2",
+  "url": "#sec-interactive-2",
+  "type": "Figure",
+  "number": "4.7.1",
+  "title": "",
+  "body": " Infinity, from the JSXGraph Showcase   "
+},
+{
+  "id": "sieve-python",
+  "level": "2",
+  "url": "#sieve-python",
+  "type": "Listing",
+  "number": "4.8.1",
+  "title": "Finding primes",
+  "body": " Finding primes   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)   "
+}
+]
+
+var ptx_lunr_idx = lunr(function () {
+  this.ref('id')
+  this.field('title')
+  this.field('body')
+  this.metadataWhitelist = ['position']
+
+  ptx_lunr_docs.forEach(function (doc) {
+    this.add(doc)
+  }, this)
+})
+</script>
+</body>
+</html>
