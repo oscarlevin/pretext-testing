@@ -4834,11 +4834,74 @@ var ptx_lunr_docs = [
   "body": "  Jackfruit   "
 },
 {
+  "id": "section-handouts",
+  "level": "1",
+  "url": "section-handouts.html",
+  "type": "Section",
+  "number": "36",
+  "title": "Handouts",
+  "body": " Handouts   About Handouts  Like worksheets, a handout is a division that is inteded to be printed for use in a classroom. In HTML output, you get the same print preview and page layout as you do with worksheets; in PDF, these will start on a new page with possibly different margins than the rest of the document.  Unlike worksheets, handouts do not have a special class of exercises or activities (exercises in a handout are treated like an inline exercise). The other main distinction is that a handout lets workspace be specified on pretty much any block or paragraph element, not just exercises, tasks, and project-like elements. This allows them to be used in the creation of guided notes containing some premade content with lots of space for students to fill in details during class.    Derivative Rules    Rules for specific types of functions    Constant functions       Power functions     Exponential functions          Logarithmic functions     Trigonometric functions  .   .  .  .  .      Rules for combinations of functions    Constant multiples       Sum and difference       Products (the product rule)       Quotients (the quotient rule)       Compositions (the chain rule)           Guided Notes: Derivatives of sums   Today we will explore how to take the derivative of the sum of two functions. For example, if , what is ? What two functions is this the sum of? What are the derivatives of each of those functions?  To be sure of the derivative of the sum, we should use the definition of the derivative.   Definition of the Derivative   The derivative of a function at any point is defined as...    Now let's apply this definition to the function . We have:  What should the general rule be?      For any two differentiable functions and , the derivative of their sum is given by:    Let and be differentiable functions and let . Then by the limit definition of the derivative,      Find the derivative of .      Find the derivative of .      Find the derivative of .      "
+},
+{
+  "id": "section-handouts-2-2",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "handout "
+},
+{
+  "id": "section-handouts-4-2-3",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-4-2-3",
+  "type": "Definition",
+  "number": "36.1",
+  "title": "Definition of the Derivative.",
+  "body": " Definition of the Derivative   The derivative of a function at any point is defined as...   "
+},
+{
+  "id": "section-handouts-4-3-1",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-4-3-1",
+  "type": "Theorem",
+  "number": "36.2",
+  "title": "",
+  "body": "  For any two differentiable functions and , the derivative of their sum is given by:    Let and be differentiable functions and let . Then by the limit definition of the derivative,   "
+},
+{
+  "id": "section-handouts-4-3-2",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-4-3-2",
+  "type": "Example",
+  "number": "36.3",
+  "title": "",
+  "body": "  Find the derivative of .   "
+},
+{
+  "id": "section-handouts-4-3-3",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-4-3-3",
+  "type": "Example",
+  "number": "36.4",
+  "title": "",
+  "body": "  Find the derivative of .   "
+},
+{
+  "id": "section-handouts-4-3-4",
+  "level": "2",
+  "url": "section-handouts.html#section-handouts-4-3-4",
+  "type": "Example",
+  "number": "36.5",
+  "title": "",
+  "body": "  Find the derivative of .   "
+},
+{
   "id": "section-exercises-single",
   "level": "1",
   "url": "section-exercises-single.html",
   "type": "Section",
-  "number": "36",
+  "number": "37",
   "title": "Exercises, One Subsection",
   "body": " Exercises, One Subsection  This <section> of the sample article demonstrates an unstructured division. There are no <subsection> , you are just reading the first two paragraphs, followed by some nonsense text. Then there is a single  <exercises> division. Note that this division is not numbered (since it is unique within the <section> ). And a cross-reference to one of the contained <exercise> will be numbered as a member of the <section> , .  If you use the unstructured form of a division, and have both inline and divisional exercises, there is a potential to form ambiguous cross-references. To wit, check that and are really different exercises (which you are unable to do if you are reading this in print!). The solution is to include the type of exercise in the reference, which will assist everybody, but especially your print readers: and .  Compare this section with the similar , next. The following text is mostly nonsense, just for testing purposes.   Inline One   Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.    Pellentesque nec condimentum ligula, quis interdum mauris. Ut sed urna lacinia, aliquam arcu id, faucibus nisi. Suspendisse potenti. Curabitur in erat ultricies, condimentum mi nec, vehicula mauris. Duis faucibus risus fermentum velit hendrerit, non laoreet massa maximus. Donec bibendum elit ac lectus lobortis luctus. Ut finibus, dolor ut euismod tristique, ligula tortor tempus arcu, finibus semper purus erat ut ligula. Aenean accumsan ut ante vel euismod.   Inline Two  Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.    Major Result  Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.    Inline Three   Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.     Exercise Collection   Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   A figure in an <exercise> in an unstructured division to test that it is numbered as if the containing <exercises> is not present     A side-by-side in a figure in an <exercise> in an unstructured division to test that it is numbered as if the containing <exercises> is not present and to test the numbering of the panels in a solutions manual    First Panel, subcaptioned     Second Panel, subcaptioned        First Panel, not subcaptioned     Second Panel, not subcaptioned        Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   Testing numbering, figure in a <exercise> in an un-numbered <exercises>       Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.     Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.      An introduction to an exercisegroup . This is here to attempt to interrupt the flow of the counting from this division to the next.    Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.      Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.     Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.      More Reading   Left intentionally blank, just checking sectioning.   David C. Lay, Subspaces and Echelon Forms . The College Mathematics Journal , January 1993, 24  1 , 57 62.   "
 },
@@ -4847,7 +4910,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#section-exercises-single-5",
   "type": "Checkpoint",
-  "number": "36.1",
+  "number": "37.1",
   "title": "Inline One.",
   "body": " Inline One   Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.   "
 },
@@ -4856,7 +4919,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#duplicate-inline",
   "type": "Checkpoint",
-  "number": "36.2",
+  "number": "37.2",
   "title": "Inline Two.",
   "body": " Inline Two  Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.  "
 },
@@ -4865,7 +4928,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#section-exercises-single-8",
   "type": "Theorem",
-  "number": "36.3",
+  "number": "37.3",
   "title": "Major Result.",
   "body": " Major Result  Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.  "
 },
@@ -4874,7 +4937,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#section-exercises-single-9",
   "type": "Checkpoint",
-  "number": "36.4",
+  "number": "37.4",
   "title": "Inline Three.",
   "body": " Inline Three   Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.   "
 },
@@ -4883,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-2",
   "type": "Exercise",
-  "number": "36.1",
+  "number": "37.1",
   "title": "Drill One.",
   "body": " Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   A figure in an <exercise> in an unstructured division to test that it is numbered as if the containing <exercises> is not present     A side-by-side in a figure in an <exercise> in an unstructured division to test that it is numbered as if the containing <exercises> is not present and to test the numbering of the panels in a solutions manual    First Panel, subcaptioned     Second Panel, subcaptioned        First Panel, not subcaptioned     Second Panel, not subcaptioned      "
 },
@@ -4892,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#duplicate-divisional",
   "type": "Exercise",
-  "number": "36.2",
+  "number": "37.2",
   "title": "Drill Two.",
   "body": " Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   Testing numbering, figure in a <exercise> in an un-numbered <exercises>     "
 },
@@ -4901,7 +4964,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-4",
   "type": "Exercise",
-  "number": "36.3",
+  "number": "37.3",
   "title": "Drill Three.",
   "body": " Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -4910,7 +4973,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-challenging-one-unstructured",
   "type": "Exercise",
-  "number": "36.4",
+  "number": "37.4",
   "title": "Challenging One.",
   "body": " Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -4919,7 +4982,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-6-2",
   "type": "Exercise",
-  "number": "36.5",
+  "number": "37.5",
   "title": "Challenging Two.",
   "body": " Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -4928,7 +4991,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-6-3",
   "type": "Exercise",
-  "number": "36.6",
+  "number": "37.6",
   "title": "Challenging Three.",
   "body": " Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -4937,7 +5000,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-7",
   "type": "Exercise",
-  "number": "36.7",
+  "number": "37.7",
   "title": "Impossible One.",
   "body": " Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -4946,7 +5009,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-8",
   "type": "Exercise",
-  "number": "36.8",
+  "number": "37.8",
   "title": "Impossible Two.",
   "body": " Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -4955,7 +5018,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-single.html#exercise-collection-9",
   "type": "Exercise",
-  "number": "36.9",
+  "number": "37.9",
   "title": "Impossible Three.",
   "body": " Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -4964,7 +5027,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-structured.html",
   "type": "Exercises",
-  "number": "37",
+  "number": "38",
   "title": "Exercise Section, Structured",
   "body": " Exercise Section, Structured   A collection of exercises, in a top-level <exercises> division, structured with <subexercises> .    Easy Exercises   Arithmetic   Compute .        Trigonometry   Compute .      Hard Problems   Number Theory   Prove Fermat's Last Theorem.     Millenial   Find general solutions to the Navier-Stokes equation.      With an Exercise Group    This is an exercise group, and this is its introduction.    One      Subtract.     Two        Outside exercisegroup, inside subexercises   6+5     "
 },
@@ -4973,7 +5036,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#exercises-structured-3-2",
   "type": "Exercise",
-  "number": "37.1",
+  "number": "38.1",
   "title": "Arithmetic.",
   "body": " Arithmetic   Compute .      "
 },
@@ -4982,7 +5045,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#exercises-structured-3-3",
   "type": "Exercise",
-  "number": "37.2",
+  "number": "38.2",
   "title": "Trigonometry.",
   "body": " Trigonometry   Compute .   "
 },
@@ -4991,7 +5054,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#hard-subexercises-2",
   "type": "Exercise",
-  "number": "37.3",
+  "number": "38.3",
   "title": "Number Theory.",
   "body": " Number Theory   Prove Fermat's Last Theorem.   "
 },
@@ -5000,7 +5063,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#hard-subexercises-3",
   "type": "Exercise",
-  "number": "37.4",
+  "number": "38.4",
   "title": "Millenial.",
   "body": " Millenial   Find general solutions to the Navier-Stokes equation.   "
 },
@@ -5009,7 +5072,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#exercises-structured-5-2-2",
   "type": "Exercise",
-  "number": "37.5",
+  "number": "38.5",
   "title": "One.",
   "body": " One      Subtract.   "
 },
@@ -5018,7 +5081,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#exercises-structured-5-2-3",
   "type": "Exercise",
-  "number": "37.6",
+  "number": "38.6",
   "title": "Two.",
   "body": " Two     "
 },
@@ -5027,7 +5090,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-structured.html#exercises-structured-5-3",
   "type": "Exercise",
-  "number": "37.7",
+  "number": "38.7",
   "title": "Outside exercisegroup, inside subexercises.",
   "body": " Outside exercisegroup, inside subexercises   6+5   "
 },
@@ -5036,7 +5099,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "section-exercises-multiple.html",
   "type": "Section",
-  "number": "38",
+  "number": "39",
   "title": "Exercises, Multiple Subsections",
   "body": " Exercises, Multiple Subsections   This <section> of the sample article demonstrates a structured division. You are reading the introduction to the division, then there is a faux <subsection> , followed by three <exercises> divisions. Note that the three are numbered as if they are also fellow <subsection> . And a cross-reference to one of the contained <exercise> will be numbered use the number of the <subsection> , .  Compare this section with the similar , previous. The following text is mostly nonsense, just for testing purposes.    Faux Subsection   Inline One   Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.    Pellentesque nec condimentum ligula, quis interdum mauris. Ut sed urna lacinia, aliquam arcu id, faucibus nisi. Suspendisse potenti. Curabitur in erat ultricies, condimentum mi nec, vehicula mauris. Duis faucibus risus fermentum velit hendrerit, non laoreet massa maximus. Donec bibendum elit ac lectus lobortis luctus. Ut finibus, dolor ut euismod tristique, ligula tortor tempus arcu, finibus semper purus erat ut ligula. Aenean accumsan ut ante vel euismod.   Inline Two   Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.     Major Result  Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.    Inline Three   Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.      Drill Exercises   Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   A figure in an <exercise> in a structured division to test that it is numbered with consideration of the containing <exercises>       Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.      Challenging Exercises   Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.      An introduction to an exercisegroup . This is here to attempt to interrupt the flow of the counting from this division to the next.    Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.       Impossible Exercises   Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.     Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.      Layout challenge    A multicolumn exercisegroup with layout challenges. The first two should be on one row. The next two should be on one row until the hint is opened. Then one that takes up an entire row. The final row should always have two exercises.                       OPEN ME!                       More Reading   Left intentionally blank, just checking sectioning.   David C. Lay, Subspaces and Echelon Forms . The College Mathematics Journal , January 1993, 24  1 , 57 62.   "
 },
@@ -5045,7 +5108,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-3-2",
   "type": "Checkpoint",
-  "number": "38.1",
+  "number": "39.1",
   "title": "Inline One.",
   "body": " Inline One   Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.   "
 },
@@ -5054,7 +5117,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-3-4",
   "type": "Checkpoint",
-  "number": "38.2",
+  "number": "39.2",
   "title": "Inline Two.",
   "body": " Inline Two   Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.   "
 },
@@ -5063,7 +5126,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-3-5",
   "type": "Theorem",
-  "number": "38.3",
+  "number": "39.3",
   "title": "Major Result.",
   "body": " Major Result  Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.  "
 },
@@ -5072,7 +5135,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#exercise-duplicate-inline",
   "type": "Checkpoint",
-  "number": "38.4",
+  "number": "39.4",
   "title": "Inline Three.",
   "body": " Inline Three   Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.   "
 },
@@ -5081,7 +5144,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#exercises-drill-2",
   "type": "Exercise",
-  "number": "38.2.1",
+  "number": "39.2.1",
   "title": "Drill One.",
   "body": " Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   A figure in an <exercise> in a structured division to test that it is numbered with consideration of the containing <exercises>     "
 },
@@ -5090,7 +5153,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#exercises-drill-3",
   "type": "Exercise",
-  "number": "38.2.2",
+  "number": "39.2.2",
   "title": "Drill Two.",
   "body": " Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -5099,7 +5162,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#exercises-drill-4",
   "type": "Exercise",
-  "number": "38.2.3",
+  "number": "39.2.3",
   "title": "Drill Three.",
   "body": " Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5108,7 +5171,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#exercise-challenging-one-structured",
   "type": "Exercise",
-  "number": "38.3.1",
+  "number": "39.3.1",
   "title": "Challenging One.",
   "body": " Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -5117,7 +5180,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-5-3-2",
   "type": "Exercise",
-  "number": "38.3.2",
+  "number": "39.3.2",
   "title": "Challenging Two.",
   "body": " Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -5126,7 +5189,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-5-3-3",
   "type": "Exercise",
-  "number": "38.3.3",
+  "number": "39.3.3",
   "title": "Challenging Three.",
   "body": " Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5135,7 +5198,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-6-2",
   "type": "Exercise",
-  "number": "38.4.1",
+  "number": "39.4.1",
   "title": "Impossible One.",
   "body": " Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -5144,7 +5207,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-6-3",
   "type": "Exercise",
-  "number": "38.4.2",
+  "number": "39.4.2",
   "title": "Impossible Two.",
   "body": " Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -5153,7 +5216,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-6-4",
   "type": "Exercise",
-  "number": "38.4.3",
+  "number": "39.4.3",
   "title": "Impossible Three.",
   "body": " Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5162,7 +5225,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-2",
   "type": "Exercise",
-  "number": "38.5.1",
+  "number": "39.5.1",
   "title": "",
   "body": "    "
 },
@@ -5171,7 +5234,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-3",
   "type": "Exercise",
-  "number": "38.5.2",
+  "number": "39.5.2",
   "title": "",
   "body": "    "
 },
@@ -5180,7 +5243,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-4",
   "type": "Exercise",
-  "number": "38.5.3",
+  "number": "39.5.3",
   "title": "",
   "body": "    "
 },
@@ -5189,7 +5252,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-5",
   "type": "Exercise",
-  "number": "38.5.4",
+  "number": "39.5.4",
   "title": "",
   "body": "     OPEN ME!    "
 },
@@ -5198,7 +5261,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-6",
   "type": "Exercise",
-  "number": "38.5.5",
+  "number": "39.5.5",
   "title": "",
   "body": "    "
 },
@@ -5207,7 +5270,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-7",
   "type": "Exercise",
-  "number": "38.5.6",
+  "number": "39.5.6",
   "title": "",
   "body": "    "
 },
@@ -5216,7 +5279,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-exercises-multiple.html#section-exercises-multiple-7-2-8",
   "type": "Exercise",
-  "number": "38.5.7",
+  "number": "39.5.7",
   "title": "",
   "body": "    "
 },
@@ -5225,7 +5288,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-top-level.html",
   "type": "Exercises",
-  "number": "39",
+  "number": "40",
   "title": "Exercises, Top-Level",
   "body": " Exercises, Top-Level    This <exercises> of the sample article is a peer of all the preceding <section> and is the only such <exercises> . As such, it is not numbered, and contains only <exercise> , but for this <introduction> you are reading. The <exercises> contained within will be numbered in cross-references according to the enclosing division, in this case the entire article and so without any qualification, to wit, .    Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.     Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   Testing numbering in a <exercises> without a number       Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.     Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.      An introduction to an exercisegroup . This is here to attempt to interrupt the flow of the counting from this division to the next.    Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.      Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.     Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.     Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.     An Exercise in a Section   Exercises can appear in a section of their own. You need to give the section a title, even if it seems obvious what to call it. Individual exercises may have titles, as you choose. Problem: How should we hide solutions?    Maybe a global switch should be used to suppress solutions, while a separate processing regime could use them as part of a solutions manual.     An Exercise with a Hard-Coded Problem Number   Compute the definite integral , not as an approximate value from a Riemann sum, but as an exact value based of the limit by using the Fundamental Theorem.    An antiderivative of is , so by the FTC, !?! This is indeed an exciting result, but we are mostly interested in seeing that the sentence-ending punctuation is absorbed properly into the displayed equation.      Can you prove Corollary directly? If not consider that a problem could have several parts, which should be formatted as a second-level list, since the problems normally get numbered at the top level.  Why is this result a Corollary?  Could you interchange the Theorem and Corollary?      MVT  Consider the definite integral as an area function and employ the Mean Value Theorem.     Motivator  Think harder!     Helpful   It follows easily.  Yes.      We could prove either result first, then obtain the other as an easy consequence.    "
 },
@@ -5234,7 +5297,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-3",
   "type": "Exercise",
-  "number": "39.1",
+  "number": "40.1",
   "title": "Drill One.",
   "body": " Drill One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -5243,7 +5306,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-4",
   "type": "Exercise",
-  "number": "39.2",
+  "number": "40.2",
   "title": "Drill Two.",
   "body": " Drill Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   Testing numbering in a <exercises> without a number     "
 },
@@ -5252,7 +5315,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-5",
   "type": "Exercise",
-  "number": "39.3",
+  "number": "40.3",
   "title": "Drill Three.",
   "body": " Drill Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5261,7 +5324,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercise-challenging-one-top",
   "type": "Exercise",
-  "number": "39.4",
+  "number": "40.4",
   "title": "Challenging One.",
   "body": " Challenging One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -5270,7 +5333,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-7-2",
   "type": "Exercise",
-  "number": "39.5",
+  "number": "40.5",
   "title": "Challenging Two.",
   "body": " Challenging Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.  Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -5279,7 +5342,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-7-3",
   "type": "Exercise",
-  "number": "39.6",
+  "number": "40.6",
   "title": "Challenging Three.",
   "body": " Challenging Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5288,7 +5351,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-8",
   "type": "Exercise",
-  "number": "39.7",
+  "number": "40.7",
   "title": "Impossible One.",
   "body": " Impossible One   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.   "
 },
@@ -5297,7 +5360,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-9",
   "type": "Exercise",
-  "number": "39.8",
+  "number": "40.8",
   "title": "Impossible Two.",
   "body": " Impossible Two   Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.   "
 },
@@ -5306,7 +5369,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-10",
   "type": "Exercise",
-  "number": "39.9",
+  "number": "40.9",
   "title": "Impossible Three.",
   "body": " Impossible Three   Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.   "
 },
@@ -5315,7 +5378,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-11",
   "type": "Exercise",
-  "number": "39.10",
+  "number": "40.10",
   "title": "An Exercise in a Section.",
   "body": " An Exercise in a Section   Exercises can appear in a section of their own. You need to give the section a title, even if it seems obvious what to call it. Individual exercises may have titles, as you choose. Problem: How should we hide solutions?    Maybe a global switch should be used to suppress solutions, while a separate processing regime could use them as part of a solutions manual.   "
 },
@@ -5324,7 +5387,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercise-with-hardcoded-number",
   "type": "Exercise",
-  "number": "39.42a",
+  "number": "40.42a",
   "title": "An Exercise with a Hard-Coded Problem Number.",
   "body": " An Exercise with a Hard-Coded Problem Number   Compute the definite integral , not as an approximate value from a Riemann sum, but as an exact value based of the limit by using the Fundamental Theorem.    An antiderivative of is , so by the FTC, !?! This is indeed an exciting result, but we are mostly interested in seeing that the sentence-ending punctuation is absorbed properly into the displayed equation.   "
 },
@@ -5333,7 +5396,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-top-level.html#exercises-top-level-13",
   "type": "Exercise",
-  "number": "39.12",
+  "number": "40.12",
   "title": "",
   "body": "  Can you prove Corollary directly? If not consider that a problem could have several parts, which should be formatted as a second-level list, since the problems normally get numbered at the top level.  Why is this result a Corollary?  Could you interchange the Theorem and Corollary?      MVT  Consider the definite integral as an area function and employ the Mean Value Theorem.     Motivator  Think harder!     Helpful   It follows easily.  Yes.      We could prove either result first, then obtain the other as an easy consequence.   "
 },
