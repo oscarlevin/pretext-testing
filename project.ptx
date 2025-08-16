@@ -25,6 +25,9 @@
       <target name="ww-pdf" format="pdf" source="webwork/sample-chapter/sample-chapter.ptx" publication="projects/webwork/sample-chapter/publisher/publication.xml" deploy="yes"/>
       <target name="ww-min-web" format="html" source="webwork/minimal/mini.ptx" publication="projects/webwork/minimal/publication.xml" deploy="yes"/>
 
+      <!-- Braille testing -->
+      <target name="braille" format="braille" source="braille/braille-test.xml" publication="projects/braille/publication.xml" deploy="yes"/>
+
       <!-- Journal testing -->
       <target name="sa-ams" format="latex" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ams.xml" deploy="yes"/>
       <target name="sa-ams-pdf" format="pdf" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-ams.xml" deploy="yes"/>
