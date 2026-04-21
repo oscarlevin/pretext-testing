@@ -62,6 +62,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- 2025-06-03: "chicago-fullnote" uses footnotes/endnotes, and       -->
         <!-- therefore should throw an error as an unsupported style, and halt -->
         <!-- <citation-stylesheet-language style="chicago-fullnote-bibliography-with-ibid"/> -->
+        <!-- If desired, defaults for mermaid theme and layout engine -->
+        <!-- can be specifed. These values can be overriden in a      -->
+        <!-- diagram using config: frontmatter                        -->
+        <!-- <mermaid theme="forest" layout-engine="elk"/> -->
     </common>
 
     <!-- we use customizations-two for the oscarlevin style example -->
@@ -118,7 +122,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- <knowl proof="no" example="no" example-solution="no" exercise-inline="no"/> -->
         <!-- Specify the theme for the HTML.                       -->
         <!-- See the guide for options                             -->
-        <css theme="default-modern" palette="blue-red"/>
+        <css theme="denver"/>
+        <!-- <css theme="default-modern" palette="blue-red"/> -->
         <!-- Magic IDs identify HTML pages to analytics services   -->
         <!-- Presence implies relevant Javascript will be added    -->
         <!-- StatCounter requires both values to be set            -->
@@ -143,7 +148,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- suggest how the text can be changed/specified.)                      -->
         <feedback href="http://example.com/not-implemented.html"><!-- My Button Text --></feedback>
         <!-- A "portable" build is meant to be a single file that is transportable -->
-        <!-- <platform portable="yes"/> -->
+        <!--<platform portable="yes"/>-->
+        <!-- Banner options, these default to "yes" but can be set to -->
+        <!-- "no" toremove the indicated element from the top banner  -->
+        <banner byline="yes" subtitle="yes"/>
     </html>
 
     <!-- 10pt font is the default   -->

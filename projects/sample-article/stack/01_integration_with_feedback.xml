@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<quiz xmlns="https://stack-assessment.org/2025/">
+<!-- (2025-12-19) We want this question files to not require any      -->
+<!-- additional preparation, specifically this namespace declaration  -->
+<!-- should not be here.  Removing it will lead to many errors, so we -->
+<!-- are working on a better solution.                                -->
+<quiz xmlns="http://stack-assessment.org/2025/moodle-question">
 <!-- question: 17332  -->
   <question type="stack">
     <name>
