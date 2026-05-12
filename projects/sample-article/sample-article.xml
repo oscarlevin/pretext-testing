@@ -22,8 +22,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- Overall element for a Mathbook XML document; mandatory, always  -->
 <!-- Experiment with the "xml:lang" attribute to see localization    -->
 <!-- changes, the  xsl/localizations  directory has more information -->
-<!-- Note: unwind xi:include use once STACK questions settle down -->
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+<pretext>
 <!-- <pretext xml:lang="ku-CKB"> -->    <!-- an RTL language -->
 <!-- <pretext xml:lang="pt-BR"> -->
 <!-- <pretext xml:lang="fr-FR"> -->
@@ -56,7 +55,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <math-package latex-name="cancel" mathjax-name="cancel"/>
         <!-- Superior bevelled/slanted fractions in LaTeX output (only) -->
         <math-package latex-name="xfrac" mathjax-name=""/>
-        <math-package latex-name="extpfeil" mathjax-name="extpfeil"/>
+        <!-- 2026-03-04: once we tested the "extpfeil" package but it     -->
+        <!-- is a bad actor in LaTeX files, loading "amssymb" and using   -->
+        <!-- "calc" with a redefined \setlength (or something like that). -->
+        <!-- We tested this device here with an "\xmapsto" macro in math. -->
         <!--
         TeX/LaTeX macros can be written in the usual way.
         Whitespace and line breaks are irrelevant here.
@@ -400,9 +402,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <section xml:id="section-sage-cells" label="section-sage-cells">
             <title>Computing Integrals with Sage (<m>\int</m>)</title>
-            <!-- A version of the title with no markup at all,     -->
-            <!-- math is now a Unicode symbol for an integral sign -->
-            <plaintitle>Computing Integrals with Sage (&#x222B;)</plaintitle>
+            <!-- A version of the title with no markup at all, in -->
+            <!-- order to cooperate with an (optional) math font  -->
+            <shorttitle>Computing Integrals with Sage</shorttitle>
             <!-- Index testing, semi-realistic -->
             <idx><h>Sage</h><h>integration</h></idx>
             <idx><h>Sage</h><h>integration</h><h>cell</h></idx>
@@ -2005,8 +2007,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <mrow>\nabla \cdot \vec{\mathbf{B}} &amp; = 0</mrow>
                 </md><notation><usage><m>\nabla</m></usage><description>gradient operator</description></notation></p>
 
-                <p>Historically, we provided internal support for the <latex/> package <c>extpfeil</c>.  As of 2023-10-19 this has become an author election (see the <tag>docinfo</tag> section in the source of this document).  We preeserve a small test that this extensible arrows library is being included properly:<md>A\xmapsto[\text{bijection}]{\Phi+\Psi+\Theta}B</md></p>
-
                 <p>Look back at the top of the source file of this document to see how to include your <tex/> macros just once.  For best results keep your macros simple and semantic.</p>
 
                 <p><pretext/> once provided modest built-in support for <q>slanted</q>, or <q>beveled</q>, or <q>nice</q> fractions.  To wit, we mean fractions such as: <m>\sfrac{3}{8}</m>.  Use the pre-defined <c>\sfrac{}{}</c> macro in your mathematics to achieve this presentation.  The presentation in HTML is subpar, but could improve as MathJax provides support.  It is now an author's responsibility to add support for superior typesetting for <init>PDF</init> output by loading the <c>xfrac</c> <latex/> package with the following in <tag>docinfo</tag>:<cd>
@@ -2219,6 +2219,43 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </md>
                 </p>
 
+            <p>Now for some more testing of the <tag>intertext</tag> feature. Numbering some equations, and not others, requires some care in the conversion to <latex/>.</p>
+
+            <p>
+            First, a numbered equation in the first group of equations.
+                <md>
+                    <mrow number="yes">A &amp; = B + C</mrow>
+                    <intertext>Intertext: between first and second equations.</intertext>
+                    <mrow>P &amp; = Q + R</mrow>
+                    <intertext>Intertext: between second and third equations.</intertext>
+                    <mrow>X &amp; = Y + Z</mrow>
+                </md>
+            Second, a numbered equation in the intermediate group of equations.
+                <md>
+                    <mrow>A &amp; = B + C</mrow>
+                    <intertext>Intertext: between first and second equations.</intertext>
+                    <mrow number="yes">P &amp; = Q + R</mrow>
+                    <intertext>Intertext: between second and third equations.</intertext>
+                    <mrow>X &amp; = Y + Z</mrow>
+                </md>
+            Third, a numbered equation in the final group of equations.
+                <md>
+                    <mrow>A &amp; = B + C</mrow>
+                    <intertext>Intertext: between first and second equations.</intertext>
+                    <mrow>P &amp; = Q + R</mrow>
+                    <intertext>Intertext: between second and third equations.</intertext>
+                    <mrow number="yes">X &amp; = Y + Z</mrow>
+                </md>
+            Fourth, no numbered equations at all.
+                <md>
+                    <mrow>A &amp; = B + C</mrow>
+                    <intertext>Intertext: between first and second equations.</intertext>
+                    <mrow>P &amp; = Q + R</mrow>
+                    <intertext>Intertext: between second and third equations.</intertext>
+                    <mrow>X &amp; = Y + Z</mrow>
+                </md>
+            </p>
+
                 <p>This is a poorly-authored paragaph to test the conversion to <init>HTML</init>.  There are two displayed equations, separated by a period ending the first one's sentence, which should migrate into the display, and not leave behind an empty paragraph: <md>z+y = z</md>.  <md>a + b = c</md>.  This final sentence should remain, inside another <init>HTML</init> paragraph, without the second equation's period.</p>
             </subsection>
 
@@ -2352,6 +2389,58 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             </subsection>
 
+            <subsection xml:id="subsection-special-characters-text-mode" label="subsection-special-characters-text-mode">
+                <title>Special Characters in Text Mode</title>
+
+                <p><latex/> designates ten characters as <term>special</term> because they carry syntactic meaning.  When these characters appear inside text-mode macros (such as <c>\text{}</c>) within mathematics, they must be escaped to produce their literal glyph.  Seven of the ten have simple single-character escapes and are demonstrated in the following table.  The remaining three (<c>~</c>, <c>^</c>, <c>\</c>) require macros from <latex/>'s <c>textcomp</c> package (<c>\textasciitilde</c>, <c>\textasciicircum</c>, <c>\textbackslash</c>) which are not available in MathJax's text mode as of 2026-04-03.</p>
+
+                <tabular halign="center">
+                    <row header="yes" bottom="major">
+                        <cell>Character</cell>
+                        <cell>Escaped form</cell>
+                        <cell>Rendered</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Hash <c>#</c></cell>
+                        <cell><c>\#</c></cell>
+                        <cell><m>\text{5\#}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Ampersand <c>&amp;</c></cell>
+                        <cell><c>\&amp;</c></cell>
+                        <cell><m>\text{P \&amp; Q}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Percent <c>%</c></cell>
+                        <cell><c>\%</c></cell>
+                        <cell><m>\text{5\%}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Dollar <c>$</c></cell>
+                        <cell><c>\$</c></cell>
+                        <cell><m>\text{\$3}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Underscore <c>_</c></cell>
+                        <cell><c>\_</c></cell>
+                        <cell><m>\text{x\_1}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Left brace <c>{</c></cell>
+                        <cell><c>\{</c></cell>
+                        <cell><m>\text{\{a, b\}}</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>Right brace <c>}</c></cell>
+                        <cell><c>\}</c></cell>
+                        <cell><m>\text{\{a, b\}}</m></cell>
+                    </row>
+                </tabular>
+
+                <p>The hash character also requires escaping within the <c>\tag{}</c> macro.  See <xref ref="equation-local-hash"/> for an example where the <c>tag="dhash"</c> attribute produces a double hash as an equation tag.</p>
+
+            </subsection>
+
             <subsection xml:id="miscellaneous-math">
                 <title>Miscellaneous</title>
 
@@ -2381,7 +2470,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <objectives>
                 <title>Our goals</title>
-                <p>A minimal <tag>objective</tag>.</p>
+                <introduction>
+                    <p>A minimal <tag>objective</tag>.</p>
+                </introduction>
                 <ul>
                   <li>Stress test HTML themes</li>
                   <li>Locally, test objectives</li>
@@ -2508,27 +2599,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <title>Axiom-like Blocks</title>
                 <axiom>
                     <title>A title</title>
-                    <p>A minimal <tag>axiom</tag>.</p>
+                    <statement><p>A minimal <tag>axiom</tag>.</p></statement>
                 </axiom>
                 <conjecture>
                     <title>A title</title>
-                    <p>A minimal <tag>conjecture</tag>.</p>
+                    <statement><p>A minimal <tag>conjecture</tag>.</p></statement>
                 </conjecture>
                 <principle>
                     <title>A title</title>
-                    <p>A minimal <tag>principle</tag>.</p>
+                    <statement><p>A minimal <tag>principle</tag>.</p></statement>
                 </principle>
                 <heuristic>
                     <title>A title</title>
-                    <p>A minimal <tag>heuristic</tag>.</p>
+                    <statement><p>A minimal <tag>heuristic</tag>.</p></statement>
                 </heuristic>
                 <hypothesis>
                     <title>A title</title>
-                    <p>A minimal <tag>hypothesis</tag>.</p>
+                    <statement><p>A minimal <tag>hypothesis</tag>.</p></statement>
                 </hypothesis>
                 <assumption>
                     <title>A title</title>
-                    <p>A minimal <tag>assumption</tag>.</p>
+                    <statement><p>A minimal <tag>assumption</tag>.</p></statement>
                 </assumption>
             </subsection>
 
@@ -2536,7 +2627,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <title>Definition-like Blocks</title>
                 <definition>
                     <title>A title</title>
-                    <p>A minimal <tag>definition</tag>.</p>
+                    <statement><p>A minimal <tag>definition</tag>.</p></statement>
                 </definition>
             </subsection>
 
@@ -2597,19 +2688,32 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </investigation>
             </subsection>
 
-            <assemblage>
-                <p>A minimal <tag>assemblage</tag>.</p>
-            </assemblage>
+            <subsection>
+                <title>Miscellaneous Blocks</title>
+                <assemblage>
+                    <p>A minimal <tag>assemblage</tag>.</p>
+                </assemblage>
+                <aside>
+                    <title>A title</title>
+                    <p>A final <tag>aside</tag> to test behavior towards the end of a page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </aside>
+            </subsection>
+
+            <outcomes>
+                <title>Our results</title>
+                <introduction>
+                    <p>A minimal <tag>outcome</tag>.</p>
+                </introduction>
+                <ul>
+                  <li>Stress test HTML themes</li>
+                  <li>Locally, test outcomes</li>
+                </ul>
+            </outcomes>
 
             <conclusion>
                 <title>Wrap-up</title>
                 <p>A minimal <tag>conclusion</tag>.</p>
             </conclusion>
-
-            <aside>
-                <title>A title</title>
-                <p>A final <tag>aside</tag> to test behavior at the end of a page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </aside>
         </section>
 
         <section xml:id="text-in-paragraphs" label="section-text-paragraphs">
@@ -2679,7 +2783,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <p>I must stand with anybody that stands right, and stand with him while he is right, and part with him when he goes wrong.<rq/></p>
 
-                <p>And as a tests, we try some crazy combinations of quotes, which would normally give <latex/> some trouble where the quotation marks are adjacent.<ul>
+                <p>And as a tests, we try some crazy combinations of quotes, which would normally give <latex/> some trouble where the quotation marks are adjacent.  View these examples in <init>PDF</init> output, with lots of magnification and note the spacing between the quotation marks.<ul>
                     <li><p><q>we use <sq>single quotes inside of double quotes</sq></q></p></li>
                     <li><p><sq><q>double quotes inside of single quotes</q> with more</sq></p></li>
                     <li><p><q><sq>single quotes tight inside of double quotes</sq></q></p></li>
@@ -2688,7 +2792,55 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li><p>you would never do this, but a <sq><sq>pair of single quotes</sq></sq></p></li>
                 </ul></p>
 
-                <p><abbr>N.B.</abbr> We have taken no special care to protect against interactions of the actual quote characters (described above) in <latex/> with themselves, or with the grouping tags.</p>
+                <p>Quotation marks are different in different languages.  The following paragraphs contain short examples.</p>
+
+                <paragraphs xml:lang="en-US">
+                    <title>English (United States)</title>
+
+                    <p>Primary only: <q>Government of the people, by the people, for the people, shall not perish from the earth.</q> Primary and secondary: <q>I have a dream that one day this nation will rise up and live out the true meaning of its creed: <sq>We hold these truths to be self-evident, that all men are created equal.</sq></q> (Abraham Lincoln, Gettysburg Address; Martin Luther King Jr., I Have a Dream)</p>
+                </paragraphs>
+
+                <paragraphs xml:lang="fr-FR">
+                    <title>French (France)</title>
+
+                    <!-- “Freedom begins where ignorance ends.”                      -->
+                    <!--                                                             -->
+                    <!-- “She kept repeating to herself, ‘I have a lover! a lover!’  -->
+                    <!-- savoring the idea as if a new puberty had come upon her.”   -->
+
+                    <p>Primary only: <q>La liberté commence où l’ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J’ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d’une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
+                </paragraphs>
+
+                <paragraphs xml:lang="fr-CA">
+                    <title>French (Canada)</title>
+
+                    <!-- Same quotes as fr-FR; secondary marks differ:               -->
+                    <!-- fr-CA uses english-single (' ') for inner quotes,           -->
+                    <!-- fr-FR uses english-double (“ “) for inner quotes.           -->
+                    <!--                                                             -->
+                    <!-- “Freedom begins where ignorance ends.”                      -->
+                    <!--                                                             -->
+                    <!-- “She kept repeating to herself, ‘I have a lover! a lover!’  -->
+                    <!-- savoring the idea as if a new puberty had come upon her.”   -->
+
+                    <p>Primary only: <q>La liberté commence où l’ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J’ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d’une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
+                </paragraphs>
+
+                <paragraphs xml:lang="de-DE">
+                    <title>German (Germany)</title>
+
+                    <!-- “Gray, dear friend, is all theory, and green the golden    -->
+                    <!-- tree of life.” Mephistopheles to the Student.              -->
+                    <!-- Goethe, Faust, Part I (“Studierzimmer”), 1808.             -->
+                    <!--                                                            -->
+                    <!-- “’My Luise,’ he said to me, ‘has knocked me to the ground. -->
+                    <!-- My Luise will lift me up again.’”                          -->
+                    <!-- Wurm reports Miller’s words to Lady Milford.               -->
+                    <!-- Schiller, Kabale und Liebe, Act III, Scene 6, 1784.        -->
+
+                    <p>Primary only: <q>Grau, teurer Freund, ist alle Theorie, und grün des Lebens goldner Baum.</q> Primary and secondary: <q><sq>Meine Luise</sq>, sagte er mir, <sq>hat mich zu Boden geworfen. Meine Luise wird mich auch aufrichten.</sq></q> (Johann Wolfgang von Goethe, Faust I; Friedrich Schiller, Kabale und Liebe)</p>
+                </paragraphs>
+
             </subsection>
 
             <subsection>
@@ -3332,7 +3484,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <figure xml:id="figure-complete-graph">
                     <caption>Complete graph on <m>16</m> vertices, from <c>www.texample.net</c></caption>
                     <image source="images/complete-graph" width="65%">
-                        <description>A circular arrangment of <m>16</m> dots (<term>vertices</term>) with <m>120</m> straight lines (<term>edges</term>), joining every pair of dots.</description>
+                        <description><p>A circular arrangment of <m>16</m> dots (<term>vertices</term>) with <m>120</m> straight lines (<term>edges</term>), joining every pair of dots.</p></description>
                     </image>
                 </figure>
 
@@ -7022,6 +7174,45 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </table>
 
             <table>
+                <title>Test of vertical header orientation and padding with borders</title>
+                <tabular row-headers="yes"
+                        halign="center"
+                        valign="middle"
+                        right="minor"
+                        bottom="minor">
+                    <col halign="left"
+                        right="major"/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <row header="vertical"
+                        bottom="major"
+                        halign="left">
+                        <cell right="minor"
+                            bottom="minor"></cell>
+                        <cell>0 <em>(MTH111)</em></cell>
+                        <cell>1 <em>(MTH112)</em></cell>
+                        <cell>2 <em>(CS160)</em></cell>
+                        <cell>3 <em>(CS161)</em></cell>
+                        <cell>4 <em>(CS162)</em></cell>
+                        <cell>5 <em>(CS205)</em></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell>0 <em>(MTH111)</em></cell>
+                        <cell>0</cell>
+                        <cell>1</cell>
+                        <cell>0</cell>
+                        <cell>1</cell>
+                        <cell>0</cell>
+                        <cell>0</cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <table>
                 <title>One Row Header, with Rules</title>
                 <tabular>
                     <row header="yes" bottom="major">
@@ -8491,6 +8682,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </interactive>
                 </figure>
 
+                <p>This next interactive uses ECMAScript module based code. That will not function unless the <element>script</element>'s <attr>type</attr> is set to <c>module</c> in the HTML output. So let's set it here and pass it through. It also generates its own HTML elements, so we hopefully don't get a default empty div.</p>
+
+                <figure>
+                    <caption>A simple JS module test</caption>
+                    <interactive xml:id="interactive-js-module" aspect="6:1" platform="javascript" label="js-module-test">
+                        <script type="module">
+                            import cytoscape from "https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.33.1/cytoscape.esm.min.mjs";
+                            const cyEl = document.createElement('div');
+                            cyEl.style.width = '600px';
+                            cyEl.style.height = '100px';
+                            document.body.appendChild(cyEl);
+                            const cy = cytoscape({
+                                container: cyEl,
+                                elements: {
+                                    nodes: [ 'a', 'b' ].map(id => ({ data: { id } })),
+                                    edges: [
+                                        {
+                                            data: { id: 'ab', source: 'a', target: 'b' }
+                                        }
+                                    ]
+                                },
+                                style: [
+                                    {
+                                        selector: 'node',
+                                        style: {
+                                            'label': 'data(id)'
+                                        }
+                                    }
+                                ]
+                            });
+                        </script>
+                    </interactive>
+            </figure>
+
             </subsection>
 
             <subsection>
@@ -8909,6 +9134,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <p>Then mimic the examples that follow, using GeoGebra API commands documented at <url href="https://wiki.geogebra.org/en/Reference:GeoGebra_Apps_API">Geogebra API Manual</url>, but do not include the <c>ggbApplet.</c> or <c>applet.</c> used in examples to prefix the functions<mdash/>that part of the code will be provided automatically by <pretext/>.</p>
 
+                <p>There are some optional control elements that Geogebra provides, such as the presence of the toolbar and the reset button. These can be controlled by adding the following additional attributes to the <c>slate</c> and are automatically included in the initialization for the Geogebra applet.
+                    <ul>
+                        <li><p><c>toolbar="yes"</c>: add the Geogebra toolbar above the material</p></li>
+                        <li><p><c>algebra-input="yes"</c>: add an entry box below the material to add graphical objects using algebra formulas or Geogebra graphical commands</p></li>
+                        <li><p><c>reset-icon="yes"</c>: enable the reset icon</p></li>
+                        <li><p><c>shift-drag-zoom="yes"</c>: enable ability to drag and zoom the viewing context</p></li>
+                        <li><p><c>zoom-buttons="yes"</c>: enable buttons that control zoom</p></li>
+                    </ul>
+                </p>
+
                 <p>Jack Green created an applet on the Classroom Resources site with ID <c>D4s2v4ft</c>, which you may view at <url href="https://www.geogebra.org/m/D4s2v4ft" visual="www.geogebra.org/m/D4s2v4ft"/>. Suppose you would like to use this in your project, but change something about it. We will change something trivial, making the <m>y</m>-axis ticks be separated <m>5</m> apart instead of <m>10</m> apart. We also decide we want a different aspect ratio and overall width. One gotcha: the original applet is loaded and then <pretext/> uses <attr>width</attr> and <attr>aspect</attr> attributes to resize the viewing window using the top left corner as an anchor. This does not rescale axes and that may leave you with important elements missing from the viewing window. So here we reset the viewing window to return to values that are in the original. Lastly, we disable zooming, which is not helpful for this applet. To do each of these things, we rely on the GeoGebra API manual at <url href="https://wiki.geogebra.org/en/Reference:GeoGebra_Apps_API" visual="wiki.geogebra.org/en/Reference:GeoGebra_Apps_API">Geogebra API Manual</url>. It is important to use one command per line.</p>
 
                 <figure>
@@ -9320,7 +9555,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <p>Once you find a material that looks instructive, it will be at a <init>URL</init> such as<cd>https://www.geogebra.org/m/KGn2d4Qd</cd> and you want to pick off the identifier on the end, in this case <c>KGn2d4Qd</c>.  Then author<cd>&lt;interactive geogebra="KGn2d4Qd" /&gt;</cd>  At this writing (2018-02-04) you will want to place this inside a <c>figure</c>, with a caption, as we do right now with material <c>KGn2d4Qd</c>.</p>
 
-                <p>The shape of the material will be fixed, so guess (or measure with an on-screen ruler), the aspect ratio and use that in the <tag>interactive</tag> element. If the width of the original material is anything other than 800 pixels, you should add <attr>material-width</attr> with the actual material width (units are pixels).</p>
+                <p>The shape of the material will be fixed, so determine the dimensions (measure with an on-screen ruler or inspect the underlying definition). Use <attr>material-width</attr> and <attr>material-height</attr> with the actual material width and height (units are pixels). These are treated by Geogebra as internal coordinate dimensions and are separate from the physical layout dimensions that appear in your text. In the absence of these attributes, default values are 800 pixels for the width and a height based on the provied aspect ratio.</p>
 
                 <figure>
                     <caption>Right Triangle Paradox</caption>
@@ -9333,6 +9568,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li><p><c>algebra-input="yes"</c>: add an entry box below the material to add graphical objects using algebra formulas or Geogebra graphical commands</p></li>
                     <li><p><c>reset-icon="yes"</c>: enable the reset icon</p></li>
                     <li><p><c>shift-drag-zoom="yes"</c>: enable ability to drag and zoom the viewing context</p></li>
+                    <li><p><c>zoom-buttons="yes"</c>: enable buttons that control zoom</p></li>
                 </ul>
                 </p>
 
@@ -9403,22 +9639,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </figure>
             </subsection>
 
-            <subsection>
+            <subsection xml:id="layout-interactives">
                 <title>Layout of Interactives</title>
 
                 <p>In HTML, interactives are rendered in iframes, which can offer some layout challenges. The PreTeXt page has no direct control over the layout within the interactive. All it does is provide a fixed sized frame in which the interactive content can display itself. The <attr>width</attr> (a percentage) and <attr>aspect</attr> (a width:height ratio like <c>2.1:1</c> OR a number like <c>1.5</c>) attributes on the interactive are the main tools to specify the dimensions. Below are three renderings of the same Google map using different widths/heights.</p>
 
-                <interactive iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="15:10"/>
+                <interactive xml:id="interactive-layout-map-wide" iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="15:10"/>
 
-                <interactive iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="15:10" width="50%"/>
+                <interactive xml:id="interactive-layout-map-medium" iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="15:10" width="50%"/>
 
-                <interactive iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="0.5" width="50%"/>
+                <interactive xml:id="interactive-layout-map-tall" iframe="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512739.689202133!2d-124.5931848890628!3d37.151542068971864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sca!4v1682454368296!5m2!1sfr!2sca" aspect="0.5" width="50%"/>
 
                 <p>If you know a particular interactive is designed to display at a particular pixel size, you can can specify a <attr>design-width</attr> like <c>300</c> to force exactly that width. Combine that with <attr>aspect</attr> to also force the height. The example below forces a size of 300x450.</p>
 
                 <figure>
                     <caption>Graph of <m>ln(x^2+5)-3</m></caption>
-                    <interactive desmos="ttox1bvxku" design-width="300" aspect="300:450"/>
+                    <interactive xml:id="interactive-layout-desmos" desmos="ttox1bvxku" design-width="300" aspect="300:450"/>
                 </figure>
 
                 <p>What happens if there is not enough space to display the requested frame? That depends on the <attr>resize-behavior</attr> applied to the interactive. The default is <c>fixed-height</c>. In this case, the interactive's height will not change if the window becomes too small to display the full width of the interactive. Instead a horizontal scroll bar will appear. This can be seen in many of the samples in <xref ref="section-interactive-authored" text="type-global"/> and this CircuitJS sample:</p>
@@ -9426,7 +9662,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <figure>
                     <caption>CircuitJS with <c>resize-behavior="fixed-height"</c></caption>
 
-                    <interactive circuitjs="$ 1 0.000005 10.20027730826997 58 5 50 5e-11%0AR 464 32 464 -16 0 0 40 3.3 0 0 0.5%0Ag 464 224 464 240 0 0%0As 464 32 464 128 0 0 false%0As 464 128 464 224 0 1 false%0Ax 274 181 431 184 4 12 bottom\sswitch\s(to\sground)%0Ax 312 85 426 88 4 12 top\sswitch\s(to\sVdd)%0AO 464 128 544 128 1 0%0Ax 532 110 593 113 4 12 output\spin" width="90%" aspect="4:3" resize-behavior="fixed-height"/>
+                    <interactive xml:id="interactive-layout-circuitjs-small" circuitjs="$ 1 0.000005 10.20027730826997 58 5 50 5e-11%0AR 464 32 464 -16 0 0 40 3.3 0 0 0.5%0Ag 464 224 464 240 0 0%0As 464 32 464 128 0 0 false%0As 464 128 464 224 0 1 false%0Ax 274 181 431 184 4 12 bottom\sswitch\s(to\sground)%0Ax 312 85 426 88 4 12 top\sswitch\s(to\sVdd)%0AO 464 128 544 128 1 0%0Ax 532 110 593 113 4 12 output\spin" width="90%" aspect="4:3" resize-behavior="fixed-height"/>
                 </figure>
 
                 <p>The other option for <attr>resize-behavior</attr> is <c>responsive</c>. In this case, the interactive's aspect ratio will be maintained. If the width gets smaller, so will the height. This can be seen in the version below.</p>
@@ -9434,7 +9670,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <figure>
                     <caption>CircuitJS with <c>resize-behavior="responsive"</c></caption>
 
-                    <interactive circuitjs="$ 1 0.000005 10.20027730826997 58 5 50 5e-11%0AR 464 32 464 -16 0 0 40 3.3 0 0 0.5%0Ag 464 224 464 240 0 0%0As 464 32 464 128 0 0 false%0As 464 128 464 224 0 1 false%0Ax 274 181 431 184 4 12 bottom\sswitch\s(to\sground)%0Ax 312 85 426 88 4 12 top\sswitch\s(to\sVdd)%0AO 464 128 544 128 1 0%0Ax 532 110 593 113 4 12 output\spin" width="90%" aspect="4:3" resize-behavior="responsive"/>
+                    <interactive xml:id="interactive-layout-circuitjs-big" circuitjs="$ 1 0.000005 10.20027730826997 58 5 50 5e-11%0AR 464 32 464 -16 0 0 40 3.3 0 0 0.5%0Ag 464 224 464 240 0 0%0As 464 32 464 128 0 0 false%0As 464 128 464 224 0 1 false%0Ax 274 181 431 184 4 12 bottom\sswitch\s(to\sground)%0Ax 312 85 426 88 4 12 top\sswitch\s(to\sVdd)%0AO 464 128 544 128 1 0%0Ax 532 110 593 113 4 12 output\spin" width="90%" aspect="4:3" resize-behavior="responsive"/>
                 </figure>
 
                 <p>The best behavior will be determined by the contents of the interactive. If the interactive knows how to dynamically size itself, <c>responsive</c> is likely the better option. If the interactive assumes that there is a certain amount of space and the contents will never resize themselves, <c>fixed-height</c> will likely work better.</p>
@@ -9447,17 +9683,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <figure>
                     <caption>Growable interactive fixed-height</caption>
-                    <interactive platform="javascript" width="80%" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="fixed-height"/>
+                    <interactive xml:id="interactive-layout-grow-one" platform="javascript" width="80%" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="fixed-height"/>
                 </figure>
 
                 <figure>
                     <caption>Growable interactive responsive with % width</caption>
-                    <interactive platform="javascript" width="80%" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="responsive"/>
+                    <interactive xml:id="interactive-layout-grow-two" platform="javascript" width="80%" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="responsive"/>
                 </figure>
 
                 <figure>
                     <caption>Growable interactive responsive and design-width</caption>
-                    <interactive platform="javascript" design-width="480" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="responsive"/>
+                    <interactive xml:id="interactive-layout-grow-three" platform="javascript" design-width="480" aspect="2:1" source="code/splice/splice-resize.js" resize-behavior="responsive"/>
                 </figure>
             </subsection>
         </section>
@@ -13186,6 +13422,78 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </sidebyside>
             </figure>
 
+            <p>
+                Now let's test the alignment of various items that might be placed with an image in a figure. We want asymptote links and long descriptions close to the image. The caption for figures should be aligned.
+            </p>
+
+            <figure>
+                <caption>Two Asympote images side-by-side</caption>
+                <sidebyside margins="5%" widths="40% 45%">
+
+                <figure>
+                    <caption>Asymptote Lever Demonstration</caption>
+                    <image xml:id="asymptote-lever-sbs">
+                        <shortdescription>moments on a lever</shortdescription>
+                        <description>
+                            <p>This diagram has two masses at either end of a lever, namely <m>m</m> and <m>M</m>.  They are located at distance <m>x</m> and <m>X</m> on an axis.  The resulting center-of-mass is at a point <m>\bar{x}</m>.</p>
+                        </description>
+                        <asymptote>
+                            size(200,0);
+
+                            pair z0=(0,0);
+                            pair z1=(2,0);
+                            pair z2=(5,0);
+                            pair zf=z1+0.75*(z2-z1);
+
+                            draw(z1--z2);
+                            dot(z1,red+0.15cm);
+                            dot(z2,darkgreen+0.3cm);
+                            label("$m$",z1,1.2N,red);
+                            label("$M$",z2,1.5N,darkgreen);
+                            label("$\hat{\ }$",zf,0.2*S,fontsize(24pt)+blue);
+
+                            pair s=-0.2*I;
+                            draw("$x$",z0+s--z1+s,N,red,Arrows,Bars,PenMargins);
+
+                            s=-0.5*I;
+                            draw("$\bar{x}$",z0+s--zf+s,blue,Arrows,Bars,PenMargins);
+
+                            s=-0.95*I;
+                            draw("$X$",z0+s--z2+s,darkgreen,Arrows,Bars,PenMargins);
+                        </asymptote>
+                    </image>
+                </figure>
+
+                <figure>
+                    <caption>Asymptote Contour Plot</caption>
+                    <image xml:id="asymptote-contour-sbs">
+                        <asymptote>
+                            import graph;
+                            import palette;
+
+                            size(10cm,10cm,IgnoreAspect);
+
+                            real f(real x, real y) {
+                            return 0.9*pow10(2*sin(x/5+2*y^0.25)) + 0.1*(1+cos(10*log(y)));
+                            }
+
+                            scale(Linear,Log,Log);
+
+                            pen[] Palette=BWRainbow();
+
+                            bounds range=image(f,Automatic,(0,1),(100,100),nx=200,Palette);
+
+                            xaxis("$x$",BottomTop,LeftTicks,above=true);
+                            yaxis("$y$",LeftRight,RightTicks,above=true);
+
+                            palette("$f(x,y)$",range,(0,200),(100,250),Top,Palette,
+                            PaletteTicks(ptick=linewidth(0.5*linewidth())));
+                        </asymptote>
+                    </image>
+                </figure>
+                </sidebyside>
+            </figure>
+
             <p>Now we have some more interactive elements.</p>
 
             <sidebyside  margins="5%" widths="40% 45%">
@@ -13276,6 +13584,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         </section>
 
+        <section xml:id="literate-programming" label="literate-programming">
+            <title>Literate Programming</title>
+            <p>There is support for literate programming using the <tag>fragment</tag> tag. It should always contain an <attr>@xml:id</attr> or a <attr>@filename</attr> attribute, and may contain <tag>code</tag> segments as well as <tag>fragref</tag> segments referencing other fragments. The final code is to be assembled starting from a fragment with a filename attribute and traversing the tree of fragment references.</p>
+            <p>For example here is the gcd algorithm in Python. Note that indentation is hard to get right at the moment.</p>
+            <fragment filename="gcd.py">
+                <title>The GCD algorithm</title>
+                <code>
+                    def gcd(a, b):
+                        while(b):
+                </code>
+                <fragref ref="gcd-loop" />
+                <code>                        return a</code>
+            </fragment>
+            <p>The key part is the inner part of the loop:</p>
+            <fragment xml:id="gcd-loop">
+                <title>The key loop part</title>
+                <code>
+                            a, b = b, a % b
+                </code>
+            </fragment>
+            <p>This double assignment changes both a and b.</p>
+        </section>
         <section xml:id="atomic-items" label="section-atomic-items">
             <title>Atomic Objects</title>
 
@@ -14714,6 +15044,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <list-of elements="theorem" scope="section"/>
             </subsection>
 
+            <subsection xml:id="subsection-list-of-definitions" label="subsection-list-of-definitions">
+                <title>Definitions in This Article</title>
+
+                <p>Here is a similar list, but for <c>definition</c> elements across the whole article.  This list also serves as a regression test.  <xref ref="prefigure-diagrams"/> contains a <prefigure/> diagram whose source uses a <c>definition</c> element of its own, in the <prefigure/> XML namespace.  An earlier version of <tag>list-of</tag> matched descendants by local name only, ignoring namespaces, and so would catch <prefigure/> definitions and then fail to produce numbers for them.  The list below correctly contains only the <pretext/> definitions.</p>
+
+                <list-of elements="definition" empty="no"/>
+            </subsection>
+
             <subsection xml:id="subsection-with-an-exercise">
                 <title>A Title with ] a Right Bracket</title>
 
@@ -14894,6 +15232,47 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                 <stack label="stack-integration" source="stack/01_integration_with_feedback.xml"/>
             </exercise>
+
+            <exercise>
+                <title>STACK multiple choice question</title>
+
+                <introduction>
+                    <p>This is a multiple choice question where multiple answers can (in principle) be correct.</p>
+                </introduction>
+
+                <stack label="stack-mcq" source="stack/Checkbox.xml"/>
+            </exercise>
+
+            <exercise>
+                <title>STACK matrix input question</title>
+
+                <introduction>
+                    <p>This is a question where the input is a matrix.</p>
+                </introduction>
+
+                <stack label="stack-matrix" source="stack/Matrix.xml"/>
+            </exercise>
+
+            <exercise>
+                <title>STACK question with generated plot</title>
+
+                <introduction>
+                    <p>This is a question that generates a plot that must be rendered in the question text.</p>
+                </introduction>
+
+                <stack label="stack-plot" source="stack/basic-plot.xml"/>
+            </exercise>
+
+            <exercise>
+                <title>STACK question with advanced typesetting and embedded image</title>
+
+                <introduction>
+                    <p>This question comes from the <url href="https://stack-assessment.org/CaseStudies/2021/HELM/">HELM project</url>. It features an embedded image in its solution, as well as advanced typesetting and multi-line latex.</p>
+                </introduction>
+
+                <stack label="stack-typesetting" source="stack/Adding-vectors-in-triangles.xml"/>
+            </exercise>
+
 
         </exercises>
 
@@ -15664,39 +16043,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <statement>
                         <p>Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.</p>
                         <p>Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.</p>
-                                        <image width="60%">
-                    <prefigure label="prefigure-tangent-ws"
-                               xmlns="https://prefigure.org">
-                        <diagram dimensions="(300,300)" margins="5">
-                            <definition>a=1</definition>
-                            <definition>f(x) = exp(x/3)*cos(x)</definition>
-                            <coordinates bbox="[-4,-4,4,4]">
-                                <grid-axes xlabel="x" ylabel="y"/>
-                                <graph at="graph" function='f'/>
-                                <tangent-line at="tangent" function="f" point="a"/>
-                                <point at="point" p="(a, f(a))">
-                                    <m>(a,f(a))</m>
-                                </point>
-                            </coordinates>
-
-                            <annotations>
-                                <annotation ref="figure"
-                                            text="The graph of a function and its tangent line at the point a equals 1">
-                                    <annotation ref="graph-tangent"
-                                                text="The graph and its tangent line">
-                                        <annotation ref="graph"
-                                                    text="The graph of the function f" sonify="yes"/>
-                                        <annotation ref="point"
-                                                    text="The point a comma f of a"/>
-                                        <annotation ref="tangent"
-                                                    text="The tangent line to the graph of f at the point"/>
-                                    </annotation>
-                                </annotation>
-                            </annotations>
-
-                        </diagram>
-                    </prefigure>
-                </image>
                     </statement>
                 </exercise>
 
@@ -15787,10 +16133,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                     <exercise workspace="3in">
                         <statement>
-                            <p>The vectors <m>\vec a = (3,9)</m> and <m>\vec u = (4,2)</m> are pictured below.  Derive the formula for projection on a line and use it to find the projection of <m>\vec a</m> on the line spanned by <m>\vec u</m>. Also compute the length of the residual vector.</p>
-                            <image width="100%" source="images/projection1.png">
-                                <shortdescription>two vectors in a Cartesian plane</shortdescription>
-                            </image>
+                            <p>The vectors <m>\vec a = (3,9)</m> and <m>\vec b = (4,2)</m> are pictured below.  Derive the formula for projection on a line and use it to find the projection of <m>\vec a</m> on the line spanned by <m>\vec u</m>. Also compute the length of the residual vector.</p>
+                            <figure xml:id="prefigure-vectors">
+                                <image width="100%">
+                                    <prefigure xmlns="https://prefigure.org"
+                                               label="prefigure-worksheet-vectors">
+                                        <diagram dimensions="(320, 400)" margins="(5,5,20,20)">
+                                            <coordinates bbox="(0,0,8,10)">
+                                                <grid at="grid" spacings="((0,1,8),(0,1,10))"/>
+                                                <axes at="axes" decorations="no">
+                                                    <xlabel><m>x</m></xlabel>
+                                                    <ylabel><m>y</m></ylabel>
+                                                </axes>
+                                                <vector at="vector-a" v="(3,9)" alignment="se"><m>\vec a</m></vector>
+                                                <vector at="vector-b" v="(4,2)" alignment="nw"><m>\vec b</m></vector>
+                                            </coordinates>
+                                            <annotations>
+                                                <annotation ref="figure"
+                                                            text="Two vectors labeled a and b in the coordinate plane">
+                                                    <annotation ref="grid"
+                                                                text="A one by one grid"/>
+                                                    <annotation ref="axes"
+                                                                text="A set of labeled axes"/>
+                                                    <annotation ref="vector-a"
+                                                                text="The vector a"/>
+                                                    <annotation ref="vector-b"
+                                                                text="The vector b"/>
+                                                </annotation>
+                                            </annotations>
+                                        </diagram>
+                                    </prefigure>
+                                    <shortdescription>two vectors in a Cartesian plane</shortdescription>
+                                </image>
+                                <caption>Two vectors <m>\vec a</m> and <m>\vec b</m>.</caption>
+                            </figure>
                         </statement>
                     </exercise>
                 </sidebyside>
@@ -16136,6 +16512,92 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </exercise>
             </worksheet>
 
+            <worksheet>
+                <title>Worksheet with <tag>paragraphs</tag></title>
+                <introduction>
+                    <p>
+                        This is a test of the <tag>paragraphs</tag> element within a worksheet.  It should be able to contain exercises that have workspace, and we should be able to insert page breaks even inside of paragraphs.
+                    </p>
+                </introduction>
+                <paragraphs>
+                    <title>Warm up</title>
+                    <exercise workspace="1in">
+                        <statement>
+                            <p>
+                                This is a warm-up exercise.  It should have a small workspace and be on the first page of the worksheet.
+                            </p>
+                        </statement>
+                    </exercise>
+                </paragraphs>
+                <paragraphs>
+                    <title>More exercises</title>
+                    <exercise workspace="2in">
+                        <statement>
+                            <p>
+                                This is a second exercise.  It should have a larger workspace and be on the second page of the worksheet.
+                            </p>
+                        </statement>
+                    </exercise>
+                    <exercise>
+                        <introduction>
+                            <p>
+                                This is a third exercise with some tasks.  The workspace should be such that there will be a page break between tasks.
+                            </p>
+                        </introduction>
+                        <task workspace="1in">
+                            <statement>
+                                <p>
+                                    Do the first thing.
+                                </p>
+                            </statement>
+                        </task>
+                        <task workspace="2in">
+                            <statement>
+                                <p>
+                                    Do the second thing.
+                                </p>
+                            </statement>
+                        </task>
+                        <task workspace="2in">
+                            <statement>
+                                <p>
+                                    Do the third thing.
+                                </p>
+                            </statement>
+                        </task>
+                    </exercise>
+                </paragraphs>
+                <paragraphs>
+                    <title>A third division</title>
+                    <p>
+                        This is a paragraph that starts the third <tag>paragraphs</tag> division.
+                    </p>
+                    <sidebyside>
+                        <exercise workspace="1in">
+                            <statement>
+                                <p>
+                                    This is an exercise in the third paragraphs division inside a side-by-side.
+                                </p>
+                            </statement>
+                        </exercise>
+
+                        <exercise workspace="2in">
+                            <statement>
+                                <p>
+                                    This is a second exercise in the third paragraphs division.  It should have a larger workspace and be on the fourth page of the worksheet.
+                                </p>
+                            </statement>
+                        </exercise>
+                    </sidebyside>
+                    <exercise workspace="2in">
+                        <statement>
+                            <p>
+                                This is a third exercise in the third paragraphs division.  It should have a larger workspace and be on the fifth page of the worksheet.
+                            </p>
+                        </statement>
+                    </exercise>
+                </paragraphs>
+            </worksheet>
         </section>
 
         <section xml:id="handouts" label="section-handouts">
@@ -16826,73 +17288,73 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                                 <title>Column test</title>
                                 <p>An aside in a multi-column container.</p>
                             </aside>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                         <hint>
                             <title>OPEN ME!</title>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>3u \amp {}+{} 1v \amp {}+{} 3w \amp {}+{} 2x \amp {}+{} \amp  y \amp {}+{} \amp 3z \amp {}={} \amp 10</mrow>
                                 <mrow>2u \amp {}+{} 2v \amp {}-{} 2w \amp {}+{} x  \amp       \amp    \amp {}+{} \amp  z \amp {}={} \amp 6</mrow>
                                 <mrow>1u \amp {}-{} 3v \amp {}+{} 1w \amp {}+{} x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </hint>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>200t \amp {}+{} 3u \amp {}+{} 1v \amp {}+{} 3w \amp {}+{} 2x \amp {}+{} \amp  y \amp {}+{} \amp 3z \amp {}={} \amp 10</mrow>
                                 <mrow> \amp {}+{} 2u \amp {}+{} 2v \amp {}-{} 2w \amp {}+{} x  \amp       \amp    \amp {}+{} \amp  z \amp {}={} \amp 6</mrow>
                                 <mrow>100t \amp {}+{} 1u \amp {}-{} 3v \amp {}+{} 1w \amp {}+{} x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                     <exercise>
                         <statement>
-                            <md alignment="alignat">
+                            <p><md alignment="alignat">
                                 <mrow>2x \amp {}+{} \amp  y \amp {}={} \amp 10</mrow>
                                 <mrow>x  \amp       \amp    \amp {}={} \amp 6</mrow>
                                 <mrow>x  \amp {}+{} \amp 3y \amp {}={} \amp 13</mrow>
-                            </md>
+                            </md></p>
                         </statement>
                     </exercise>
                 </exercisegroup>

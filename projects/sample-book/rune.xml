@@ -743,6 +743,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <tests visible="yes">
 <![CDATA[
 
+//There should be two visible empty lines above this line
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
@@ -2691,7 +2692,7 @@ TEST_CASE( "Test the add function" ) {
                     <feedback>
                     <p>
                         Correct! Using the binomial theorem, we get a term containing the monomial <m>x^4y^4</m> by taking two of the first term, and two of the second term in the expansion of <m>(2x+5xy^2)^4</m>, and so this term is equal to
-                        <me>\binom{4}{2} (2x)^2 (5xy^2)^2 = 6 \cdot 2^2 5^2 x^4 y^4 = 600 x^4 y^4</me>.
+                        <md>\binom{4}{2} (2x)^2 (5xy^2)^2 = 6 \cdot 2^2 5^2 x^4 y^4 = 600 x^4 y^4</md>.
                     </p>
                     </feedback>
                 </choice>
@@ -3384,6 +3385,22 @@ TEST_CASE( "Test the add function" ) {
                 <block order="1"><c>*</c></block>
                 <block order="4"><c>FROM</c></block>
                 <block order="3"><c>test</c></block>
+            </blocks>
+        </exercise>
+
+        <exercise label="horizontal-parson-math-test" language="math">
+            <title>Parsons Problem with math blocks</title>
+
+            <statement>
+                <p>
+                Testing math mode blocks - correct answer is <m>\pi\sum\beta\alpha</m>
+                </p>
+            </statement>
+            <blocks layout="horizontal" randomize="yes">
+                <block order="2"><m>\pi</m></block>
+                <block order="1"><m>\sum</m></block>
+                <block order="4"><m>\beta</m></block>
+                <block order="3"><m>\alpha</m></block>
             </blocks>
         </exercise>
     </exercises>
@@ -4171,7 +4188,7 @@ TEST_CASE( "Test the add function" ) {
         <exercise label="fillin-math-solve-equation">
             <title>Fill-In, Dynamic Math with Simple Numerical Answer</title>
             <statement>
-                <p>Solve the equation <me><eval obj="theFunction"/>=0</me> to get the value of <m>x</m>.</p>
+                <p>Solve the equation <md><eval obj="theFunction"/>=0</md> to get the value of <m>x</m>.</p>
                 <p><m>x = </m> <fillin width="5" mode="math" ansobj="theAnswer"/></p>
             </statement>
             <solution>
@@ -4273,7 +4290,7 @@ TEST_CASE( "Test the add function" ) {
         <exercise label="fillin-math-decompose-function">
             <title>Fill-In, Dynamic Math with Interdependent Formula Checking</title>
             <statement>
-                <p>Consider the function <me>h(x)=<eval obj="composition"/></me>. Find two nontrivial functions <m>f(x)</m> and <m>g(x)</m> so that <m>h(x) = f(g(x))</m>.</p>
+                <p>Consider the function <md>h(x)=<eval obj="composition"/></md>. Find two nontrivial functions <m>f(x)</m> and <m>g(x)</m> so that <m>h(x) = f(g(x))</m>.</p>
                 <p><m>f(x) = </m> <fillin mode="math" width="15" ansobj="outerFormula" name="fGiven"/> and <m>g(x)=</m> <fillin mode="math" width="15" ansobj="innerFormula" name="gGiven"/></p>
             </statement>
             <solution>
@@ -5456,6 +5473,35 @@ TEST_CASE( "Test the add function" ) {
             </static>
         </exercise>
 
+    <p>This example recreates the Show-Eval visualization from the Runestone Components, using a PreTexT <tag>interactive</tag>. It also records student activity using SPLICE.</p>
+    <p>It demonstrates how the Show-Eval tool can be used to visualize the evaluation of Python expressions step by step.</p>
+    <p>This could also be used for doing similar visualization of mathematical expressions.  Support for MathJax would take some work, but this example would be a good starting point.</p>
+    <figure xml:id="show-eval-visualization1">
+        <caption>Show-Eval Visualization</caption>
+        <interactive label="show-eval-visualization" platform="javascript" source="https://runestone.academy/cdn/runestone/showEval-0.10.0.js" width="100%" >
+            <slate surface="html">
+                <style>
+                    .showEval { font-family: monospace; font-size: 1.5em; }
+                    .showEval span { vertical-align: text-top; }
+                </style>
+                <button id="nextStep">Next Step</button>
+                <button id="reset">Reset</button>
+                <div class='showEval'>eggs = ['dogs', 'cats', 'moose']</div>
+                <div id="showeval"></div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        console.log("Document loaded");
+                        // for each step, put the part to replaced in the first set of {{ }}, and the replacement text in the following {{ }}
+                        steps = ["''.join({{eggs}}{{['dogs', 'cats', 'moose']}}).upper().join(eggs)",
+                        "{{''.join(['dogs', 'cats', 'moose'])}}{{'dogscatsmoose'}}.upper().join(eggs)",
+                        "{{'dogscatsmoose'.upper()}}{{'DOGSCATSMOOSE'}}.join(eggs)",
+                        "'DOGSCATSMOOSE'.join({{eggs}}{{['dogs', 'cats', 'moose']}})",
+                        "{{'DOGSCATSMOOSE'.join(['dogs', 'cats', 'moose'])}}{{'dogsDOGSCATSMOOSEcatsDOGSCATSMOOSEmoose'}}"];
+                        s = new SHOWEVAL.ShowEval(document.querySelector('#showeval'), steps, false); });
+                </script>
+            </slate>
+        </interactive>
+        </figure>
     </section>
 
     <exercises xml:id="chapter-exam" label="chapter-exam" time-limit="15" pause="yes">

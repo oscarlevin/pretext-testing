@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<section xml:id="a0000000004" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Some more list types</title>
+
+    <p>
+   This is an example of a bulleted list. 
+</p>
+<ul>
+  <li><p>
+  <m>\mathcal{J}_g</m> of dimension <m>3g-3</m>; 
+</p>
+</li>
+  <li><p>
+  <m>\mathcal{E}^2_g=\{ </m>Pryms of double covers of <m>C=\openbox </m> with normalization of <m>C</m> hyperelliptic of genus <m>g-1\} </m> of dimension <m>2g</m>; 
+</p>
+</li>
+  <li><p>
+  <m>\mathcal{E}^2_{1,g-1}=\{ </m>Pryms of double covers of <m>C=\openbox^H_{P^1}</m> with <m>H</m> hyperelliptic of genus <m>g-2\} </m> of dimension <m>2g-1</m>; 
+</p>
+</li>
+  <li><p>
+  <m>\mathcal{P}^2_{t,g-t}</m> for <m>2\le t\le g/2=\{ </m>Pryms of double covers of <m>C=\openbox^{C'}_{C''}</m> with <m>g(C')=t-1</m> and <m>g(C'')=g-t-1\} </m> of dimension <m>3g-4</m>. 
+</p>
+</li>
+</ul>
+<p>
+  This is an example of a <sq>description</sq> list. 
+</p>
+<dl>
+  <title>Zero case</title>
+  <li><p>
+  <m>\rho (\Phi ) = \{ 0\} </m>. 
+</p>
+</li>
+  <title>Rational case</title>
+  <li><p>
+  <m>\rho (\Phi ) \ne \{ 0\} </m> and <m>\rho (\Phi )</m> is contained in a line through <m>0</m> with rational slope. 
+</p>
+</li>
+  <title>Irrational case</title>
+  <li><p>
+  <m>\rho (\Phi ) \ne \{ 0\} </m> and <m>\rho (\Phi )</m> is contained in a line through <m>0</m> with irrational slope. 
+</p>
+</li>
+</dl>
+
+<references>
+  <biblio xml:id="A"><p>
+  T. Aoki, <!-- \textit --><em>Calcul exponentiel des opérateurs microdifferentiels d'ordre infini.</em> I, Ann. Inst. Fourier (Grenoble) <!-- \textbf --><term>33</term> (1983), 227–250. 
+</p>
+</biblio>
+  <biblio xml:id="B"><p>
+  R. Brown, <!-- \textit --><em>On a conjecture of Dirichlet</em>, Amer. Math. Soc., Providence, RI, 1993. 
+</p>
+</biblio>
+  <biblio xml:id="D"><p>
+  R. A. DeVore, <!-- \textit --><em>Approximation of functions</em>, Proc. Sympos. Appl. Math., vol. 36, Amer. Math. Soc., Providence, RI, 1986, pp. 34–56. 
+</p>
+</biblio>
+</references>
+
+
+</section>

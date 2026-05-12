@@ -1,0 +1,678 @@
+<dom-document xmlns:plastex="http://plastex.sf.net/">
+<documentclass id="a0000000001">
+    <plastex:arg name="options"/>
+    <plastex:arg name="name">amsart</plastex:arg>
+</documentclass> <par id="a0000000002"/><newtheorem id="a0000000003">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">theorem</plastex:arg>
+    <plastex:arg name="counter"/>
+    <plastex:arg name="caption">Theorem</plastex:arg>
+    <plastex:arg name="within">section</plastex:arg>
+</newtheorem> <newtheorem id="a0000000004">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">lemma</plastex:arg>
+    <plastex:arg name="counter">theorem</plastex:arg>
+    <plastex:arg name="caption">Lemma</plastex:arg>
+    <plastex:arg name="within"/>
+</newtheorem><par id="a0000000005"/><theoremstyle id="a0000000006"/><bgroup id="a0000000007">
+definition</bgroup> <newtheorem id="a0000000008">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">definition</plastex:arg>
+    <plastex:arg name="counter">theorem</plastex:arg>
+    <plastex:arg name="caption">Definition</plastex:arg>
+    <plastex:arg name="within"/>
+</newtheorem><newtheorem id="a0000000009">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">example</plastex:arg>
+    <plastex:arg name="counter">theorem</plastex:arg>
+    <plastex:arg name="caption">Example</plastex:arg>
+    <plastex:arg name="within"/>
+</newtheorem><newtheorem id="a0000000010">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">xca</plastex:arg>
+    <plastex:arg name="counter">theorem</plastex:arg>
+    <plastex:arg name="caption">Exercise</plastex:arg>
+    <plastex:arg name="within"/>
+</newtheorem><par id="a0000000011"/><theoremstyle id="a0000000012"/><bgroup id="a0000000013">
+remark</bgroup> <newtheorem id="a0000000014">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">remark</plastex:arg>
+    <plastex:arg name="counter">theorem</plastex:arg>
+    <plastex:arg name="caption">Remark</plastex:arg>
+    <plastex:arg name="within"/>
+</newtheorem><par id="a0000000015"/><numberwithin id="a0000000016"/><bgroup id="a0000000017">
+equation</bgroup><bgroup id="a0000000018">
+section</bgroup> <par id="a0000000019"/><newcommand id="a0000000020">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">abs</plastex:arg>
+    <plastex:arg name="nargs">1</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['lvert', '#', '1', 'rvert']</plastex:arg>
+</newcommand> <par id="a0000000021"/><newcommand id="a0000000022">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">blankbox</plastex:arg>
+    <plastex:arg name="nargs">2</plastex:arg>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['parbox', '{', 'columnwidth', '}', '{', 'centering', 'setlength', '{', 'fboxsep', '}', '{', '0', 'p', 't', '}', 'fbox', '{', 'raisebox', '{', '0', 'p', 't', '}', '[', '#', '2', ']', '{', 'hspace', '{', '#', '1', '}', '}', '}', '}']</plastex:arg>
+</newcommand> <par id="a0000000023"/><document id="a0000000024">
+<par id="a0000000025">
+<title id="a0000000026">
+    <plastex:arg name="toc"/>
+    <plastex:arg name="self">AMS Journal Sample</plastex:arg>
+</title> </par><par id="a0000000027">
+<author id="a0000000028">
+    <plastex:arg name="self">Author One</plastex:arg>
+</author> <address id="a0000000029"/><bgroup id="a0000000030">
+Department of Mathematics, Louisiana State University, Baton Rouge, Louisiana 70803</bgroup> <curraddr id="a0000000031"/><bgroup id="a0000000032">
+Department of Mathematics and Statistics, Case Western Reserve University, Cleveland, Ohio 43403</bgroup> <email id="a0000000033"/><bgroup id="a0000000034">
+xyz@math.university.edu</bgroup> <thanks id="a0000000035">
+    <plastex:arg name="self">The first author was supported in part by NSF Grant <dom modifier="-" id="a0000000036"/>000000.</plastex:arg>
+</thanks> </par><par id="a0000000037">
+<author id="a0000000038">
+    <plastex:arg name="self">Author Two</plastex:arg>
+</author> <address id="a0000000039"/><bgroup id="a0000000040">
+Mathematical Research Section, School of Mathematical Sciences, Australian National University, Canberra ACT 2601, Australia</bgroup> <email id="a0000000041"/><bgroup id="a0000000042">
+two@maths.univ.edu.au</bgroup> <thanks id="a0000000043">
+    <plastex:arg name="self">Support information for the second author.</plastex:arg>
+</thanks> </par><par id="a0000000044">
+<subjclass id="a0000000045"/>[2020]<bgroup id="a0000000046">
+Primary 54C40, 14E20; Secondary 46E25, 20C20</bgroup> </par><par id="a0000000047">
+<date id="a0000000048">
+    <plastex:arg name="self">January 1, 2001 and, in revised form, June 22, 2001.</plastex:arg>
+</date> </par><par id="a0000000049">
+<dedicatory id="a0000000050"/><bgroup id="a0000000051">
+This paper is dedicated to our advisors.</bgroup> </par><par id="a0000000052">
+<keywords id="a0000000053"/><bgroup id="a0000000054">
+Differential geometry, algebraic geometry</bgroup> </par><par id="a0000000055">
+<abstract id="a0000000056">
+ This paper is a sample prepared to illustrate the use of the American Mathematical Society’s <LaTeX id="a0000000057"/><bgroup id="a0000000058"/> document class <texttt id="a0000000059">
+    <plastex:arg name="self">amsart</plastex:arg>
+</texttt> and publication-specific variants of that class for AMS-<LaTeX id="a0000000060"/><bgroup id="a0000000061"/> version 2. </abstract></par><par id="a0000000062">
+<maketitle id="a0000000063"/></par><section id="a0000000064">
+    <plastex:arg name="*modifier*">*</plastex:arg>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is an unnumbered first-level section head</plastex:arg>
+<par id="a0000000065">
+ This is an example of an unnumbered first-level heading. </par><par id="a0000000066">
+<specialsection id="a0000000067"/>*<bgroup id="a0000000068">
+THIS IS A SPECIAL SECTION HEAD</bgroup> This is an example of a special section head<footnote id="a0000000069">
+    <plastex:arg name="num"/>
+    <plastex:arg name="self">Here is an example of a footnote. Notice that this footnote text is running on so that it can stand as an example of how a footnote with separate paragraphs should be written. <par id="a0000000070"/>And here is the beginning of the second paragraph.</plastex:arg>
+</footnote>. </par></section><section ref="1" id="a0000000071">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is a numbered first-level section head</plastex:arg>
+<par id="a0000000072">
+ This is an example of a numbered first-level heading. </par><subsection ref="1.1" id="a0000000073">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is a numbered second-level section head</plastex:arg>
+<par id="a0000000074">
+ This is an example of a numbered second-level heading. </par></subsection><subsection id="a0000000075">
+    <plastex:arg name="*modifier*">*</plastex:arg>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is an unnumbered second-level section head</plastex:arg>
+<par id="a0000000076">
+ This is an example of an unnumbered second-level heading. </par><subsubsection id="a0000000077">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is a numbered third-level section head</plastex:arg>
+<par id="a0000000078">
+ This is an example of a numbered third-level heading. </par></subsubsection><subsubsection id="a0000000079">
+    <plastex:arg name="*modifier*">*</plastex:arg>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">This is an unnumbered third-level section head</plastex:arg>
+<par id="a0000000080">
+ This is an example of an unnumbered third-level heading. </par><par id="a0000000081">
+<thmenv ref="1.1" id="a0000000082">
+    <plastex:arg name="title"/>
+<par id="a0000000083">
+Let <math id="a0000000084">
+f, g<in id="a0000000085"/>A(X)</math> and let <math id="a0000000086">
+E</math>, <math id="a0000000087">
+F</math> be cozero sets in <math id="a0000000088">
+X</math>. </par><par id="a0000000089">
+<enumerate id="a0000000090">
+    <plastex:arg name="type"/>
+<item ref="1" id="a0000000091">
+    <plastex:arg name="term"/>
+<par id="a0000000092">
+If <math id="a0000000093">
+f</math> is <math id="a0000000094">
+E</math>-regular and <math id="a0000000095">
+F<subseteq id="a0000000096"/>E</math>, then <math id="a0000000097">
+f</math> is <math id="a0000000098">
+F</math>-regular. </par></item><item ref="2" id="a0000000099">
+    <plastex:arg name="term"/>
+<par id="a0000000100">
+If <math id="a0000000101">
+f</math> is <math id="a0000000102">
+E</math>-regular and <math id="a0000000103">
+F</math>-regular, then <math id="a0000000104">
+f</math> is <math id="a0000000105">
+E<cup id="a0000000106"/>F</math>-regular. </par></item><item ref="3" id="a0000000107">
+    <plastex:arg name="term"/>
+<par id="a0000000108">
+If <math id="a0000000109">
+f(x)<ge id="a0000000110"/>c&gt;0</math> for all <math id="a0000000111">
+x<in id="a0000000112"/>E</math>, then <math id="a0000000113">
+f</math> is <math id="a0000000114">
+E</math>-regular. </par></item></enumerate></par></thmenv> </par><par id="a0000000115">
+The following is an example of a proof. </par><par id="a0000000116">
+<proof id="a0000000117"> Set <math id="a0000000118">
+j(<nu id="a0000000119"/>)=<max id="a0000000120"/>(I<backslash id="a0000000121"/>a(<nu id="a0000000122"/>))-1</math>. Then we have </par><par id="a0000000123">
+<displaymath id="a0000000124">
+ <sum id="a0000000125"/><active char="_" id="a0000000126">
+    <plastex:arg name="self">i<notin id="a0000000127"/>a(<nu id="a0000000128"/>)</plastex:arg>
+</active>t<active char="_" id="a0000000129">
+    <plastex:arg name="self">i</plastex:arg>
+</active><sim id="a0000000130"/>t<active char="_" id="a0000000131">
+    <plastex:arg name="self">j(<nu id="a0000000132"/>)+1</plastex:arg>
+</active> =<prod id="a0000000133"/><active char="^" id="a0000000134">
+    <plastex:arg name="self">j(<nu id="a0000000135"/>)</plastex:arg>
+</active><active char="_" id="a0000000136">
+    <plastex:arg name="self">j=0</plastex:arg>
+</active>(t<active char="_" id="a0000000137">
+    <plastex:arg name="self">j+1</plastex:arg>
+</active>/t<active char="_" id="a0000000138">
+    <plastex:arg name="self">j</plastex:arg>
+</active>). </displaymath></par><par id="a0000000139">
+ Hence we have </par><par id="a0000000140">
+<equation ref="1" id="a0000000141">
+ <split id="a0000000142"> <prod id="a0000000143"/><active char="_" id="a0000000144">
+    <plastex:arg name="self"><nu id="a0000000145"/></plastex:arg>
+</active><biggl id="a0000000146">
+    <plastex:arg name="char">(</plastex:arg>
+</biggl><sum id="a0000000147"/><active char="_" id="a0000000148">
+    <plastex:arg name="self">i<notin id="a0000000149"/>a(<nu id="a0000000150"/>)</plastex:arg>
+</active>t<active char="_" id="a0000000151">
+    <plastex:arg name="self">i</plastex:arg>
+</active><biggr id="a0000000152">
+    <plastex:arg name="char">)</plastex:arg>
+</biggr><active char="^" id="a0000000153">
+    <plastex:arg name="self"><lvert id="a0000000154"/>a(<nu id="a0000000155"/>-1)<rvert id="a0000000156"/>-<lvert id="a0000000157"/>a(<nu id="a0000000158"/>)<rvert id="a0000000159"/></plastex:arg>
+</active> <active char="&amp;" id="a0000000160"/><sim id="a0000000161"/><prod id="a0000000162"/><active char="_" id="a0000000163">
+    <plastex:arg name="self"><nu id="a0000000164"/></plastex:arg>
+</active><prod id="a0000000165"/><active char="^" id="a0000000166">
+    <plastex:arg name="self">j(<nu id="a0000000167"/>)</plastex:arg>
+</active><active char="_" id="a0000000168">
+    <plastex:arg name="self">j=0</plastex:arg>
+</active> (t<active char="_" id="a0000000169">
+    <plastex:arg name="self">j+1</plastex:arg>
+</active>/t<active char="_" id="a0000000170">
+    <plastex:arg name="self">j</plastex:arg>
+</active>)<active char="^" id="a0000000171">
+    <plastex:arg name="self"><lvert id="a0000000172"/>a(<nu id="a0000000173"/>-1)<rvert id="a0000000174"/>-<lvert id="a0000000175"/>a(<nu id="a0000000176"/>)<rvert id="a0000000177"/></plastex:arg>
+</active><unknown modifier="\" id="a0000000178">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="len"/>
+</unknown><active char="&amp;" id="a0000000179"/>=<prod id="a0000000180"/><active char="_" id="a0000000181">
+    <plastex:arg name="self">j<ge id="a0000000182"/>0</plastex:arg>
+</active>(t<active char="_" id="a0000000183">
+    <plastex:arg name="self">j+1</plastex:arg>
+</active>/t<active char="_" id="a0000000184">
+    <plastex:arg name="self">j</plastex:arg>
+</active>)<active char="^" id="a0000000185">
+    <plastex:arg name="self"> <sum id="a0000000186"/><active char="_" id="a0000000187">
+    <plastex:arg name="self">j(<nu id="a0000000188"/>)<ge id="a0000000189"/>j</plastex:arg>
+</active>(<lvert id="a0000000190"/>a(<nu id="a0000000191"/>-1)<rvert id="a0000000192"/>-<lvert id="a0000000193"/>a(<nu id="a0000000194"/>)<rvert id="a0000000195"/>)</plastex:arg>
+</active>. </split> </equation></par><par id="a0000000197">
+ By definition, we have <math id="a0000000198">
+a(<nu id="a0000000199"/>(j))<supset id="a0000000200"/>c(j)</math>. Hence, <math id="a0000000201">
+<lvert id="a0000000202"/>c(j)<rvert id="a0000000203"/>=n-j</math> implies (5.4). If <math id="a0000000204">
+c(j)<notin id="a0000000205"/>a</math>, <math id="a0000000206">
+a(<nu id="a0000000207"/>(j))c(j)</math> and hence we have (5.5). </proof> </par><par id="a0000000209">
+<quotation id="a0000000210">
+ This is an example of an ‘extract’. The magnetization <math id="a0000000211">
+M<active char="_" id="a0000000212">
+    <plastex:arg name="self">0</plastex:arg>
+</active></math> of the Ising model is related to the local state probability <math id="a0000000213">
+P(a):M<active char="_" id="a0000000214">
+    <plastex:arg name="self">0</plastex:arg>
+</active>=P(1)-P(-1)</math>. The equivalences are shown in Table<active char="~" id="a0000000215"/><ref id="a0000000216">
+    <plastex:arg name="label">eqtable</plastex:arg>
+</ref>. </quotation></par><par id="a0000000217">
+<table id="a0000000218">
+    <plastex:arg name="loc">ht</plastex:arg>
+ <caption ref="1" id="eqtable">
+    <plastex:arg name="toc"/>
+    <plastex:arg name="self"></plastex:arg>
+</caption><label id="a0000000219">
+    <plastex:arg name="label">eqtable</plastex:arg>
+</label> <renewcommand id="a0000000220">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="name">arraystretch</plastex:arg>
+    <plastex:arg name="nargs"/>
+    <plastex:arg name="opt"/>
+    <plastex:arg name="definition">['1', '.', '5']</plastex:arg>
+</renewcommand> <noindent id="a0000000221"/><displaymath id="a0000000222">
+ <array id="a0000000223">
+    <plastex:arg name="pos"/>
+    <plastex:arg name="colspec">['|', 'c', '|', 'c', '|', 'c', '|']</plastex:arg>
+<ArrayRow id="a0000000224">
+<ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black" id="a0000000225">
+<par id="a0000000226">
+ <hline id="a0000000227"/></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black" id="a0000000228">
+<par id="a0000000229">
+<bgroup id="a0000000230">
+-<infty id="a0000000231"/></bgroup></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black" id="a0000000232">
+<par id="a0000000233">
+<bgroup id="a0000000234">
++<infty id="a0000000235"/></bgroup></par></ArrayCell></ArrayRow><ArrayRow id="a0000000236">
+<ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black" id="a0000000237">
+<par id="a0000000238">
+<hline id="a0000000239"/><bgroup id="a0000000240">
+f<active char="_" id="a0000000241">
+    <plastex:arg name="self">+</plastex:arg>
+</active>(x,k)</bgroup></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black" id="a0000000242">
+<par id="a0000000243">
+e<active char="^" id="a0000000244">
+    <plastex:arg name="self"><sqrt id="a0000000245">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active>+s<active char="_" id="a0000000246">
+    <plastex:arg name="self">12</plastex:arg>
+</active>(k)e<active char="^" id="a0000000247">
+    <plastex:arg name="self">-<sqrt id="a0000000248">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black" id="a0000000249">
+<par id="a0000000250">
+s<active char="_" id="a0000000251">
+    <plastex:arg name="self">11</plastex:arg>
+</active>(k)e<active char="^" id="a0000000252">
+    <plastex:arg name="self"><sqrt id="a0000000253">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active></par></ArrayCell></ArrayRow><ArrayRow id="a0000000254">
+<ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-left:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px" id="a0000000255">
+<par id="a0000000256">
+<hline id="a0000000257"/><bgroup id="a0000000258">
+f<active char="_" id="a0000000259">
+    <plastex:arg name="self">-</plastex:arg>
+</active>(x,k)</bgroup></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px" id="a0000000260">
+<par id="a0000000261">
+s<active char="_" id="a0000000262">
+    <plastex:arg name="self">22</plastex:arg>
+</active>(k)e<active char="^" id="a0000000263">
+    <plastex:arg name="self">-<sqrt id="a0000000264">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active></par></ArrayCell><ArrayCell style="border-top-style:solid; border-top-color:black; border-top-width:1px; text-align:center; border-right:1px solid black; border-bottom-style:solid; border-bottom-color:black; border-bottom-width:1px" id="a0000000265">
+<par id="a0000000266">
+e<active char="^" id="a0000000267">
+    <plastex:arg name="self">-<sqrt id="a0000000268">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active>+s<active char="_" id="a0000000269">
+    <plastex:arg name="self">21</plastex:arg>
+</active>(k)e<active char="^" id="a0000000270">
+    <plastex:arg name="self"><sqrt id="a0000000271">
+    <plastex:arg name="n"/>
+    <plastex:arg name="self">-1</plastex:arg>
+</sqrt>kx</plastex:arg>
+</active></par></ArrayCell></ArrayRow></array> </displaymath> </table></par><par id="a0000000272">
+<thmenv ref="1.2" id="a0000000273">
+    <plastex:arg name="title"/>
+<par id="a0000000274">
+This is an example of a ‘definition’ element. For <math id="a0000000275">
+f<in id="a0000000276"/>A(X)</math>, we define </par><par id="a0000000277">
+<equation ref="2" id="a0000000278">
+ <mathcal id="a0000000279">
+    <plastex:arg name="self">Z</plastex:arg>
+</mathcal> (f)=<unknown modifier="{" id="a0000000280"/>E<in id="a0000000281"/>Z[X]: <text id="a0000000282">
+    <plastex:arg name="self"><math id="a0000000283">
+f</math> is <math id="a0000000284">
+E<active char="^" id="a0000000285">
+    <plastex:arg name="self">c</plastex:arg>
+</active></math>-regular</plastex:arg>
+</text><unknown modifier="}" id="a0000000286"/>. </equation></par></thmenv> </par><par id="a0000000287">
+<thmenv ref="1.3" id="a0000000288">
+    <plastex:arg name="title"/>
+<par id="a0000000289">
+This is an example of a ‘remark’ element. For <math id="a0000000290">
+f<in id="a0000000291"/>A(X)</math>, we define </par><par id="a0000000292">
+<equation ref="3" id="a0000000293">
+ <mathcal id="a0000000294">
+    <plastex:arg name="self">Z</plastex:arg>
+</mathcal> (f)=<unknown modifier="{" id="a0000000295"/>E<in id="a0000000296"/>Z[X]: <text id="a0000000297">
+    <plastex:arg name="self"><math id="a0000000298">
+f</math> is <math id="a0000000299">
+E<active char="^" id="a0000000300">
+    <plastex:arg name="self">c</plastex:arg>
+</active></math>-regular</plastex:arg>
+</text><unknown modifier="}" id="a0000000301"/>. </equation></par></thmenv> </par><par id="a0000000302">
+<thmenv ref="1.4" id="a0000000303">
+    <plastex:arg name="title"/>
+<par id="a0000000304">
+This is an example of an ‘example’ element. For <math id="a0000000305">
+f<in id="a0000000306"/>A(X)</math>, we define </par><par id="a0000000307">
+<equation ref="4" id="a0000000308">
+ <mathcal id="a0000000309">
+    <plastex:arg name="self">Z</plastex:arg>
+</mathcal> (f)=<unknown modifier="{" id="a0000000310"/>E<in id="a0000000311"/>Z[X]: <text id="a0000000312">
+    <plastex:arg name="self"><math id="a0000000313">
+f</math> is <math id="a0000000314">
+E<active char="^" id="a0000000315">
+    <plastex:arg name="self">c</plastex:arg>
+</active></math>-regular</plastex:arg>
+</text><unknown modifier="}" id="a0000000316"/>. </equation></par></thmenv> </par><par id="a0000000317">
+<thmenv ref="1.5" id="a0000000318">
+    <plastex:arg name="title"/>
+<par id="a0000000319">
+This is an example of the <texttt id="a0000000320">
+    <plastex:arg name="self">xca</plastex:arg>
+</texttt> environment. This environment is used for exercises which occur within a section. </par></thmenv> </par><par id="a0000000321">
+The following is an example of a numbered list. </par><par id="a0000000322">
+<enumerate id="a0000000323">
+    <plastex:arg name="type"/>
+<item ref="1" id="a0000000324">
+    <plastex:arg name="term"/>
+<par id="a0000000325">
+First item. In the case where in <math id="a0000000326">
+G</math> there is a sequence of subgroups </par><par id="a0000000327">
+<displaymath id="a0000000328">
+ G = G<active char="_" id="a0000000329">
+    <plastex:arg name="self">0</plastex:arg>
+</active>, G<active char="_" id="a0000000330">
+    <plastex:arg name="self">1</plastex:arg>
+</active>, G<active char="_" id="a0000000331">
+    <plastex:arg name="self">2</plastex:arg>
+</active>, <dots id="a0000000332"/>, G<active char="_" id="a0000000333">
+    <plastex:arg name="self">k</plastex:arg>
+</active> = e </displaymath></par><par id="a0000000334">
+ such that each is an invariant subgroup of <math id="a0000000335">
+G<active char="_" id="a0000000336">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math>. </par></item><item ref="2" id="a0000000337">
+    <plastex:arg name="term"/>
+<par id="a0000000338">
+Second item. Its action on an arbitrary element <math id="a0000000339">
+X = <lambda id="a0000000340"/><active char="^" id="a0000000341">
+    <plastex:arg name="self"><alpha id="a0000000342"/></plastex:arg>
+</active>X<active char="_" id="a0000000343">
+    <plastex:arg name="self"><alpha id="a0000000344"/></plastex:arg>
+</active></math> has the form </par><par id="a0000000345">
+<equation ref="5" id="eq:action">
+<label id="a0000000346">
+    <plastex:arg name="label">eq:action</plastex:arg>
+</label> [e<active char="^" id="a0000000347">
+    <plastex:arg name="self"><alpha id="a0000000348"/></plastex:arg>
+</active>X<active char="_" id="a0000000349">
+    <plastex:arg name="self"><alpha id="a0000000350"/></plastex:arg>
+</active>, X] = e<active char="^" id="a0000000351">
+    <plastex:arg name="self"><alpha id="a0000000352"/></plastex:arg>
+</active><lambda id="a0000000353"/><active char="^" id="a0000000354">
+    <plastex:arg name="self"><beta id="a0000000355"/></plastex:arg>
+</active>[X<active char="_" id="a0000000356">
+    <plastex:arg name="self"><alpha id="a0000000357"/></plastex:arg>
+</active>X<active char="_" id="a0000000358">
+    <plastex:arg name="self"><beta id="a0000000359"/></plastex:arg>
+</active>] = e<active char="^" id="a0000000360">
+    <plastex:arg name="self"><alpha id="a0000000361"/></plastex:arg>
+</active>c<active char="^" id="a0000000362">
+    <plastex:arg name="self"><gamma id="a0000000363"/></plastex:arg>
+</active><active char="_" id="a0000000364">
+    <plastex:arg name="self"><alpha id="a0000000365"/><beta id="a0000000366"/></plastex:arg>
+</active> <lambda id="a0000000367"/><active char="^" id="a0000000368">
+    <plastex:arg name="self"><beta id="a0000000369"/></plastex:arg>
+</active>X<active char="_" id="a0000000370">
+    <plastex:arg name="self"><gamma id="a0000000371"/></plastex:arg>
+</active>, </equation></par><par id="a0000000372">
+<enumerate id="a0000000373">
+    <plastex:arg name="type"/>
+<item ref="1" id="a0000000374">
+    <plastex:arg name="term"/>
+<par id="a0000000375">
+First subitem. </par><par id="a0000000376">
+<displaymath id="a0000000377">
+ - 2<psi id="a0000000378"/><active char="_" id="a0000000379">
+    <plastex:arg name="self">2</plastex:arg>
+</active>(e) = c<active char="_" id="a0000000380">
+    <plastex:arg name="self"><alpha id="a0000000381"/><gamma id="a0000000382"/></plastex:arg>
+</active><active char="^" id="a0000000383">
+    <plastex:arg name="self"><delta id="a0000000384"/></plastex:arg>
+</active>c<active char="_" id="a0000000385">
+    <plastex:arg name="self"><beta id="a0000000386"/><delta id="a0000000387"/></plastex:arg>
+</active><active char="^" id="a0000000388">
+    <plastex:arg name="self"><gamma id="a0000000389"/></plastex:arg>
+</active>e<active char="^" id="a0000000390">
+    <plastex:arg name="self"><alpha id="a0000000391"/></plastex:arg>
+</active>e<active char="^" id="a0000000392">
+    <plastex:arg name="self"><beta id="a0000000393"/></plastex:arg>
+</active>. </displaymath></par></item><item ref="2" id="a0000000394">
+    <plastex:arg name="term"/>
+<par id="a0000000395">
+Second subitem. </par><par id="a0000000396">
+<enumerate id="a0000000397">
+    <plastex:arg name="type"/>
+<item ref="1" id="a0000000398">
+    <plastex:arg name="term"/>
+<par id="a0000000399">
+First subsubitem. In the case where in <math id="a0000000400">
+G</math> there is a sequence of subgroups </par><par id="a0000000401">
+<displaymath id="a0000000402">
+ G = G<active char="_" id="a0000000403">
+    <plastex:arg name="self">0</plastex:arg>
+</active>, G<active char="_" id="a0000000404">
+    <plastex:arg name="self">1</plastex:arg>
+</active>, G<active char="_" id="a0000000405">
+    <plastex:arg name="self">2</plastex:arg>
+</active>, <ldots id="a0000000406"/>, G<active char="_" id="a0000000407">
+    <plastex:arg name="self">k</plastex:arg>
+</active> = e </displaymath></par><par id="a0000000408">
+ such that each subgroup <math id="a0000000409">
+G<active char="_" id="a0000000410">
+    <plastex:arg name="self">i+1</plastex:arg>
+</active></math> is an invariant subgroup of <math id="a0000000411">
+G<active char="_" id="a0000000412">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> and each quotient group <math id="a0000000413">
+G<active char="_" id="a0000000414">
+    <plastex:arg name="self">i+1</plastex:arg>
+</active>/G<active char="_" id="a0000000415">
+    <plastex:arg name="self">i</plastex:arg>
+</active></math> is abelian, the group <math id="a0000000416">
+G</math> is called <textit id="a0000000417">
+    <plastex:arg name="self">solvable</plastex:arg>
+</textit>. </par></item><item ref="2" id="a0000000418">
+    <plastex:arg name="term"/>
+<par id="a0000000419">
+Second subsubitem. </par></item></enumerate></par></item><item ref="3" id="a0000000420">
+    <plastex:arg name="term"/>
+<par id="a0000000421">
+Third subitem. </par></item></enumerate></par></item><item ref="3" id="a0000000422">
+    <plastex:arg name="term"/>
+<par id="a0000000423">
+Third item. </par></item></enumerate></par><par id="a0000000424">
+Here is an example of a cite. See <cite id="a0000000425">
+    <plastex:arg name="text"/>
+    <plastex:arg name="bibkeys">['A']</plastex:arg>
+</cite>. </par><par id="a0000000426">
+<thmenv ref="1.6" id="a0000000427">
+    <plastex:arg name="title"/>
+<par id="a0000000428">
+This is an example of a theorem. </par></thmenv> </par><par id="a0000000429">
+<thmenv ref="1.7" id="a0000000430">
+    <plastex:arg name="title">Marcus Theorem</plastex:arg>
+<par id="a0000000431">
+ This is an example of a theorem with a parenthetical note in the heading. </par></thmenv> </par><par id="a0000000432">
+<figure id="a0000000433">
+    <plastex:arg name="loc">tb</plastex:arg>
+<par id="a0000000434">
+ <parbox id="a0000000435">
+    <plastex:arg name="pos"/>
+    <plastex:arg name="width">469.755pt</plastex:arg>
+    <plastex:arg name="self"><centering id="a0000000436">
+<setlength id="a0000000437">
+    <plastex:arg name="name">fboxsep</plastex:arg>
+    <plastex:arg name="len">['0', 'p', 't']</plastex:arg>
+</setlength><fbox id="a0000000438">
+    <plastex:arg name="self"><raisebox id="a0000000439">
+    <plastex:arg name="raise">0.0pt</plastex:arg>
+    <plastex:arg name="height">60.0pt</plastex:arg>
+    <plastex:arg name="depth"/>
+    <plastex:arg name="self"><hspace id="a0000000440">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="len">281.853pt</plastex:arg>
+</hspace></plastex:arg>
+</raisebox></plastex:arg>
+</fbox></centering></plastex:arg>
+</parbox> </par><par id="a0000000441">
+<caption ref="1" id="firstfig">
+    <plastex:arg name="toc"/>
+    <plastex:arg name="self">This is an example of a figure caption with text.</plastex:arg>
+</caption></par><par id="a0000000442">
+ <label id="a0000000443">
+    <plastex:arg name="label">firstfig</plastex:arg>
+</label> </par></figure></par><par id="a0000000444">
+<figure id="a0000000445">
+    <plastex:arg name="loc">tb</plastex:arg>
+<par id="a0000000446">
+ <parbox id="a0000000447">
+    <plastex:arg name="pos"/>
+    <plastex:arg name="width">469.755pt</plastex:arg>
+    <plastex:arg name="self"><centering id="a0000000448">
+<setlength id="a0000000449">
+    <plastex:arg name="name">fboxsep</plastex:arg>
+    <plastex:arg name="len">['0', 'p', 't']</plastex:arg>
+</setlength><fbox id="a0000000450">
+    <plastex:arg name="self"><raisebox id="a0000000451">
+    <plastex:arg name="raise">0.0pt</plastex:arg>
+    <plastex:arg name="height">36.0pt</plastex:arg>
+    <plastex:arg name="depth"/>
+    <plastex:arg name="self"><hspace id="a0000000452">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="len">352.31624999999997pt</plastex:arg>
+</hspace></plastex:arg>
+</raisebox></plastex:arg>
+</fbox></centering></plastex:arg>
+</parbox> </par><par id="a0000000453">
+<caption ref="2" id="otherfig">
+    <plastex:arg name="toc"/>
+    <plastex:arg name="self"></plastex:arg>
+</caption></par><par id="a0000000454">
+<label id="a0000000455">
+    <plastex:arg name="label">otherfig</plastex:arg>
+</label> </par></figure></par></subsubsection></subsection></section><section ref="2" id="a0000000456">
+    <plastex:arg name="*modifier*"/>
+    <plastex:arg name="toc"/>
+    <plastex:arg name="title">Some more list types</plastex:arg>
+<par id="a0000000457">
+ This is an example of a bulleted list. </par><par id="a0000000458">
+<itemize id="a0000000459">
+<item ref="1" id="a0000000460">
+    <plastex:arg name="term"/>
+<par id="a0000000461">
+<math id="a0000000462">
+<mathcal id="a0000000463">
+    <plastex:arg name="self">J</plastex:arg>
+</mathcal><active char="_" id="a0000000464">
+    <plastex:arg name="self">g</plastex:arg>
+</active></math> of dimension <math id="a0000000465">
+3g-3</math>; </par></item><item ref="2" id="a0000000466">
+    <plastex:arg name="term"/>
+<par id="a0000000467">
+<math id="a0000000468">
+<mathcal id="a0000000469">
+    <plastex:arg name="self">E</plastex:arg>
+</mathcal><active char="^" id="a0000000470">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="_" id="a0000000471">
+    <plastex:arg name="self">g</plastex:arg>
+</active>=<unknown modifier="{" id="a0000000472"/></math>Pryms of double covers of <math id="a0000000473">
+C=<openbox id="a0000000474"/></math> with normalization of <math id="a0000000475">
+C</math> hyperelliptic of genus <math id="a0000000476">
+g-1<unknown modifier="}" id="a0000000477"/></math> of dimension <math id="a0000000478">
+2g</math>; </par></item><item ref="3" id="a0000000479">
+    <plastex:arg name="term"/>
+<par id="a0000000480">
+<math id="a0000000481">
+<mathcal id="a0000000482">
+    <plastex:arg name="self">E</plastex:arg>
+</mathcal><active char="^" id="a0000000483">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="_" id="a0000000484">
+    <plastex:arg name="self">1,g-1</plastex:arg>
+</active>=<unknown modifier="{" id="a0000000485"/></math>Pryms of double covers of <math id="a0000000486">
+C=<openbox id="a0000000487"/><active char="^" id="a0000000488">
+    <plastex:arg name="self">H</plastex:arg>
+</active><active char="_" id="a0000000489">
+    <plastex:arg name="self">P<active char="^" id="a0000000490">
+    <plastex:arg name="self">1</plastex:arg>
+</active></plastex:arg>
+</active></math> with <math id="a0000000491">
+H</math> hyperelliptic of genus <math id="a0000000492">
+g-2<unknown modifier="}" id="a0000000493"/></math> of dimension <math id="a0000000494">
+2g-1</math>; </par></item><item ref="4" id="a0000000495">
+    <plastex:arg name="term"/>
+<par id="a0000000496">
+<math id="a0000000497">
+<mathcal id="a0000000498">
+    <plastex:arg name="self">P</plastex:arg>
+</mathcal><active char="^" id="a0000000499">
+    <plastex:arg name="self">2</plastex:arg>
+</active><active char="_" id="a0000000500">
+    <plastex:arg name="self">t,g-t</plastex:arg>
+</active></math> for <math id="a0000000501">
+2<le id="a0000000502"/>t<le id="a0000000503"/>g/2=<unknown modifier="{" id="a0000000504"/></math>Pryms of double covers of <math id="a0000000505">
+C=<openbox id="a0000000506"/><active char="^" id="a0000000507">
+    <plastex:arg name="self">C’</plastex:arg>
+</active><active char="_" id="a0000000508">
+    <plastex:arg name="self">C”</plastex:arg>
+</active></math> with <math id="a0000000509">
+g(C')=t-1</math> and <math id="a0000000510">
+g(C'')=g-t-1<unknown modifier="}" id="a0000000511"/></math> of dimension <math id="a0000000512">
+3g-4</math>. </par></item></itemize></par><par id="a0000000513">
+This is an example of a ‘description’ list. </par><par id="a0000000514">
+<description id="a0000000515">
+<item ref="1" id="a0000000516">
+    <plastex:arg name="term">Zero case</plastex:arg>
+<par id="a0000000517">
+<math id="a0000000518">
+<rho id="a0000000519"/>(<Phi id="a0000000520"/>) = <unknown modifier="{" id="a0000000521"/>0<unknown modifier="}" id="a0000000522"/></math>. </par></item><item ref="2" id="a0000000523">
+    <plastex:arg name="term">Rational case</plastex:arg>
+<par id="a0000000524">
+<math id="a0000000525">
+<rho id="a0000000526"/>(<Phi id="a0000000527"/>) <ne id="a0000000528"/><unknown modifier="{" id="a0000000529"/>0<unknown modifier="}" id="a0000000530"/></math> and <math id="a0000000531">
+<rho id="a0000000532"/>(<Phi id="a0000000533"/>)</math> is contained in a line through <math id="a0000000534">
+0</math> with rational slope. </par></item><item ref="3" id="a0000000535">
+    <plastex:arg name="term">Irrational case</plastex:arg>
+<par id="a0000000536">
+<math id="a0000000537">
+<rho id="a0000000538"/>(<Phi id="a0000000539"/>) <ne id="a0000000540"/><unknown modifier="{" id="a0000000541"/>0<unknown modifier="}" id="a0000000542"/></math> and <math id="a0000000543">
+<rho id="a0000000544"/>(<Phi id="a0000000545"/>)</math> is contained in a line through <math id="a0000000546">
+0</math> with irrational slope. </par></item></description></par><par id="a0000000547">
+<bibliographystyle id="a0000000548">
+    <plastex:arg name="style">amsplain</plastex:arg>
+</bibliographystyle> </par><par id="a0000000549">
+<thebibliography id="a0000000550">
+    <plastex:arg name="widelabel">10</plastex:arg>
+<bibitem id="A">
+    <plastex:arg name="label"/>
+    <plastex:arg name="key">A</plastex:arg>
+<par id="a0000000551">
+T. Aoki, <textit id="a0000000552">
+    <plastex:arg name="self">Calcul exponentiel des op<unknown modifier="'" id="a0000000553">
+    <plastex:arg name="self">e</plastex:arg>
+</unknown>rateurs microdifferentiels d’ordre infini.</plastex:arg>
+</textit> I, Ann. Inst. Fourier (Grenoble) <textbf id="a0000000554">
+    <plastex:arg name="self">33</plastex:arg>
+</textbf> (1983), 227–250. </par></bibitem><bibitem id="B">
+    <plastex:arg name="label"/>
+    <plastex:arg name="key">B</plastex:arg>
+<par id="a0000000555">
+R. Brown, <textit id="a0000000556">
+    <plastex:arg name="self">On a conjecture of Dirichlet</plastex:arg>
+</textit>, Amer. Math. Soc., Providence, RI, 1993. </par></bibitem><bibitem id="D">
+    <plastex:arg name="label"/>
+    <plastex:arg name="key">D</plastex:arg>
+<par id="a0000000557">
+R. A. DeVore, <textit id="a0000000558">
+    <plastex:arg name="self">Approximation of functions</plastex:arg>
+</textit>, Proc. Sympos. Appl. Math., vol. 36, Amer. Math. Soc., Providence, RI, 1986, pp. 34–56. </par></bibitem></thebibliography></par></section></document> <par id="a0000000559"/></dom-document>
