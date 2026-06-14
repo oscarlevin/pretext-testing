@@ -36,7 +36,6 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
@@ -73,14 +72,13 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +96,7 @@ window.MathJax = {
 <meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
 <meta property="book:title" content="PreTeXt Sample Book">
 <meta property="book:author" content="Thomas W. Judson">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -121,16 +119,16 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.4';
+eBookConfig.runestone_version = '7.12.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext-search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
@@ -140,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -332,17 +330,16 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.29</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter contains-active">
@@ -365,13 +362,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F</span> <span class="title">Some Runestone Elements</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="solutions" id="backmatter-4"><h2 class="heading">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="solutions" id="backmatter-4">
+<h2 class="heading">
 <span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">C</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hints and Answers to Selected Even Exercises</span>
 </h2>
 <h3 class="heading hide-type" title="Exercises 1.4: Exercises">
@@ -379,63 +379,103 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <article class="subexercises"><h4 class="heading"><span class="title">Warm-up</span></h4>
 <article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) <span class="process-math">\(A \times B = \{ (a,1), (a,2), (a,3), (b,1), (b,2), (b,3), (c,1), (c,2), (c,3) \}\text{;}\)</span> (d) <span class="process-math">\(A \times D = \emptyset\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.2.1"><a href="#exercises-sets-2-4-2" title="Copy heading and permalink for Hint 1.4.2.1" aria-label="Copy heading and permalink for Hint 1.4.2.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">If <span class="process-math">\(x \in A \cup (B \cap C)\text{,}\)</span> then either <span class="process-math">\(x \in A\)</span> or <span class="process-math">\(x \in B \cap C\text{.}\)</span>  Thus,   <span class="process-math">\(x \in A \cup B\)</span> and <span class="process-math">\(A \cup C\text{.}\)</span>  Hence, <span class="process-math">\(x \in (A \cup B) \cap (A \cup C)\text{.}\)</span> Therefore, <span class="process-math">\(A \cup (B \cap C) \subset (A \cup B) \cap (A \cup C)\text{.}\)</span>  Conversely, if <span class="process-math">\(x \in (A \cup B) \cap (A \cup C)\text{,}\)</span> then <span class="process-math">\(x \in A \cup B\)</span> and <span class="process-math">\(A \cup C\text{.}\)</span> Thus, <span class="process-math">\(x \in A\)</span> or <span class="process-math">\(x\)</span> is in both <span class="process-math">\(B\)</span> and <span class="process-math">\(C\text{.}\)</span> So <span class="process-math">\(x \in A \cup (B \cap C)\)</span> and therefore <span class="process-math">\((A \cup B) \cap (A \cup C) \subset A \cup (B \cap C)\text{.}\)</span> Hence, <span class="process-math">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-2-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.6.1"><a href="#exercises-sets-2-8-2" title="Copy heading and permalink for Hint 1.4.6.1" aria-label="Copy heading and permalink for Hint 1.4.6.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">
 <span class="process-math">\((A \cap B) \cup (A \setminus B) \cup (B \setminus A) = (A \cap B) \cup (A \cap B') \cup (B \cap A') = [A \cap (B \cup B')] \cup (B \cap A') = A \cup (B \cap A') = (A \cup B) \cap (A \cup A') = A \cup B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-2-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.10.1"><a href="#exercises-sets-2-12-2" title="Copy heading and permalink for Hint 1.4.10.1" aria-label="Copy heading and permalink for Hint 1.4.10.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(A \setminus (B \cup C) = A \cap (B \cup C)' = (A \cap A) \cap (B' \cap C') = (A \cap B') \cap (A \cap C') = (A \setminus B) \cap (A \setminus C)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-2-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.14.1"><a href="#exercises-sets-2-16-2" title="Copy heading and permalink for Hint 1.4.14.1" aria-label="Copy heading and permalink for Hint 1.4.14.1">🔗</a></div>
-</div></details></div></article></article><article class="subexercises"><h4 class="heading"><span class="title">More Exercises</span></h4>
+</div></details>
+</div></article></article><article class="subexercises"><h4 class="heading"><span class="title">More Exercises</span></h4>
 <article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) <span class="process-math">\(f\)</span> is one-to-one but not onto. <span class="process-math">\(f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}\text{.}\)</span>  (c) <span class="process-math">\(f\)</span> is neither one-to-one nor onto.  <span class="process-math">\(f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-3-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.18.1"><a href="#exercises-sets-3-6-2" title="Copy heading and permalink for Hint 1.4.18.1" aria-label="Copy heading and permalink for Hint 1.4.18.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.20<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) <span class="process-math">\(f(n) = n + 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-3-8-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.20.1"><a href="#exercises-sets-3-8-2" title="Copy heading and permalink for Hint 1.4.20.1" aria-label="Copy heading and permalink for Hint 1.4.20.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.22<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) Let <span class="process-math">\(x, y \in A\text{.}\)</span> Then <span class="process-math">\(g(f(x)) = (g \circ f)(x) = (g \circ f)(y) = g(f(y))\text{.}\)</span>  Thus, <span class="process-math">\(f(x) = f(y)\)</span> and <span class="process-math">\(x = y\text{,}\)</span>  so <span class="process-math">\(g \circ f\)</span> is one-to-one. (b) Let <span class="process-math">\(c \in C\text{,}\)</span> then <span class="process-math">\(c = (g \circ f)(x) = g(f(x))\)</span> for some <span class="process-math">\(x \in A\text{.}\)</span> Since <span class="process-math">\(f(x) \in B\text{,}\)</span> <span class="process-math">\(g\)</span> is onto.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-3-10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.22.1"><a href="#exercises-sets-3-10-2" title="Copy heading and permalink for Hint 1.4.22.1" aria-label="Copy heading and permalink for Hint 1.4.22.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.24<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) Let <span class="process-math">\(y \in f(A_1 \cup A_2)\text{.}\)</span>  Then there exists an <span class="process-math">\(x \in A_1 \cup A_2\)</span> such that <span class="process-math">\(f(x) = y\text{.}\)</span>  Hence, <span class="process-math">\(y \in f(A_1)\)</span> or <span class="process-math">\(f(A_2) \text{.}\)</span>  Therefore, <span class="process-math">\(y \in f(A_1) \cup f(A_2)\text{.}\)</span> Consequently, <span class="process-math">\(f(A_1 \cup A_2) \subset f(A_1) \cup f(A_2)\text{.}\)</span> Conversely, if <span class="process-math">\(y \in f(A_1) \cup f(A_2)\text{,}\)</span> then <span class="process-math">\(y \in f(A_1)\)</span> or <span class="process-math">\(f(A_2)\text{.}\)</span>  Hence, there exists an <span class="process-math">\(x \in A_1\)</span> or there exists an <span class="process-math">\(x \in A_2\)</span> such that <span class="process-math">\(f(x) = y\text{.}\)</span>  Thus, there exists an <span class="process-math">\(x \in A_1 \cup A_2\)</span> such that <span class="process-math">\(f(x) = y\text{.}\)</span>  Therefore, <span class="process-math">\(f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)\text{,}\)</span> and <span class="process-math">\(f(A_1 \cup A_2) = f(A_1) \cup f(A_2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-3-12-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.24.1"><a href="#exercises-sets-3-12-2" title="Copy heading and permalink for Hint 1.4.24.1" aria-label="Copy heading and permalink for Hint 1.4.24.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.4.28<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Let <span class="process-math">\(X = {\mathbb N} \cup \{ \sqrt{2}\, \}\)</span> and define <span class="process-math">\(x \sim y\)</span> if <span class="process-math">\(x + y \in {\mathbb N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-sets-3-16-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 1.4.28.1"><a href="#exercises-sets-3-16-2" title="Copy heading and permalink for Hint 1.4.28.1" aria-label="Copy heading and permalink for Hint 1.4.28.1">🔗</a></div>
-</div></details></div></article></article><h3 class="heading hide-type" title="Exercises 3.5: Exercises">
+</div></details>
+</div></article></article><h3 class="heading hide-type" title="Exercises 3.5: Exercises">
 <span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Groups</span><br><span class="codenumber">3.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">(a) Not a group; (c) a group.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.2.1"><a href="#exercises-groups-3-2" title="Copy heading and permalink for Hint 3.5.2.1" aria-label="Copy heading and permalink for Hint 3.5.2.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para logical">
 <div class="displaymath process-math">
 \begin{equation*}
@@ -450,18 +490,30 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.6.1"><a href="#exercises-groups-7-2" title="Copy heading and permalink for Hint 3.5.6.1" aria-label="Copy heading and permalink for Hint 3.5.6.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Pick two matrices. Almost any pair will work.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.8.1"><a href="#exercises-groups-9-2" title="Copy heading and permalink for Hint 3.5.8.1" aria-label="Copy heading and permalink for Hint 3.5.8.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Look at the symmetry group of an equilateral triangle or a square.<div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-17-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.16.1"><a href="#exercises-groups-17-2" title="Copy heading and permalink for Hint 3.5.16.1" aria-label="Copy heading and permalink for Hint 3.5.16.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.18<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para logical">
 <div class="para">Let</div>
 <div class="displaymath process-math">
@@ -476,78 +528,110 @@ eBookConfig.enable_chatcodes =  false;
 <div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.18.1"><a href="#exercises-groups-19-2" title="Copy heading and permalink for Hint 3.5.18.1" aria-label="Copy heading and permalink for Hint 3.5.18.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.46<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.46<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Look at <span class="process-math">\(S_3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-47-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 3.5.46.1"><a href="#exercises-groups-47-2" title="Copy heading and permalink for Hint 3.5.46.1" aria-label="Copy heading and permalink for Hint 3.5.46.1">🔗</a></div>
-</div></details></div></article><div class="exercisegroup"><div class="exercisegroup-exercises cols2">
+</div></details>
+</div></article><div class="exercisegroup"><div class="exercisegroup-exercises cols2 multicolumn">
 <article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.56<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 3.5.56.1"><a href="#exercises-groups-56-3-2" title="Copy heading and permalink for Answer 3.5.56.1" aria-label="Copy heading and permalink for Answer 3.5.56.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.58<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
-<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.58<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(n+1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-56-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 3.5.58.1"><a href="#exercises-groups-56-5-2" title="Copy heading and permalink for Answer 3.5.58.1" aria-label="Copy heading and permalink for Answer 3.5.58.1">🔗</a></div>
-</div></details></div></article>
+</div></details>
+</div></article>
 </div></div>
 <article class="exercise-like"><h4 class="heading"><span class="codenumber">3.5.60<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
 <article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.60.a"><span class="codenumber">3.5.60.a</span></h5>
-<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 3.5.60.a.1"><a href="#exercises-groups-58-2-2" title="Copy heading and permalink for Answer 3.5.60.a.1" aria-label="Copy heading and permalink for Answer 3.5.60.a.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.60.b"><span class="codenumber">3.5.60.b</span></h5>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 3.5.60.b"><span class="codenumber">3.5.60.b</span></h5>
 <article class="exercise-like"><h6 class="heading hide-type" title="Task 3.5.60.b.i"><span class="codenumber">3.5.60.b.i</span></h6>
-<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(8\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 3.5.60.b.i.1"><a href="#exercises-groups-58-3-2-2" title="Copy heading and permalink for Answer 3.5.60.b.i.1" aria-label="Copy heading and permalink for Answer 3.5.60.b.i.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h6 class="heading hide-type" title="Task 3.5.60.b.ii"><span class="codenumber">3.5.60.b.ii</span></h6>
-<div class="solutions"><details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+</div></details>
+</div></article><article class="exercise-like"><h6 class="heading hide-type" title="Task 3.5.60.b.ii"><span class="codenumber">3.5.60.b.ii</span></h6>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#exercises-groups-58-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Answer 3.5.60.b.ii.1"><a href="#exercises-groups-58-3-3-2" title="Copy heading and permalink for Answer 3.5.60.b.ii.1" aria-label="Copy heading and permalink for Answer 3.5.60.b.ii.1">🔗</a></div>
-</div></details></div></article></article></article><h3 class="heading hide-type" title="Exercises 5.9: Multiple Choice Exercises">
+</div></details>
+</div></article></article></article><h3 class="heading hide-type" title="Exercises 5.9: Multiple Choice Exercises">
 <span class="codenumber">5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Runestone Testing</span><br><span class="codenumber">5.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple Choice Exercises</span>
 </h3>
 <article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.9.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple-Choice, Randomized, One Answer.</span>
 </h4>
 <div class="solutions">
-<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-randomized-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.9.4.1"><a href="#multiple-choice-randomized-5" title="Copy heading and permalink for Hint 5.9.4.1" aria-label="Copy heading and permalink for Hint 5.9.4.1">🔗</a></div>
-</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-randomized-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.9.4.2"><a href="#multiple-choice-randomized-6" title="Copy heading and permalink for Hint 5.9.4.2" aria-label="Copy heading and permalink for Hint 5.9.4.2">🔗</a></div>
 </div></details>
-</div></article><article class="exercise-like"><h4 class="heading">
+</div></article>
+<article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.9.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple-Choice, Randomized, Multiple Answers.</span>
 </h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Do you know the acronym…<abbr class="acronym">ROY G BIV</abbr> for the colors of a rainbow, and their order?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-randomized-multiple-answers-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.9.6.1"><a href="#multiple-choice-randomized-multiple-answers-5" title="Copy heading and permalink for Hint 5.9.6.1" aria-label="Copy heading and permalink for Hint 5.9.6.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.9.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple-Choice, Not Randomized, One Answer.</span>
 </h4>
 <div class="solutions">
-<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-columns-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.9.8.1"><a href="#multiple-choice-columns-5" title="Copy heading and permalink for Hint 5.9.8.1" aria-label="Copy heading and permalink for Hint 5.9.8.1">🔗</a></div>
-</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-columns-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.9.8.2"><a href="#multiple-choice-columns-6" title="Copy heading and permalink for Hint 5.9.8.2" aria-label="Copy heading and permalink for Hint 5.9.8.2">🔗</a></div>
@@ -558,23 +642,31 @@ eBookConfig.enable_chatcodes =  false;
 <article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.10.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, Mathematical Proof, Numbered Blocks.</span>
 </h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Dorothy will not be much help with this proof.<div class="autopermalink" data-description="Paragraph"><a href="#number-theory-proof-numbered-left-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.10.6.1"><a href="#number-theory-proof-numbered-left-5" title="Copy heading and permalink for Hint 5.10.6.1" aria-label="Copy heading and permalink for Hint 5.10.6.1">🔗</a></div>
-</div></details></div></article><h3 class="heading hide-type" title="Exercises 5.19: Fill-In Exercises">
+</div></details>
+</div></article><h3 class="heading hide-type" title="Exercises 5.19: Fill-In Exercises">
 <span class="codenumber">5.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In Exercises</span>
 </h3>
 <article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.19.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, New Markup Strings.</span>
 </h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Do you really need a hint? Carefully reread the question.<div class="autopermalink" data-description="Paragraph"><a href="#fillin-strings--4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.19.2.1"><a href="#fillin-strings--4" title="Copy heading and permalink for Hint 5.19.2.1" aria-label="Copy heading and permalink for Hint 5.19.2.1">🔗</a></div>
-</div></details></div></article><article class="exercise-like"><h4 class="heading">
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.19.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Dynamic Math with Simple Numerical Answer.</span>
-</h4></article><article class="exercise-like"><h4 class="heading">
+</h4></article>
+<article class="exercise-like"><h4 class="heading">
 <span class="codenumber">5.19.8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Dynamic Math with Interdependent Formula Checking.</span>
 </h4></article><h3 class="heading hide-type" title="Exercises 5.20: Hodgepodge">
 <span class="codenumber">5.20</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hodgepodge</span>
@@ -585,12 +677,15 @@ eBookConfig.enable_chatcodes =  false;
 <article class="exercise-like"><h5 class="heading hide-type" title="Task 5.20.2.a: True/False">
 <span class="codenumber">5.20.2.a</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">True/False.</span>
 </h5>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(P_n\text{,}\)</span> the vector space of polynomials with degree at most <span class="process-math">\(n\text{,}\)</span> has dimension <span class="process-math">\(n+1\)</span> by <a href="section-groups-define.html#theorem-exponent-laws" class="xref" data-knowl="./knowl/xref/theorem-exponent-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.16">Theorem 3.2.16</a>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#true-false-task-in-exercises-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.20.2.a.1"><a href="#true-false-task-in-exercises-5" title="Copy heading and permalink for Hint 5.20.2.a.1" aria-label="Copy heading and permalink for Hint 5.20.2.a.1">🔗</a></div>
-</div></details></div></article></article><h3 class="heading hide-type" title="Section 5.21: Exercises that are Timed">
+</div></details>
+</div></article></article><h3 class="heading hide-type" title="Section 5.21: Exercises that are Timed">
 <span class="codenumber">5.21</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises that are Timed</span>
 </h3>
 <h4 class="heading hide-type" title="Exercises 5.21: Timed Exercises"><span class="title">Timed Exercises</span></h4>
@@ -598,27 +693,35 @@ eBookConfig.enable_chatcodes =  false;
 <span class="codenumber">5.21.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple-Choice, Not Randomized, One Answer.</span>
 </h5>
 <div class="solutions">
-<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">What did you see last time you went driving?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-timed-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.21.2.1"><a href="#multiple-choice-not-randomized-timed-5" title="Copy heading and permalink for Hint 5.21.2.1" aria-label="Copy heading and permalink for Hint 5.21.2.1">🔗</a></div>
-</div></details><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+</div></details>
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">Maybe go out for a drive?<div class="autopermalink" data-description="Paragraph"><a href="#multiple-choice-not-randomized-timed-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Hint 5.21.2.2"><a href="#multiple-choice-not-randomized-timed-6" title="Copy heading and permalink for Hint 5.21.2.2" aria-label="Copy heading and permalink for Hint 5.21.2.2">🔗</a></div>
 </div></details>
-</div></article><h3 class="heading hide-type" title="Exercises 5.30: Timed Chapter Exam">
-<span class="codenumber">5.30</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Timed Chapter Exam</span>
+</div></article><h3 class="heading hide-type" title="Exercises 5.29: Timed Chapter Exam">
+<span class="codenumber">5.29</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Timed Chapter Exam</span>
 </h3>
 <article class="exercise-like"><h4 class="heading">
-<span class="codenumber">5.30.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">True/False.</span>
+<span class="codenumber">5.29.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">True/False.</span>
 </h4>
-<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
 <div class="para">
 <span class="process-math">\(P_n\text{,}\)</span> the vector space of polynomials with degree at most <span class="process-math">\(n\text{,}\)</span> has dimension <span class="process-math">\(n+1\)</span> by <a href="section-groups-define.html#theorem-exponent-laws" class="xref" data-knowl="./knowl/xref/theorem-exponent-laws.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.16">Theorem 3.2.16</a>.  [Cross-reference is just a demo, content is not relevant.]  What happens if we relax the defintion and remove the parameter <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#vector-space-dimension-timed-two-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.30.2.1"><a href="#vector-space-dimension-timed-two-5" title="Copy heading and permalink for Hint 5.30.2.1" aria-label="Copy heading and permalink for Hint 5.30.2.1">🔗</a></div>
-</div></details></div></article><div class="autopermalink" data-description="Appendix C: Hints and Answers to Selected Even Exercises"><a href="#backmatter-4" title="Copy heading and permalink for Appendix C: Hints and Answers to Selected Even Exercises" aria-label="Copy heading and permalink for Appendix C: Hints and Answers to Selected Even Exercises">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Hint 5.29.2.1"><a href="#vector-space-dimension-timed-two-5" title="Copy heading and permalink for Hint 5.29.2.1" aria-label="Copy heading and permalink for Hint 5.29.2.1">🔗</a></div>
+</div></details>
+</div></article><div class="autopermalink" data-description="Appendix C: Hints and Answers to Selected Even Exercises"><a href="#backmatter-4" title="Copy heading and permalink for Appendix C: Hints and Answers to Selected Even Exercises" aria-label="Copy heading and permalink for Appendix C: Hints and Answers to Selected Even Exercises">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="backmatter-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

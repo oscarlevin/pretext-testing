@@ -20,7 +20,7 @@
 <!-- along with PreTeXt. If not, see <http://www.gnu.org/licenses/>.       -->
 <!-- ********************************************************************* -->
 
-<pretext>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
     <!-- Other languages can be used to internationalize parts of a document -->
     <!-- <pretext xml:lang="pt-BR"> -->
 
@@ -275,7 +275,7 @@
                         </hint>
 
                         <solution>
-                            <p><me><var name="$expression"/>=\sqrt{<var name="$b"/>^2\cdot <var name="$a"/>}=<var name="$b"/>\sqrt{<var name="$a"/>}</me></p>
+                            <p><md><var name="$expression"/>=\sqrt{<var name="$b"/>^2\cdot <var name="$a"/>}=<var name="$b"/>\sqrt{<var name="$a"/>}</md></p>
                         </solution>
                     </webwork>
                 </exercise>
@@ -295,18 +295,121 @@
                     </conclusion>
                 </exercise>
 
+                <exercise label="local-pg">
+                    <title>Local PG</title>
+                    <introduction>
+                        <p>
+                            The complete text of a <c>.pg</c> file can be used as the content of a
+                            <tag>webwork</tag>. Attention should be given to newlines and white
+                            space within the <tag>webwork</tag>, as they will be included in the PG
+                            problem that is rendered.
+                        </p>
+                    </introduction>
+                    <webwork><![CDATA[DOCUMENT();
+
+loadMacros(
+  "PGstandard.pl",
+  "PGML.pl",
+  "AnswerFormatHelp.pl",
+  "PGcourse.pl",
+);
+COMMENT('Add two positive single-digit integers.');
+
+Context('Numeric');
+$a = random(1, 9, 1);
+$b = random(1, 9, 1);
+$c = Compute($a + $b);
+
+BEGIN_PGML
+Compute the sum of [`[$a]`] and [`[$b]\text{:}`]
+
+[`[$a] + [$b] =`] [_]{$c}{5} [@AnswerFormatHelp('numbers')@]*
+
+END_PGML
+
+ENDDOCUMENT();
+]]></webwork>
+                </exercise>
+
+                <exercise label="local-pg-file">
+                    <title>Local PG File</title>
+                    <introduction>
+                        <p>
+                            It is convenient to get the text of a <c>.pg</c> file using
+                            <c>xi:include</c>. This may help with file management and management of
+                            to not have to manage whitespace.
+                        </p>
+                    </introduction>
+                    <webwork><xi:include parse="text" href="pg/Adding_SingleDigit_Integers.pg"/></webwork>
+                </exercise>
+
                 <project label="copy-webwork-add-numbers">
                     <title>Inside a <tag>project</tag></title>
                     <introduction>
                         <p>
-                            If you like, you can have a <webwork/> inside a PROJECT-LIKE block.
-                            Just like with an <tag>exercise</tag>, it can be preceded with an optional <tag>introduction</tag>
-                            and followed by an optional <tag>conclusion</tag>.
+                            If you like, you can have a <webwork/> inside a <tag>project</tag>.
+                            Just like with an <tag>exercise</tag>, it can be preceded with an
+                            optional <tag>introduction</tag> and followed by an optional
+                            <tag>conclusion</tag>.
                         </p>
                     </introduction>
-                    <webwork copy="webwork-add-numbers" seed="511"/>
+                    <webwork seed="511">
+                        <description>
+                            Add two positive single-digit integers.
+                        </description>
+                        <pg-code>
+                            $a = random(1, 9, 1);
+                            $b = random(1, 9, 1);
+                            $c = Compute($a + $b);
+                        </pg-code>
+                        <statement>
+                            <p>
+                                Compute the sum of <m><var name="$a" /></m> and
+                                <m><var name="$b" /></m>:
+                            </p>
+                            <p>
+                                <m><var name="$a" /> + <var name="$b" /> =</m>
+                                <var name="$c" width="5" category="integer" />
+                            </p>
+                        </statement>
+                        <solution>
+                            <p><m><var name="$a" /> + <var name="$b" /> = <var name="$c" /></m>.</p>
+                        </solution>
+                    </webwork>
                 </project>
 
+                <exploration label="copy-webwork-add-numbers-exploration">
+                    <title>Inside an <tag>exploration</tag></title>
+                    <introduction>
+                        <p>
+                            There are other <q>project-like</q> tags besides <tag>project</tag>.
+                            Here, we use an <tag>exploration</tag>.
+                        </p>
+                    </introduction>
+                    <webwork seed="512">
+                        <description>
+                            Add two positive single-digit integers.
+                        </description>
+                        <pg-code>
+                            $a = random(1, 9, 1);
+                            $b = random(1, 9, 1);
+                            $c = Compute($a + $b);
+                        </pg-code>
+                        <statement>
+                            <p>
+                                Compute the sum of <m><var name="$a" /></m> and
+                                <m><var name="$b" /></m>:
+                            </p>
+                            <p>
+                                <m><var name="$a" /> + <var name="$b" /> =</m>
+                                <var name="$c" width="5" category="integer" />
+                            </p>
+                        </statement>
+                        <solution>
+                            <p><m><var name="$a" /> + <var name="$b" /> = <var name="$c" /></m>.</p>
+                        </solution>
+                    </webwork>
+                </exploration>
             </section>
 
             <section xml:id="section-the-quadratic-formula">
@@ -320,7 +423,7 @@
                     <title>Quadratic Formula</title>
 
                     <statement>
-                        <p>Given the second-degree polynomial equation <m>ax^2 + bx + c = 0</m>, where <m>a\neq0</m>, solutions are given by <me>x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.</me></p>
+                        <p>Given the second-degree polynomial equation <m>ax^2 + bx + c = 0</m>, where <m>a\neq0</m>, solutions are given by <md>x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}.</md></p>
                     </statement>
                     <proof>
                         <p><md>
@@ -414,9 +517,9 @@
                                     You already identified <m>a = <var name="$a"/></m>,
                                     <m>b = <var name="$b"/></m>, and <m>c = <var name="$c"/></m>,
                                     so the results are:
-                                    <me>x = <var name="$sol1"/> = <var name="$x1"/></me>
+                                    <md>x = <var name="$sol1"/> = <var name="$x1"/></md>
                                     or
-                                    <me>x = <var name="$sol2"/> = <var name="$x2"/></me>
+                                    <md>x = <var name="$sol2"/> = <var name="$x2"/></md>
                                 </p>
                             </solution>
                         </task>
@@ -535,9 +638,9 @@
                                     You already identified <m>a = <var name="$a"/></m>,
                                     <m>b = <var name="$b"/></m>, and <m>c = <var name="$c"/></m>,
                                     so the results are:
-                                    <me>x = <var name="$sol1"/> = <var name="$x1"/></me>
+                                    <md>x = <var name="$sol1"/> = <var name="$x1"/></md>
                                     or
-                                    <me>x = <var name="$sol2"/> = <var name="$x2"/></me>
+                                    <md>x = <var name="$sol2"/> = <var name="$x2"/></md>
                                 </p>
                             </solution>
                         </task>
@@ -612,7 +715,7 @@
                         <title>Antiderivative of a Function</title>
 
                         <statement>
-                            <p>Suppose that <m>f(x)</m> and <m>F(x)</m> are two functions such that <me>F^\prime(x) = f(x).</me>  Then we say <m>F</m> is an <term>antiderivative</term> of <m>f</m>.</p>
+                            <p>Suppose that <m>f(x)</m> and <m>F(x)</m> are two functions such that <md>F^\prime(x) = f(x).</md>  Then we say <m>F</m> is an <term>antiderivative</term> of <m>f</m>.</p>
                         </statement>
                     </definition>
 
@@ -622,7 +725,7 @@
                         <title>The Fundamental Theorem of Calculus</title>
                         <idx>Fundamental Theorem of Calculus</idx>
                         <statement>
-                            <p>If <m>f(x)</m> is continuous, and the derivative of <m>F(x)</m> is <m>f(x)</m>, then <me>\definiteintegral{a}{b}{f(x)}{x}=F(b)-F(a)</me></p>
+                            <p>If <m>f(x)</m> is continuous, and the derivative of <m>F(x)</m> is <m>f(x)</m>, then <md>\definiteintegral{a}{b}{f(x)}{x}=F(b)-F(a)</md></p>
                         </statement>
                         <proof>
                             <p>Left to the reader.</p>
@@ -633,14 +736,14 @@
 
                     <corollary xml:id="corollary-FTC-derivative">
                         <statement>
-                            <p>Suppose <m>f(x)</m> is a continuous function.  Then <men xml:id="equation-alternate-FTC">\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}=f(x)</men></p>
+                            <p>Suppose <m>f(x)</m> is a continuous function.  Then <md number="yes" xml:id="equation-alternate-FTC">\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}=f(x)</md></p>
                         </statement>
                         <proof xml:id="proof-FTC-corollary">
-                            <p>We simply take the indicated derivative, applying <xref ref="theorem-FTC" /> at <xref ref="equation-use-FTC" />.<mdn>
+                            <p>We simply take the indicated derivative, applying <xref ref="theorem-FTC" /> at <xref ref="equation-use-FTC" />.<md number="yes">
                                 <mrow xml:id="equation-use-FTC">\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}&amp;=\frac{d}{dx}\left(F(x)-F(a)\right)</mrow>
                                 <mrow number="no">&amp;=\frac{d}{dx}F(x)-\frac{d}{dx}F(a)</mrow>
                                 <mrow>&amp;=f(x)-0 = f(x)</mrow>
-                            </mdn></p>
+                            </md></p>
                         </proof>
                     </corollary>
                 </subsection>
@@ -705,7 +808,7 @@
                             </p>
                         </introduction>
 
-                        <exercise>
+                        <exercise label="antiderivative-sin">
                             <webwork>
                                 <pg-code>
                                     $answer = FormulaUpToConstant("-cos(x)");
@@ -721,7 +824,7 @@
                             </webwork>
                         </exercise>
 
-                        <exercise>
+                        <exercise label="antiderivative-exp">
                             <webwork>
                                 <pg-code>
                                     $answer = FormulaUpToConstant("e^x");
@@ -785,15 +888,14 @@
                     <title>Math Elements and Alignment</title>
                     <introduction>
                         <p>
-                            In this exercise we demonstrate the allowed math elements: <tag>m</tag>, <tag>me</tag>, and <tag>md</tag>.
-                            The last of these may have attribute <attr>alignment</attr> with options <c>gather</c>, <c>align</c>, or <c>alignat</c>.
-                            The first two are used by default, depending on if you have <c>&amp;</c> or <c>\amp</c> in your math.
+                            In this exercise we demonstrate the allowed math elements: <tag>m</tag> and <tag>md</tag>.
+                            The latter may have attribute <attr>alignment</attr> with options <c>gather</c>, <c>align</c>, or <c>alignat</c>.
                         </p>
                     </introduction>
                     <webwork>
                         <statement>
                             <p>
-                                If <m>a=5</m> and <m>b=12</m>, then <me>a^2+b^2=13^2</me>.
+                                If <m>a=5</m> and <m>b=12</m>, then <md>a^2+b^2=13^2</md>.
                             </p>
                             <p>
                                 Here, we solve an equation.
@@ -1342,7 +1444,7 @@
                               </latex-image>
                             </image>
                         </introduction>
-                        <exercise>
+                        <exercise label="box-diagonal-five">
                             <webwork>
                                 <statement>
                                     <p>
@@ -1363,7 +1465,7 @@
                                 </solution>
                             </webwork>
                         </exercise>
-                        <exercise>
+                        <exercise label="box-diagonal-thirteen">
                             <webwork>
                                 <statement>
                                     <p>
@@ -1470,7 +1572,7 @@
 
                 <p>Here we make MathObject String answers to see how they turn out in answer elements.</p>
 
-                <exercise>
+                <exercise label="mathobject-string-answers">
                     <webwork>
                         <pg-code>
                             $xmlchars = q(&lt;>&amp;'";);
@@ -1530,7 +1632,7 @@
                     use <c>data="pgml"</c>. (This is not in the <pretext/> schema as of 3/26/2020, and is subject to change.)
                 </p>
 
-                <exercise>
+                <exercise label="pgml-data-attribute">
                     <webwork>
                         <pg-code>
                             $statement = 'some PGML math: [`\frac{1}{2}+\frac{3}{2}=2`]; and some *bold text*';
@@ -1662,7 +1764,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="radio-buttons-with-math">
                     <webwork>
                         <pg-code>
                               $expressions = RadioButtons(['\(x\)','\(x^2\)','\(2^x\)'], 2);
@@ -1742,7 +1844,7 @@
 
                 </exercise>
 
-                <exercise>
+                <exercise label="answer-arrays">
                     <title>Answer Arrays</title>
                     <webwork>
                       <pg-code>
@@ -1778,7 +1880,7 @@
             <section>
                 <title>Stress Tests</title>
 
-                <exercise>
+                <exercise label="ptx-source-with-server-images">
                     <title>PTX problem source with server-generated images</title>
                     <webwork>
                         <pg-code>
@@ -1817,7 +1919,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="list-indentation">
                     <title>Checking Proper Indentation In Lists</title>
                     <introduction>
                         <p>One long exercise, where ordered sublists test the specification of their labels.</p>
@@ -1966,55 +2068,55 @@
 
                             <p><ol>
                                 <li>
-                                    <p><me>1+1=2</me>Structured item</p>
-                                    <p>Second<me>1+1=2</me> paragraph</p>
+                                    <p><md>1+1=2</md>Structured item</p>
+                                    <p>Second<md>1+1=2</md> paragraph</p>
                                 </li>
                                 <li>
                                     <p><ol marker="a">
                                         <li>
-                                            <p>Sublist<me>1+1=2</me> Item</p>
-                                            <p>Second paragraph<me>1+1=2</me></p>
+                                            <p>Sublist<md>1+1=2</md> Item</p>
+                                            <p>Second paragraph<md>1+1=2</md></p>
                                         </li>
                                         <li>
-                                            <p><me>1+1=2</me>Sublist Item</p>
-                                            <p>Second<me>1+1=2</me> paragraph</p>
+                                            <p><md>1+1=2</md>Sublist Item</p>
+                                            <p>Second<md>1+1=2</md> paragraph</p>
                                         </li>
                                         <li>
-                                            <p>Sublist Item<me>1+1=2</me></p>
-                                            <p><me>1+1=2</me>Second paragraph</p>
+                                            <p>Sublist Item<md>1+1=2</md></p>
+                                            <p><md>1+1=2</md>Second paragraph</p>
                                         </li>
                                     </ol></p>
                                 </li>
                                 <li>
-                                    <p>Structured<me>1+1=2</me> item</p>
-                                    <p>Second paragraph<me>1+1=2</me></p>
+                                    <p>Structured<md>1+1=2</md> item</p>
+                                    <p>Second paragraph<md>1+1=2</md></p>
                                 </li>
                             </ol></p>
 
                             <p>Text before.<ol>
                                 <li>
-                                    <p>Structured<me>1+1=2</me> item</p>
-                                    <p>Second paragraph<me>1+1=2</me></p>
+                                    <p>Structured<md>1+1=2</md> item</p>
+                                    <p>Second paragraph<md>1+1=2</md></p>
                                 </li>
                                 <li>
-                                    <p><me>1+1=2</me>Text before.<ol marker="A">
+                                    <p><md>1+1=2</md>Text before.<ol marker="A">
                                         <li>
-                                            <p>Sublist<me>1+1=2</me> Item</p>
-                                            <p>Second paragraph<me>1+1=2</me></p>
+                                            <p>Sublist<md>1+1=2</md> Item</p>
+                                            <p>Second paragraph<md>1+1=2</md></p>
                                         </li>
                                         <li>
-                                            <p><me>1+1=2</me>Sublist Item</p>
-                                            <p>Second<me>1+1=2</me> paragraph</p>
+                                            <p><md>1+1=2</md>Sublist Item</p>
+                                            <p>Second<md>1+1=2</md> paragraph</p>
                                         </li>
                                         <li>
-                                            <p>Sublist Item<me>1+1=2</me></p>
-                                            <p><me>1+1=2</me>Second paragraph</p>
+                                            <p>Sublist Item<md>1+1=2</md></p>
+                                            <p><md>1+1=2</md>Second paragraph</p>
                                         </li>
-                                    </ol>And<me>1+1=2</me> after.</p>
+                                    </ol>And<md>1+1=2</md> after.</p>
                                 </li>
                                 <li>
-                                    <p>Structured item<me>1+1=2</me></p>
-                                    <p><me>1+1=2</me>Second paragraph</p>
+                                    <p>Structured item<md>1+1=2</md></p>
+                                    <p><md>1+1=2</md>Second paragraph</p>
                                 </li>
                             </ol>And after.</p>
 
@@ -2084,7 +2186,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="list-indentation-with-images-and-tables">
                     <title>Checking Proper Indentation In Lists with Images and Tables</title>
                     <webwork>
                         <pg-code>
@@ -2167,7 +2269,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="deep-nested-lists">
                     <title>Deep-nested lists</title>
                     <webwork>
                         <statement>
@@ -2211,7 +2313,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="empty-statement">
                     <introduction>
                         <p>
                             This exercise has no content in its statement.
@@ -2224,7 +2326,7 @@
                     </webwork>
                 </exercise>
 
-                <exercise>
+                <exercise label="single-quote-in-table-cell">
                     <introduction>
                         <p>
                             This exercise has a single quote in it.
@@ -2255,14 +2357,14 @@
                 <subsection>
                     <title>Inline Exercises</title>
                     <p>Some <q>inline</q> exercises, as distinguished from the <q>divisional</q> exercises below.</p>
-                    <exercise>
+                    <exercise label="inline-bare">
                         <webwork>
                             <statement>
                                 <p><m>1+1=2</m></p>
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-title">
                         <title>Has a Title</title>
                         <webwork>
                             <statement>
@@ -2270,7 +2372,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-introduction">
                         <introduction>
                             <p>Has an introduction.</p>
                         </introduction>
@@ -2280,7 +2382,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-title-introduction">
                         <title>Has a Title</title>
                         <introduction>
                             <p>Has an introduction.</p>
@@ -2291,7 +2393,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-conclusion">
                         <webwork>
                             <statement>
                                 <p><m>1+1=2</m></p>
@@ -2301,7 +2403,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-title-conclusion">
                         <title>Has a Title</title>
                         <webwork>
                             <statement>
@@ -2312,7 +2414,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-introduction-conclusion">
                         <introduction>
                             <p>Has an introduction.</p>
                         </introduction>
@@ -2325,7 +2427,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="inline-title-introduction-conclusion">
                         <title>Has a Title</title>
                         <introduction>
                             <p>Has an introduction.</p>
@@ -2343,14 +2445,14 @@
 
                 <exercises>
                     <title>Divisional Exercises</title>
-                    <exercise>
+                    <exercise label="divisional-bare">
                         <webwork>
                             <statement>
                                 <p><m>1+1=2</m></p>
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-title">
                         <title>Has a Title</title>
                         <webwork>
                             <statement>
@@ -2358,7 +2460,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-introduction">
                         <introduction>
                             <p>Has an introduction.</p>
                         </introduction>
@@ -2368,7 +2470,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-title-introduction">
                         <title>Has a Title</title>
                         <introduction>
                             <p>Has an introduction.</p>
@@ -2379,7 +2481,7 @@
                             </statement>
                         </webwork>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-conclusion">
                         <webwork>
                             <statement>
                                 <p><m>1+1=2</m></p>
@@ -2389,7 +2491,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-title-conclusion">
                         <title>Has a Title</title>
                         <webwork>
                             <statement>
@@ -2400,7 +2502,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-introduction-conclusion">
                         <introduction>
                             <p>Has an introduction.</p>
                         </introduction>
@@ -2413,7 +2515,7 @@
                             <p>Has a conclusion.</p>
                         </conclusion>
                     </exercise>
-                    <exercise>
+                    <exercise label="divisional-title-introduction-conclusion">
                         <title>Has a Title</title>
                         <introduction>
                             <p>Has an introduction.</p>
@@ -2431,14 +2533,14 @@
                         <introduction>
                             <p>These are inside an exercisegroup.</p>
                         </introduction>
-                        <exercise>
+                        <exercise label="exercisegroup-bare">
                             <webwork>
                                 <statement>
                                     <p><m>1+1=2</m></p>
                                 </statement>
                             </webwork>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-title">
                             <title>Has a Title</title>
                             <webwork>
                                 <statement>
@@ -2446,7 +2548,7 @@
                                 </statement>
                             </webwork>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-introduction">
                             <introduction>
                                 <p>Has an introduction.</p>
                             </introduction>
@@ -2456,7 +2558,7 @@
                                 </statement>
                             </webwork>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-title-introduction">
                             <title>Has a Title</title>
                             <introduction>
                                 <p>Has an introduction.</p>
@@ -2467,7 +2569,7 @@
                                 </statement>
                             </webwork>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-conclusion">
                             <webwork>
                                 <statement>
                                     <p><m>1+1=2</m></p>
@@ -2477,7 +2579,7 @@
                                 <p>Has a conclusion.</p>
                             </conclusion>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-title-conclusion">
                             <title>Has a Title</title>
                             <webwork>
                                 <statement>
@@ -2488,7 +2590,7 @@
                                 <p>Has a conclusion.</p>
                             </conclusion>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-introduction-conclusion">
                             <introduction>
                                 <p>Has an introduction.</p>
                             </introduction>
@@ -2501,7 +2603,7 @@
                                 <p>Has a conclusion.</p>
                             </conclusion>
                         </exercise>
-                        <exercise>
+                        <exercise label="exercisegroup-title-introduction-conclusion">
                             <title>Has a Title</title>
                             <introduction>
                                 <p>Has an introduction.</p>

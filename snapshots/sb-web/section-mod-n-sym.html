@@ -36,7 +36,6 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
@@ -73,14 +72,13 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +96,7 @@ window.MathJax = {
 <meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
 <meta property="book:title" content="PreTeXt Sample Book">
 <meta property="book:author" content="Thomas W. Judson">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -121,16 +119,16 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.4';
+eBookConfig.runestone_version = '7.12.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext-search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
@@ -140,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -332,17 +330,16 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.29</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -365,18 +362,24 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F</span> <span class="title">Some Runestone Elements</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-mod-n-sym"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="section-mod-n-sym">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Integer Equivalence Classes and Symmetries</span>
 </h2>
 <p class="byline">Carl Friedrich Gauß, Leonhard Euler</p>
-<section class="introduction" id="section-mod-n-sym-4"><div class="para" id="section-mod-n-sym-4-1">Let us now investigate some mathematical structures that can be viewed as sets with single operations.<div class="autopermalink" data-description="Paragraph"><a href="#section-mod-n-sym-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></section><section class="subsection" id="section-mod-n-sym-5"><h3 class="heading hide-type">
+<section class="introduction" id="section-mod-n-sym-4">
+<div class="para" id="section-mod-n-sym-4-1">Let us now investigate some mathematical structures that can be viewed as sets with single operations.<div class="autopermalink" data-description="Paragraph"><a href="#section-mod-n-sym-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="section-mod-n-sym-5">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Integers mod <span class="process-math">\(n\)</span></span>
 </h3>
 <p class="byline">Gottfried Wilhelm Leibniz</p>
@@ -398,7 +401,9 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <details id="example-groups-zn-addition" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular Addition.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para logical" id="example-groups-zn-addition-2">
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-groups-zn-addition-2">
 <div class="para">The following examples illustrate integer arithmetic modulo <span class="process-math">\(n\text{:}\)</span>
 </div>
 <div class="displaymath process-math" id="example-groups-zn-addition-2-2">
@@ -412,12 +417,17 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="example-groups-zn-addition-3">In particular, notice that it is possible that the product of two nonzero numbers modulo <span class="process-math">\(n\)</span> can be equivalent to <span class="process-math">\(0 \)</span> modulo <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-groups-zn-addition-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 3.1.1: Modular Addition"><a href="#example-groups-zn-addition" title="Copy heading and permalink for Example 3.1.1: Modular Addition" aria-label="Copy heading and permalink for Example 3.1.1: Modular Addition">🔗</a></div></article></details><details id="example-groups-zn-arithmetic-laws" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="autopermalink" data-description="Example 3.1.1: Modular Addition"><a href="#example-groups-zn-addition" title="Copy heading and permalink for Example 3.1.1: Modular Addition" aria-label="Copy heading and permalink for Example 3.1.1: Modular Addition">🔗</a></div>
+</article></details>
+<details id="example-groups-zn-arithmetic-laws" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Modular Arithmetic.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="example-groups-zn-arithmetic-laws-2">Most, but not all, of the usual laws of arithmetic hold for addition and multiplication in <span class="process-math">\({\mathbb Z}_n\text{.}\)</span>  For instance, it is not necessarily true that there is a multiplicative inverse.  Consider the multiplication table for <span class="process-math">\({\mathbb Z}_8\)</span> in <a href="section-mod-n-sym.html#figure-z8-mult" class="xref" data-knowl="./knowl/xref/figure-z8-mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.3">Figure 3.1.3</a>.  Notice that 2, 4, and 6 do not have multiplicative inverses; that is, for <span class="process-math">\(n = 2\text{,}\)</span> 4, or 6, there is no integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(k n \equiv 1 \pmod{ 8}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-groups-zn-arithmetic-laws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h4></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="example-groups-zn-arithmetic-laws-2">Most, but not all, of the usual laws of arithmetic hold for addition and multiplication in <span class="process-math">\({\mathbb Z}_n\text{.}\)</span>  For instance, it is not necessarily true that there is a multiplicative inverse.  Consider the multiplication table for <span class="process-math">\({\mathbb Z}_8\)</span> in <a href="section-mod-n-sym.html#figure-z8-mult" class="xref" data-knowl="./knowl/xref/figure-z8-mult.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.3">Figure 3.1.3</a>.  Notice that 2, 4, and 6 do not have multiplicative inverses; that is, for <span class="process-math">\(n = 2\text{,}\)</span> 4, or 6, there is no integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(k n \equiv 1 \pmod{ 8}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-groups-zn-arithmetic-laws-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="figure-z8-mult"><div class="para logical" id="figure-z8-mult-2">
-<div class="displaymath process-math">
+<figure class="figure figure-like" id="figure-z8-mult">
+<div class="para logical" id="figure-z8-mult-2">
+<div class="displaymath process-math" id="figure-z8-mult-2-1">
 \begin{equation*}
 \begin{array}{c|cccccccc}
 \cdot &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
@@ -435,7 +445,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#figure-z8-mult-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Multiplication table for <span class="process-math">\({\mathbb Z_8}\)</span><div class="autopermalink" data-description="Figure 3.1.3"><a href="#figure-z8-mult" title="Copy heading and permalink for Figure 3.1.3" aria-label="Copy heading and permalink for Figure 3.1.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Example 3.1.2: Modular Arithmetic"><a href="#example-groups-zn-arithmetic-laws" title="Copy heading and permalink for Example 3.1.2: Modular Arithmetic" aria-label="Copy heading and permalink for Example 3.1.2: Modular Arithmetic">🔗</a></div></article></details><article class="proposition theorem-like" id="proposition-zn-equiv-classes"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Multiplication table for <span class="process-math">\({\mathbb Z_8}\)</span><div class="autopermalink" data-description="Figure 3.1.3"><a href="#figure-z8-mult" title="Copy heading and permalink for Figure 3.1.3" aria-label="Copy heading and permalink for Figure 3.1.3">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Example 3.1.2: Modular Arithmetic"><a href="#example-groups-zn-arithmetic-laws" title="Copy heading and permalink for Example 3.1.2: Modular Arithmetic" aria-label="Copy heading and permalink for Example 3.1.2: Modular Arithmetic">🔗</a></div>
+</article></details>
+<article class="proposition theorem-like" id="proposition-zn-equiv-classes"><h4 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h4>
 <div class="para logical" id="proposition-zn-equiv-classes-1-1">
@@ -509,7 +522,7 @@ a + (-a)  \equiv 0 \pmod{ n}\text{.}
 <li id="proposition-zn-equiv-classes-1-1-4-6">
 <div class="para logical" id="proposition-zn-equiv-classes-1-1-4-6-1">
 <div class="para">Let <span class="process-math">\(a\)</span> be a nonzero integer.  Then <span class="process-math">\(\gcd(a,n) = 1\)</span> if and only if there exists a multiplicative inverse <span class="process-math">\(b\)</span> for <span class="process-math">\(a \pmod{n}\text{;}\)</span> that is, a nonzero integer <span class="process-math">\(b\)</span> such that</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="proposition-zn-equiv-classes-1-1-4-6-1-6">
 \begin{equation*}
 a  b  \equiv 1 \pmod{ n}\text{.}
 \end{equation*}
@@ -521,7 +534,11 @@ a  b  \equiv 1 \pmod{ n}\text{.}
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#proposition-zn-equiv-classes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 3.1.4"><a href="#proposition-zn-equiv-classes" title="Copy heading and permalink for Proposition 3.1.4" aria-label="Copy heading and permalink for Proposition 3.1.4">🔗</a></div></article><details id="proposition-zn-equiv-classes-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="proposition-zn-equiv-classes-2-1">We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-zn-equiv-classes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition 3.1.4"><a href="#proposition-zn-equiv-classes" title="Copy heading and permalink for Proposition 3.1.4" aria-label="Copy heading and permalink for Proposition 3.1.4">🔗</a></div>
+</article>
+<details id="proposition-zn-equiv-classes-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary>
+<article class="hiddenproof knowl__content">
+<div class="para" id="proposition-zn-equiv-classes-2-1">We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.<div class="autopermalink" data-description="Paragraph"><a href="#proposition-zn-equiv-classes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="proposition-zn-equiv-classes-2-2">(1) Addition and multiplication are commutative modulo <span class="process-math">\(n\)</span> since the remainder of <span class="process-math">\(a + b\)</span> divided by <span class="process-math">\(n\)</span> is the same as the remainder of <span class="process-math">\(b + a\)</span> divided by <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-zn-equiv-classes-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
@@ -529,16 +546,24 @@ a  b  \equiv 1 \pmod{ n}\text{.}
 </div>
 <div class="para" id="proposition-zn-equiv-classes-2-4">Conversely, suppose that there exists an integer <span class="process-math">\(b\)</span> such that <span class="process-math">\(ab  \equiv 1 \pmod{ n}\text{.}\)</span>  Then <span class="process-math">\(n\)</span> divides <span class="process-math">\(ab -1\text{,}\)</span> so there is an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(ab - nk = 1\text{.}\)</span>  Let <span class="process-math">\(d = \gcd(a,n)\text{.}\)</span>  Since <span class="process-math">\(d\)</span> divides <span class="process-math">\(ab - nk\text{,}\)</span> <span class="process-math">\(d\)</span> must also divide 1; hence, <span class="process-math">\(d = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#proposition-zn-equiv-classes-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 3.1.4.1"><a href="#proposition-zn-equiv-classes-2" title="Copy heading and permalink for Proof 3.1.4.1" aria-label="Copy heading and permalink for Proof 3.1.4.1">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.1.1: The Integers mod n"><a href="#section-mod-n-sym-5" title="Copy heading and permalink for Subsection 3.1.1: The Integers mod n" aria-label="Copy heading and permalink for Subsection 3.1.1: The Integers mod n">🔗</a></div></section><section class="subsection" id="section-mod-n-sym-6"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Proof 3.1.4.1"><a href="#proposition-zn-equiv-classes-2" title="Copy heading and permalink for Proof 3.1.4.1" aria-label="Copy heading and permalink for Proof 3.1.4.1">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 3.1.1: The Integers mod n"><a href="#section-mod-n-sym-5" title="Copy heading and permalink for Subsection 3.1.1: The Integers mod n" aria-label="Copy heading and permalink for Subsection 3.1.1: The Integers mod n">🔗</a></div>
+</section>
+<section class="subsection" id="section-mod-n-sym-6">
+<h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Symmetries</span>
 </h3>
 <figure class="figure figure-like" id="figure-groups-rectangle"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/groups-rectangle.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rigid motions of a rectangle<div class="autopermalink" data-description="Figure 3.1.5"><a href="#figure-groups-rectangle" title="Copy heading and permalink for Figure 3.1.5" aria-label="Copy heading and permalink for Figure 3.1.5">🔗</a></div></figcaption></figure><div class="para" id="section-mod-n-sym-6-3">A <dfn class="terminology">symmetry</dfn> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.  A map from the plane to itself preserving the symmetry of an object is called a <dfn class="terminology">rigid motion</dfn>.  For example, if we look at the rectangle in <a href="section-mod-n-sym.html#figure-groups-rectangle" class="xref" data-knowl="./knowl/xref/figure-groups-rectangle.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.5">Figure 3.1.5</a>, it is easy to see that a rotation of <span class="process-math">\(180^{\circ}\)</span> or <span class="process-math">\(360^{\circ}\)</span> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.  A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.  However, a <span class="process-math">\(90^{\circ}\)</span> rotation in either direction cannot be a symmetry unless the rectangle is a square.<div class="autopermalink" data-description="Paragraph"><a href="#section-mod-n-sym-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rigid motions of a rectangle<div class="autopermalink" data-description="Figure 3.1.5"><a href="#figure-groups-rectangle" title="Copy heading and permalink for Figure 3.1.5" aria-label="Copy heading and permalink for Figure 3.1.5">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="section-mod-n-sym-6-3">A <dfn class="terminology">symmetry</dfn> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.  A map from the plane to itself preserving the symmetry of an object is called a <dfn class="terminology">rigid motion</dfn>.  For example, if we look at the rectangle in <a href="section-mod-n-sym.html#figure-groups-rectangle" class="xref" data-knowl="./knowl/xref/figure-groups-rectangle.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.5">Figure 3.1.5</a>, it is easy to see that a rotation of <span class="process-math">\(180^{\circ}\)</span> or <span class="process-math">\(360^{\circ}\)</span> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.  A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.  However, a <span class="process-math">\(90^{\circ}\)</span> rotation in either direction cannot be a symmetry unless the rectangle is a square.<div class="autopermalink" data-description="Paragraph"><a href="#section-mod-n-sym-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="figure-s3-symmetry"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/groups-s3-symmetry.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Symmetries of a triangle<div class="autopermalink" data-description="Figure 3.1.6"><a href="#figure-s3-symmetry" title="Copy heading and permalink for Figure 3.1.6" aria-label="Copy heading and permalink for Figure 3.1.6">🔗</a></div></figcaption></figure><div class="para logical" id="section-mod-n-sym-6-5">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Symmetries of a triangle<div class="autopermalink" data-description="Figure 3.1.6"><a href="#figure-s3-symmetry" title="Copy heading and permalink for Figure 3.1.6" aria-label="Copy heading and permalink for Figure 3.1.6">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="section-mod-n-sym-6-5">
 <div class="para">Let us find the symmetries of the equilateral triangle <span class="process-math">\(\bigtriangleup ABC\text{.}\)</span>  To find a symmetry of <span class="process-math">\(\bigtriangleup ABC\text{,}\)</span> we must first examine the permutations of the vertices <span class="process-math">\(A\text{,}\)</span> <span class="process-math">\(B\text{,}\)</span> and <span class="process-math">\(C\)</span> and then ask if a permutation extends to a symmetry of the triangle.  Recall that a <dfn class="terminology">permutation</dfn> of a set <span class="process-math">\(S\)</span> is a one-to-one and onto map <span class="process-math">\(\pi :S \rightarrow S\text{.}\)</span>  The three vertices have <span class="process-math">\(3! = 6\)</span> permutations, so the triangle has at most six symmetries.  To see that there are six permutations, observe there are three different possibilities for the first vertex, and two for the second, and the remaining vertex is determined by the placement of the first two.  So we have <span class="process-math">\(3 \cdot 2 \cdot 1 = 3! = 6\)</span> different arrangements.  To denote the permutation of the vertices of an equilateral triangle that sends <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{,}\)</span> <span class="process-math">\(B\)</span> to <span class="process-math">\(C\text{,}\)</span> and <span class="process-math">\(C\)</span> to <span class="process-math">\(A\text{,}\)</span> we write the array</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-s3-symmetry.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-s3-symmetry.html" id="section-mod-n-sym-6-5-17">
 \begin{equation*}
 \begin{pmatrix}
 A &amp; B &amp; C \\
@@ -564,8 +589,9 @@ B &amp; C &amp; A
 </div>
 <div class="para" id="section-mod-n-sym-6-8">Notice that in the multiplication table for the symmetries of an equilateral triangle, for every motion of the triangle <span class="process-math">\(\alpha\)</span> there is another motion <span class="process-math">\(\beta\)</span> such that <span class="process-math">\(\alpha \beta = id\text{;}\)</span> that is, for every motion there is another  motion that takes the triangle back to its original orientation.<div class="autopermalink" data-description="Paragraph"><a href="#section-mod-n-sym-6-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figure class="figure figure-like" id="figure-s3"><div class="para logical" id="figure-s3-2">
-<div class="displaymath process-math">
+<figure class="figure figure-like" id="figure-s3">
+<div class="para logical" id="figure-s3-2">
+<div class="displaymath process-math" id="figure-s3-2-1">
 \begin{equation*}
 \begin{array}{c|cccccc}
 \circ  &amp; id     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_3 \\
@@ -581,7 +607,11 @@ id     &amp; id     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#figure-s3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Symmetries of an equilateral triangle<div class="autopermalink" data-description="Figure 3.1.7"><a href="#figure-s3" title="Copy heading and permalink for Figure 3.1.7" aria-label="Copy heading and permalink for Figure 3.1.7">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Subsection 3.1.2: Symmetries"><a href="#section-mod-n-sym-6" title="Copy heading and permalink for Subsection 3.1.2: Symmetries" aria-label="Copy heading and permalink for Subsection 3.1.2: Symmetries">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Integer Equivalence Classes and Symmetries"><a href="#section-mod-n-sym" title="Copy heading and permalink for Section 3.1: Integer Equivalence Classes and Symmetries" aria-label="Copy heading and permalink for Section 3.1: Integer Equivalence Classes and Symmetries">🔗</a></div></section></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Symmetries of an equilateral triangle<div class="autopermalink" data-description="Figure 3.1.7"><a href="#figure-s3" title="Copy heading and permalink for Figure 3.1.7" aria-label="Copy heading and permalink for Figure 3.1.7">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Subsection 3.1.2: Symmetries"><a href="#section-mod-n-sym-6" title="Copy heading and permalink for Subsection 3.1.2: Symmetries" aria-label="Copy heading and permalink for Subsection 3.1.2: Symmetries">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 3.1: Integer Equivalence Classes and Symmetries"><a href="#section-mod-n-sym" title="Copy heading and permalink for Section 3.1: Integer Equivalence Classes and Symmetries" aria-label="Copy heading and permalink for Section 3.1: Integer Equivalence Classes and Symmetries">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="groups.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-groups-define.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

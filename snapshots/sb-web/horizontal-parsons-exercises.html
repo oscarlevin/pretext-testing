@@ -36,7 +36,6 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
@@ -73,14 +72,13 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +96,7 @@ window.MathJax = {
 <meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
 <meta property="book:title" content="PreTeXt Sample Book">
 <meta property="book:author" content="Thomas W. Judson">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -121,16 +119,16 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.4';
+eBookConfig.runestone_version = '7.12.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext-search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
@@ -140,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -332,17 +330,16 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.29</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -365,13 +362,16 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F</span> <span class="title">Some Runestone Elements</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="exercises" id="horizontal-parsons-exercises"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="exercises" id="horizontal-parsons-exercises">
+<h2 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Horizontal Parsons Exercises</span>
 </h2>
 <article class="exercise exercise-like" id="horizontal-parson-sql-statement-simple"><h3 class="heading">
@@ -390,27 +390,35 @@ FROM
 test
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.1: Parsons Problem, SQL statement"><a href="#horizontal-parson-sql-statement-simple" title="Copy heading and permalink for Exercise 5.11.1: Parsons Problem, SQL statement" aria-label="Copy heading and permalink for Exercise 5.11.1: Parsons Problem, SQL statement">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-python-test"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.1: Parsons Problem, SQL statement"><a href="#horizontal-parson-sql-statement-simple" title="Copy heading and permalink for Exercise 5.11.1: Parsons Problem, SQL statement" aria-label="Copy heading and permalink for Exercise 5.11.1: Parsons Problem, SQL statement">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-python-test"><h3 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, Python import.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-python-test">
-<div class="hp_question"><div class="para" id="horizontal-parson-python-test-2-1">This is testing that horizontal parsons get the default programming language from <code class="code-inline tex2jax_ignore">docinfo/parsons/@language</code>.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-python-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-python-test-2-1">Testing syntax highlighting.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-python-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
-<textarea style="visibility: hidden" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3">
+<textarea style="visibility: hidden" data-language="python" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3">
 --blocks--
-<code class="code-inline tex2jax_ignore">from</code>
-<code class="code-inline tex2jax_ignore">math</code>
-<code class="code-inline tex2jax_ignore">import</code>
-<code class="code-inline tex2jax_ignore">pi</code>
+from
+math
+import
+pi
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.2: Parsons Problem, Python import"><a href="#horizontal-parson-python-test" title="Copy heading and permalink for Exercise 5.11.2: Parsons Problem, Python import" aria-label="Copy heading and permalink for Exercise 5.11.2: Parsons Problem, Python import">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-sql-statement-no-randomize"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.2: Parsons Problem, Python import"><a href="#horizontal-parson-python-test" title="Copy heading and permalink for Exercise 5.11.2: Parsons Problem, Python import" aria-label="Copy heading and permalink for Exercise 5.11.2: Parsons Problem, Python import">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-sql-statement-no-randomize"><h3 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, SQL statement, no randomization.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-sql-statement-no-randomize">
-<div class="hp_question"><div class="para" id="horizontal-parson-sql-statement-no-randomize-2-1">Form the SQL statement by rearranging the four blocks.  This version of this problem will <em class="emphasis">always</em> present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-no-randomize-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-sql-statement-no-randomize-2-1">Form the SQL statement by rearranging the four blocks.  This version of this problem will <em class="emphasis">always</em> present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-no-randomize-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
 <textarea style="visibility: hidden" data-language="sql" data-randomize="false" data-reuse="false" data-blockanswer="1 0 3 2">
 --blocks--
@@ -420,12 +428,16 @@ test
 FROM
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.3: Parsons Problem, SQL statement, no randomization"><a href="#horizontal-parson-sql-statement-no-randomize" title="Copy heading and permalink for Exercise 5.11.3: Parsons Problem, SQL statement, no randomization" aria-label="Copy heading and permalink for Exercise 5.11.3: Parsons Problem, SQL statement, no randomization">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-sql-statement-with-db"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.3: Parsons Problem, SQL statement, no randomization"><a href="#horizontal-parson-sql-statement-no-randomize" title="Copy heading and permalink for Exercise 5.11.3: Parsons Problem, SQL statement, no randomization" aria-label="Copy heading and permalink for Exercise 5.11.3: Parsons Problem, SQL statement, no randomization">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-sql-statement-with-db"><h3 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, SQL statement, automatic feedback.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-sql-statement-with-db">
-<div class="hp_question"><div class="para" id="horizontal-parson-sql-statement-with-db-2-1">Form the SQL statement by rearranging the four blocks.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-with-db-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-sql-statement-with-db-2-1">Form the SQL statement by rearranging the four blocks.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-with-db-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
 <textarea style="visibility: hidden" data-dburl="external/sql/test.db" data-language="sql" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3">
 --blocks--
@@ -439,12 +451,16 @@ assert 0,1 == hello
 assert 2,1 == 42
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback"><a href="#horizontal-parson-sql-statement-with-db" title="Copy heading and permalink for Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback" aria-label="Copy heading and permalink for Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-natural"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback"><a href="#horizontal-parson-sql-statement-with-db" title="Copy heading and permalink for Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback" aria-label="Copy heading and permalink for Exercise 5.11.4: Parsons Problem, SQL statement, automatic feedback">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-natural"><h3 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, Natural Language.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-natural">
-<div class="hp_question"><div class="para" id="horizontal-parson-natural-2-1">Form the sentence often used to show font samples.  You can reuse blocks as needed.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-natural-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-natural-2-1">Form the sentence often used to show font samples.  You can reuse blocks as needed.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-natural-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
 <textarea style="visibility: hidden" data-randomize="true" data-reuse="true" data-blockanswer="5 0 1 2 3 4 5 6 7">
 --blocks--
@@ -458,12 +474,16 @@ lazy
 dog
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.5: Parsons Problem, Natural Language"><a href="#horizontal-parson-natural" title="Copy heading and permalink for Exercise 5.11.5: Parsons Problem, Natural Language" aria-label="Copy heading and permalink for Exercise 5.11.5: Parsons Problem, Natural Language">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-natural-distractor"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.5: Parsons Problem, Natural Language"><a href="#horizontal-parson-natural" title="Copy heading and permalink for Exercise 5.11.5: Parsons Problem, Natural Language" aria-label="Copy heading and permalink for Exercise 5.11.5: Parsons Problem, Natural Language">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-natural-distractor"><h3 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, Natural Language, with Distractors.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-natural-distractor">
-<div class="hp_question"><div class="para" id="horizontal-parson-natural-distractor-2-1">Form the sentence often used to show font samples.  Again, but now with distractors.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-natural-distractor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-natural-distractor-2-1">Form the sentence often used to show font samples.  Again, but now with distractors.<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-natural-distractor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
 <textarea style="visibility: hidden" data-randomize="true" data-reuse="true" data-blockanswer="6 0 1 2 3 5 6 7 9">
 --blocks--
@@ -479,12 +499,16 @@ bar
 dog
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors"><a href="#horizontal-parson-natural-distractor" title="Copy heading and permalink for Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors" aria-label="Copy heading and permalink for Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors">🔗</a></div></article><article class="exercise exercise-like" id="horizontal-parson-sql-statement-reusable"><h3 class="heading">
+<div class="autopermalink" data-description="Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors"><a href="#horizontal-parson-natural-distractor" title="Copy heading and permalink for Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors" aria-label="Copy heading and permalink for Exercise 5.11.6: Parsons Problem, Natural Language, with Distractors">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-sql-statement-reusable"><h3 class="heading">
 <span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem, SQL statement, reusable.</span>
 </h3>
 <div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-sql-statement-reusable">
-<div class="hp_question"><div class="para" id="horizontal-parson-sql-statement-reusable-2-1">Form the SQL statement by rearranging the four blocks.  Same problem as above, but we allow blocks to be reused (even though the solution does not require that).<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-reusable-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div></div>
+<div class="hp_question">
+<div class="para" id="horizontal-parson-sql-statement-reusable-2-1">Form the SQL statement by rearranging the four blocks.  Same problem as above, but we allow blocks to be reused (even though the solution does not require that).<div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-sql-statement-reusable-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
 <div class="hparsons"></div>
 <textarea style="visibility: hidden" data-language="sql" data-randomize="true" data-reuse="true" data-blockanswer="0 1 2 3">
 --blocks--
@@ -494,7 +518,29 @@ FROM
 test
 </textarea>
 </div></div></div>
-<div class="autopermalink" data-description="Exercise 5.11.7: Parsons Problem, SQL statement, reusable"><a href="#horizontal-parson-sql-statement-reusable" title="Copy heading and permalink for Exercise 5.11.7: Parsons Problem, SQL statement, reusable" aria-label="Copy heading and permalink for Exercise 5.11.7: Parsons Problem, SQL statement, reusable">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.11: Horizontal Parsons Exercises"><a href="#horizontal-parsons-exercises" title="Copy heading and permalink for Exercises 5.11: Horizontal Parsons Exercises" aria-label="Copy heading and permalink for Exercises 5.11: Horizontal Parsons Exercises">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Exercise 5.11.7: Parsons Problem, SQL statement, reusable"><a href="#horizontal-parson-sql-statement-reusable" title="Copy heading and permalink for Exercise 5.11.7: Parsons Problem, SQL statement, reusable" aria-label="Copy heading and permalink for Exercise 5.11.7: Parsons Problem, SQL statement, reusable">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="horizontal-parson-math-test"><h3 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Parsons Problem with math blocks.</span>
+</h3>
+<div class="ptx-runestone-container"><div class="runestone hparsons_section"><div data-component="hparsons" class="hparsons_section" id="rs-horizontal-parson-math-test">
+<div class="hp_question">
+<div class="para" id="horizontal-parson-math-test-2-1">Testing math mode blocks - correct answer is <span class="process-math">\(\pi\sum\beta\alpha\)</span><div class="autopermalink" data-description="Paragraph"><a href="#horizontal-parson-math-test-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="hparsons"></div>
+<textarea style="visibility: hidden" data-randomize="true" data-reuse="false" data-blockanswer="0 1 2 3">
+--blocks--
+<span class="process-math">\(\pi\)</span>
+<span class="process-math">\(\sum\)</span>
+<span class="process-math">\(\beta\)</span>
+<span class="process-math">\(\alpha\)</span>
+</textarea>
+</div></div></div>
+<div class="autopermalink" data-description="Exercise 5.11.8: Parsons Problem with math blocks"><a href="#horizontal-parson-math-test" title="Copy heading and permalink for Exercise 5.11.8: Parsons Problem with math blocks" aria-label="Copy heading and permalink for Exercise 5.11.8: Parsons Problem with math blocks">🔗</a></div>
+</article><div class="autopermalink" data-description="Exercises 5.11: Horizontal Parsons Exercises"><a href="#horizontal-parsons-exercises" title="Copy heading and permalink for Exercises 5.11: Horizontal Parsons Exercises" aria-label="Copy heading and permalink for Exercises 5.11: Horizontal Parsons Exercises">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="parsons-exercises.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="matching-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

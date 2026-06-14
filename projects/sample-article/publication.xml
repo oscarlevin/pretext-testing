@@ -62,6 +62,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- 2025-06-03: "chicago-fullnote" uses footnotes/endnotes, and       -->
         <!-- therefore should throw an error as an unsupported style, and halt -->
         <!-- <citation-stylesheet-language style="chicago-fullnote-bibliography-with-ibid"/> -->
+        <!-- If desired, defaults for mermaid theme and layout engine -->
+        <!-- can be specifed. These values can be overriden in a      -->
+        <!-- diagram using config: frontmatter                        -->
+        <!-- <mermaid theme="forest" layout-engine="elk"/> -->
     </common>
 
     <!-- we use customizations-two for the oscarlevin style example -->
@@ -72,7 +76,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </source>
 
     <!-- Server to process STACK problems embedded in HTML -->
-    <stack server="https://stackapi-1-43834256136.europe-west1.run.app/"/>
+    <stack server="https://stack-api.maths.ed.ac.uk"/>
 
     <!-- For an "article" with "section" we can only go 3 levels    -->
     <!-- deep (section > subsection > subsubsection) and this is    -->
@@ -118,7 +122,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <!-- <knowl proof="no" example="no" example-solution="no" exercise-inline="no"/> -->
         <!-- Specify the theme for the HTML.                       -->
         <!-- See the guide for options                             -->
-        <css theme="default-modern" palette="blue-red"/>
+        <css theme="default-modern"/>
+        <!-- <css theme="default-modern" palette="blue-red"/> -->
         <!-- Magic IDs identify HTML pages to analytics services   -->
         <!-- Presence implies relevant Javascript will be added    -->
         <!-- StatCounter requires both values to be set            -->
@@ -144,21 +149,46 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <feedback href="http://example.com/not-implemented.html"><!-- My Button Text --></feedback>
         <!-- A "portable" build is meant to be a single file that is transportable -->
         <!-- <platform portable="yes"/> -->
+        <!-- Banner options, these default to "yes" but can be set to -->
+        <!-- "no" toremove the indicated element from the top banner  -->
+        <banner byline="yes" subtitle="yes"/>
+        <interactives resize-behavior="responsive">
+            <javascript resize-behavior="fixed-height"/>
+            <jsxgraph resize-behavior="fixed-height"/>
+            <sage resize-behavior="fixed-height"/>
+            <circuitjs resize-behavior="fixed-height"/>
+            <d3 resize-behavior="fixed-height"/>
+        </interactives>
     </html>
 
     <!-- 10pt font is the default   -->
     <!-- draft mode default is "no" -->
     <!-- snapshot default is "no", but we elect to stress the supported package -->
-    <latex print="no" sides="two" font-size="10" draft="no" snapshot="yes">
+    <latex print="no" sides="one" font-size="10" draft="no" snapshot="yes">
         <!-- these are the default alignments, given just as an example -->
         <!-- Even if you set  @crop-marks  to something like "letter" or "a4"    -->
         <!-- you may not see a change.  You need to use the  geometery  package  -->
         <!-- to set a smaller (logical) page size.                               -->
         <page right-alignment="flush" bottom-alignment="ragged" crop-marks="none"/>
+        <!-- Uncomment this to experiment with a LaTeX OTF font              -->
+        <!-- commonly included in TeX distributions.  Be sure                -->
+        <!-- to use the  xelatex  engine (the default).                      -->
+        <!-- TeX Gyre Pagella: has slashed zeros that go the *opposite* way  -->
+        <!-- from the slashed zeros in our Inconsolata monospace font.       -->
+        <!-- TeX Gyre Pagella Math: with a "french" style, Greek letters     -->
+        <!-- *and* upper-case Latin letters will be upright in mathematics.  -->
+        <!--
+        <fonts>
+            <main regular="TeX Gyre Pagella" options="Numbers={SlashedZero}"/>
+            <math regular="TeX Gyre Pagella Math" options="math-style=french"/>
+        </fonts>
+        -->
         <!-- worksheets are formatted separately by default.   -->
         <!-- change to "no" to format as regular sections.     -->
         <worksheet formatted="yes"/>
         <asymptote links="yes"/>
+        <insertions pagebreaks="quotations exercises-section-multiple pre-roll-countdown-8"/>
+        <insertions pagebreaks="sidebyside-bully-pulpit sbsgroup-pagebreak-test"/>
     </latex>
 
 </publication>

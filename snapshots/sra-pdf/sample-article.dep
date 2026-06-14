@@ -1,0 +1,211 @@
+\RequireVersions{
+  *{application}{luaTeX}  {0000/00/00 v1.24.0}
+  *{format} {LaTeX2e}     {2025-11-01 v2.e}
+  *{file}   {documentmetadata-support.ltx}{0000/00/00 v0.0}
+  *{package}{pdfmanagement-testphase}{2026-01-23 v0.96y}
+  *{package}{tagpdf-base} {2026-01-29 v0.99y}
+  *{file}   {pdfmanagement.ltx}{2026-01-23 v0.96y}
+  *{file}   {l3backend-luatex.def}{2025-10-09 v3}
+  *{file}   {l3backend-testphase-luatex.def}{2026-01-23 v0.96y}
+  *{package}{latex-lab-testphase-latest}{2025-09-13 v0.1d}
+  *{package}{tagpdf}      {2026-01-29 v0.99y}
+  *{file}   {tagpdf-luatex.def}{2026-01-29 v0.99y}
+  *{package}{tagpdf-mc-code-lua}{2026-01-29 v0.99y}
+  *{package}{latex-lab-testphase-names}{2025-08-14 v0.8f}
+  *{package}{latex-lab-testphase-new-or-2}{2025-05-10 v0.86d}
+  *{file}   {latex-lab-footnotes.ltx}{2025-07-04 v0.8o}
+  *{package}{latex-lab-testphase-block}{2025-07-26 v0.9k}
+  *{package}{latex-lab-kernel-changes}{2025-07-09 v0.85i}
+  *{file}   {glyphtounicode.tex}{0000/00/00 v0.0}
+  *{file}   {glyphtounicode-cmex.tex}{0000/00/00 v0.0}
+  *{package}{latex-lab-testphase-context}{2025-10-09 v0.5b}
+  *{package}{latex-lab-testphase-sec}{2025-10-20 v0.84k}
+  *{package}{latex-lab-testphase-toc}{2025-07-02 v0.85h}
+  *{package}{latex-lab-testphase-minipage}{2025-05-10 v0.81g}
+  *{package}{latex-lab-testphase-new-or-1}{2025-05-10 v0.85d}
+  *{package}{latex-lab-testphase-graphic}{2025-09-25 v0.80i}
+  *{package}{latex-lab-testphase-float}{2025-10-17 v0.81l}
+  *{package}{latex-lab-testphase-bib}{2025-05-09 v0.81c}
+  *{package}{latex-lab-testphase-text}{2025-05-10 v0.85f}
+  *{package}{latex-lab-testphase-marginpar}{2025-07-23 v0.85h}
+  *{package}{latex-lab-testphase-title}{2025-03-08 v0.85d}
+  *{package}{latex-lab-testphase-table}{2025-08-01 v0.85s}
+  *{package}{array}       {2025/09/25 v2.6n}
+  *{package}{latex-lab-testphase-math}{2025-03-10 v0.8d}
+  *{file}   {latex-lab-math.ltx}{2025-10-02 v0.6w}
+  *{file}   {latex-lab-mathpkg.ltx}{2025-06-20 v0.1c}
+  *{file}   {latex-lab-mathintent.ltx}{2025-08-03 v0.1c}
+  *{package}{latex-lab-testphase-firstaid}{2025-11-03 v2025-11-03}
+  *{package}{latex-lab-testphase-tikz}{2025-09-27 v0.80d}
+  *{package}{pdfmanagement-firstaid}{2026-01-23 v0.96y}
+  *{package}{snapshot}    {2020/06/17 v2.14}
+  *{class}  {article}     {2025/01/22 v1.4n}
+  *{file}   {size10.clo}  {2025/01/22 v1.4n}
+  *{package}{unicode-math}{2023/08/13 v0.8r}
+  *{package}{expl3}       {2026-01-19 v3}
+  *{package}{unicode-math-luatex}{2023/08/13 v0.8r}
+  *{package}{xparse}      {2025-10-09 v3}
+  *{package}{l3keys2e}    {2025-10-09 v2e}
+  *{package}{fontspec}    {2025/09/29 v2.9g}
+  *{package}{fontspec-luatex}{2025/09/29 v2.9g}
+  *{package}{fontenc}     {0000/00/00 v0.0}
+  *{file}   {fontspec.cfg}{0000/00/00 v0.0}
+  *{package}{fix-cm}      {2020/11/24 v1.1t}
+  *{file}   {ts1enc.def}  {2001/06/05 v3.0e}
+  *{package}{amsmath}     {2025/07/09 v2.17z}
+  *{package}{amstext}     {2024/11/17 v2.01}
+  *{package}{amsgen}      {1999/11/30 v2.0}
+  *{package}{amsbsy}      {1999/11/29 v1.2d}
+  *{package}{amsopn}      {2022/04/08 v2.04}
+  *{file}   {latex-lab-amsmath.ltx}{2025-09-29 v0.1i}
+  *{package}{lualatex-math}{2022/01/01 v1.12}
+  *{package}{etoolbox}    {2025/10/02 v2.5m}
+  *{file}   {latex-lab-unicode-math.ltx}{2025-06-30 v0.1e}
+  *{package}{geometry}    {2020/01/02 v5.9}
+  *{package}{keyval}      {2022/05/29 v1.15}
+  *{package}{ifvtex}      {2019/10/25 v1.7}
+  *{package}{iftex}       {2024/12/12 v1.0g}
+  *{package}{ifthen}      {2024/03/16 v1.1e}
+  *{package}{ifxetex}     {2019/10/25 v0.7}
+  *{package}{ifluatex}    {2019/10/25 v1.5}
+  *{package}{graphicx}    {2024/12/31 v1.2e}
+  *{package}{graphics}    {2024/08/06 v1.4g}
+  *{package}{trig}        {2023/12/02 v1.11}
+  *{file}   {graphics.cfg}{2016/06/04 v1.11}
+  *{file}   {luatex.def}  {2025/09/29 v1.2f}
+  *{package}{xcolor}      {2024/09/29 v3.02}
+  *{file}   {color.cfg}   {2016/01/02 v1.6}
+  *{file}   {mathcolor.ltx}{0000/00/00 v0.0}
+  *{package}{xcolor-patches-tmp-ltx}{2026-01-23 v0.96y}
+  *{file}   {dvipsnam.def}{2016/06/17 v3.0m}
+  *{file}   {svgnam.def}  {2024/09/29 v3.02}
+  *{package}{colortbl}    {2024/10/29 v1.0k}
+  *{package}{tcolorbox}   {2025/11/28 v6.9.0}
+  *{package}{tikz}        {2025-08-29 v3.1.11a}
+  *{package}{pgf}         {2025-08-29 v3.1.11a}
+  *{package}{pgfrcs}      {2025-08-29 v3.1.11a}
+  *{file}   {pgfrcs.code.tex}{0000/00/00 v0.0}
+  *{package}{pgfcore}     {2025-08-29 v3.1.11a}
+  *{package}{pgfsys}      {2025-08-29 v3.1.11a}
+  *{file}   {pgfsys.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgfsys-luatex.def}{2025-08-29 v3.1.11a}
+  *{file}   {pgfsyssoftpath.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgfsysprotocol.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgfcore.code.tex}{0000/00/00 v0.0}
+  *{package}{pgfcomp-version-0-65}{2025-08-29 v3.1.11a}
+  *{package}{pgfcomp-version-1-18}{2025-08-29 v3.1.11a}
+  *{package}{pgffor}      {2025-08-29 v3.1.11a}
+  *{package}{pgfkeys}     {0000/00/00 v0.0}
+  *{file}   {pgfkeys.code.tex}{0000/00/00 v0.0}
+  *{package}{pgfmath}     {0000/00/00 v0.0}
+  *{file}   {pgfmath.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgffor.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikz.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgflibraryplothandlers.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibrarytopaths.code.tex}{2025-08-29 v3.1.11a}
+  *{package}{verbatim}    {2024-01-22 v1.5x}
+  *{package}{environ}     {2014/05/04 v0.3}
+  *{package}{trimspaces}  {2009/09/17 v1.1}
+  *{package}{tikzfill.image}{2023/08/08 v1.0.1}
+  *{package}{tikzfill-common}{2023/08/08 v1.0.1}
+  *{file}   {tikzlibraryfill.image.code.tex}{2023/08/08 v1.0.1}
+  *{package}{pdfcol}      {2022-09-21 v1.7}
+  *{package}{ltxcmds}     {2023-12-04 v1.26}
+  *{package}{infwarerr}   {2019/12/03 v1.5}
+  *{file}   {tikzlibrarycalc.code.tex}{2025-08-29 v3.1.11a}
+  *{package}{realscripts} {2016/02/13 v0.3d}
+  *{package}{zi4}         {2019/05/17 v1.12}
+  *{package}{textcomp}    {2024/04/24 v2.1b}
+  *{package}{xkeyval}     {2025/11/04 v2.10}
+  *{file}   {xkeyval.tex} {2014/12/03 v2.7a}
+  *{package}{polyglossia} {2025/12/01 v2.9}
+  *{file}   {gloss-latex.ldf}{polyglossia: v0.0}
+  *{file}   {gloss-english.ldf}{polyglossia: v0.0}
+  *{package}{microtype}   {2026/03/01 v3.2d}
+  *{file}   {microtype-luatex.def}{2026/03/01 v3.2d}
+  *{file}   {microtype.cfg}{2026/03/01 v3.2d}
+  *{package}{amscd}       {2017/04/14 v2.1}
+  *{package}{amssymb}     {2013/01/14 v3.01}
+  *{package}{amsfonts}    {2013/01/14 v3.01}
+  *{package}{titlesec}    {2025/01/04 v2.17}
+  *{package}{titleps}     {0000/00/00 v0.0}
+  *{package}{titletoc}    {2025/01/04 v2.17}
+  *{package}{fancyvrb}    {2025/07/28 v4.6}
+  *{package}{enumitem}    {2025/02/06 v3.11}
+  *{package}{hyperref}    {2026-01-29 v7.01p}
+  *{package}{kvsetkeys}   {2022-10-05 v1.19}
+  *{package}{kvdefinekeys}{2019-12-19 v1.6}
+  *{package}{pdfescape}   {2019/12/09 v1.15}
+  *{package}{pdftexcmds}  {2020-06-27 v0.33}
+  *{package}{hycolor}     {2020-01-27 v1.10}
+  *{package}{nameref}     {2026-01-29 v2.58}
+  *{package}{refcount}    {2019/12/15 v3.6}
+  *{package}{gettitlestring}{2019/12/15 v1.6}
+  *{package}{kvoptions}   {2022-06-15 v3.15}
+  *{package}{stringenc}   {2019/11/29 v1.12}
+  *{file}   {pd1enc.def}  {2026-01-29 v7.01p}
+  *{package}{intcalc}     {2019/12/15 v1.3}
+  *{file}   {puenc.def}   {2026-01-29 v7.01p}
+  *{package}{url}         {2013/09/16 v3.4}
+  *{package}{bitset}      {2019/12/09 v1.3}
+  *{package}{bigintcalc}  {2019/12/15 v1.5}
+  *{file}   {hgeneric-testphase.def}{2026-01-23 v0.96y}
+  *{file}   {hyperref-colorschemes.def}{0000/00/00 v0.0}
+  *{package}{pgfplots}    {2025/08/14 v1.18.2}
+  *{file}   {pgflibraryfpu.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgflibraryluamath.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikzlibrarydecorations.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikzlibrarydecorations.pathmorphing.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgflibrarydecorations.pathmorphing.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikzlibrarydecorations.pathreplacing.code.tex}{0000/00/00 v0.0}
+  *{file}   {pgflibrarydecorations.pathreplacing.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikzlibraryplotmarks.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibraryplotmarks.code.tex}{2025-08-29 v3.1.11a}
+  *{package}{smartdiagram}{2016/12/23 v0.3b}
+  *{package}{xstring}     {2023/08/22 v1.86}
+  *{file}   {tikzlibrarybackgrounds.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibraryfadings.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibraryfadings.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibraryshadows.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibraryshapes.arrows.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibraryshapes.arrows.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibraryshapes.symbols.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibraryshapes.symbols.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {smartdiagramlibrarycore.definitions.code.tex}{0000/00/00 v0.0}
+  *{file}   {smartdiagramlibrarycore.styles.code.tex}{0000/00/00 v0.0}
+  *{file}   {smartdiagramlibrarycore.commands.code.tex}{0000/00/00 v0.0}
+  *{file}   {tikzlibraryarrows.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibraryarrows.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibrarymatrix.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibrarypositioning.code.tex}{2025-08-29 v3.1.11a}
+  *{package}{circuitikz}  {2026/02/04{} v1.8.5}
+  *{file}   {pgflibraryarrows.meta.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibrarybending.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {pgflibrarycurvilinear.code.tex}{2025-08-29 v3.1.11a}
+  *{file}   {tikzlibraryfpu.code.tex}{0000/00/00 v0.0}
+  *{package}{nicematrix}  {2026/02/22 v7.7}
+  *{package}{cancel}      {2013/04/12 v2.2}
+  *{package}{xfrac}       {2024-06-04 v0.0}
+  *{package}{extpfeil}    {2009/10/31 v0.4}
+  *{package}{mathtools}   {2024/10/04 v1.31}
+  *{package}{calc}        {2025/03/01 v4.3b}
+  *{package}{mhsetup}     {2021/03/18 v1.4}
+  *{file}   {latex-lab-mathtools.ltx}{2024-07-13 v0.1a}
+  *{package}{stmaryrd}    {1994/03/03 v0.0}
+  *{package}{luamml}      {2026-02-27 v0.8.0}
+  *{package}{luamml-patches-kernel}{2026-02-27 v0.8.0}
+  *{package}{luamml-patches-amsmath}{2026-02-27 v0.8.0}
+  *{package}{bookmark}    {2023-12-10 v1.31}
+  *{file}   {bkm-pdftex.def}{2023-12-10 v1.31}
+  *{file}   {umsa.fd}     {2013/01/14 v3.01}
+  *{file}   {umsb.fd}     {2013/01/14 v3.01}
+  *{file}   {ustmry.fd}   {0000/00/00 v0.0}
+  *{-------}{Document-specific files:}{----}
+  *{package}{epstopdf-base}{2020-01-24 v2.11}
+  *{file}   {epstopdf-sys.cfg}{2010/07/13 v1.3}
+  *{package}{upquote}     {2012/04/19 v1.3}
+  *{file}   {mt-LatinModernRoman.cfg}{2026/02/26 v1.2}
+  *{file}   {mt-msa.cfg}  {2006/02/04 v1.1}
+  *{file}   {mt-msb.cfg}  {2005/06/01 v1.0}
+  *{file}   {mt-cmr.cfg}  {2013/05/19 v2.2}
+}

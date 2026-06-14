@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
-<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/css/theme-denver.min.css" rel="stylesheet" type="text/css">
-<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.36/dist/_static/pretext/css/theme-denver.min.css" rel="stylesheet" type="text/css">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.36/dist/_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -73,7 +73,7 @@ window.MathJax = {
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.25/dist/_static/pretext/js/lib"
+      "pretext": "https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.36/dist/_static/pretext/js"
     }
   },
   "startup": {
@@ -102,28 +102,26 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
-<div style="width:600px; height:500px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;">
-<div class="sbsgroup">
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="a" width="200" height="50"></canvas></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="b" width="200" height="50"></canvas></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="c" width="200" height="50"></canvas></div>
+<div style="aspect-ratio: 1.2;"><div class="sbsgroup">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:33.3333333333333% 33.3333333333333% 33.3333333333333%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><canvas id="a" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
+<div class="sbspanel sbspanel--top top" style=""><canvas id="b" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
+<div class="sbspanel sbspanel--top top" style=""><canvas id="c" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
 </div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="d" width="200" height="50"></canvas></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="e" width="200" height="50"></canvas></div>
-<div class="sbspanel top" style="width:33.3333333333333%;"><canvas style="display:block" id="f" width="200" height="50"></canvas></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:33.3333333333333% 33.3333333333333% 33.3333333333333%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><canvas id="d" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
+<div class="sbspanel sbspanel--top top" style=""><canvas id="e" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
+<div class="sbspanel sbspanel--top top" style=""><canvas id="f" style="width:200px; height:50px; display: block; aspect-ratio:4;" width="200" height="50"></canvas></div>
 </div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:50%;"><canvas style="display:block" id="left" width="300" height="300"></canvas></div>
-<div class="sbspanel top" style="width:50%;"><canvas style="display:block" id="right" width="300" height="300"></canvas></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><canvas id="left" style="width:300px; height:300px; display: block; aspect-ratio:1;" width="300" height="300"></canvas></div>
+<div class="sbspanel sbspanel--top top" style=""><canvas id="right" style="width:300px; height:300px; display: block; aspect-ratio:1;" width="300" height="300"></canvas></div>
 </div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;">
-<div class="sbspanel top" style="width:50%;"><button xmlns="http://www.w3.org/1999/xhtml" type="button" id="compose">Compose</button></div>
-<div class="sbspanel top" style="width:50%;"><button xmlns="http://www.w3.org/1999/xhtml" type="button" id="reset">Reset</button></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style=""><button xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" type="button" id="compose">Compose</button></div>
+<div class="sbspanel sbspanel--top top" style=""><button xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" type="button" id="reset">Reset</button></div>
 </div></div>
-</div>
+</div></div>
 <script src="external/code/austin/animation.js"></script>
-</div>
 </body>
 </html>

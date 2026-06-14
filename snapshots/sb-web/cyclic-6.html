@@ -36,7 +36,6 @@ window.MathJax = {
     "packages": {
       "[+]": [
         "base",
-        "extpfeil",
         "ams",
         "amscd",
         "color",
@@ -73,14 +72,13 @@ window.MathJax = {
   "loader": {
     "load": [
       "input/asciimath",
-      "[tex]/extpfeil",
       "[tex]/amscd",
       "[tex]/color",
       "[tex]/newcommand",
       "[pretext]/mathjaxknowl3.js"
     ],
     "paths": {
-      "pretext": "_static/pretext/js/lib"
+      "pretext": "_static/pretext/js"
     }
   },
   "startup": {
@@ -98,7 +96,7 @@ window.MathJax = {
 <meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
 <meta property="book:title" content="PreTeXt Sample Book">
 <meta property="book:author" content="Thomas W. Judson">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -121,16 +119,16 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.4';
+eBookConfig.runestone_version = '7.12.2';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.879b99e54406967d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.28cc3c4821792be5.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext-search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
@@ -140,7 +138,7 @@ eBookConfig.enable_chatcodes =  false;
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-8.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -332,17 +330,16 @@ eBookConfig.enable_chatcodes =  false;
 <ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Expedited Samples</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.29</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
@@ -365,18 +362,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">F</span> <span class="title">GNU Free Documentation License</span></a></div></li>
-<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-8.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F</span> <span class="title">Some Runestone Elements</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cyclic-6"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="cyclic-6">
+<h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cyclic Groups of Complex Numbers</span>
 </h2>
 <div class="para logical" id="cyclic-6-2">
 <div class="para">The <dfn class="terminology">complex numbers</dfn> are defined as</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-2-2">
 \begin{equation*}
 {\mathbb C} = \{ a + bi : a, b \in {\mathbb R} \}\text{,}
 \end{equation*}
@@ -387,13 +387,13 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para logical" id="cyclic-6-3">
 <div class="para">To add two complex numbers <span class="process-math">\(z=a+bi\)</span> and <span class="process-math">\(w= c+di\text{,}\)</span> we just add the corresponding real and imaginary parts:</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-3-3">
 \begin{equation*}
 z + w=(a + bi ) + (c + di)  =  (a + c) + (b + d)i\text{.}
 \end{equation*}
 </div>
 <div class="para">Remembering that <span class="process-math">\(i^2 = -1\text{,}\)</span>  we multiply complex numbers just like polynomials. The product of <span class="process-math">\(z\)</span> and <span class="process-math">\(w\)</span> is</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-3-7">
 \begin{equation*}
 (a + bi )(c + di)  =   ac + bdi^2 + adi + bci =  (ac -bd) +(ad + bc)i\text{.}
 \end{equation*}
@@ -402,7 +402,7 @@ z + w=(a + bi ) + (c + di)  =  (a + c) + (b + d)i\text{.}
 </div>
 <div class="para logical" id="cyclic-6-4">
 <div class="para">Every nonzero complex number <span class="process-math">\(z = a +bi\)</span> has a multiplicative inverse; that is, there exists a <span class="process-math">\(z^{-1} \in {\mathbb C}^\ast\)</span> such that <span class="process-math">\(z z^{-1} = z^{-1} z = 1\text{.}\)</span> If <span class="process-math">\(z = a + bi\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-4-5">
 \begin{equation*}
 z^{-1} = \frac{a-bi}{ a^2 + b^2  }\text{.}
 \end{equation*}
@@ -413,15 +413,17 @@ z^{-1} = \frac{a-bi}{ a^2 + b^2  }\text{.}
 </div>
 <details id="example-cyclic-complex-add" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex Number Operations.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-cyclic-complex-add-2">
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-cyclic-complex-add-2">
 <div class="para">Let <span class="process-math">\(z = 2 + 3i\)</span> and <span class="process-math">\(w = 1-2i\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-complex-add-2-3">
 \begin{equation*}
 z + w = (2 + 3i) + (1 - 2i) = 3 + i
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-complex-add-2-4">
 \begin{equation*}
 z  w = (2 + 3i)(1 - 2i ) = 8 - i\text{.}
 \end{equation*}
@@ -436,19 +438,25 @@ z^{-1} &amp; = \frac{2}{13} - \frac{3}{13}i\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-cyclic-complex-add-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.1: Complex Number Operations"><a href="#example-cyclic-complex-add" title="Copy heading and permalink for Example 4.3.1: Complex Number Operations" aria-label="Copy heading and permalink for Example 4.3.1: Complex Number Operations">🔗</a></div></article></details><figure class="figure figure-like" id="figure-rectcoord"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-complex-rectangular.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rectangular coordinates of a complex number<div class="autopermalink" data-description="Figure 4.3.2"><a href="#figure-rectcoord" title="Copy heading and permalink for Figure 4.3.2" aria-label="Copy heading and permalink for Figure 4.3.2">🔗</a></div></figcaption></figure><div class="para" id="cyclic-6-7">There are several ways of graphically representing complex numbers. We can represent a complex number <span class="process-math">\(z = a +bi\)</span> as an ordered pair on the <span class="process-math">\(xy\)</span> plane where <span class="process-math">\(a\)</span> is the <span class="process-math">\(x\)</span> (or real) coordinate and <span class="process-math">\(b\)</span> is the <span class="process-math">\(y\)</span> (or imaginary) coordinate. This is called the <dfn class="terminology">rectangular</dfn> or <dfn class="terminology">Cartesian</dfn> representation. The rectangular representations of <span class="process-math">\(z_1 = 2 + 3i\text{,}\)</span> <span class="process-math">\(z_2 = 1 - 2i\text{,}\)</span> and <span class="process-math">\(z_3 = - 3 + 2i\)</span> are depicted in <a href="cyclic-6.html#figure-rectcoord" class="xref" data-knowl="./knowl/xref/figure-rectcoord.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.2">Figure 4.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.1: Complex Number Operations"><a href="#example-cyclic-complex-add" title="Copy heading and permalink for Example 4.3.1: Complex Number Operations" aria-label="Copy heading and permalink for Example 4.3.1: Complex Number Operations">🔗</a></div>
+</article></details>
+<figure class="figure figure-like" id="figure-rectcoord"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-complex-rectangular.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Rectangular coordinates of a complex number<div class="autopermalink" data-description="Figure 4.3.2"><a href="#figure-rectcoord" title="Copy heading and permalink for Figure 4.3.2" aria-label="Copy heading and permalink for Figure 4.3.2">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="cyclic-6-7">There are several ways of graphically representing complex numbers. We can represent a complex number <span class="process-math">\(z = a +bi\)</span> as an ordered pair on the <span class="process-math">\(xy\)</span> plane where <span class="process-math">\(a\)</span> is the <span class="process-math">\(x\)</span> (or real) coordinate and <span class="process-math">\(b\)</span> is the <span class="process-math">\(y\)</span> (or imaginary) coordinate. This is called the <dfn class="terminology">rectangular</dfn> or <dfn class="terminology">Cartesian</dfn> representation. The rectangular representations of <span class="process-math">\(z_1 = 2 + 3i\text{,}\)</span> <span class="process-math">\(z_2 = 1 - 2i\text{,}\)</span> and <span class="process-math">\(z_3 = - 3 + 2i\)</span> are depicted in <a href="cyclic-6.html#figure-rectcoord" class="xref" data-knowl="./knowl/xref/figure-rectcoord.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.2">Figure 4.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="figure-polarcoord"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-complex-polar.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Polar coordinates of a complex number<div class="autopermalink" data-description="Figure 4.3.3"><a href="#figure-polarcoord" title="Copy heading and permalink for Figure 4.3.3" aria-label="Copy heading and permalink for Figure 4.3.3">🔗</a></div></figcaption></figure><div class="para logical" id="cyclic-6-9">
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Polar coordinates of a complex number<div class="autopermalink" data-description="Figure 4.3.3"><a href="#figure-polarcoord" title="Copy heading and permalink for Figure 4.3.3" aria-label="Copy heading and permalink for Figure 4.3.3">🔗</a></div></figcaption>
+</figure>
+<div class="para logical" id="cyclic-6-9">
 <div class="para">Nonzero complex numbers can also be represented using <dfn class="terminology">polar coordinates</dfn>.  To specify  any nonzero point on the plane, it suffices to give an angle <span class="process-math">\(\theta\)</span> from the positive <span class="process-math">\(x\)</span> axis in the counterclockwise direction and a distance <span class="process-math">\(r\)</span> from the origin, as in <a href="cyclic-6.html#figure-polarcoord" class="xref" data-knowl="./knowl/xref/figure-polarcoord.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.3">Figure 4.3.3</a>. We can see that</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-polarcoord.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-polarcoord.html" id="cyclic-6-9-6">
 \begin{equation*}
 z = a + bi = r( \cos \theta + i \sin \theta)\text{.}
 \end{equation*}
 </div>
 <div class="para">Hence,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-polarcoord.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-polarcoord.html" id="cyclic-6-9-7">
 \begin{equation*}
 r = |z| = \sqrt{a^2 + b^2}
 \end{equation*}
@@ -466,15 +474,17 @@ b &amp; = r \sin \theta\text{.}
 </div>
 <details id="example-cyclic-polar" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complex Numbers in Polar Form.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-cyclic-polar-2">
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-cyclic-polar-2">
 <div class="para">Suppose that <span class="process-math">\(z = 2 \cis  60^{\circ}\text{.}\)</span> Then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-polar-2-2">
 \begin{equation*}
 a = 2 \cos 60^{\circ} = 1
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-polar-2-3">
 \begin{equation*}
 b = 2 \sin 60^{\circ} = \sqrt{3}\text{.}
 \end{equation*}
@@ -485,13 +495,13 @@ b = 2 \sin 60^{\circ} = \sqrt{3}\text{.}
 </div>
 <div class="para logical" id="example-cyclic-polar-3">
 <div class="para">Conversely, if we are given a rectangular representation of a complex number, it is often useful to know the number’s polar representation. If <span class="process-math">\(z = 3 \sqrt{2} - 3 \sqrt{2}\, i\text{,}\)</span> then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-polar-3-2">
 \begin{equation*}
 r = \sqrt{a^2 + b^2} = \sqrt{36 } = 6
 \end{equation*}
 </div>
 <div class="para">and</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="example-cyclic-polar-3-3">
 \begin{equation*}
 \theta = \arctan \left( \frac{b}{a} \right) = \arctan( - 1) = 315^{\circ}\text{,}
 \end{equation*}
@@ -500,30 +510,38 @@ r = \sqrt{a^2 + b^2} = \sqrt{36 } = 6
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-cyclic-polar-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.4: Complex Numbers in Polar Form"><a href="#example-cyclic-polar" title="Copy heading and permalink for Example 4.3.4: Complex Numbers in Polar Form" aria-label="Copy heading and permalink for Example 4.3.4: Complex Numbers in Polar Form">🔗</a></div></article></details><div class="para" id="cyclic-6-11">The polar representation of a complex number makes it easy to find products and powers of complex numbers.  The proof of the following proposition is straightforward and is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.4: Complex Numbers in Polar Form"><a href="#example-cyclic-polar" title="Copy heading and permalink for Example 4.3.4: Complex Numbers in Polar Form" aria-label="Copy heading and permalink for Example 4.3.4: Complex Numbers in Polar Form">🔗</a></div>
+</article></details>
+<div class="para" id="cyclic-6-11">The polar representation of a complex number makes it easy to find products and powers of complex numbers.  The proof of the following proposition is straightforward and is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="proposition theorem-like" id="proposition-polar-mult"><h3 class="heading">
 <span class="type">Proposition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="proposition-polar-mult-1-1">
 <div class="para">Let <span class="process-math">\(z = r \cis \theta\)</span> and <span class="process-math">\(w = s \cis \phi\)</span> be two nonzero complex numbers. Then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="proposition-polar-mult-1-1-3">
 \begin{equation*}
 zw = r s \cis( \theta + \phi)\text{.}
 \end{equation*}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#proposition-polar-mult-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 4.3.5"><a href="#proposition-polar-mult" title="Copy heading and permalink for Proposition 4.3.5" aria-label="Copy heading and permalink for Proposition 4.3.5">🔗</a></div></article><details id="example-cyclic-polar-mult" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Proposition 4.3.5"><a href="#proposition-polar-mult" title="Copy heading and permalink for Proposition 4.3.5" aria-label="Copy heading and permalink for Proposition 4.3.5">🔗</a></div>
+</article>
+<details id="example-cyclic-polar-mult" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiplication of Complex Numbers in Polar Form.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="example-cyclic-polar-mult-2">If <span class="process-math">\(z =  3 \cis( \pi / 3 )\)</span> and <span class="process-math">\(w = 2 \cis(\pi / 6 )\text{,}\)</span> then <span class="process-math">\(zw = 6 \cis( \pi / 2 ) = 6i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-cyclic-polar-mult-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para" id="example-cyclic-polar-mult-2">If <span class="process-math">\(z =  3 \cis( \pi / 3 )\)</span> and <span class="process-math">\(w = 2 \cis(\pi / 6 )\text{,}\)</span> then <span class="process-math">\(zw = 6 \cis( \pi / 2 ) = 6i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#example-cyclic-polar-mult-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.6: Multiplication of Complex Numbers in Polar Form"><a href="#example-cyclic-polar-mult" title="Copy heading and permalink for Example 4.3.6: Multiplication of Complex Numbers in Polar Form" aria-label="Copy heading and permalink for Example 4.3.6: Multiplication of Complex Numbers in Polar Form">🔗</a></div></article></details><article class="theorem theorem-like" id="theorem-demoivre"><h3 class="heading">
+<div class="autopermalink" data-description="Example 4.3.6: Multiplication of Complex Numbers in Polar Form"><a href="#example-cyclic-polar-mult" title="Copy heading and permalink for Example 4.3.6: Multiplication of Complex Numbers in Polar Form" aria-label="Copy heading and permalink for Example 4.3.6: Multiplication of Complex Numbers in Polar Form">🔗</a></div>
+</article></details>
+<article class="theorem theorem-like" id="theorem-demoivre"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">DeMoivre.</span>
 </h3>
 <div class="para logical" id="theorem-demoivre-3-1">
 <div class="para">Let <span class="process-math">\(z = r \cis  \theta\)</span> be a nonzero complex number. Then</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="theorem-demoivre-3-1-2">
 \begin{equation*}
 [r \cis \theta  ]^n = r^n \cis( n \theta)
 \end{equation*}
@@ -532,7 +550,11 @@ zw = r s \cis( \theta + \phi)\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#theorem-demoivre-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.3.7: DeMoivre"><a href="#theorem-demoivre" title="Copy heading and permalink for Theorem 4.3.7: DeMoivre" aria-label="Copy heading and permalink for Theorem 4.3.7: DeMoivre">🔗</a></div></article><details id="theorem-demoivre-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="theorem-demoivre-4-1">
+<div class="autopermalink" data-description="Theorem 4.3.7: DeMoivre"><a href="#theorem-demoivre" title="Copy heading and permalink for Theorem 4.3.7: DeMoivre" aria-label="Copy heading and permalink for Theorem 4.3.7: DeMoivre">🔗</a></div>
+</article>
+<details id="theorem-demoivre-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="theorem-demoivre-4-1">
 <div class="para">We will use induction on <span class="process-math">\(n\)</span> (see <a href="section-math-induction.html" class="internal" title="Section 2.1: Mathematical Induction and Math in a Title A\notsubset B">Section 2.1</a>). For <span class="process-math">\(n = 1\)</span> the theorem is trivial. Assume that the theorem is true for all <span class="process-math">\(k\)</span> such that <span class="process-math">\(1  \leq k \leq n\text{.}\)</span> Then</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/section-math-induction.html" id="theorem-demoivre-4-1-6">
 \begin{align*}
@@ -545,9 +567,13 @@ z^{n+1} &amp; = z^n z\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#theorem-demoivre-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.3.7.1"><a href="#theorem-demoivre-4" title="Copy heading and permalink for Proof 4.3.7.1" aria-label="Copy heading and permalink for Proof 4.3.7.1">🔗</a></div></article></details><details id="cyclic-6-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 4.3.7.1"><a href="#theorem-demoivre-4" title="Copy heading and permalink for Proof 4.3.7.1" aria-label="Copy heading and permalink for Proof 4.3.7.1">🔗</a></div>
+</article></details>
+<details id="cyclic-6-15" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Powers of Complex Numbers.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="cyclic-6-15-2">
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="cyclic-6-15-2">
 <div class="para">Suppose that <span class="process-math">\(z= 1+i\)</span> and we wish to compute <span class="process-math">\(z^{10}\text{.}\)</span> Rather than computing <span class="process-math">\((1 + i)^{10}\)</span> directly, it is much easier to switch to polar coordinates and calculate <span class="process-math">\(z^{10}\)</span> using DeMoivre’s Theorem:</div>
 <div class="displaymath process-math" id="cyclic-6-15-2-5">
 \begin{align*}
@@ -560,9 +586,11 @@ z^{10} &amp; = (1+i)^{10}\\
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-15-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.8: Powers of Complex Numbers"><a href="#cyclic-6-15" title="Copy heading and permalink for Example 4.3.8: Powers of Complex Numbers" aria-label="Copy heading and permalink for Example 4.3.8: Powers of Complex Numbers">🔗</a></div></article></details><div class="para logical" id="cyclic-6-16">
+<div class="autopermalink" data-description="Example 4.3.8: Powers of Complex Numbers"><a href="#cyclic-6-15" title="Copy heading and permalink for Example 4.3.8: Powers of Complex Numbers" aria-label="Copy heading and permalink for Example 4.3.8: Powers of Complex Numbers">🔗</a></div>
+</article></details>
+<div class="para logical" id="cyclic-6-16">
 <div class="para">The multiplicative group of the complex numbers, <span class="process-math">\({\mathbb C}^*\text{,}\)</span> possesses some interesting subgroups.  Whereas <span class="process-math">\({\mathbb Q}^*\)</span> and <span class="process-math">\({\mathbb R}^*\)</span> have no interesting subgroups of finite order, <span class="process-math">\({\mathbb C}^*\)</span> has many. We first consider the <dfn class="terminology">circle group</dfn>,</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-polar-mult.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/proposition-polar-mult.html" id="cyclic-6-16-7">
 \begin{equation*}
 {\mathbb T} = \{ z \in {\mathbb C} : |z| = 1 \}\text{.}
 \end{equation*}
@@ -575,14 +603,16 @@ z^{10} &amp; = (1+i)^{10}\\
 </h3>
 <div class="para" id="cyclic-6-17-1-1">The circle group is a subgroup of  <span class="process-math">\({\mathbb C}^*\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-17-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proposition 4.3.9"><a href="#cyclic-6-17" title="Copy heading and permalink for Proposition 4.3.9" aria-label="Copy heading and permalink for Proposition 4.3.9">🔗</a></div></article><div class="para" id="cyclic-6-18">Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that <span class="process-math">\(H = \{ 1, -1, i, -i \}\text{.}\)</span> Then <span class="process-math">\(H\)</span> is a subgroup of the circle group. Also, <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(i\text{,}\)</span> and <span class="process-math">\(-i\)</span> are exactly those complex numbers that satisfy the equation <span class="process-math">\(z^4 = 1\text{.}\)</span> The complex numbers satisfying the equation <span class="process-math">\(z^n=1\)</span> are called the <dfn class="terminology"><span class="process-math">\(n\)</span>th roots of unity</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proposition 4.3.9"><a href="#cyclic-6-17" title="Copy heading and permalink for Proposition 4.3.9" aria-label="Copy heading and permalink for Proposition 4.3.9">🔗</a></div>
+</article>
+<div class="para" id="cyclic-6-18">Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that <span class="process-math">\(H = \{ 1, -1, i, -i \}\text{.}\)</span> Then <span class="process-math">\(H\)</span> is a subgroup of the circle group. Also, <span class="process-math">\(1\text{,}\)</span> <span class="process-math">\(-1\text{,}\)</span> <span class="process-math">\(i\text{,}\)</span> and <span class="process-math">\(-i\)</span> are exactly those complex numbers that satisfy the equation <span class="process-math">\(z^4 = 1\text{.}\)</span> The complex numbers satisfying the equation <span class="process-math">\(z^n=1\)</span> are called the <dfn class="terminology"><span class="process-math">\(n\)</span>th roots of unity</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="cyclic-6-19"><h3 class="heading">
 <span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="cyclic-6-19-1-1">
 <div class="para">If <span class="process-math">\(z^n = 1\text{,}\)</span> then the <span class="process-math">\(n\)</span>th roots of unity are</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-19-1-1-3">
 \begin{equation*}
 z = \cis\left( \frac{2 k \pi}{n } \right)\text{,}
 \end{equation*}
@@ -591,9 +621,13 @@ z = \cis\left( \frac{2 k \pi}{n } \right)\text{,}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-19-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 4.3.10"><a href="#cyclic-6-19" title="Copy heading and permalink for Theorem 4.3.10" aria-label="Copy heading and permalink for Theorem 4.3.10">🔗</a></div></article><details id="cyclic-6-19-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cyclic-6-19-2-1">
+<div class="autopermalink" data-description="Theorem 4.3.10"><a href="#cyclic-6-19" title="Copy heading and permalink for Theorem 4.3.10" aria-label="Copy heading and permalink for Theorem 4.3.10">🔗</a></div>
+</article>
+<details id="cyclic-6-19-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary>
+<article class="hiddenproof knowl__content">
+<div class="para logical" id="cyclic-6-19-2-1">
 <div class="para">By DeMoivre’s Theorem,</div>
-<div class="displaymath process-math">
+<div class="displaymath process-math" id="cyclic-6-19-2-1-1">
 \begin{equation*}
 z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1\text{.}
 \end{equation*}
@@ -601,11 +635,15 @@ z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1\text{.}
 <div class="para">The <span class="process-math">\(z\)</span>’s are distinct since the numbers <span class="process-math">\(2 k \pi /n\)</span> are all distinct and are greater than or equal to 0 but less than <span class="process-math">\(2 \pi\text{.}\)</span>  We will leave the proof that the <span class="process-math">\(n\)</span>th roots of unity form a cyclic subgroup of <span class="process-math">\({\mathbb T}\)</span> as an exercise.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-19-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.3.10.1"><a href="#cyclic-6-19-2" title="Copy heading and permalink for Proof 4.3.10.1" aria-label="Copy heading and permalink for Proof 4.3.10.1">🔗</a></div></article></details><div class="para" id="cyclic-6-20">A generator for the group of the <span class="process-math">\(n\)</span>th roots of unity is called a <dfn class="terminology">primitive <span class="process-math">\(n\)</span>th root of unity</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 4.3.10.1"><a href="#cyclic-6-19-2" title="Copy heading and permalink for Proof 4.3.10.1" aria-label="Copy heading and permalink for Proof 4.3.10.1">🔗</a></div>
+</article></details>
+<div class="para" id="cyclic-6-20">A generator for the group of the <span class="process-math">\(n\)</span>th roots of unity is called a <dfn class="terminology">primitive <span class="process-math">\(n\)</span>th root of unity</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="example-roots_unity" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Roots of Unity.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="example-roots_unity-2">
+</h3></summary>
+<article class="example example-like knowl__content">
+<div class="para logical" id="example-roots_unity-2">
 <div class="para">The 8th roots of unity can be represented as eight equally spaced points on the unit circle (<a href="cyclic-6.html#figure-rtsunity" class="xref" data-knowl="./knowl/xref/figure-rtsunity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.12">Figure 4.3.12</a>).  The primitive 8th roots of unity are</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/figure-rtsunity.html" id="example-roots_unity-2-2">
 \begin{align*}
@@ -617,14 +655,23 @@ z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1\text{.}
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#example-roots_unity-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 4.3.11: Roots of Unity"><a href="#example-roots_unity" title="Copy heading and permalink for Example 4.3.11: Roots of Unity" aria-label="Copy heading and permalink for Example 4.3.11: Roots of Unity">🔗</a></div></article></details><figure class="figure figure-like" id="figure-rtsunity"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-roots-unity.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>8th roots of unity<div class="autopermalink" data-description="Figure 4.3.12"><a href="#figure-rtsunity" title="Copy heading and permalink for Figure 4.3.12" aria-label="Copy heading and permalink for Figure 4.3.12">🔗</a></div></figcaption></figure><div class="para" id="cyclic-6-23">We interrupt this exposition to repeat the previous diagram, wrapped as different figure with a different caption.  The TikZ code to produce these diagrams lives in an external file, <code class="code-inline tex2jax_ignore">tikz/cyclic-roots-unity.tex</code>, which is pure text, freed from any need to format for XML processing.  So, in particular, there is no need to escape ampersands and angle brackets, nor is there employment of the <code class="code-inline tex2jax_ignore">CDATA</code> mechanism.  But the real value is that there is just one version to edit, and any changes will be reflected in both copies.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 4.3.11: Roots of Unity"><a href="#example-roots_unity" title="Copy heading and permalink for Example 4.3.11: Roots of Unity" aria-label="Copy heading and permalink for Example 4.3.11: Roots of Unity">🔗</a></div>
+</article></details>
+<figure class="figure figure-like" id="figure-rtsunity"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-roots-unity.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>8th roots of unity<div class="autopermalink" data-description="Figure 4.3.12"><a href="#figure-rtsunity" title="Copy heading and permalink for Figure 4.3.12" aria-label="Copy heading and permalink for Figure 4.3.12">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="cyclic-6-23">We interrupt this exposition to repeat the previous diagram, wrapped as different figure with a different caption.  The TikZ code to produce these diagrams lives in an external file, <code class="code-inline tex2jax_ignore">tikz/cyclic-roots-unity.tex</code>, which is pure text, freed from any need to format for XML processing.  So, in particular, there is no need to escape ampersands and angle brackets, nor is there employment of the <code class="code-inline tex2jax_ignore">CDATA</code> mechanism.  But the real value is that there is just one version to edit, and any changes will be reflected in both copies.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="figure-rtsunity-copy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-roots-unity-copy.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Repeat: 8th roots of unity<div class="autopermalink" data-description="Figure 4.3.13"><a href="#figure-rtsunity-copy" title="Copy heading and permalink for Figure 4.3.13" aria-label="Copy heading and permalink for Figure 4.3.13">🔗</a></div></figcaption></figure><div class="para" id="cyclic-6-25">Another version of this diagram, authored in PreFigure, is also included in <a href="cyclic-6.html#prefigure-rtsunity" class="xref" data-knowl="./knowl/xref/prefigure-rtsunity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.14">Figure 4.3.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Repeat: 8th roots of unity<div class="autopermalink" data-description="Figure 4.3.13"><a href="#figure-rtsunity-copy" title="Copy heading and permalink for Figure 4.3.13" aria-label="Copy heading and permalink for Figure 4.3.13">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="cyclic-6-25">Another version of this diagram, authored in PreFigure, is also included in <a href="cyclic-6.html#prefigure-rtsunity" class="xref" data-knowl="./knowl/xref/prefigure-rtsunity.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.14">Figure 4.3.14</a>.<div class="autopermalink" data-description="Paragraph"><a href="#cyclic-6-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="prefigure-rtsunity"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/prefigure/prefigure-rtsunity.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>8th roots of unity, authored in PreFigure<div class="autopermalink" data-description="Figure 4.3.14"><a href="#prefigure-rtsunity" title="Copy heading and permalink for Figure 4.3.14" aria-label="Copy heading and permalink for Figure 4.3.14">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.3: Cyclic Groups of Complex Numbers"><a href="#cyclic-6" title="Copy heading and permalink for Section 4.3: Cyclic Groups of Complex Numbers" aria-label="Copy heading and permalink for Section 4.3: Cyclic Groups of Complex Numbers">🔗</a></div></section></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>8th roots of unity, authored in PreFigure<div class="autopermalink" data-description="Figure 4.3.14"><a href="#prefigure-rtsunity" title="Copy heading and permalink for Figure 4.3.14" aria-label="Copy heading and permalink for Figure 4.3.14">🔗</a></div></figcaption>
+</figure><div class="autopermalink" data-description="Section 4.3: Cyclic Groups of Complex Numbers"><a href="#cyclic-6" title="Copy heading and permalink for Section 4.3: Cyclic Groups of Complex Numbers" aria-label="Copy heading and permalink for Section 4.3: Cyclic Groups of Complex Numbers">🔗</a></div>
+</section>
+</div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="cyclic-5.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cyclic-7.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

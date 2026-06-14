@@ -1,0 +1,1022 @@
+%********************************************%
+%*       Generated from PreTeXt source      *%
+%*       on 2026-03-03T08:38:39-07:00       *%
+%*   A recent stable commit (2022-07-01):   *%
+%* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
+%*                                          *%
+%*         https://pretextbook.org          *%
+%*                                          *%
+%********************************************%
+%% A publication file entry has requested writing snapshot output into the <job>.dep file
+\DocumentMetadata{
+  lang        = de,
+  pdfstandard = ua-2,
+  pdfstandard = a-4f, %or a-4
+  tagging=on,
+  tagging-setup={math/setup=mathml-SE}
+}
+\RequirePackage{snapshot}
+\documentclass[twoside,10pt,]{article}
+\usepackage{unicode-math}
+%% Custom Preamble Entries, early (use latex.preamble.early)
+%% Always open on odd page
+%%   The following adjusts cleardoublepage to remove twosided
+%%   check so that we open on odd pages even in one-sided mode
+%%   by adding an extra blank page on the preceding even page.
+\makeatletter%
+\def\cleardoublepage{%
+\clearpage\ifodd\c@page\else\thispagestyle{empty}\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi%
+}
+\makeatother%
+%% Default LaTeX packages
+%%   1.  always employed (or nearly so) for some purpose, or
+%%   2.  a stylewriter may assume their presence
+\usepackage{geometry}
+%% Some aspects of the preamble are conditional,
+%% the LaTeX engine is one such determinant
+\usepackage{ifthen}
+%% etoolbox has a variety of modern conveniences
+\usepackage{etoolbox}
+\usepackage{ifxetex,ifluatex}
+%% Raster graphics inclusion
+\usepackage{graphicx}
+%% Color support, xcolor package
+%% Always loaded, for: add/delete text, author tools
+%% Here, since tcolorbox loads tikz, and tikz loads xcolor
+\PassOptionsToPackage{dvipsnames,svgnames,table}{xcolor}
+\usepackage{xcolor}
+%% begin: defined colors, via xcolor package, for styling
+%% end: defined colors, via xcolor package, for styling
+%% Colored boxes, and much more, though mostly styling
+%% skins library provides "enhanced" skin, employing tikzpicture
+%% boxes may be configured as "breakable" or "unbreakable"
+%% "raster" controls grids of boxes, aka side-by-side
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{raster}
+%% We load some "stock" tcolorbox styles that we use a lot
+%% Placement here is provisional, there will be some color work also
+%% First, black on white, no border, transparent, but no assumption about titles
+\tcbset{ bwminimalstyle/.style={size=minimal, boxrule=-0.3pt, frame empty,
+colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
+%% Second, bold title, run-in to text/paragraph/heading
+%% Space afterwards will be controlled by environment,
+%% independent of constructions of the tcb title
+%% Places \blocktitlefont onto many block titles
+\tcbset{ runintitlestyle/.style={fonttitle=\blocktitlefont\upshape\bfseries, attach title to upper} }
+%% Spacing prior to each exercise, anywhere
+\tcbset{ exercisespacingstyle/.style={before skip={1.5ex plus 0.5ex}} }
+%% Spacing prior to each block
+\tcbset{ blockspacingstyle/.style={before skip={2.0ex plus 0.5ex}} }
+%% xparse allows the construction of more robust commands,
+%% this is a necessity for isolating styling and behavior
+%% The tcolorbox library of the same name loads the base library
+\tcbuselibrary{xparse}
+%% The tcolorbox library loads TikZ, its calc package is generally useful,
+%% and is necessary for some smaller documents that use partial tcolor boxes
+%% See:  https://github.com/PreTeXtBook/pretext/issues/1624
+\usetikzlibrary{calc}
+%% We use some more exotic tcolorbox keys to restore indentation to parboxes
+\tcbuselibrary{hooks}
+%% Save default paragraph indentation and parskip for use later, when adjusting parboxes
+\newlength{\normalparindent}
+\newlength{\normalparskip}
+\AtBeginDocument{\setlength{\normalparindent}{\parindent}}
+\AtBeginDocument{\setlength{\normalparskip}{\parskip}}
+\newcommand{\setparstyle}{\setlength{\parindent}{\normalparindent}\setlength{\parskip}{\normalparskip}}%% Hyperref should be here, but likes to be loaded late
+%%
+%% Inline math delimiters, \(, \), need to be robust
+%% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
+%% If  latexrelease.sty  exists, bugfix is in kernel
+%% If not, bugfix is in  fixltx2e.sty
+%% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
+%% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
+\IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% Footnote counters and part/chapter counters are manipulated
+%% April 2018:  chngcntr  commands now integrated into the kernel,
+%% but circa 2018/2019 the package would still try to redefine them,
+%% so we need to do the work of loading conditionally for old kernels.
+%% From version 1.1a,  chngcntr  should detect defintions made by LaTeX kernel.
+\ifdefined\counterwithin
+\else
+    \usepackage{chngcntr}
+\fi
+%% Text height identically 9 inches, text width varies on point size
+%% See Bringhurst 2.1.1 on measure for recommendations
+%% 75 characters per line (count spaces, punctuation) is target
+%% which is the upper limit of Bringhurst's recommendations
+\geometry{letterpaper,total={340pt,9.0in}}
+%% Custom Page Layout Adjustments (use publisher page-geometry entry)
+%% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex executables
+%% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
+%% The conditional below provides  pdflatex  specific configuration last
+%% begin: engine-specific capabilities
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific default configuration
+\ifxetex\usepackage{xltxtra}\fi
+%% realscripts is the only part of xltxtra relevant to lualatex 
+\ifluatex\usepackage{realscripts}\fi
+%% end:   xelatex and lualatex-specific default configuration
+}{
+%% begin: pdflatex-specific default configuration
+%% We assume a PreTeXt XML source file may have Unicode characters
+%% and so we ask LaTeX to parse a UTF-8 encoded file
+%% This may work well for accented characters in Western language,
+%% but not with Greek, Asian languages, etc.
+%% When this is not good enough, switch to the  xelatex  engine
+%% where Unicode is better supported (encouraged, even)
+\usepackage[utf8]{inputenc}
+%% end: pdflatex-specific default configuration
+}
+%% end:   engine-specific capabilities
+%%
+%% Fonts.  Conditional on LaTex engine employed.
+%% Default Text Font: The Latin Modern fonts are
+%% "enhanced versions of the [original TeX] Computer Modern fonts."
+%% We use them as the default text font for PreTeXt output.
+%% Default Monospace font: Inconsolata (aka zi4)
+%% Sponsored by TUG: http://levien.com/type/myfonts/inconsolata.html
+%% Loaded for documents with intentional objects requiring monospace
+%% See package documentation for excellent instructions
+%% fontspec will work universally if we use filename to locate OTF files
+%% Loads the "upquote" package as needed, so we don't have to
+%% Upright quotes might come from the  textcomp  package, which we also use
+%% We employ the shapely \ell to match Google Font version
+%% pdflatex: "varl" package option produces shapely \ell
+%% pdflatex: "var0" package option produces plain zero (not used)
+%% pdflatex: "varqu" package option produces best upright quotes
+%% xelatex,lualatex: add OTF StylisticSet 1 for shapely \ell
+%% xelatex,lualatex: add OTF StylisticSet 2 for plain zero (not used)
+%% xelatex,lualatex: add OTF StylisticSet 3 for upright quotes
+%%
+%% Automatic Font Control
+%% Portions of a document, are, or may, be affected by defined commands
+%% These are perhaps more flexible when using  xelatex  rather than  pdflatex
+%% The following definitions are meant to be re-defined in a style, using \renewcommand
+%% They are scoped when employed (in a TeX group), and so should not be defined with an argument
+\newcommand{\divisionfont}{\relax}
+\newcommand{\blocktitlefont}{\relax}
+\newcommand{\contentsfont}{\relax}
+\newcommand{\pagefont}{\relax}
+\newcommand{\tabularfont}{\relax}
+\newcommand{\xreffont}{\relax}
+\newcommand{\titlepagefont}{\relax}
+%%
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: font setup and configuration for use with xelatex
+%% Generally, xelatex is necessary for non-Western fonts
+%% fontspec package provides extensive control of system fonts,
+%% meaning *.otf (OpenType), and apparently *.ttf (TrueType)
+%% that live *outside* your TeX/MF tree, and are controlled by your *system*
+%% (it is possible that a TeX distribution will place fonts in a system location)
+%%
+%% The fontspec package is the best vehicle for using different fonts in  xelatex
+%% So we load it always, no matter what a publisher or style might want
+%%
+\usepackage{fontspec}
+%%
+%% begin: xelatex main font ("font-xelatex-main" template)
+%% Latin Modern Roman is the default font for xelatex and so is loaded with a TU encoding
+%% *in the format* so we can't touch it, only perhaps adjust it later
+%% in one of two ways (then known by NFSS names such as "lmr")
+%% (1) via NFSS with font family names such as "lmr" and "lmss"
+%% (2) via fontspec with commands like \setmainfont{Latin Modern Roman}
+%% The latter requires the font to be known at the system-level by its font name,
+%% but will give access to OTF font features through optional arguments
+%% https://tex.stackexchange.com/questions/470008/
+%% where-and-how-does-fontspec-sty-specify-the-default-font-latin-modern-roman
+%% http://tex.stackexchange.com/questions/115321
+%% /how-to-optimize-latin-modern-font-with-xelatex
+%%
+%% end:   xelatex main font ("font-xelatex-main" template)
+%% begin: xelatex mono font ("font-xelatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\IfFontExistsTF{Inconsolatazi4-Regular.otf}{}{\GenericError{}{The font "Inconsolatazi4-Regular.otf" requested by PreTeXt output processed by the  xelatex  executable is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Consult the PreTeXt Guide for help with LaTeX fonts, or perhaps try using  pdflatex  as a test.}{}}
+\IfFontExistsTF{Inconsolatazi4-Bold.otf}{}{\GenericError{}{The font "Inconsolatazi4-Bold.otf" requested by PreTeXt output processed by the  xelatex  executable is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Consult the PreTeXt Guide for help with LaTeX fonts, or perhaps try using  pdflatex  as a test.}{}}
+\usepackage{zi4}
+\setmonofont[BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}]{Inconsolatazi4-Regular.otf}
+%% end:   xelatex mono font ("font-xelatex-mono" template)
+%% begin: xelatex font adjustments ("font-xelatex-style" template)
+%% end:   xelatex font adjustments ("font-xelatex-style" template)
+%%
+%% Extensive support for other languages
+\usepackage{polyglossia}
+%% Set main/default language based on pretext/@xml:lang value
+%% document language code is "en-US", US English
+%% usmax variant has extra hypenation
+\setmainlanguage[variant=usmax]{english}
+%% Enable secondary languages based on discovery of @xml:lang values
+%% Enable fonts/scripts based on discovery of @xml:lang values
+%% Western languages should be ably covered by Latin Modern Roman
+%% end:   font setup and configuration for use with xelatex
+}{%
+%% begin: font setup and configuration for use with pdflatex
+%% begin: pdflatex main font ("font-pdflatex-main" template)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%% end:   pdflatex main font ("font-pdflatex-main" template)
+%% begin: pdflatex mono font ("font-pdflatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\usepackage[varqu,varl]{inconsolata}
+%% end:   pdflatex mono font ("font-pdflatex-mono" template)
+%% begin: pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   font setup and configuration for use with pdflatex
+}
+%% Micromanage spacing, etc.  The named "microtype-options"
+%% template may be employed to fine-tune package behavior
+\usepackage{microtype}
+%% Symbols, align environment, commutative diagrams, bracket-matrix
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+%% allow page breaks within display mathematics anywhere
+%% level 4 is maximally permissive
+%% this is exactly the opposite of AMSmath package philosophy
+%% there are per-display, and per-equation options to control this
+%% split, aligned, gathered, and alignedat are not affected
+\allowdisplaybreaks[4]
+%% allow more columns to a matrix
+%% can make this even bigger by overriding with  latex.preamble.late  processing option
+\setcounter{MaxMatrixCols}{30}
+%%
+%%
+%% Division Titles, and Page Headers/Footers
+%% titlesec package, loading "titleps" package cooperatively
+%% See code comments about the necessity and purpose of "explicit" option.
+%% The "newparttoc" option causes a consistent entry for parts in the ToC 
+%% file, but it is only effective if there is a \titleformat for \part.
+%% "pagestyles" loads the  titleps  package cooperatively.
+\usepackage[explicit, newparttoc, pagestyles]{titlesec}
+%% The companion titletoc package for the ToC.
+\usepackage{titletoc}
+%% begin: customizations of page styles via the modal "titleps-style" template
+%% Designed to use commands from the LaTeX "titleps" package
+\pagestyle{plain}
+%% end: customizations of page styles via the modal "titleps-style" template
+%%
+%% Create globally-available macros to be provided for style writers
+%% These are redefined for each occurence of each division
+\newcommand{\divisionnameptx}{\relax}%
+\newcommand{\titleptx}{\relax}%
+\newcommand{\subtitleptx}{\relax}%
+\newcommand{\shortitleptx}{\relax}%
+\newcommand{\authorsptx}{\relax}%
+\newcommand{\epigraphptx}{\relax}%
+%% Create environments for possible occurences of each division
+%% Environment for a PTX "section" at the level of a LaTeX "section"
+\NewDocumentEnvironment{sectionptx}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "subsection" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{subsectionptx}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "appendix" at the level of a LaTeX "section"
+\NewDocumentEnvironment{appendixptx}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "section"
+\NewDocumentEnvironment{references-section}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "section"
+\NewDocumentEnvironment{references-section-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section*{#2}%
+\addcontentsline{toc}{section}{#4}
+\label{#7}%
+}{}%
+%%
+%% Styles for six traditional LaTeX divisions
+\titleformat{\part}[display]
+{\divisionfont\Huge\bfseries\centering}{\divisionnameptx\space\thepart}{30pt}{\Huge#1}
+[{\Large\centering\authorsptx}]
+\titleformat{\chapter}[display]
+{\divisionfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
+[{\Large\authorsptx}]
+\titleformat{name=\chapter,numberless}[display]
+{\divisionfont\huge\bfseries}{}{0pt}{#1}
+[{\Large\authorsptx}]
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titleformat{\section}[hang]
+{\divisionfont\Large\bfseries}{\thesection}{1ex}{#1}
+[{\large\authorsptx}]
+\titleformat{name=\section,numberless}[block]
+{\divisionfont\Large\bfseries}{}{0pt}{#1}
+[{\large\authorsptx}]
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}[hang]
+{\divisionfont\large\bfseries}{\thesubsection}{1ex}{#1}
+[{\normalsize\authorsptx}]
+\titleformat{name=\subsection,numberless}[block]
+{\divisionfont\large\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\subsubsection}[hang]
+{\divisionfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\subsubsection,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\paragraph}[hang]
+{\divisionfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\paragraph,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
+%%
+%% Styles for five traditional LaTeX divisions
+\titlecontents{part}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\Large\thecontentslabel\enspace}{\Large}%
+{}%
+[\addvspace{.5pc}]%
+\titlecontents{chapter}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\large\thecontentslabel\enspace}{\large}%
+{\hfill\bfseries\thecontentspage}%
+[\addvspace{.5pc}]%
+\dottedcontents{section}[3.8em]{\contentsfont}{2.3em}{1pc}%
+\dottedcontents{subsection}[6.1em]{\contentsfont}{3.2em}{1pc}%
+\dottedcontents{subsubsection}[9.3em]{\contentsfont}{4.3em}{1pc}%
+%%
+%% Begin: Semantic Macros
+%% To preserve meaning in a LaTeX file
+%%
+%% \mono macro for content of "c", "cd", "tag", etc elements
+%% Also used automatically in other constructions
+%% Simply an alias for \texttt
+%% Always defined, even if there is no need, or if a specific tt font is not loaded
+\newcommand{\mono}[1]{\texttt{#1}}
+%%
+%% Following semantic macros are only defined here if their
+%% use is required only in this specific document
+%%
+%% Used to markup initialisms, text or titles
+\newcommand{\initialism}[1]{\textsc{\MakeLowercase{#1}}}
+\DeclareRobustCommand{\initialismintitle}[1]{\texorpdfstring{#1}{#1}}
+%% Used for inline definitions of terms
+\newcommand{\terminology}[1]{\textbf{#1}}
+%% Titles of longer works (e.g. books, versus articles)
+\newcommand{\pubtitle}[1]{\textsl{#1}}
+%% End: Semantic Macros
+%% Equation Numbering
+%% Controlled by  numbering.equations.level  processing parameter
+%% No adjustment here implies document-wide numbering
+\numberwithin{equation}{section}
+%% Footnote Numbering
+%% Specified by numbering.footnotes.level
+\counterwithin*{footnote}{section}
+%% add a \support command as unnumbered footnote
+\let\svdthefootnote\thefootnote%
+\newcommand\support[1]{%
+  \let\thefootnote\relax%
+  \footnotetext{#1}%
+  \let\thefootnote\svdthefootnote%
+}
+%% Fancy Verbatim for consoles, preformatted, code display, literate programming
+\usepackage{fancyvrb}
+%% code display (cd), by analogy with math display (md)
+%% (a) indented slightly, so a paragraph appears to hang together
+\DefineVerbatimEnvironment{codedisplay}{Verbatim}{xleftmargin=4ex}
+%% (b) flush left works well in exceptions like list items, etc
+\DefineVerbatimEnvironment{codedisplayleft}{Verbatim}{}
+%% More flexible list management, esp. for references
+%% But also for specifying labels (i.e. custom order) on nested lists
+\usepackage{enumitem}
+%% Lists of references in their own section, maximum depth 1
+\newlist{referencelist}{description}{4}
+\setlist[referencelist]{leftmargin=!,labelwidth=!,labelsep=0ex,itemsep=1.0ex,topsep=1.0ex,partopsep=0pt,parsep=0pt}
+%% hyperref driver does not need to be specified, it will be detected
+%% Footnote marks in tcolorbox have broken linking under
+%% hyperref, so it is necessary to turn off all linking
+%% It *must* be given as a package option, not with \hypersetup
+\usepackage[hyperfootnotes=false]{hyperref}
+%% configure hyperref's  \href{}{}  and  \nolinkurl  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
+%% Hyperlinking active in electronic PDFs, all links without surrounding boxes and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+%% Less-clever names for hyperlinks are more reliable, *especially* for structural parts
+%% See comments in the code to learn more about the importance of this setting
+\hypersetup{hypertexnames=false}
+%%The  hypertexnames  setting then confuses the hyperlinking from the index
+%%This patch resolves the incorrect links, see code for StackExchange post.
+\makeatletter
+\patchcmd\Hy@EveryPageBoxHook{\Hy@EveryPageAnchor}{\Hy@hypertexnamestrue\Hy@EveryPageAnchor}{}{\fail}
+\makeatother
+\hypersetup{pdftitle={Sample Research Article}}
+%% If you manually remove hyperref, leave in this next command
+%% This will allow LaTeX compilation, employing this no-op command
+\providecommand\phantomsection{}
+%% Division Numbering: Chapters, Sections, Subsections, etc
+%% Division numbers may be turned off at some level ("depth")
+%% A section *always* has depth 1, contrary to us counting from the document root
+%% The latex default is 3.  If a larger number is present here, then
+%% removing this command may make some cross-references ambiguous
+%% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
+\setcounter{secnumdepth}{3}
+%%
+%%
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for most blocks (possibly not projects, 2D displays)
+%% Controlled by  numbering.theorems.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{block}{}
+%%
+%% This document is set to number PROJECT-LIKE on a separate numbering scheme
+%% So, a faux tcolorbox whose only purpose is to provide this numbering
+%% Controlled by  numbering.projects.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{project-distinct}{}
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for 2D displays which are subnumbered as part of a "sidebyside"
+\makeatletter
+\newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
+\makeatother
+%%
+%% tcolorbox, with styles, for THEOREM-LIKE
+%%
+%% theorem: fairly simple numbered block/structure
+\tcbset{ theoremstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setparstyle}, } }
+\newtcolorbox[use counter from=block]{theorem}[4]{title={{#1~\thetcbcounter\notblank{#2#3}{\space}{}\notblank{#2}{\space#2}{}\notblank{#3}{\space(#3)}{}}}, phantomlabel={#4}, breakable, after={\par}, fontupper=\itshape, theoremstyle, }
+%%
+%% tcolorbox, with styles, for PROOF-LIKE
+%%
+%% proof: title is a replacement
+\tcbset{ proofstyle/.style={bwminimalstyle, fonttitle=\blocktitlefont\itshape, attach title to upper, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\blacksquare\)},
+} }
+\newtcolorbox{proof}[3]{title={\notblank{#2}{#2}{#1.}}, phantom={\hypertarget{#3}{}}, breakable, after={\par}, proofstyle, before upper app={\setparstyle} }
+%%
+%% tcolorbox, with styles, for DEFINITION-LIKE
+%%
+%% definition: fairly simple numbered block/structure
+\tcbset{ definitionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\lozenge\)}, before upper app={\setparstyle}, } }
+\newtcolorbox[use counter from=block]{definition}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, definitionstyle, }
+%%
+%% tcolorbox, with styles, for REMARK-LIKE
+%%
+%% note: fairly simple numbered block/structure
+\tcbset{ notestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setparstyle}, } }
+\newtcolorbox[use counter from=block]{note}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, notestyle, }
+%%
+%% tcolorbox, with styles, for EXAMPLE-LIKE
+%%
+%% example: fairly simple numbered block/structure
+\tcbset{ examplestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\(\square\)}, before upper app={\setparstyle}, } }
+\newtcolorbox[use counter from=block]{example}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, examplestyle, }
+%%
+%% xparse environments for introductions and conclusions of divisions
+%%
+%% introduction: in a structured division
+\NewDocumentEnvironment{introduction}{m}
+{\notblank{#1}{\noindent\textbf{#1}\space}{}}{\par\medskip}
+%%
+%% tcolorbox, with styles, for miscellaneous environments
+%%
+%% back colophon, at the very end, typically on its own page
+\tcbset{ backcolophonstyle/.style={bwminimalstyle, blockspacingstyle, before skip=5ex, left skip=0.15\textwidth, right skip=0.15\textwidth, fonttitle=\blocktitlefont\large\bfseries, center title, halign=center, bottomtitle=2ex} }
+\newtcolorbox{backcolophon}[2]{title={#1}, phantom={\hypertarget{#2}{}}, breakable, backcolophonstyle, before upper app={\setparstyle}}
+%% Graphics Preamble Entries
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\usetikzlibrary{positioning}        % for Dave R's worksheet
+\usepackage{circuitikz}             % for Virgil P's worksheet
+\usepackage{nicematrix}             % for multi-run latex-image (label="latex-three-pass")
+%% If tikz has been loaded, replace ampersand with \amp macro
+%% Custom Preamble Entries, late (use latex.preamble.late)
+%% You have elected to load the LaTeX "extpfeil" package
+%% for certain extensible arrows, and it should appear just below.
+%% This package has numerous shortcomings leading to conflicts with
+%% packages like "stmaryrd" and our manipulations of lengths to support
+%% variable thickness of rules in tables.  It should appear late
+%% in the preamble in an effort to mitigate these shortcomings.
+%% Begin: Author-provided TeX/LaTeX packages
+%% (From  docinfo/math-package  elements)
+\usepackage{cancel}
+\usepackage{xfrac}
+\usepackage{extpfeil}
+%% End: Author-provided TeX/LaTeX packages
+%% Begin: Author-provided macros
+%% (From  docinfo/macros  element)
+%% Plus three from PTX for XML characters
+\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4} 
+\newcommand{\myequation}[2]{#1\amp =#2} 
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2}
+\newcommand{\testingescapedpercent}{ \% } 
+\newcommand{\bvec}{{\mathbf b}}
+\newcommand{\vvec}{{\mathbf v}}
+\newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+%% End: Author-provided macros
+%% Title page information for article
+\title{Sample Research Article\\
+{\large A derivation of the PreTeXt Sample Article}\support{This is an example of a statement describing funding support for the current document.%
+}
+}
+\author{Robert Beezer\\
+Department of Mathematics and Computer Science\\
+University of Puget Sound\\
+Tacoma, Washington, USA\\
+\href{mailto:beezer@pugetsound.edu}{\nolinkurl{beezer@pugetsound.edu}}\\
+Statement about support received by the first author.
+\and
+A. Second Author\\
+Department of Mathematics\\
+University of Somewhere\\
+Anytown, USA\\
+\href{mailto:asauthor@example.edu}{\nolinkurl{asauthor@example.edu}}\\
+Statement about support received by the second author.
+}
+\date{March 3, 2026}
+\begin{document}
+%% bottom alignment is explicit, since it normally depends on oneside, twoside
+\raggedbottom
+%% Target for xref to top-level element is document start
+\hypertarget{derivatives}{}
+\maketitle
+\thispagestyle{empty}
+\renewcommand*{\abstractname}{Abstract}
+\begin{abstract}
+This is a sample of many of the things you can do with PreTeXt.  Sometimes the math makes sense, sometimes it seems to be written in the first person, sort of like this Abstract.%
+\par\medskip
+\noindent{\bfseries Keywords}. samples, PreTeXt, testing document.
+\par\medskip
+\noindent{\bfseries 2010 Math Subject Classification}. Primary 00-01, 00-02; Secondary 00A99.
+\end{abstract}
+%
+%
+\typeout{************************************************}
+\typeout{Section 1 The Fundamental Theorem}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{The Fundamental Theorem}{}{The Fundamental Theorem}{}{}{section-fundamental-theorem}
+There is a remarkable theorem:\footnote{And fortunately we do not need to try to write it in the margin!\label{footnote-fermat}}%
+\begin{theorem}{Theorem}{The Fundamental Theorem of Calculus.}{}{theorem-FTC}%
+\index{Fundamental Theorem of Calculus}%
+If \(f(x)\) is continuous, and the derivative of \(F(x)\) is \(f(x)\), then%
+\begin{equation*}
+\definiteintegral{a}{b}{f(x)}{x}=F(b)-F(a)
+\end{equation*}
+\index{test: buried in theorem\slash{}statement\slash{}p}%
+\end{theorem}
+\begin{proof}{Proof}{}{theorem-FTC-4}
+Left to the reader.%
+\end{proof}
+You will find almost nothing about all this in the article \hyperlink{biblio-lay-article}{[{\xreffont 2}]}, nor in the book \hyperlink{biblio-judson-AATA}{[{\xreffont 1}]}, since they belong in some other article, but we can cite them out-of-order for practice anyway.%
+\par
+When we are writing we do not always know what we want to cite, or just where subsequent material will end up.  For example, we might want a citation to \mono{[provisional cross-reference: some textbook about the FTC]} or we might want to reference a later~\mono{[provisional cross-reference: chapter about DiffEq\textquotesingle{}s, and an\_underscore]}.%
+\par
+We can also embed \textquotedblleft{}todo\textquotedblright{}s in the source by making an \initialism{XML} comment that begins with the four characters \mono{todo}, and selectively display them, so you may not see the one here in the output you are looking at now.  Or maybe you do see it?%
+\par
+Because a definite integral can be computed using an antiderivative, we have the following definition.%
+\begin{definition}{Definition}{}{definition-indefinite-integral}%
+\index{indefinite integral}%
+\index{integral!indefinite integral}%
+\label{definition-indefinite-integral-3}%
+Suppose that \(\frac{d}{dx}F(x)=f(x)\).  Then the \terminology{indefinite integral} of \(f(x)\) is \(F(x)\) and is written as%
+\begin{equation*}
+\int\,f(x)\,dx=F(x)\text{.}
+\end{equation*}
+%
+\end{definition}
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Section 2 Mathematics}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Mathematics}{}{Mathematics}{}{}{section-mathematics}
+\begin{introduction}{}%
+To be able to create both \LaTeX{} and HTML output (plus variations), we rely on MathJax, which in turn supports an extensive subset of the mathematical symbols normally available.  The AMSMath symbol set is a good approximation.  The PreTeXt Guide has a link to the complete list of macros supported by MathJax.  We load the \mono{AMSsymbols} library.%
+\end{introduction}%
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 2.1 Basic Mathematics}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Basic Mathematics}{}{Basic Mathematics}{}{}{section-mathematics-3}
+The following is from the MathJax \href{http://www.mathjax.org/demos/tex-samples/}{demonstration page}, an identity due to Ramanujan:%
+\begin{equation*}
+\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+\end{equation*}
+%
+\par
+And again, from the MathJax demonstration page, Maxwell's equations:\index{Maxwell's equations}%
+\begin{align*}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} & = \frac{4\pi}{c}\vec{\mathbf{j}}\\
+\nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho\\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}}\\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{align*}
+\label{section-mathematics-3-3-3}%
+\par
+Historically, we provided internal support for the \LaTeX{} package \mono{extpfeil}.  As of 2023-10-19 this has become an author election (see the \mono{<docinfo>} section in the source of this document).  We preeserve a small test that this extensible arrows library is being included properly:%
+\begin{equation*}
+A\xmapsto[\text{bijection}]{\Phi+\Psi+\Theta}B
+\end{equation*}
+%
+\par
+Look back at the top of the source file of this document to see how to include your \TeX{} macros just once.  For best results keep your macros simple and semantic.%
+\par
+PreTeXt once provided modest built-in support for \textquotedblleft{}slanted\textquotedblright{}, or \textquotedblleft{}beveled\textquotedblright{}, or \textquotedblleft{}nice\textquotedblright{} fractions.  To wit, we mean fractions such as: \(\sfrac{3}{8}\).  Use the pre-defined \mono{\textbackslash{}sfrac\{\}\{\}} macro in your mathematics to achieve this presentation.  The presentation in HTML is subpar, but could improve as MathJax provides support.  It is now an author's responsibility to add support for superior typesetting for \initialism{PDF} output by loading the \mono{xfrac} \LaTeX{} package with the following in \mono{<docinfo>}:%
+\begin{codedisplay}
+<math-package latex-name="xfrac" mathjax-name=""/>
+\end{codedisplay}
+which is what we have done here as a test.  See the Guide for more details.%
+\par
+We consider a system of equations.  We number the first and last equation (there are just two) and include an \mono{xml:id} on each.  We reference the whole system later as the range of equations from the first to the last.%
+\begin{align}
+\frac{dx}{dt} \amp = x^2 - 4x - y + 4\label{equation-system-begin}\\
+\frac{dy}{dt} \amp = x^3 - y.\label{equation-system-end}
+\end{align}
+%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 2.2 Displayed Mathematics}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Displayed Mathematics}{}{Displayed Mathematics}{}{}{section-mathematics-4}
+Multi-line displays of mathematics are achieved with the \mono{md} tag (\textquotedblleft{}math display\textquotedblright{}), and the variant that produces numbers on each line, \mono{mdn} (\textquotedblleft{}math display numbered\textquotedblright{}), used within a paragraph (\mono{p}).  As a good example of how XML syntax is superior, you author \(n\) lines of equations by enclosing each line inside of a \mono{mrow} tag, rather than using \(n-1\) separators (such as \mono{\textbackslash{}\textbackslash{}}).%
+\par
+If you use no ampersands to express alignment (read ahead), then each equation is centered independently on the width of the text.  This is implemented according to the AMSmath \LaTeX{} package's \mono{gather} environment.  Example:%
+\begin{gather*}
+\frac{dx}{dt} = x^2 - 4x - y + 4\\
+\frac{dy}{dt} = x^3 - y.
+\end{gather*}
+%
+\par
+An ampersand is used, in two ways, to describe positioning several equations per line, organized in columns.  We have created the pre-defined \LaTeX{} macro \mono{\textbackslash{}amp} as one way specify these, but the escape sequence \mono{\&amp;} may be used also.  The second, fourth, sixth, \textellipsis{} ampersands separate columns, and the spacing between columns will be provided automatically.  The first, third, fifth, \textellipsis{} ampersands are alignment points for the equations in each column.  Typically this is placed just prior to a binary operator, such as an equal sign (\mono{\textbackslash{}amp = }), or for a column of explanations or commentary, just prior to the \mono{\textbackslash{}text\{\}} macro.  Note that this scenario suggests always having an odd number of ampersands in each \mono{mrow}.  In the example below, alignment is on the equals sign in the first two columns, and provides left-justification to the explanations in the third column.  N.B.: the use below of the \mono{\textbackslash{}text\{\}} macro does not include mathematics within its argument.  Doing so may yield unpredictable results depending on your choice of delimiters for the mathematics (and using an \mono{m} tag will be ineffective).%
+\begin{align*}
+\frac{dx}{dt} \amp = x^2 - 4x - y + 4 \amp \frac{dy}{dt} \amp = x^3 - y          \amp\amp x, y\text{ version}\\
+\frac{dw}{dt} \amp = z^3 - w          \amp \frac{dz}{dt} \amp = z^2 - 4z - w + 4 \amp\amp z, w\text{ version}
+\end{align*}
+%
+\par
+PreTeXt will automatically detect the presence or absence of ampersands, but by defining macros for entire aligned equations, you can effectively hide the ampersands.  So the \mono{@alignment} attribute can override automatic detection.  We use a simple \LaTeX{} macro to demonstrate setting \mono{alignment=\textquotesingle{}align\textquotesingle{}} to override the use of a \mono{gather} environment and use a \mono{align} environment instead.  Example:%
+\begin{align*}
+\myequation{\frac{dx}{dt}}{x^2 - 4x - y + 4}\\
+\myequation{\frac{dy}{dt}}{x^3 - y}.
+\end{align*}
+%
+\par
+The AMSmath \LaTeX{} package's \mono{alignat} environment is a third variant of alignment.  It never happens automatically, you need to ask for it with \mono{alignment=\textquotedbl{}alignat\textquotedbl{}}.  It is very similar to \mono{align} but adds no space between the equation columns.  So you can leave it that way, or you can add your own \textquotedblleft{}extra\textquotedblright{} space to suit.  Here is a previous example with no inter-column space:%
+\begin{alignat*}{3}
+\frac{dx}{dt} \amp = x^2 - 4x - y + 4 \amp \frac{dy}{dt} \amp = x^3 - y          \amp\amp x, y\text{ version}\\
+\frac{dw}{dt} \amp = z^3 - w          \amp \frac{dz}{dt} \amp = z^2 - 4z - w + 4 \amp\amp z, w\text{ version}\text{.}
+\end{alignat*}
+This modified example has a middle row with three columns, while the other rows have just one column, as a test of our routines for determining the \mono{mrow} with the greatest number of ampersands (and how many there are),%
+\begin{alignat*}{3}
+\frac{dw}{dt} &= z^3 - w\\
+\frac{dx}{dt} &= x^2 - 4x - y + 4 & \frac{dy}{dt} &= x^3 - y&& x, y\text{ third column}\\
+\frac{dw}{dt} & = z^3 - w\text{.}
+\end{alignat*}
+Final example demonstrates that ampersands in other objects (matrices here) can wreak havoc with computing the number of columns.  So we provide yet another attribute to override automatic detection, \mono{alignat-columns}.  This is the number of \emph{columns} not the number of \emph{ampersands}.  Generally, for \(c\) columns, there will be \(2c-1\) ampersands.%
+\begin{alignat*}{2}
+A &= \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}
+&
+I &= \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\text{.}
+\end{alignat*}
+One caveat: if your number of ampersands is even (see advice above about using an odd number) behavior should still be correct, as in next example.%
+\par
+If you want super-precise control over alignment of the terms of a system of equations (linear or not) you can use the \mono{alignat} option to advantage by not including any extra space.  This example is modified slightly from a post by Alex Jordan:%
+\begin{alignat*}{4}
+2x \amp {}+{} \amp  y \amp {}+{} \amp 3z \amp {}={} \amp 10\\
+x  \amp       \amp    \amp {}+{} \amp  z \amp {}={} \amp 6\\
+x  \amp {}+{} \amp 3y \amp {}+{} \amp 2z \amp {}={} \amp 13.
+\end{alignat*}
+Beautiful.%
+\par
+A long equation, to check layout on various screen sizes.  This is Weil's \textquotedblleft{}explicit formula\textquotedblright{} for the Riemann \(\zeta\)-function:%
+\begin{equation}
+\sum_\gamma S_-(\gamma) = \frac{\log Q}{\pi} \hat S_-(0)
++ \frac{1}{2\pi} \sum_{j=1}^d \Re\left\{ \int_{-\infty}^\infty \frac{\Gamma'}{\Gamma}\left(\frac{1}{4} + \frac{it}{2} + \mu_j\right)S_-(t) dt\right\}
+- \frac{d}{2\pi}\hat S_-(0)\log \pi\text{.}\label{section-mathematics-4-8-3}
+\end{equation}
+%
+\begin{example}{Example}{Excessive Display Mathematics.}{section-mathematics-4-9}%
+In print versions, a long run of displayed equations often needs to be broken across pages.  If you are reading some other version of this, then there is nothing to see here.  But for \LaTeX{} output it could be interesting.  First, with no extra effort, this page-long display should break naturally, no matter how the preceding material changes.%
+\begin{gather}
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-1}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-2}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-3}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-4}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-5}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-6}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-7}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-8}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-9}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-10}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-11}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-12}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-13}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-14}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-15}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-16}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-17}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-18}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-19}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-20}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-21}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-22}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-23}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-24}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-25}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-26}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-27}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-28}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-29}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-30}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-31}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-32}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-33}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-34}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-35}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-36}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-37}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-38}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-39}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-40}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-41}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-42}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-43}\\
+m^2+n^2=p^2\label{section-mathematics-4-9-2-2-44}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-2-2-45}\\
+a^2+b^2=c^2\label{section-mathematics-4-9-2-2-46}\\
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-2-2-47}\\
+m^2+n^2=p^2\text{.}\label{section-mathematics-4-9-2-2-48}
+\end{gather}
+%
+\par
+In this version we have turned off page breaking for the entire display, but then allowed a break at every fourth equation, so you should see a reasonably attractive page break right after one of the \(m^2+n^2=p^2\) equations.%
+\begin{gather}
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-1}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-2}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-3}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-4}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-5}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-6}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-7}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-8}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-9}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-10}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-11}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-12}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-13}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-14}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-15}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-16}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-17}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-18}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-19}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-20}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-21}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-22}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-23}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-24}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-25}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-26}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-27}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-28}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-29}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-30}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-31}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-32}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-33}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-34}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-35}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-36}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-37}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-38}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-39}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-40}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-41}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-42}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-43}\\*
+m^2+n^2=p^2\label{section-mathematics-4-9-3-2-44}\\
+x^2+y^2=z^2\label{section-mathematics-4-9-3-2-45}\\*
+a^2+b^2=c^2\label{section-mathematics-4-9-3-2-46}\\*
+\alpha^2+\beta^2=\gamma^2\label{section-mathematics-4-9-3-2-47}\\*
+m^2+n^2=p^2\text{.}\label{section-mathematics-4-9-3-2-48}
+\end{gather}
+%
+\par
+So.  Do not take any extra steps and let \LaTeX{} figure out the breaks.  If you do not like a break, modify the \mono{md} or \mono{mdn} to go back to the AMSmath default behavior and not break at all.  Ever.  Or rather, go further and modify an individual \mono{mrow} to suggest that it is a good place for a break.%
+\end{example}
+This is a poorly-authored paragaph to test the conversion to \initialism{HTML}.  There are two displayed equations, separated by a period ending the first one's sentence, which should migrate into the display, and not leave behind an empty paragraph:%
+\begin{equation*}
+z+y = z\text{.}
+\end{equation*}
+%
+\begin{equation*}
+a + b = c\text{.}
+\end{equation*}
+This final sentence should remain, inside another \initialism{HTML} paragraph, without the second equation's period.%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 2.3 \LaTeX{} Packages and MathJax Extensions}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{\LaTeX{} Packages and MathJax Extensions}{}{\LaTeX{} Packages and MathJax Extensions}{}{}{section-mathematics-5}
+If you would like to enhance your mathematics by using a macro from a \LaTeX{} package \emph{and} there is a MathJax extension \emph{which implements the same macro}, then you may use this with your mathematics as we demonstrate here.%
+\par
+This example is from Jason Underdown.\index{Underdown, Jason}  The package is named \mono{cancel} and is included in the TeXLive distribution, so is fairly standard.  The particular macro being demonstrated is \mono{\textbackslash{}cancelto\{\}\{\}}.%
+\begin{equation*}
+\lim_{b \rightarrow \infty}\left[\cancelto{0}{-\frac{1}{s}e^{-sb}} + \frac{1}{s}\right]\text{.}
+\end{equation*}
+Look at the source of this article to see the package name being supplied in a \mono{<math-package>} element within the \mono{<docinfo>} section.  That is the only setup required to make the macro usable in \LaTeX{} and \initialism{HTML} output.\index{canceling a term}\index{cancelto macro@\mono{cancelto} macro}%
+\par
+See the \pubtitle{PreTeXt Guide} subsection about \textquotedblleft{}MathJax Extensions\textquotedblright{} for more detail.%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 2.4 Advanced Mathematics}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Advanced Mathematics}{}{Advanced Mathematics}{}{}{section-mathematics-6}
+MathJax is extremely capable in rendering a subset of \LaTeX{} in web browsers, and improving all the time.  You can get fairly fancy with some of its supported commands.  In particular, if you need to mix in a few words with your mathematics, the \mono{\textbackslash{}text\{\}} macro is supported.  For example, you might use an \textquotedblleft{}if\textquotedblright{} or an \textquotedblleft{}otherwise\textquotedblright{} in the definition of a piecewise function.%
+\par
+Consider that the first line below is text sandwiched in-between two Greek letters, wrapped in a \mono{\textbackslash{}text\{\}} macro.  In HTML output we have taken care that the font for text material within display mathematics should match the font of the  surrounding paragraph, as also happens with \LaTeX{} output.  The second line is nearly identical in the source, but is just naked text being rendered like a slew of variables.%
+\begin{gather*}
+\alpha\text{ is not equal to }\beta\\
+\alpha is not equal to \beta\\
+\alpha\neq\beta\text{.}
+\end{gather*}
+We are not suggesting here that using words in place of symbols, as in the first line, is a good practice.  (It is not.)%
+\par
+The following example is a good stress-test of using the \mono{\textbackslash{}text\{\}} macro to achieve certain effects.  Note the Unicode left and right smart quotes.  This a contribution from Alex Jordan as part of his work on \pubtitle{APEX Calculus}.%
+\begin{gather*}
+y \rightarrow \frac{\sin(0) }{0} \rightarrow {{\text{“}}\atop{}}\frac{0}{0}{{\text{”}}\atop{}}\text{.}
+\end{gather*}
+And another one from Alex.  Note the use of the \mono{\textbackslash{}mathord\{\}} and \mono{\textbackslash{}mathrel\{\}} macros to control spacing around the mathematical symbols.  Examine the source to see how the quotation marks have been authored with \initialism{XML} syntax for Unicode characters, since we do not allow most markup inside mathematics.%
+\begin{gather*}
+\zeta(1)=\sum_{n=1}^{\infty}\frac{1}{n}\mathrel{\text{ “}\mathord{=}{\text{” }}}\prod_{p}\left(\frac{1}{1-1/p}\right)=\prod_{p}\left(\frac{1}{1-p^{-1}}\right)
+\end{gather*}
+%
+\par
+Scott Beaver likes to write short chains of equalities all in one line, with the cross-references sitting on each equals sign.  Here we test the \LaTeX{} \mono{\textbackslash{}overset} and \mono{\textbackslash{}underset} macros wrapping a PreTeXt \mono{<xref>}, with and without content, inside an \mono{<me>} element.  Note that  \mono{\textbackslash{}stackrel} is obsolete, and \mono{\textbackslash{}overunderset} is not yet supported by MathJax (but see \href{https://github.com/mathjax/MathJax/issues/2704}{GitHub \#2704}).  The mathematics is Scott's, the reasons are totally unrelated to the math.%
+\begin{equation*}
+AC-AD
+\overset{\hyperref[theorem-FTC]{\text{{\xreffont\ref{theorem-FTC}}}}}{=}
+A(C-D)
+\underset{\hyperref[definition-indefinite-integral]{\text{{\xreffont\ref{definition-indefinite-integral}}}}}{=}
+A0_{n\times p}
+\overset{\hyperref[theorem-FTC]{\text{Thm. {\xreffont\ref{theorem-FTC}}}}}{=}
+0_{m\times p}
+\end{equation*}
+We suggest using cross-references that only display numbers (\mono{<xref>} with \mono{@text} set to \mono{global}) since if you stick to elements like \mono{<theorem>}, \mono{<lemma>}, \mono{<definition>}, or \mono{<axiom>}, then the numbers will be unambiguous and the target of the cross-reference will contain full information.  But note that if you mix in divisions, or perhaps figures, as reasons then there is a possibility that numbers will need to be qualified by their type.  We have provided an abbreviation for one cross-reference to \hyperref[theorem-FTC]{Theorem~{\xreffont\ref{theorem-FTC}}} (which will not benefit from automatic translation to other languages).%
+\end{subsectionptx}
+\end{sectionptx}
+%
+\appendix%
+%
+%% A lineskip in table of contents as a transition to the appendices
+\addtocontents{toc}{\vspace{\normalbaselineskip}}%
+%
+%
+\typeout{************************************************}
+\typeout{Appendix A Multiple References}
+\typeout{************************************************}
+%
+\begin{appendixptx}{Appendix}{Multiple References}{}{Multiple References}{}{}{appendix-multiple-references}
+\renewcommand*{\appendixname}{Appendix}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection A.1 Multiple Specialized References}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Multiple Specialized References}{}{Multiple Specialized References}{}{}{appendix-multiple-references-2}
+You might want to have lists of references, in the back, but with multiple such lists.  Make an \mono{<appendix>} to hold them, give it some structure (for an \mono{<article>}, a leading \mono{<subsection>}, such as the one you are reading right now), then follow with multiple \mono{<references>} divisions.  A typical citation will then look like: \hyperlink{biblio-strang-article-tres}{[{\xreffont A.3.2}]}.%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{References A.2 General References}
+\typeout{************************************************}
+%
+\begin{references-subsection}{References}{General References}{}{General References}{}{}{appendix-multiple-references-3}
+%% If this is a top-level references
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
+\begin{referencelist}
+\bibitem[1]{biblio-strang-article-uno}\hypertarget{biblio-strang-article-uno}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
+\end{referencelist}
+\end{references-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{References A.3 Specialized References}
+\typeout{************************************************}
+%
+\begin{references-subsection}{References}{Specialized References}{}{Specialized References}{}{}{appendix-multiple-references-4}
+%% If this is a top-level references
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
+\begin{referencelist}
+\bibitem[1]{biblio-strang-article-dos}\hypertarget{biblio-strang-article-dos}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
+\bibitem[2]{biblio-strang-article-tres}\hypertarget{biblio-strang-article-tres}{}Gilbert Strang, \textit{The Fundamental Theorem of Linear Algebra}, The American Mathematical Monthly November 1993, \textbf{100} no.\@\,9, 848\textendash{}855.
+\end{referencelist}
+\end{references-subsection}
+\end{appendixptx}
+%% A lineskip in table of contents as a transition to the rest of the backmatter
+\addtocontents{toc}{\vspace{\normalbaselineskip}}
+%
+%
+%
+\typeout{************************************************}
+\typeout{References  References}
+\typeout{************************************************}
+%
+\begin{references-section-numberless}{References}{References}{}{References}{}{}{references-backmatter}
+%% If this is a top-level references
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
+\begin{referencelist}
+\bibitem[1]{biblio-judson-AATA}\hypertarget{biblio-judson-AATA}{}Tom Judson, \textit{Abstract Algebra: Theory and Applications}. \par\hypertarget{note-judson-AATA}{}%
+Another online, open-source offering.%
+
+\bibitem[2]{biblio-lay-article}\hypertarget{biblio-lay-article}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
+\end{referencelist}
+\end{references-section-numberless}
+\begin{backcolophon}{Colophon}{colophon-back}%
+This article was authored in, and produced with, PreTeXt.  It is typeset with the Latin Modern font.%
+\end{backcolophon}%
+\end{document}
