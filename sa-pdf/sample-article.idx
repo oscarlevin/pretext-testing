@@ -1,0 +1,145 @@
+\indexentry{Fundamental Theorem of Calculus|hyperpage}{2}
+\indexentry{test: buried in theorem\slash{}statement\slash{}p|hyperpage}{2}
+\indexentry{indefinite integral|hyperpage}{2}
+\indexentry{integral!indefinite integral|hyperpage}{2}
+\indexentry{Sage!integration|hyperpage}{2}
+\indexentry{Sage!integration!cell|hyperpage}{2}
+\indexentry{Sage!integration!numerical|hyperpage}{2}
+\indexentry{numerical|hyperxindexformat{\see{Sage integration}}}{2}
+\indexentry{numerical|hyperxindexformat{\see{Sage}}}{2}
+\indexentry{numerics|hyperpage}{2}
+\indexentry{numerics|hyperxindexformat{\seealso{Sage}}}{2}
+\indexentry{numerical integration!Sage!cell|hyperxindexformat{\see{Sage}}}{2}
+\indexentry{A|hyperxindexformat{\see{F}}}{2}
+\indexentry{A|hyperxindexformat{\see{G}}}{2}
+\indexentry{A|hyperxindexformat{\see{H}}}{2}
+\indexentry{A!B|hyperpage}{2}
+\indexentry{A!B!C|hyperpage}{2}
+\indexentry{A!B!C|hyperxindexformat{\seealso{D}}}{2}
+\indexentry{A!B!C|hyperxindexformat{\seealso{A}}}{2}
+\indexentry{X|hyperpage}{2}
+\indexentry{X|hyperxindexformat{\seealso{F}}}{2}
+\indexentry{X|hyperxindexformat{\seealso{G}}}{2}
+\indexentry{X|hyperxindexformat{\seealso{H}}}{2}
+\indexentry{X!Y|hyperpage}{2}
+\indexentry{X!Y!Z|hyperxindexformat{\see{D}}}{2}
+\indexentry{X!Y!Z|hyperxindexformat{\see{A}}}{2}
+\indexentry{mixed-content \emph{emphasized}|hyperpage}{2}
+\indexentry{structured-content \emph{emphasized}|hyperpage}{2}
+\indexentry{cat@sorted as if \textquotedblleft{}Cat\textquotedblright{}|hyperpage}{2}
+\indexentry{quorum@sorted as if \textquotedblleft{}Quorum\textquotedblright{}|hyperpage}{2}
+\indexentry{units!A@Z (\ptxalert{sort as} A)|hyperpage}{2}
+\indexentry{units!Z@A (\ptxalert{sort as} Z)|hyperpage}{2}
+\indexentry{verbatim@\ptxmono{verbatim text}, use sortby|hyperpage}{2}
+\indexentry{R@\(\rho\)\textendash{}fibers|hyperpage}{2}
+\indexentry{Cayley graph|hyperpage}{2}
+\indexentry{cayley graph|hyperpage}{2}
+\indexentry{CAYLEY GRAPH|hyperpage}{2}
+\indexentry{x@\(x\) as a variable|hyperpage}{2}
+\indexentry{Cayley graph|hyperpage}{2}
+\indexentry{x@\(x\) as a variable|hyperpage}{2}
+\indexentry{cayley graph|hyperpage}{2}
+\indexentry{CAYLEY GRAPH|hyperpage}{3}
+\indexentry{doctest|hyperpage}{3}
+\indexentry{attributes!doctest|hyperpage}{3}
+\indexentry{c|hyperpage}{3}
+\indexentry{c@A bug test, sorted as \textquotedblleft{}c\textquotedblright{}!b!c one|hyperpage}{3}
+\indexentry{c@A bug test, sorted as \textquotedblleft{}c\textquotedblright{}!x!c two|hyperpage}{3}
+\indexentry{c@A bug test, sorted as \textquotedblleft{}c\textquotedblright{}!b!c three|hyperpage}{3}
+\indexentry{R|hyperpage}{3}
+\indexentry{gasoline|hyperpage}{5}
+\indexentry{gas works|hyperpage}{5}
+\indexentry{gas|hyperpage}{5}
+\indexentry{gas masks|hyperpage}{5}
+\indexentry{gas production|hyperpage}{5}
+\indexentry{gastritis|hyperpage}{5}
+\indexentry{Sage cell!with a title|hyperpage}{5}
+\indexentry{Fundamental Theorem of Calculus!Corollary|hyperpage}{6}
+\indexentry{project|hyperpage}{11}
+\indexentry{question|hyperpage}{11}
+\indexentry{problem|hyperpage}{11}
+\indexentry{exploration|hyperpage}{11}
+\indexentry{project|hyperpage}{11}
+\indexentry{activity|hyperpage}{11}
+\indexentry{task|hyperpage}{11}
+\indexentry{investigation|hyperpage}{11}
+\indexentry{rename an environment|hyperpage}{11}
+\indexentry{aside|hyperpage}{11}
+\indexentry{reading questions|hyperpage}{18}
+\indexentry{glossary|hyperpage}{18}
+\indexentry{solutions!for a division|hyperpage}{18}
+\indexentry{Sage cells!linking|hyperpage}{21}
+\indexentry{assemblage|hyperpage}{22}
+\indexentry{em!emphasis|hyperpage}{24}
+\indexentry{styling words!em|hyperpage}{24}
+\indexentry{styling words!emphasis|hyperpage}{24}
+\indexentry{alert|hyperpage}{24}
+\indexentry{styling words!alert|hyperpage}{24}
+\indexentry{styling words!insert|hyperpage}{24}
+\indexentry{styling words!delete|hyperpage}{24}
+\indexentry{styling words!stale|hyperpage}{24}
+\indexentry{footnotes|hyperpage}{25}
+\indexentry{list!multicolumn|(hyperpage}{26}
+\indexentry{strange colors|hyperpage}{26}
+\indexentry{strange colors|hyperpage}{26}
+\indexentry{list!multicolumn|)}{28}
+\indexentry{rho, a test|hyperpage}{28}
+\indexentry{Maxwell's equations|hyperpage}{29}
+\indexentry{Underdown, Jason|hyperpage}{36}
+\indexentry{canceling a term|hyperpage}{36}
+\indexentry{cancelto macro@\ptxmono{cancelto} macro|hyperpage}{36}
+\indexentry{quotations|hyperpage}{46}
+\indexentry{keyboard keys|hyperpage}{50}
+\indexentry{link!external, url|hyperpage}{51}
+\indexentry{reference!external, url|hyperpage}{51}
+\indexentry{biological names|hyperpage}{52}
+\indexentry{biological names!taxon|hyperpage}{52}
+\indexentry{scientific names|hyperxindexformat{\see{biological names}}}{52}
+\indexentry{taxon|hyperpage}{52}
+\indexentry{biological names!taxon|hyperpage}{52}
+\indexentry{genus|hyperpage}{52}
+\indexentry{biological names!genus|hyperpage}{52}
+\indexentry{species|hyperpage}{52}
+\indexentry{biological names!species|hyperpage}{52}
+\indexentry{ncbi attribute|hyperpage}{52}
+\indexentry{attributes!ncbi attribute|hyperpage}{52}
+\indexentry{biological names!ncbi attribute|hyperpage}{52}
+\indexentry{PreFigure image|hyperpage}{56}
+\indexentry{image!PreFigure image|hyperpage}{56}
+\indexentry{latex@\LaTeX{} image|hyperpage}{59}
+\indexentry{image!\LaTeX{} image|hyperpage}{59}
+\indexentry{PSTricks|hyperpage}{62}
+\indexentry{asymptote graphics language|hyperpage}{63}
+\indexentry{Mermaid diagrams|hyperpage}{66}
+\indexentry{Sage plots|hyperpage}{68}
+\indexentry{exercise group!two derivatives|hyperpage}{75}
+\indexentry{derivative!cosine|hyperpage}{75}
+\indexentry{fill-in blank|hyperpage}{75}
+\indexentry{references!within a section|hyperpage}{78}
+\indexentry{ordered list|hyperpage}{79}
+\indexentry{list!ordered|hyperpage}{79}
+\indexentry{unordered list|hyperpage}{79}
+\indexentry{list!unordered|hyperpage}{79}
+\indexentry{ordered list|hyperpage}{79}
+\indexentry{unordered list|hyperpage}{79}
+\indexentry{list!ordered|hyperpage}{79}
+\indexentry{list!unordered|hyperpage}{79}
+\indexentry{Group|hyperpage}{82}
+\indexentry{group!definition|hyperpage}{82}
+\indexentry{paragraph!initial list|hyperpage}{82}
+\indexentry{\(\int f(x)\,dx\)|hyperpage}{83}
+\indexentry{math in lists \(\frac{d}{dx}(\sin(x))=\cos(x)\)|hyperpage}{83}
+\indexentry{description list|hyperpage}{86}
+\indexentry{list!description|hyperpage}{86}
+\indexentry{description list|hyperpage}{86}
+\indexentry{list!description|hyperpage}{86}
+\indexentry{named list|hyperpage}{89}
+\indexentry{list!named|hyperpage}{89}
+\indexentry{list|hyperpage}{90}
+\indexentry{paragraph!normal|hyperpage}{91}
+\indexentry{paragraph!opens with list|hyperpage}{91}
+\indexentry{interactive elements!authored|hyperpage}{107}
+\indexentry{embedded interactive elements!authored|hyperpage}{107}
+\indexentry{D3.js|hyperpage}{109}
+\indexentry{JSXGraph|hyperpage}{112}
+\indexentry{Archimedian Spiral|hyperpage}{113}

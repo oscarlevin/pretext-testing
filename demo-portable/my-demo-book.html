@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Demo Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/css/theme-default-modern.min.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="My Demo Book">
+<meta property="book:author" content="Me">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lib/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lib/jquery.sticky.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lib/jquery.espy.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/pretext.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.7';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/prefix-runestone.c2757fc695bc848c.bundle.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/pretext_search.js"></script><script src="https://cdn.jsdelivr.net/gh/PreTeXtBook/html-static@2.35/dist/_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-demo-book.html"><span class="title">My Demo Book</span> <span class="subtitle">An demo of PreTeXt features</span></a></h1>
+<p class="byline">Me</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="#backmatter-5" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><span class="up-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></span><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="#frontmatter" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="#front-colophon" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-dedication"><div class="toc-title-box"><a href="#frontmatter-4" class="internal"><span class="title">Dedication</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="#frontmatter-5" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="#frontmatter-preface" class="internal"><span class="title">Preface</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="#frontmatter-7" class="internal"><span class="title">Not just that..</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-first-without-spaces" class="internal"><span class="codenumber">1</span> <span class="title">My First Chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="#sec-first-intro" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction to First Chapter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="#subsec-a-subsection" class="internal"><span class="codenumber">1.1.1</span> <span class="title">A subsection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="#subsec-another-subsection" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Another Subsection</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-first-examples" class="internal"><span class="codenumber">1.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="#ex-first" class="internal"><span class="codenumber">1.3</span> <span class="title">My Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="#ch-empty" class="internal"><span class="codenumber">2</span> <span class="title">(No title)</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-features" class="internal"><span class="codenumber">3</span> <span class="title">Features</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-features-blocks" class="internal"><span class="codenumber">3.1</span> <span class="title">Environments and Blocks</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="#ch-generate" class="internal"><span class="codenumber">4</span> <span class="title">PreTeXt features that require generation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-latex-image" class="internal"><span class="codenumber">4.1</span> <span class="title">LaTeX-Image Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-prefigure" class="internal"><span class="codenumber">4.2</span> <span class="title">PreFigure Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-sageplot" class="internal"><span class="codenumber">4.3</span> <span class="title">SagePlot Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-asymptote" class="internal"><span class="codenumber">4.4</span> <span class="title">Asymptote Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-webwork" class="internal"><span class="codenumber">4.5</span> <span class="title">WeBWorK Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-mom" class="internal"><span class="codenumber">4.6</span> <span class="title">MyOpenMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-youtube" class="internal"><span class="codenumber">4.7</span> <span class="title">YouTube Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-interactive" class="internal"><span class="codenumber">4.8</span> <span class="title">Interactive Example</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="#sec-codelens" class="internal"><span class="codenumber">4.9</span> <span class="title">Codelens Example</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="#backmatter" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="#backmatter-2" class="internal"><span class="codenumber">A</span> <span class="title">Selected Hints</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="#backmatter-3" class="internal"><span class="codenumber">B</span> <span class="title">Selected Solutions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="#backmatter-4" class="internal"><span class="codenumber">C</span> <span class="title">List of Symbols</span></a></div></li>
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="#backmatter-5" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="#backmatter-6" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="book" id="my-demo-book"><section class="frontmatter" id="frontmatter"><h2 class="heading">
+<span class="title">My Demo Book</span><span class="subtitle">An demo of PreTeXt features</span>
+</h2>
+<div class="author">
+<div class="author-name">Me</div>
+<div class="author-info">My department<br>My school</div>
+</div>
+<div class="date">January 9, 2026</div>
+<section class="colophon" id="front-colophon"><h3 class="heading hide-type">
+<span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
+</h3>
+<div class="credit">
+<b class="title">Website</b> <a class="external" href="https://pretextbook.org" target="_blank">My Website</a>
+</div>
+<div class="para copyright">©2020–2022 Me</div>
+<div class="para license"> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a>
+</div>
+<div class="autopermalink" data-description="Colophon"><a href="#front-colophon" title="Copy heading and permalink for Colophon" aria-label="Copy heading and permalink for Colophon">🔗</a></div></section><section class="dedication" id="frontmatter-4"><h3 class="heading hide-type">
+<span class="type">Dedication</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dedication</span>
+</h3>
+<div class="para" id="frontmatter-4-1">For ...<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Dedication"><a href="#frontmatter-4" title="Copy heading and permalink for Dedication" aria-label="Copy heading and permalink for Dedication">🔗</a></div></section><section class="acknowledgement" id="frontmatter-5"><h3 class="heading hide-type">
+<span class="type">Acknowledgements</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Acknowledgements</span>
+</h3>
+<div class="para" id="frontmatter-5-1">I would like to thank...<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Acknowledgements"><a href="#frontmatter-5" title="Copy heading and permalink for Acknowledgements" aria-label="Copy heading and permalink for Acknowledgements">🔗</a></div></section><section class="preface" id="frontmatter-preface"><h3 class="heading hide-type">
+<span class="type">Preface</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Preface</span>
+</h3>
+<div class="para" id="frontmatter-preface-1">About this book:<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-preface-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Preface"><a href="#frontmatter-preface" title="Copy heading and permalink for Preface" aria-label="Copy heading and permalink for Preface">🔗</a></div></section><section class="preface" id="frontmatter-7"><h3 class="heading hide-type">
+<span class="type">Preface</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Not just that..</span>
+</h3>
+<div class="para" id="frontmatter-7-2">I still have more to say!<div class="autopermalink" data-description="Paragraph"><a href="#frontmatter-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Preface: Not just that.."><a href="#frontmatter-7" title="Copy heading and permalink for Preface: Not just that.." aria-label="Copy heading and permalink for Preface: Not just that..">🔗</a></div></section><div class="autopermalink" data-description="Front Matter"><a href="#frontmatter" title="Copy heading and permalink for Front Matter" aria-label="Copy heading and permalink for Front Matter">🔗</a></div></section><section class="chapter" id="ch-first-without-spaces"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span>
+</h2>
+<section class="introduction" id="ch-first-without-spaces-2"><div class="para" id="ch-first-without-spaces-2-1">This is the introduction to the chapter<div class="autopermalink" data-description="Paragraph"><a href="#ch-first-without-spaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="section" id="sec-first-intro"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introduction to First Chapter</span>
+</h3>
+<section class="introduction" id="sec-first-intro-2"><div class="para" id="sec-first-intro-2-1">Intro to section, because we will have subsections.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-first-intro-2-2">Another paragraph of the introduction.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-a-subsection"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A subsection</span>
+</h4>
+<div class="para" id="subsec-a-subsection-2">Content of the subsection.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-a-subsection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-a-subsection-3">More content.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-a-subsection-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.1: A subsection"><a href="#subsec-a-subsection" title="Copy heading and permalink for Subsection 1.1.1: A subsection" aria-label="Copy heading and permalink for Subsection 1.1.1: A subsection">🔗</a></div></section><section class="subsection" id="subsec-another-subsection"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Another Subsection</span>
+</h4>
+<div class="para" id="subsec-another-subsection-2">Text with some math: <span class="process-math">\(\sin(x) = \cos(x)\)</span> only for some values of <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#subsec-another-subsection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection 1.1.2: Another Subsection"><a href="#subsec-another-subsection" title="Copy heading and permalink for Subsection 1.1.2: Another Subsection" aria-label="Copy heading and permalink for Subsection 1.1.2: Another Subsection">🔗</a></div></section><section class="conclusion" id="sec-first-intro-5"><div class="para" id="sec-first-intro-5-1">After the last subsection, you might have a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-intro-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Section 1.1: Introduction to First Chapter"><a href="#sec-first-intro" title="Copy heading and permalink for Section 1.1: Introduction to First Chapter" aria-label="Copy heading and permalink for Section 1.1: Introduction to First Chapter">🔗</a></div></section><section class="section" id="sec-first-examples"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Examples</span>
+</h3>
+<div class="para" id="sec-first-examples-2">Here is an example:<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-first-examples-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-first-examples-3-1-1">The statement of the example, since it will have a solution.  What is the solution?<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-first-examples-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-first-examples-3-2-1">This is the solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.1.1"><a href="#sec-first-examples-3-2" title="Copy heading and permalink for Solution 1.2.1.1" aria-label="Copy heading and permalink for Solution 1.2.1.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 1.2.1"><a href="#sec-first-examples-3" title="Copy heading and permalink for Example 1.2.1" aria-label="Copy heading and permalink for Example 1.2.1">🔗</a></div></article></details><div class="para" id="sec-first-examples-4">Here is another example, but without a solution<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-first-examples-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="sec-first-examples-5-1">This is an example of an example without a solution (or hint or answer) so the paragraph doesn’t need to be inside a statement tag.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.2.2"><a href="#sec-first-examples-5" title="Copy heading and permalink for Example 1.2.2" aria-label="Copy heading and permalink for Example 1.2.2">🔗</a></div></article></details><div class="para" id="sec-first-examples-6">Although the next things are not examples, they give examples of blocks that are not examples.  First a theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-first-examples-theorem"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Theorem Title.</span>
+</h4>
+<div class="para" id="thm-first-examples-theorem-2-1">This is the statement of the theorem.<div class="autopermalink" data-description="Paragraph"><a href="#thm-first-examples-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 1.2.3: Theorem Title"><a href="#thm-first-examples-theorem" title="Copy heading and permalink for Theorem 1.2.3: Theorem Title" aria-label="Copy heading and permalink for Theorem 1.2.3: Theorem Title">🔗</a></div></article><details id="thm-first-examples-theorem-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-first-examples-theorem-3-1">And this is its proof.<div class="autopermalink" data-description="Paragraph"><a href="#thm-first-examples-theorem-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.2.3.1"><a href="#thm-first-examples-theorem-3" title="Copy heading and permalink for Proof 1.2.3.1" aria-label="Copy heading and permalink for Proof 1.2.3.1">🔗</a></div></article></details><article class="corollary theorem-like" id="cor-first-examples-corollary"><h4 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="cor-first-examples-corollary-1-1">A corollary that doesn’t need a proof.<div class="autopermalink" data-description="Paragraph"><a href="#cor-first-examples-corollary-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 1.2.4"><a href="#cor-first-examples-corollary" title="Copy heading and permalink for Corollary 1.2.4" aria-label="Copy heading and permalink for Corollary 1.2.4">🔗</a></div></article><div class="para" id="sec-first-examples-9">Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="remark-first-examples-context"><h4 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Larger Context.</span>
+</h4>
+<div class="para" id="remark-first-examples-context-2">Comment to the reader here.<div class="autopermalink" data-description="Paragraph"><a href="#remark-first-examples-context-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 1.2.5: Larger Context"><a href="#remark-first-examples-context" title="Copy heading and permalink for Remark 1.2.5: Larger Context" aria-label="Copy heading and permalink for Remark 1.2.5: Larger Context">🔗</a></div></article><div class="para" id="sec-first-examples-11">Of course, if you want more information, you might see <a href="#thm-first-examples-theorem" class="internal" title="Theorem 1.2.3: Theorem Title">Theorem 1.2.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-first-examples-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.2: Examples"><a href="#sec-first-examples" title="Copy heading and permalink for Section 1.2: Examples" aria-label="Copy heading and permalink for Section 1.2: Examples">🔗</a></div></section><section class="exercises" id="ex-first"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="ex-first-2"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-first-2-1-1">Is this an exercise?<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="ex-first-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="ex-first-2-2-1">Yes.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.1"><a href="#ex-first-2-2" title="Copy heading and permalink for Answer 1.3.1.1" aria-label="Copy heading and permalink for Answer 1.3.1.1">🔗</a></div>
+</div></details><details id="ex-first-2-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="ex-first-2-3-1">It is, but not a very good one.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3.1.1"><a href="#ex-first-2-3" title="Copy heading and permalink for Solution 1.3.1.1" aria-label="Copy heading and permalink for Solution 1.3.1.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" data-description="Exercise 1.3.1"><a href="#ex-first-2" title="Copy heading and permalink for Exercise 1.3.1" aria-label="Copy heading and permalink for Exercise 1.3.1">🔗</a></div></article><article class="exercise exercise-like" id="ex-first-3"><h4 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="para" id="ex-first-3-1-1">Another, with a hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="ex-first-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="ex-first-3-2-1">The hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.3.2.1"><a href="#ex-first-3-2" title="Copy heading and permalink for Hint 1.3.2.1" aria-label="Copy heading and permalink for Hint 1.3.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 1.3.2"><a href="#ex-first-3" title="Copy heading and permalink for Exercise 1.3.2" aria-label="Copy heading and permalink for Exercise 1.3.2">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.3: My Exercises"><a href="#ex-first" title="Copy heading and permalink for Exercises 1.3: My Exercises" aria-label="Copy heading and permalink for Exercises 1.3: My Exercises">🔗</a></div></section><div class="autopermalink" data-description="Chapter 1: My First Chapter"><a href="#ch-first-without-spaces" title="Copy heading and permalink for Chapter 1: My First Chapter" aria-label="Copy heading and permalink for Chapter 1: My First Chapter">🔗</a></div></section><section class="chapter" id="ch-empty"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(No title)</span>
+</h2>
+<div class="para" id="ch-empty-2">Try adding your own content here! This chapter doesn’t have sections.<div class="autopermalink" data-description="Paragraph"><a href="#ch-empty-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Chapter 2: (No title)"><a href="#ch-empty" title="Copy heading and permalink for Chapter 2: (No title)" aria-label="Copy heading and permalink for Chapter 2: (No title)">🔗</a></div></section><section class="chapter" id="ch-features"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Features</span>
+</h2>
+<section class="section" id="sec-features-blocks"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Environments and Blocks</span>
+</h3>
+<article class="theorem theorem-like" id="sec-features-blocks-2"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<div class="para" id="sec-features-blocks-2-1-1">Theorem statement.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.1.1"><a href="#sec-features-blocks-2" title="Copy heading and permalink for Theorem 3.1.1" aria-label="Copy heading and permalink for Theorem 3.1.1">🔗</a></div></article><details id="sec-features-blocks-2-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="sec-features-blocks-2-2-1">Proof of theorem.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.1.1"><a href="#sec-features-blocks-2-2" title="Copy heading and permalink for Proof 3.1.1.1" aria-label="Copy heading and permalink for Proof 3.1.1.1">🔗</a></div></article></details><details id="sec-features-blocks-3" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="example example-like knowl__content"> <div class="para" id="sec-features-blocks-3-1-2">Statement of example<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="sec-features-blocks-3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-features-blocks-3-2-1">The solution.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-features-blocks-3-2-2">Another paragraph.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 3.1.2.1"><a href="#sec-features-blocks-3-2" title="Copy heading and permalink for Solution 3.1.2.1" aria-label="Copy heading and permalink for Solution 3.1.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Example 3.1.2"><a href="#sec-features-blocks-3" title="Copy heading and permalink for Example 3.1.2" aria-label="Copy heading and permalink for Example 3.1.2">🔗</a></div></article></details><div class="para" id="sec-features-blocks-4">Now a figure.<div class="autopermalink" data-description="Paragraph"><a href="#sec-features-blocks-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="sec-features-blocks-5"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/frog.jpg" class="contained" alt="A nice-looking frog with a longish description."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A frog<div class="autopermalink" data-description="Figure 3.1.3"><a href="#sec-features-blocks-5" title="Copy heading and permalink for Figure 3.1.3" aria-label="Copy heading and permalink for Figure 3.1.3">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 3.1: Environments and Blocks"><a href="#sec-features-blocks" title="Copy heading and permalink for Section 3.1: Environments and Blocks" aria-label="Copy heading and permalink for Section 3.1: Environments and Blocks">🔗</a></div></section><div class="autopermalink" data-description="Chapter 3: Features"><a href="#ch-features" title="Copy heading and permalink for Chapter 3: Features" aria-label="Copy heading and permalink for Chapter 3: Features">🔗</a></div></section><section class="chapter" id="ch-generate"><h2 class="heading">
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PreTeXt features that require generation</span>
+</h2>
+<section class="introduction" id="ch-generate-2"><div class="para" id="ch-generate-2-1">Here we demonstrate various kinds of assets.<div class="autopermalink" data-description="Paragraph"><a href="#ch-generate-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="section" id="sec-latex-image"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">LaTeX-Image Example</span>
+</h3>
+<figure class="figure figure-like" id="fig-tikz"><div class="image-box" style="width: 20%; margin-left: 40%; margin-right: 40%;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 61 58" role="img" class="contained" aria-label="A 5-cycle"><title>A 5-cycle</title><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M-26.95966 8.75974-16.66179-22.93315H16.66179L26.95966 8.75974 0 28.3468-26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M-24.9671 8.75974C-24.9671 9.86021-25.85918 10.75229-26.95966 10.75229-28.06012 10.75229-28.95221 9.86021-28.95221 8.75974-28.95221 7.65927-28.06012 6.76718-26.95966 6.76718-25.85918 6.76718-24.9671 7.65927-24.9671 8.75974ZM-26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M-14.66924-22.93315C-14.66924-21.83267-15.56131-20.9406-16.66179-20.9406-17.76225-20.9406-18.65434-21.83267-18.65434-22.93315-18.65434-24.03362-17.76225-24.9257-16.66179-24.9257-15.56131-24.9257-14.66924-24.03362-14.66924-22.93315ZM-16.66179-22.93315"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M18.65434-22.93315C18.65434-21.83267 17.76225-20.9406 16.66179-20.9406 15.56131-20.9406 14.66924-21.83267 14.66924-22.93315 14.66924-24.03362 15.56131-24.9257 16.66179-24.9257 17.76225-24.9257 18.65434-24.03362 18.65434-22.93315ZM16.66179-22.93315"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M28.95221 8.75974C28.95221 9.86021 28.06012 10.75229 26.95966 10.75229 25.85918 10.75229 24.9671 9.86021 24.9671 8.75974 24.9671 7.65927 25.85918 6.76718 26.95966 6.76718 28.06012 6.76718 28.95221 7.65927 28.95221 8.75974ZM26.95966 8.75974"></path><path transform="matrix(1.00002,0,0,-1.00005,30.848244,31.939797)" d="M1.99255 28.3468C1.99255 29.44728 1.10046 30.33936 0 30.33936-1.10046 30.33936-1.99255 29.44728-1.99255 28.3468-1.99255 27.24634-1.10046 26.35425 0 26.35425 1.10046 26.35425 1.99255 27.24634 1.99255 28.3468ZM0 28.3468"></path></svg></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph <span class="process-math">\(C_5\)</span> made by TikZ<div class="autopermalink" data-description="Figure 4.1.1"><a href="#fig-tikz" title="Copy heading and permalink for Figure 4.1.1" aria-label="Copy heading and permalink for Figure 4.1.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.1: LaTeX-Image Example"><a href="#sec-latex-image" title="Copy heading and permalink for Section 4.1: LaTeX-Image Example" aria-label="Copy heading and permalink for Section 4.1: LaTeX-Image Example">🔗</a></div></section><section class="section" id="sec-prefigure"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PreFigure Example</span>
+</h3>
+<figure class="figure figure-like" id="prefig"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" role="img" class="contained" aria-label="The graphs of a function x(t) and its derivative x’(t)."><title>The graphs of a function x(t) and its derivative x’(t).</title><desc><div xmlns="" class="para" id="prefig-2-2-1">The graphs of a function <span class="process-math">\(x(t)\)</span> and its derivative <span class="process-math">\(x'(t)\)</span> are shown in a coordinate plane. Note that the slope of each point of the graph of <span class="process-math">\(x(t)\)</span> is equal to the vertical coordinate of the graph of <span class="process-math">\(x'(t)\)</span> at the same <span class="process-math">\(t\)</span>-value.<div class="autopermalink" data-description="Paragraph"><a href="#prefig-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></desc><defs>
+    <clipPath id="clipPath-0_prefig-2">
+      <rect x="5.0" y="5.0" width="300.0" height="300.0"></rect>
+    </clipPath>
+    <clipPath id="clipPath-1_prefig-2">
+      <rect x="5.0" y="5.0" width="300.0" height="300.0"></rect>
+    </clipPath>
+  </defs><g id="grid-axes_prefig-2">
+    <g id="grid_prefig-2" stroke="#ccc" stroke-width="1">
+      <line id="line-0_prefig-2" x1="5.0" y1="305.0" x2="5.0" y2="5.0"></line>
+      <line id="line-1_prefig-2" x1="47.9" y1="305.0" x2="47.9" y2="5.0"></line>
+      <line id="line-2_prefig-2" x1="90.7" y1="305.0" x2="90.7" y2="5.0"></line>
+      <line id="line-3_prefig-2" x1="133.6" y1="305.0" x2="133.6" y2="5.0"></line>
+      <line id="line-4_prefig-2" x1="176.4" y1="305.0" x2="176.4" y2="5.0"></line>
+      <line id="line-5_prefig-2" x1="219.3" y1="305.0" x2="219.3" y2="5.0"></line>
+      <line id="line-6_prefig-2" x1="262.1" y1="305.0" x2="262.1" y2="5.0"></line>
+      <line id="line-7_prefig-2" x1="305.0" y1="305.0" x2="305.0" y2="5.0"></line>
+      <line id="line-8_prefig-2" x1="5.0" y1="305.0" x2="305.0" y2="305.0"></line>
+      <line id="line-9_prefig-2" x1="5.0" y1="255.0" x2="305.0" y2="255.0"></line>
+      <line id="line-10_prefig-2" x1="5.0" y1="205.0" x2="305.0" y2="205.0"></line>
+      <line id="line-11_prefig-2" x1="5.0" y1="155.0" x2="305.0" y2="155.0"></line>
+      <line id="line-12_prefig-2" x1="5.0" y1="105.0" x2="305.0" y2="105.0"></line>
+      <line id="line-13_prefig-2" x1="5.0" y1="55.0" x2="305.0" y2="55.0"></line>
+      <line id="line-14_prefig-2" x1="5.0" y1="5.0" x2="305.0" y2="5.0"></line>
+    </g>
+    <g id="axes_prefig-2" stroke="black" stroke-width="2">
+      <line id="line-15_prefig-2" x1="5.0" y1="155.0" x2="305.0" y2="155.0" stroke="black" stroke-width="2"></line>
+      <g>
+        <line id="line-16_prefig-2" x1="133.6" y1="158.0" x2="133.6" y2="152.0"></line>
+        <line id="line-17_prefig-2" x1="219.3" y1="158.0" x2="219.3" y2="152.0"></line>
+      </g>
+      <line id="line-18_prefig-2" x1="47.9" y1="305.0" x2="47.9" y2="5.0" stroke="black" stroke-width="2"></line>
+      <g>
+        <line id="line-19_prefig-2" x1="44.9" y1="255.0" x2="50.9" y2="255.0"></line>
+        <line id="line-20_prefig-2" x1="44.9" y1="55.0" x2="50.9" y2="55.0"></line>
+      </g>
+    </g>
+    <g id="label-0_prefig-2" transform="translate(301.0,151.0) translate(-6.5,-11.5)">
+      <g id="g-0_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.200px" width="6.536px" height="11.528px" role="img" focusable="false" viewBox="0 -626 361 637" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-2-TEX-I-1D461_prefig-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="t">
+                <use data-c="1D461" href="#MJX-2-TEX-I-1D461_prefig-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-1_prefig-2" transform="translate(133.6,166.0) translate(-4.5,-0.0)">
+      <g id="g-1_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-3-TEX-N-32_prefig-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="2">
+                <use data-c="32" href="#MJX-3-TEX-N-32_prefig-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-2_prefig-2" transform="translate(219.3,166.0) translate(-4.5,-0.0)">
+      <g id="g-2_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-4-TEX-N-34_prefig-2" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="4">
+                <use data-c="34" href="#MJX-4-TEX-N-34_prefig-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-3_prefig-2" transform="translate(36.9,255.0) translate(-15.1,-6.0)">
+      <g id="g-3_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.056px" role="img" focusable="false" viewBox="0 -666 833 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-5-TEX-N-2D_prefig-2" d="M11 179V252H277V179H11Z"></path>
+            <path id="MJX-5-TEX-N-32_prefig-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="unknown" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="hyphen 2">
+                <use data-c="2D" href="#MJX-5-TEX-N-2D_prefig-2"></use>
+                <use data-c="32" href="#MJX-5-TEX-N-32_prefig-2" transform="translate(333,0)"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-4_prefig-2" transform="translate(36.9,55.0) translate(-9.0,-6.0)">
+      <g id="g-4_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-6-TEX-N-32_prefig-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="2">
+                <use data-c="32" href="#MJX-6-TEX-N-32_prefig-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+  </g><path id="x_prefig-2" stroke="blue" stroke-width="2" fill="none" d="M 47.9 155.0 L 49.1 152.0 L 50.4 149.0 L 51.7 146.1 L 53.0 143.2 L 54.3 140.4 L 55.6 137.7 L 56.9 135.0 L 58.2 132.4 L 59.5 129.9 L 60.8 127.5 L 62.1 125.2 L 63.4 123.0 L 64.7 120.9 L 65.9 118.9 L 67.2 117.1 L 68.5 115.4 L 69.8 113.8 L 71.1 112.3 L 72.4 110.9 L 73.7 109.7 L 75.0 108.7 L 76.3 107.8 L 77.6 107.0 L 78.9 106.4 L 80.2 105.9 L 81.5 105.5 L 82.7 105.3 L 84.0 105.3 L 85.3 105.4 L 86.6 105.6 L 87.9 106.0 L 89.2 106.4 L 90.5 107.1 L 91.8 107.8 L 93.1 108.7 L 94.4 109.7 L 95.7 110.9 L 97.0 112.1 L 98.3 113.5 L 99.5 114.9 L 100.8 116.5 L 102.1 118.2 L 103.4 119.9 L 104.7 121.8 L 106.0 123.7 L 107.3 125.7 L 108.6 127.7 L 109.9 129.8 L 111.2 132.0 L 112.5 134.2 L 113.8 136.5 L 115.1 138.7 L 116.3 141.0 L 117.6 143.4 L 118.9 145.7 L 120.2 148.0 L 121.5 150.4 L 122.8 152.7 L 124.1 155.0 L 125.4 157.3 L 126.7 159.6 L 128.0 161.8 L 129.3 164.0 L 130.6 166.2 L 131.8 168.3 L 133.1 170.3 L 134.4 172.3 L 135.7 174.2 L 137.0 176.1 L 138.3 177.8 L 139.6 179.5 L 140.9 181.1 L 142.2 182.6 L 143.5 184.0 L 144.8 185.4 L 146.1 186.6 L 147.4 187.7 L 148.6 188.7 L 149.9 189.7 L 151.2 190.5 L 152.5 191.2 L 153.8 191.8 L 155.1 192.2 L 156.4 192.6 L 157.7 192.9 L 159.0 193.0 L 160.3 193.1 L 161.6 193.0 L 162.9 192.8 L 164.2 192.6 L 165.4 192.2 L 166.7 191.7 L 168.0 191.1 L 169.3 190.4 L 170.6 189.6 L 171.9 188.8 L 173.2 187.8 L 174.5 186.8 L 175.8 185.6 L 177.1 184.4 L 178.4 183.2 L 179.7 181.8 L 181.0 180.4 L 182.2 178.9 L 183.5 177.4 L 184.8 175.9 L 186.1 174.2 L 187.4 172.6 L 188.7 170.9 L 190.0 169.2 L 191.3 167.4 L 192.6 165.7 L 193.9 163.9 L 195.2 162.1 L 196.5 160.3 L 197.7 158.5 L 199.0 156.7 L 200.3 155.0 L 201.6 153.2 L 202.9 151.5 L 204.2 149.7 L 205.5 148.1 L 206.8 146.4 L 208.1 144.8 L 209.4 143.2 L 210.7 141.7 L 212.0 140.3 L 213.3 138.9 L 214.5 137.5 L 215.8 136.2 L 217.1 135.0 L 218.4 133.8 L 219.7 132.8 L 221.0 131.7 L 222.3 130.8 L 223.6 129.9 L 224.9 129.2 L 226.2 128.5 L 227.5 127.8 L 228.8 127.3 L 230.1 126.9 L 231.3 126.5 L 232.6 126.2 L 233.9 126.0 L 235.2 125.9 L 236.5 125.9 L 237.8 125.9 L 239.1 126.0 L 240.4 126.3 L 241.7 126.6 L 243.0 126.9 L 244.3 127.4 L 245.6 127.9 L 246.9 128.5 L 248.1 129.2 L 249.4 129.9 L 250.7 130.7 L 252.0 131.6 L 253.3 132.5 L 254.6 133.5 L 255.9 134.5 L 257.2 135.6 L 258.5 136.7 L 259.8 137.9 L 261.1 139.1 L 262.4 140.3 L 263.7 141.6 L 264.9 142.9 L 266.2 144.2 L 267.5 145.5 L 268.8 146.9 L 270.1 148.2 L 271.4 149.6 L 272.7 151.0 L 274.0 152.3 L 275.3 153.7 L 276.6 155.1 L 277.9 156.4 L 279.2 157.7 L 280.4 159.0 L 281.7 160.3 L 283.0 161.6 L 284.3 162.8 L 285.6 164.0 L 286.9 165.2 L 288.2 166.3 L 289.5 167.4 L 290.8 168.4 L 292.1 169.4 L 293.4 170.3 L 294.7 171.2 L 296.0 172.0 L 297.2 172.8 L 298.5 173.5 L 299.8 174.2 L 301.1 174.8 L 302.4 175.3 L 303.7 175.8 L 305.0 176.2" clip-path="url(#clipPath-1)"></path><path id="xprime_prefig-2" stroke="red" stroke-width="2" fill="none" d="M 47.9 55.0 L 49.1 56.0 L 50.4 57.4 L 51.7 58.9 L 53.0 60.8 L 54.3 62.9 L 55.6 65.2 L 56.9 67.8 L 58.2 70.6 L 59.5 73.6 L 60.8 76.8 L 62.1 80.2 L 63.4 83.8 L 64.7 87.5 L 65.9 91.4 L 67.2 95.5 L 68.5 99.7 L 69.8 104.0 L 71.1 108.4 L 72.4 112.9 L 73.7 117.5 L 75.0 122.2 L 76.3 126.9 L 77.6 131.6 L 78.9 136.4 L 80.2 141.2 L 81.5 146.0 L 82.7 150.7 L 84.0 155.4 L 85.3 160.1 L 86.6 164.8 L 87.9 169.3 L 89.2 173.8 L 90.5 178.2 L 91.8 182.5 L 93.1 186.6 L 94.4 190.7 L 95.7 194.5 L 97.0 198.3 L 98.3 201.9 L 99.5 205.3 L 100.8 208.6 L 102.1 211.6 L 103.4 214.5 L 104.7 217.2 L 106.0 219.7 L 107.3 221.9 L 108.6 224.0 L 109.9 225.8 L 111.2 227.5 L 112.5 228.9 L 113.8 230.1 L 115.1 231.1 L 116.3 231.8 L 117.6 232.3 L 118.9 232.6 L 120.2 232.7 L 121.5 232.5 L 122.8 232.2 L 124.1 231.6 L 125.4 230.8 L 126.7 229.8 L 128.0 228.5 L 129.3 227.1 L 130.6 225.5 L 131.8 223.7 L 133.1 221.7 L 134.4 219.6 L 135.7 217.3 L 137.0 214.8 L 138.3 212.2 L 139.6 209.5 L 140.9 206.6 L 142.2 203.6 L 143.5 200.5 L 144.8 197.3 L 146.1 194.0 L 147.4 190.6 L 148.6 187.1 L 149.9 183.6 L 151.2 180.1 L 152.5 176.5 L 153.8 172.8 L 155.1 169.2 L 156.4 165.5 L 157.7 161.9 L 159.0 158.2 L 160.3 154.6 L 161.6 151.0 L 162.9 147.5 L 164.2 144.0 L 165.4 140.6 L 166.7 137.2 L 168.0 133.9 L 169.3 130.7 L 170.6 127.7 L 171.9 124.7 L 173.2 121.8 L 174.5 119.1 L 175.8 116.5 L 177.1 114.0 L 178.4 111.6 L 179.7 109.4 L 181.0 107.4 L 182.2 105.5 L 183.5 103.7 L 184.8 102.2 L 186.1 100.7 L 187.4 99.5 L 188.7 98.4 L 190.0 97.5 L 191.3 96.8 L 192.6 96.2 L 193.9 95.8 L 195.2 95.6 L 196.5 95.5 L 197.7 95.7 L 199.0 96.0 L 200.3 96.4 L 201.6 97.0 L 202.9 97.8 L 204.2 98.7 L 205.5 99.8 L 206.8 101.0 L 208.1 102.4 L 209.4 103.9 L 210.7 105.6 L 212.0 107.3 L 213.3 109.2 L 214.5 111.2 L 215.8 113.3 L 217.1 115.5 L 218.4 117.8 L 219.7 120.2 L 221.0 122.7 L 222.3 125.2 L 223.6 127.8 L 224.9 130.4 L 226.2 133.1 L 227.5 135.9 L 228.8 138.6 L 230.1 141.4 L 231.3 144.2 L 232.6 147.0 L 233.9 149.8 L 235.2 152.6 L 236.5 155.4 L 237.8 158.1 L 239.1 160.8 L 240.4 163.5 L 241.7 166.1 L 243.0 168.7 L 244.3 171.2 L 245.6 173.6 L 246.9 176.0 L 248.1 178.2 L 249.4 180.4 L 250.7 182.5 L 252.0 184.5 L 253.3 186.4 L 254.6 188.2 L 255.9 189.9 L 257.2 191.5 L 258.5 192.9 L 259.8 194.3 L 261.1 195.5 L 262.4 196.5 L 263.7 197.5 L 264.9 198.3 L 266.2 199.0 L 267.5 199.6 L 268.8 200.0 L 270.1 200.3 L 271.4 200.5 L 272.7 200.5 L 274.0 200.4 L 275.3 200.2 L 276.6 199.9 L 277.9 199.4 L 279.2 198.8 L 280.4 198.1 L 281.7 197.2 L 283.0 196.3 L 284.3 195.2 L 285.6 194.1 L 286.9 192.8 L 288.2 191.5 L 289.5 190.0 L 290.8 188.5 L 292.1 186.9 L 293.4 185.2 L 294.7 183.4 L 296.0 181.6 L 297.2 179.7 L 298.5 177.8 L 299.8 175.8 L 301.1 173.8 L 302.4 171.7 L 303.7 169.6 L 305.0 167.5" clip-path="url(#clipPath-1)"></path><g transform="translate(301.0,9.0) translate(-72.0,-0.0) scale(0.9,0.9)">
+    <rect x="0" y="0" width="79.99199999999999" height="53.36" stroke="black" fill="white" fill-opacity="0.5"></rect>
+    <g id="legend-label-0_prefig-2" transform="translate(39.0,5.0)">
+      <g id="g-5_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="30.968px" height="18.096px" role="img" focusable="false" viewBox="0 -750 1711 1000" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-7-TEX-I-1D465_prefig-2" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+            <path id="MJX-7-TEX-N-2061_prefig-2" d=""></path>
+            <path id="MJX-7-TEX-N-28_prefig-2" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
+            <path id="MJX-7-TEX-I-1D461_prefig-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+            <path id="MJX-7-TEX-N-29_prefig-2" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="6" data-semantic-children="0,4" data-semantic-content="5,0" data-semantic-speech="x left parenthesis t right parenthesis">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="6" data-semantic-operator="appl" data-semantic-speech="x">
+                <use data-c="1D465" href="#MJX-7-TEX-I-1D465_prefig-2"></use>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="5" data-semantic-parent="6" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(572,0)">
+                <use data-c="2061" href="#MJX-7-TEX-N-2061_prefig-2"></use>
+              </g>
+              <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="4" data-semantic-children="2" data-semantic-content="1,3" data-semantic-parent="6" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(572,0)">
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="1" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                  <use data-c="28" href="#MJX-7-TEX-N-28_prefig-2"></use>
+                </g>
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="2" data-semantic-parent="4" data-semantic-speech="t" transform="translate(389,0)">
+                  <use data-c="1D461" href="#MJX-7-TEX-I-1D461_prefig-2"></use>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="3" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                  <use data-c="29" href="#MJX-7-TEX-N-29_prefig-2"></use>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <line stroke="blue" x1="29" y1="14.048" x2="5" y2="14.048" stroke-width="2"></line>
+    <g id="legend-label-1_prefig-2" transform="translate(39.0,30.1)">
+      <g id="g-6_prefig-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="35.992px" height="18.264px" role="img" focusable="false" viewBox="0 -759 1988.5 1009" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-8-TEX-I-1D465_prefig-2" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+            <path id="MJX-8-TEX-V-2032_prefig-2" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path>
+            <path id="MJX-8-TEX-N-2061_prefig-2" d=""></path>
+            <path id="MJX-8-TEX-N-28_prefig-2" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
+            <path id="MJX-8-TEX-I-1D461_prefig-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+            <path id="MJX-8-TEX-N-29_prefig-2" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="8" data-semantic-children="2,6" data-semantic-content="7,0" data-semantic-speech="x prime left parenthesis t right parenthesis">
+              <g data-mml-node="msup" data-semantic-type="superscript" data-semantic-role="simple function" data-semantic-id="2" data-semantic-children="0,1" data-semantic-parent="8" data-semantic-speech="x prime">
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="2" data-semantic-operator="appl" data-semantic-speech="x" data-semantic-prefix="Base">
+                  <use data-c="1D465" href="#MJX-8-TEX-I-1D465_prefig-2"></use>
+                </g>
+                <g data-mml-node="mo" transform="translate(605,363) scale(0.707)" data-semantic-type="punctuation" data-semantic-role="prime" data-semantic-id="1" data-semantic-parent="2" data-semantic-speech="prime" data-semantic-prefix="Exponent">
+                  <use data-c="2032" href="#MJX-8-TEX-V-2032_prefig-2"></use>
+                </g>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="7" data-semantic-parent="8" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(849.5,0)">
+                <use data-c="2061" href="#MJX-8-TEX-N-2061_prefig-2"></use>
+              </g>
+              <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="6" data-semantic-children="4" data-semantic-content="3,5" data-semantic-parent="8" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(849.5,0)">
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="3" data-semantic-parent="6" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                  <use data-c="28" href="#MJX-8-TEX-N-28_prefig-2"></use>
+                </g>
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="4" data-semantic-parent="6" data-semantic-speech="t" transform="translate(389,0)">
+                  <use data-c="1D461" href="#MJX-8-TEX-I-1D461_prefig-2"></use>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="5" data-semantic-parent="6" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                  <use data-c="29" href="#MJX-8-TEX-N-29_prefig-2"></use>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <line stroke="red" x1="29" y1="39.228" x2="5" y2="39.228" stroke-width="2"></line>
+  </g></svg><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="prefig-2-description"><div class="para" id="prefig-2-2-1">The graphs of a function <span class="process-math">\(x(t)\)</span> and its derivative <span class="process-math">\(x'(t)\)</span> are shown in a coordinate plane. Note that the slope of each point of the graph of <span class="process-math">\(x(t)\)</span> is equal to the vertical coordinate of the graph of <span class="process-math">\(x'(t)\)</span> at the same <span class="process-math">\(t\)</span>-value.<div class="autopermalink" data-description="Paragraph"><a href="#prefig-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph of a function and its derivative<div class="autopermalink" data-description="Figure 4.2.1"><a href="#prefig" title="Copy heading and permalink for Figure 4.2.1" aria-label="Copy heading and permalink for Figure 4.2.1">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="sec-prefigure-3"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" role="img" class="contained" aria-label="The graphs of a function x(t) and its derivative x’(t)."><title>The graphs of a function x(t) and its derivative x’(t).</title><desc><div xmlns="" class="para" id="sec-prefigure-3-2-2-1">The graphs of a function <span class="process-math">\(x(t)\)</span> and its derivative <span class="process-math">\(x'(t)\)</span> are shown in a coordinate plane. Note that the slope of each point of the graph of <span class="process-math">\(x(t)\)</span> is equal to the vertical coordinate of the graph of <span class="process-math">\(x'(t)\)</span> at the same <span class="process-math">\(t\)</span>-value.<div class="autopermalink" data-description="Paragraph"><a href="#sec-prefigure-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></desc><defs>
+    <clipPath id="clipPath-0_sec-prefigure-3-2">
+      <rect x="5.0" y="5.0" width="300.0" height="300.0"></rect>
+    </clipPath>
+    <clipPath id="clipPath-1_sec-prefigure-3-2">
+      <rect x="5.0" y="5.0" width="300.0" height="300.0"></rect>
+    </clipPath>
+  </defs><g id="grid-axes_sec-prefigure-3-2">
+    <g id="grid_sec-prefigure-3-2" stroke="#ccc" stroke-width="1">
+      <line id="line-0_sec-prefigure-3-2" x1="5.0" y1="305.0" x2="5.0" y2="5.0"></line>
+      <line id="line-1_sec-prefigure-3-2" x1="47.9" y1="305.0" x2="47.9" y2="5.0"></line>
+      <line id="line-2_sec-prefigure-3-2" x1="90.7" y1="305.0" x2="90.7" y2="5.0"></line>
+      <line id="line-3_sec-prefigure-3-2" x1="133.6" y1="305.0" x2="133.6" y2="5.0"></line>
+      <line id="line-4_sec-prefigure-3-2" x1="176.4" y1="305.0" x2="176.4" y2="5.0"></line>
+      <line id="line-5_sec-prefigure-3-2" x1="219.3" y1="305.0" x2="219.3" y2="5.0"></line>
+      <line id="line-6_sec-prefigure-3-2" x1="262.1" y1="305.0" x2="262.1" y2="5.0"></line>
+      <line id="line-7_sec-prefigure-3-2" x1="305.0" y1="305.0" x2="305.0" y2="5.0"></line>
+      <line id="line-8_sec-prefigure-3-2" x1="5.0" y1="305.0" x2="305.0" y2="305.0"></line>
+      <line id="line-9_sec-prefigure-3-2" x1="5.0" y1="255.0" x2="305.0" y2="255.0"></line>
+      <line id="line-10_sec-prefigure-3-2" x1="5.0" y1="205.0" x2="305.0" y2="205.0"></line>
+      <line id="line-11_sec-prefigure-3-2" x1="5.0" y1="155.0" x2="305.0" y2="155.0"></line>
+      <line id="line-12_sec-prefigure-3-2" x1="5.0" y1="105.0" x2="305.0" y2="105.0"></line>
+      <line id="line-13_sec-prefigure-3-2" x1="5.0" y1="55.0" x2="305.0" y2="55.0"></line>
+      <line id="line-14_sec-prefigure-3-2" x1="5.0" y1="5.0" x2="305.0" y2="5.0"></line>
+    </g>
+    <g id="axes_sec-prefigure-3-2" stroke="black" stroke-width="2">
+      <line id="line-15_sec-prefigure-3-2" x1="5.0" y1="155.0" x2="305.0" y2="155.0" stroke="black" stroke-width="2"></line>
+      <g>
+        <line id="line-16_sec-prefigure-3-2" x1="133.6" y1="158.0" x2="133.6" y2="152.0"></line>
+        <line id="line-17_sec-prefigure-3-2" x1="219.3" y1="158.0" x2="219.3" y2="152.0"></line>
+      </g>
+      <line id="line-18_sec-prefigure-3-2" x1="47.9" y1="305.0" x2="47.9" y2="5.0" stroke="black" stroke-width="2"></line>
+      <g>
+        <line id="line-19_sec-prefigure-3-2" x1="44.9" y1="255.0" x2="50.9" y2="255.0"></line>
+        <line id="line-20_sec-prefigure-3-2" x1="44.9" y1="55.0" x2="50.9" y2="55.0"></line>
+      </g>
+    </g>
+    <g id="label-0_sec-prefigure-3-2" transform="translate(301.0,151.0) translate(-6.5,-11.5)">
+      <g id="g-0_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -0.200px" width="6.536px" height="11.528px" role="img" focusable="false" viewBox="0 -626 361 637" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-2-TEX-I-1D461_sec-prefigure-3-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-speech="t">
+                <use data-c="1D461" href="#MJX-2-TEX-I-1D461_sec-prefigure-3-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-1_sec-prefigure-3-2" transform="translate(133.6,166.0) translate(-4.5,-0.0)">
+      <g id="g-1_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-3-TEX-N-32_sec-prefigure-3-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="2">
+                <use data-c="32" href="#MJX-3-TEX-N-32_sec-prefigure-3-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-2_sec-prefigure-3-2" transform="translate(219.3,166.0) translate(-4.5,-0.0)">
+      <g id="g-2_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.256px" role="img" focusable="false" viewBox="0 -677 500 677" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-4-TEX-N-34_sec-prefigure-3-2" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="4">
+                <use data-c="34" href="#MJX-4-TEX-N-34_sec-prefigure-3-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-3_sec-prefigure-3-2" transform="translate(36.9,255.0) translate(-15.1,-6.0)">
+      <g id="g-3_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="15.080px" height="12.056px" role="img" focusable="false" viewBox="0 -666 833 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-5-TEX-N-2D_sec-prefigure-3-2" d="M11 179V252H277V179H11Z"></path>
+            <path id="MJX-5-TEX-N-32_sec-prefigure-3-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="unknown" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="hyphen 2">
+                <use data-c="2D" href="#MJX-5-TEX-N-2D_sec-prefigure-3-2"></use>
+                <use data-c="32" href="#MJX-5-TEX-N-32_sec-prefigure-3-2" transform="translate(333,0)"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <g id="label-4_sec-prefigure-3-2" transform="translate(36.9,55.0) translate(-9.0,-6.0)">
+      <g id="g-4_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: 0.000px" width="9.048px" height="12.056px" role="img" focusable="false" viewBox="0 -666 500 666" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-6-TEX-N-32_sec-prefigure-3-2" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math">
+              <g data-mml-node="mtext" data-semantic-type="text" data-semantic-role="integer" data-semantic-font="normal" data-semantic-annotation="clearspeak:unit" data-semantic-id="0" data-semantic-speech="2">
+                <use data-c="32" href="#MJX-6-TEX-N-32_sec-prefigure-3-2"></use>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+  </g><path id="x_sec-prefigure-3-2" stroke="blue" stroke-width="2" fill="none" d="M 47.9 155.0 L 49.1 152.0 L 50.4 149.0 L 51.7 146.1 L 53.0 143.2 L 54.3 140.4 L 55.6 137.7 L 56.9 135.0 L 58.2 132.4 L 59.5 129.9 L 60.8 127.5 L 62.1 125.2 L 63.4 123.0 L 64.7 120.9 L 65.9 118.9 L 67.2 117.1 L 68.5 115.4 L 69.8 113.8 L 71.1 112.3 L 72.4 110.9 L 73.7 109.7 L 75.0 108.7 L 76.3 107.8 L 77.6 107.0 L 78.9 106.4 L 80.2 105.9 L 81.5 105.5 L 82.7 105.3 L 84.0 105.3 L 85.3 105.4 L 86.6 105.6 L 87.9 106.0 L 89.2 106.4 L 90.5 107.1 L 91.8 107.8 L 93.1 108.7 L 94.4 109.7 L 95.7 110.9 L 97.0 112.1 L 98.3 113.5 L 99.5 114.9 L 100.8 116.5 L 102.1 118.2 L 103.4 119.9 L 104.7 121.8 L 106.0 123.7 L 107.3 125.7 L 108.6 127.7 L 109.9 129.8 L 111.2 132.0 L 112.5 134.2 L 113.8 136.5 L 115.1 138.7 L 116.3 141.0 L 117.6 143.4 L 118.9 145.7 L 120.2 148.0 L 121.5 150.4 L 122.8 152.7 L 124.1 155.0 L 125.4 157.3 L 126.7 159.6 L 128.0 161.8 L 129.3 164.0 L 130.6 166.2 L 131.8 168.3 L 133.1 170.3 L 134.4 172.3 L 135.7 174.2 L 137.0 176.1 L 138.3 177.8 L 139.6 179.5 L 140.9 181.1 L 142.2 182.6 L 143.5 184.0 L 144.8 185.4 L 146.1 186.6 L 147.4 187.7 L 148.6 188.7 L 149.9 189.7 L 151.2 190.5 L 152.5 191.2 L 153.8 191.8 L 155.1 192.2 L 156.4 192.6 L 157.7 192.9 L 159.0 193.0 L 160.3 193.1 L 161.6 193.0 L 162.9 192.8 L 164.2 192.6 L 165.4 192.2 L 166.7 191.7 L 168.0 191.1 L 169.3 190.4 L 170.6 189.6 L 171.9 188.8 L 173.2 187.8 L 174.5 186.8 L 175.8 185.6 L 177.1 184.4 L 178.4 183.2 L 179.7 181.8 L 181.0 180.4 L 182.2 178.9 L 183.5 177.4 L 184.8 175.9 L 186.1 174.2 L 187.4 172.6 L 188.7 170.9 L 190.0 169.2 L 191.3 167.4 L 192.6 165.7 L 193.9 163.9 L 195.2 162.1 L 196.5 160.3 L 197.7 158.5 L 199.0 156.7 L 200.3 155.0 L 201.6 153.2 L 202.9 151.5 L 204.2 149.7 L 205.5 148.1 L 206.8 146.4 L 208.1 144.8 L 209.4 143.2 L 210.7 141.7 L 212.0 140.3 L 213.3 138.9 L 214.5 137.5 L 215.8 136.2 L 217.1 135.0 L 218.4 133.8 L 219.7 132.8 L 221.0 131.7 L 222.3 130.8 L 223.6 129.9 L 224.9 129.2 L 226.2 128.5 L 227.5 127.8 L 228.8 127.3 L 230.1 126.9 L 231.3 126.5 L 232.6 126.2 L 233.9 126.0 L 235.2 125.9 L 236.5 125.9 L 237.8 125.9 L 239.1 126.0 L 240.4 126.3 L 241.7 126.6 L 243.0 126.9 L 244.3 127.4 L 245.6 127.9 L 246.9 128.5 L 248.1 129.2 L 249.4 129.9 L 250.7 130.7 L 252.0 131.6 L 253.3 132.5 L 254.6 133.5 L 255.9 134.5 L 257.2 135.6 L 258.5 136.7 L 259.8 137.9 L 261.1 139.1 L 262.4 140.3 L 263.7 141.6 L 264.9 142.9 L 266.2 144.2 L 267.5 145.5 L 268.8 146.9 L 270.1 148.2 L 271.4 149.6 L 272.7 151.0 L 274.0 152.3 L 275.3 153.7 L 276.6 155.1 L 277.9 156.4 L 279.2 157.7 L 280.4 159.0 L 281.7 160.3 L 283.0 161.6 L 284.3 162.8 L 285.6 164.0 L 286.9 165.2 L 288.2 166.3 L 289.5 167.4 L 290.8 168.4 L 292.1 169.4 L 293.4 170.3 L 294.7 171.2 L 296.0 172.0 L 297.2 172.8 L 298.5 173.5 L 299.8 174.2 L 301.1 174.8 L 302.4 175.3 L 303.7 175.8 L 305.0 176.2" clip-path="url(#clipPath-1)"></path><path id="xprime_sec-prefigure-3-2" stroke="red" stroke-width="2" fill="none" d="M 47.9 55.0 L 49.1 56.0 L 50.4 57.4 L 51.7 58.9 L 53.0 60.8 L 54.3 62.9 L 55.6 65.2 L 56.9 67.8 L 58.2 70.6 L 59.5 73.6 L 60.8 76.8 L 62.1 80.2 L 63.4 83.8 L 64.7 87.5 L 65.9 91.4 L 67.2 95.5 L 68.5 99.7 L 69.8 104.0 L 71.1 108.4 L 72.4 112.9 L 73.7 117.5 L 75.0 122.2 L 76.3 126.9 L 77.6 131.6 L 78.9 136.4 L 80.2 141.2 L 81.5 146.0 L 82.7 150.7 L 84.0 155.4 L 85.3 160.1 L 86.6 164.8 L 87.9 169.3 L 89.2 173.8 L 90.5 178.2 L 91.8 182.5 L 93.1 186.6 L 94.4 190.7 L 95.7 194.5 L 97.0 198.3 L 98.3 201.9 L 99.5 205.3 L 100.8 208.6 L 102.1 211.6 L 103.4 214.5 L 104.7 217.2 L 106.0 219.7 L 107.3 221.9 L 108.6 224.0 L 109.9 225.8 L 111.2 227.5 L 112.5 228.9 L 113.8 230.1 L 115.1 231.1 L 116.3 231.8 L 117.6 232.3 L 118.9 232.6 L 120.2 232.7 L 121.5 232.5 L 122.8 232.2 L 124.1 231.6 L 125.4 230.8 L 126.7 229.8 L 128.0 228.5 L 129.3 227.1 L 130.6 225.5 L 131.8 223.7 L 133.1 221.7 L 134.4 219.6 L 135.7 217.3 L 137.0 214.8 L 138.3 212.2 L 139.6 209.5 L 140.9 206.6 L 142.2 203.6 L 143.5 200.5 L 144.8 197.3 L 146.1 194.0 L 147.4 190.6 L 148.6 187.1 L 149.9 183.6 L 151.2 180.1 L 152.5 176.5 L 153.8 172.8 L 155.1 169.2 L 156.4 165.5 L 157.7 161.9 L 159.0 158.2 L 160.3 154.6 L 161.6 151.0 L 162.9 147.5 L 164.2 144.0 L 165.4 140.6 L 166.7 137.2 L 168.0 133.9 L 169.3 130.7 L 170.6 127.7 L 171.9 124.7 L 173.2 121.8 L 174.5 119.1 L 175.8 116.5 L 177.1 114.0 L 178.4 111.6 L 179.7 109.4 L 181.0 107.4 L 182.2 105.5 L 183.5 103.7 L 184.8 102.2 L 186.1 100.7 L 187.4 99.5 L 188.7 98.4 L 190.0 97.5 L 191.3 96.8 L 192.6 96.2 L 193.9 95.8 L 195.2 95.6 L 196.5 95.5 L 197.7 95.7 L 199.0 96.0 L 200.3 96.4 L 201.6 97.0 L 202.9 97.8 L 204.2 98.7 L 205.5 99.8 L 206.8 101.0 L 208.1 102.4 L 209.4 103.9 L 210.7 105.6 L 212.0 107.3 L 213.3 109.2 L 214.5 111.2 L 215.8 113.3 L 217.1 115.5 L 218.4 117.8 L 219.7 120.2 L 221.0 122.7 L 222.3 125.2 L 223.6 127.8 L 224.9 130.4 L 226.2 133.1 L 227.5 135.9 L 228.8 138.6 L 230.1 141.4 L 231.3 144.2 L 232.6 147.0 L 233.9 149.8 L 235.2 152.6 L 236.5 155.4 L 237.8 158.1 L 239.1 160.8 L 240.4 163.5 L 241.7 166.1 L 243.0 168.7 L 244.3 171.2 L 245.6 173.6 L 246.9 176.0 L 248.1 178.2 L 249.4 180.4 L 250.7 182.5 L 252.0 184.5 L 253.3 186.4 L 254.6 188.2 L 255.9 189.9 L 257.2 191.5 L 258.5 192.9 L 259.8 194.3 L 261.1 195.5 L 262.4 196.5 L 263.7 197.5 L 264.9 198.3 L 266.2 199.0 L 267.5 199.6 L 268.8 200.0 L 270.1 200.3 L 271.4 200.5 L 272.7 200.5 L 274.0 200.4 L 275.3 200.2 L 276.6 199.9 L 277.9 199.4 L 279.2 198.8 L 280.4 198.1 L 281.7 197.2 L 283.0 196.3 L 284.3 195.2 L 285.6 194.1 L 286.9 192.8 L 288.2 191.5 L 289.5 190.0 L 290.8 188.5 L 292.1 186.9 L 293.4 185.2 L 294.7 183.4 L 296.0 181.6 L 297.2 179.7 L 298.5 177.8 L 299.8 175.8 L 301.1 173.8 L 302.4 171.7 L 303.7 169.6 L 305.0 167.5" clip-path="url(#clipPath-1)"></path><g transform="translate(301.0,9.0) translate(-72.0,-0.0) scale(0.9,0.9)">
+    <rect x="0" y="0" width="79.99199999999999" height="53.36" stroke="black" fill="white" fill-opacity="0.5"></rect>
+    <g id="legend-label-0_sec-prefigure-3-2" transform="translate(39.0,5.0)">
+      <g id="g-5_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="30.968px" height="18.096px" role="img" focusable="false" viewBox="0 -750 1711 1000" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-7-TEX-I-1D465_sec-prefigure-3-2" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+            <path id="MJX-7-TEX-N-2061_sec-prefigure-3-2" d=""></path>
+            <path id="MJX-7-TEX-N-28_sec-prefigure-3-2" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
+            <path id="MJX-7-TEX-I-1D461_sec-prefigure-3-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+            <path id="MJX-7-TEX-N-29_sec-prefigure-3-2" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="6" data-semantic-children="0,4" data-semantic-content="5,0" data-semantic-speech="x left parenthesis t right parenthesis">
+              <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="6" data-semantic-operator="appl" data-semantic-speech="x">
+                <use data-c="1D465" href="#MJX-7-TEX-I-1D465_sec-prefigure-3-2"></use>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="5" data-semantic-parent="6" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(572,0)">
+                <use data-c="2061" href="#MJX-7-TEX-N-2061_sec-prefigure-3-2"></use>
+              </g>
+              <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="4" data-semantic-children="2" data-semantic-content="1,3" data-semantic-parent="6" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(572,0)">
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="1" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                  <use data-c="28" href="#MJX-7-TEX-N-28_sec-prefigure-3-2"></use>
+                </g>
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="2" data-semantic-parent="4" data-semantic-speech="t" transform="translate(389,0)">
+                  <use data-c="1D461" href="#MJX-7-TEX-I-1D461_sec-prefigure-3-2"></use>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="3" data-semantic-parent="4" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                  <use data-c="29" href="#MJX-7-TEX-N-29_sec-prefigure-3-2"></use>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <line stroke="blue" x1="29" y1="14.048" x2="5" y2="14.048" stroke-width="2"></line>
+    <g id="legend-label-1_sec-prefigure-3-2" transform="translate(39.0,30.1)">
+      <g id="g-6_sec-prefigure-3-2">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: -4.528px" width="35.992px" height="18.264px" role="img" focusable="false" viewBox="0 -759 1988.5 1009" x="0.0" y="0.0">
+          <defs>
+            <path id="MJX-8-TEX-I-1D465_sec-prefigure-3-2" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path>
+            <path id="MJX-8-TEX-V-2032_sec-prefigure-3-2" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path>
+            <path id="MJX-8-TEX-N-2061_sec-prefigure-3-2" d=""></path>
+            <path id="MJX-8-TEX-N-28_sec-prefigure-3-2" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
+            <path id="MJX-8-TEX-I-1D461_sec-prefigure-3-2" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path>
+            <path id="MJX-8-TEX-N-29_sec-prefigure-3-2" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path>
+          </defs>
+          <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)">
+            <g data-mml-node="math" data-semantic-type="appl" data-semantic-role="simple function" data-semantic-annotation="clearspeak:simple" data-semantic-id="8" data-semantic-children="2,6" data-semantic-content="7,0" data-semantic-speech="x prime left parenthesis t right parenthesis">
+              <g data-mml-node="msup" data-semantic-type="superscript" data-semantic-role="simple function" data-semantic-id="2" data-semantic-children="0,1" data-semantic-parent="8" data-semantic-speech="x prime">
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="simple function" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="0" data-semantic-parent="2" data-semantic-operator="appl" data-semantic-speech="x" data-semantic-prefix="Base">
+                  <use data-c="1D465" href="#MJX-8-TEX-I-1D465_sec-prefigure-3-2"></use>
+                </g>
+                <g data-mml-node="mo" transform="translate(605,363) scale(0.707)" data-semantic-type="punctuation" data-semantic-role="prime" data-semantic-id="1" data-semantic-parent="2" data-semantic-speech="prime" data-semantic-prefix="Exponent">
+                  <use data-c="2032" href="#MJX-8-TEX-V-2032_sec-prefigure-3-2"></use>
+                </g>
+              </g>
+              <g data-mml-node="mo" data-semantic-type="punctuation" data-semantic-role="application" data-semantic-id="7" data-semantic-parent="8" data-semantic-added="true" data-semantic-operator="appl" data-semantic-speech="of" transform="translate(849.5,0)">
+                <use data-c="2061" href="#MJX-8-TEX-N-2061_sec-prefigure-3-2"></use>
+              </g>
+              <g data-mml-node="mrow" data-semantic-type="fenced" data-semantic-role="leftright" data-semantic-id="6" data-semantic-children="4" data-semantic-content="3,5" data-semantic-parent="8" data-semantic-speech="left parenthesis t right parenthesis" transform="translate(849.5,0)">
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="open" data-semantic-id="3" data-semantic-parent="6" data-semantic-operator="fenced" data-semantic-speech="left parenthesis">
+                  <use data-c="28" href="#MJX-8-TEX-N-28_sec-prefigure-3-2"></use>
+                </g>
+                <g data-mml-node="mi" data-semantic-type="identifier" data-semantic-role="latinletter" data-semantic-font="italic" data-semantic-annotation="clearspeak:simple" data-semantic-id="4" data-semantic-parent="6" data-semantic-speech="t" transform="translate(389,0)">
+                  <use data-c="1D461" href="#MJX-8-TEX-I-1D461_sec-prefigure-3-2"></use>
+                </g>
+                <g data-mml-node="mo" data-semantic-type="fence" data-semantic-role="close" data-semantic-id="5" data-semantic-parent="6" data-semantic-operator="fenced" data-semantic-speech="right parenthesis" transform="translate(750,0)">
+                  <use data-c="29" href="#MJX-8-TEX-N-29_sec-prefigure-3-2"></use>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </g>
+    </g>
+    <line stroke="red" x1="29" y1="39.228" x2="5" y2="39.228" stroke-width="2"></line>
+  </g></svg><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="sec-prefigure-3-2-description"><div class="para" id="sec-prefigure-3-2-2-1">The graphs of a function <span class="process-math">\(x(t)\)</span> and its derivative <span class="process-math">\(x'(t)\)</span> are shown in a coordinate plane. Note that the slope of each point of the graph of <span class="process-math">\(x(t)\)</span> is equal to the vertical coordinate of the graph of <span class="process-math">\(x'(t)\)</span> at the same <span class="process-math">\(t\)</span>-value.<div class="autopermalink" data-description="Paragraph"><a href="#sec-prefigure-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graph of a function and its derivative<div class="autopermalink" data-description="Figure 4.2.2"><a href="#sec-prefigure-3" title="Copy heading and permalink for Figure 4.2.2" aria-label="Copy heading and permalink for Figure 4.2.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.2: PreFigure Example"><a href="#sec-prefigure" title="Copy heading and permalink for Section 4.2: PreFigure Example" aria-label="Copy heading and permalink for Section 4.2: PreFigure Example">🔗</a></div></section><section class="section" id="sec-sageplot"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">SagePlot Examples</span>
+</h3>
+<figure class="figure figure-like" id="fig-sage2d"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/sageplot-example-diagram.svg" role="img" class="contained" alt="A parabola"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The parabola <span class="process-math">\(y=x^2\)</span> made by SageMath<div class="autopermalink" data-description="Figure 4.3.1"><a href="#fig-sage2d" title="Copy heading and permalink for Figure 4.3.1" aria-label="Copy heading and permalink for Figure 4.3.1">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="fig-sage3d"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><iframe width="480" height="480" src="generated/sageplot/sageplot3d-example-diagram.html"></iframe></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The paraboloid <span class="process-math">\(z=x^2+y^2\)</span> made by SageMath<div class="autopermalink" data-description="Figure 4.3.2"><a href="#fig-sage3d" title="Copy heading and permalink for Figure 4.3.2" aria-label="Copy heading and permalink for Figure 4.3.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.3: SagePlot Examples"><a href="#sec-sageplot" title="Copy heading and permalink for Section 4.3: SagePlot Examples" aria-label="Copy heading and permalink for Section 4.3: SagePlot Examples">🔗</a></div></section><section class="section" id="sec-asymptote"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Asymptote Example</span>
+</h3>
+<figure class="figure figure-like" id="fig-asymptote"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">
+<div class="asymptote-box" style="padding-top: 50.2204856696948%"><iframe src="generated/asymptote/cflag.html" class="asymptote" title="Image of a Canadian flag"></iframe></div>
+<div class="image-archive"><a href="generated/asymptote/cflag.asy">asy</a></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.4.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Canada<div class="autopermalink" data-description="Figure 4.4.1"><a href="#fig-asymptote" title="Copy heading and permalink for Figure 4.4.1" aria-label="Copy heading and permalink for Figure 4.4.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.4: Asymptote Example"><a href="#sec-asymptote" title="Copy heading and permalink for Section 4.4: Asymptote Example" aria-label="Copy heading and permalink for Section 4.4: Asymptote Example">🔗</a></div></section><section class="section" id="sec-webwork"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">WeBWorK Example</span>
+</h3>
+<details id="sec-webwork-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="My_Demo_Book/4-PreTeXt_features_that_require_generation/4_5-WeBWorK_Example/4_5_1.pg" data-documentID="changeme" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-webwork-2-1-1-1">Compute the sum of <span class="process-math">\({2}\)</span> and <span class="process-math">\({4}
+\text{:}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="extracted-webwork-2-1-1-2">
+<span class="process-math">\({2} + {4} =\)</span> <span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="extracted-webwork-2-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="extracted-webwork-2-1-2-1">Add <span class="process-math">\({2}\)</span> and <span class="process-math">\({4}\)</span> together.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-webwork-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.5.1.1"><a href="#extracted-webwork-2-1-2" title="Copy heading and permalink for Hint 4.5.1.1" aria-label="Copy heading and permalink for Hint 4.5.1.1">🔗</a></div>
+</div></details></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.5.1"><a href="#sec-webwork-2" title="Copy heading and permalink for Checkpoint 4.5.1" aria-label="Copy heading and permalink for Checkpoint 4.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.5: WeBWorK Example"><a href="#sec-webwork" title="Copy heading and permalink for Section 4.5: WeBWorK Example" aria-label="Copy heading and permalink for Section 4.5: WeBWorK Example">🔗</a></div></section><section class="section" id="sec-mom"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">MyOpenMath</span>
+</h3>
+<details id="sec-mom-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="introduction" id="sec-mom-2-1"><div class="para" id="sec-mom-2-1-1">Here is a problem from MyOpenMath.<div class="autopermalink" data-description="Paragraph"><a href="#sec-mom-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div id="momsec-mom-2-2wrap" style="width:100%;overflow:visible;position:relative"><iframe id="momsec-mom-2-2" style="position:absolute;z-index:1;object-fit: contain; width: 100%" frameborder="0" data-knowl-callback="sendResizeRequest" src="https://www.myopenmath.com/embedq2.php?id=2572&amp;frame_id=momsec-mom-2-2"></iframe></div>
+<div class="autopermalink" data-description="Checkpoint 4.6.1"><a href="#sec-mom-2" title="Copy heading and permalink for Checkpoint 4.6.1" aria-label="Copy heading and permalink for Checkpoint 4.6.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.6: MyOpenMath"><a href="#sec-mom" title="Copy heading and permalink for Section 4.6: MyOpenMath" aria-label="Copy heading and permalink for Section 4.6: MyOpenMath">🔗</a></div></section><section class="section" id="sec-youtube"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">YouTube Example</span>
+</h3>
+<div class="video-box" style="width: 100%;padding-top: 56.25%; margin-left: 0%; margin-right: 0%;"><iframe class="video" allowfullscreen="" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?&amp;modestbranding=1&amp;rel=0" id="sec-youtube-2"></iframe></div>
+<div class="autopermalink" data-description="Section 4.7: YouTube Example"><a href="#sec-youtube" title="Copy heading and permalink for Section 4.7: YouTube Example" aria-label="Copy heading and permalink for Section 4.7: YouTube Example">🔗</a></div></section><section class="section" id="sec-interactive"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Interactive Example</span>
+</h3>
+<figure class="figure figure-like" id="sec-interactive-2"><iframe id="interactive-infinity" width="360" height="360" src="interactive-infinity-if.html"></iframe><div class="instructions"><details id="interactive-infinity-2" class="solution-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Instructions<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4></summary><div class="solution-like knowl__content">
+<div class="para" id="interactive-infinity-2-1">Drag the sliders to change the pattern, and drag any of the four red corners to change the overall shape.<div class="autopermalink" data-description="Paragraph"><a href="#interactive-infinity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Instructions"><a href="#interactive-infinity-2" title="Copy heading and permalink for Instructions" aria-label="Copy heading and permalink for Instructions">🔗</a></div>
+</div></details></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Infinity, from the JSXGraph Showcase<div class="autopermalink" data-description="Figure 4.8.1"><a href="#sec-interactive-2" title="Copy heading and permalink for Figure 4.8.1" aria-label="Copy heading and permalink for Figure 4.8.1">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 4.8: Interactive Example"><a href="#sec-interactive" title="Copy heading and permalink for Section 4.8: Interactive Example" aria-label="Copy heading and permalink for Section 4.8: Interactive Example">🔗</a></div></section><section class="section" id="sec-codelens"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Codelens Example</span>
+</h3>
+<figure class="listing figure-like" id="sieve-python"><figcaption><span class="type">Listing</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.9.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Finding primes<div class="autopermalink" data-description="Listing 4.9.1: Finding primes"><a href="#sieve-python" title="Copy heading and permalink for Listing 4.9.1: Finding primes" aria-label="Copy heading and permalink for Listing 4.9.1: Finding primes">🔗</a></div></figcaption><div class="listing__contents"><div class="ptx-runestone-container"><div class="runestone codelens">
+<div class="cd_section" data-component="codelens" data-question_label=""><div class="pytutorVisualizer exercise-interactive" id="rs-sieve-codelens-python" data-params='{"embeddedMode": true, "lang": "python", "jumpToEnd": false}'></div></div>
+<script src="generated/trace/sieve-codelens-python.js"> </script>
+</div></div></div></figure><div class="autopermalink" data-description="Section 4.9: Codelens Example"><a href="#sec-codelens" title="Copy heading and permalink for Section 4.9: Codelens Example" aria-label="Copy heading and permalink for Section 4.9: Codelens Example">🔗</a></div></section><div class="autopermalink" data-description="Chapter 4: PreTeXt features that require generation"><a href="#ch-generate" title="Copy heading and permalink for Chapter 4: PreTeXt features that require generation" aria-label="Copy heading and permalink for Chapter 4: PreTeXt features that require generation">🔗</a></div></section><section class="backmatter" id="backmatter"><section class="solutions" id="backmatter-2"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selected Hints</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.3: My Exercises">
+<span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span><br><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions"><details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para">The hint.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.3.2.1"><a href="#ex-first-3-2" title="Copy heading and permalink for Hint 1.3.2.1" aria-label="Copy heading and permalink for Hint 1.3.2.1">🔗</a></div>
+</div></details></div></article><div class="autopermalink" data-description="Appendix A: Selected Hints"><a href="#backmatter-2" title="Copy heading and permalink for Appendix A: Selected Hints" aria-label="Copy heading and permalink for Appendix A: Selected Hints">🔗</a></div></section><section class="solutions" id="backmatter-3"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">B</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Selected Solutions</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 1.3: My Exercises">
+<span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My First Chapter</span><br><span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">My Exercises</span>
+</h4>
+<article class="exercise-like"><h5 class="heading"><span class="codenumber">1.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="solutions"><details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para">It is, but not a very good one.<div class="autopermalink" data-description="Paragraph"><a href="#ex-first-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3.1.1"><a href="#ex-first-2-3" title="Copy heading and permalink for Solution 1.3.1.1" aria-label="Copy heading and permalink for Solution 1.3.1.1">🔗</a></div>
+</div></details></div></article><div class="autopermalink" data-description="Appendix B: Selected Solutions"><a href="#backmatter-3" title="Copy heading and permalink for Appendix B: Selected Solutions" aria-label="Copy heading and permalink for Appendix B: Selected Solutions">🔗</a></div></section><section class="appendix" id="backmatter-4"><h3 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">C</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">List of Symbols</span>
+</h3>
+<table class="notation-list"><tr>
+<th>Symbol</th>
+<th>Description</th>
+<th>Location</th>
+</tr></table>
+<div class="autopermalink" data-description="Appendix C: List of Symbols"><a href="#backmatter-4" title="Copy heading and permalink for Appendix C: List of Symbols" aria-label="Copy heading and permalink for Appendix C: List of Symbols">🔗</a></div></section><section class="index" id="backmatter-5"><h3 class="heading hide-type">
+<span class="type">Index</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Index</span>
+</h3>
+<div class="indexletter" id="indexletter-t"><div class="indexitem">Testing<span class="indexknowl"> <a href="#sec-features-blocks-3" class="internal" title="Example 3.1.2">Example</a></span>
+</div></div>
+<div class="autopermalink" data-description="Index: Index"><a href="#backmatter-5" title="Copy heading and permalink for Index: Index" aria-label="Copy heading and permalink for Index: Index">🔗</a></div></section><section class="colophon" id="backmatter-6"><h3 class="heading hide-type">
+<span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
+</h3>
+<div class="para" id="backmatter-6-1">This book was authored in PreTeXt.<div class="autopermalink" data-description="Paragraph"><a href="#backmatter-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Colophon"><a href="#backmatter-6" title="Copy heading and permalink for Colophon" aria-label="Copy heading and permalink for Colophon">🔗</a></div></section><div class="autopermalink" data-description="Back Matter: Backmatter"><a href="#backmatter" title="Copy heading and permalink for Back Matter: Backmatter" aria-label="Copy heading and permalink for Back Matter: Backmatter">🔗</a></div></section><div class="autopermalink" data-description="Book: My Demo Book"><a href="#my-demo-book" title="Copy heading and permalink for Book: My Demo Book" aria-label="Copy heading and permalink for Book: My Demo Book">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<span class="previous-button button disabled"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></span><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+<script>var ptx_lunr_search_style = "textbook";
+var ptx_lunr_docs = [
+{
+  "id": "my-demo-book",
+  "level": "1",
+  "url": "#my-demo-book",
+  "type": "Book",
+  "number": "",
+  "title": "My Demo Book",
+  "body": "  My Demo Book  An demo of PreTeXt features     Me My department My school  My Website  copyright     For ...    I would like to thank...      About this book:     Not just that..  I still have more to say!          My First Chapter     This is the introduction to the chapter        Introduction to First Chapter   Intro to section, because we will have subsections.  Another paragraph of the introduction.    A subsection  Content of the subsection.  More content.    Another Subsection  Text with some math: only for some values of .    After the last subsection, you might have a conclusion.     Examples  Here is an example:    The statement of the example, since it will have a solution. What is the solution?    This is the solution.    Here is another example, but without a solution   This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.   Although the next things are not examples, they give examples of blocks that are not examples. First a theorem.   Theorem Title   This is the statement of the theorem.    And this is its proof.      A corollary that doesn't need a proof.    Perhaps at the end of the section, you want to add a note to the reader about how what you have fits into the larger scope of mathematics.   Larger Context  Comment to the reader here.   Of course, if you want more information, you might see .      My Exercises    Is this an exercise?    Yes.    It is, but not a very good one.      Another, with a hint.    The hint.          (No title)  Try adding your own content here! This chapter doesn't have sections.         Features   Environments and Blocks This is a paragraph. \\begin{definition} The definition of a definition. \\term{Defined term}. \\textbf{Bold text}. \\end{definition} \\begin{theorem} Theorem statement. \\end{theorem} \\begin{proof} Proof of theorem. \\end{proof} \\par Another paragraph.   Theorem statement.    Proof of theorem.      Testing  Statement of example    The solution. Another paragraph.   Now a figure.   A frog   A nice-looking frog with a longish description.           PreTeXt features that require generation   Here we demonstrate various kinds of assets.    LaTeX-Image Example   The graph made by TikZ   A 5-cycle       PreFigure Example   Graph of a function and its derivative     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)       The graphs of a function and its derivative are shown in a coordinate plane. Note that the slope of each point of the graph of is equal to the vertical coordinate of the graph of at the same -value.   The graphs of a function x(t) and its derivative x'(t).     Graph of a function and its derivative     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)       The graphs of a function and its derivative are shown in a coordinate plane. Note that the slope of each point of the graph of is equal to the vertical coordinate of the graph of at the same -value.   The graphs of a function x(t) and its derivative x'(t).      SagePlot Examples   The parabola made by SageMath   A parabola      The paraboloid made by SageMath   A paraboloid       Asymptote Example   Canada   Image of a Canadian flag       WeBWorK Example     Compute the sum of and     Add and together.                 MyOpenMath    Here is a problem from MyOpenMath.       YouTube Example     Interactive Example    Infinity, from the JSXGraph Showcase      Codelens Example   Finding primes   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)        Backmatter   Selected Hints    Selected Solutions    List of Symbols     Index     This book was authored in PreTeXt .    "
+},
+{
+  "id": "sec-first-examples-3",
+  "level": "2",
+  "url": "#sec-first-examples-3",
+  "type": "Example",
+  "number": "1.2.1",
+  "title": "",
+  "body": "  The statement of the example, since it will have a solution. What is the solution?    This is the solution.   "
+},
+{
+  "id": "sec-first-examples-5",
+  "level": "2",
+  "url": "#sec-first-examples-5",
+  "type": "Example",
+  "number": "1.2.2",
+  "title": "",
+  "body": " This is an example of an example without a solution (or hint or answer) so the paragraph doesn't need to be inside a statement tag.  "
+},
+{
+  "id": "thm-first-examples-theorem",
+  "level": "2",
+  "url": "#thm-first-examples-theorem",
+  "type": "Theorem",
+  "number": "1.2.3",
+  "title": "Theorem Title.",
+  "body": " Theorem Title   This is the statement of the theorem.    And this is its proof.   "
+},
+{
+  "id": "cor-first-examples-corollary",
+  "level": "2",
+  "url": "#cor-first-examples-corollary",
+  "type": "Corollary",
+  "number": "1.2.4",
+  "title": "",
+  "body": "  A corollary that doesn't need a proof.   "
+},
+{
+  "id": "remark-first-examples-context",
+  "level": "2",
+  "url": "#remark-first-examples-context",
+  "type": "Remark",
+  "number": "1.2.5",
+  "title": "Larger Context.",
+  "body": " Larger Context  Comment to the reader here.  "
+},
+{
+  "id": "ex-first-2",
+  "level": "2",
+  "url": "#ex-first-2",
+  "type": "Exercise",
+  "number": "1.3.1",
+  "title": "",
+  "body": "  Is this an exercise?    Yes.    It is, but not a very good one.   "
+},
+{
+  "id": "ex-first-3",
+  "level": "2",
+  "url": "#ex-first-3",
+  "type": "Exercise",
+  "number": "1.3.2",
+  "title": "",
+  "body": "  Another, with a hint.    The hint.   "
+},
+{
+  "id": "sec-features-blocks-2",
+  "level": "2",
+  "url": "#sec-features-blocks-2",
+  "type": "Theorem",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Theorem statement.    Proof of theorem.   "
+},
+{
+  "id": "sec-features-blocks-3",
+  "level": "2",
+  "url": "#sec-features-blocks-3",
+  "type": "Example",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Testing  Statement of example    The solution. Another paragraph.   "
+},
+{
+  "id": "sec-features-blocks-5",
+  "level": "2",
+  "url": "#sec-features-blocks-5",
+  "type": "Figure",
+  "number": "3.1.3",
+  "title": "",
+  "body": " A frog   A nice-looking frog with a longish description.   "
+},
+{
+  "id": "fig-tikz",
+  "level": "2",
+  "url": "#fig-tikz",
+  "type": "Figure",
+  "number": "4.1.1",
+  "title": "",
+  "body": " The graph made by TikZ   A 5-cycle    "
+},
+{
+  "id": "prefig",
+  "level": "2",
+  "url": "#prefig",
+  "type": "Figure",
+  "number": "4.2.1",
+  "title": "",
+  "body": " Graph of a function and its derivative     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)       The graphs of a function and its derivative are shown in a coordinate plane. Note that the slope of each point of the graph of is equal to the vertical coordinate of the graph of at the same -value.   The graphs of a function x(t) and its derivative x'(t).   "
+},
+{
+  "id": "sec-prefigure-3",
+  "level": "2",
+  "url": "#sec-prefigure-3",
+  "type": "Figure",
+  "number": "4.2.2",
+  "title": "",
+  "body": " Graph of a function and its derivative     f(t,y) = (y[1], -pi*y[0]-0.3*y[1])        x(t)  x'(t)       The graphs of a function and its derivative are shown in a coordinate plane. Note that the slope of each point of the graph of is equal to the vertical coordinate of the graph of at the same -value.   The graphs of a function x(t) and its derivative x'(t).   "
+},
+{
+  "id": "fig-sage2d",
+  "level": "2",
+  "url": "#fig-sage2d",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " The parabola made by SageMath   A parabola    "
+},
+{
+  "id": "fig-sage3d",
+  "level": "2",
+  "url": "#fig-sage3d",
+  "type": "Figure",
+  "number": "4.3.2",
+  "title": "",
+  "body": " The paraboloid made by SageMath   A paraboloid    "
+},
+{
+  "id": "fig-asymptote",
+  "level": "2",
+  "url": "#fig-asymptote",
+  "type": "Figure",
+  "number": "4.4.1",
+  "title": "",
+  "body": " Canada   Image of a Canadian flag    "
+},
+{
+  "id": "sec-webwork-2",
+  "level": "2",
+  "url": "#sec-webwork-2",
+  "type": "Checkpoint",
+  "number": "4.5.1",
+  "title": "",
+  "body": "   Compute the sum of and     Add and together.              "
+},
+{
+  "id": "sec-mom-2",
+  "level": "2",
+  "url": "#sec-mom-2",
+  "type": "Checkpoint",
+  "number": "4.6.1",
+  "title": "",
+  "body": "  Here is a problem from MyOpenMath.    "
+},
+{
+  "id": "sec-interactive-2",
+  "level": "2",
+  "url": "#sec-interactive-2",
+  "type": "Figure",
+  "number": "4.8.1",
+  "title": "",
+  "body": " Infinity, from the JSXGraph Showcase   "
+},
+{
+  "id": "sieve-python",
+  "level": "2",
+  "url": "#sieve-python",
+  "type": "Listing",
+  "number": "4.9.1",
+  "title": "Finding primes",
+  "body": " Finding primes   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)   "
+}
+]
+
+var ptx_lunr_idx = lunr(function () {
+  this.ref('id')
+  this.field('title')
+  this.field('body')
+  this.metadataWhitelist = ['position']
+
+  ptx_lunr_docs.forEach(function (doc) {
+    this.add(doc)
+  }, this)
+})
+</script>
+</body>
+</html>

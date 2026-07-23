@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="7492">
+<statement>
+<p>
+You wish to determine if there is a  linear correlation between the two variables at a significance level of <m>\displaystyle\alpha={0.10}</m>.
+You have the following bivariate data set.
+</p><tabular>     <row><cell>x</cell><cell>y</cell></row><row><cell>18</cell><cell>61.5</cell></row><row><cell>23.6</cell><cell>61.5</cell></row><row><cell>18.7</cell><cell>61.8</cell></row><row><cell>27.3</cell><cell>64.2</cell></row><row><cell>15.8</cell><cell>59.9</cell></row><row><cell>16.7</cell><cell>61.1</cell></row><row><cell>25.9</cell><cell>61.9</cell></row><row><cell>18.3</cell><cell>61.5</cell></row><row><cell>19.8</cell><cell>61.1</cell></row><row><cell>18.2</cell><cell>62</cell></row><row><cell>16.5</cell><cell>61.4</cell></row><row><cell>18.7</cell><cell>62</cell></row><row><cell>21.3</cell><cell>64.1</cell></row><row><cell>13.9</cell><cell>61.5</cell></row><row><cell>13.8</cell><cell>60.4</cell></row><row><cell>11.8</cell><cell>60.1</cell></row><row><cell>22.7</cell><cell>63.1</cell></row><row><cell>21</cell><cell>62.1</cell></row></tabular><p>
+download link provided here:  <url href="denied:data:text/csv;charset=UTF-8,%22x%22%2C%22y%22%0A18%2C61.5%0A23.6%2C61.5%0A18.7%2C61.8%0A27.3%2C64.2%0A15.8%2C59.9%0A16.7%2C61.1%0A25.9%2C61.9%0A18.3%2C61.5%0A19.8%2C61.1%0A18.2%2C62%0A16.5%2C61.4%0A18.7%2C62%0A21.3%2C64.1%0A13.9%2C61.5%0A13.8%2C60.4%0A11.8%2C60.1%0A22.7%2C63.1%0A21%2C62.1">Download CSV</url></p>
+<p>
+What is the correlation coefficient for this data set? </p>
+<p>
+       <em>r</em> = <fillin characters="10"/> </p>
+<p>
+(report answer accurate to at least 3 decimal places)</p>
+<p>
+To find the p-value for a correlation coefficient, you need to convert to a <em>t</em>-score:
+  <m>\displaystyle{t}={r}\cdot\sqrt{{\frac{{{n}-{2}}}{{{1}-{r}^{{2}}}}}}</m>
+This <em>t</em>-score is from a <em>t</em>-distribution with <m>\displaystyle{n}-{2}</m> degrees of freedom.</p>
+<p>
+What is the p-value for this correlation coefficient? </p>
+<p>
+       p-value = <fillin characters="12"/> </p>
+<p>
+(report answer accurate to at least 4 decimal places)</p>
+<p>
+Your final conclusion is that... </p>
+<p><ol style="list-style-type:upper-alpha"><li>There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.</li> 
+<li>There is insufficient sample evidence to support the claim the there is a  correlation between the two variables.</li> 
+</ol></p>
+
+
+</statement>
+<answer>
+<p><ul><li>0.73</li><li>0.0006</li><li>A: There is sufficient sample evidence to support the claim that there is a statistically significant  correlation between the two variables.</li></ul></p>
+</answer>
+
+</myopenmath>

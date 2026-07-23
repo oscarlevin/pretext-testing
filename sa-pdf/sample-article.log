@@ -1,0 +1,2995 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.3.14)  9 JUL 2026 10:57
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**sample-article.tex
+(./sample-article.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/snapshot/snapshot.sty
+Package: snapshot 2020/06/17 v2.14
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count279
+\Gm@cntv=\count280
+\c@Gm@tempcnt=\count281
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks18
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count282
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/xcolor/svgnam.def
+File: svgnam.def 2024/09/29 v3.02 Predefined colors according to SVG 1.1 (UK)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen159
+\ar@mcellbox=\box53
+\extrarowheight=\dimen160
+\NC@list=\toks19
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+\everycr=\toks20
+\minrowclearance=\skip53
+\rownum=\count283
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks21
+\pgfutil@tempdima=\dimen161
+\pgfutil@tempdimb=\dimen162
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box55
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks24
+))
+\pgf@x=\dimen163
+\pgf@y=\dimen164
+\pgf@xa=\dimen165
+\pgf@ya=\dimen166
+\pgf@xb=\dimen167
+\pgf@yb=\dimen168
+\pgf@xc=\dimen169
+\pgf@yc=\dimen170
+\pgf@xd=\dimen171
+\pgf@yd=\dimen172
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count284
+\c@pgf@countb=\count285
+\c@pgf@countc=\count286
+\c@pgf@countd=\count287
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
+\pgf@sys@id@count=\count288
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-xetex.def
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)
+\pgfsys@objnum=\count289
+))) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count290
+\pgfsyssoftpath@bigbuffer@items=\count291
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen173
+\pgfmath@count=\count292
+\pgfmath@box=\box56
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count293
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen174
+\pgf@picmaxx=\dimen175
+\pgf@picminy=\dimen176
+\pgf@picmaxy=\dimen177
+\pgf@pathminx=\dimen178
+\pgf@pathmaxx=\dimen179
+\pgf@pathminy=\dimen180
+\pgf@pathmaxy=\dimen181
+\pgf@xx=\dimen182
+\pgf@xy=\dimen183
+\pgf@yx=\dimen184
+\pgf@yy=\dimen185
+\pgf@zx=\dimen186
+\pgf@zy=\dimen187
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen188
+\pgf@path@lasty=\dimen189
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen190
+\pgf@shorten@start@additional=\dimen191
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box57
+\pgf@hbox=\box58
+\pgf@layerbox@main=\box59
+\pgf@picture@serial@count=\count294
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen192
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen193
+\pgf@pt@y=\dimen194
+\pgf@pt@temp=\dimen195
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen196
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen197
+\pgf@sys@shading@range@num=\count295
+\pgf@shadingcount=\count296
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box60
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box61
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen198
+\pgf@nodesepend=\dimen199
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen256
+\pgffor@skip=\dimen257
+\pgffor@stack=\toks31
+\pgffor@toks=\toks32
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count297
+\pgfplotmarksize=\dimen258
+)
+\tikz@lastx=\dimen259
+\tikz@lasty=\dimen260
+\tikz@lastxsaved=\dimen261
+\tikz@lastysaved=\dimen262
+\tikz@lastmovetox=\dimen263
+\tikz@lastmovetoy=\dimen264
+\tikzleveldistance=\dimen265
+\tikzsiblingdistance=\dimen266
+\tikz@figbox=\box62
+\tikz@figbox@bg=\box63
+\tikz@tempbox=\box64
+\tikz@tempbox@bg=\box65
+\tikztreelevel=\count298
+\tikznumberofchildren=\count299
+\tikznumberofcurrentchild=\count300
+\tikz@fig@count=\count301
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count302
+\pgfmatrixcurrentcolumn=\count303
+\pgf@matrix@numberofcolumns=\count304
+)
+\tikz@expandcount=\count305
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks33
+\verbatim@line=\toks34
+\verbatim@in@stream=\read3
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks35
+)
+\tcb@titlebox=\box66
+\tcb@upperbox=\box67
+\tcb@lowerbox=\box68
+\tcb@phantombox=\box69
+\c@tcbbreakpart=\count306
+\c@tcblayer=\count307
+\c@tcolorbox@number=\count308
+\l__tcobox_tmpa_box=\box70
+\l__tcobox_tmpa_dim=\dimen267
+\tcb@temp=\box71
+\tcb@temp=\box72
+\tcb@temp=\box73
+\tcb@temp=\box74
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box75
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box76
+\tcb@totalupperbox=\box77
+\tcb@totallowerbox=\box78
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
+\c@tcbrastercolumn=\count309
+\c@tcbrasterrow=\count310
+\c@tcbrasternum=\count311
+\c@tcbraster=\count312
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '6.9.0'
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/home/oscar/.TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count313
+\g__pdfannot_backend_int=\count314
+\g__pdfannot_backend_link_int=\count315
+))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+)
+\ptxnormalparindent=\skip54
+\ptxnormalparskip=\skip55
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/xstring/xstring.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count316
+\xs_countb=\count317
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/xelatex/xltxtra/xltxtra.sty
+Package: xltxtra 2018/12/31 v0.7 Improvements for the "XeLaTeX" format
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count318
+\l__fontspec_language_int=\count319
+\l__fontspec_strnum_int=\count320
+\l__fontspec_tmp_int=\count321
+\l__fontspec_tmpa_int=\count322
+\l__fontspec_tmpb_int=\count323
+\l__fontspec_tmpc_int=\count324
+\l__fontspec_em_int=\count325
+\l__fontspec_emdef_int=\count326
+\l__fontspec_strong_int=\count327
+\l__fontspec_strongdef_int=\count328
+\l__fontspec_tmpa_dim=\dimen268
+\l__fontspec_tmpb_dim=\dimen269
+\l__fontspec_tmpc_dim=\dimen270
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/realscripts/realscripts.sty
+Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscripts
+\subsupersep=\dimen271
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+\xl@everylogo=\toks36
+\xl@@everylogo=\toks37
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\l__xetex_show_hyphens_wrapping_box=\box79
+\l__xetex_show_hyphens_temp_box=\box80
+\l__xetex_show_hyphens_final_box=\box81
+\g__xetex_show_hyphens_word_box=\box82
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/inconsolata/zi4.sty
+Package: zi4 2019/05/17 v1.12
+ `inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+\XKV@tempb@toks=\toks40
+)
+\XKV@depth=\count329
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\zifour@ocount=\count330
+)
+
+Package fontspec Info: 
+(fontspec)             Font family 'Inconsolatazi4-Regular.otf(0)' created for
+(fontspec)             font 'Inconsolatazi4-Regular.otf' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace,BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[Inconsolatazi4-Regular.otf]/OT:script=latn;language=dflt;+ss01;+ss03;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[Inconsolatazi4-Bold.otf]/OT:script=latn;language=dflt;+ss01;+ss03;"
+
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+Package: polyglossia 2025/12/01 v2.9 Modern multilingual typesetting with XeLaTeX and LuaLaTeX
+\l_xpg_alias_keyvals_int=\count331
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
+File: gloss-latex.ldf polyglossia: module for default language
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/polyglossia/gloss-english.ldf
+File: gloss-english.ldf polyglossia: module for English
+
+
+Package polyglossia Warning: No hyphenation patterns were loaded for "US
+(polyglossia)                English Max"\MessageBreak I will use the standard
+(polyglossia)                patterns for US English instead
+
+\l@usenglishmax = a dialect from \language\l@english 
+)
+
+Package polyglossia Info: Default language is english
+
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+\MT@toks=\toks41
+\MT@tempbox=\box83
+\MT@count=\count332
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks42
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen272
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count333
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2026/03/01 v3.2d Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 443.
+LaTeX Info: Redefining \lslig on input line 451.
+\MT@outer@space=\skip56
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip57
+
+For additional information on amsmath, use the `?' option.
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks43
+\ex@=\dimen273
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen274
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count334
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count335
+\leftroot@=\count336
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count337
+\DOTSCASE@=\count338
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box84
+\strutbox@=\box85
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen275
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count339
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count340
+\dotsspace@=\muskip17
+\c@parentequation=\count341
+\dspbrk@lvl=\count342
+\tag@help=\toks44
+\row@=\count343
+\column@=\count344
+\maxfields@=\count345
+\andhelp@=\toks45
+\eqnshift@=\dimen276
+\alignsep@=\dimen277
+\tagshift@=\dimen278
+\tagwidth@=\dimen279
+\totwidth@=\dimen280
+\lineht@=\dimen281
+\@envbody=\toks46
+\multlinegap=\skip58
+\multlinetaggap=\skip59
+\mathdisplay@stack=\toks47
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsmath/amscd.sty
+Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
+\athelp@=\toks48
+\minaw@=\dimen282
+\bigaw@=\dimen283
+\minCDarrowwidth=\dimen284
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box86
+\beforetitleunit=\skip60
+\aftertitleunit=\skip61
+\ttl@plus=\dimen285
+\ttl@minus=\dimen286
+\ttl@toksa=\toks49
+\titlewidth=\dimen287
+\titlewidthlast=\dimen288
+\titlewidthfirst=\dimen289
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/titlesec/titleps.sty)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2025/01/04 v2.17 TOC entries
+\ttl@leftsep=\dimen290
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box87
+\UL@hyphenbox=\box88
+\UL@skip=\skip62
+\UL@hook=\toks50
+\UL@height=\dimen291
+\UL@pe=\count346
+\UL@pixel=\dimen292
+\ULC@box=\box89
+Package: ulem 2019/11/18
+\ULdepth=\dimen293
+)
+\ptxfillinmaxwidth=\skip63
+\ptxfillincontract=\skip64
+\ptxcharmaxwidth=\skip65
+\ptxcharminwidth=\skip66
+\ptxfillinheight=\skip67
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count347
+\l__siunitx_number_exponent_fixed_int=\count348
+\l__siunitx_number_min_decimal_int=\count349
+\l__siunitx_number_min_integer_int=\count350
+\l__siunitx_number_round_precision_int=\count351
+\l__siunitx_number_lower_threshold_int=\count352
+\l__siunitx_number_upper_threshold_int=\count353
+\l__siunitx_number_group_first_int=\count354
+\l__siunitx_number_group_size_int=\count355
+\l__siunitx_number_group_minimum_int=\count356
+\l__siunitx_angle_tmp_dim=\dimen294
+\l__siunitx_angle_marker_box=\box90
+\l__siunitx_angle_unit_box=\box91
+\l__siunitx_compound_count_int=\count357
+\l__siunitx_table_tmp_box=\box92
+\l__siunitx_table_tmp_dim=\dimen295
+\l__siunitx_table_column_width_dim=\dimen296
+\l__siunitx_table_integer_box=\box93
+\l__siunitx_table_decimal_box=\box94
+\l__siunitx_table_uncert_box=\box95
+\l__siunitx_table_before_box=\box96
+\l__siunitx_table_after_box=\box97
+\l__siunitx_table_before_dim=\dimen297
+\l__siunitx_table_carry_dim=\dimen298
+\l__siunitx_unit_tmp_int=\count358
+\l__siunitx_unit_position_int=\count359
+\l__siunitx_unit_total_int=\count360
+)
+PTX: discovered siunitx v3, >= 2021-05-17
+
+Package siunitx Warning: Option "math-micro" has been removed in this release.
+
+
+Package siunitx Warning: Option "text-micro" has been removed in this release.
+
+\ptxworkspacestrutwidth=\skip68
+\ptxOldarrayrulewidth=\skip69
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
+Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontawesome5/fontawesome5-utex-helper.sty
+Package: fontawesome5-utex-helper 2022/05/02 v5.15.4 uTeX helper for fontawesome5
+LaTeX Font Info:    Trying to load font information for TU+fontawesomefree on input line 69.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontawesome5/tufontawesomefree.fd)
+LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on input line 70.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fontawesome5/tufontawesomebrands.fd))) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count361
+\lst@gtempboxa=\box98
+\lst@token=\toks51
+\lst@length=\count362
+\lst@currlwidth=\dimen299
+\lst@column=\count363
+\lst@pos=\count364
+\lst@lostspace=\dimen300
+\lst@width=\dimen301
+\lst@newlines=\count365
+\lst@lineno=\count366
+\lst@maxwidth=\dimen302
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count367
+\lst@skipnumbers=\count368
+\lst@framebox=\box99
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count369
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count370
+\FV@InFile=\read4
+\FV@TabBox=\box100
+\c@FancyVerbLine=\count371
+\FV@StepNumber=\count372
+\FV@OutFile=\write4
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count373
+\mult@box=\box101
+\multicol@leftmargin=\dimen303
+\c@unbalance=\count374
+\c@collectmore=\count375
+\doublecol@number=\count376
+\multicoltolerance=\count377
+\multicolpretolerance=\count378
+\full@width=\dimen304
+\page@free=\dimen305
+\premulticols=\dimen306
+\postmulticols=\dimen307
+\multicolsep=\skip70
+\multicolbaselineskip=\skip71
+\partial@page=\box102
+\last@line=\box103
+\mc@boxedresult=\box104
+\maxbalancingoverflow=\dimen308
+\mult@rightbox=\box105
+\mult@grightbox=\box106
+\mult@firstbox=\box107
+\mult@gfirstbox=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\@tempa=\box138
+\@tempa=\box139
+\@tempa=\box140
+\@tempa=\box141
+\@tempa=\box142
+\@tempa=\box143
+\@tempa=\box144
+\c@minrows=\count379
+\c@columnbadness=\count380
+\c@finalcolumnbadness=\count381
+\last@try=\dimen309
+\multicolovershoot=\dimen310
+\multicolundershoot=\dimen311
+\mult@nat@firstbox=\box145
+\colbreak@box=\box146
+\mc@col@check@num=\count382
+\g__mc_curr_col_int=\count383
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2025/01/14 v2.16e rotated objects in LaTeX
+\c@r@tfl@t=\count384
+\rotFPtop=\skip72
+\rotFPbot=\skip73
+\rot@float@box=\box147
+\rot@mess@toks=\toks52
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip74
+\enit@outerparindent=\dimen312
+\enit@toks=\toks53
+\enit@inbox=\box148
+\enit@count@id=\count385
+\enitdp@description=\count386
+)
+\enitdp@referencelist=\count387
+\ptxdlititlewidth=\skip75
+\ptxdlimaxnarrowtitle=\skip76
+\ptxdlimaxmediumtitle=\skip77
+\ptxdlimaxwidetitle=\skip78
+\ptxegindent=\skip79
+\ptxexggap=\skip80
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/imakeidx/imakeidx.sty
+Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchronous mode
+)
+\sample-article@idxfile=\write5
+\openout5 = `sample-article.idx'.
+
+
+Writing index file sample-article.idx
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip81
+\LTright=\skip82
+\LTpre=\skip83
+\LTpost=\skip84
+\LTchunksize=\count388
+\LTcapwidth=\dimen313
+\LT@head=\box149
+\LT@firsthead=\box150
+\LT@foot=\box151
+\LT@lastfoot=\box152
+\LT@gbox=\box153
+\LT@cols=\count389
+\LT@rows=\count390
+\c@LT@tables=\count391
+\c@LT@chunks=\count392
+\LT@p@ftn=\toks54
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count393
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen314
+\Hy@linkcounter=\count394
+\Hy@pagecounter=\count395
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count396
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count397
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen315
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count398
+\Field@Width=\dimen316
+\Fld@charsize=\dimen317
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count399
+\c@Item=\count400
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2026-01-29 v7.01p Hyperref driver for XeTeX
+\pdfm@box=\box154
+\c@Hy@AnnotLevel=\count401
+\HyField@AnnotCount=\count402
+\Fld@listcount=\count403
+\c@bookmark@seq@number=\count404
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip85
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1174.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 1177.
+\c@tcb@cnt@block=\count405
+\c@tcb@cnt@project-distinct=\count406
+\c@tcb@cnt@subdisplay=\count407
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2025/08/14 v1.18.2 Data Visualization (1.18.2)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks55
+\t@pgfplots@tokb=\toks56
+\t@pgfplots@tokc=\toks57
+\pgfplots@tmpa=\dimen318
+\c@pgfplots@coordindex=\count408
+\c@pgfplots@scanlineindex=\count409
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfutil-common-lists.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count410
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count411
+\t@pgfplotstable@a=\toks58
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count412
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count413
+)))) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen319
+\pgfdecoratedremainingdistance=\dimen320
+\pgfdecoratedinputsegmentcompleteddistance=\dimen321
+\pgfdecoratedinputsegmentremainingdistance=\dimen322
+\pgf@decorate@distancetomove=\dimen323
+\pgf@decorate@repeatstate=\count414
+\pgfdecorationsegmentamplitude=\dimen324
+\pgfdecorationsegmentlength=\dimen325
+)
+\tikz@lib@dec@box=\box155
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count415
+\pgfplots@xmin@reg=\dimen326
+\pgfplots@xmax@reg=\dimen327
+\pgfplots@ymin@reg=\dimen328
+\pgfplots@ymax@reg=\dimen329
+\pgfplots@zmin@reg=\dimen330
+\pgfplots@zmax@reg=\dimen331
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/smartdiagram/smartdiagram.sty
+Package: smartdiagram 2016/12/23 v0.3b Automatic creation of smart diagrams from lists of items.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@layerbox@background=\box156
+\pgf@layerboxsaved@background=\box157
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+\pgf@layerbox@smart diagram arrow back=\box158
+\pgf@layerboxsaved@smart diagram arrow back=\box159
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.definitions.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.styles.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/smartdiagram/smartdiagramlibrarycore.commands.code.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\arrowsize=\dimen332
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2026/02/04{} The CircuiTikz circuit drawing package version 1.8.5
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowinset=\dimen333
+\pgfarrowlength=\dimen334
+\pgfarrowwidth=\dimen335
+\pgfarrowlinewidth=\dimen336
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgftransformnonlinearflatness=\dimen337
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@curvilinear@time@a=\dimen338
+\pgf@curvilinear@length@a=\dimen339
+\pgf@curvilinear@length@b=\dimen340
+\pgf@curvilinear@length@c=\dimen341
+\pgf@curvilinear@length@d=\dimen342
+)
+\pgf@arrows@the@rigidity=\dimen343
+)) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count416
+\pgf@circ@count@b=\count417
+\pgf@circ@count@c=\count418
+\pgf@circ@res@up=\dimen344
+\pgf@circ@res@down=\dimen345
+\pgf@circ@res@zero=\dimen346
+\pgf@circ@res@left=\dimen347
+\pgf@circ@res@right=\dimen348
+\pgf@circ@res@other=\dimen349
+\pgf@circ@res@step=\dimen350
+\pgf@circ@res@temp=\dimen351
+\pgf@circ@Rlen=\dimen352
+\pgf@circ@scaled@Rlen=\dimen353
+\pgfstartlinewidth=\dimen354
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex
+\ctikz@scratchbox=\box160
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex
+\ctikz@vif@count=\count419
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count420
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen355
+) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex) (/home/oscar/.TinyTeX/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex)) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/nicematrix/nicematrix.sty
+Package: nicematrix 2026/03/11 v7.8 Enhanced arrays with the help of PGF/TikZ
+\l__nicematrix_tmpc_dim=\dimen356
+\l__nicematrix_tmpd_dim=\dimen357
+\l__nicematrix_tmpc_int=\count421
+\g__nicematrix_env_int=\count422
+\l__nicematrix_the_array_box=\box161
+\g__nicematrix_NiceMatrixBlock_int=\count423
+\g__nicematrix_notes_caption_int=\count424
+\l__nicematrix_columns_width_dim=\dimen358
+\l__nicematrix_col_width_dim=\dimen359
+\g__nicematrix_row_total_int=\count425
+\g__nicematrix_col_total_int=\count426
+\g__nicematrix_last_row_node_int=\count427
+\l__nicematrix_key_nb_rows_int=\count428
+\g__nicematrix_blocks_wd_dim=\dimen360
+\g__nicematrix_blocks_ht_dim=\dimen361
+\g__nicematrix_blocks_dp_dim=\dimen362
+\l__nicematrix_width_dim=\dimen363
+\l__nicematrix_tabular_width_dim=\dimen364
+\l__nicematrix_rule_width_before_dim=\dimen365
+\l__nicematrix_rule_width_after_dim=\dimen366
+\l__nicematrix_old_iRow_int=\count429
+\l__nicematrix_old_jCol_int=\count430
+\l__nicematrix_X_columns_dim=\dimen367
+\l__nicematrix_x_initial_dim=\dimen368
+\l__nicematrix_y_initial_dim=\dimen369
+\l__nicematrix_x_final_dim=\dimen370
+\l__nicematrix_y_final_dim=\dimen371
+\g__nicematrix_dp_row_zero_dim=\dimen372
+\g__nicematrix_ht_row_zero_dim=\dimen373
+\g__nicematrix_ht_row_one_dim=\dimen374
+\g__nicematrix_dp_ante_last_row_dim=\dimen375
+\g__nicematrix_ht_last_row_dim=\dimen376
+\g__nicematrix_dp_last_row_dim=\dimen377
+\g__nicematrix_width_last_col_dim=\dimen378
+\g__nicematrix_width_first_col_dim=\dimen379
+\l__nicematrix_multiplicity_int=\count431
+\g__nicematrix_ddots_int=\count432
+\g__nicematrix_iddots_int=\count433
+\g__nicematrix_delta_x_one_dim=\dimen380
+\g__nicematrix_delta_y_one_dim=\dimen381
+\g__nicematrix_delta_x_two_dim=\dimen382
+\g__nicematrix_delta_y_two_dim=\dimen383
+\l__nicematrix_row_min_int=\count434
+\l__nicematrix_row_max_int=\count435
+\l__nicematrix_col_min_int=\count436
+\l__nicematrix_col_max_int=\count437
+\l__nicematrix_initial_i_int=\count438
+\l__nicematrix_initial_j_int=\count439
+\l__nicematrix_final_i_int=\count440
+\l__nicematrix_final_j_int=\count441
+\l__nicematrix_segment_start_int=\count442
+\l__nicematrix_segment_end_int=\count443
+\g__nicematrix_static_num_of_col_int=\count444
+\g__nicematrix_block_box_int=\count445
+\l__nicematrix_first_row_int=\count446
+\l__nicematrix_first_col_int=\count447
+\l__nicematrix_last_row_int=\count448
+\l__nicematrix_last_col_int=\count449
+\c@tabularnote=\count450
+\g__nicematrix_tabularnote_int=\count451
+\c@nicematrix_draft=\count452
+\l__nicematrix_xdots_inter_dim=\dimen384
+\l__nicematrix_xdots_shorten_start_dim=\dimen385
+\l__nicematrix_xdots_shorten_end_dim=\dimen386
+\l__nicematrix_xdots_radius_dim=\dimen387
+\l__nicematrix_brace_shift_dim=\dimen388
+\l__nicematrix_trees_line_width_dim=\dimen389
+\l__nicematrix_trees_rounded_corners_dim=\dimen390
+\l__nicematrix_tab_rounded_corners_dim=\dimen391
+\l__nicematrix_cell_space_top_limit_dim=\dimen392
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen393
+\l__nicematrix_left_margin_dim=\dimen394
+\l__nicematrix_right_margin_dim=\dimen395
+\l__nicematrix_extra_left_margin_dim=\dimen396
+\l__nicematrix_extra_right_margin_dim=\dimen397
+\c__nicematrix_max_l_dim=\dimen398
+\l__nicematrix_rounded_corners_dim=\dimen399
+\l__nicematrix_position_int=\count453
+\l__nicematrix_start_int=\count454
+\l__nicematrix_end_int=\count455
+\l__nicematrix_line_width_dim=\dimen400
+\l__nicematrix_offset_dim=\dimen401
+\l__nicematrix_submatrix_extra_height_dim=\dimen402
+\l__nicematrix_submatrix_left_xshift_dim=\dimen403
+\l__nicematrix_submatrix_right_xshift_dim=\dimen404
+\l__nicematrix_brace_yshift_dim=\dimen405
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/menukeys/menukeys.sty
+Package: menukeys 2022/07/01 v1.6.2 -- A package to format menus, paths and shortcuts
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box162
+)
+\tc@llx=\dimen406
+\tc@lly=\dimen407
+\tc@urx=\dimen408
+\tc@ury=\dimen409
+Package trimclip Info: Using driver 'tc-xetex.def'.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen410
+\adjbox@Height=\dimen411
+\adjbox@Depth=\dimen412
+\adjbox@Totalheight=\dimen413
+\adjbox@pwidth=\dimen414
+\adjbox@pheight=\dimen415
+\adjbox@pdepth=\dimen416
+\adjbox@ptotalheight=\dimen417
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\l__twmk_indris_int=\count456
+\c@tw@hyphen@char@num=\count457
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/xfrac/xfrac.sty
+Package: xfrac 2024-06-04 Split-level fractions
+\l__xfrac_slash_box=\box163
+\l__xfrac_tmp_box=\box164
+\l__xfrac_denominator_bot_sep_dim=\dimen418
+\l__xfrac_numerator_bot_sep_dim=\dimen419
+\l__xfrac_numerator_top_sep_dim=\dimen420
+\l__xfrac_slash_left_sep_dim=\dimen421
+\l__xfrac_slash_right_sep_dim=\dimen422
+\l__xfrac_slash_left_muskip=\muskip19
+\l__xfrac_slash_right_muskip=\muskip20
+
+LaTeX template Info: Declaring template type 'xfrac' taking 3 argument(s) on
+(template)           line 100.
+
+
+LaTeX template Info: Declaring instance 'cmr' of type xfrac on line 392.
+
+
+LaTeX template Info: Declaring instance 'cmss' of type xfrac on line 392.
+
+
+LaTeX template Info: Declaring instance 'cmtt' of type xfrac on line 392.
+
+)
+No file sample-article.aux.
+\openout1 = `sample-article.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 1533.
+LaTeX Font Info:    ... okay on input line 1533.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(137.14749pt, 340.0pt, 137.1475pt)
+* v-part:(T,H,B)=(57.81598pt, 650.43pt, 86.72401pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=340.0pt
+* \textheight=650.43pt
+* \oddsidemargin=64.8775pt
+* \evensidemargin=64.8775pt
+* \topmargin=-51.45401pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \check on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 1533.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 1533.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 1533.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 1533.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 1533.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 1533.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 1533.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 1533.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolatazi4-Regular.otf(0)/m/n on input line 1533.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 1533.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/Inconsolatazi4-Regular.otf(0)/b/n on input line 1533.
+LaTeX Encoding Info:    Undeclare text command \textquotesingle (encoding TU) on input line 1533.
+LaTeX Encoding Info:    Redeclaring text symbol \textquotesingle (encoding TS1) on input line 1533.
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
+LaTeX Info: Redefining \microtypecontext on input line 1533.
+Package microtype Info: Applying patch `item' on input line 1533.
+Package microtype Info: Applying patch `toc' on input line 1533.
+Package microtype Info: Applying patch `eqnum' on input line 1533.
+Package microtype Info: Applying patch `footnote' on input line 1533.
+Package microtype Info: Applying patch `verbatim' on input line 1533.
+LaTeX Info: Redefining \microtypesetup on input line 1533.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2026/02/26 v1.2 microtype config. file: Latin Modern Roman (RS)
+)
+\c@lstlisting=\count458
+Package hyperref Info: Link coloring ON on input line 1533.
+\@outlinefile=\write6
+\openout6 = `sample-article.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
+ on input line 1533.
+
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen423
+\c__nicematrix_innersep_middle_dim=\dimen424
+\c@tabularnotesi=\count459
+\enitdp@tabularnotes=\count460
+\c@tabularnotes*i=\count461
+\enitdp@tabularnotes*=\count462
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1538.
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1538.
+ (/home/oscar/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) (/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Inconsolatazi4-Regular.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+************************************************
+Section 1 Introduction
+************************************************
+************************************************
+Section 2 The Fundamental Theorem
+************************************************
+[1
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+Inconsolatazi4-Regular.otf(0) on input line 1585.
+LaTeX Font Info:    No file TS1Inconsolatazi4-Regular.otf(0).fd. on input line 1585.
+
+
+LaTeX Font Warning: Font shape `TS1/Inconsolatazi4-Regular.otf(0)/m/n' undefined
+(Font)              using `TS1/cmr/m/n' instead
+(Font)              for symbol `textquotesingle' on input line 1585.
+
+************************************************
+Section 3 Computing Integrals with Sage (\(\DOTSI \intop \ilimits@ \))
+************************************************
+\g__tcobox_out_iow=\write7
+\openout7 = `sample-article.listing'.
+
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing) [2]
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 3 undefined on input line 1690.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 3 undefined on input line 1690.
+
+\openout7 = `sample-article.listing'.
+
+(./sample-article.listing) [3]
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 4 undefined on input line 1704.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 4 undefined on input line 1704.
+
+\openout7 = `sample-article.listing'.
+
+(./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing
+
+LaTeX Font Warning: Font shape `TU/Inconsolatazi4-Regular.otf(0)/m/it' undefined
+(Font)              using `TU/Inconsolatazi4-Regular.otf(0)/m/n' instead on input line 1.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+) [4]
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+************************************************
+Section 4 An Interesting Corollary
+************************************************
+[5]
+
+LaTeX Warning: Reference `section-interesting-corollary' on page 6 undefined on input line 1778.
+
+************************************************
+Subsection 4.1 Second Version of \acronymintitle {FTC}
+************************************************
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 6 undefined on input line 1798.
+
+
+LaTeX Warning: Reference `theorem-FTC' on page 6 undefined on input line 1798.
+
+
+LaTeX Warning: Hyper reference `equation-use-FTC' on page 6 undefined on input line 1798.
+
+
+LaTeX Warning: Reference `equation-use-FTC' on page 6 undefined on input line 1798.
+
+
+LaTeX Warning: Hyper reference `equation-alternate-FTC' on page 6 undefined on input line 1818.
+
+
+LaTeX Warning: Reference `equation-alternate-FTC' on page 6 undefined on input line 1818.
+
+[6]
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+
+LaTeX Warning: Hyper reference `example-mysterious' on page 7 undefined on input line 1862.
+
+
+LaTeX Warning: Reference `example-mysterious' on page 7 undefined on input line 1862.
+
+[7]
+
+LaTeX Warning: Hyper reference `claim-with-tfae-cases' on page 8 undefined on input line 1919.
+
+
+LaTeX Warning: Reference `claim-with-tfae-cases' on page 8 undefined on input line 1919.
+
+
+LaTeX Warning: Hyper reference `claim-with-tfae-cases' on page 8 undefined on input line 1920.
+
+
+LaTeX Warning: Reference `claim-with-tfae-cases' on page 8 undefined on input line 1920.
+
+[8]
+
+LaTeX Warning: Hyper reference `another-claim-with-tfae-cases' on page 9 undefined on input line 1957.
+
+
+LaTeX Warning: Reference `another-claim-with-tfae-cases' on page 9 undefined on input line 1957.
+
+************************************************
+Subsection 4.2 A Pedagogical Note about Subsection~{\relax \ref *{subsection-second-FTC}}
+************************************************
+
+LaTeX Warning: Reference `subsection-second-FTC' on page 9 undefined on input line 1984.
+
+************************************************
+Subsubsection 4.2.1 Symbolic and Numerical Integrals
+************************************************
+[9]
+************************************************
+Subsubsection 4.2.2 Advice
+************************************************
+[10]
+Underfull \hbox (badness 5431) in paragraph at lines 2044--2046
+\TU/lmr/m/n/10 Other similar possibilities are \TU/Inconsolatazi4-Regular.otf(0)/m/it/10 <project>[]\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/it/10 <activity>[]\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/it/10 <task>[]\TU/lmr/m/n/10 , and
+ []
+
+
+LaTeX Warning: Hyper reference `rename-facility' on page 11 undefined on input line 2047.
+
+
+LaTeX Warning: Reference `rename-facility' on page 11 undefined on input line 2047.
+
+[11]
+
+LaTeX Font Warning: Font shape `TU/Inconsolatazi4-Regular.otf(0)/m/sl' undefined
+(Font)              using `TU/Inconsolatazi4-Regular.otf(0)/m/n' instead on input line 2089.
+
+[12] [13] [14] [15] [16]
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+************************************************
+Exercises 4.2.3 Exercises
+************************************************
+
+Underfull \hbox (badness 1509) in paragraph at lines 2279--2280
+[]\TU/lmr/m/n/10 This is a skinny
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2279--2280
+\TU/lmr/m/n/10 paragraph which
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2283--2284
+[]\TU/lmr/m/n/10 And another
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2283--2284
+\TU/lmr/m/n/10 skinny paragraph
+ []
+
+[17]
+************************************************
+Reading Questions 4.2.4 Reading Questions
+************************************************
+************************************************
+Glossary 4.2.5 Glossary
+************************************************
+
+LaTeX Warning: Hyper reference `foobar-defined' on page 18 undefined on input line 2331.
+
+************************************************
+Solutions 4.2.6 Solutions for This Subsection
+************************************************
+
+LaTeX Warning: Hyper reference `exercise-essay' on page 18 undefined on input line 2350.
+
+[18]
+
+LaTeX Warning: Hyper reference `inline-exercise' on page 19 undefined on input line 2356.
+
+
+LaTeX Warning: Hyper reference `section-interesting-corollary-5-3-9' on page 19 undefined on input line 2369.
+
+
+LaTeX Warning: Hyper reference `activity-with-hint-answer-solution' on page 19 undefined on input line 2373.
+
+
+LaTeX Warning: Hyper reference `exercise-structured' on page 19 undefined on input line 2381.
+
+[19]
+
+LaTeX Warning: Hyper reference `project-structured' on page 20 undefined on input line 2409.
+
+[20]
+
+LaTeX Warning: Hyper reference `section-interesting-corollary-5-3-21-3' on page 21 undefined on input line 2434.
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 2443--2444
+[]\TU/lmr/m/n/10 This is a skinny
+ []
+
+
+Underfull \hbox (badness 3826) in paragraph at lines 2443--2444
+\TU/lmr/m/n/10 be just 30% of the
+ []
+
+************************************************
+Subsection 4.3 Theorem-Like Environments
+************************************************
+
+LaTeX Warning: Hyper reference `definition-indefinite-integral' on page 21 undefined on input line 2467.
+
+
+LaTeX Warning: Reference `definition-indefinite-integral' on page 21 undefined on input line 2467.
+
+************************************************
+Subsection 4.4 Linking Sage Cells
+************************************************
+
+Overfull \hbox (19.0pt too wide) in paragraph at lines 2467--2475
+[]\TU/lmr/m/n/10 More precisely, \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <theorem>\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <corollary>\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <lemma>\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <algorithm>\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <proposition>\TU/lmr/m/n/10 ,
+ []
+
+[21]
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+************************************************
+Subsection 4.5 Hierarchy
+************************************************
+
+LaTeX Warning: Hyper reference `section-fundamental-theorem' on page 22 undefined on input line 2520.
+
+
+LaTeX Warning: Reference `section-fundamental-theorem' on page 22 undefined on input line 2520.
+
+
+LaTeX Warning: Hyper reference `section-sage-cells' on page 22 undefined on input line 2521.
+
+
+LaTeX Warning: Reference `section-sage-cells' on page 22 undefined on input line 2521.
+
+
+LaTeX Warning: Hyper reference `section-interesting-corollary' on page 22 undefined on input line 2522.
+
+
+LaTeX Warning: Reference `section-interesting-corollary' on page 22 undefined on input line 2522.
+
+[22]
+************************************************
+Subsection 4.6 Introductions and Conclusions
+************************************************
+************************************************
+Subsubsection 4.6.1 Test One
+************************************************
+************************************************
+Subsubsection 4.6.2 Test Two
+************************************************
+************************************************
+Reading Questions 4.6.2 What Did You Learn?
+************************************************
+[23]
+************************************************
+Exercises 4.6.2 Exercises
+************************************************
+************************************************
+Subsubsection 4.6.3 Test Three
+************************************************
+************************************************
+Subsection 4.7 Some Paragraph-Level Markup
+************************************************
+
+Overfull \hbox (30.33502pt too wide) in paragraph at lines 2648--2650
+[]\TU/lmr/m/n/10 We supply two provisional cross-references for testing purposes only: \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 [provisional
+ []
+
+
+Overfull \hbox (67.722pt too wide) in paragraph at lines 2648--2650
+\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 cross-reference: a first incomplete cross-reference]\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 [provisional cross-reference:
+ []
+
+[24]
+
+LaTeX Warning: Reference `section-interesting-corollary' on page 25 undefined on input line 2653.
+
+
+Overfull \hbox (5.89201pt too wide) in paragraph at lines 2653--2664
+[]\TU/lmr/m/n/10 This is a cross-reference to one of the outcomes, forced to use the \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 type-global
+ []
+
+************************************************
+Section 5 Some Facts and Figures
+************************************************
+
+LaTeX Warning: Hyper reference `figure-function-derivative' on page 25 undefined on input line 2695.
+
+
+LaTeX Warning: Reference `figure-function-derivative' on page 25 undefined on input line 2695.
+
+File: external/images/cubic-function.png Graphic file (type bmp)
+<external/images/cubic-function.png>
+[25]
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 26 might be wrong on input line 2730.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 2734--2735
+[]\TU/lmr/m/n/10 Vivamus eu commodo est,
+ []
+
+[27]
+************************************************
+Section 6 Some Advanced Ideas
+************************************************
+
+LaTeX Warning: Hyper reference `corollary-FTC-derivative' on page 28 undefined on input line 2775.
+
+
+LaTeX Warning: Reference `corollary-FTC-derivative' on page 28 undefined on input line 2775.
+
+
+LaTeX Warning: Hyper reference `corollary-FTC-derivative' on page 28 undefined on input line 2775.
+
+
+LaTeX Warning: Reference `corollary-FTC-derivative' on page 28 undefined on input line 2775.
+
+[28]
+************************************************
+Section 7 Mathematics
+************************************************
+************************************************
+Subsection 7.1 Basic Mathematics
+************************************************
+[29]
+************************************************
+Subsection 7.2 Displayed Mathematics
+************************************************
+[30]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Inconsolatazi4-Regular.otf' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [31]
+Overfull \hbox (37.08327pt too wide) detected at line 2945
+[][][][] \OML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^M\OT1/cmr/m/n/10 ) = [][](0) + [] [] \OMS/cmsy/m/n/10 < [] ^^@ [][]\OT1/cmr/m/n/10 (0) [] \OML/cmm/m/it/10 ^^Y[]
+ []
+
+[32] [33] [34] [35]
+************************************************
+Subsection 7.3 \LaTeX {} Packages and MathJax Extensions
+************************************************
+************************************************
+Subsection 7.4 Advanced Mathematics
+************************************************
+[36]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 3156.
+
+
+LaTeX Warning: Hyper reference `corollary-FTC-derivative' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Reference `corollary-FTC-derivative' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `theorem-number-01' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `corollary-FTC-derivative' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Reference `corollary-FTC-derivative' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `theorem-number-01' on page 37 undefined on input line 3168.
+
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 37 undefined on input line 3174.
+
+
+LaTeX Warning: Reference `theorem-FTC' on page 37 undefined on input line 3174.
+
+
+LaTeX Warning: Hyper reference `definition-indefinite-integral' on page 37 undefined on input line 3176.
+
+
+LaTeX Warning: Reference `definition-indefinite-integral' on page 37 undefined on input line 3176.
+
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 37 undefined on input line 3178.
+
+
+LaTeX Warning: Reference `theorem-FTC' on page 37 undefined on input line 3178.
+
+
+LaTeX Warning: Hyper reference `theorem-FTC' on page 37 undefined on input line 3181.
+
+
+LaTeX Warning: Reference `theorem-FTC' on page 37 undefined on input line 3181.
+
+************************************************
+Subsection 7.5 Numbered Equations
+************************************************
+[37]
+************************************************
+Subsection 7.6 Local Tags on Equations
+************************************************
+
+LaTeX Warning: Hyper reference `equation-local-star' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `equation-local-star' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Hyper reference `equation-local-dagger' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `equation-local-dagger' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Hyper reference `equation-local-daggerdbl' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `equation-local-daggerdbl' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Hyper reference `equation-local-hash' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `equation-local-hash' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Hyper reference `equation-local-maltese' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `equation-local-maltese' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Hyper reference `section-cross-referencing' on page 38 undefined on input line 3234.
+
+
+LaTeX Warning: Reference `section-cross-referencing' on page 38 undefined on input line 3234.
+
+[38]
+
+LaTeX Warning: Hyper reference `equation-tag-on-md' on page 39 undefined on input line 3240.
+
+
+LaTeX Warning: Reference `equation-tag-on-md' on page 39 undefined on input line 3240.
+
+************************************************
+Subsection 7.7 Commutative Diagrams
+************************************************
+************************************************
+Subsection 7.8 Line-Breaking after Mathematics
+************************************************
+************************************************
+Subsection 7.9 Fonts and Mathematics
+************************************************
+[39]
+************************************************
+Subsection 7.10 Special Characters in Text Mode
+************************************************
+
+Overfull \hbox (9.604pt too wide) in paragraph at lines 3315--3316
+\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 textcomp \TU/lmr/m/n/10 package (\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 \textasciitilde\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 \textasciicircum\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 \textbackslash\TU/lmr/m/n/10 ) which
+ []
+
+
+LaTeX Warning: Hyper reference `equation-local-hash' on page 40 undefined on input line 3330.
+
+
+LaTeX Warning: Reference `equation-local-hash' on page 40 undefined on input line 3330.
+
+************************************************
+Subsection 7.11 Miscellaneous
+************************************************
+************************************************
+Subsection 7.12 Wide and Narrow Displays
+************************************************
+[40]
+Overfull \hbox (46.53659pt too wide) detected at line 3381
+[]
+ []
+
+
+Overfull \hbox (46.53659pt too wide) detected at line 3388
+[]
+ []
+
+************************************************
+Section 8 Grouping Samples
+************************************************
+[41]
+************************************************
+Subsection 8.1 Remark-like Blocks
+************************************************
+************************************************
+Subsection 8.2 Example-like Blocks
+************************************************
+************************************************
+Subsection 8.3 Theorem-like Blocks
+************************************************
+[42]
+************************************************
+Subsection 8.4 Axiom-like Blocks
+************************************************
+************************************************
+Subsection 8.5 Definition-like Blocks
+************************************************
+************************************************
+Subsection 8.6 Aside-like Blocks
+************************************************
+************************************************
+Subsection 8.7 Computation-like Blocks
+************************************************
+************************************************
+Subsection 8.8 Project-like Blocks
+************************************************
+************************************************
+Subsection 8.9 Miscellaneous Blocks
+************************************************
+[43]
+************************************************
+Section 9 Entering Text in Paragraphs, Titles, Captions
+************************************************
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 44 undefined on input line 3693.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 44 undefined on input line 3693.
+
+************************************************
+Subsection 9.1 Special \initialismintitle {XML} characters
+************************************************
+[44]
+************************************************
+Subsection 9.2 Quotations
+************************************************
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 3734--3736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3742--3745
+
+ []
+
+
+LaTeX Warning: Hyper reference `section-poetry' on page 46 undefined on input line 3747.
+
+
+LaTeX Warning: Reference `section-poetry' on page 46 undefined on input line 3747.
+
+[46]
+Overfull \hbox (1.51239pt too wide) in paragraph at lines 3769--3771
+[] [] \TU/lmr/bx/n/10 French (France).[] \TU/lmr/m/n/10 Primary only: «La liberté commence où l’ignorance finit.»
+ []
+
+************************************************
+Subsection 9.3 Groupings
+************************************************
+************************************************
+Subsection 9.4 Characters, Symbols, and Constructions
+************************************************
+[47]
+Overfull \hbox (16.14403pt too wide) in paragraph at lines 3806--3807
+\TU/lmr/m/n/10 characters, as a consequence of naïveté. So you might see \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <dollar/>\TU/lmr/m/n/10 , \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <ampersand/>\TU/lmr/m/n/10 ,
+ []
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (0.13002pt too wide) in paragraph at lines 3812--3813
+[]\TU/lmr/m/n/10 There are a few common abbreviations of Latin phrases that can be achieved
+ []
+
+************************************************
+Subsection 9.5 Currency
+************************************************
+Missing character: There is no ₲ (U+20B2) in font [lmroman10-regular]:mapping=tex-text;!
+[48]
+************************************************
+Subsection 9.6 Icons in Text
+************************************************
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/microtype/mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
+) [49]
+************************************************
+Subsection 9.7 Keyboard Keys
+************************************************
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+LaTeX Warning: Hyper reference `named-keyboard-keys' on page 50 undefined on input line 3926.
+
+
+LaTeX Warning: Reference `named-keyboard-keys' on page 50 undefined on input line 3926.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 3953.
+(/home/oscar/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmss.fd
+File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (92.31564pt too wide) in paragraph at lines 3950--3957
+ [][] 
+ []
+
+
+Overfull \hbox (92.31564pt too wide) in paragraph at lines 3961--3968
+ [][] 
+ []
+
+************************************************
+Subsection 9.8 URLs, such as \texttt {http://example.com}
+************************************************
+[50]
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 51 undefined on input line 3981.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 51 undefined on input line 3981.
+
+
+Overfull \hbox (18.9739pt too wide) in paragraph at lines 3981--3982
+[]\TU/lmr/m/n/10 A long \TU/lmr/m/sc/10 url \TU/lmr/m/n/10 for testing: [][]$[][][] [] [][][] [] [][][] [] [][][][][][] [] [][][][][][][][][][][][] [] [][][][][][][][] [] [][][][] [] [][][][][][][][]$[][].
+ []
+
+
+Overfull \hbox (83.43001pt too wide) in paragraph at lines 3993--3994
+[]\TU/lmr/m/n/10 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%-
+ []
+
+
+Overfull \hbox (152.0271pt too wide) in paragraph at lines 3995--3996
+[]\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%-._~:/%5B%5D@!$&\TS1/Inconsolatazi4-Regular.otf(0)/m/n/10 '\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 ()*+,;=#? 
+ []
+
+
+Overfull \hbox (78.775pt too wide) in paragraph at lines 3997--3998
+[][][]$[][][][] [] [] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Overfull \hbox (47.275pt too wide) in paragraph at lines 3999--4000
+[][][]$[][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Overfull \hbox (9.15495pt too wide) in paragraph at lines 4003--4004
+\TU/lmr/m/n/10 Line-breaking in L[]T[]X/PDF output is specialized, using path separators (slashes)
+ []
+
+
+Overfull \hbox (1.37503pt too wide) in paragraph at lines 4003--4004
+\TU/lmr/m/n/10 as candidates for splitting across lines: [][]$[][][][] [] [] [] [][][][][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] []
+ []
+
+
+Overfull \hbox (28.1pt too wide) in paragraph at lines 4003--4004
+[][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][] [] [][][][][][] []
+ []
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 4003--4004
+[][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] []
+ []
+
+
+Overfull \hbox (5.6pt too wide) in paragraph at lines 4003--4004
+[][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][] []
+ []
+
+
+Overfull \hbox (43.17502pt too wide) in paragraph at lines 4005--4005
+[][][][]$[][][][] [] [] [] [][][][][][][] [] [][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 4005--4005
+[][]\TU/lmr/m/n/8 And if you do provide a link like [][]Carleson’s Theorem[][] in a footnote you
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 4005--4005
+\TU/lmr/m/n/8 should see an easy-to-read parenthetical version in some output formats, such as
+ []
+
+************************************************
+Subsection 9.9 Biological Names
+************************************************
+[51]
+************************************************
+Subsection 9.10 Verbatim in titles, \texttt {\textbackslash {}a\&b\#c\%d\textasciitilde {}e\{f\}g\$h\_i\textasciicircum {}j}, OK
+************************************************
+************************************************
+Subsection 9.11 Special Situations
+************************************************
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 52 undefined on input line 4037.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 52 undefined on input line 4037.
+
+\openout7 = `sample-article.listing'.
+
+(./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing)
+\openout7 = `sample-article.listing'.
+
+ (./sample-article.listing) [52]
+
+LaTeX Warning: Hyper reference `subsection-xml-escape' on page 53 undefined on input line 4054.
+
+
+LaTeX Warning: Reference `subsection-xml-escape' on page 53 undefined on input line 4054.
+
+************************************************
+Subsection 9.12 Jupyter Notebook, Markdown, MathJax, Delimiters
+************************************************
+************************************************
+Subsection 9.13 \LaTeX {} Characters, Ligatures, and More
+************************************************
+[53]
+************************************************
+Subsection 9.14 \initialismintitle {HTML} and accidental mathematics
+************************************************
+
+Overfull \hbox (15.27pt too wide) in paragraph at lines 4107--4115
+[]\TU/lmr/m/n/10 A/test/of/some/short/words/that/go/off/the/end/of/a/line/A/test/of/some/
+ []
+
+
+Overfull \hbox (7.84999pt too wide) in paragraph at lines 4107--4115
+\TU/lmr/m/n/10 short/words/that/go/off/the/end/of/a/line/A/test/of/some/short/words/that/
+ []
+
+
+Overfull \hbox (10.18pt too wide) in paragraph at lines 4107--4115
+\TU/lmr/m/n/10 go/off/the/end/of/a/line/A/test/of/some/short/words/that/go/off/the/end/of/
+ []
+
+************************************************
+Section 10 Graphics
+************************************************
+[54]
+************************************************
+Subsection 10.1 Images from External Sources
+************************************************
+
+LaTeX Warning: Hyper reference `figure-function-derivative' on page 55 undefined on input line 4146.
+
+
+LaTeX Warning: Reference `figure-function-derivative' on page 55 undefined on input line 4146.
+
+File: external/images/nz-landscape.jpg Graphic file (type bmp)
+<external/images/nz-landscape.jpg>
+File: external/images/complete-graph.pdf Graphic file (type pdf)
+<use external/images/complete-graph.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4166--4167
+[]\TU/lmr/m/n/10 A paragraph
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4166--4167
+\TU/lmr/m/n/10 interior to a
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 4170--4171
+\TU/lmr/m/n/10 a one-panel warn-
+ []
+
+[55]
+************************************************
+Subsection 10.2 PreFigure
+************************************************
+[56]
+File: generated/prefigure/prefigure-diffeq.pdf Graphic file (type pdf)
+<use generated/prefigure/prefigure-diffeq.pdf>
+File: generated/prefigure/prefigure-projection.pdf Graphic file (type pdf)
+<use generated/prefigure/prefigure-projection.pdf>
+File: generated/prefigure/prefigure-tangent.pdf Graphic file (type pdf)
+<use generated/prefigure/prefigure-tangent.pdf>
+ [57]
+File: generated/prefigure/prefigure-fibonacci-a.pdf Graphic file (type pdf)
+<use generated/prefigure/prefigure-fibonacci-a.pdf>
+File: generated/prefigure/prefigure-fibonacci-b.pdf Graphic file (type pdf)
+<use generated/prefigure/prefigure-fibonacci-b.pdf>
+File: external/tactile/prefigure-diffeq.png Graphic file (type bmp)
+<external/tactile/prefigure-diffeq.png>
+
+************************************************
+Subsection 10.3 \LaTeX {} images
+************************************************
+[58] [59]
+Overfull \hbox (4.21004pt too wide) in paragraph at lines 4406--4449
+[]\TU/lmr/m/n/10 The pgfplots package was included in \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 docinfo/latex-image-preamble\TU/lmr/m/n/10 . Here,
+ []
+
+[60]
+PGFPlots: reading {data/dataplot/hodgkin-huxley-data.dat}
+File: data/attack/shark.png Graphic file (type bmp)
+<data/attack/shark.png>
+File: data/attack/swimmer.png Graphic file (type bmp)
+<data/attack/swimmer.png>
+ [61]
+Overfull \hbox (8.5689pt too wide) in paragraph at lines 4485--4503
+[]\TU/lmr/m/n/10 A Cartesian plot might benefit from having a \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <description> \TU/lmr/m/n/10 with a \TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 <tabular>
+ []
+
+\g__nicematrix_max_cell_width_dim=\dimen425
+\c@iRow=\count463
+\c@jCol=\count464
+\l__nicematrix_cell_box=\box165
+\l__nicematrix_left_delim_dim=\dimen426
+\l__nicematrix_right_delim_dim=\dimen427
+[62]
+************************************************
+Subsection 10.4 Asymptote, 2D
+************************************************
+File: generated/asymptote/asymptote-lever.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-lever.pdf>
+File: generated/asymptote/asymptote-contour.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-contour.pdf>
+[63]
+File: generated/asymptote/asymptote-lever-integral.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-lever-integral.pdf>
+
+************************************************
+Subsection 10.5 Asymptote, 3D via WebGL
+************************************************
+
+LaTeX Warning: Hyper reference `figure-asymptote-workcone' on page 64 undefined on input line 4573.
+
+
+LaTeX Warning: Reference `figure-asymptote-workcone' on page 64 undefined on input line 4573.
+
+File: generated/asymptote/asymptote-workcone.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-workcone.pdf>
+[64]
+File: generated/asymptote/asymptote-surface.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-surface.pdf>
+
+************************************************
+Subsection 10.6 Mermaid Diagrams
+************************************************
+[65]
+File: generated/mermaid/mermaid-git-image.png Graphic file (type bmp)
+<generated/mermaid/mermaid-git-image.png>
+File: generated/mermaid/mermaid-class-image.png Graphic file (type bmp)
+<generated/mermaid/mermaid-class-image.png>
+File: generated/mermaid/mermaid-sequence-image.png Graphic file (type bmp)
+<generated/mermaid/mermaid-sequence-image.png>
+ [66]
+
+LaTeX Warning: Hyper reference `figure-mermaid-elk-layout' on page 67 undefined on input line 4634.
+
+
+LaTeX Warning: Reference `figure-mermaid-elk-layout' on page 67 undefined on input line 4634.
+
+File: generated/mermaid/mermaid-elk-layout.png Graphic file (type bmp)
+<generated/mermaid/mermaid-elk-layout.png>
+************************************************
+Subsection 10.7 Sage Plots
+************************************************
+[67]
+File: generated/sageplot/sageplot-parabola.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-parabola.pdf>
+
+
+LaTeX Warning: Hyper reference `figure-sage-double-plot' on page 68 undefined on input line 4657.
+
+
+LaTeX Warning: Reference `figure-sage-double-plot' on page 68 undefined on input line 4657.
+
+File: generated/sageplot/sageplot-updown.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-updown.pdf>
+File: generated/sageplot/sageplot-exosagevec1.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-exosagevec1.pdf>
+[68]
+
+LaTeX Warning: Hyper reference `section-side-by-side' on page 69 undefined on input line 4671.
+
+
+LaTeX Warning: Reference `section-side-by-side' on page 69 undefined on input line 4671.
+
+File: generated/sageplot/sageplot-sentence-multigraph.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-sentence-multigraph.pdf>
+File: generated/sageplot/sageplot-polynomial-approximation.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-polynomial-approximation.pdf>
+
+Underfull \hbox (badness 3291) in paragraph at lines 4682--4683
+[]\TU/lmr/bx/n/10 Figure 10.27 \TU/lmr/m/n/10 Sage polyno-
+ []
+
+File: generated/sageplot/sageplot-implicit-surface.png Graphic file (type bmp)
+<generated/sageplot/sageplot-implicit-surface.png>
+************************************************
+Subsection 10.8 Inkscape Images
+************************************************
+[69]
+File: external/images/inkscape-stars-plain.pdf Graphic file (type pdf)
+<use external/images/inkscape-stars-plain.pdf>
+File: external/images/inkscape-stars-native.pdf Graphic file (type pdf)
+<use external/images/inkscape-stars-native.pdf>
+
+************************************************
+Subsection 10.9 Copies of Images
+************************************************
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+[70]
+************************************************
+Subsection 10.10 Caption Testing
+************************************************
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+LaTeX Warning: Hyper reference `figure-long-caption' on page 71 undefined on input line 4747.
+
+
+LaTeX Warning: Reference `figure-long-caption' on page 71 undefined on input line 4747.
+
+************************************************
+Subsection 10.11 Captionless Images
+************************************************
+
+LaTeX Warning: Hyper reference `section-side-by-side' on page 71 undefined on input line 4759.
+
+
+LaTeX Warning: Reference `section-side-by-side' on page 71 undefined on input line 4759.
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+[71]
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+PGFPlots: reading {data/dataplot/hodgkin-huxley-data.dat}
+File: generated/asymptote/asymptote-lever-solo.pdf Graphic file (type pdf)
+<use generated/asymptote/asymptote-lever-solo.pdf>
+ [72]
+File: generated/sageplot/sageplot-parabola-solo.pdf Graphic file (type pdf)
+<use generated/sageplot/sageplot-parabola-solo.pdf>
+
+************************************************
+Subsection 10.12 Technical Details
+************************************************
+
+Overfull \hbox (236.30003pt too wide) in paragraph at lines 4900--4909
+ [] 
+ []
+
+************************************************
+Subsection 10.13 Accessibility
+************************************************
+
+Underfull \hbox (badness 3536) in paragraph at lines 4922--4923
+[]\TU/lmr/m/n/10 No descrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4922--4923
+\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 @decorative
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 3536) in paragraph at lines 4928--4929
+[]\TU/lmr/m/n/10 No descrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4928--4929
+\TU/lmr/m/n/10 description,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4928--4929
+\TU/Inconsolatazi4-Regular.otf(0)/m/sl/10 @decorative
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+[73]
+Underfull \hbox (badness 3536) in paragraph at lines 4936--4937
+[]\TU/lmr/m/n/10 No descrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4936--4937
+\TU/lmr/m/n/10 tion, empty
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4936--4937
+\TU/lmr/m/n/10 shortdescrip-
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 3536) in paragraph at lines 4942--4943
+[]\TU/lmr/m/n/10 No descrip-
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 4942--4943
+\TU/lmr/m/n/10 tion, too long
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4942--4943
+\TU/lmr/m/n/10 shortdescrip-
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 3536) in paragraph at lines 4950--4951
+[]\TU/lmr/m/n/10 No descrip-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4950--4951
+\TU/lmr/m/n/10 tion, good
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4950--4951
+\TU/lmr/m/n/10 shortdescrip-
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4956--4957
+[]\TU/lmr/m/n/10 Description,
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4964--4965
+[]\TU/lmr/m/n/10 Description,
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 4964--4965
+\TU/lmr/m/n/10 empty shortde-
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4970--4971
+[]\TU/lmr/m/n/10 Description,
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 4978--4979
+[]\TU/lmr/m/n/10 Description,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4978--4979
+\TU/lmr/m/n/10 good shortde-
+ []
+
+File: external/images/cross-square.png Graphic file (type bmp)
+<external/images/cross-square.png>
+************************************************
+Section 11 Further Reading
+************************************************
+************************************************
+Subsection 11.1 Specialized Subdivisions
+************************************************
+************************************************
+Exercises 11.2 Exercises
+************************************************
+File: external/images/cubic-function.png Graphic file (type bmp)
+<external/images/cubic-function.png>
+[74]
+
+LaTeX Warning: Reference `section-further-reading-3' on page 75 undefined on input line 5026.
+
+
+Underfull \hbox (badness 2293) in paragraph at lines 5036--5038
+[][]| [][]\TU/lmr/m/n/10 This isn’t really an exercise, but an explanation that the next
+ []
+
+
+LaTeX Warning: Reference `section-further-reading-3' on page 75 undefined on input line 5046.
+
+
+LaTeX Warning: Hyper reference `subsection-paragraph-markup' on page 75 undefined on input line 5057.
+
+
+LaTeX Warning: Reference `subsection-paragraph-markup' on page 75 undefined on input line 5057.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5062--5063
+[]\TU/lmr/m/n/10 Inside inline math (too long for this
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5062--5063
+\TU/lmr/m/n/10 line probably, 40 characters long):
+ []
+
+[75]
+************************************************
+Exercises 11.3 More Exercises
+************************************************
+[76]
+Overfull \hbox (3.15103pt too wide) in paragraph at lines 5128--5129
+\TU/lmr/bx/n/10 Hint\TU/lmr/m/n/10 .[] Ad- 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5130--5131
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 12$  
+ []
+
+
+Overfull \hbox (29.95103pt too wide) in paragraph at lines 5132--5133
+\TU/lmr/bx/n/10 Solution\TU/lmr/m/n/10 .[] First, 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5140--5141
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 15$  
+ []
+
+
+Overfull \hbox (3.15103pt too wide) in paragraph at lines 5151--5152
+\TU/lmr/bx/n/10 Hint\TU/lmr/m/n/10 .[] Ad- 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5153--5154
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 12$  
+ []
+
+
+Overfull \hbox (29.95103pt too wide) in paragraph at lines 5155--5156
+\TU/lmr/bx/n/10 Solution\TU/lmr/m/n/10 .[] First, 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5167--5168
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 15$  
+ []
+
+
+Overfull \hbox (3.15103pt too wide) in paragraph at lines 5178--5179
+\TU/lmr/bx/n/10 Hint\TU/lmr/m/n/10 .[] Ad- 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5180--5181
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 12$  
+ []
+
+
+Overfull \hbox (29.95103pt too wide) in paragraph at lines 5182--5183
+\TU/lmr/bx/n/10 Solution\TU/lmr/m/n/10 .[] First, 
+ []
+
+[77]
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5190--5191
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 15$  
+ []
+
+
+Overfull \hbox (3.15103pt too wide) in paragraph at lines 5201--5202
+\TU/lmr/bx/n/10 Hint\TU/lmr/m/n/10 .[] Ad- 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5203--5204
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 12$  
+ []
+
+
+Overfull \hbox (29.95103pt too wide) in paragraph at lines 5205--5206
+\TU/lmr/bx/n/10 Solution\TU/lmr/m/n/10 .[] First, 
+ []
+
+
+Overfull \hbox (12.92107pt too wide) in paragraph at lines 5213--5214
+\TU/lmr/bx/n/10 Answer\TU/lmr/m/n/10 .[] $\OT1/cmr/m/n/10 15$  
+ []
+
+************************************************
+References 11.4 References
+************************************************
+[78]
+************************************************
+Section 12 List Calisthenics
+************************************************
+************************************************
+Subsection 12.1 Lists, Generally
+************************************************
+[79] [80] [81]
+************************************************
+Subsection 12.2 List Spacing, I
+************************************************
+[82]
+************************************************
+Subsection 12.3 List Spacing, II
+************************************************
+************************************************
+Subsection 12.4 List items containing only inline math
+************************************************
+[83] [84]
+************************************************
+Subsection 12.5 Difficult List Items
+************************************************
+
+LaTeX Warning: Hyper reference `test-second' on page 85 undefined on input line 5635.
+
+
+LaTeX Warning: Reference `test-second' on page 85 undefined on input line 5635.
+
+[85]
+************************************************
+Subsection 12.6 Description Lists
+************************************************
+[86] [87] [88]
+************************************************
+Subsection 12.7 Named Lists
+************************************************
+[89]
+
+LaTeX Warning: Hyper reference `section-cross-referencing' on page 90 undefined on input line 5902.
+
+
+LaTeX Warning: Reference `section-cross-referencing' on page 90 undefined on input line 5902.
+
+[90]
+************************************************
+Subsection 12.8 Testing List Decompositions
+************************************************
+************************************************
+Subsection 12.9 List Column Testing
+************************************************
+
+Overfull \hbox (8.87004pt too wide) detected at line 6005
+[]
+ []
+
+************************************************
+Exercises 12.10 Exercises (with lists)
+************************************************
+[91]
+************************************************
+References 12.11 References (with lists in Annotations)
+************************************************
+************************************************
+Section 13 Table Calisthenics
+************************************************
+\openout7 = `sample-article.listing'.
+
+(./sample-article.listing) [92] [93] [94]
+
+LaTeX Warning: Hyper reference `table-multiline-cells' on page 95 undefined on input line 6264.
+
+
+LaTeX Warning: Reference `table-multiline-cells' on page 95 undefined on input line 6264.
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 6290--6290
+\TU/lmr/m/n/10 par cel
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 6312--6312
+[]|\TU/lmr/m/n/10 Par in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6312--6312
+\TU/lmr/m/n/10 row
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6312--6312
+\TU/lmr/m/n/10 with
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 6328--6328
+\TU/lmr/m/n/10 par cel
+ []
+
+
+Underfull \hbox (badness 1112) in paragraph at lines 6328--6328
+\TU/lmr/m/n/10 jus top
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 6344--6344
+\TU/lmr/m/n/10 par cel
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 6344--6344
+\TU/lmr/m/n/10 jus bot
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 6366--6366
+[]|\TU/lmr/m/n/10 Par in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6366--6366
+\TU/lmr/m/n/10 row
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6366--6366
+\TU/lmr/m/n/10 with
+ []
+
+
+Overfull \hbox (55.31346pt too wide) in paragraph at lines 6280--6376
+ [][] 
+ []
+
+[95]
+
+LaTeX Warning: Hyper reference `section-side-by-side' on page 96 undefined on input line 6377.
+
+
+LaTeX Warning: Reference `section-side-by-side' on page 96 undefined on input line 6377.
+
+
+LaTeX Warning: Hyper reference `section-urls' on page 96 undefined on input line 6413.
+
+
+LaTeX Warning: Reference `section-urls' on page 96 undefined on input line 6413.
+
+
+LaTeX Warning: Hyper reference `subsection-jupyter-dollars' on page 96 undefined on input line 6413.
+
+
+LaTeX Warning: Reference `subsection-jupyter-dollars' on page 96 undefined on input line 6413.
+
+
+Overfull \hbox (121.5203pt too wide) in paragraph at lines 6417--6423
+ [][] 
+ []
+
+[96] [97] [98] [99]
+Overfull \vbox (64.84113pt too high) has occurred while \output is active []
+
+ [100] [101] [102]
+
+Package tcolorbox Warning: The upper box part has become overfull on input line 6692.
+
+[103]
+ignored: Infinite glue shrinkage found in box being split [104
+
+] [105]
+
+LaTeX Warning: Hyper reference `horizontal-rules-table' on page 106 undefined on input line 6822.
+
+
+LaTeX Warning: Reference `horizontal-rules-table' on page 106 undefined on input line 6822.
+
+************************************************
+Section 14 Interactive Elements, Authored in Javascript
+************************************************
+[106]
+
+LaTeX Warning: Hyper reference `section-sage-cells' on page 107 undefined on input line 6864.
+
+
+LaTeX Warning: Reference `section-sage-cells' on page 107 undefined on input line 6864.
+
+
+LaTeX Warning: Hyper reference `section-interactive-server' on page 107 undefined on input line 6866.
+
+
+LaTeX Warning: Reference `section-interactive-server' on page 107 undefined on input line 6866.
+
+************************************************
+Subsection 14.1 HTML5 Canvas
+************************************************
+File: external/preview/simple-eigenvector-preview.jpg Graphic file (type bmp)
+<external/preview/simple-eigenvector-preview.jpg>
+File: generated/qrcode/interactive-simple-eigenvector.png Graphic file (type bmp)
+<generated/qrcode/interactive-simple-eigenvector.png>
+
+LaTeX Warning: Hyper reference `figure-simple-eigenvector' on page 107 undefined on input line 6901.
+
+
+LaTeX Warning: Reference `figure-simple-eigenvector' on page 107 undefined on input line 6901.
+
+File: external/preview/eigenvectors-preview.jpg Graphic file (type bmp)
+<external/preview/eigenvectors-preview.jpg>
+File: generated/qrcode/interactive-eigenvectors.png Graphic file (type bmp)
+<generated/qrcode/interactive-eigenvectors.png>
+[107]
+
+LaTeX Warning: Hyper reference `section-side-by-side' on page 108 undefined on input line 6919.
+
+
+LaTeX Warning: Reference `section-side-by-side' on page 108 undefined on input line 6919.
+
+File: external/preview/animation-preview.jpg Graphic file (type bmp)
+<external/preview/animation-preview.jpg>
+File: generated/qrcode/interactive-animation.png Graphic file (type bmp)
+<generated/qrcode/interactive-animation.png>
+
+LaTeX Warning: Hyper reference `figure-animation' on page 108 undefined on input line 6943.
+
+
+LaTeX Warning: Reference `figure-animation' on page 108 undefined on input line 6943.
+
+
+LaTeX Warning: Hyper reference `figure-interactive-slopes' on page 108 undefined on input line 6943.
+
+
+LaTeX Warning: Reference `figure-interactive-slopes' on page 108 undefined on input line 6943.
+
+
+LaTeX Warning: Hyper reference `figure-piecewise' on page 108 undefined on input line 6943.
+
+
+LaTeX Warning: Reference `figure-piecewise' on page 108 undefined on input line 6943.
+
+File: generated/preview/interactive-simple-js-script-preview.png Graphic file (type bmp)
+<generated/preview/interactive-simple-js-script-preview.png>
+File: generated/qrcode/interactive-simple-js-script.png Graphic file (type bmp)
+<generated/qrcode/interactive-simple-js-script.png>
+[108]
+File: generated/preview/js-module-test-preview.png Graphic file (type bmp)
+<generated/preview/js-module-test-preview.png>
+File: generated/qrcode/js-module-test.png Graphic file (type bmp)
+<generated/qrcode/js-module-test.png>
+
+************************************************
+Subsection 14.2 D3.js
+************************************************
+File: external/preview/collision-preview.png Graphic file (type bmp)
+<external/preview/collision-preview.png>
+File: generated/qrcode/interactive-d3-collision.png Graphic file (type bmp)
+<generated/qrcode/interactive-d3-collision.png>
+[109]
+File: external/preview/graph-layout-preview.png Graphic file (type bmp)
+<external/preview/graph-layout-preview.png>
+File: generated/qrcode/interactive-d3-graph-layout.png Graphic file (type bmp)
+<generated/qrcode/interactive-d3-graph-layout.png>
+ [110]
+File: external/preview/welsh-assembly-preview.png Graphic file (type bmp)
+<external/preview/welsh-assembly-preview.png>
+File: generated/qrcode/interactive-d3-welsh.png Graphic file (type bmp)
+<generated/qrcode/interactive-d3-welsh.png>
+
+************************************************
+Subsection 14.3 SVG
+************************************************
+
+LaTeX Warning: Hyper reference `interactive-html5-canvas' on page 111 undefined on input line 7086.
+
+
+LaTeX Warning: Reference `interactive-html5-canvas' on page 111 undefined on input line 7086.
+
+File: generated/preview/interactive-slopes-preview.png Graphic file (type bmp)
+<generated/preview/interactive-slopes-preview.png>
+File: generated/qrcode/interactive-slopes.png Graphic file (type bmp)
+<generated/qrcode/interactive-slopes.png>
+
+LaTeX Warning: Hyper reference `figure-interactive-slopes' on page 111 undefined on input line 7110.
+
+
+LaTeX Warning: Reference `figure-interactive-slopes' on page 111 undefined on input line 7110.
+
+
+LaTeX Warning: Hyper reference `figure-interactive-slopes' on page 111 undefined on input line 7110.
+
+
+LaTeX Warning: Reference `figure-interactive-slopes' on page 111 undefined on input line 7110.
+
+[111]
+************************************************
+Subsection 14.4 JSXGraph
+************************************************
+File: external/images/kinematics.png Graphic file (type bmp)
+<external/images/kinematics.png>
+[112]
+File: generated/preview/interactive-archimedian-spiral-preview.png Graphic file (type bmp)
+<generated/preview/interactive-archimedian-spiral-preview.png>
+File: generated/qrcode/interactive-archimedian-spiral.png Graphic file (type bmp)
+<generated/qrcode/interactive-archimedian-spiral.png>
+File: generated/preview/interactive-infinity-preview.png Graphic file (type bmp)
+<generated/preview/interactive-infinity-preview.png>
+File: generated/qrcode/interactive-infinity.png Graphic file (type bmp)
+<generated/qrcode/interactive-infinity.png>
+ [113]
+
+LaTeX Warning: Hyper reference `section-side-by-side' on page 114 undefined on input line 7170.
+
+
+LaTeX Warning: Reference `section-side-by-side' on page 114 undefined on input line 7170.
+
+
+LaTeX Warning: File `generated/preview/interactive-jsx-arc-graph-2-preview.png' not found on input line 7178.
+
+! Unable to load picture or PDF file 'generated/preview/interactive-jsx-arc-graph-2-preview.png'.
+<to be read again> 
+                   }
+l.7178 ...interactive-jsx-arc-graph-2-preview.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+ 
+Here is how much of TeX's memory you used:
+ 76726 strings out of 470191
+ 1997155 string characters out of 5478686
+ 3997655 words of memory out of 5000000
+ 104190 multiletter control sequences out of 15000+600000
+ 645796 words of font info for 172 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 98i,22n,108p,1759b,3454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on sample-article.pdf (113 pages).

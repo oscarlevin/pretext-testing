@@ -1,0 +1,36 @@
+This is makeindex, version 2.17 [TeX Live 2024] (kpathsea + Thai support).
+Scanning input file sample-article.idx....done (203 entries accepted, 0 rejected).
+Sorting entries.....done (1643 comparisons).
+Generating output file sample-article.ind....
+## Warning (input = sample-article.idx, line = 14; output = sample-article.ind, line = 7):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 15; output = sample-article.ind, line = 7):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 18; output = sample-article.ind, line = 10):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 17; output = sample-article.ind, line = 11):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 9; output = sample-article.ind, line = 159):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 10; output = sample-article.ind, line = 164):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 22; output = sample-article.ind, line = 270):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 23; output = sample-article.ind, line = 271):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 20; output = sample-article.ind, line = 272):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+
+## Warning (input = sample-article.idx, line = 25; output = sample-article.ind, line = 274):
+   -- Conflicting entries: multiple encaps for the same page under same key.
+done (282 lines written, 10 warnings).
+Output written in sample-article.ind.
+Transcript written in sample-article.ilg.

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="7492">
+<statement>
+<p>
+You wish to determine if there is a negative linear correlation between the two variables at a significance level of <m>\displaystyle\alpha={0.05}</m>.
+You have the following bivariate data set.
+</p><tabular> <row><cell>x</cell><cell>y</cell></row><row><cell>79.4</cell><cell>-186.6</cell></row><row><cell>92.2</cell><cell>-186.3</cell></row><row><cell>55.6</cell><cell>88.3</cell></row><row><cell>86.4</cell><cell>-158.5</cell></row><row><cell>48</cell><cell>85.2</cell></row><row><cell>63.2</cell><cell>-399</cell></row><row><cell>70.1</cell><cell>-367.7</cell></row><row><cell>58.6</cell><cell>48.5</cell></row><row><cell>63.4</cell><cell>276.6</cell></row><row><cell>42.8</cell><cell>488.8</cell></row><row><cell>67.4</cell><cell>-128.4</cell></row><row><cell>74.5</cell><cell>-180.3</cell></row><row><cell>43.6</cell><cell>-38.7</cell></row><row><cell>80.8</cell><cell>427.3</cell></row><row><cell>75.8</cell><cell>350.8</cell></row><row><cell>73.8</cell><cell>-242.3</cell></row><row><cell>75.4</cell><cell>-48.6</cell></row><row><cell>79.9</cell><cell>551.4</cell></row><row><cell>61.3</cell><cell>8.5</cell></row><row><cell>50</cell><cell>-133.3</cell></row><row><cell>73.8</cell><cell>204.8</cell></row><row><cell>54.9</cell><cell>-55.6</cell></row><row><cell>69.3</cell><cell>573.7</cell></row><row><cell>56.9</cell><cell>-291.6</cell></row><row><cell>89.5</cell><cell>-221</cell></row><row><cell>70.6</cell><cell>2.1</cell></row><row><cell>42.4</cell><cell>66.4</cell></row><row><cell>56.6</cell><cell>-118.3</cell></row><row><cell>77.3</cell><cell>-32.9</cell></row><row><cell>39.8</cell><cell>107.2</cell></row><row><cell>45</cell><cell>342.9</cell></row><row><cell>61.7</cell><cell>-224.3</cell></row><row><cell>96.4</cell><cell>-76.1</cell></row><row><cell>55.2</cell><cell>24.1</cell></row><row><cell>77.7</cell><cell>-326.2</cell></row><row><cell>57.9</cell><cell>137.9</cell></row><row><cell>74.2</cell><cell>4.6</cell></row><row><cell>63.4</cell><cell>-48.6</cell></row><row><cell>67.9</cell><cell>147.6</cell></row></tabular><p>
+download link provided here:  <url href="denied:data:text/csv;charset=UTF-8,%22x%22%2C%22y%22%0A79.4%2C-186.6%0A92.2%2C-186.3%0A55.6%2C88.3%0A86.4%2C-158.5%0A48%2C85.2%0A63.2%2C-399%0A70.1%2C-367.7%0A58.6%2C48.5%0A63.4%2C276.6%0A42.8%2C488.8%0A67.4%2C-128.4%0A74.5%2C-180.3%0A43.6%2C-38.7%0A80.8%2C427.3%0A75.8%2C350.8%0A73.8%2C-242.3%0A75.4%2C-48.6%0A79.9%2C551.4%0A61.3%2C8.5%0A50%2C-133.3%0A73.8%2C204.8%0A54.9%2C-55.6%0A69.3%2C573.7%0A56.9%2C-291.6%0A89.5%2C-221%0A70.6%2C2.1%0A42.4%2C66.4%0A56.6%2C-118.3%0A77.3%2C-32.9%0A39.8%2C107.2%0A45%2C342.9%0A61.7%2C-224.3%0A96.4%2C-76.1%0A55.2%2C24.1%0A77.7%2C-326.2%0A57.9%2C137.9%0A74.2%2C4.6%0A63.4%2C-48.6%0A67.9%2C147.6">Download CSV</url></p>
+<p>
+What is the correlation coefficient for this data set? </p>
+<p>
+       <em>r</em> = <input type="text" style="width:13ch" name="qn1000" id="qn1000" value="" autocomplete="off" aria-label="Question 1 Part 1 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 3 decimal places)</p>
+<p>
+To find the p-value for a correlation coefficient, you need to convert to a <em>t</em>-score:
+  <m>\displaystyle{t}={r}\cdot\sqrt{{\frac{{{n}-{2}}}{{{1}-{r}^{{2}}}}}}</m>
+This <em>t</em>-score is from a <em>t</em>-distribution with <m>\displaystyle{n}-{2}</m> degrees of freedom.</p>
+<p>
+What is the p-value for this correlation coefficient? </p>
+<p>
+       p-value = <input type="text" style="width:15.4ch" name="qn1001" id="qn1001" value="" autocomplete="off" aria-label="Question 1 Part 2 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 4 decimal places)</p>
+<p>
+Your final conclusion is that... </p>
+<p><ol style="list-style-type:upper-alpha"><li>There is insufficient sample evidence to support the claim the there is a negative correlation between the two variables.</li> 
+<li>There is sufficient sample evidence to support the claim that there is a statistically significant negative correlation between the two variables.</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>-0.183</li><li>0.1318</li><li>A: There is insufficient sample evidence to support the claim the there is a negative correlation between the two variables.</li></ul></p>
+</solution>
+</myopenmath>

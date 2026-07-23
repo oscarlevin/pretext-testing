@@ -1,0 +1,11 @@
+openDate          = 01/09/2026 at 12:00am
+dueDate           = 07/09/2026 at 10:00pm
+answerDate        = 07/09/2026 at 10:00pm
+paperHeaderFile   = My_Demo_Book/header/4_4-WeBWorK_Example.pg
+screenHeaderFile  = My_Demo_Book/header/4_4-WeBWorK_Example.pg
+description       = WeBWorK Example
+problemListV2
+problem_start
+source_file = My_Demo_Book/4-PreTeXt_features_that_require_generation/4_4-WeBWorK_Example/4_4_1.pg
+problem_id = 1
+problem_end

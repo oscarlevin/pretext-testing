@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="7492">
+<statement>
+<p>
+You wish to determine if there is a positive linear correlation between the two variables at a significance level of <m>\displaystyle\alpha={0.005}</m>.
+You have the following bivariate data set.
+</p><tabular> <row><cell>x</cell><cell>y</cell></row><row><cell>47</cell><cell>73.2</cell></row><row><cell>67.5</cell><cell>11.2</cell></row><row><cell>60</cell><cell>42.9</cell></row><row><cell>49</cell><cell>13</cell></row><row><cell>36.9</cell><cell>-5.3</cell></row><row><cell>51.6</cell><cell>22.4</cell></row><row><cell>41.1</cell><cell>49.1</cell></row><row><cell>49.7</cell><cell>29.9</cell></row><row><cell>55.5</cell><cell>80.2</cell></row><row><cell>36.3</cell><cell>-45.1</cell></row><row><cell>43.7</cell><cell>29.7</cell></row><row><cell>44.3</cell><cell>-38.9</cell></row><row><cell>45.1</cell><cell>3.5</cell></row><row><cell>43.7</cell><cell>-16.3</cell></row><row><cell>34.9</cell><cell>-27</cell></row><row><cell>42.4</cell><cell>6.3</cell></row><row><cell>38.2</cell><cell>9</cell></row></tabular><p>
+download link provided here:  <url href="denied:data:text/csv;charset=UTF-8,%22x%22%2C%22y%22%0A47%2C73.2%0A67.5%2C11.2%0A60%2C42.9%0A49%2C13%0A36.9%2C-5.3%0A51.6%2C22.4%0A41.1%2C49.1%0A49.7%2C29.9%0A55.5%2C80.2%0A36.3%2C-45.1%0A43.7%2C29.7%0A44.3%2C-38.9%0A45.1%2C3.5%0A43.7%2C-16.3%0A34.9%2C-27%0A42.4%2C6.3%0A38.2%2C9">Download CSV</url></p>
+<p>
+What is the correlation coefficient for this data set? </p>
+<p>
+       <em>r</em> = <input type="text" style="width:13ch" name="qn1000" id="qn1000" value="" autocomplete="off" aria-label="Question 1 Part 1 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 3 decimal places)</p>
+<p>
+To find the p-value for a correlation coefficient, you need to convert to a <em>t</em>-score:
+  <m>\displaystyle{t}={r}\cdot\sqrt{{\frac{{{n}-{2}}}{{{1}-{r}^{{2}}}}}}</m>
+This <em>t</em>-score is from a <em>t</em>-distribution with <m>\displaystyle{n}-{2}</m> degrees of freedom.</p>
+<p>
+What is the p-value for this correlation coefficient? </p>
+<p>
+       p-value = <input type="text" style="width:15.4ch" name="qn1001" id="qn1001" value="" autocomplete="off" aria-label="Question 1 Part 2 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 4 decimal places)</p>
+<p>
+Your final conclusion is that... </p>
+<p><ol style="list-style-type:upper-alpha"><li>There is insufficient sample evidence to support the claim the there is a positive correlation between the two variables.</li> 
+<li>There is sufficient sample evidence to support the claim that there is a statistically significant positive correlation between the two variables.</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>0.48</li><li>0.0255</li><li>A: There is insufficient sample evidence to support the claim the there is a positive correlation between the two variables.</li></ul></p>
+</solution>
+</myopenmath>

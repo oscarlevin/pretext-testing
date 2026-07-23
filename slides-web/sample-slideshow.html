@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2025-08-03T20:53:36-06:00       *-->
+<!--*   A recent stable commit (2022-07-01):   *-->
+<!--* 6c761d3dba23af92cba35001c852aac04ae99a5f *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html xmlns:pi="http://pretextbook.org/2020/pretext/internal">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>PreTeXt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>// Make *any* div with class 'sagecell-sage' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-sage",
+  "linked": true,
+  "linkKey": "linked-sage",
+  "autoeval": false,
+  "languages": [
+    "sage"
+  ],
+  "evalButtonText": "Evaluate (Sage)"
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reset.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/theme/solarized.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/reveal.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.2/plugin/math/math.js"></script><style>
+ul {
+  display: block !important;
+}
+.reveal img {
+  border: 0.5px !important;
+  border-radius: 2px 10px 2px;
+  padding: 4px;
+}
+.reveal pre {
+  box-shadow: none;
+  line-height: 1;
+  font-size: inherit;
+  width: auto;
+  margin: inherit;
+}
+.reveal pre code {
+  display: block;
+  padding: 0;
+  overflow: unset;
+  max-height: unset;
+  word-wrap: normal;
+}
+.definition-like,.theorem-like,.project-like {
+  border-width: 0.5px;
+  border-style: solid;
+  border-radius: 2px 10px 2px;
+  padding: 1%;
+  margin-bottom: var(--r-block-margin);
+}
+.definition-like {
+  background: #006080;
+  background: color-mix(in srgb, var(--r-background-color) 75%, #006080);
+}
+.theorem-like {
+  background: #ff000010;
+  background:  color-mix(in srgb, var(--r-background-color) 75%, #aa0000);
+}
+.proof-like {
+  background: #ffffff;
+  background:  color-mix(in srgb, var(--r-background-color) 75%, #aaaaaa);
+}
+.project-like {
+  background: #60800010;
+  background:  color-mix(in srgb, var(--r-background-color) 75%, #608000);
+}
+.code-inline {
+  background: #60800010;
+  background:  color-mix(in srgb, var(--r-background-color) 75%, var(--r-link-color));
+  padding: 0 3px;
+  border: 1px solid;
+  margin: 3px;
+  display: inline-block;
+}
+.sagecell_sessionOutput {
+  background: white;
+  color: black;
+  border: 0.5px solid var(--r-main-color);
+}
+
+.program {
+  background: #60800010;
+  background:  color-mix(in srgb, var(--r-background-color) 75%, var(--r-link-color));
+  max-height: 450px;
+  overflow: auto;
+  border: 0.5px solid var(--r-main-color);
+}
+.ptx-sagecell, .reveal .program {
+  font-size: calc(var(--r-main-font-size) * 0.6);
+}
+
+
+.ptx-content :is(.image-box, .audio-box, .video-box, .asymptote-box) {
+  position: relative;
+}
+
+.ptx-content iframe.asymptote, .ptx-content iframe.asymptote, .ptx-content .video-box .video, .ptx-content .video-box .video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+code[class*="language-"], pre[class*="language-"] {
+  padding: 0;
+  line-height: 1.2;
+}
+
+dfn {
+  font-weight: bold;
+}
+.ptx-content ol.no-marker,
+.ptx-content ul.no-marker,
+.ptx-content li.no-marker {
+    list-style-type: none;
+}
+
+.ptx-content ol.decimal {
+    list-style-type: decimal;
+}
+.ptx-content ol.lower-alpha {
+    list-style-type: lower-alpha;
+}
+.ptx-content ol.upper-alpha {
+    list-style-type: upper-alpha;
+}
+.ptx-content ol.lower-roman {
+    list-style-type: lower-roman;
+}
+.ptx-content ol.upper-roman {
+    list-style-type: upper-roman;
+}
+.ptx-content ul.disc {
+    list-style-type: disc;
+}
+.ptx-content ul.square {
+    list-style-type: square;
+}
+.ptx-content ul.circle {
+    list-style-type: circle;
+}
+.ptx-content ol.no-marker,
+.ptx-content ul.no-marker {
+    list-style-type: none;
+}
+.ptx-content .cols1 li,
+.ptx-content .cols2 li,
+.ptx-content .cols3 li,
+.ptx-content .cols4 li,
+.ptx-content .cols5 li,
+.ptx-content .cols6 li {
+    float: left;
+    padding-right:2em;
+}
+
+/* make small images full-width in #sidebyside */
+/* could improve with a .sidebyside class */
+div[style*="display:table-cell"] img {
+    width: 100%;
+}
+          </style>
+<script src="_static/pretext/js/diagcess/diagcess.js"></script>
+</head>
+<body>
+<div class="reveal ptx-content">
+<div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="slides">
+<section><section><h1>PreTeXt</h1>
+<h2>A Slideshow</h2>
+<table>
+<tr><th align="center" style="border-bottom: 0px;">Robert A. Beezer</th></tr>
+<tr><td align="center" style="border-bottom: 0px;">University of Puget Sound</td></tr>
+<tr><td align="center"></td></tr>
+</table>
+<h4>At a Test Conference</h4>
+<h4><div class="date">August 3, 2025</div></h4></section><section><h3>Abstract</h3>
+<div align="left">
+<p>An <code class="code-inline tex2jax_ignore">&lt;abstract&gt;</code> can appear on an early slide, optionally.  This is a standard component of a PreTeXt <code class="code-inline tex2jax_ignore">&lt;article&gt;</code> (but not of a <code class="code-inline tex2jax_ignore">&lt;book&gt;</code>).</p>
+<p>This is a second paragraph of the abstract for this wonderful talk, just so we have something a bit more substantial.</p>
+</div></section></section><section><section><h1>Explanation</h1></section><section><h3>What This Is</h3>
+<div align="left"><p>This is a PreTeXt <code class="code-inline tex2jax_ignore">slideshow</code> designed mostly for testing new features.  As of 2019-11-16 it is only initiated, and not comprehensive.  If you improve a feature, please add examples here.</p></div></section></section><section><section><h1>Lists</h1></section><section><h3>Ordered Lists, All At Once</h3>
+<div align="left"><p><ol class="decimal" id="root-1-2-5-2-2-1">
+<li>Two conversions: print-on-demand, electronic <abbr class="initialism">PDF</abbr>
+</li>
+<li>Extensive use of the <code class="code-inline tex2jax_ignore">tcolorbox</code> package (CSS-like)</li>
+<li>Evolving styling/themes (Andrew Rechnitzer, David Farmer)</li>
+</ol></p></div></section><section><h3>Ordered Lists, With Features</h3>
+<div align="left">
+<p>These are enumerated with capital letters.</p>
+<p><ol class="upper-alpha ol-marker-1" id="root-1-2-5-3-3-1">
+<li>Two conversions: print-on-demand, electronic <abbr class="initialism">PDF</abbr>
+</li>
+<li>Extensive use of the <code class="code-inline tex2jax_ignore">tcolorbox</code> package (CSS-like)</li>
+<li>Evolving styling/themes (Andrew Rechnitzer, David Farmer)</li>
+</ol></p>
+<p>These are inline</p>
+<p><ol class="lower-roman ol-marker-2 cols2" id="root-1-2-5-3-5-1">
+<li>print-on-demand</li>
+<li>electronic <abbr class="initialism">PDF</abbr>
+</li>
+</ol></p>
+<p>And these have pauses.</p>
+<p><ol class="decimal" id="root-1-2-5-3-7-1">
+<li class="fragment">Two conversions: print-on-demand, electronic <abbr class="initialism">PDF</abbr>
+</li>
+<li class="fragment">Extensive use of the <code class="code-inline tex2jax_ignore">tcolorbox</code> package (CSS-like)</li>
+<li class="fragment">Evolving styling/themes (Andrew Rechnitzer, David Farmer)</li>
+</ol></p>
+</div></section><section><h3>Unordered Lists, All At Once</h3>
+<div align="left"><p><ul class="disc" id="root-1-2-5-4-2-1">
+<li><p>XML syntax is a nested hierarchy (a tree)<ul class="circle" id="root-1-2-5-4-2-1-1-1-1">
+<li>
+<code class="code-inline tex2jax_ignore">&lt;foo&gt;</code>…<code class="code-inline tex2jax_ignore">&lt;/foo&gt;</code>
+</li>
+<li><code class="code-inline tex2jax_ignore">&lt;bar/&gt;</code></li>
+<li><code class="code-inline tex2jax_ignore">&lt;baz qux="corge"&gt;</code></li>
+</ul></p></li>
+<li>Does not have to be <em class="emphasis">UGLY</em>!</li>
+<li>PreTeXt is “author-friendly” (Principle #2)</li>
+</ul></p></div></section><section><h3>Unordered Lists, With Pause</h3>
+<div align="left"><p><ul class="disc" id="root-1-2-5-5-2-1">
+<li class="fragment"><p>XML syntax is a nested hierarchy (a tree)<ul class="circle" id="root-1-2-5-5-2-1-1-1-1">
+<li class="fragment">
+<code class="code-inline tex2jax_ignore">&lt;foo&gt;</code>…<code class="code-inline tex2jax_ignore">&lt;/foo&gt;</code>
+</li>
+<li class="fragment"><code class="code-inline tex2jax_ignore">&lt;bar/&gt;</code></li>
+<li class="fragment"><code class="code-inline tex2jax_ignore">&lt;baz qux="corge"&gt;</code></li>
+</ul></p></li>
+<li class="fragment">Does not have to be <em class="emphasis">UGLY</em>!</li>
+<li class="fragment">PreTeXt is “author-friendly” (Principle #2)</li>
+</ul></p></div></section><section><h3>Description Lists, All At Once</h3>
+<div align="left"><p><dl class="description-list">
+<div>
+<dt>Central Processing Unit (CPU)</dt>
+<dd><p>Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.</p></dd>
+</div>
+<div>
+<dt>Memory</dt>
+<dd><p>Provides storage for the instructions for the CPU and the data they manipulate.</p></dd>
+</div>
+<div>
+<dt>Input/Output (I/O)</dt>
+<dd><p>Communicates with the outside world and with mass storage devices (e.g., disks).</p></dd>
+</div>
+<div>
+<dt>Bus!</dt>
+<dd><p>A communication pathway with a protocol specifying exactly how the pathway is used. (The punctuation is just for testing.)</p></dd>
+</div>
+</dl></p></div></section><section><h3>Description Lists, With Pauses</h3>
+<div align="left"><p><dl class="description-list">
+<div class="fragment">
+<dt>Central Processing Unit (CPU)</dt>
+<dd><p>Controls most of the activities of the computer, performs the arithmetic and logical operations, and contains a small amount of very fast memory.</p></dd>
+</div>
+<div class="fragment">
+<dt>Memory</dt>
+<dd><p>Provides storage for the instructions for the CPU and the data they manipulate.</p></dd>
+</div>
+<div class="fragment">
+<dt>Input/Output (I/O)</dt>
+<dd><p>Communicates with the outside world and with mass storage devices (e.g., disks).</p></dd>
+</div>
+<div class="fragment">
+<dt>Bus!</dt>
+<dd><p>A communication pathway with a protocol specifying exactly how the pathway is used. (The punctuation is just for testing.)</p></dd>
+</div>
+</dl></p></div></section></section><section><section><h1>Blocks and code</h1></section><section><h3>Blocks: <code class="code-inline tex2jax_ignore">&lt;definition&gt;</code>
+</h3>
+<div align="left"><article class="definition definition-like" id="definition-indefinite-integral"><h4 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4>
+<p>Suppose that <span class="process-math">\(\frac{d}{dx}F(x)=f(x)\text{.}\)</span>  Then the <dfn class="terminology">indefinite integral</dfn> of <span class="process-math">\(f(x)\)</span> is <span class="process-math">\(F(x)\)</span> and is written as<div class="displaymath process-math">
+\begin{equation*}
+\int\,f(x)\,dx=F(x)\text{.}
+\end{equation*}
+</div></p></article></div></section><section><h3>Blocks: <code class="code-inline tex2jax_ignore">&lt;theorem&gt;</code>
+</h3>
+<div align="left">
+<p>This should also test other “theorem-like”, such as <code class="code-inline tex2jax_ignore">&lt;corollary&gt;</code>.</p>
+<article class="theorem theorem-like" id="theorem-FTC"><h4 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Fundamental Theorem of Calculus.</span>
+</h4>
+<p>If <span class="process-math">\(f(x)\)</span> is continuous, and the derivative of <span class="process-math">\(F(x)\)</span> is <span class="process-math">\(f(x)\text{,}\)</span> then<div class="displaymath process-math">
+\begin{equation*}
+\definiteintegral{a}{b}{f(x)}{x}=F(b)-F(a)
+\end{equation*}
+</div></p></article><article class="hiddenproof" id="theorem-FTC-4"><h4 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<p>Left to the reader.</p></article>
+</div></section><section><h3>Code</h3>
+<div align="left">
+<p>Here is an inline bit of code with surrounding text. <code class="code-inline tex2jax_ignore">print("hello world")</code>. Here is a more text. And some more. And yet more. And a full program... with Prism support.</p>
+<div class="code-box"><pre class="program line-numbers"><code class="language-py">def f(x):
+    return x**2
+
+# many intentional blank lines below...
+# you may to zoom out, but at some point better to scroll a long listing
+
+
+
+
+
+
+
+
+
+
+print(f(3))
+</code></pre></div>
+</div></section></section><section><section><h1>Sage Cell</h1></section><section><h3>Ramanujan and Integration</h3>
+<div align="left">
+<p>This Sage Cell is testing styling.</p>
+<p>We have some mathematics on the page, to look for Javascript interference with MathJax.  An identity due to Ramanujan:<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }\text{.}
+\end{equation*}
+</div></p>
+<div id="root-1-2-7-2-4" class="ptx-sagecell sagecell-sage"><script type="text/x-sage">numerical_integral(sin(x)^2, (0, 2))
+</script></div>
+<p>And some more mathematics.  An identity due to Ramanujan:<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }\text{.}
+\end{equation*}
+</div></p>
+</div></section></section><section><section><h1>Other features</h1></section><section><h3>Pausing</h3>
+<div align="left">
+<p>Pausing doesn’t always act how you expect from <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span>.  The first and third lines are always visible.</p>
+<p class="fragment">But this one needs you to advance the slide.</p>
+<p>(Visible from the outset.)</p>
+</div></section><section><h3>Subslides</h3>
+<div align="left">
+<p>Subslides are another way to achieve pausing without lists.</p>
+<div class="fragment">
+<p>This is a subslide.  It always comes after a pause.</p>
+<p><ul class="disc" id="root-1-2-8-3-3-2-1">
+<li class="fragment">You can also pause within it.</li>
+<li class="fragment">Of course!</li>
+</ul></p>
+</div>
+<p>But this is still visible from the outset.</p>
+</div></section><section><h3>Images, from an external source</h3>
+<div align="left">
+<p>Images can be included from external sources. As with other PreTeXt formats, you can specify the location of your exteral images in the publication file. The image below also appears in the PreTeXt Sample Article, and originated at <code class="code-inline tex2jax_ignore">www.texample.net</code>.</p>
+<div class="image-box" style="width: 65%; margin-left: 17.5%; margin-right: 17.5%;"><img src="external/images/complete-graph.svg" role="img" class="contained"></div>
+<p>You will want to ensure your image has an <code class="code-inline tex2jax_ignore">@width</code> if you want it to fit correctly in your slide.</p>
+</div></section><section><h3>Images, from source</h3>
+<div align="left">
+<p>Images can also be generated from source. TikZ works well, and Asymptote. They can be placed in a <code class="code-inline tex2jax_ignore">&lt;sidebyside&gt;</code>, and inside a <code class="code-inline tex2jax_ignore">&lt;figure&gt;</code> (or both).</p>
+<p>Common formatting macros for TikZ and Asymptote (which you expect to use repeatedly) can be placed in <code class="code-inline tex2jax_ignore">&lt;docinfo&gt;</code>, using <code class="code-inline tex2jax_ignore">&lt;latex-image-preamble&gt;</code> and <code class="code-inline tex2jax_ignore">&lt;asymptote-preamble&gt;</code>, respectively.</p>
+<p>Note that 3D Asymptote images will be rendered in WebGL, and will be interactive within your slide.</p>
+<figure class="figure figure-like" id="fig-image-demo"><div style="display:table;margin-left:1.5%;margin-right:1.5%;" class="sidebyside">
+<div style="display:table-cell;width:48.4536082474227%;vertical-align:top;"><img src="generated/latex-image/img-tikz.svg" role="img" class="contained" alt=""></div>
+<div style="display:table-cell;width:48.4536082474227%;vertical-align:top;"><div class="asymptote-box" style="padding-top: 108.63309352518%"><iframe src="generated/asymptote/img-asymptote.html" class="asymptote"></iframe></div></div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Two cone images borrowed from the PreTeXt Sample Article. The one on the left is written in TiZ, and the one on the right is written in Asymptote</figcaption></figure>
+</div></section><section><h3>Annotated PreFigure diagrams</h3>
+<div align="left">
+<p>Annotated PreFigure diagrams also work well by including them in the usual way.</p>
+<figure class="figure figure-like" id="root-1-2-8-6-3"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;">
+<div class="ChemAccess-element" data-src="generated/prefigure/annotated-prefigure-network.svg" data-cml="generated/prefigure/annotated-prefigure-network-annotations.xml"></div>
+<details><summary>Diagram Exploration Keyboard Controls</summary><div class="diagcess-navigation-controls"><table>
+<thead><tr>
+<th>Key</th>
+<th>Action</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Enter, A</td>
+<td>Activate keyboard driven exploration</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Activate menu driven exploration</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Leave exploration mode</td>
+</tr>
+<tr>
+<td>Cursor down</td>
+<td>Explore next lower level</td>
+</tr>
+<tr>
+<td>Cursor up</td>
+<td>Explore next upper level</td>
+</tr>
+<tr>
+<td>Cursor right</td>
+<td>Explore next element on level</td>
+</tr>
+<tr>
+<td>Cursor left</td>
+<td>Explore previous element on level</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Toggle expert mode</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Extra details if available</td>
+</tr>
+<tr>
+<td>Space</td>
+<td>Repeat speech</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Activate step magnification</td>
+</tr>
+<tr>
+<td>Comma</td>
+<td>Activate direct magnification</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Deactivate magnification</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>Toggle subtitles</td>
+</tr>
+<tr>
+<td>C</td>
+<td>Cycle contrast settings</td>
+</tr>
+<tr>
+<td>T</td>
+<td>Monochrome colours</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Toggle language (if available)</td>
+</tr>
+<tr>
+<td>K</td>
+<td>Kill current sound</td>
+</tr>
+<tr>
+<td>Y</td>
+<td>Stop sound output</td>
+</tr>
+<tr>
+<td>O</td>
+<td>Start and stop sonification</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Repeat sonification output</td>
+</tr>
+</tbody>
+</table></div></details>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>An annotated PreFigure diagram that can be explored with a screenreader</figcaption></figure>
+</div></section></section>
+</div>
+</div>
+<script>diagcess.Base.init()</script>
+</body>
+<script>
+Reveal.initialize({
+  controls: true,
+  controlsTutorial: true,
+  controlsLayout: 'bottom-right',
+  controlsBackArrows: 'faded',
+  navigationMode: 'default',
+  progress: false,
+  center: false,
+  hash: true,
+  transition: 'fade',
+  width: "100%",
+  height: "100%",
+  margin: "0.025",
+  math: {
+    mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+    config: 'TeX-AMS_HTML-full',
+    // other options are passed into MathJax.Hub.Config()
+    tex2jax: {
+      inlineMath:  [['\\(','\\)']],
+      displayMath: [],
+    }
+  },
+  plugins: [ RevealMath ]
+});
+</script>
+</html>

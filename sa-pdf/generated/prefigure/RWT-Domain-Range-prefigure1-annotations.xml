@@ -1,0 +1,55 @@
+<diagram>
+  <annotations>
+    <annotation id="RWT-Domain-Range-prefigure1-figure" speech2="Graph showing the how the change in y and change in x is found on a graph">
+      <grouped>RWT-Domain-Range-prefigure1-figure</grouped>
+      <position>1</position>
+      <children>
+        <active>RWT-Domain-Range-prefigure1-graph-group</active>
+      </children>
+      <components>
+        <active>RWT-Domain-Range-prefigure1-graph-group</active>
+      </components>
+    </annotation>
+    <annotation id="RWT-Domain-Range-prefigure1-graph-group" speech2="The graph and its tangent line">
+      <grouped>RWT-Domain-Range-prefigure1-graph-group</grouped>
+      <position>1</position>
+      <children>
+        <active>RWT-Domain-Range-prefigure1-graph</active>
+        <active>RWT-Domain-Range-prefigure1-point</active>
+        <active>RWT-Domain-Range-prefigure1-tangent</active>
+      </children>
+      <components>
+        <active>RWT-Domain-Range-prefigure1-graph</active>
+        <active>RWT-Domain-Range-prefigure1-point</active>
+        <active>RWT-Domain-Range-prefigure1-tangent</active>
+      </components>
+      <parents>
+        <grouped>RWT-Domain-Range-prefigure1-figure</grouped>
+      </parents>
+    </annotation>
+    <annotation id="RWT-Domain-Range-prefigure1-graph" speech2="The graph of the function f" sonify="yes">
+      <active>RWT-Domain-Range-prefigure1-graph</active>
+      <position>1</position>
+      <parents>
+        <grouped>RWT-Domain-Range-prefigure1-graph-group</grouped>
+      </parents>
+      <sonification>
+        <ACTIVE>RWT-Domain-Range-prefigure1-graph</ACTIVE>
+      </sonification>
+    </annotation>
+    <annotation id="RWT-Domain-Range-prefigure1-point" speech2="The point a comma f of a">
+      <active>RWT-Domain-Range-prefigure1-point</active>
+      <position>2</position>
+      <parents>
+        <grouped>RWT-Domain-Range-prefigure1-graph-group</grouped>
+      </parents>
+    </annotation>
+    <annotation id="RWT-Domain-Range-prefigure1-tangent" speech2="The tangent line to the graph of f at the point">
+      <active>RWT-Domain-Range-prefigure1-tangent</active>
+      <position>3</position>
+      <parents>
+        <grouped>RWT-Domain-Range-prefigure1-graph-group</grouped>
+      </parents>
+    </annotation>
+  </annotations>
+</diagram>

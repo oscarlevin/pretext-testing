@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<myopenmath xmlns:pi="http://pretextbook.org/2020/pretext/internal" id="7492">
+<statement>
+<p>
+You wish to determine if there is a positive linear correlation between the two variables at a significance level of <m>\displaystyle\alpha={0.02}</m>.
+You have the following bivariate data set.
+</p><tabular> <row><cell>x</cell><cell>y</cell></row><row><cell>40</cell><cell>113.5</cell></row><row><cell>30.3</cell><cell>80</cell></row><row><cell>15.4</cell><cell>60.7</cell></row><row><cell>19.2</cell><cell>51.2</cell></row><row><cell>16.4</cell><cell>100.4</cell></row><row><cell>42.7</cell><cell>116.3</cell></row><row><cell>24.1</cell><cell>83.8</cell></row><row><cell>24.7</cell><cell>71.9</cell></row><row><cell>21.9</cell><cell>65.2</cell></row><row><cell>25.2</cell><cell>99.2</cell></row><row><cell>33.4</cell><cell>124.9</cell></row><row><cell>33.7</cell><cell>114</cell></row><row><cell>29.4</cell><cell>90.2</cell></row><row><cell>25.9</cell><cell>82.7</cell></row><row><cell>20</cell><cell>47.9</cell></row><row><cell>13.7</cell><cell>48.9</cell></row><row><cell>18.9</cell><cell>46.9</cell></row><row><cell>20</cell><cell>51.8</cell></row><row><cell>30.9</cell><cell>100.9</cell></row><row><cell>15.6</cell><cell>56.4</cell></row><row><cell>26</cell><cell>89.1</cell></row><row><cell>21.1</cell><cell>59.9</cell></row><row><cell>31.5</cell><cell>71</cell></row><row><cell>33.2</cell><cell>101.9</cell></row><row><cell>21.3</cell><cell>76.2</cell></row><row><cell>18.8</cell><cell>72.1</cell></row><row><cell>34.4</cell><cell>86</cell></row><row><cell>23.3</cell><cell>59.4</cell></row><row><cell>15.5</cell><cell>72.7</cell></row><row><cell>13.8</cell><cell>39.6</cell></row><row><cell>25.6</cell><cell>76.4</cell></row><row><cell>4</cell><cell>28.3</cell></row><row><cell>28.7</cell><cell>81</cell></row><row><cell>3.8</cell><cell>27.2</cell></row><row><cell>1.1</cell><cell>21.9</cell></row></tabular><p>
+download link provided here:  <url href="denied:data:text/csv;charset=UTF-8,%22x%22%2C%22y%22%0A40%2C113.5%0A30.3%2C80%0A15.4%2C60.7%0A19.2%2C51.2%0A16.4%2C100.4%0A42.7%2C116.3%0A24.1%2C83.8%0A24.7%2C71.9%0A21.9%2C65.2%0A25.2%2C99.2%0A33.4%2C124.9%0A33.7%2C114%0A29.4%2C90.2%0A25.9%2C82.7%0A20%2C47.9%0A13.7%2C48.9%0A18.9%2C46.9%0A20%2C51.8%0A30.9%2C100.9%0A15.6%2C56.4%0A26%2C89.1%0A21.1%2C59.9%0A31.5%2C71%0A33.2%2C101.9%0A21.3%2C76.2%0A18.8%2C72.1%0A34.4%2C86%0A23.3%2C59.4%0A15.5%2C72.7%0A13.8%2C39.6%0A25.6%2C76.4%0A4%2C28.3%0A28.7%2C81%0A3.8%2C27.2%0A1.1%2C21.9">Download CSV</url></p>
+<p>
+What is the correlation coefficient for this data set? </p>
+<p>
+       <em>r</em> = <input type="text" style="width:13ch" name="qn1000" id="qn1000" value="" autocomplete="off" aria-label="Question 1 Part 1 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 3 decimal places)</p>
+<p>
+To find the p-value for a correlation coefficient, you need to convert to a <em>t</em>-score:
+  <m>\displaystyle{t}={r}\cdot\sqrt{{\frac{{{n}-{2}}}{{{1}-{r}^{{2}}}}}}</m>
+This <em>t</em>-score is from a <em>t</em>-distribution with <m>\displaystyle{n}-{2}</m> degrees of freedom.</p>
+<p>
+What is the p-value for this correlation coefficient? </p>
+<p>
+       p-value = <input type="text" style="width:15.4ch" name="qn1001" id="qn1001" value="" autocomplete="off" aria-label="Question 1 Part 2 of 3" class="text"/> </p>
+<p>
+(report answer accurate to at least 4 decimal places)</p>
+<p>
+Your final conclusion is that... </p>
+<p><ol style="list-style-type:upper-alpha"><li>There is insufficient sample evidence to support the claim the there is a positive correlation between the two variables.</li> 
+<li>There is sufficient sample evidence to support the claim that there is a statistically significant positive correlation between the two variables.</li> 
+</ol></p>
+
+
+</statement>
+<solution>
+<p><ul><li>0.856</li><li>0</li><li>B: There is sufficient sample evidence to support the claim that there is a statistically significant positive correlation between the two variables.</li></ul></p>
+</solution>
+</myopenmath>

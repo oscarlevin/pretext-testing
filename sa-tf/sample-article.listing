@@ -1,0 +1,4 @@
+$ (*\consoleinput{gcc -Wall -o intAndFloat intAndFloat.c}*)
+$ (*\consoleinput{./intAndFloat}*)
+The integer is 19088743 and the float is 19088.742188
+$ (*\consoleinput{}*)

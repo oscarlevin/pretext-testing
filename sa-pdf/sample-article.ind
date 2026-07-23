@@ -1,0 +1,282 @@
+\begin{theindex}
+
+  \item \(\int f(x)\,dx\), \hyperpage{79}
+
+  \indexspace
+
+  \item A, \hyperindexformat{\see{F}}{2}, \hyperindexformat{\see{G}}{2}, 
+		\hyperindexformat{\see{H}}{2}
+    \subitem B, \hyperpage{2}
+      \subsubitem C, \hyperindexformat{\seealso{A}}{2}, 
+		\hyperindexformat{\seealso{D}}{2}, \hyperpage{2}
+  \item activity, \hyperpage{11}
+  \item alert, \hyperpage{24}
+  \item Archimedian Spiral, \hyperpage{109}
+  \item aside, \hyperpage{11}
+  \item assemblage, \hyperpage{22}
+  \item asymptote graphics language, \hyperpage{59}
+  \item attributes
+    \subitem doctest, \hyperpage{3}
+    \subitem ncbi attribute, \hyperpage{48}
+  \item autoname, \hyperpage{139}
+
+  \indexspace
+
+  \item biological names, \hyperpage{48}
+    \subitem genus, \hyperpage{48}
+    \subitem ncbi attribute, \hyperpage{48}
+    \subitem species, \hyperpage{48}
+    \subitem taxon, \hyperpage{48}
+  \item bug
+    \subitem in-context broken, \hyperpage{143}
+
+  \indexspace
+
+  \item c, \hyperpage{3}
+  \item A bug test, sorted as ``c''
+    \subitem b
+      \subsubitem c one, \hyperpage{3}
+      \subsubitem c three, \hyperpage{3}
+    \subitem x
+      \subsubitem c two, \hyperpage{3}
+  \item CalcPlot3D, \hyperpage{121}
+  \item canceling a term, \hyperpage{36}
+  \item \mono{cancelto} macro, \hyperpage{36}
+  \item sorted as if ``Cat'', \hyperpage{2}
+  \item CAYLEY GRAPH, \hyperpage{2, 3}
+  \item Cayley graph, \hyperpage{2}
+  \item cayley graph, \hyperpage{2}
+  \item Charge of the Light Brigade
+    \subitem second stanza, \hyperpage{179}
+  \item Charge of the Light Brigade, The, Tennyson, \hyperpage{179}
+  \item colors
+    \subitem shades, \hyperpage{166, 167}
+  \item conundrum
+    \subitem repurposed from proposition, \hyperpage{200}
+  \item cross-reference, \hyperpage{139}
+
+  \indexspace
+
+  \item D3.js, \hyperpage{105}
+  \item derivative
+    \subitem cosine, \hyperpage{71}
+  \item description list, \hyperpage{82}
+  \item Desmos graphs, \hyperpage{120}
+  \item doctest, \hyperpage{3}
+
+  \indexspace
+
+  \item em
+    \subitem emphasis, \hyperpage{24}
+  \item embedded interactive elements
+    \subitem authored, \hyperpage{103}
+    \subitem server, \hyperpage{119}
+  \item even numbers, \hyperpage{127}
+  \item exercise group
+    \subitem two derivatives, \hyperpage{71}
+  \item exploration, \hyperpage{11}
+
+  \indexspace
+
+  \item fill-in blank, \hyperpage{72}
+  \item Fire and Ice, Frost, \hyperpage{171}
+  \item footnotes, \hyperpage{25}
+  \item Fundamental Theorem of Calculus, \hyperpage{2}
+    \subitem Corollary, \hyperpage{6}
+
+  \indexspace
+
+  \item gas, \hyperpage{5}
+  \item gas masks, \hyperpage{5}
+  \item gas production, \hyperpage{5}
+  \item gas works, \hyperpage{5}
+  \item gasoline, \hyperpage{5}
+  \item gastritis, \hyperpage{5}
+  \item genus, \hyperpage{48}
+  \item Geogebra
+    \subitem material, \hyperpage{119}
+    \subitem server, \hyperpage{119}
+  \item glossary, \hyperpage{18}, \hyperpage{271}
+  \item Group, \hyperpage{78}
+  \item group
+    \subitem definition, \hyperpage{78}
+
+  \indexspace
+
+  \item image, \hyperpage{160}
+    \subitem \LaTeX{} image, \hyperpage{55}
+    \subitem PreFigure image, \hyperpage{52}
+  \item indefinite integral, \hyperpage{2}
+  \item integral
+    \subitem indefinite integral, \hyperpage{2}
+  \item interactive elements
+    \subitem authored, \hyperpage{103}
+    \subitem layout, \hyperpage{119}
+    \subitem server, \hyperpage{119}
+  \item internationalization, \hyperpage{145}
+  \item investigation, \hyperpage{11}
+
+  \indexspace
+
+  \item JessieCode, \hyperpage{110}
+  \item JSXGraph, \hyperpage{108}
+
+  \indexspace
+
+  \item keyboard keys, \hyperpage{46}
+  \item knowl
+    \subitem nested, \hyperpage{141}
+
+  \indexspace
+
+  \item \LaTeX{} image, \hyperpage{55}
+  \item Led Zeppelin video, \hyperpage{136}
+  \item link
+    \subitem external, url, \hyperpage{47}, \hyperpage{133}
+  \item list, \hyperpage{86}
+    \subitem description, \hyperpage{82}
+    \subitem multicolumn, \hyperpage{26--28}
+    \subitem named, \hyperpage{85}
+    \subitem ordered, \hyperpage{75}
+    \subitem unordered, \hyperpage{75}
+  \item listing, \hyperpage{150}
+
+  \indexspace
+
+  \item matching US dates, \hyperpage{128}
+  \item math in lists \(\frac{d}{dx}(\sin(x))=\cos(x)\), \hyperpage{79}
+  \item matrix, \hyperpage{149}
+  \item Maxwell's equations, \hyperpage{29}
+  \item Mermaid diagrams, \hyperpage{62}
+  \item mixed-content \emph{emphasized}, \hyperpage{2}
+
+  \indexspace
+
+  \item name, \hyperpage{200}
+  \item named list, \hyperpage{85}
+  \item ncbi attribute, \hyperpage{48}
+  \item numbering, \hyperpage{197}
+  \item numerical, \hyperindexformat{\see{Sage integration}}{2}, 
+		\hyperindexformat{\see{Sage}}{2}
+  \item numerical integration
+    \subitem Sage
+      \subsubitem cell, \hyperindexformat{\see{Sage}}{2}
+  \item numerics, \hyperindexformat{\seealso{Sage}}{2}, \hyperpage{2}
+
+  \indexspace
+
+  \item ordered list, \hyperpage{75}
+
+  \indexspace
+
+  \item package
+    \subitem siunitx, \hyperpage{158}
+  \item panels, \hyperpage{158}
+  \item paragraph
+    \subitem initial list, \hyperpage{78}
+    \subitem normal, \hyperpage{87}
+    \subitem opens with list, \hyperpage{87}
+  \item poem, \hyperpage{170}, \hyperpage{179}
+  \item PreFigure image, \hyperpage{52}
+  \item prime numbers, \hyperpage{127}
+  \item problem, \hyperpage{11}
+  \item program listing, \hyperpage{150}
+  \item project, \hyperpage{11}
+  \item PSTricks, \hyperpage{58}
+
+  \indexspace
+
+  \item question, \hyperpage{11}
+  \item sorted as if ``Quorum'', \hyperpage{2}
+  \item quotations, \hyperpage{42}
+
+  \indexspace
+
+  \item R, \hyperpage{3}
+  \item \(\rho\)\textendash{}fibers, \hyperpage{2}
+  \item reading questions, \hyperpage{18}
+  \item reference
+    \subitem external, \hyperpage{144}
+    \subitem external, url, \hyperpage{47}, \hyperpage{133}
+  \item references
+    \subitem within a section, \hyperpage{74}
+  \item rename an environment, \hyperpage{11}
+    \subitem conundrum, \hyperpage{200}
+  \item rho, a test, \hyperpage{28}
+
+  \indexspace
+
+  \item Sage
+    \subitem integration, \hyperpage{2}
+      \subsubitem cell, \hyperpage{2}
+      \subsubitem numerical, \hyperpage{2}
+    \subitem interacts, \hyperpage{111}
+  \item Sage cell
+    \subitem with a title, \hyperpage{5}
+  \item Sage cells
+    \subitem linking, \hyperpage{21}
+  \item Sage plots, \hyperpage{64}
+  \item scientific names, \hyperindexformat{\see{biological names}}{48}
+  \item Sieve of Eratosthenes, \hyperpage{127}
+  \item siunitx package, \hyperpage{158}
+  \item solutions
+    \subitem all answers, \hyperpage{259}
+    \subitem all even answers, \hyperpage{262}
+    \subitem as an appendix, \hyperpage{250}
+    \subitem for a division, \hyperpage{18}
+    \subitem for one group of exercises, \hyperpage{259}
+  \item Sonnet to Liberty, Wilde, \hyperpage{171}
+  \item species, \hyperpage{48}
+  \item STACK, \hyperpage{204}
+  \item Stolen Child, The, Yeats, \hyperpage{172}
+  \item stop signs, \hyperpage{126}
+  \item strange colors, \hyperpage{26}
+  \item structured-content \emph{emphasized}, \hyperpage{2}
+  \item styling words
+    \subitem alert, \hyperpage{24}
+    \subitem delete, \hyperpage{24}
+    \subitem em, \hyperpage{24}
+    \subitem emphasis, \hyperpage{24}
+    \subitem insert, \hyperpage{24}
+    \subitem stale, \hyperpage{24}
+
+  \indexspace
+
+  \item table, \hyperpage{164}
+  \item task, \hyperpage{11}
+  \item taxon, \hyperpage{48}
+  \item test: buried in theorem\slash{}statement\slash{}p, 
+		\hyperpage{2}
+
+  \indexspace
+
+  \item Underdown, Jason, \hyperpage{35}
+  \item Unicode, \hyperpage{145}
+  \item units, \hyperpage{158}
+    \subitem Z (\alert{sort as} A), \hyperpage{2}
+    \subitem A (\alert{sort as} Z), \hyperpage{2}
+  \item unordered list, \hyperpage{75}
+  \item url, \hyperpage{144}
+
+  \indexspace
+
+  \item vector space, \hyperpage{126}
+  \item \mono{verbatim text}, use sortby, \hyperpage{2}
+  \item videos
+    \subitem YouTube, \hyperpage{135}
+
+  \indexspace
+
+  \item X, \hyperindexformat{\seealso{F}}{2}, 
+		\hyperindexformat{\seealso{G}}{2}, 
+		\hyperindexformat{\seealso{H}}{2}, \hyperpage{2}
+    \subitem Y, \hyperpage{2}
+      \subsubitem Z, \hyperindexformat{\see{A}}{2}, 
+		\hyperindexformat{\see{D}}{2}
+  \item \(x\) as a variable, \hyperpage{2}
+
+  \indexspace
+
+  \item YouTube videos, \hyperpage{135}
+
+\end{theindex}
