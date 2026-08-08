@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-tables" assembly-id="tables">
-  <static seed="80">
+  <static seed="82">
     <statement><p>A table with minimal XML source.</p>
 <!-- PTX:WARNING: PGML wanted to center align here. -->
 <tabular>
@@ -94,7 +94,6 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
-TEXT(beginproblem());
 
 ############################################################
 # PG Setup Code
@@ -111,15 +110,18 @@ A table with minimal XML source.
 
 >> [@DataTable(
   [
-    [PGML('A'),
+    [
+     PGML('A'),
      PGML('B'),
      PGML('C'),
     ],
-    [PGML('D'),
+    [
+     PGML('D'),
      PGML('E'),
      PGML('F'),
     ],
-    [PGML('G'),
+    [
+     PGML('G'),
      PGML('H'),
      PGML('I'),
     ],
@@ -131,12 +133,14 @@ Finish this table.
 
 >> [@DataTable(
   [
-    [[PGML('1'),
+    [
+     [PGML('1'),
       halign => 'r',],
      PGML('two'),
      PGML('[`\lfloor\pi\rfloor`]'),
     ],
-    [[PGML('[`\text{I}+\text{I}`]  
+    [
+     [PGML('[`\text{I}+\text{I}`]  
 [`{}+\text{I}+\text{I}`]  
 '),
       rowbottom => '3',
@@ -146,7 +150,8 @@ Finish this table.
      PGML('[_]{$x}{5}'),
      PGML('six'),
     ],
-    [[PGML('[`2^3-1`]'),
+    [
+     [PGML('[`2^3-1`]'),
       rowbottom => '3',
       midrule => '1',],
      [PGML('VIII'),

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
-Copyright 2015 Robert A. Beezer
+Copyright (C) 2015-2026  Robert A. Beezer
 
 This file is part of PreTeXt.
 
@@ -76,7 +76,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- we use customizations-two for the oscarlevin style example -->
     <source customizations="customizations-one.xml">
-        <directories external="media" generated="gen"/>
+        <directories generated="gen"/>
         <!-- this is an example of placing @generated *outside* of revision control -->
         <!-- <directories external="media" generated="../../../altgen"/> -->
     </source>
@@ -113,5 +113,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <insertions pagebreaks="quotations exercises-section-multiple pre-roll-countdown-8"/>
         <insertions pagebreaks="sidebyside-bully-pulpit sbsgroup-pagebreak-test"/>
     </latex>
+
+    <html>
+        <brandlogo url="https://pretextbook.org" source="misc/book-cover-google-art-project.jpg"/>
+    </html>
 
 </publication>

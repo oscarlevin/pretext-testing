@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-list-indentation-with-images-and-tables" assembly-id="list-indentation-with-images-and-tables">
-  <static seed="84">
+  <static seed="86">
     <statement><p xmlns:pi="http://pretextbook.org/2020/pretext/internal"><ol label="a.">
 <li>
 <p>Structured item</p>
@@ -121,7 +121,6 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
-TEXT(beginproblem());
 
 ############################################################
 # PG Setup Code
@@ -152,10 +151,12 @@ a.  Structured item
 
     [@DataTable(
       [
-        [PGML('a'),
+        [
+         PGML('a'),
          PGML('b'),
         ],
-        [PGML('c'),
+        [
+         PGML('c'),
          PGML('d'),
         ],
       ],
@@ -164,12 +165,14 @@ a.  Structured item
 
 a.  [@DataTable(
       [
-        [[PGML('1'),
+        [
+         [PGML('1'),
           halign => 'r',],
          PGML('two'),
          PGML('[`\lfloor\pi\rfloor`]'),
         ],
-        [[PGML('[`\text{I}+\text{I}`]  
+        [
+         [PGML('[`\text{I}+\text{I}`]  
 [`{}+\text{I}+\text{I}`]  
 '),
           rowbottom => '3',
@@ -179,7 +182,8 @@ a.  [@DataTable(
          PGML('[`5`]'),
          PGML('six'),
         ],
-        [[PGML('[`2^3-1`]'),
+        [
+         [PGML('[`2^3-1`]'),
           rowbottom => '3',
           midrule => '1',],
          [PGML('VIII'),
@@ -196,10 +200,12 @@ a.  Structured item
 
     [@DataTable(
       [
-        [PGML('a'),
+        [
+         PGML('a'),
          PGML('b'),
         ],
-        [PGML('c'),
+        [
+         PGML('c'),
          PGML('d'),
         ],
       ],

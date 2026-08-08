@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
-Copyright 2015 Robert A. Beezer
+Copyright (C) 2015-2026  Robert A. Beezer
 
 This file is part of PreTeXt.
 
@@ -27,7 +27,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- managed directories, standard directory names in source  -->
     <source>
-        <directories external="ext" generated="gen"/>
+        <directories generated="gen"/>
         <version include="no-parts"/>
     </source>
 
@@ -42,6 +42,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- HTML-Specific Options -->
     <html>
+        <brandlogo url="http://abstract.pugetsound.edu" source="cover_aata_2014.png"/>
     </html>
 
     <html>

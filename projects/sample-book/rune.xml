@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
-Copyright 2016 Robert A. Beezer
+Copyright (C) 2016-2026  Robert A. Beezer
 
-This file is part of MathBook XML.
+This file is part of PreTeXt.
 
-MathBook XML is free software: you can redistribute it and/or modify
+PreTeXt is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 or version 3 of the
 License (at your option).
 
-MathBook XML is distributed in the hope that it will be useful,
+PreTeXt is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 <!-- This file was originally part of the book     -->
 <!-- (as copied on 2016/03/25)                     -->
@@ -58,7 +58,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </program>
         </listing>
 
-        <p>Instead of specifying <attr>language</attr> on each program, a default can be specified at <c>docinfo/programs/@language</c>. That value will be used for any program that lacks a <attr>language</attr> attribute. This sample does not specify it's own <attr>language</attr> and is relying on the default set in this book.</p>
+        <p>Instead of specifying <attr>language</attr> on each program, a default can be specified at <c>docinfo/defaults/programs/@language</c>. That value will be used for any program that lacks a <attr>language</attr> attribute. This sample does not specify it's own <attr>language</attr> and is relying on the default set in this book.</p>
 
         <listing>
             <title>Python program, relying on default programs language</title>
@@ -68,6 +68,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     print("Hello, World!")
 
                 say_hello()
+                </code>
+            </program>
+        </listing>
+
+
+        <listing xml:id="program-notactive-gdscript">
+            <title>An non-interactive GDScript program, using <pubtitle>Runestone</pubtitle></title>
+            <program xml:id="gdscript-simple-hello-world"  language="gdscript" label="gd-simple-hello-world">
+                <code>
+                    extends Node
+
+                    func _ready():
+                        print("Hello, World!")
+
+
                 </code>
             </program>
         </listing>
@@ -88,7 +103,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </program>
         </listing>
 
-        <p>Otherwise they are rendered as text with syntax coloring. Either way, if a <attr>language</attr> is not specified, <c>docinfo/programs/@language</c> will be checked to determine what language to assume the code is written in.
+        <p>Otherwise they are rendered as text with syntax coloring. Either way, if a <attr>language</attr> is not specified, <c>docinfo/defaults/programs/@language</c> will be checked to determine what language to assume the code is written in.
         </p>
 
         <listing xml:id="program-activecode-python2">
@@ -104,7 +119,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-c">
             <title>An C program, interactive on a <pubtitle>Runestone</pubtitle> server</title>
-            <program xml:id="c-hello-world" interactive='activecode' language="c">
+            <program xml:id="c-hello-world" label="c-hello-world" interactive='activecode' language="c">
                 <code>
                 #include &lt;stdio.h&gt;
 
@@ -116,11 +131,217 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </program>
         </listing>
 
+        <p>A GDScript program will run interactively in the browser.</p>
+
+        <activity xml:id="program-activecode-gdscript" label="program-activecode-gdscript">
+            <title>An interactive GDScript program, using <pubtitle>Runestone</pubtitle></title>
+            <statement><p>Run the following code.
+        You'll need to fix the function `get_double` that takes 1 `int` parameter and returns an `int` for the test to pass.</p></statement>
+            <program xml:id="gdscript-hello-world" interactive='activecode'
+                     language="gdscript" label="gd-hello-world"
+                     pck="gdpractice/L1.P1.double_value"
+                     scene="res://practices/L1.P1.double_value/practice.tscn">
+                <code>
+                    # Complete get_double() so that it returns twice its input.
+                    extends Node
+
+
+                    # Returns double `value`.
+                    func get_double(value: int) -&gt; int:
+                        return value
+                </code>
+                <tests>
+                    extends PracticeTest
+
+                    ## L1.P1 - Double the value
+                    ##
+                    ## A "simple" GDPractice example: no scene state and no _test_space - just a
+                    ## direct comparison of get_double() between the practice and the solution via
+                    ## _call_all(), plus a structural guardrail from requirements.gd.
+
+                    const Requirements := preload("res://addons/gdpractice/tester/requirements.gd")
+
+                    ## Inputs used to compare get_double() between the practice and the solution.
+                    const TEST_VALUES: Array[int] = [0, 1, 2, 5, -3]
+
+
+                    func _build_requirements() -&gt; void:
+                        super()
+                        Requirements.setup(_practice_base_path)
+                        _add_callable_requirement(
+                            "get_double()'s signature must not change",
+                            func() -&gt; String:
+                                return (
+                                    ""
+                                    if Requirements._check_methods()
+                                    else "Don't change get_double()'s parameters or return type - only fill in its body."
+                                )
+                        )
+
+
+                    func _build_checks() -&gt; void:
+                        for test_value: int in TEST_VALUES:
+                            # GDScript lambdas capture local variables by value, so each closure
+                            # below keeps its own snapshot of `test_value`.
+                            _add_simple_check(
+                                "get_double(%d) returns %d" % [test_value, test_value * 2],
+                                func() -&gt; String:
+                                    var result := _call_all("get_double", [test_value])
+                                    if result.practice != result.solution:
+                                        return (
+                                            "Expected get_double(%d) to return %d, but got %s."
+                                            % [test_value, result.solution, result.practice]
+                                        )
+                                    return ""
+                            )
+
+                </tests>
+            </program>
+        </activity>
+
+        <p>Here's a GDScript program with some graphics.</p>
+
+        <activity xml:id="program-activecode-gdscript-graphics" label="program-activecode-gdscript-graphics">
+            <title>An interactive GDScript program, with graphics</title>
+            <statement><p>This is the <em>first script</em> from the <url href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting_first_script.html#">Godot getting started step-by-step example</url>.
+            The first thing to try is adding the following code:</p>
+            <program language="gdscript">
+                <code>
+                    var speed = 400
+                    var angular_speed = PI
+
+                    func _process(delta):
+                        rotation += angular_speed * delta
+                </code>
+
+            </program>
+            <p>Then change it to the following code:</p>
+            <program language="gdscript">
+                <code>
+                    var speed = 400
+                    var angular_speed = PI
+
+                    func _process(delta):
+                        rotation += angular_speed * delta
+
+                        var velocity = Vector2.UP.rotated(rotation) * speed
+
+                        position += velocity * delta
+               </code>
+            </program>
+            </statement>
+            <program xml:id="gdscript-first-script" interactive='activecode' language="gdscript" label="gd-first-script"
+                     pck="gdpractice/first_script"
+                     scene="res://practices/first_script/practice.tscn">
+                <code>
+                    extends Sprite2D
+
+                    func _init():
+                        pass
+
+                </code>
+                <tests>
+                    extends PracticeTest
+
+
+                    func _build_checks() -&gt; void:
+                        var practice_slot = _practice
+
+                        var c1 := Check.new()
+                        c1.description = "Run graphical program"
+                        c1.checker = func() -&gt; String:
+                            return ""
+
+
+
+                        checks.append_array([c1])
+
+                </tests>
+            </program>
+        </activity>
+
+
+        <p>Here's a GDScript program with split graphics. testing making a change</p>
+
+        <activity xml:id="program-activecode-gdscript-split-graphics" label="program-activecode-gdscript-split-graphics">
+            <title>An interactive GDScript program, with split graphics</title>
+            <statement><p>This is an example of split screen code.
+            </p></statement>
+            <program xml:id="gdscript-split-screen" interactive='activecode' language="gdscript" label="gd-split-screen"
+                     pck="gdpractice/L2.P9.visual_2d"
+                     scene="res://practices/L2.P9.visual_2d_input_motion/practice.tscn">
+                <code>
+                    extends Node2D
+
+                    const SPEED := 200.0
+
+
+                    func _physics_process(delta: float) -&gt; void:
+                        if Input.is_action_pressed("move_right"):
+                            position.x += 0
+
+
+                </code>
+                <tests>
+                    extends PracticeTest
+
+                    func _init() -&gt; void:
+                        side_by_side = true
+                        if not InputMap.has_action("move_right"):
+                            InputMap.add_action("move_right")
+                            var event := InputEventKey.new()
+                            event.keycode = KEY_D
+                            InputMap.action_add_event("move_right", event)
+
+
+                    func _build_requirements() -&gt; void:
+                        super()
+                        _add_actions_requirement(["move_right"])
+
+
+                    func _setup_state() -&gt; void:
+                        _practice.position = Vector2.ZERO
+                        _solution.position = Vector2.ZERO
+
+
+                    func _setup_populate_test_space() -&gt; void:
+                        Input.action_press("move_right")
+                        await _connect_timed(0.5, get_tree().physics_frame, _populate_test_space)
+                        Input.action_release("move_right")
+
+
+                    func _populate_test_space() -&gt; void:
+                        _test_space.append({
+                            practice_position = _practice.position,
+                            solution_position = _solution.position,
+                        })
+
+
+                    func _build_checks() -&gt; void:
+                        _add_simple_check(
+                            "holding move_right should move the practice node to match the solution",
+                            func() -&gt; String:
+                                var last: Dictionary = _test_space.back()
+                                return (
+                                    ""
+                                    if last.practice_position.is_equal_approx(last.solution_position)
+                                    else (
+                                        "position doesn't match the solution. Make sure position.x is "
+                                        + "updated based on SPEED in _physics_process() when move_right is pressed."
+                                    )
+                                )
+                        )
+
+
+                </tests>
+            </program>
+        </activity>
+
         <p>A Java program will only be interactive if hosted on a Runestone server.</p>
 
         <listing xml:id="program-activecode-java">
             <title>A Java program, interactive on a <pubtitle>Runestone</pubtitle> server</title>
-            <program xml:id="java-hello-world" interactive='activecode' language="java">
+            <program xml:id="java-hello-world" label="java-hello-world" interactive='activecode' language="java">
                 <code>
                 public class HelloWorld {
                     public static void main(String[] args) {
@@ -135,18 +356,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-javascript">
             <title>An interactive JavaScript program, using <pubtitle>Runestone</pubtitle></title>
-            <program xml:id="javascript-hello-world" interactive='activecode' language="javascript">
+            <program xml:id="javascript-hello-world" label="javascript-hello-world" interactive='activecode' language="javascript">
                 <code>
                 document.write('Hello, world!');
                 </code>
             </program>
         </listing>
 
-        <p>Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify <attr>compiler-args</attr> and <attr>linker-args</attr> or <attr>interpreter-args</attr> as appropriate to the language. Default values for those options can be set in <tag>docinfo/programs</tag> - any defaults set there will be used for any program that lacks the corresponding attribute.</p>
+        <p>Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify <attr>compiler-args</attr> and <attr>linker-args</attr> or <attr>interpreter-args</attr> as appropriate to the language. Default values for those options can be set in <tag>docinfo/defaults/programs</tag> - any defaults set there will be used for any program that lacks the corresponding attribute.</p>
+
+        <p>It may be convenient to set <attr>compiler-args</attr> and <attr>linker-args</attr> at the book level in <tag>docinfo/defaults/programs</tag>. Values specified in that location will be used for any <tag>program</tag> that does not override the values by specifying its own attributes.</p>
 
         <listing>
             <title>A C++ program with compiler-args and stdin</title>
-            <p>It may be convenient to set <attr>compiler-args</attr> and <attr>linker-args</attr> at the book level in <tag>docinfo/programs</tag>. Values specified in that location will be used for any <tag>program</tag> that does not override the values by specifying its own attributes.</p>
             <program interactive="activecode" label="hello-world-cpp" language="cpp" compiler-args="-std=c++17,-Wall,-g" linker-args="-g,-s">
                 <code>
                     #include &lt;iostream&gt;
@@ -188,7 +410,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-octave">
             <title>A simple Octave program</title>
-            <program xml:id="octave-simple" interactive='activecode' language="octave">
+            <program xml:id="octave-simple" label="octave-simple" interactive='activecode' language="octave">
                 <code>
                 x = 2 + 2
                 printf("%d\n", x)
@@ -200,7 +422,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-kotlin">
             <title>A simple Kotlin program</title>
-            <program xml:id="kotlin-hello-world" interactive='activecode' language="kotlin">
+            <program xml:id="kotlin-hello-world" label="kotlin-hello-world" interactive='activecode' language="kotlin">
                 <code>
                 fun main() {
                     println("Hello, world!!")
@@ -213,7 +435,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-mistake-pascal">
             <title>A Pascal program that cannot be interactive on Runestone</title>
-            <program xml:id="pascal-mistake" interactive='activecode' language="pascal">
+            <program xml:id="pascal-mistake" label="pascal-mistake" interactive='activecode' language="pascal">
                 <code>
                 program HelloWorld;
                 begin
@@ -285,7 +507,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </program>
         </listing>
 
-        <p>The following Python program is in a <tag>listing</tag> since we will want to reference it shortly.  The program does not do very much, it just defines four variables whose values are lists of statistics.  It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an <attr>language</attr> and is relying on the default one specified in <tag>docinfo/programs</tag></p>
+        <p>The following Python program is in a <tag>listing</tag> since we will want to reference it shortly.  The program does not do very much, it just defines four variables whose values are lists of statistics.  It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an <attr>language</attr> and is relying on the default one specified in <tag>docinfo/defaults/programs</tag></p>
 
         <listing xml:id="listing-python-included">
             <title>A Python program that defines some statistics</title>
@@ -306,7 +528,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-java-flags">
             <title>A Java program, interactive on a <pubtitle>Runestone</pubtitle> server, with compiler and linker flags</title>
-            <program xml:id="java-hello-world-flags" interactive='activecode' language="java" compiler-args="-g" linker-args="-s">
+            <program xml:id="java-hello-world-flags" label="java-hello-world-flags" interactive='activecode' language="java" compiler-args="-g" linker-args="-s">
                 <code>
                 import javax.swing.JFrame;  //Importing class JFrame
                 import javax.swing.JLabel;  //Importing class JLabel
@@ -330,7 +552,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>This program also makes use of <attr>autorun</attr> to execute on page load and the <attr>codelens</attr>to disable the codelens feature.</p>
 
-        <exercise xml:id="exercise-python-including">
+        <exercise xml:id="exercise-python-including" label="exercise-python-including">
             <title>A Python program, including another</title>
             <statement>
                 <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
@@ -361,7 +583,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>This program also makes use of <attr>hidecode</attr> to initially keep the code hidden and <attr>download</attr> to enable a file download of the program (that includes all the included code).</p>
 
-        <exercise xml:id="exercise-python-including-two">
+        <exercise xml:id="exercise-python-including-two" label="exercise-python-including-two">
             <title>A Python program, including two others</title>
             <statement>
                 <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
@@ -390,7 +612,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>Here is an activecode with <attr>language</attr> set to <c>sql</c> uses the <attr>database</attr> to load a SQLite database file.</p>
 
-        <exercise xml:id="exercise-sql-using-db">
+        <exercise xml:id="exercise-sql-using-db" label="exercise-sql-using-db">
             <title>An SQL program that uses an SQLite database file</title>
             <statement>
                 <p>Select all the columns of all the rows in the <c>test</c> database table.</p>
@@ -526,7 +748,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <exercise label="program-codelens-cpp-questions">
             <title>A C++ program as CodeLens exercise</title>
-            <statement>Run the codelens and answer the questions it asks.</statement>
+            <statement>
+                <p>Run the codelens and answer the questions it asks.</p>
+            </statement>
             <program interactive="codelens" language="cpp">
                 <code><![CDATA[
                   int foo() {
@@ -684,7 +908,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
         </exercise>
 
-        <activity xml:id="coding-exercise-partial-two">
+        <activity xml:id="coding-exercise-partial-two" label="coding-exercise-partial-two">
             <title>Activity Coding Exercise</title>
 
             <statement>
@@ -755,6 +979,85 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </code>
                 </program>
             </answer>
+        </exercise>
+
+        <p>An activecode exercise can offer extra help to a reader who gets stuck, via Runestone's CodeTailor feature.  A <attr>codetailor</attr> attribute adds a <q>Get Help</q> button that, on a Runestone server, presents a personalized Parsons problem<mdash/>the blocks of a correct solution, scrambled for the reader to reassemble, where a block may hold one line of code or several.  The value <c>all</c> scrambles a complete solution, while <c>incorrect</c> locks the blocks a reader already has right, so only the wrong ones move.  A companion <attr>codetailor-fallback</attr> names, by its <attr>xml:id</attr>, a Parsons problem elsewhere in this document to present when a personalized problem cannot be generated; without it, generation is always requested.  The first exercise below elects <c>all</c> and falls back to a Parsons problem from a later chapter; the second elects <c>incorrect</c> and relies on generation alone.</p>
+
+        <exercise xml:id="codetailor-example" label="coding-exercise-codetailor">
+            <title>Coding Exercise, with CodeTailor Help</title>
+
+            <statement>
+                <p>Write a function <c>total</c> that returns the sum of a list of numbers.  If you get stuck, use the <q>Get Help</q> button to assemble a solution from scrambled blocks.</p>
+            </statement>
+            <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="parsons-with-partial-order">
+                <code>
+                def total(numbers):
+                    return 0
+                </code>
+                <tests>
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(total([1, 2, 3]), 6, "Summing three integers")
+                        self.assertEqual(total([]), 0, "Summing an empty list")
+                        self.assertEqual(total([10, -4]), 6, "Summing with a negative")
+
+                myTests().main()
+                </tests>
+            </program>
+            <solution>
+                <p>Accumulate the numbers in a running total.</p>
+                <program language="python">
+                    <code>
+                    def total(numbers):
+                        result = 0
+                        for n in numbers:
+                            result = result + n
+                        return result
+                    </code>
+                </program>
+            </solution>
+        </exercise>
+
+        <exercise xml:id="codetailor-incorrect-example" label="coding-exercise-codetailor-incorrect">
+            <title>Coding Exercise, CodeTailor Help for Incorrect Blocks</title>
+
+            <statement>
+                <p>Write a function <c>largest</c> that returns the greatest number in a nonempty list.  Here the <q>Get Help</q> button locks the blocks you already have right, so you rearrange only the incorrect ones.</p>
+            </statement>
+            <program interactive="activecode" language="python" codetailor="incorrect">
+                <code>
+                def largest(numbers):
+                    return 0
+                </code>
+                <tests>
+                from unittest.gui import TestCaseGui
+
+                class myTests(TestCaseGui):
+
+                    def testOne(self):
+                        self.assertEqual(largest([1, 3, 2]), 3, "Largest of three integers")
+                        self.assertEqual(largest([-5, -2, -9]), -2, "Largest of negatives")
+                        self.assertEqual(largest([7]), 7, "Largest of a single number")
+
+                myTests().main()
+                </tests>
+            </program>
+            <solution>
+                <p>Track the greatest value seen so far.</p>
+                <program language="python">
+                    <code>
+                    def largest(numbers):
+                        result = numbers[0]
+                        for n in numbers:
+                            if n > result:
+                                result = n
+                        return result
+                    </code>
+                </program>
+            </solution>
         </exercise>
 
         <exercise xml:id="unit-test-example-java" label="coding-exercise-java-unit-test">
@@ -916,7 +1219,7 @@ TEST_CASE( "Test the add function" ) {
 
             for aline in ccfile:
                 values = aline.split()
-                print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.')
+                print('In', values[0], 'the average temp. was', values[1], '&#x00B0;C and CO2 emmisions were', values[2], 'gigatons.')
 
             ccfile.close()
             </code>
@@ -1043,7 +1346,7 @@ TEST_CASE( "Test the add function" ) {
 
             for aline in ccfile:
                 values = aline.split()
-                print('In', values[0], 'the average temp. was', values[1], '°C and CO2 emmisions were', values[2], 'gigatons.')
+                print('In', values[0], 'the average temp. was', values[1], '&#x00B0;C and CO2 emmisions were', values[2], 'gigatons.')
 
             ccfile.close()
             </code>
@@ -3088,7 +3391,7 @@ TEST_CASE( "Test the add function" ) {
             <hint><p>Dorothy will not be much help with this proof.</p></hint>
         </exercise>
 
-        <exercise label="parsons-with-partial-order" adaptive="yes" indentation="hide" language="python">
+        <exercise xml:id="parsons-with-partial-order" label="parsons-with-partial-order" adaptive="yes" indentation="hide" language="python">
             <title>Parsons Problem, Partial Ordering</title>
             <statement>
                 <p>Parsons problems can specify a partial ordering that allows for multiple valid solutions.</p>
@@ -3201,14 +3504,14 @@ TEST_CASE( "Test the add function" ) {
             </blocks>
             <!-- note that the blank lines in pre and postabmbles are intentional to -->
             <!-- separate those from user code, but you might not always want them   -->
-            <program-preamble>
+            <program-preamble indent="4">
                 print("Using your code to isolate the red in the Golden Gate Bridge image.")
                 import image
 
             </program-preamble>
             <!-- the program is empty as its contents will be replaced by student code -->
             <program datafile="golden-gate.png" codelens="no"/>
-            <program-postamble>
+            <program-postamble indent="4">
 
                 img = image.Image("golden-gate.png")
                 win = image.ImageWin(img.getWidth(), img.getHeight())
@@ -3881,7 +4184,7 @@ TEST_CASE( "Test the add function" ) {
 
         <p>We begin with standalone queries, using the <tag>query</tag> element.  Runestone calls these <term>polls</term>.   We plan structures/blocks such as <tag>poll</tag>, <tag>survey</tag>, and <tag>questionnaire</tag>, that will be structured collections of <tag>query</tag>.</p>
 
-        <query label="stoplight-query">
+        <query label="stoplight-query" visibility="all">
             <statement>
                 <p>In my town, the stoplights have:</p>
             </statement>
@@ -4175,7 +4478,7 @@ TEST_CASE( "Test the add function" ) {
             <title>Fill-In, New Markup Strings</title>
             <statement>
                 <p>The word I'm thinking about is hinted at by the image.</p>
-                <p><image source="cartoon-magic.jpg" width="50%"/></p>
+                <image source="cartoon-magic.jpg" width="50%"/>
                 <p>What word am I thinking about? <fillin width="5" answer="magic"/> (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try <q>pizzazz</q>.")</p>
             </statement>
             <evaluation>
@@ -4495,6 +4798,140 @@ TEST_CASE( "Test the add function" ) {
         </exercise>
     </exercises>
 
+    <exercises xml:id="fill-in-literal-exercises">
+        <title>Fill-In, Literal String Answers</title>
+
+        <introduction>
+            <p>For a string answer, <pretext/> compares the reader's response against the answer as a literal string.  So characters that have special meaning in a regular expression, such as <c>.</c>, <c>(</c>, or <c>+</c>, are matched exactly rather than acting as wildcards or operators.  These examples exercise that behavior across a range of such characters, whether the correct answer is compared explicitly (with <c>use-answer</c> or <c>literal</c>) or left to be supplied automatically from the <c>fillin</c>.</p>
+        </introduction>
+
+        <exercise label="fillin-literal-period">
+            <title>Fill-In, Decimal Point</title>
+            <statement>
+                <p>Give the value of <m>\pi</m>, rounded to two decimal places.
+                <fillin mode="string" answer="3.14"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes"/>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-address">
+            <title>Fill-In, A Dotted Address</title>
+            <statement>
+                <p>Enter the IPv4 address <c>192.168.1.1</c>, including its dots.
+                <fillin mode="string" answer="192.168.1.1"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes"/>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-formula">
+            <title>Fill-In, A Formula with Several Symbols</title>
+            <statement>
+                <p>Enter the formula <c>f(x) = x^2 + 1</c> exactly, using a caret for the exponent.
+                <fillin mode="string" answer="f(x) = x^2 + 1"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes"/>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-path">
+            <title>Fill-In, A File Path</title>
+            <statement>
+                <p>Enter the Windows path <c>C:\Users</c>, with a backslash.
+                <fillin mode="string" answer="C:\Users"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes"/>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-price">
+            <title>Fill-In, A Price</title>
+            <statement>
+                <p>Write one hundred dollars with a leading dollar sign, as <c>$100</c>.
+                <fillin mode="string" answer="$100"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes"/>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-case">
+            <title>Fill-In, Literal Match Ignoring Case</title>
+            <statement>
+                <p>Enter the placeholder <c>foo(bar)</c>, in any mix of upper- and lower-case letters.
+                <fillin mode="string" answer="foo(bar)"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp use-answer="yes" case="insensitive"/>
+                        <feedback>
+                            <p>Case is ignored, but the parentheses are part of the answer and are matched literally.</p>
+                        </feedback>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-explicit">
+            <title>Fill-In, Explicit Literal Test</title>
+            <statement>
+                <p>Enter the placeholder <c>foo(bar)</c>, including the parentheses.  Here the comparison states the pattern directly and marks it as a literal match with <c>literal="yes"</c>.
+                <fillin mode="string" answer="foo(bar)"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test correct="yes">
+                        <strcmp literal="yes">foo(bar)</strcmp>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+
+        <exercise label="fillin-literal-synthesized">
+            <title>Fill-In, Answer Taken from the Fillin</title>
+            <statement>
+                <p>Enter the placeholder <c>foo(bar)</c>, including the parentheses.  Here no correct test is written at all: the correct answer is taken from the <c>fillin</c> and compared literally, while the test below only supplies a hint.
+                <fillin mode="string" answer="foo(bar)"/></p>
+            </statement>
+            <evaluation>
+                <evaluate>
+                    <test>
+                        <strcmp>foobar</strcmp>
+                        <feedback>
+                            <p>The parentheses are part of the answer.</p>
+                        </feedback>
+                    </test>
+                </evaluate>
+            </evaluation>
+        </exercise>
+    </exercises>
+
     <exercises xml:id="runestone-hodgepodge">
         <title>Hodgepodge</title>
 
@@ -4536,11 +4973,26 @@ TEST_CASE( "Test the add function" ) {
                 </hint>
             </task>
 
-            <task label="short-answer-task-in-exercises">
+            <task label="short-answer-task-in-exercises" attachment="yes">
                 <statement>
                     <p>Explain your reasoning in the previous question.</p>
                 </statement>
                 <response/>
+            </task>
+
+            <task label="parsons-task-in-exercises" language="python" adaptive="yes" indentation="hide">
+                <title>Parsons Problem, as a Task</title>
+                <statement>
+                    <p>A Parsons problem hosted by a <tag>task</tag>, carrying its language, adaptivity, and indentation attributes there.</p>
+                </statement>
+                <blocks>
+                    <block order="2">
+                        <cline>x = 3</cline>
+                    </block>
+                    <block order="1">
+                        <cline>print(x)</cline>
+                    </block>
+                </blocks>
             </task>
 
             <conclusion>
@@ -5049,13 +5501,6 @@ TEST_CASE( "Test the add function" ) {
 
         <video xml:id="yt-list-vars-three" label="youtube-list-vars-three" youtube="X1-UNHUajfk" margins="20% 40%" />
 
-        <p>As a plain component of a <tag>sidebyside</tag>.  Widths here are 20% and 30%, margins and gaps are automatic, default alignment on top edges.  Nulla pharetra imperdiet elit, in sodales nibh blandit ultricies. Maecenas efficitur ac felis ut pharetra.</p>
-
-        <sidebyside widths="20% 30%">
-            <video xml:id="yt-list-vars-four" label="youtube-list-vars-four" youtube="X1-UNHUajfk"/>
-            <video xml:id="yt-list-vars-five" label="youtube-list-vars-five" youtube="X1-UNHUajfk"/>
-        </sidebyside>
-
         <p>Inside a <tag>figure</tag> with no adjustments, so default behavior.  Note how a <tag>figure</tag> occupies the entire width of the page, so then does the caption.</p>
 
         <figure>
@@ -5070,35 +5515,6 @@ TEST_CASE( "Test the add function" ) {
             <video xml:id="yt-list-vars-seven" label="youtube-list-vars-seven" youtube="X1-UNHUajfk" margins="30% 60%"/>
         </figure>
 
-        <p>Inside figures inside a <tag>sidebyside</tag>.  Same widths as previous <tag>sidebyside</tag> but alignment on bottoms of the panels, to partially align captions.  Note how the captions are constrained in width by the width of the panels of the side-by-side.</p>
-
-        <sidebyside widths="20% 30%" valign="bottom">
-            <figure>
-                <caption>List Variables</caption>
-                <video xml:id="yt-list-vars-eight" label="youtube-list-vars-eight" youtube="X1-UNHUajfk"/>
-            </figure>
-            <figure>
-                <caption>List Variables (Again)</caption>
-                <video xml:id="yt-list-vars-nine" label="youtube-list-vars-nine" youtube="X1-UNHUajfk"/>
-            </figure>
-        </sidebyside>
-
-        <p>Identical code to previous example, but now wrapped in an overall <tag>figure</tag>, which has its own caption and number, leaving the interior figures to be sub-numbered.  Cross-references use the full number: <xref ref="ups-video" text="type-global"/>.</p>
-
-        <figure>
-            <caption>Amalgamation of Videos</caption>
-            <sidebyside widths="20% 30%" valign="bottom">
-                <figure>
-                    <caption>List Variables</caption>
-                    <video xml:id="yt-list-vars-ten" label="youtube-list-vars-ten" youtube="X1-UNHUajfk"/>
-                </figure>
-                <figure xml:id="ups-video">
-                    <caption>List Variables</caption>
-                    <title>List Variables</title>
-                    <video xml:id="yt-list-vars-eleven" label="youtube-list-vars-eleven" youtube="X1-UNHUajfk"/>
-                </figure>
-            </sidebyside>
-        </figure>
     </section>
 
     <section xml:id="section-runestone-assignment-testing">
@@ -5192,11 +5608,13 @@ TEST_CASE( "Test the add function" ) {
                     </p>
                 </statement>
             </exercise>
+            <conclusion>
+                <p>And a final paragraph, now as a <tag>conclusion</tag> of the <tag>exercises</tag>, and a chance to say there is a trailing <tag>exercise</tag> outside the <tag>exercisegroup</tag>.</p>
+            </conclusion>
         </exercises>
-        <p>And a final paragraph in the section, and a chance to say there is a trailing <tag>exercise</tag> outside the <tag>exercisegroup</tag>.</p>
     </section>
 
-    <worksheet groupwork="yes" groupsize="2" xml:id="worksheet-groupwork">
+    <worksheet groupwork="yes" groupsize="2" xml:id="worksheet-groupwork" label="worksheet-groupwork">
         <title>A <q>Group Work</q> Worksheet</title>
 
         <p>This is a <tag>worksheet</tag> which has a <attr>groupwork</attr> attribute set to <c>yes</c>, along with a <attr>label</attr> attribute to assist with the Runestone database.  Note, you can also set a <attr>groupsize</attr> attribute.  When hosted on Runestone, the exercises within will be available for a group of students to submit together.</p>
@@ -5402,7 +5820,7 @@ TEST_CASE( "Test the add function" ) {
 
         <!-- 2025-11-05: Donated by Matt Boelkins from Active Calculus  -->
         <!-- where it has @xml:id "doenet-interactive-exercise-1-1-1" -->
-        <exercise>
+        <exercise xml:id="doenet-average-velocity" label="doenet-average-velocity">
             <title>Finding the average velocity of a moving object from data (dual, Doenet)</title>
             <dynamic>
                 <statement>
@@ -5563,7 +5981,7 @@ TEST_CASE( "Test the add function" ) {
             </static>
         </exercise>
 
-        <exercise>
+        <exercise xml:id="opendsa-list-insertion" label="opendsa-list-insertion">
             <title>OpenDSA List Insertion (Dual)</title>
             <dynamic>
                 <statement>
@@ -5586,16 +6004,19 @@ TEST_CASE( "Test the add function" ) {
     <figure xml:id="show-eval-visualization1">
         <caption>Show-Eval Visualization</caption>
         <interactive label="show-eval-visualization" platform="javascript" source="https://runestone.academy/cdn/runestone/showEval-0.10.0.js" width="100%" >
-            <slate surface="html">
-                <style>
+            <!-- The one namespace declaration on the "slate" marks all -->
+            <!-- the content as foreign, and satisfies validation; only  -->
+            <!-- local names survive into the output page                -->
+            <slate surface="html" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                <xhtml:style>
                     .showEval { font-family: monospace; font-size: 1.5em; }
                     .showEval span { vertical-align: text-top; }
-                </style>
-                <button id="nextStep">Next Step</button>
-                <button id="reset">Reset</button>
-                <div class='showEval'>eggs = ['dogs', 'cats', 'moose']</div>
-                <div id="showeval"></div>
-                <script>
+                </xhtml:style>
+                <xhtml:button id="nextStep">Next Step</xhtml:button>
+                <xhtml:button id="reset">Reset</xhtml:button>
+                <xhtml:div class='showEval'>eggs = ['dogs', 'cats', 'moose']</xhtml:div>
+                <xhtml:div id="showeval"></xhtml:div>
+                <xhtml:script>
                     document.addEventListener("DOMContentLoaded", function() {
                         console.log("Document loaded");
                         // for each step, put the part to replaced in the first set of {{ }}, and the replacement text in the following {{ }}
@@ -5605,13 +6026,13 @@ TEST_CASE( "Test the add function" ) {
                         "'DOGSCATSMOOSE'.join({{eggs}}{{['dogs', 'cats', 'moose']}})",
                         "{{'DOGSCATSMOOSE'.join(['dogs', 'cats', 'moose'])}}{{'dogsDOGSCATSMOOSEcatsDOGSCATSMOOSEmoose'}}"];
                         s = new SHOWEVAL.ShowEval(document.querySelector('#showeval'), steps, false); });
-                </script>
+                </xhtml:script>
             </slate>
         </interactive>
         </figure>
     </section>
 
-    <exercises xml:id="chapter-exam" label="chapter-exam" time-limit="15" pause="yes">
+    <exercises xml:id="chapter-exam" label="chapter-exam" time-limit="15" pause="yes" results="no" timer="no" feedback="no">
         <title>Timed Chapter Exam</title>
 
         <introduction>

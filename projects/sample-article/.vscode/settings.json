@@ -1,0 +1,22 @@
+{
+  "cSpell.languageSettings": [],
+  "xml.fileAssociations": [
+    {
+      "pattern": "**/source/**.ptx",
+      "systemId": "c:\\Users\\oscar.levin\\Documents\\dev\\pretext-tools\\dist\\vscode-extension\\assets\\schema\\pretext-dev.rng"
+    }
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1F321F",
+    "titleBar.activeBackground": "#2B472B",
+    "titleBar.activeForeground": "#F9FBF9",
+    "titleBar.inactiveBackground": "#1F321F",
+    "titleBar.inactiveForeground": "#F9FBF9",
+    "statusBar.background": "#1F321F",
+    "statusBar.foreground": "#F9FBF9",
+    "statusBar.debuggingBackground": "#1F321F",
+    "statusBar.debuggingForeground": "#F9FBF9",
+    "statusBar.noFolderBackground": "#1F321F",
+    "statusBar.noFolderForeground": "#F9FBF9"
+  }
+}

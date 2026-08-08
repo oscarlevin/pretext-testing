@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
-Copyright 2015 Robert A. Beezer
+Copyright (C) 2015-2026  Robert A. Beezer
 
 This file is part of PreTeXt.
 
@@ -26,7 +26,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
     </common>
 
     <source>
-      <directories generated="generated" external="external"/>
+      <directories generated="generated"/>
     </source>
 
     <!-- These are the defaults but written explicitly here to serve as a model. -->

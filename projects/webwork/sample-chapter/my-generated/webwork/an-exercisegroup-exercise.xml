@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-an-exercisegroup-exercise" assembly-id="an-exercisegroup-exercise">
-  <static seed="112">
+  <static seed="113">
     <statement><p>What is <m>1+1\text{?}</m></p>
 <p><fillin characters="5" name="AnSwEr0001"/>&gt;</p>
 </statement>
@@ -50,7 +50,6 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
-TEXT(beginproblem());
 
 ############################################################
 # PG Setup Code
@@ -75,10 +74,12 @@ This introduction should appear ahead of the exercise when it shows up in the As
 
 >> [@DataTable(
   [
-    [PGML('[`(0,0)`]'),
+    [
+     PGML('[`(0,0)`]'),
      PGML('[`(0,1)`]'),
     ],
-    [PGML('[`(1,0)`]'),
+    [
+     PGML('[`(1,0)`]'),
      PGML('[`(1,1)`]'),
     ],
   ],
