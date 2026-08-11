@@ -1,9 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-number-or-function" assembly-id="number-or-function">
+<<<<<<< HEAD
   <static seed="78">
     <statement><p><ol label="a.">
 <li>
 <p>Suppose the correct answer is <m>{3}\text{.}</m></p>
+=======
+  <static seed="76">
+    <statement><p><ol label="a.">
+<li>
+<p>Suppose the correct answer is <m>{-2}\text{.}</m></p>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 <p><ul label="square">
 <li>
 <p><fillin characters="15" name="AnSwEr0001"/></p>
@@ -11,7 +18,11 @@
 </ul></p>
 </li>
 <li>
+<<<<<<< HEAD
 <p>Suppose the correct answer is <m>\displaystyle {\frac{3x^{9}+9}{x}}\text{.}</m></p>
+=======
+<p>Suppose the correct answer is <m>\displaystyle {\frac{7-2x^{7}}{x}}\text{.}</m></p>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 <p><ul label="square">
 <li>
 <p><fillin characters="15" name="AnSwEr0002"/></p>
@@ -22,12 +33,20 @@
 </statement>
     <answer>
       <p>
+<<<<<<< HEAD
         <m>3</m>
+=======
+        <m>-2</m>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       </p>
     </answer>
     <answer>
       <p>
+<<<<<<< HEAD
         <m>\frac{3x^{9}+9}{x}</m>
+=======
+        <m>\frac{7-2x^{7}}{x}</m>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       </p>
     </answer>
     <solution><p>Solution explanation goes here.</p>
@@ -71,6 +90,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code

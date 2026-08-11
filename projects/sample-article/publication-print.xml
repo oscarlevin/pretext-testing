@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
+<<<<<<< HEAD
 Copyright (C) 2015-2026  Robert A. Beezer
+=======
+Copyright 2015 Robert A. Beezer
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 This file is part of PreTeXt.
 
@@ -76,7 +80,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- we use customizations-two for the oscarlevin style example -->
     <source customizations="customizations-one.xml">
+<<<<<<< HEAD
         <directories generated="gen"/>
+=======
+        <directories external="media" generated="gen"/>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         <!-- this is an example of placing @generated *outside* of revision control -->
         <!-- <directories external="media" generated="../../../altgen"/> -->
     </source>
@@ -114,8 +122,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <insertions pagebreaks="sidebyside-bully-pulpit sbsgroup-pagebreak-test"/>
     </latex>
 
+<<<<<<< HEAD
     <html>
         <brandlogo url="https://pretextbook.org" source="misc/book-cover-google-art-project.jpg"/>
     </html>
 
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 </publication>

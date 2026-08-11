@@ -2379,6 +2379,22 @@ ENDDOCUMENT();
                     </webwork>
                 </exercise>
 
+<<<<<<< HEAD
+=======
+                <exercise label="empty-statement">
+                    <introduction>
+                        <p>
+                            This exercise has no content in its statement.
+                            It should throw a PTX warning during the representations build.
+                        </p>
+                    </introduction>
+                    <webwork>
+                        <statement>
+                        </statement>
+                    </webwork>
+                </exercise>
+
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <exercise label="single-quote-in-table-cell">
                     <introduction>
                         <p>

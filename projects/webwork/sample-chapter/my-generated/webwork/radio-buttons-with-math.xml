@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-radio-buttons-with-math" assembly-id="radio-buttons-with-math">
+<<<<<<< HEAD
   <static seed="81">
+=======
+  <static seed="79">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><p>There is math in each option for this question. Which expression is not a polynomial?</p>
 <p><ul form="buttons" name="AnSwEr0001">
 <li>
@@ -61,6 +65,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code

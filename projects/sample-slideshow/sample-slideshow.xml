@@ -272,6 +272,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 </sage>
 
                 <p>And some more mathematics.  An identity due to Ramanujan:<md>\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\ldots} } } }</md>.</p>
+<<<<<<< HEAD
             </slide>
         </section>
 
@@ -362,6 +363,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 <p>One with text from the target's title: <xref ref="theorem-FTC" text="title"/>.</p>
 
                 <p>An external reference is live in capable outputs: <url href="https://pretextbook.org" visual="pretextbook.org"/>.</p>
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             </slide>
         </section>
 

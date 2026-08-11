@@ -341,7 +341,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-java">
             <title>A Java program, interactive on a <pubtitle>Runestone</pubtitle> server</title>
+<<<<<<< HEAD
             <program xml:id="java-hello-world" label="java-hello-world" interactive='activecode' language="java">
+=======
+            <program xml:id="java-hello-world" interactive='activecode' language="java">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 public class HelloWorld {
                     public static void main(String[] args) {
@@ -369,6 +373,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing>
             <title>A C++ program with compiler-args and stdin</title>
+<<<<<<< HEAD
+=======
+            <p>It may be convenient to set <attr>compiler-args</attr> and <attr>linker-args</attr> at the book level in <tag>docinfo/programs</tag>. Values specified in that location will be used for any <tag>program</tag> that does not override the values by specifying its own attributes.</p>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <program interactive="activecode" label="hello-world-cpp" language="cpp" compiler-args="-std=c++17,-Wall,-g" linker-args="-g,-s">
                 <code>
                     #include &lt;iostream&gt;
@@ -410,7 +418,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-octave">
             <title>A simple Octave program</title>
+<<<<<<< HEAD
             <program xml:id="octave-simple" label="octave-simple" interactive='activecode' language="octave">
+=======
+            <program xml:id="octave-simple" interactive='activecode' language="octave">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 x = 2 + 2
                 printf("%d\n", x)
@@ -422,7 +434,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-kotlin">
             <title>A simple Kotlin program</title>
+<<<<<<< HEAD
             <program xml:id="kotlin-hello-world" label="kotlin-hello-world" interactive='activecode' language="kotlin">
+=======
+            <program xml:id="kotlin-hello-world" interactive='activecode' language="kotlin">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 fun main() {
                     println("Hello, world!!")
@@ -435,7 +451,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-mistake-pascal">
             <title>A Pascal program that cannot be interactive on Runestone</title>
+<<<<<<< HEAD
             <program xml:id="pascal-mistake" label="pascal-mistake" interactive='activecode' language="pascal">
+=======
+            <program xml:id="pascal-mistake" interactive='activecode' language="pascal">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 program HelloWorld;
                 begin
@@ -528,7 +548,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <listing xml:id="program-activecode-java-flags">
             <title>A Java program, interactive on a <pubtitle>Runestone</pubtitle> server, with compiler and linker flags</title>
+<<<<<<< HEAD
             <program xml:id="java-hello-world-flags" label="java-hello-world-flags" interactive='activecode' language="java" compiler-args="-g" linker-args="-s">
+=======
+            <program xml:id="java-hello-world-flags" interactive='activecode' language="java" compiler-args="-g" linker-args="-s">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 import javax.swing.JFrame;  //Importing class JFrame
                 import javax.swing.JLabel;  //Importing class JLabel
@@ -552,7 +576,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>This program also makes use of <attr>autorun</attr> to execute on page load and the <attr>codelens</attr>to disable the codelens feature.</p>
 
+<<<<<<< HEAD
         <exercise xml:id="exercise-python-including" label="exercise-python-including">
+=======
+        <exercise xml:id="exercise-python-including">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>A Python program, including another</title>
             <statement>
                 <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
@@ -583,7 +611,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>This program also makes use of <attr>hidecode</attr> to initially keep the code hidden and <attr>download</attr> to enable a file download of the program (that includes all the included code).</p>
 
+<<<<<<< HEAD
         <exercise xml:id="exercise-python-including-two" label="exercise-python-including-two">
+=======
+        <exercise xml:id="exercise-python-including-two">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>A Python program, including two others</title>
             <statement>
                 <p>Compute the total amount of money loaned and store it in the variable <c>loan_total</c>.</p>
@@ -612,7 +644,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <p>Here is an activecode with <attr>language</attr> set to <c>sql</c> uses the <attr>database</attr> to load a SQLite database file.</p>
 
+<<<<<<< HEAD
         <exercise xml:id="exercise-sql-using-db" label="exercise-sql-using-db">
+=======
+        <exercise xml:id="exercise-sql-using-db">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>An SQL program that uses an SQLite database file</title>
             <statement>
                 <p>Select all the columns of all the rows in the <c>test</c> database table.</p>
@@ -748,9 +784,13 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
         <exercise label="program-codelens-cpp-questions">
             <title>A C++ program as CodeLens exercise</title>
+<<<<<<< HEAD
             <statement>
                 <p>Run the codelens and answer the questions it asks.</p>
             </statement>
+=======
+            <statement>Run the codelens and answer the questions it asks.</statement>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <program interactive="codelens" language="cpp">
                 <code><![CDATA[
                   int foo() {
@@ -908,7 +948,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
         </exercise>
 
+<<<<<<< HEAD
         <activity xml:id="coding-exercise-partial-two" label="coding-exercise-partial-two">
+=======
+        <activity xml:id="coding-exercise-partial-two">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>Activity Coding Exercise</title>
 
             <statement>
@@ -981,15 +1025,25 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
         </exercise>
 
+<<<<<<< HEAD
         <p>An activecode exercise can offer extra help to a reader who gets stuck, via Runestone's CodeTailor feature.  A <attr>codetailor</attr> attribute adds a <q>Get Help</q> button that, on a Runestone server, presents a personalized Parsons problem<mdash/>the blocks of a correct solution, scrambled for the reader to reassemble, where a block may hold one line of code or several.  The value <c>all</c> scrambles a complete solution, while <c>incorrect</c> locks the blocks a reader already has right, so only the wrong ones move.  A companion <attr>codetailor-fallback</attr> names, by its <attr>xml:id</attr>, a Parsons problem elsewhere in this document to present when a personalized problem cannot be generated; without it, generation is always requested.  The first exercise below elects <c>all</c> and falls back to a Parsons problem from a later chapter; the second elects <c>incorrect</c> and relies on generation alone.</p>
+=======
+        <p>An activecode exercise can offer extra help to a reader who gets stuck.  Setting <attr>codetailor</attr> to <c>yes</c> adds a <q>Get Help</q> button that, on a Runestone server, presents a personalized Parsons problem<mdash/>the lines of a correct solution, scrambled for the reader to reassemble.  It works best for an exercise whose solution decomposes into a handful of clear lines, as here.</p>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
         <exercise xml:id="codetailor-example" label="coding-exercise-codetailor">
             <title>Coding Exercise, with CodeTailor Help</title>
 
             <statement>
+<<<<<<< HEAD
                 <p>Write a function <c>total</c> that returns the sum of a list of numbers.  If you get stuck, use the <q>Get Help</q> button to assemble a solution from scrambled blocks.</p>
             </statement>
             <program interactive="activecode" language="python" codetailor="all" codetailor-fallback="parsons-with-partial-order">
+=======
+                <p>Write a function <c>total</c> that returns the sum of a list of numbers.  If you get stuck, use the <q>Get Help</q> button to assemble a solution from scrambled lines.</p>
+            </statement>
+            <program interactive="activecode" language="python" codetailor="yes">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <code>
                 def total(numbers):
                     return 0
@@ -1021,6 +1075,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </solution>
         </exercise>
 
+<<<<<<< HEAD
         <exercise xml:id="codetailor-incorrect-example" label="coding-exercise-codetailor-incorrect">
             <title>Coding Exercise, CodeTailor Help for Incorrect Blocks</title>
 
@@ -1060,6 +1115,8 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </solution>
         </exercise>
 
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         <exercise xml:id="unit-test-example-java" label="coding-exercise-java-unit-test">
             <title>Java Exercise, with Unit Tests</title>
             <statement>
@@ -4980,6 +5037,7 @@ TEST_CASE( "Test the add function" ) {
                 <response/>
             </task>
 
+<<<<<<< HEAD
             <task label="parsons-task-in-exercises" language="python" adaptive="yes" indentation="hide">
                 <title>Parsons Problem, as a Task</title>
                 <statement>
@@ -4995,6 +5053,8 @@ TEST_CASE( "Test the add function" ) {
                 </blocks>
             </task>
 
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <conclusion>
                 <p>A sequence of <tag>task</tag> can have a <tag>conclusion</tag>, like this one, even if they do not see much use in practice.</p>
             </conclusion>
@@ -5820,7 +5880,11 @@ TEST_CASE( "Test the add function" ) {
 
         <!-- 2025-11-05: Donated by Matt Boelkins from Active Calculus  -->
         <!-- where it has @xml:id "doenet-interactive-exercise-1-1-1" -->
+<<<<<<< HEAD
         <exercise xml:id="doenet-average-velocity" label="doenet-average-velocity">
+=======
+        <exercise>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>Finding the average velocity of a moving object from data (dual, Doenet)</title>
             <dynamic>
                 <statement>
@@ -5981,7 +6045,11 @@ TEST_CASE( "Test the add function" ) {
             </static>
         </exercise>
 
+<<<<<<< HEAD
         <exercise xml:id="opendsa-list-insertion" label="opendsa-list-insertion">
+=======
+        <exercise>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <title>OpenDSA List Insertion (Dual)</title>
             <dynamic>
                 <statement>
@@ -6004,6 +6072,7 @@ TEST_CASE( "Test the add function" ) {
     <figure xml:id="show-eval-visualization1">
         <caption>Show-Eval Visualization</caption>
         <interactive label="show-eval-visualization" platform="javascript" source="https://runestone.academy/cdn/runestone/showEval-0.10.0.js" width="100%" >
+<<<<<<< HEAD
             <!-- The one namespace declaration on the "slate" marks all -->
             <!-- the content as foreign, and satisfies validation; only  -->
             <!-- local names survive into the output page                -->
@@ -6017,6 +6086,18 @@ TEST_CASE( "Test the add function" ) {
                 <xhtml:div class='showEval'>eggs = ['dogs', 'cats', 'moose']</xhtml:div>
                 <xhtml:div id="showeval"></xhtml:div>
                 <xhtml:script>
+=======
+            <slate surface="html">
+                <style>
+                    .showEval { font-family: monospace; font-size: 1.5em; }
+                    .showEval span { vertical-align: text-top; }
+                </style>
+                <button id="nextStep">Next Step</button>
+                <button id="reset">Reset</button>
+                <div class='showEval'>eggs = ['dogs', 'cats', 'moose']</div>
+                <div id="showeval"></div>
+                <script>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                     document.addEventListener("DOMContentLoaded", function() {
                         console.log("Document loaded");
                         // for each step, put the part to replaced in the first set of {{ }}, and the replacement text in the following {{ }}
@@ -6026,7 +6107,11 @@ TEST_CASE( "Test the add function" ) {
                         "'DOGSCATSMOOSE'.join({{eggs}}{{['dogs', 'cats', 'moose']}})",
                         "{{'DOGSCATSMOOSE'.join(['dogs', 'cats', 'moose'])}}{{'dogsDOGSCATSMOOSEcatsDOGSCATSMOOSEmoose'}}"];
                         s = new SHOWEVAL.ShowEval(document.querySelector('#showeval'), steps, false); });
+<<<<<<< HEAD
                 </xhtml:script>
+=======
+                </script>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             </slate>
         </interactive>
         </figure>

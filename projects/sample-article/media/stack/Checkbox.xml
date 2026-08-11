@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 
 <!--********************************************************************
 Copyright (C) 2026  Robert A. Beezer
@@ -18,6 +19,8 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 *****************************************************************-->
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 <quiz>
   <question type="stack">
     <name>

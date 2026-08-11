@@ -17,6 +17,7 @@ const stackstring = {
   "api_correct":"Correct answers"
 };
 
+<<<<<<< HEAD
 
 function wrap_math(content) {
   // Wrap instances of \[ ... \] and \( ... \) into the tags configured to be processed by MathJax
@@ -25,6 +26,8 @@ function wrap_math(content) {
   return content.replace(/(?<!\\)(\\\[.*?(?<!\\)\\\])/gs, "<span class=\"process-math\">$1</span>");
 }
 
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 // Create data for call to API.
 async function collectData(qfile, qname, qprefix) {
   let res = "";
@@ -103,7 +106,10 @@ function send(qfile, qname, qprefix) {
           // This is a bit of a hack. The question render returns an <a href="..."> calling the download function with
           // two arguments. We add the additional arguments that we need for context (question definition) here.
           question = question.replace(/javascript:download\(([^,]+?),([^,]+?)\)/, `javascript:download($1,$2, '${qfile}', '${qname}', '${qprefix}', ${seed})`);
+<<<<<<< HEAD
           question = wrap_math(question);
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
           if (input.samplesolutionrender && name !== 'remember') {
             // Display render of answer and matching user input to produce the answer.
             correctAnswers += `<p>
@@ -111,7 +117,11 @@ function send(qfile, qname, qprefix) {
                   ${stackstring['api_which_typed']}: `;
             for (const [name, solution] of Object.entries(input.samplesolution)) {
               if (name.indexOf('_val') === -1) {
+<<<<<<< HEAD
                 correctAnswers += `<span class='correct-answer'>${wrap_math(solution)}</span>`;
+=======
+                correctAnswers += `<span class='correct-answer'>${solution}</span>`;
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
               }
             }
             correctAnswers += '.</p>';
@@ -156,7 +166,11 @@ function send(qfile, qname, qprefix) {
         let sampleText = json.questionsamplesolutiontext;
         if (sampleText) {
           sampleText = replaceFeedbackTags(sampleText,qprefix);
+<<<<<<< HEAD
           document.getElementById(`${qprefix+'generalfeedback'}`).innerHTML = wrap_math(sampleText);
+=======
+          document.getElementById(`${qprefix+'generalfeedback'}`).innerHTML = sampleText;
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
           document.getElementById(`${qprefix+'stackapi_generalfeedback'}`).style.display = 'block';
         } else {
           // If the question is updated, there may no longer be general feedback.
@@ -174,7 +188,11 @@ function send(qfile, qname, qprefix) {
         document.getElementById(`${qprefix+'stackapi_correct'}`).style.display = 'none';
 
         createIframes(json.iframes);
+<<<<<<< HEAD
         MathJax.typeset();
+=======
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       }
       catch(e) {
         console.log(e);
@@ -216,14 +234,22 @@ function validate(element, qfile, qname, qprefix) {
         renameIframeHolders();
         const validationHTML = json.validation;
         const element = document.getElementsByName(`${qprefix+validationPrefix + answerName}`)[0];
+<<<<<<< HEAD
         element.innerHTML = wrap_math(validationHTML);
+=======
+        element.innerHTML = validationHTML;
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         if (validationHTML) {
           element.classList.add('validation');
         } else {
           element.classList.remove('validation');
         }
         createIframes(json.iframes);
+<<<<<<< HEAD
         MathJax.typeset();
+=======
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       }
       catch(e) {
         document.getElementById(`${qprefix+'errors'}`).innerText = http.responseText;
@@ -283,7 +309,11 @@ function answer(qfile, qname, qprefix, seed) {
             json.specificfeedback = json.specificfeedback.replace(name, getPlotUrl(file));
           }
           json.specificfeedback = replaceFeedbackTags(json.specificfeedback,qprefix);
+<<<<<<< HEAD
           specificFeedbackElement.innerHTML = wrap_math(json.specificfeedback);
+=======
+          specificFeedbackElement.innerHTML = json.specificfeedback;
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
           specificFeedbackElement.classList.add('feedback');
         } else {
           specificFeedbackElement.classList.remove('feedback');
@@ -301,7 +331,11 @@ function answer(qfile, qname, qprefix, seed) {
                     ${(json.scores[name] * json.scoreweights[name] * json.scoreweights.total).toFixed(2)}
                       / ${(json.scoreweights[name] * json.scoreweights.total).toFixed(2)}.</div>`;
             }
+<<<<<<< HEAD
             element.innerHTML = wrap_math(fb);
+=======
+            element.innerHTML = fb;
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             // if (fb) {
 //                   element.classList.add('feedback');
 //                 } else {
@@ -310,7 +344,11 @@ function answer(qfile, qname, qprefix, seed) {
           }
         }
         createIframes(json.iframes);
+<<<<<<< HEAD
         MathJax.typeset();
+=======
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       }
       catch(e) {
         console.log(e);

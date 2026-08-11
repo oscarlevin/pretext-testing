@@ -21,8 +21,13 @@ const stackstring = {
 function wrap_math(content) {
   // Wrap instances of \[ ... \] and \( ... \) into the tags configured to be processed by MathJax
   // Here we make sure that the backslashes are not escaped like \\[ 
+<<<<<<< HEAD
   content = content.replace(/(?<!\\)(\\\(.*?(?<!\\)\\\))/gs, "<span class=\"process-math\">$1</span>");
   return content.replace(/(?<!\\)(\\\[.*?(?<!\\)\\\])/gs, "<span class=\"process-math\">$1</span>");
+=======
+  content = content.replace(/(?<!\\)(\\\(.*?(?<!\\)\\\))/g, "<span class=\"process-math\">$1</span>");
+  return content.replace(/(?<!\\)(\\\[.*?(?<!\\)\\\])/g, "<span class=\"process-math\">$1</span>");
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 }
 
 // Create data for call to API.

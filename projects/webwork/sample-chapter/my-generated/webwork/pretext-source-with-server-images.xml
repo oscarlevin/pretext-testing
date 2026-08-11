@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-pretext-source-with-server-images" assembly-id="pretext-source-with-server-images">
+<<<<<<< HEAD
   <static seed="84">
+=======
+  <static seed="82">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <task>
       <statement><!-- PTX:WARNING: PGML wanted to center align here. -->
 <image xmlns:pi="http://pretextbook.org/2020/pretext/internal" pi:generated="webwork/images/pretext-source-with-server-images-image-1.png" width="25%"/>
@@ -24,7 +28,11 @@
 </solution>
     </task>
   </static>
+<<<<<<< HEAD
   <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_3-Stress_Tests/2_3_1-PreTeXt_problem_source_with_servergenerated_images.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+=======
+  <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_3-Stress_Tests/2_3_1-PTX_problem_source_with_servergenerated_images.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
@@ -65,6 +73,10 @@ COMMENT('This problem is scaffolded with multiple parts');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code

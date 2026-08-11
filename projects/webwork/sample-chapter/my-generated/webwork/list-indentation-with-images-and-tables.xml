@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-list-indentation-with-images-and-tables" assembly-id="list-indentation-with-images-and-tables">
+<<<<<<< HEAD
   <static seed="86">
+=======
+  <static seed="84">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><p xmlns:pi="http://pretextbook.org/2020/pretext/internal"><ol label="a.">
 <li>
 <p>Structured item</p>
@@ -121,6 +125,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code
@@ -151,12 +159,19 @@ a.  Structured item
 
     [@DataTable(
       [
+<<<<<<< HEAD
         [
          PGML('a'),
          PGML('b'),
         ],
         [
          PGML('c'),
+=======
+        [PGML('a'),
+         PGML('b'),
+        ],
+        [PGML('c'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
          PGML('d'),
         ],
       ],
@@ -165,14 +180,22 @@ a.  Structured item
 
 a.  [@DataTable(
       [
+<<<<<<< HEAD
         [
          [PGML('1'),
+=======
+        [[PGML('1'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
           halign => 'r',],
          PGML('two'),
          PGML('[`\lfloor\pi\rfloor`]'),
         ],
+<<<<<<< HEAD
         [
          [PGML('[`\text{I}+\text{I}`]  
+=======
+        [[PGML('[`\text{I}+\text{I}`]  
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 [`{}+\text{I}+\text{I}`]  
 '),
           rowbottom => '3',
@@ -182,8 +205,12 @@ a.  [@DataTable(
          PGML('[`5`]'),
          PGML('six'),
         ],
+<<<<<<< HEAD
         [
          [PGML('[`2^3-1`]'),
+=======
+        [[PGML('[`2^3-1`]'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
           rowbottom => '3',
           midrule => '1',],
          [PGML('VIII'),
@@ -200,12 +227,19 @@ a.  Structured item
 
     [@DataTable(
       [
+<<<<<<< HEAD
         [
          PGML('a'),
          PGML('b'),
         ],
         [
          PGML('c'),
+=======
+        [PGML('a'),
+         PGML('b'),
+        ],
+        [PGML('c'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
          PGML('d'),
         ],
       ],

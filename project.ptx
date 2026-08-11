@@ -5,10 +5,20 @@
       <target name="sa-web" format="html" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes" />
       <target name="sra-web" format="html" source="sample-research-article/sample-article.xml" publication="projects/sample-research-article/publication.xml" deploy="yes" />
       <target name="sa-tex" format="latex" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
+<<<<<<< HEAD
       <target name="sa-pdf" format="pdf" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
       <target name="sra-pdf" format="pdf" source="sample-research-article/sample-article.xml" publication="projects/sample-research-article/publication.xml" latex-source="yes" deploy="yes"/>
+=======
+      <target name="sa-pdf" format="pdf" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" latex-source="yes" deploy="yes"/>
+      <target name="sa-epub" format="epub" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       <target name="sb-web" format="html" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
       <target name="sb-tex" format="latex" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
+      <target name="scorm" format="html" source="scorm-sample/main.xml" publication="projects/scorm-sample/publication.xml" compression="scorm" />
+
+      <!-- Read-aloud (text-to-speech) demo article, plus opt-out variant -->
+      <target name="ra-demo" format="html" source="read-aloud-demo/main.ptx" publication="projects/read-aloud-demo/publication.xml" deploy="yes"/>
+      <target name="ra-demo-off" format="html" source="read-aloud-demo/main.ptx" publication="projects/read-aloud-demo/publication-off.xml"/>
 
       <target name="sa-portable" format="html" source="sample-article/sample-article.xml" publication="publisher-files/sample-article/publication-portable.xml" deploy="yes"/>
       <target name="sa-theme" format="html" source="sample-research-article/sample-article.xml" publication="publisher-files/sample-article/publication-theme.xml" deploy="yes"/>

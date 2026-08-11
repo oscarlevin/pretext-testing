@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-multiple-choice-popup-or-radio-buttons" assembly-id="multiple-choice-popup-or-radio-buttons">
+<<<<<<< HEAD
   <static seed="80">
+=======
+  <static seed="78">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><p>My favorite color is <ul form="popup" name="AnSwEr0001"><li>
 <p>?</p>
 </li><li>
@@ -102,6 +106,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code

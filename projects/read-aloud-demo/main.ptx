@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Demo article for the read-aloud (embedded text-to-speech) feature.     -->
+<!-- Exercises every content-policy case: prose, inline and display math,   -->
+<!-- headings, lists, tables (announce-and-skip), code (announce-and-skip), -->
+<!-- footnotes (silently skipped), hidden knowls, and abbreviations that    -->
+<!-- stress the sentence segmenter.                                         -->
+<pretext xml:lang="en-US">
+  <docinfo>
+    <latex-image-preamble>\usepackage{tikz}</latex-image-preamble>
+  </docinfo>
+  <article xml:id="read-aloud-demo">
+    <title>Read-Aloud Demonstration</title>
+
+    <introduction>
+      <p>
+        This short article exists to be <em>listened to</em>.  Open the
+        read-aloud player from the speaker button in the toolbar, press play,
+        and follow along.  The reader speaks prose with your browser's voices
+        and hands each equation to MathJax's speech text, so the mathematics
+        is voiced in the same breath as the sentence around it.
+      </p>
+    </introduction>
+
+    <section xml:id="sec-math-handoff">
+      <title>The Mathematical Handoff</title>
+
+      <p>
+        Consider the function <m>f(x) = x^2</m>, which opens upward.  A
+        generic screen-narrator would skip that expression or read glyph
+        soup; here it is spoken inline.  Adjacent expressions like
+        <m>a</m> and <m>b</m> should be separated cleanly, and an equation
+        at the end of a sentence should keep its punctuation close, as with
+        <m>e^{i\pi} + 1 = 0</m>.
+      </p>
+
+      <p>
+        Display mathematics becomes its own utterance, with a natural
+        breath before and after:
+        <me>\int_0^1 x^2 \, dx = \frac{1}{3}.</me>
+        The decimal in <m>x \approx 3.2</m> must not split the sentence,
+        and neither should the abbreviations in this one: see Dr. Smith,
+        or e.g. Theorem 3.2, or cf. Fig. 4 for details.
+      </p>
+
+      <theorem xml:id="thm-demo">
+        <title>A Spoken Theorem</title>
+        <statement>
+          <p>
+            If <m>n</m> is an even integer, then <m>n^2</m> is divisible
+            by <m>4</m>.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            Write <m>n = 2k</m> for some integer <m>k</m>.  Then
+            <m>n^2 = 4k^2</m>, which is visibly a multiple of four.
+          </p>
+        </proof>
+      </theorem>
+    </section>
+
+    <section xml:id="sec-content-policy">
+      <title>Announce and Skip</title>
+
+      <p>
+        The reader voices what a sighted reader would read aloud, and
+        announces what it will not attempt.  A list is read item by item:
+      </p>
+
+      <p>
+        <ul>
+          <li><p>first, plain prose in a list item;</p></li>
+          <li><p>second, an item with math, namely <m>\sqrt{2}</m>;</p></li>
+          <li><p>third, a short closing item.</p></li>
+        </ul>
+      </p>
+
+      <p>
+        The table that follows should be announced and skipped, not read
+        cell by cell.
+      </p>
+
+      <table xml:id="table-demo">
+        <title>A table the reader skips</title>
+        <tabular>
+          <row header="yes">
+            <cell>Quantity</cell>
+            <cell>Value</cell>
+          </row>
+          <row>
+            <cell>Speed of sound</cell>
+            <cell>343 m/s</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <p>
+        Likewise, the code listing below is announced and skipped.
+      </p>
+
+      <program language="python">
+        <code>
+def square(x):
+    return x * x
+        </code>
+      </program>
+
+      <p>
+        Images have their alt text read aloud.
+      </p>
+
+      <figure xml:id="ex-fig">
+        <caption>A sample figure containing an image.</caption>
+        <image width="25%">
+          <shortdescription>A drawing of a circle.</shortdescription>
+          <description><p>
+            A circle with radius <m>1</m> and therefore circumference <m>2\pi</m>.
+          </p></description>
+          <latex-image label="circle-img">
+            \begin{tikzpicture}
+              \draw (0,0) circle (1);
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </figure>
+    </section>
+
+    <section xml:id="sec-knowls">
+      <title>Hidden Content and Navigation</title>
+
+      <p>
+        Everything below is born hidden, so a sighted reader sees only the
+        titles until they click.  The <q>hidden content</q> setting decides
+        what the listener gets: the titles alone, the whole thing, or a pause
+        at each one.  Down-arrow dives into the most recent hidden block and
+        up-arrow climbs back out, so the choice can be made block by block
+        without changing the setting.
+      </p>
+
+      <definition xml:id="def-even">
+        <title>Even Integers</title>
+        <statement>
+          <p>
+            An integer <m>n</m> is <term>even</term> when <m>n = 2k</m> for
+            some integer <m>k</m>.
+          </p>
+        </statement>
+      </definition>
+
+      <p>
+        A paragraph between two hidden blocks, so you can hear where one ends
+        and the next begins.<fn>A footnote is hidden content too, and is announced and
+        entered exactly like a knowl.</fn>
+      </p>
+
+      <theorem xml:id="thm-nested">
+        <title>Squares of Even Integers</title>
+        <statement>
+          <p>
+            If <m>n</m> is even, then <m>n^2</m> is divisible by <m>4</m>.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            This proof is hidden inside a hidden theorem, which is the case
+            worth listening to: skipping the theorem should not announce this
+            proof at all, and entering the theorem should announce it without
+            reading it until you ask.
+          </p>
+          <p>
+            Write <m>n = 2k</m>, so <m>n^2 = 4k^2</m>.
+          </p>
+        </proof>
+      </theorem>
+
+      <example xml:id="ex-aside">
+        <title>A Hidden Example</title>
+        <statement>
+          <p>
+            Take <m>n = 6</m>.  Then <m>n^2 = 36 = 4 \cdot 9</m>, as the
+            theorem promises.
+          </p>
+        </statement>
+      </example>
+
+      <p>
+        The last paragraph of the section.  Reaching it means every hidden
+        block above was either read or stepped over.
+      </p>
+    </section>
+
+    <section xml:id="sec-ending">
+      <title>The End of the Page</title>
+
+      <p>
+        When the reader finishes the last block it announces the end of the
+        page and offers to continue to the next section.  This is the final
+        paragraph, so you should hear that announcement shortly.
+      </p>
+    </section>
+  </article>
+</pretext>

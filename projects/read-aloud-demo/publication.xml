@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Publication file for the read-aloud demo.  The read-aloud element is  -->
+<!-- shown explicitly here even though "yes" is the default; change to     -->
+<!-- enabled="no" to verify an opted-out build ships zero TTS bytes.       -->
+<publication>
+  <source>
+    <directories external="external" generated="generated"/>
+  </source>
+  <html>
+    <read-aloud enabled="yes"/>
+    <!-- Born hidden on purpose: these are what the aside listening modes  -->
+    <!-- and the up/down navigation keys act on.                          -->
+    <knowl theorem="yes" proof="yes" example="yes" definition="yes"/>
+  </html>
+</publication>

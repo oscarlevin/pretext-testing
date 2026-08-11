@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-tables" assembly-id="tables">
+<<<<<<< HEAD
   <static seed="82">
+=======
+  <static seed="80">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><p>A table with minimal XML source.</p>
 <!-- PTX:WARNING: PGML wanted to center align here. -->
 <tabular>
@@ -94,6 +98,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code
@@ -110,6 +118,7 @@ A table with minimal XML source.
 
 >> [@DataTable(
   [
+<<<<<<< HEAD
     [
      PGML('A'),
      PGML('B'),
@@ -122,6 +131,17 @@ A table with minimal XML source.
     ],
     [
      PGML('G'),
+=======
+    [PGML('A'),
+     PGML('B'),
+     PGML('C'),
+    ],
+    [PGML('D'),
+     PGML('E'),
+     PGML('F'),
+    ],
+    [PGML('G'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
      PGML('H'),
      PGML('I'),
     ],
@@ -133,14 +153,22 @@ Finish this table.
 
 >> [@DataTable(
   [
+<<<<<<< HEAD
     [
      [PGML('1'),
+=======
+    [[PGML('1'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       halign => 'r',],
      PGML('two'),
      PGML('[`\lfloor\pi\rfloor`]'),
     ],
+<<<<<<< HEAD
     [
      [PGML('[`\text{I}+\text{I}`]  
+=======
+    [[PGML('[`\text{I}+\text{I}`]  
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 [`{}+\text{I}+\text{I}`]  
 '),
       rowbottom => '3',
@@ -150,8 +178,12 @@ Finish this table.
      PGML('[_]{$x}{5}'),
      PGML('six'),
     ],
+<<<<<<< HEAD
     [
      [PGML('[`2^3-1`]'),
+=======
+    [[PGML('[`2^3-1`]'),
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       rowbottom => '3',
       midrule => '1',],
      [PGML('VIII'),

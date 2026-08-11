@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-inline-introduction-conclusion" assembly-id="inline-introduction-conclusion">
+<<<<<<< HEAD
   <static seed="95">
+=======
+  <static seed="94">
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><p><m>1+1=2</m></p>
 </statement>
   </static>
@@ -42,6 +46,10 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
+<<<<<<< HEAD
+=======
+TEXT(beginproblem());
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code

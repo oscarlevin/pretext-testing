@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Opt-out variant: verifies a read-aloud-disabled build emits no TTS markup or bytes. -->
+<publication>
+  <source>
+    <directories external="external" generated="generated"/>
+  </source>
+  <html>
+    <read-aloud enabled="no"/>
+  </html>
+</publication>

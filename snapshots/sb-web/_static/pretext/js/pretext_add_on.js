@@ -457,7 +457,10 @@ function setInitialWorkspaceHeights() {
 
 // If a printout (worksheet or handout) includes authored pages, we only need to put content before the first page and after the last page into the first and last pages, respectively.
 function adjustPrintoutPages() {
+<<<<<<< HEAD
     console.log("*** Adjusting printout pages.");
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     const printout = document.querySelector('section.worksheet, section.handout');
     if (!printout) {
         console.warn("No printout found, exiting adjustPrintoutPages.");
@@ -491,7 +494,10 @@ function adjustPrintoutPages() {
 
 // This is the main function we will call then a printout does not come from the XSL with pages already defined (for now, the XSL will keep the <page> behavior as an option).
 function createPrintoutPages(margins) {
+<<<<<<< HEAD
     console.log("*** Creating printout pages with margins:", margins);
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
     // Assumptions: needs to work for both letter (8.5in x 11in) and a4 (210mm x 297mm) paper sizes.  We will work in pixels (96/in): those are 816px x 1056px and 794px x 1122.5px respectively (1 inch = 96 px, 1 cm = 37.8 px).  We assume that the printing interface of the browser will do the right thing with these.
 
@@ -518,6 +524,7 @@ function createPrintoutPages(margins) {
         } else if (child.querySelector('.task')) {
             // Keep the child as a block, but put each task after the first one as its own row:
             rows.push(child);
+<<<<<<< HEAD
             const tasks = child.querySelectorAll('.task, .conclusion');
 
             //Determine how many levels of nesting each task has.  If parent is an .exercise, leave alone.  If parent is a .task, add .subtask class.  If grandparent is .task, add .subsubtask to it so it can be indented by css:
@@ -530,6 +537,9 @@ function createPrintoutPages(margins) {
                     tasks[i].classList.add('subtask');
                 }
             }
+=======
+            const tasks = child.querySelectorAll('.task');
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             for (let i = tasks.length-1; i > 0; i--) {
                 // Move the task out of the original child and place it directly after it in the printout.  We do this in reverse order so when every task is moved, they return to the original order. They will then be added to the rows list as their own blocks.
                 printout.insertBefore(tasks[i], child.nextSibling);
@@ -908,7 +918,43 @@ function toggleWorkspaceHighlight(isChecked) {
     }
 }
 
+<<<<<<< HEAD
 function getPaperSize() {
+=======
+// Printout print preview and page setup
+window.addEventListener("load",function(event) {
+  // We condition on the existence of the papersize radio buttons, which only appear in the printout print preview.
+  if (document.querySelector('input[name="papersize"]')) {
+    // First, get the margins for pages to be passed around as needed.
+    const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
+    // Convert margin values to pixels if they are not already numbers
+    function toPixels(value) {
+        if (typeof value === "number") return value;
+        if (typeof value !== "string") return 0;
+        value = value.trim();
+        if (value.endsWith("px")) {
+            return parseFloat(value);
+        } else if (value.endsWith("in")) {
+            return Math.floor(parseFloat(value) * 96);
+        } else if (value.endsWith("cm")) {
+            return Math.floor(parseFloat(value) * 37.8);
+        } else if (value.endsWith("mm")) {
+            return Math.floor(parseFloat(value) * 3.78);
+        } else if (value.endsWith("pt")) {
+            return Math.floor(parseFloat(value) * (96 / 72));
+        } else {
+            // fallback: try to parse as px
+            return parseFloat(value) || 0;
+        }
+    }
+    const margins = {
+        top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
+        right: toPixels(marginList[1] || "0.75in"),
+        bottom: toPixels(marginList[2] || "0.75in"),
+        left: toPixels(marginList[3] || "0.75in")
+    }
+    // Get the papersize from localStorage or set it based on user's geographic region
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     let paperSize = localStorage.getItem("papersize");
     if (paperSize) {
       return paperSize;
@@ -946,6 +992,7 @@ function getPaperSize() {
 // Function to load the printout section and switch to print stylesheet.  This will run whenever a user clicks on a print preview link (which adds ?printpreview=sectionID to the URL).
 async function loadPrintout(printableSectionID) {
 
+<<<<<<< HEAD
     // Switch to print-worksheet.css for print preview
     const themeStylesheetLink = document.querySelector('link[rel="stylesheet"][href*="theme"]');
     // get the href of the theme stylesheet link
@@ -958,6 +1005,60 @@ async function loadPrintout(printableSectionID) {
         // Wait for the new stylesheet to load.  This is important to ensure the styles are applied before the calling function tries to compute workspace sizes.
         await new Promise((resolve) => {
             themeStylesheetLink.addEventListener('load', resolve, { once: true });
+=======
+    // If there are hints/answers/solutions on the page, then we will get a checkbox to optionally hide them.
+    for (const solutionType of ["Hints", "Solutions", "Answers"]) {
+        const checkbox = document.getElementById(`hide-${solutionType.toLowerCase()}-checkbox`);
+        if (checkbox) {
+            // Set the checkbox state from localStorage
+            const storageKey = `hide${solutionType}`;
+            checkbox.checked = localStorage.getItem(storageKey) === "true";
+            // if the checkbox is checked, then we remove any solution divs that have first element "details" with class "solutionType"
+            if (checkbox.checked) {
+                // cssClass will be "hint", "solution", or "answer"; lowercase version of solutionType and remove the last character
+                const cssClass = solutionType.slice(0, -1).toLowerCase();
+                document.querySelectorAll(`details.${cssClass}`).forEach(elem => {
+                    elem.remove()
+                });
+            }
+
+            // Add event listener to toggle visibility
+            checkbox.addEventListener("change", function() {
+                localStorage.setItem(storageKey, this.checked);
+                // Reload the page to recompute workspace with changed visibility
+                window.location.reload();
+            });
+        }
+    }
+
+    // Open all details elements (knowls) on the page that are inside the .worksheet or .handout section
+    var born_hidden_knowls = document.querySelectorAll('.worksheet details, .handout details');
+    console.log("born_hidden_knowls", born_hidden_knowls);
+    born_hidden_knowls.forEach(function(detail) {
+        detail.open = true;
+    });
+    // If the printout has authored pages, there will be at least one .onepage element.
+    if (document.querySelector('.onepage')) {
+        adjustPrintoutPages();
+        /* not the right way:  need to figure out what this needs to wait for */
+        //window.setTimeout(adjustPrintoutPages, 1000);
+    } else {
+        createPrintoutPages(margins);
+    }
+    // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size).
+    adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
+
+    console.log("finished adjusting workspace");
+
+
+    // Get the 'highlight workspace' checkbox state from localStorage or set it to false by default
+    const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
+    if (highlightWorkspaceCheckbox) {
+        highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
+        highlightWorkspaceCheckbox.addEventListener("change", function() {
+            localStorage.setItem("highlightWorkspace", this.checked);
+            toggleWorkspaceHighlight(this.checked);
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         });
     }
 

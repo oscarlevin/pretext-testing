@@ -4039,7 +4039,11 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.11",
   "title": "Horizontal Parsons Exercises",
+<<<<<<< HEAD
   "body": " Horizontal Parsons Exercises   Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test     Parsons Problem, Python import   Testing syntax highlighting.    from  math  import  pi     Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test     Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42    Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog     Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog     Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test     Parsons Problem with math blocks   Testing math mode blocks - correct answer is           "
+=======
+  "body": " Horizontal Parsons Exercises   Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test     Parsons Problem, Python import   Testing syntax highlighting.    from  math  import  pi     Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test     Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42    Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog     Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog     Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test    "
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 },
 {
   "id": "horizontal-parson-sql-statement-simple",
@@ -4741,7 +4745,11 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.28",
   "title": "SPLICE Integration",
+<<<<<<< HEAD
   "body": " SPLICE Integration  SPLICE is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a protocol for an embedded iframe to communicate with its host page.  One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.  This first sample tests the ability of an iframe to ask for a new size.   The next uses CodeCheck .   CodeCheck iframe    And the remaing four are from the OpenDSA project.   Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise       (2025-11-05) The following two exercises are strictly EXPERIMENTAL . Do not incorporate them into your projects as they are likely to change dramatically.    Finding the average velocity of a moving object from data (dual, Doenet)    OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.    This example recreates the Show-Eval visualization from the Runestone Components, using a PreTexT <interactive> . It also records student activity using SPLICE.  It demonstrates how the Show-Eval tool can be used to visualize the evaluation of Python expressions step by step.  This could also be used for doing similar visualization of mathematical expressions. Support for MathJax would take some work, but this example would be a good starting point.   Show-Eval Visualization    "
+=======
+  "body": " SPLICE Integration  SPLICE is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a protocol for an embedded iframe to communicate with its host page.  One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.  This first sample tests the ability of an iframe to ask for a new size.   The next uses CodeCheck .   CodeCheck iframe    And the remaing four are from the OpenDSA project.   Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise       (2025-11-05) The following two exercises are strictly EXPERIMENTAL . Do not incorporate them into your projects as they are likely to change dramatically.    Finding the average velocity of a moving object from data (dual, Doenet)    OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.    "
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 },
 {
   "id": "horstmann-codecheck",
@@ -4807,6 +4815,7 @@ var ptx_lunr_docs = [
   "body": "OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.   "
 },
 {
+<<<<<<< HEAD
   "id": "show-eval-visualization1",
   "level": "2",
   "url": "splice-integration.html#show-eval-visualization1",
@@ -4816,6 +4825,8 @@ var ptx_lunr_docs = [
   "body": " Show-Eval Visualization   "
 },
 {
+=======
+>>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   "id": "chapter-exam",
   "level": "1",
   "url": "chapter-exam.html",
