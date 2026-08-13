@@ -24,13 +24,10 @@
 <!-- This is a skeleton file to hold WeBWorK problems authored in PreTeXt. -->
 
 <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
-<<<<<<< HEAD
   <docinfo>
       <directories external="external"/>
   </docinfo>
 
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   <article xml:id="webwork-mini">
     <title><webwork /> Minimal Example</title>
     <frontmatter>

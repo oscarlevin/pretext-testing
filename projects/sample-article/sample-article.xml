@@ -78,19 +78,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <!-- employed in a PreFigure linear algebra diagram -->
             <line stroke="blue"/>
         </prefigure-preamble>
-<<<<<<< HEAD
-=======
-        <!-- We control the appearance of the text of cross-references here           -->
-        <!-- (these are the "xref" elements).  Because this changes the words         -->
-        <!-- that appear in your output, it is a decision with stays with the source. -->
-        <!-- Experiment here with different choices and a few different "xref"        -->
-        <!-- elements before you decide on a final choice.  We use 'type-global',     -->
-        <!-- which is also the default, and produces text like "Theorem 5.2", where   -->
-        <!-- "Theorem" will be translated into the document language.  Individual     -->
-        <!-- "xref" carry an explicit "text" attribute where a different scheme is    -->
-        <!-- wanted.                                                                  -->
-        <cross-references text="type-global"/>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         <!--
         Extra packages, package options, and package settings for latex-based images.
         Inserted in the preamble for LaTeX output.
@@ -679,7 +666,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 <!-- ToDo: Should equation references come with parentheses? -->
 
                 <corollary xml:id="corollary-FTC-derivative">
-                    <creator>Leibniz, Newton <xref ref="biblio-judson-aata"/></creator>
+                    <creator>Leibniz, Newton</creator>
                     <idx><h>Fundamental Theorem of Calculus</h><h>Corollary</h></idx>
                     <statement>
                         <p>Suppose <m>f(x)</m> is a continuous function.  Then <md number="yes" xml:id="equation-alternate-FTC">\frac{d}{dx}\definiteintegral{a}{x}{f(t)}{t}=f(x)</md>.</p>
@@ -2306,11 +2293,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     <mrow>&amp;=F+G&amp;&amp;<xref ref="theorem-number-01" text="custom">A nice result</xref></mrow>
                 </md>.</p>
 
-<<<<<<< HEAD
                 <p>Scott Beaver likes to write short chains of equalities all in one line, with the cross-references sitting on each equals sign.  Here we test the <latex/> <c>\overset</c>, <c>\underset</c>, and <c>\overunderset</c> macros wrapping a <pretext/> <tag>xref</tag>, with and without content, inside an <tag>md</tag> element.  Note that <c>\stackrel</c> is obsolete, and that MathJax has supported <c>\overunderset</c> since its version 3.2 (see <url href="https://github.com/mathjax/MathJax/issues/2704" visual="github.com/mathjax/MathJax/issues/2704">GitHub #2704</url>), so the final equals sign carries a reason above <em>and</em> below.  The mathematics is Scott's, the reasons are totally unrelated to the math.
-=======
-                <p>Scott Beaver likes to write short chains of equalities all in one line, with the cross-references sitting on each equals sign.  Here we test the <latex/> <c>\overset</c> and <c>\underset</c> macros wrapping a <pretext/> <tag>xref</tag>, with and without content, inside an <tag>md</tag> element.  Note that  <c>\stackrel</c> is obsolete, and <c>\overunderset</c> is not yet supported by MathJax (but see <url href="https://github.com/mathjax/MathJax/issues/2704" visual="github.com/mathjax/MathJax/issues/2704">GitHub #2704</url>).  The mathematics is Scott's, the reasons are totally unrelated to the math.
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                     <md>AC-AD
                         \overset{<xref ref="theorem-FTC" text="global"/>}{=}
                         A(C-D)
@@ -2896,11 +2879,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     <!-- “She kept repeating to herself, ‘I have a lover! a lover!’  -->
                     <!-- savoring the idea as if a new puberty had come upon her.”   -->
 
-<<<<<<< HEAD
                     <p>Primary only: <q>La liberté commence où l'ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J'ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d'une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
-=======
-                    <p>Primary only: <q>La liberté commence où l’ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J’ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d’une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 </paragraphs>
 
                 <paragraphs xml:lang="fr-CA">
@@ -2915,11 +2894,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     <!-- “She kept repeating to herself, ‘I have a lover! a lover!’  -->
                     <!-- savoring the idea as if a new puberty had come upon her.”   -->
 
-<<<<<<< HEAD
                     <p>Primary only: <q>La liberté commence où l'ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J'ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d'une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
-=======
-                    <p>Primary only: <q>La liberté commence où l’ignorance finit.</q> Primary and secondary: <q>Elle se répétait : <sq>J’ai un amant ! un amant !</sq> se délectant à cette idée comme à celle d’une autre puberté qui lui serait survenue</q>. (Victor Hugo, Les Misérables; Gustave Flaubert, Madame Bovary)</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 </paragraphs>
 
                 <paragraphs xml:lang="de-DE">
@@ -6902,7 +6877,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 </tabular>
             </table>
 
-<<<<<<< HEAD
             <p>Long division of polynomials, described with vertical and horizontal borders on individual entries of a <tag>tabular</tag>.  The division lines are slightly thicker than the subtraction lines.  This is an ill-advised torture test of the <tag>tabular</tag> machinery<mdash/>the typical abuse of tables for horizontal and vertical layout<mdash/>so do not take it as a model, but do notice what the machinery can do.  It is also a <em>bare</em> <tag>tabular</tag>, sitting between paragraphs with no wrapper at all, and so with no number and no caption.  A <tag>tabular</tag> is either bare, like this one, or wrapped in a <tag>table</tag> when it deserves a number and a title.</p>
 
             <tabular halign="right">
@@ -6968,8 +6942,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 </row>
             </tabular>
 
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             <p>And now a <tag>sidebyside</tag> with a <tag>table</tag> and a <tag>tabular</tag> to check that width is scaled appropriately. See <xref ref="section-side-by-side" text="global">Section</xref> to learn about <tag>sidebyside</tag>s.</p>
 
             <figure xml:id="table-consitution-text">
@@ -9014,27 +8986,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     </interactive>
                 </figure>
 
-<<<<<<< HEAD
                 <p>A test where the JSXGraph code indicates it needs MathJax to render.</p>
-=======
-                <p>Here are the two new examples.  They have been included in a <c>sidebyside</c> layout element with equal widths (see <xref ref="section-side-by-side"/>) so they can be placed horizontally across the page.  They are not wrapped as figures, so cannot be cross-referenced.  These are again from the <url href="http://jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples" visual="jsxgraph.uni-bayreuth.de/wiki/index.php/Category:Examples">JSXGraph example wiki</url>, the left being Fermat's Spiral and the right being a demonstration of B-splines.</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
                 <figure xml:id="figure-jsx-arc-graph">
                     <caption>An interactive whose JSXGraph code uses MathJax to render mathematics.</caption>
                     <interactive platform="jsxgraph" label="interactive-jsx-arc-graph" source="code/jsxgraph/interactive-jsx-arc-graph.js" width="60%">
-                        <slate xml:id="interactive-jsx-arc-graph_fig" surface="jsxboard"/>
-                        <instructions>
-                            <p>Change the values of <m>a</m> and <m>b</m> to see how the slope of the line changes.</p>
-                        </instructions>
-                    </interactive>
-                </figure>
-
-                <p>A test where the JSXGraph code indicates it needs MathJax to render.</p>
-
-                <figure xml:id="interactive-jsx-arc-graph">
-                    <caption>An interactive whose JSXGraph code uses MathJax to render mathematics.</caption>
-                    <interactive platform="jsxgraph" source="code/jsxgraph/interactive-jsx-arc-graph.js" width="60%">
                         <slate xml:id="interactive-jsx-arc-graph_fig" surface="jsxboard"/>
                         <instructions>
                             <p>Change the values of <m>a</m> and <m>b</m> to see how the slope of the line changes.</p>
@@ -10126,11 +10082,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <section xml:id="section-dynamic-exercises">
             <title>Dynamic Exercises</title>
 
-<<<<<<< HEAD
             <p>This section demonstrates the use of dynamic randomized exercises built upon the framework of Runestone components. These demonstration problems incorporate a library supporting mathematical expressions both for varying the content of the statement of the exercises as well as the checking of submitted answers. Then there is an example where a custom library is used for defining and parsing answer objects without using the built-in math library, and which also illustrates the use of a config structure passed in JSON format.</p>
-=======
-            <p>This section demonstrates the use of dynamic randomized exercises built upon the framework of Runestone components. These demonstration problems incorporate a library supporting mathematical expressions both for varying the content of the statement of the exercises as well as the checking of submitted answers.</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
             <exercises>
                 <title>Dynamic Fill-In</title>
@@ -10735,33 +10687,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
                 <video xml:id="led-zeppelin-kashmir-solo" youtube="hAzdgU_kpGo" width="50%" preview="preview/jimmy-page.jpg"/>
 
-<<<<<<< HEAD
-=======
-                <p>We can pack two videos side-by-side, with a lot of horizontal control, using two panels in the <c>sidebyside</c> element.  We have simply chosen here to not provide a caption (overall, or separately) as an illustration.  The sizes are purposely a bit odd.  See <xref ref="section-side-by-side"/> for much more on side-by-side panels.  These videos come from the <q>Topic</q> and <q>VEVO</q> areas of YouTube (respectively) and both have start/end times.</p>
-
-                <sidebyside margins="auto" widths="20% 40%" valign="middle">
-                    <!-- Liza Minelli -->
-                    <video xml:id="minelli-newyork-newyork" youtube="5-pyc_z7WbY" start="16" end="35"/>
-                    <!-- Sara Bareilles -->
-                    <video xml:id="bareilles-love-song" youtube="qi7Yh16dA0w" start="60" end="120"/>
-                </sidebyside>
-
-                <p>These next two videos are evenly spaced, one from YouTube, one from a source file hosted by the author.  Now with separate captions, but identical margins (through very different choices of layout parameters than in the preceding pair of videos).</p>
-
-                <sidebyside margins="10%" widths="35% 35%">
-                    <!-- drone flight again-->
-                    <figure>
-                        <caption>Drone Flight</caption>
-                        <video xml:id="drone-flight-sbs" youtube="VsHMjWORFvI"/>
-                    </figure>
-                    <!-- UPS promo -->
-                    <figure>
-                        <caption>UPS Promo</caption>
-                        <video xml:id="ups-promo-sbs" source="video/ups-visitor-guide-360" preview="preview/ups-promo-frame-one.jpg"/>
-                    </figure>
-                </sidebyside>
-
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <p>A YouTube <q>playlist</q> can be built in one of two ways. You may specify the <c>youtube</c> attribute to be a space-separated list of several video IDs. Alternatively, you may set the <c>youtubeplaylist</c> attribute to a YouTube playlist ID.</p>
 
                 <figure>
@@ -10945,10 +10870,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 <li><p>A system of equations, given as range from first to last: <xref first="equation-system-begin" last="equation-system-end" text="global"/></p></li>
                 <li><p>A range of sections, hand-named to be plural: Sections<nbsp/><xref first="section-sage-cells" last="section-cross-referencing" text="global"/></p></li>
                 <li><p>A range of bibliographic items: <xref first="biblio-judson-AATA" last="biblio-lay-article" text="global"/></p></li>
-<<<<<<< HEAD
                 <li><p>A range with custom text, which replaces the entire range, endpoints, separator, and any brackets (compare with the previous item): <xref first="biblio-judson-AATA" last="biblio-lay-article" text="custom">a pair of consecutive references</xref></p></li>
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
                 <!-- <li><p>: <xref ref=""/></p></li> -->
             </ul></p>
 
@@ -13565,8 +13487,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 Now let's test the alignment of various items that might be placed with an image in a figure. We want asymptote links and long descriptions close to the image. The caption for figures should be aligned.
             </p>
-<<<<<<< HEAD
-=======
 
             <figure>
                 <caption>Two Asympote images side-by-side</caption>
@@ -13636,81 +13556,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 </sidebyside>
             </figure>
 
-            <p>Now we have some more interactive elements.</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
-
-            <figure>
-                <caption>Two Asympote images side-by-side</caption>
-                <sidebyside margins="5%" widths="40% 45%">
-
-                <figure>
-                    <caption>Asymptote Lever Demonstration</caption>
-                    <image xml:id="asymptote-lever-sbs">
-                        <shortdescription>moments on a lever</shortdescription>
-                        <description>
-                            <p>This diagram has two masses at either end of a lever, namely <m>m</m> and <m>M</m>.  They are located at distance <m>x</m> and <m>X</m> on an axis.  The resulting center-of-mass is at a point <m>\bar{x}</m>.</p>
-                        </description>
-                        <asymptote>
-                            size(200,0);
-
-                            pair z0=(0,0);
-                            pair z1=(2,0);
-                            pair z2=(5,0);
-                            pair zf=z1+0.75*(z2-z1);
-
-                            draw(z1--z2);
-                            dot(z1,red+0.15cm);
-                            dot(z2,darkgreen+0.3cm);
-                            label("$m$",z1,1.2N,red);
-                            label("$M$",z2,1.5N,darkgreen);
-                            label("$\hat{\ }$",zf,0.2*S,fontsize(24pt)+blue);
-
-                            pair s=-0.2*I;
-                            draw("$x$",z0+s--z1+s,N,red,Arrows,Bars,PenMargins);
-
-                            s=-0.5*I;
-                            draw("$\bar{x}$",z0+s--zf+s,blue,Arrows,Bars,PenMargins);
-
-                            s=-0.95*I;
-                            draw("$X$",z0+s--z2+s,darkgreen,Arrows,Bars,PenMargins);
-                        </asymptote>
-                    </image>
-                </figure>
-
-                <figure>
-                    <caption>Asymptote Contour Plot</caption>
-                    <image xml:id="asymptote-contour-sbs">
-                        <asymptote>
-                            import graph;
-                            import palette;
-
-                            size(10cm,10cm,IgnoreAspect);
-
-                            real f(real x, real y) {
-                            return 0.9*pow10(2*sin(x/5+2*y^0.25)) + 0.1*(1+cos(10*log(y)));
-                            }
-
-                            scale(Linear,Log,Log);
-
-                            pen[] Palette=BWRainbow();
-
-                            bounds range=image(f,Automatic,(0,1),(100,100),nx=200,Palette);
-
-                            xaxis("$x$",BottomTop,LeftTicks,above=true);
-                            yaxis("$y$",LeftRight,RightTicks,above=true);
-
-                            palette("$f(x,y)$",range,(0,200),(100,250),Top,Palette,
-                            PaletteTicks(ptick=linewidth(0.5*linewidth())));
-                        </asymptote>
-                    </image>
-                </figure>
-                </sidebyside>
-            </figure>
-
-<<<<<<< HEAD
-=======
-            <p>Videos can be placed quite compactly for HTML output, but we display a fair amount of information for a YouTube video in print, and therefore two videos side-by-side gets pretty crowded.  The examples above have the bare minimum amount of information attached (not in an overarching <c>figure</c>), and the bare amount which which is displayed in print.  We could relax our common spacing to make it a bit better.  Read about <q>side-by-side</q> groups (<c>sbsgroup</c>) and experiment with stacking several sub-captioned videos into an overall captioned figure (<xref ref="subsection-sbsgroup"/>).  For other examples see <xref ref="section-video"/> and <xref ref="atomic-video"/>.</p>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         </section>
 
         <section xml:id="open-problems" label="section-open-problems">
@@ -14107,37 +13952,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     <video xml:id="pre-roll-countdown-12" youtube="Srmdij0CU1U" margins="30% 60%"/>
                 </figure>
 
-<<<<<<< HEAD
-=======
-                <p>Inside figures inside a <tag>sidebyside</tag>.  Same widths as previous <tag>sidebyside</tag> but alignment on bottoms of the panels, to partially align captions.  Note how the captions are constrained in width by the width of the panels of the side-by-side.</p>
-
-                <sidebyside widths="20% 30%" valign="bottom">
-                    <figure>
-                        <caption>Pre-Roll Countdown</caption>
-                        <video xml:id="pre-roll-countdown-13" youtube="Srmdij0CU1U"/>
-                    </figure>
-                    <figure>
-                        <caption>University of Puget Sound Promotional Video</caption>
-                        <video xml:id="ups-promo-13" source="video/ups-visitor-guide-360" preview="preview/ups-promo-preview.jpg"/>
-                    </figure>
-                </sidebyside>
-
-                <p>Identical code to previous example, but now wrapped in an overall <tag>figure</tag>, which has its own caption and number, leaving the interior figures to be sub-numbered.  Cross-references use the full number: <xref ref="ups-video"/>.</p>
-
-                <figure>
-                    <caption>Amalgamation of Videos</caption>
-                    <sidebyside widths="20% 30%" valign="bottom">
-                        <figure>
-                            <caption>Pre-Roll Countdown</caption>
-                            <video xml:id="pre-roll-countdown-14" youtube="Srmdij0CU1U"/>
-                        </figure>
-                        <figure xml:id="ups-video">
-                            <caption>University of Puget Sound Promotional Video</caption>
-                            <video xml:id="ups-promo-14" source="video/ups-visitor-guide-360" preview="preview/ups-promo-preview.jpg"/>
-                        </figure>
-                    </sidebyside>
-                </figure>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             </subsection>
 
             <subsection xml:id="atomic-program">
@@ -16991,7 +16805,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         <section xml:id="section-standalone-project-printouts" label="section-standalone-project-printouts">
             <title>Projects as Printouts</title>
 
-<<<<<<< HEAD
             <p>
                 A project-like element outside of any worksheet or handout may still carry <c>workspace</c>, on itself or on its tasks.
                 When it does, HTML output gives it the same print preview icon a worksheet gets, and previewing it lays out just that project across pages with the workspace expanded to fill them.
@@ -17046,8 +16859,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
         </section>
 
 
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         <section xml:id="worksheet-solution-testing" label="section-worksheet-solutions-testing">
             <title>Worksheet Solution Testing</title>
             <introduction>
@@ -17671,15 +17482,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
             <references xml:id="references-raw" label="references-raw">
                 <title>Raw Entries</title>
-<<<<<<< HEAD
                 <headnote>
                     <p>The twelve references as <c>type="raw"</c> entries.</p>
                 </headnote>
-=======
-                <introduction>
-                    <p>The twelve references as <c>type="raw"</c> entries.</p>
-                </introduction>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
                 <biblio xml:id="raw-judson" type="raw">Thomas W. Judson, <title>Abstract Algebra: Theory and Applications</title>, Orthogonal Publishing, Ann Arbor, MI, 2022.</biblio>
 
@@ -17708,15 +17513,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
             <references xml:id="references-bibtex" label="references-bibtex">
                 <title>BibTeX-Style Entries</title>
-<<<<<<< HEAD
                 <headnote>
                     <p>The twelve references as <c>type="bibtex"</c> entries.</p>
                 </headnote>
-=======
-                <introduction>
-                    <p>The twelve references as <c>type="bibtex"</c> entries.</p>
-                </introduction>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
                 <biblio xml:id="bibtex-judson" type="bibtex">
                     <author>Thomas W. Judson</author>
@@ -17821,15 +17620,9 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
 
             <references xml:id="references-csl" label="references-csl">
                 <title>CSL-Style Entries</title>
-<<<<<<< HEAD
                 <headnote>
                     <p>The twelve references as CSL-style entries.</p>
                 </headnote>
-=======
-                <introduction>
-                    <p>The twelve references as CSL-style entries.</p>
-                </introduction>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
                 <biblio xml:id="csl-judson" type="book">
                     <author>
@@ -18043,7 +17836,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </references>
         </section>
 
-<<<<<<< HEAD
         <section xml:id="section-runestone-components" label="section-runestone-components">
             <title>Runestone Components</title>
             <idx>Runestone components</idx>
@@ -18281,8 +18073,6 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             </exercise>
         </section>
 
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         <exercises xml:id="exercises" label="exercises-top-level">
             <title>Exercises, Top-Level</title>
 
@@ -18534,7 +18324,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                 </subsection>
             </appendix>
 
-            <appendix label="appendix-index">
+            <appendix xml:id="appendix-index" label="appendix-index">
                 <title>Index</title>
 
                 <p>There is an index manufactured at the end of the back matter.  So we are talking about it here, rather than within the index, which is an impossibility.  It contains some sample entries, and is not meant to be comprehensive.  Look at the source of this XML file, searching on <tag>idx</tag>, to see how they are written.  They may be placed inside of a a variety of structures, and their location greatly influences the cross-references produced in the HTML version of the index.</p>
@@ -18719,7 +18509,7 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
             <index label="the-index">
                 <title>Index</title>
                 <headnote>
-                    <p>An index may begin with a <tag>headnote</tag> like this one.  Indexing advice holds that a headnote is only necessary when the index has some unusual feature a reader should know in advance<mdash/>perhaps how symbols are ordered, or that persons and topics are interfiled.  This index has no such feature; this headnote is a demonstration.</p>
+                    <p>An index may begin with a <tag>headnote</tag> like this one.  Indexing advice holds that a headnote is only necessary when the index has some unusual feature a reader should know in advance<mdash/>perhaps how symbols are ordered, or that persons and topics are interfiled.  This index has no such feature; this headnote is a demonstration.  For a fuller discussion of this index, and of authoring index entries generally, see <xref ref="appendix-index"/>.</p>
                 </headnote>
                 <index-list/>
             </index>

@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-single-quote-in-table-cell" assembly-id="single-quote-in-table-cell">
-<<<<<<< HEAD
   <static seed="88">
-=======
-  <static seed="87">
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     <statement><!-- PTX:WARNING: PGML wanted to center align here. -->
 <tabular>
 <col/>
@@ -14,11 +10,7 @@
 </tabular>
 </statement>
   </static>
-<<<<<<< HEAD
   <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_3-Stress_Tests/2_3_5.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
-=======
-  <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_3-Stress_Tests/2_3_6.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
@@ -35,11 +27,7 @@
 ## EditionText1()
 ## AuthorText1()
 ## Section1(not reported)
-<<<<<<< HEAD
 ## Problem1(2.3.5)
-=======
-## Problem1(2.3.6)
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 ## Author()
 ## Institution()
 ## Language(en-US)
@@ -61,10 +49,6 @@ COMMENT('Authored in PreTeXt');
 ############################################################
 # Header
 ############################################################
-<<<<<<< HEAD
-=======
-TEXT(beginproblem());
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code
@@ -78,12 +62,8 @@ Context('Numeric');
 BEGIN_PGML
 >> [@DataTable(
   [
-<<<<<<< HEAD
     [
      PGML(q"What's up, Doc?"),
-=======
-    [PGML(q"What's up, Doc?"),
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     ],
   ],
       align => '*{1}{l}',

@@ -12,11 +12,7 @@
     <solution><p><m>7 + 1 = {8}\text{.}</m></p>
 </solution>
   </static>
-<<<<<<< HEAD
   <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/1-Instructive_Examples/1_1-Arithmetic/Exploration-1_1_10-Inside_an_exploration.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
-=======
-  <rendering-data problemSource="Integrating_WeBWorK_into_Textbooks/1-Instructive_Examples/1_1-Arithmetic/Exploration-1_1_2-Inside_an_exploration.pg" origin="generated" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   <pg><![CDATA[
 #############################################
 ###       Generated from PreTeXt source      
@@ -54,10 +50,6 @@ COMMENT('Add two positive single-digit integers.');
 ############################################################
 # Header
 ############################################################
-<<<<<<< HEAD
-=======
-TEXT(beginproblem());
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
 ############################################################
 # PG Setup Code
