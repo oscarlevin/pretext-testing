@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC Layout Configuration Testing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: true,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Integrating WeBWorK into Textbooks">
+<meta property="og:title" content="Integrating WeBWorK into Textbooks">
+<meta property="book:title" content="Integrating WeBWorK into Textbooks">
+<meta name="twitter:description" content="Sample Exercises">
+<meta property="og:description" content="Sample Exercises">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXWW" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://webwork.maa.org/"><img src="external/images/webwork-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-ww-chapter.html"><span class="title">Integrating WeBWorK into Textbooks</span> <span class="subtitle">Sample Exercises</span></a></h1>
+<p class="byline">Robert Beezer, Alex Jordan</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sample-ww-chapter-5-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sample-ww-chapter-5.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="section-runestone-testing.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Instructive Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-the-quadratic-formula.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-4.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Open Problem Library</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Antidifferentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">A Few More Features</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-6.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Math Content</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-7.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Multiple Choice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-8.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-9.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Graphics in Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-9.html#sample-ww-chapter-4-9-10" class="internal"><span class="codenumber">1.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Technical Examples</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">PGML Formatting and Verbatim Calisthenics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subject Area Templates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-4.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Stress Tests</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-5-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Layout Configuration Testing</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Inline Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Divisional Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-testing.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-testing.html#section-runestone-testing-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-deprecations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deprecations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="sample-ww-chapter-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-solutions"><div class="toc-title-box"><a href="sample-ww-chapter-6-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="sample-ww-chapter-5-5">
+<h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Layout Configuration Testing</span>
+</h2>
+<section class="introduction" id="sample-ww-chapter-5-5-2">
+<div class="para" id="sample-ww-chapter-5-5-2-1">This section is to provide a single page demonstrating all of the combinations that may factor into a problem’s layout.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="sample-ww-chapter-5-5-3">
+<h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inline Exercises</span>
+</h3>
+<div class="para" id="sample-ww-chapter-5-5-3-2">Some “inline” exercises, as distinguished from the “divisional” exercises below.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-5-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="inline-bare" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="inline-bare-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="88" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_1.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-bare-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-bare-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-bare-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.1"><a href="#inline-bare" title="Copy heading and permalink for Checkpoint 2.4.1" aria-label="Copy heading and permalink for Checkpoint 2.4.1">🔗</a></div>
+</article></details>
+<details id="inline-title" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="inline-title-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="89" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-title-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-title-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-title-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.2: Has a Title"><a href="#inline-title" title="Copy heading and permalink for Checkpoint 2.4.2: Has a Title" aria-label="Copy heading and permalink for Checkpoint 2.4.2: Has a Title">🔗</a></div>
+</article></details>
+<details id="inline-introduction" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="introduction" id="inline-introduction-1">
+<div class="para" id="inline-introduction-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#inline-introduction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="inline-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="90" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_3.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.3"><a href="#inline-introduction" title="Copy heading and permalink for Checkpoint 2.4.3" aria-label="Copy heading and permalink for Checkpoint 2.4.3">🔗</a></div>
+</article></details>
+<details id="inline-title-introduction" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="introduction" id="inline-title-introduction-2">
+<div class="para" id="inline-title-introduction-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#inline-title-introduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="inline-title-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="91" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_4-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-title-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-title-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-title-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.4: Has a Title"><a href="#inline-title-introduction" title="Copy heading and permalink for Checkpoint 2.4.4: Has a Title" aria-label="Copy heading and permalink for Checkpoint 2.4.4: Has a Title">🔗</a></div>
+</article></details>
+<details id="inline-conclusion" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="inline-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="92" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_5.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="inline-conclusion-2">
+<div class="para" id="inline-conclusion-2-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#inline-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.5"><a href="#inline-conclusion" title="Copy heading and permalink for Checkpoint 2.4.5" aria-label="Copy heading and permalink for Checkpoint 2.4.5">🔗</a></div>
+</article></details>
+<details id="inline-title-conclusion" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content"><div id="inline-title-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="93" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_6-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-title-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-title-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-title-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="inline-title-conclusion-3">
+<div class="para" id="inline-title-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#inline-title-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.6: Has a Title"><a href="#inline-title-conclusion" title="Copy heading and permalink for Checkpoint 2.4.6: Has a Title" aria-label="Copy heading and permalink for Checkpoint 2.4.6: Has a Title">🔗</a></div>
+</article></details>
+<details id="inline-introduction-conclusion" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="introduction" id="inline-introduction-conclusion-1">
+<div class="para" id="inline-introduction-conclusion-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#inline-introduction-conclusion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="inline-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="94" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_7.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="inline-introduction-conclusion-3">
+<div class="para" id="inline-introduction-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#inline-introduction-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.7"><a href="#inline-introduction-conclusion" title="Copy heading and permalink for Checkpoint 2.4.7" aria-label="Copy heading and permalink for Checkpoint 2.4.7">🔗</a></div>
+</article></details>
+<details id="inline-title-introduction-conclusion" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4></summary>
+<article class="exercise exercise-like knowl__content">
+<div class="introduction" id="inline-title-introduction-conclusion-2">
+<div class="para" id="inline-title-introduction-conclusion-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#inline-title-introduction-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="inline-title-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="95" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_8-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('inline-title-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-inline-title-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-inline-title-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="inline-title-introduction-conclusion-4">
+<div class="para" id="inline-title-introduction-conclusion-4-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#inline-title-introduction-conclusion-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 2.4.8: Has a Title"><a href="#inline-title-introduction-conclusion" title="Copy heading and permalink for Checkpoint 2.4.8: Has a Title" aria-label="Copy heading and permalink for Checkpoint 2.4.8: Has a Title">🔗</a></div>
+</article></details><div class="autopermalink" data-description="Subsection 2.4.1: Inline Exercises"><a href="#sample-ww-chapter-5-5-3" title="Copy heading and permalink for Subsection 2.4.1: Inline Exercises" aria-label="Copy heading and permalink for Subsection 2.4.1: Inline Exercises">🔗</a></div>
+</section>
+<section class="exercises" id="sample-ww-chapter-5-5-4">
+<h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Divisional Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="divisional-bare"><h4 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div id="divisional-bare-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="96" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_1.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-bare-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-bare-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-bare-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.1"><a href="#divisional-bare" title="Copy heading and permalink for Exercise 2.4.2.1" aria-label="Copy heading and permalink for Exercise 2.4.2.1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-title"><h4 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4>
+<div id="divisional-title-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="97" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_2-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-title-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-title-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-title-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.2: Has a Title"><a href="#divisional-title" title="Copy heading and permalink for Exercise 2.4.2.2: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.2: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-introduction"><h4 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="divisional-introduction-1">
+<div class="para" id="divisional-introduction-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-introduction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="divisional-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="98" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_3.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.3"><a href="#divisional-introduction" title="Copy heading and permalink for Exercise 2.4.2.3" aria-label="Copy heading and permalink for Exercise 2.4.2.3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-title-introduction"><h4 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4>
+<div class="introduction" id="divisional-title-introduction-2">
+<div class="para" id="divisional-title-introduction-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-title-introduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="divisional-title-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="99" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_4-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-title-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-title-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-title-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.4: Has a Title"><a href="#divisional-title-introduction" title="Copy heading and permalink for Exercise 2.4.2.4: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.4: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-conclusion"><h4 class="heading"><span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div id="divisional-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="100" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_5.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="divisional-conclusion-2">
+<div class="para" id="divisional-conclusion-2-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.5"><a href="#divisional-conclusion" title="Copy heading and permalink for Exercise 2.4.2.5" aria-label="Copy heading and permalink for Exercise 2.4.2.5">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-title-conclusion"><h4 class="heading">
+<span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4>
+<div id="divisional-title-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="101" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_6-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-title-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-title-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-title-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="divisional-title-conclusion-3">
+<div class="para" id="divisional-title-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-title-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.6: Has a Title"><a href="#divisional-title-conclusion" title="Copy heading and permalink for Exercise 2.4.2.6: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.6: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-introduction-conclusion"><h4 class="heading"><span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h4>
+<div class="introduction" id="divisional-introduction-conclusion-1">
+<div class="para" id="divisional-introduction-conclusion-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-introduction-conclusion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="divisional-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="102" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_7.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="divisional-introduction-conclusion-3">
+<div class="para" id="divisional-introduction-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-introduction-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.7"><a href="#divisional-introduction-conclusion" title="Copy heading and permalink for Exercise 2.4.2.7" aria-label="Copy heading and permalink for Exercise 2.4.2.7">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="divisional-title-introduction-conclusion"><h4 class="heading">
+<span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h4>
+<div class="introduction" id="divisional-title-introduction-conclusion-2">
+<div class="para" id="divisional-title-introduction-conclusion-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-title-introduction-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="divisional-title-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="103" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_8-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('divisional-title-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-divisional-title-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-divisional-title-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="divisional-title-introduction-conclusion-4">
+<div class="para" id="divisional-title-introduction-conclusion-4-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#divisional-title-introduction-conclusion-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.8: Has a Title"><a href="#divisional-title-introduction-conclusion" title="Copy heading and permalink for Exercise 2.4.2.8: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.8: Has a Title">🔗</a></div>
+</article>
+<div class="exercisegroup" id="sample-ww-chapter-5-5-4-10">
+<h4 class="heading"><span class="title">Exercise Group.</span></h4>
+<div class="introduction" id="sample-ww-chapter-5-5-4-10-1">
+<div class="para" id="sample-ww-chapter-5-5-4-10-1-1">These are inside an exercisegroup.<div class="autopermalink" data-description="Paragraph"><a href="#sample-ww-chapter-5-5-4-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise exercise-like" id="exercisegroup-bare"><h5 class="heading"><span class="codenumber">9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div id="exercisegroup-bare-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="104" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_9.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-bare-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-bare-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-bare-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.9"><a href="#exercisegroup-bare" title="Copy heading and permalink for Exercise 2.4.2.9" aria-label="Copy heading and permalink for Exercise 2.4.2.9">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-title"><h5 class="heading">
+<span class="codenumber">10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h5>
+<div id="exercisegroup-title-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="105" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_10-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-title-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-title-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-title-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.10: Has a Title"><a href="#exercisegroup-title" title="Copy heading and permalink for Exercise 2.4.2.10: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.10: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-introduction"><h5 class="heading"><span class="codenumber">11<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercisegroup-introduction-1">
+<div class="para" id="exercisegroup-introduction-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-introduction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="exercisegroup-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="106" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_11.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.11"><a href="#exercisegroup-introduction" title="Copy heading and permalink for Exercise 2.4.2.11" aria-label="Copy heading and permalink for Exercise 2.4.2.11">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-title-introduction"><h5 class="heading">
+<span class="codenumber">12<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h5>
+<div class="introduction" id="exercisegroup-title-introduction-2">
+<div class="para" id="exercisegroup-title-introduction-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-title-introduction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="exercisegroup-title-introduction-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="107" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_12-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-title-introduction-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-title-introduction-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-title-introduction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.12: Has a Title"><a href="#exercisegroup-title-introduction" title="Copy heading and permalink for Exercise 2.4.2.12: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.12: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-conclusion"><h5 class="heading"><span class="codenumber">13<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div id="exercisegroup-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="108" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_13.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="exercisegroup-conclusion-2">
+<div class="para" id="exercisegroup-conclusion-2-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.13"><a href="#exercisegroup-conclusion" title="Copy heading and permalink for Exercise 2.4.2.13" aria-label="Copy heading and permalink for Exercise 2.4.2.13">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-title-conclusion"><h5 class="heading">
+<span class="codenumber">14<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h5>
+<div id="exercisegroup-title-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="109" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_14-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-title-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-title-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-title-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="exercisegroup-title-conclusion-3">
+<div class="para" id="exercisegroup-title-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-title-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.14: Has a Title"><a href="#exercisegroup-title-conclusion" title="Copy heading and permalink for Exercise 2.4.2.14: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.14: Has a Title">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-introduction-conclusion"><h5 class="heading"><span class="codenumber">15<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h5>
+<div class="introduction" id="exercisegroup-introduction-conclusion-1">
+<div class="para" id="exercisegroup-introduction-conclusion-1-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-introduction-conclusion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="exercisegroup-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="110" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_15.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="exercisegroup-introduction-conclusion-3">
+<div class="para" id="exercisegroup-introduction-conclusion-3-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-introduction-conclusion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.15"><a href="#exercisegroup-introduction-conclusion" title="Copy heading and permalink for Exercise 2.4.2.15" aria-label="Copy heading and permalink for Exercise 2.4.2.15">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="exercisegroup-title-introduction-conclusion"><h5 class="heading">
+<span class="codenumber">16<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Has a Title.</span>
+</h5>
+<div class="introduction" id="exercisegroup-title-introduction-conclusion-2">
+<div class="para" id="exercisegroup-title-introduction-conclusion-2-1">Has an introduction.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-title-introduction-conclusion-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div id="exercisegroup-title-introduction-conclusion-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="111" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="generated" data-problemSource="Integrating_WeBWorK_into_Textbooks/2-Technical_Examples/2_4-Layout_Configuration_Testing/2_4_2_16-Has_a_Title.pg" data-documentID="PTXWW" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('exercisegroup-title-introduction-conclusion-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-exercisegroup-title-introduction-conclusion-1-1-1">
+<span class="process-math">\(1+1=2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-exercisegroup-title-introduction-conclusion-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+</div>
+<div class="conclusion" id="exercisegroup-title-introduction-conclusion-4">
+<div class="para" id="exercisegroup-title-introduction-conclusion-4-1">Has a conclusion.<div class="autopermalink" data-description="Paragraph"><a href="#exercisegroup-title-introduction-conclusion-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.4.2.16: Has a Title"><a href="#exercisegroup-title-introduction-conclusion" title="Copy heading and permalink for Exercise 2.4.2.16: Has a Title" aria-label="Copy heading and permalink for Exercise 2.4.2.16: Has a Title">🔗</a></div>
+</article>
+</div>
+<div class="autopermalink" data-description="Exercise Group 2.4.2.9–16"><a href="#sample-ww-chapter-5-5-4-10" title="Copy heading and permalink for Exercise Group 2.4.2.9–16" aria-label="Copy heading and permalink for Exercise Group 2.4.2.9–16">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercises 2.4.2: Divisional Exercises"><a href="#sample-ww-chapter-5-5-4" title="Copy heading and permalink for Exercises 2.4.2: Divisional Exercises" aria-label="Copy heading and permalink for Exercises 2.4.2: Divisional Exercises">🔗</a></div>
+</section><div class="autopermalink" data-description="Section 2.4: Layout Configuration Testing"><a href="#sample-ww-chapter-5-5" title="Copy heading and permalink for Section 2.4: Layout Configuration Testing" aria-label="Copy heading and permalink for Section 2.4: Layout Configuration Testing">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sample-ww-chapter-5-4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="section-runestone-testing.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

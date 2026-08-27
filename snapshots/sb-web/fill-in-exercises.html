@@ -9,8 +9,8 @@
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
-<!--*  Theme: salem                          *-->
-<!--*  Palette:                              *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-red                     *-->
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,83 +20,28 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script>
-var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
-  "tex": {
-    "inlineMath": [
-      [
-        "\\(",
-        "\\)"
-      ]
-    ],
-    "tags": "none",
-    "tagSide": "right",
-    "tagIndent": ".8em",
-    "packages": {
-      "[+]": [
-        "base",
-        "ams",
-        "amscd",
-        "color",
-        "newcommand",
-        "knowl"
-      ]
-    }
-  },
-  "options": {
-    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
-  },
-  "chtml": {
-    "scale": 0.98,
-    "mtextInheritFont": true
-  },
-  "loader": {
-    "load": [
-      "input/asciimath",
-      "[tex]/amscd",
-      "[tex]/color",
-      "[tex]/newcommand",
-      "[pretext]/mathjaxknowl3.js"
-    ],
-    "paths": {
-      "pretext": "_static/pretext/js"
-    }
-  },
-  "startup": {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-  }
-};
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: true,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="abstract algebra, PreTeXt, samples, Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
+<meta name="twitter:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
 <meta property="og:image" content="https://pretextbook.org/examples/noparts/decorative/html/external/cover_aata_2014.png">
-<meta property="book:title" content="PreTeXt Sample Book">
-<meta property="book:author" content="Thomas W. Judson">
-<script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<meta name="twitter:image:alt" content="Document Logo">
+<meta property="og:image:alt" content="Document Logo">
+<meta name="twitter:title" content="PreTeXt Sample Book: Abstract Algebra (SAMPLE ONLY)">
+<meta property="og:title" content="PreTeXt Sample Book: Abstract Algebra (SAMPLE ONLY)">
+<meta property="book:title" content="PreTeXt Sample Book: Abstract Algebra (SAMPLE ONLY)">
+<meta name="twitter:description" content="This is a book written in PreTeXt, in order to provide testing for a variety of purposes, not least a conversion to Runestone Academy.">
+<meta property="og:description" content="This is a book written in PreTeXt, in order to provide testing for a variety of purposes, not least a conversion to Runestone Academy.">
+<meta name="twitter:card" content="summary_large_image">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.47"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.47"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -119,47 +64,64 @@ eBookConfig.enableScratchAC = true;
 eBookConfig.acDefaultLanguage = 'python';
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-<<<<<<< HEAD
-eBookConfig.runestone_version = '7.12.2';
-=======
-eBookConfig.runestone_version = '7.11.5';
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
+eBookConfig.runestone_version = '8.2.3';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<<<<<<< HEAD
-<script src="_static/prefix-runtime.d2d4c56cb9826035.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.a4a209ed3a55c515.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext-search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-=======
-<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
+<script src="_static/prefix-runtime.40bd1420d3277749.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.f00d2d175c91fc71.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8086b62682b271d1.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="_static/pretext/js/dist/prism/gdscript-prism.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="PTXSB" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href="http://abstract.pugetsound.edu"><img src="external/cover_aata_2014.png" alt="Logo image"></a><div class="title-container">
-<h1 class="heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></h1>
+<div class="heading ptx-banner-heading"><a href="sample-book.html"><span class="title">PreTeXt Sample Book</span> <span class="subtitle">Abstract Algebra (SAMPLE ONLY)</span></a></div>
 <p class="byline">Thomas W. Judson, Isaac Newton (Editor)</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
-<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
-<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
-<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
-<div class="search-results-controls">
-<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-9.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
 </div>
-<h2 class="search-results-heading">Search Results: </h2>
-<div id="searchempty" class="searchempty"><span>No results.</span></div>
-<ol id="searchresults" class="searchresults"></ol>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
 </div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="fill-in-exercises-old.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="rune.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="runestone-hodgepodge.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Open Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="fill-in-exercises-old.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="rune.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="fill-in-literal-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span><span class="nav-runestone-controls"><button onclick="runestoneComponents.popupScratchAC()" class="activecode-toggle button" title="Scratch ActiveCode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf097;</span><span class="name">Scratch ActiveCode</span></button></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{{\not{\mid}}}
 \newcommand{\notsubset}{\not\subset}
@@ -179,10 +141,10 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\sfrac}[2]{{#1}/{#2}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-frontmatter" class="structural toc-item-list">
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-TWJ.html" class="internal"><span class="title">Author Biography</span></a></div></li>
 <li class="toc-item toc-biography"><div class="toc-title-box"><a href="author-bio-RAB.html" class="internal"><span class="title">About Robert A. Beezer</span></a></div></li>
@@ -191,20 +153,21 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
 <li class="toc-item toc-preface">
 <div class="toc-title-box"><a href="contributors.html" class="internal"><span class="title">Contributors to the 4<span class="process-math">\(^\mathrm{th}\)</span> Edition</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
+<ul id="ptx-toc-group-contributors" class="structural toc-item-list"><li class="toc-item toc-contributors"><div class="toc-title-box"><a href="contributors.html#contributors-3" class="internal"><span class="title"></span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="sets.html" class="internal"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sets" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="sets-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-note-on-proofs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">A Short Note on Proofs</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
+<ul id="ptx-toc-group-section-note-on-proofs" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-note-on-proofs.html#section-note-on-proofs-3" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Some Cautions and Suggestions</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Sets and Equivalence Relations</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-sets-and-equivalence-relations" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-2" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Set Theory</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-3" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Cartesian Products and Mappings</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-sets-and-equivalence-relations.html#section-sets-and-equivalence-relations-4" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Equivalence Relations and Partitions</span></a></div></li>
@@ -212,7 +175,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sets-sage.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Sage</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-sets-sage" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-3" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Executing Sage Commands</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-4" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Immediate Help</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sets-sage.html#sets-sage-5" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Annotating Your Work</span></a></div></li>
@@ -228,11 +191,12 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="integers.html" class="internal"><span class="codenumber">2</span> <span class="title">The Integers</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-integers" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="integers-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="section-math-induction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematical Induction and Math in a Title <span class="process-math">\(A\notsubset B\)</span></span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-division-algorithm.html" class="internal"><span class="codenumber">2.2</span> <span class="title">The Division Algorithm</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-division-algorithm" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-3" class="internal"><span class="codenumber">2.2.1</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-4" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Prime Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-division-algorithm.html#section-division-algorithm-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Historical Note</span></a></div></li>
@@ -240,7 +204,7 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="integers-sage.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Sage</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-integers-sage" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-3" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Division Algorithm</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-4" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Greatest Common Divisor</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="integers-sage.html#integers-sage-5" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Primes and Factoring</span></a></div></li>
@@ -254,17 +218,18 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="groups.html" class="internal"><span class="codenumber">3</span> <span class="title">Groups</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-groups" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="groups-3.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-mod-n-sym.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Integer Equivalence Classes and Symmetries</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-mod-n-sym" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-5" class="internal"><span class="codenumber">3.1.1</span> <span class="title">The Integers mod <span class="process-math">\(n\)</span></span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-mod-n-sym.html#section-mod-n-sym-6" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Symmetries</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-groups-define.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Definitions and Examples</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-groups-define" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-2" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Definition of a Group</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-3" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Examples of Groups</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-groups-define.html#section-groups-define-4" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Basic Properties of Groups</span></a></div></li>
@@ -273,14 +238,14 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="section-subgroups.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Subgroups</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-section-subgroups" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-2" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Definitions and Examples</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="section-subgroups.html#section-subgroups-3" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Some Subgroup Theorems</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="groups-sage.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Sage</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-groups-sage" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-3" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Integers mod n</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-4" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Groups of symmetries</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="groups-sage.html#groups-sage-5" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Quaternions</span></a></div></li>
@@ -295,7 +260,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="cyclic.html" class="internal"><span class="codenumber">4</span> <span class="title">Cyclicity</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-cyclic" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="cyclic-3.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-4.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Cyclic groups</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-5.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Subgroups of a Cyclic Group</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="cyclic-6.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Cyclic Groups of Complex Numbers</span></a></div></li>
@@ -308,7 +274,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="rune.html" class="internal"><span class="codenumber">5</span> <span class="title">Runestone Testing</span></a></div>
-<ul class="structural toc-item-list contains-active">
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-rune">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="rune-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="inactive-code.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Programs</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="activecode.html" class="internal"><span class="codenumber">5.2</span> <span class="title">ActiveCode</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="code-lens.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Code Lens</span></a></div></li>
@@ -317,7 +284,7 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="videos-in-runestone.html" class="internal"><span class="codenumber">5.6</span> <span class="title">YouTube Videos</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="rune-nested-divisions.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Deeper</span></a></div>
-<ul class="structural toc-item-list">
+<ul id="ptx-toc-group-rune-nested-divisions" class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-3" class="internal"><span class="codenumber">5.7.1</span> <span class="title">Subsection One</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="rune-nested-divisions.html#rune-nested-divisions-4" class="internal"><span class="codenumber">5.7.2</span> <span class="title">Subsection Two</span></a></div></li>
 </ul>
@@ -334,46 +301,48 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="doenet.html" class="internal"><span class="codenumber">5.17</span> <span class="title">DoenetML</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-exercises-old.html" class="internal"><span class="codenumber">5.18</span> <span class="title">Fill-In Exercises (Old Style)</span></a></div></li>
 <li class="toc-item toc-exercises active"><div class="toc-title-box"><a href="fill-in-exercises.html" class="internal"><span class="codenumber">5.19</span> <span class="title">Fill-In Exercises</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Hodgepodge</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="fill-in-literal-exercises.html" class="internal"><span class="codenumber">5.20</span> <span class="title">Fill-In, Literal String Answers</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="runestone-hodgepodge.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Hodgepodge</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.21</span> <span class="title">Exercises that are Timed</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.21</span> <span class="title">Timed Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="exercises-timed.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Exercises that are Timed</span></a></div>
+<ul id="ptx-toc-group-exercises-timed" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-timed.html#timed-exercises" class="internal"><span class="codenumber">5.22</span> <span class="title">Timed Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.22</span> <span class="title">Projects and Friends</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-25.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Reading Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.24</span> <span class="title">YouTube Video Embedding</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="interactive-projects.html" class="internal"><span class="codenumber">5.23</span> <span class="title">Projects and Friends</span></a></div></li>
+<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="rune-26.html" class="internal"><span class="codenumber">5.24</span> <span class="title">Reading Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="atomic-video.html" class="internal"><span class="codenumber">5.25</span> <span class="title">YouTube Video Embedding</span></a></div></li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.25</span> <span class="title">Runestone Assignment Testing</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.25</span> <span class="title">Exercises</span></a></div></li></ul>
+<div class="toc-title-box"><a href="section-runestone-assignment-testing.html" class="internal"><span class="codenumber">5.26</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul id="ptx-toc-group-section-runestone-assignment-testing" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-assignment-testing.html#section-runestone-assignment-testing-3" class="internal"><span class="codenumber">5.26</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.26</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">Group Exercises</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.28</span> <span class="title">SPLICE Integration</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.29</span> <span class="title">Timed Chapter Exam</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="worksheet-groupwork.html" class="internal"><span class="codenumber">5.27</span> <span class="title">A “Group Work” Worksheet</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-title-groupwork.html" class="internal"><span class="codenumber">5.28</span> <span class="title">Group Exercises</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="splice-integration.html" class="internal"><span class="codenumber">5.29</span> <span class="title">SPLICE Integration</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="chapter-exam.html" class="internal"><span class="codenumber">5.30</span> <span class="title">Timed Chapter Exam</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter">
 <div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Back Matter</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
-<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">B.</span> <span class="title">Hints and Answers to Selected Odd Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="codenumber">C.</span> <span class="title">Hints and Answers to Selected Even Exercises</span></a></div></li>
+<li class="toc-item toc-solutions"><div class="toc-title-box"><a href="backmatter-5.html" class="internal"><span class="codenumber">D.</span> <span class="title">Hints and Answers to Selected Exercises</span></a></div></li>
 <li class="toc-item toc-appendix">
-<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E</span> <span class="title">A Structured Appendix</span></a></div>
-<ul class="structural toc-item-list">
+<div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="codenumber">E.</span> <span class="title">A Structured Appendix</span></a></div>
+<ul id="ptx-toc-group-backmatter-6" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="backmatter-6-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="backmatter-6-3.html" class="internal"><span class="codenumber">E.1</span> <span class="title">A Section in an Appendix</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<ul id="ptx-toc-group-backmatter-6-3" class="structural toc-item-list"><li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3" class="internal"><span class="codenumber">E.1.1</span> <span class="title">A Subsection in a Section in an Appendix</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
+<ul id="ptx-toc-group-backmatter-6-3-3" class="structural toc-item-list"><li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="backmatter-6-3.html#backmatter-6-3-3-3" class="internal"><span class="codenumber">E.1.1.1</span> <span class="title">A Subsubsection in a Subsection in a Section in an Appendix</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="backmatter-6-4.html" class="internal"><span class="codenumber">E.2</span> <span class="title">Numbering in the Back Matter</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F</span> <span class="title">Some Runestone Elements</span></a></div></li>
-<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G</span> <span class="title">GNU Free Documentation License</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-7.html" class="internal"><span class="codenumber">F.</span> <span class="title">Some Runestone Elements</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-gfdl.html" class="internal"><span class="codenumber">G.</span> <span class="title">GNU Free Documentation License</span></a></div></li>
 <li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-9.html" class="internal"><span class="title">Index</span></a></div></li>
 <li class="toc-item toc-colophon"><div class="toc-title-box"><a href="back-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
@@ -381,31 +350,31 @@ eBookConfig.enable_chatcodes =  false;
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="exercises" id="fill-in-exercises">
-<h2 class="heading hide-type">
+<h1 class="heading hide-type">
 <span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.19</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In Exercises</span>
-</h2>
+</h1>
 <section class="introduction" id="fill-in-exercises-2">
-<div class="para" id="fill-in-exercises-2-1">This section has <dfn class="terminology">fill-in-the-blank</dfn> (<abbr class="initialism">FITB</abbr>) exercises using newer syntax, and the subject of active development.<div class="autopermalink" data-description="Paragraph"><a href="#fill-in-exercises-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="fill-in-exercises-2-1">This section has <dfn class="terminology">fill-in-the-blank</dfn> (<abbr class="initialism">FITB</abbr>) exercises using newer syntax, and the subject of active development.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fill-in-exercises-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<article class="exercise exercise-like" id="fillin-numbers-many-tests"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-numbers-many-tests"><h2 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, New Markup Numbers.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-numbers-many-tests"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-2-1\">I love <span class=\"process-math\">\\(\\pi\\text{.}\\)<\/span> What number am I thinking of, accurate to two decimal places?<div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-numbers-many-tests-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-numbers-many-tests-2-2\"><input type=\"text\" id=\"fillin-numbers-many-tests-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-numbers-many-tests-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-2-1\">I love <span class=\"process-math\">\\(\\pi\\text{.}\\)<\/span> What number am I thinking of, accurate to two decimal places?<div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-numbers-many-tests-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-numbers-many-tests-2-2\"><input type=\"text\" id=\"fillin-numbers-many-tests-blank1\" size=\"5\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-numbers-many-tests-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "blankNames": {"blank1": 0},
 "feedbackArray": [[{"number": [3.14,3.14], "feedback": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-3-1-1-2-1\">The decimal approximation of <span class=\"process-math\">\\(\\pi\\)<\/span> is <span class=\"process-math\">\\(3.1415926535\\ldots\\text{,}\\)<\/span> but to two decimal places we write <span class=\"process-math\">\\(3.14\\text{.}\\)<\/span><\/div>"}, {"number": [3.04,3.24], "feedback": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-3-1-2-2-1\">Your answer is within 0.1 of the value I wanted.<\/div>"}, {"number": [42,42], "feedback": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-3-1-3-2-1\">That is a reasonable guess, but no.<\/div>"}, {"number": [3,4], "feedback": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-3-1-4-2-1\">You chose a value between 3 and 4.<\/div>"}, {"number": [2.5,3.5], "feedback": "\n<div class=\"para\" id=\"fillin-numbers-many-tests-3-1-5-2-1\">You chose a value that rounds to 3.<\/div>"}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.1: Fill-In, New Markup Numbers"><a href="#fillin-numbers-many-tests" title="Copy heading and permalink for Exercise 5.19.1: Fill-In, New Markup Numbers" aria-label="Copy heading and permalink for Exercise 5.19.1: Fill-In, New Markup Numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.1: Fill-In, New Markup Numbers"><a tabindex="-1" href="#fillin-numbers-many-tests" title="Copy heading and permalink for Exercise 5.19.1: Fill-In, New Markup Numbers" aria-label="Copy heading and permalink for Exercise 5.19.1: Fill-In, New Markup Numbers">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-strings-"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-strings-"><h2 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, New Markup Strings.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-strings-"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"fillin-strings--2-1\">The word I’m thinking about is hinted at by the image.<div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-strings--2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-strings--2-2\"><div class=\"image-box\" style=\"width: 50%; margin-left: 25%; margin-right: 25%;\"><img src=\"external\/cartoon-magic.jpg\" class=\"contained\"\/><\/div><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-strings--2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-strings--2-3\">What word am I thinking about? <input type=\"text\" id=\"fillin-strings--blank1\" size=\"5\"\/> (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try “pizzazz”.\")<div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-strings--2-3\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"fillin-strings--2-1\">The word I’m thinking about is hinted at by the image.<div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-strings--2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div><div class=\"image-box\" style=\"width: 50%; margin-left: 25%; margin-right: 25%;\"><img src=\"external\/cartoon-magic.jpg\" class=\"contained\"\/><\/div>\n<div class=\"para\" id=\"fillin-strings--2-3\">What word am I thinking about? <input type=\"text\" id=\"fillin-strings--blank1\" size=\"5\"\/> (Interactive feedback explores a variety of options: Try what happens if you mix the case, or type in a number, or include more than the word, or try “pizzazz”.\")<div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-strings--2-3\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "blankNames": {"blank1": 0},
 "feedbackArray": [[{"regex": "^\\s*magic\\s*$", "regexFlags": "", "feedback": "Correct!"}, {"regex": "^\\s*magic\\s*$", "regexFlags": "i", "feedback": "\n<div class=\"para\" id=\"fillin-strings--3-1-2-2-1\">Some of the characters used the wrong case.<\/div>"}, {"regex": "^\\s*[0-9]+\\s*$", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"fillin-strings--3-1-3-2-1\">You typed a word made out of digits.<\/div>"}, {"regex": "magic", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"fillin-strings--3-1-4-2-1\">Your answer includes the correct word but has extra text.<\/div>"}, {"regex": "z.+z", "regexFlags": "i", "feedback": "\n<div class=\"para\" id=\"fillin-strings--3-1-5-2-1\">Your answer includes text surrounded by z’s.<\/div>"}, {"feedback": "Incorrect."}]]
@@ -414,45 +383,45 @@ eBookConfig.enable_chatcodes =  false;
 <div class="solutions">
 <details id="fillin-strings--4" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
 <div class="hint solution-like knowl__content">
-<div class="para" id="fillin-strings--4-1">Do you really need a hint? Carefully reread the question.<div class="autopermalink" data-description="Paragraph"><a href="#fillin-strings--4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="fillin-strings--4-1">Do you really need a hint? Carefully reread the question.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#fillin-strings--4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Hint 5.19.2.1"><a href="#fillin-strings--4" title="Copy heading and permalink for Hint 5.19.2.1" aria-label="Copy heading and permalink for Hint 5.19.2.1">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Hint 5.19.2.1"><a tabindex="-1" href="#fillin-strings--4" title="Copy heading and permalink for Hint 5.19.2.1" aria-label="Copy heading and permalink for Hint 5.19.2.1">🔗</a></div>
 </div></details>
 </div>
-<div class="autopermalink" data-description="Exercise 5.19.2: Fill-In, New Markup Strings"><a href="#fillin-strings-" title="Copy heading and permalink for Exercise 5.19.2: Fill-In, New Markup Strings" aria-label="Copy heading and permalink for Exercise 5.19.2: Fill-In, New Markup Strings">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.2: Fill-In, New Markup Strings"><a tabindex="-1" href="#fillin-strings-" title="Copy heading and permalink for Exercise 5.19.2: Fill-In, New Markup Strings" aria-label="Copy heading and permalink for Exercise 5.19.2: Fill-In, New Markup Strings">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="ex-demo-jscmp-primes"><h3 class="heading">
+<article class="exercise exercise-like" id="ex-demo-jscmp-primes"><h2 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Javascript test of numbers.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-ex-demo-jscmp-primes"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"ex-demo-jscmp-primes-2-1\">What is an example of a prime number less than 20? <input type=\"text\" id=\"ex-demo-jscmp-primes-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#ex-demo-jscmp-primes-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"ex-demo-jscmp-primes-2-1\">What is an example of a prime number less than 20? <input type=\"text\" id=\"ex-demo-jscmp-primes-blank1\" size=\"5\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#ex-demo-jscmp-primes-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "blankNames": {"blank1": 0},
 "feedbackArray": [[{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = \n                        [2, 3, 5, 7, 11, 13, 17, 19].includes(Number(ans))\n                        ;\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"ex-demo-jscmp-primes-3-1-1-2-1\">Any number from the list <span class=\"process-math\">\\(\\{2, 3, 5, 7, 11, 13, 17, 19\\}\\)<\/span> is a prime number less than 20.<\/div>"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = \n                        function(){\n                        const val=Number(ans);\n                        if (val <= 0) { return \"You need to give a positive integer.\" }\n                        if (val >= 20) { return \"The integer must be less than 20.\" }\n                        for (let i=2; i<=3; i++) {\n                            if (val % i == 0) { return `Your answer is composite; for example, it is divisible by ${i}.` }\n                        }\n                        return false;\n                        }()\n                        ;\n    return (testResults[0]);\n}()", "feedback": "Incorrect."}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.3: Fill-In, Javascript test of numbers"><a href="#ex-demo-jscmp-primes" title="Copy heading and permalink for Exercise 5.19.3: Fill-In, Javascript test of numbers" aria-label="Copy heading and permalink for Exercise 5.19.3: Fill-In, Javascript test of numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.3: Fill-In, Javascript test of numbers"><a tabindex="-1" href="#ex-demo-jscmp-primes" title="Copy heading and permalink for Exercise 5.19.3: Fill-In, Javascript test of numbers" aria-label="Copy heading and permalink for Exercise 5.19.3: Fill-In, Javascript test of numbers">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-jscmp-palindrome"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-jscmp-palindrome"><h2 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Javascript test of strings.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-jscmp-palindrome"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"fillin-jscmp-palindrome-2-1\">What is an example of a palindrome? <input type=\"text\" id=\"fillin-jscmp-palindrome-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-jscmp-palindrome-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"fillin-jscmp-palindrome-2-1\">What is an example of a palindrome? <input type=\"text\" id=\"fillin-jscmp-palindrome-blank1\" size=\"5\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-jscmp-palindrome-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "blankNames": {"blank1": 0},
 "feedbackArray": [[{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = \n                        function(){\n                            const r1 = new RegExp(\"^\\\\w+$\");\n                            var result=r1.test(ans);\n                            if (result) {\n                            let revAns = ans.split(\"\").reverse().join(\"\");\n                            result = (ans === revAns);\n                            }\n                            return result;\n                        }()\n                        ;\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"fillin-jscmp-palindrome-3-1-1-2-1\">Any word that is the same forward and backward is a palindrome.<\/div>"}, {"regex": "\\w+\\s\\w+", "regexFlags": "", "feedback": "\n<div class=\"para\" id=\"fillin-jscmp-palindrome-3-1-2-2-1\">Your response needs to be a single word.<\/div>"}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.4: Fill-In, Javascript test of strings"><a href="#fillin-jscmp-palindrome" title="Copy heading and permalink for Exercise 5.19.4: Fill-In, Javascript test of strings" aria-label="Copy heading and permalink for Exercise 5.19.4: Fill-In, Javascript test of strings">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.4: Fill-In, Javascript test of strings"><a tabindex="-1" href="#fillin-jscmp-palindrome" title="Copy heading and permalink for Exercise 5.19.4: Fill-In, Javascript test of strings" aria-label="Copy heading and permalink for Exercise 5.19.4: Fill-In, Javascript test of strings">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-random-simple"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-random-simple"><h2 class="heading">
 <span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Simple Randomization with Numbers.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-random-simple"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"fillin-random-simple-2-1\">What is the square of <span class=\"process-math\">\\(x=[%= toTeX(myNum) %]\\text{?}\\)<\/span> <span class=\"process-math\">\\(x^2=\\)<\/span><input type=\"number\" id=\"fillin-random-simple-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-random-simple-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"fillin-random-simple-2-1\">What is the square of <span class=\"process-math\">\\(x=[%= toTeX(myNum) %]\\text{?}\\)<\/span> <span class=\"process-math\">\\(x^2=\\)<\/span><input type=\"number\" id=\"fillin-random-simple-blank1\" size=\"5\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-random-simple-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "dyn_imports": ["BTM"],
 "blankNames": {"blank1": 0},
@@ -460,67 +429,57 @@ eBookConfig.enable_chatcodes =  false;
 "feedbackArray": [[{"solution_code": "function() { return (ans >= mySquare - 0) && (ans <= mySquare + 0); }()", "feedback": "Correct!"}, {"solution_code": "function() { return (ans >= myNum - 0) && (ans <= myNum + 0); }()", "feedback": "\n<div class=\"para\" id=\"fillin-random-simple-4-1-2-2-1\">You responded with the original number. Now square it.<\/div>"}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.5: Fill-In, Simple Randomization with Numbers"><a href="#fillin-random-simple" title="Copy heading and permalink for Exercise 5.19.5: Fill-In, Simple Randomization with Numbers" aria-label="Copy heading and permalink for Exercise 5.19.5: Fill-In, Simple Randomization with Numbers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.5: Fill-In, Simple Randomization with Numbers"><a tabindex="-1" href="#fillin-random-simple" title="Copy heading and permalink for Exercise 5.19.5: Fill-In, Simple Randomization with Numbers" aria-label="Copy heading and permalink for Exercise 5.19.5: Fill-In, Simple Randomization with Numbers">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-math-solve-equation"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-math-solve-equation"><h2 class="heading">
 <span class="codenumber">6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Dynamic Math with Simple Numerical Answer.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-math-solve-equation"><script type="application/json">{
-<<<<<<< HEAD
-"problemHtml": "\n<div class=\"para logical\" id=\"fillin-math-solve-equation-2-1\"><div class=\"para\">Solve the equation<\/div><div class=\"displaymath process-math\" id=\"fillin-math-solve-equation-2-1-1\">\n\\begin{equation*}\n[%= toTeX(theFunction) %]=0\n\\end{equation*}\n<\/div><div class=\"para\">to get the value of <span class=\"process-math\">\\(x\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-solve-equation-2-2\"><span class=\"process-math\">\\(x = \\)<\/span> <input type=\"text\" id=\"fillin-math-solve-equation-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-solve-equation-3-1\">We want to isolate the <span class=\"process-math\">\\(x\\)<\/span> in the equation <span class=\"process-math\">\\([%= toTeX(theFunction) %]=0\\text{.}\\)<\/span> Because addition of <span class=\"process-math\">\\([%= toTeX(b) %]\\)<\/span> is the last operation, we apply the inverse by adding <span class=\"process-math\">\\([%= toTeX(negB) %]\\)<\/span> to both sides. The new, but equivalent equation is now <span class=\"process-math\">\\([%= toTeX(m) %]x = [%= toTeX(negB) %]\\text{.}\\)<\/span> Dividing both sides of the equation by <span class=\"process-math\">\\([%= toTeX(m) %]\\text{,}\\)<\/span> we obtain the solution <span class=\"process-math\">\\(x=[%= toTeX(theAnswer) %]\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-=======
-"problemHtml": "<div class=\"para logical\" id=\"fillin-math-solve-equation-2-1\"><div class=\"para\">Solve the equation<\/div><div class=\"displaymath process-math\" id=\"fillin-math-solve-equation-2-1-1\">\n\\begin{equation*}\n[%= toTeX(theFunction) %]=0\n\\end{equation*}\n<\/div><div class=\"para\">to get the value of <span class=\"process-math\">\\(x\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div><div class=\"para\" id=\"fillin-math-solve-equation-2-2\"><span class=\"process-math\">\\(x = \\)<\/span> <input type=\"text\" id=\"fillin-math-solve-equation-blank1\" size=\"5\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-"solutionHtml": "<div class=\"para\" id=\"fillin-math-solve-equation-3-1\">We want to isolate the <span class=\"process-math\">\\(x\\)<\/span> in the equation <span class=\"process-math\">\\([%= toTeX(theFunction) %]=0\\text{.}\\)<\/span> Because addition of <span class=\"process-math\">\\([%= toTeX(b) %]\\)<\/span> is the last operation, we apply the inverse by adding <span class=\"process-math\">\\([%= toTeX(negB) %]\\)<\/span> to both sides. The new, but equivalent equation is now <span class=\"process-math\">\\([%= toTeX(m) %]x = [%= toTeX(negB) %]\\text{.}\\)<\/span> Dividing both sides of the equation by <span class=\"process-math\">\\([%= toTeX(m) %]\\text{,}\\)<\/span> we obtain the solution <span class=\"process-math\">\\(x=[%= toTeX(theAnswer) %]\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-solve-equation-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
+"problemHtml": "\n<div class=\"para logical\" id=\"fillin-math-solve-equation-2-1\"><div class=\"para\">Solve the equation<\/div><div class=\"displaymath process-math\" id=\"fillin-math-solve-equation-2-1-1\">\n\\begin{equation*}\n[%= toTeX(theFunction) %]=0\n\\end{equation*}\n<\/div><div class=\"para\">to get the value of <span class=\"process-math\">\\(x\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-solve-equation-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-solve-equation-2-2\"><span class=\"process-math\">\\(x = \\)<\/span> <input type=\"text\" id=\"fillin-math-solve-equation-blank1\" size=\"5\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-solve-equation-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-solve-equation-3-1\">We want to isolate the <span class=\"process-math\">\\(x\\)<\/span> in the equation <span class=\"process-math\">\\([%= toTeX(theFunction) %]=0\\text{.}\\)<\/span> Because addition of <span class=\"process-math\">\\([%= toTeX(b) %]\\)<\/span> is the last operation, we apply the inverse by adding <span class=\"process-math\">\\([%= toTeX(negB) %]\\)<\/span> to both sides. The new, but equivalent equation is now <span class=\"process-math\">\\([%= toTeX(m) %]x = [%= toTeX(negB) %]\\text{.}\\)<\/span> Dividing both sides of the equation by <span class=\"process-math\">\\([%= toTeX(m) %]\\text{,}\\)<\/span> we obtain the solution <span class=\"process-math\">\\(x=[%= toTeX(theAnswer) %]\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-solve-equation-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "dyn_imports": ["BTM"],
 "blankNames": {"blank1": 0},
-"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.m = v._mobjs.addMathObject(\"m\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:false}));\nv.negB = v._mobjs.addMathObject(\"negB\", \"number\", v._mobjs.parseExpression(\"-b\", \"number\").reduce().simplifyConstants());\nv.theFunction = v._mobjs.addMathObject(\"theFunction\", \"formula\", v._mobjs.parseExpression(\"m*x+b\", \"formula\").reduce().simplifyConstants());\nv.theAnswer = v._mobjs.addMathObject(\"theAnswer\", \"formula\", v._mobjs.parseExpression(\"-b\/m\", \"formula\").reduce().simplifyConstants());\nv.types = [function(val){ return val; }];\nv.afterContentRender = function() {\n};\n",
+"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.m = v._mobjs.addMathObject(\"m\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:false}));\nv.negB = v._mobjs.addMathObject(\"negB\", \"number\", v._mobjs.parseExpression(\"-b\", \"number\").reduce().simplifyConstants());\nv.theFunction = v._mobjs.addMathObject(\"theFunction\", \"formula\", v._mobjs.parseExpression(\"m*x+b\", \"formula\").reduce().simplifyConstants());\nv.theAnswer = v._mobjs.addMathObject(\"theAnswer\", \"formula\", v._mobjs.parseExpression(\"-b\/m\", \"formula\").reduce().simplifyConstants());\nv.types = [v._mobjs.getParser()];\nv.afterContentRender = function() {\n};\n",
 "feedbackArray": [[{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(theAnswer, ans);\n    return (testResults[0]);\n}()", "feedback": "Correct!"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(_mobjs.parseExpression(\"{{b}}\/{{m}}\", \"formula\"), ans);\n    return (testResults[0]);\n}()", "feedback": "Check for a sign error while isolating <span class=\"process-math\">\\(x\\text{.}\\)<\/span>"}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer"><a href="#fillin-math-solve-equation" title="Copy heading and permalink for Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer" aria-label="Copy heading and permalink for Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer"><a tabindex="-1" href="#fillin-math-solve-equation" title="Copy heading and permalink for Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer" aria-label="Copy heading and permalink for Exercise 5.19.6: Fill-In, Dynamic Math with Simple Numerical Answer">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-math-find-derivatives"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-math-find-derivatives"><h2 class="heading">
 <span class="codenumber">7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Dynamic Math with Formulas as Answers.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-math-find-derivatives"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-2-1\">Consider the function <span class=\"process-math\">\\(f(x)=[%= toTeX(formula) %]\\text{.}\\)<\/span> Find <span class=\"process-math\">\\(f'(x)\\)<\/span> and <span class=\"process-math\">\\(f''(x)\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-find-derivatives-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-find-derivatives-2-2\"><span class=\"process-math\">\\(f'(x) = \\)<\/span> <input type=\"text\" id=\"fillin-math-find-derivatives-firstD\" name=\"firstD\" size=\"15\"\/> and <span class=\"process-math\">\\(f''(x)=\\)<\/span> <input type=\"text\" id=\"fillin-math-find-derivatives-secondD\" name=\"secondD\" size=\"15\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-find-derivatives-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-3-1\">The derivative of a constant is zero, so <span class=\"process-math\">\\(\\frac{d}{dx}[[%= toTeX(b) %]]=0\\text{.}\\)<\/span> The term <span class=\"process-math\">\\(x^{[%= toTeX(n) %]}\\)<\/span> is a power, so the power rule gives us <span class=\"process-math\">\\(\\frac{d}{dx}[x^{[%= toTeX(n) %]}]=[%= toTeX(n) %]x^{[%= toTeX(nm1) %]}\\text{.}\\)<\/span> Putting this together, we find <span class=\"process-math\">\\(f'(x)=[%= toTeX(correctD1) %]\\text{.}\\)<\/span> Applying the power rule a second time, we find <span class=\"process-math\">\\(f''(x)=[%= toTeX(correctD2) %]\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-find-derivatives-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-2-1\">Consider the function <span class=\"process-math\">\\(f(x)=[%= toTeX(formula) %]\\text{.}\\)<\/span> Find <span class=\"process-math\">\\(f'(x)\\)<\/span> and <span class=\"process-math\">\\(f''(x)\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-find-derivatives-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-find-derivatives-2-2\"><span class=\"process-math\">\\(f'(x) = \\)<\/span> <input type=\"text\" id=\"fillin-math-find-derivatives-firstD\" name=\"firstD\" size=\"15\"\/> and <span class=\"process-math\">\\(f''(x)=\\)<\/span> <input type=\"text\" id=\"fillin-math-find-derivatives-secondD\" name=\"secondD\" size=\"15\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-find-derivatives-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-3-1\">The derivative of a constant is zero, so <span class=\"process-math\">\\(\\frac{d}{dx}[[%= toTeX(b) %]]=0\\text{.}\\)<\/span> The term <span class=\"process-math\">\\(x^{[%= toTeX(n) %]}\\)<\/span> is a power, so the power rule gives us <span class=\"process-math\">\\(\\frac{d}{dx}[x^{[%= toTeX(n) %]}]=[%= toTeX(n) %]x^{[%= toTeX(nm1) %]}\\text{.}\\)<\/span> Putting this together, we find <span class=\"process-math\">\\(f'(x)=[%= toTeX(correctD1) %]\\text{.}\\)<\/span> Applying the power rule a second time, we find <span class=\"process-math\">\\(f''(x)=[%= toTeX(correctD2) %]\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-find-derivatives-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "dyn_imports": ["BTM"],
 "blankNames": {"firstD": 0, "secondD": 1},
-"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.a = v._mobjs.addMathObject(\"a\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.n = v._mobjs.addMathObject(\"n\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:2, max:5, by:1, nonzero:false}));\nv.nm1 = v._mobjs.addMathObject(\"nm1\", \"number\", v._mobjs.parseExpression(\"n-1\", \"number\").reduce().simplifyConstants());\nv.nm2 = v._mobjs.addMathObject(\"nm2\", \"number\", v._mobjs.parseExpression(\"n-2\", \"number\").reduce().simplifyConstants());\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.formula = v._mobjs.addMathObject(\"formula\", \"formula\", v._mobjs.parseExpression(\"a*x^n+b\", \"formula\"));\nv.correctD1 = v._mobjs.addMathObject(\"correctD1\", \"formula\", v.formula.derivative(\"x\").reduce().simplifyConstants());\nv.correctD2 = v._mobjs.addMathObject(\"correctD2\", \"formula\", v.correctD1.derivative(\"x\").reduce().simplifyConstants());\nv.types = [function(val){ return val; }, function(val){ return val; }];\nv.afterContentRender = function() {\n};\n",
+"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.a = v._mobjs.addMathObject(\"a\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.n = v._mobjs.addMathObject(\"n\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:2, max:5, by:1, nonzero:false}));\nv.nm1 = v._mobjs.addMathObject(\"nm1\", \"number\", v._mobjs.parseExpression(\"n-1\", \"number\").reduce().simplifyConstants());\nv.nm2 = v._mobjs.addMathObject(\"nm2\", \"number\", v._mobjs.parseExpression(\"n-2\", \"number\").reduce().simplifyConstants());\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.formula = v._mobjs.addMathObject(\"formula\", \"formula\", v._mobjs.parseExpression(\"a*x^n+b\", \"formula\"));\nv.correctD1 = v._mobjs.addMathObject(\"correctD1\", \"formula\", v.formula.derivative(\"x\").reduce().simplifyConstants());\nv.correctD2 = v._mobjs.addMathObject(\"correctD2\", \"formula\", v.correctD1.derivative(\"x\").reduce().simplifyConstants());\nv.types = [v._mobjs.getParser(), v._mobjs.getParser()];\nv.afterContentRender = function() {\n};\n",
 "feedbackArray": [[{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(correctD1, ans);\n    return (testResults[0]);\n}()", "feedback": "Correct!"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(correctD2, ans);\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-5-1-2-2-1\">You confused which derivative is which.<\/div>"}, {"feedback": "Incorrect."}], [{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(correctD2, ans);\n    return (testResults[0]);\n}()", "feedback": "Correct!"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(correctD1, ans);\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"fillin-math-find-derivatives-5-2-2-2-1\">You confused which derivative is which.<\/div>"}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers"><a href="#fillin-math-find-derivatives" title="Copy heading and permalink for Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers" aria-label="Copy heading and permalink for Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers"><a tabindex="-1" href="#fillin-math-find-derivatives" title="Copy heading and permalink for Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers" aria-label="Copy heading and permalink for Exercise 5.19.7: Fill-In, Dynamic Math with Formulas as Answers">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="fillin-math-decompose-function"><h3 class="heading">
+<article class="exercise exercise-like" id="fillin-math-decompose-function"><h2 class="heading">
 <span class="codenumber">8<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fill-In, Dynamic Math with Interdependent Formula Checking.</span>
-</h3>
+</h2>
 <div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-fillin-math-decompose-function"><script type="application/json">{
-<<<<<<< HEAD
-"problemHtml": "\n<div class=\"para logical\" id=\"fillin-math-decompose-function-2-1\"><div class=\"para\">Consider the function<\/div><div class=\"displaymath process-math\" id=\"fillin-math-decompose-function-2-1-1\">\n\\begin{equation*}\nh(x)=[%= toTeX(composition) %]\\text{.}\n\\end{equation*}\n<\/div><div class=\"para\">Find two nontrivial functions <span class=\"process-math\">\\(f(x)\\)<\/span> and <span class=\"process-math\">\\(g(x)\\)<\/span> so that <span class=\"process-math\">\\(h(x) = f(g(x))\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-decompose-function-2-2\"><span class=\"process-math\">\\(f(x) = \\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-fGiven\" name=\"fGiven\" size=\"15\"\/> and <span class=\"process-math\">\\(g(x)=\\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-gGiven\" name=\"gGiven\" size=\"15\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-decompose-function-3-1\">Noticing that the expression <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> appears inside parentheses with a power, it makes sense to think of that as the inner function, defining <span class=\"process-math\">\\(g(x) = [%= toTeX(innerFormula) %]\\text{.}\\)<\/span> The outer function describes what happens to that. If we imagined replacing the formula <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> with a box and then call that box our variable <span class=\"process-math\">\\(x\\text{,}\\)<\/span> we find the outer function is given by <span class=\"process-math\">\\(f(x) = [%= toTeX(outerFormula) %]\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-decompose-function-3-2\">This is not the only non-trivial composition. Can you find others?<div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-3-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-=======
-"problemHtml": "<div class=\"para logical\" id=\"fillin-math-decompose-function-2-1\"><div class=\"para\">Consider the function<\/div><div class=\"displaymath process-math\" id=\"fillin-math-decompose-function-2-1-1\">\n\\begin{equation*}\nh(x)=[%= toTeX(composition) %]\\text{.}\n\\end{equation*}\n<\/div><div class=\"para\">Find two nontrivial functions <span class=\"process-math\">\\(f(x)\\)<\/span> and <span class=\"process-math\">\\(g(x)\\)<\/span> so that <span class=\"process-math\">\\(h(x) = f(g(x))\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div><div class=\"para\" id=\"fillin-math-decompose-function-2-2\"><span class=\"process-math\">\\(f(x) = \\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-fGiven\" name=\"fGiven\" size=\"15\"\/> and <span class=\"process-math\">\\(g(x)=\\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-gGiven\" name=\"gGiven\" size=\"15\"\/><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
-"solutionHtml": "<div class=\"para\" id=\"fillin-math-decompose-function-3-1\">Noticing that the expression <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> appears inside parentheses with a power, it makes sense to think of that as the inner function, defining <span class=\"process-math\">\\(g(x) = [%= toTeX(innerFormula) %]\\text{.}\\)<\/span> The outer function describes what happens to that. If we imagined replacing the formula <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> with a box and then call that box our variable <span class=\"process-math\">\\(x\\text{,}\\)<\/span> we find the outer function is given by <span class=\"process-math\">\\(f(x) = [%= toTeX(outerFormula) %]\\text{.}\\)<\/span><div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div><div class=\"para\" id=\"fillin-math-decompose-function-3-2\">This is not the only non-trivial composition. Can you find others?<div class=\"autopermalink\" data-description=\"Paragraph\"><a href=\"#fillin-math-decompose-function-3-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
+"problemHtml": "\n<div class=\"para logical\" id=\"fillin-math-decompose-function-2-1\"><div class=\"para\">Consider the function<\/div><div class=\"displaymath process-math\" id=\"fillin-math-decompose-function-2-1-1\">\n\\begin{equation*}\nh(x)=[%= toTeX(composition) %]\\text{.}\n\\end{equation*}\n<\/div><div class=\"para\">Find two nontrivial functions <span class=\"process-math\">\\(f(x)\\)<\/span> and <span class=\"process-math\">\\(g(x)\\)<\/span> so that <span class=\"process-math\">\\(h(x) = f(g(x))\\text{.}\\)<\/span><\/div><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-decompose-function-2-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-decompose-function-2-2\"><span class=\"process-math\">\\(f(x) = \\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-fGiven\" name=\"fGiven\" size=\"15\"\/> and <span class=\"process-math\">\\(g(x)=\\)<\/span> <input type=\"text\" id=\"fillin-math-decompose-function-gGiven\" name=\"gGiven\" size=\"15\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-decompose-function-2-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"solutionHtml": "\n<div class=\"para\" id=\"fillin-math-decompose-function-3-1\">Noticing that the expression <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> appears inside parentheses with a power, it makes sense to think of that as the inner function, defining <span class=\"process-math\">\\(g(x) = [%= toTeX(innerFormula) %]\\text{.}\\)<\/span> The outer function describes what happens to that. If we imagined replacing the formula <span class=\"process-math\">\\([%= toTeX(innerFormula) %]\\)<\/span> with a box and then call that box our variable <span class=\"process-math\">\\(x\\text{,}\\)<\/span> we find the outer function is given by <span class=\"process-math\">\\(f(x) = [%= toTeX(outerFormula) %]\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-decompose-function-3-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"fillin-math-decompose-function-3-2\">This is not the only non-trivial composition. Can you find others?<div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#fillin-math-decompose-function-3-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "dyn_imports": ["BTM"],
 "blankNames": {"fGiven": 0, "gGiven": 1},
-"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.a = v._mobjs.addMathObject(\"a\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.n = v._mobjs.addMathObject(\"n\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:2, max:5, by:1, nonzero:false}));\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.c = v._mobjs.addMathObject(\"c\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.d = v._mobjs.addMathObject(\"d\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.outerFormula = v._mobjs.addMathObject(\"outerFormula\", \"formula\", v._mobjs.parseExpression(\"a*x^n+b\", \"formula\").reduce().simplifyConstants());\nv.innerFormula = v._mobjs.addMathObject(\"innerFormula\", \"formula\", v._mobjs.parseExpression(\"c*x+d\", \"formula\").reduce().simplifyConstants());\nv.identityFunction = v._mobjs.addMathObject(\"identityFunction\", \"formula\", v._mobjs.parseExpression(\"x\", \"formula\"));\nv.composition = v._mobjs.addMathObject(\"composition\", \"formula\", v._mobjs.composeExpression(v.outerFormula, {\"x\": v.innerFormula}));\nv.types = [function(val){ return val; }, function(val){ return val; }];\nv.afterContentRender = function() {\n};\n",
+"dyn_vars": "v._mobjs = new BTM({'rand': rand});\nvar RNG = v._mobjs.menv.rng;\nv.a = v._mobjs.addMathObject(\"a\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.n = v._mobjs.addMathObject(\"n\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:2, max:5, by:1, nonzero:false}));\nv.b = v._mobjs.addMathObject(\"b\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.c = v._mobjs.addMathObject(\"c\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-4, max:5, by:1, nonzero:true}));\nv.d = v._mobjs.addMathObject(\"d\", \"number\", v._mobjs.generateRandom(\"discrete\", { min:-10, max:10, by:1, nonzero:true}));\nv.outerFormula = v._mobjs.addMathObject(\"outerFormula\", \"formula\", v._mobjs.parseExpression(\"a*x^n+b\", \"formula\").reduce().simplifyConstants());\nv.innerFormula = v._mobjs.addMathObject(\"innerFormula\", \"formula\", v._mobjs.parseExpression(\"c*x+d\", \"formula\").reduce().simplifyConstants());\nv.identityFunction = v._mobjs.addMathObject(\"identityFunction\", \"formula\", v._mobjs.parseExpression(\"x\", \"formula\"));\nv.composition = v._mobjs.addMathObject(\"composition\", \"formula\", v._mobjs.composeExpression(v.outerFormula, {\"x\": v.innerFormula}));\nv.types = [v._mobjs.getParser(), v._mobjs.getParser()];\nv.afterContentRender = function() {\n};\n",
 "feedbackArray": [[{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = 1;\n    testResults[1] = _mobjs.compareExpressions(composition, _mobjs.composeExpression(fGiven, {\"x\": gGiven}));\n    testResults[0] &= testResults[1];\n    testResults[3] = _mobjs.compareExpressions(fGiven, identityFunction);\n    testResults[2] = !(testResults[3]);\n    testResults[1] = testResults[2];\n;\n    testResults[0] &= testResults[1];\n    testResults[3] = _mobjs.compareExpressions(gGiven, identityFunction);\n    testResults[2] = !(testResults[3]);\n    testResults[1] = testResults[2];\n;\n    testResults[0] &= testResults[1];\n    return (testResults[0]);\n}()", "feedback": "Correct!"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(identityFunction, ans);\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"fillin-math-decompose-function-5-1-1-2-1\"><span class=\"process-math\">\\(f(x)=x\\)<\/span> is not allowed for nontrivial compositions.<\/div>"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = 1;\n    testResults[3] = _mobjs.compareExpressions(composition, _mobjs.composeExpression(fGiven, {\"x\": gGiven}));\n    testResults[2] = !(testResults[3]);\n    testResults[1] = testResults[2];\n;\n    testResults[0] &= testResults[1];\n    testResults[1] = _mobjs.compareExpressions(composition, _mobjs.composeExpression(gGiven, {\"x\": fGiven}));\n    testResults[0] &= testResults[1];\n    return (testResults[0]);\n}()", "feedback": "\n<div class=\"para\" id=\"fillin-math-decompose-function-5-1-2-3-1\">You have composed in the wrong order.<\/div>"}, {"feedback": "Incorrect."}], [{"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = 1;\n    testResults[1] = _mobjs.compareExpressions(composition, _mobjs.composeExpression(fGiven, {\"x\": gGiven}));\n    testResults[0] &= testResults[1];\n    testResults[3] = _mobjs.compareExpressions(fGiven, identityFunction);\n    testResults[2] = !(testResults[3]);\n    testResults[1] = testResults[2];\n;\n    testResults[0] &= testResults[1];\n    testResults[3] = _mobjs.compareExpressions(gGiven, identityFunction);\n    testResults[2] = !(testResults[3]);\n    testResults[1] = testResults[2];\n;\n    testResults[0] &= testResults[1];\n    return (testResults[0]);\n}()", "feedback": "Correct!"}, {"solution_code": "function() {\n    var testResults = new Array();\n    testResults[0] = _mobjs.compareExpressions(identityFunction, ans);\n    return (testResults[0]);\n}()", "feedback": "<span class=\"process-math\">\\(g(x)=x\\)<\/span> is not allowed for nontrivial compositions."}, {"feedback": "Incorrect."}]]
 }</script></div>
 </div></div>
-<div class="autopermalink" data-description="Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking"><a href="#fillin-math-decompose-function" title="Copy heading and permalink for Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking" aria-label="Copy heading and permalink for Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking">🔗</a></div>
-</article><div class="autopermalink" data-description="Exercises 5.19: Fill-In Exercises"><a href="#fill-in-exercises" title="Copy heading and permalink for Exercises 5.19: Fill-In Exercises" aria-label="Copy heading and permalink for Exercises 5.19: Fill-In Exercises">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking"><a tabindex="-1" href="#fillin-math-decompose-function" title="Copy heading and permalink for Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking" aria-label="Copy heading and permalink for Exercise 5.19.8: Fill-In, Dynamic Math with Interdependent Formula Checking">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises 5.19: Fill-In Exercises"><a tabindex="-1" href="#fill-in-exercises" title="Copy heading and permalink for Exercises 5.19: Fill-In Exercises" aria-label="Copy heading and permalink for Exercises 5.19: Fill-In Exercises">🔗</a></div>
 </section>
 </div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="fill-in-exercises-old.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="runestone-hodgepodge.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="fill-in-exercises-old.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="fill-in-literal-exercises.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

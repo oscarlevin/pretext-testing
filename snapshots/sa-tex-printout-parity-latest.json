@@ -1,0 +1,1451 @@
+{
+  "printouts": {
+    "handout-derivative-rules": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 17,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "handout-derivative-rules-2-1-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-1-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-3-3",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-4-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-5-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-5-3",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-5-4",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-5-5",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-1-2-1-5-6",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2-1-1-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2-1-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2-1-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2-1-4-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "handout-derivative-rules-2-2-2-1-5-2",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "project-printout-simple": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 1,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "project-printout-simple-2-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "project-printout-tasks": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 8,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "project-printout-tasks-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-first",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-first-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-first-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-first-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-second",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-task-second-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "project-printout-tasks-5-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "section-handouts-4": {
+      "html_pages": 2,
+      "pdf_pages": 3,
+      "blocks": 10,
+      "moved": 1,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-handouts-4-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-4-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-4-2-3-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-4-2-4",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-4-2-5",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-4-3-1-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-4-3-1-2-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-4-3-2-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-4-3-3-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-4-3-4-1-1",
+          "html": 2,
+          "pdf": 3
+        }
+      ]
+    },
+    "section-handouts-5": {
+      "html_pages": 2,
+      "pdf_pages": 2,
+      "blocks": 15,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-handouts-5-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-4-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-5-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-6-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-7-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-8-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-9-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-9-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-handouts-5-2-1-10-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-5-2-1-11-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-handouts-5-2-1-12-1",
+          "html": 2,
+          "pdf": 2
+        }
+      ]
+    },
+    "section-worksheet-solutions-testing-6": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 4,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-worksheet-solutions-testing-6-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-6-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-6-2-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-6-2-3-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "section-worksheet-solutions-testing-7": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 3,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-worksheet-solutions-testing-7-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-7-2-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-7-2-3-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "section-worksheet-solutions-testing-8": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 7,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-worksheet-solutions-testing-8-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-2-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-2-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-3-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheet-solutions-testing-8-3-3-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "section-worksheets-12": {
+      "html_pages": 2,
+      "pdf_pages": 2,
+      "blocks": 13,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-worksheets-12-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-2-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-2-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-2-4-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-4-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-12-3-5-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-12-3-6-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-12-4",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-12-4-1-1",
+          "html": 2,
+          "pdf": 2
+        }
+      ]
+    },
+    "section-worksheets-13": {
+      "html_pages": 3,
+      "pdf_pages": 2,
+      "blocks": 13,
+      "moved": 8,
+      "settled": true,
+      "rows": [
+        {
+          "id": "section-worksheets-13-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-3-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-4-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-4-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-4-3-2-1-1",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-4-3-3-1-1",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "section-worksheets-13-4-3-4-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-2",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-3-1",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-3-1-1-1",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-3-2",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-3-2-1-1",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "section-worksheets-13-5-4-1-1",
+          "html": 3,
+          "pdf": 2
+        }
+      ]
+    },
+    "worksheet-activity-no-task": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 2,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-activity-no-task-1-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-no-task-2-1-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "worksheet-activity-with-task": {
+      "html_pages": 1,
+      "pdf_pages": 1,
+      "blocks": 6,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-activity-with-task-1-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-with-task-1-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-with-task-1-2-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-with-task-1-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-with-task-1-4-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-activity-with-task-1-5-1",
+          "html": 1,
+          "pdf": 1
+        }
+      ]
+    },
+    "worksheet-dot-products": {
+      "html_pages": 2,
+      "pdf_pages": 3,
+      "blocks": 23,
+      "moved": 1,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-dot-products-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-4-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-5-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-1-6-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-2-2-1-1-5",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-dot-products-3-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-2-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-3-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-4-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-5-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-1-6-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-2",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-2-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-2-2-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-2-2-1-1",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-dot-products-3-2-3-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-dot-products-3-2-4-1",
+          "html": 2,
+          "pdf": 2
+        }
+      ]
+    },
+    "worksheet-geometric-prelude": {
+      "html_pages": 3,
+      "pdf_pages": 3,
+      "blocks": 14,
+      "moved": 0,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-geometric-prelude-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-geometric-prelude-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-geometric-prelude-3-4",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "ex-cyclic",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "ex-cyclic-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-geometric-prelude-5",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "exercise-vector-addition",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "exercise-vector-addition-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "exercise-vector-addition-2-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-7-2",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-7-2-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-8",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-8-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-9-2",
+          "html": 3,
+          "pdf": 3
+        }
+      ]
+    },
+    "worksheet-geometric-prelude-pages": {
+      "html_pages": 2,
+      "pdf_pages": 4,
+      "blocks": 14,
+      "moved": 11,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-geometric-prelude-pages-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-3-4",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "ex-cyclic-pages",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "ex-cyclic-pages-1-1",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-5-1",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "exercise-vector-addition-pages",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "exercise-vector-addition-pages-1-1",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "exercise-vector-addition-pages-2-1",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-5-3-2",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-5-3-2-1-1",
+          "html": 2,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-5-4",
+          "html": 2,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-5-4-1",
+          "html": 2,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-geometric-prelude-pages-6-2",
+          "html": 2,
+          "pdf": 4
+        }
+      ]
+    },
+    "worksheet-networks": {
+      "html_pages": 4,
+      "pdf_pages": 4,
+      "blocks": 16,
+      "moved": 5,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-networks-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-2-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-2-4-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-2-5-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-2-6-2",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-2-7",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-3-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-networks-3-1-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-networks-3-2",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-networks-3-2-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-networks-4",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-4-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-5",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-5-1-1",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-5-1-3",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-5-1-5",
+          "html": 4,
+          "pdf": 4
+        }
+      ]
+    },
+    "worksheet-networks-pages": {
+      "html_pages": 4,
+      "pdf_pages": 5,
+      "blocks": 16,
+      "moved": 6,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-networks-pages-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-2-3-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-2-4-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-2-5-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-2-6-2",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-2-7",
+          "html": 2,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-networks-pages-4-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-4-1-1-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-4-1-2",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-4-1-2-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-4-2",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-4-2-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-networks-pages-5-1",
+          "html": 4,
+          "pdf": 5
+        },
+        {
+          "id": "worksheet-networks-pages-5-1-1-1",
+          "html": 4,
+          "pdf": 5
+        },
+        {
+          "id": "worksheet-networks-pages-5-1-1-3",
+          "html": 4,
+          "pdf": 5
+        },
+        {
+          "id": "worksheet-networks-pages-5-1-1-5",
+          "html": 4,
+          "pdf": 5
+        }
+      ]
+    },
+    "worksheet-testing": {
+      "html_pages": 2,
+      "pdf_pages": 2,
+      "blocks": 29,
+      "moved": 4,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-testing-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-1-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2-2-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2-3-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2-4-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-2-2-4-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-3",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-testing-4",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-4-2-1",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-4-2-2",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-4-3-1",
+          "html": 1,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-5",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-1-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-2",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-2-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-3",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-6-3-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-7-2-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-7-3-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-1-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-2",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-2-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-3",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-testing-8-3-1-1",
+          "html": 2,
+          "pdf": 2
+        }
+      ]
+    },
+    "worksheet-workspace": {
+      "html_pages": 4,
+      "pdf_pages": 4,
+      "blocks": 43,
+      "moved": 8,
+      "settled": true,
+      "rows": [
+        {
+          "id": "worksheet-workspace-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-2",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-3",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-3-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-4",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-4-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-5",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-5-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-6",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-6-1-1",
+          "html": 1,
+          "pdf": 1
+        },
+        {
+          "id": "worksheet-workspace-7",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-7-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-8",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-8-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-9",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-9-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-10",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-10-1-1",
+          "html": 2,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-11",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-11-1-1",
+          "html": 3,
+          "pdf": 2
+        },
+        {
+          "id": "worksheet-workspace-12",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-12-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-13",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-14",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-14-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-15",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-15-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-16",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-16-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-17",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-17-1-1",
+          "html": 3,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-18",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-18-1-1",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-19",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-19-1-1",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-20",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-20-1-1",
+          "html": 4,
+          "pdf": 3
+        },
+        {
+          "id": "worksheet-workspace-21",
+          "html": 4,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-workspace-21-1-1",
+          "html": 4,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-workspace-22",
+          "html": 4,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-workspace-22-1-1",
+          "html": 4,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-workspace-23",
+          "html": 4,
+          "pdf": 4
+        },
+        {
+          "id": "worksheet-workspace-23-1-1",
+          "html": 4,
+          "pdf": 4
+        }
+      ]
+    }
+  },
+  "totals": {
+    "blocks": 254,
+    "agree": 210,
+    "moved": 44,
+    "agreement": 0.8268
+  }
+}

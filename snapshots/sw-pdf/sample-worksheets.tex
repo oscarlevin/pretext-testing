@@ -1,0 +1,2490 @@
+%********************************************%
+%*       Generated from PreTeXt source      *%
+%*       on 2026-08-27T13:59:16-06:00       *%
+%*   A recent stable commit (2022-07-01):   *%
+%* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
+%*                                          *%
+%*         https://pretextbook.org          *%
+%*                                          *%
+%********************************************%
+\documentclass[oneside,10pt,]{article}
+%% Custom Preamble Entries, early (use latex.preamble.early)
+%% Default LaTeX packages
+%%   1.  always employed (or nearly so) for some purpose, or
+%%   2.  a stylewriter may assume their presence
+\usepackage{geometry}
+%% Some aspects of the preamble are conditional,
+%% the LaTeX engine is one such determinant
+\usepackage{ifthen}
+%% etoolbox has a variety of modern conveniences
+\usepackage{etoolbox}
+\usepackage{ifxetex,ifluatex}
+%% Raster graphics inclusion
+\usepackage{graphicx}
+%% Color support, xcolor package
+%% Always loaded, for: add/delete text, author tools
+%% Here, since tcolorbox loads tikz, and tikz loads xcolor
+\PassOptionsToPackage{dvipsnames,svgnames,table}{xcolor}
+\usepackage{xcolor}
+%% begin: defined colors, via xcolor package, for styling
+%% end: defined colors, via xcolor package, for styling
+%% Colored boxes, and much more, though mostly styling
+%% skins library provides "enhanced" skin, employing tikzpicture
+%% boxes may be configured as "breakable" or "unbreakable"
+%% "raster" controls grids of boxes, aka side-by-side
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{raster}
+%% We load some "stock" tcolorbox styles that we use a lot
+%% Placement here is provisional, there will be some color work also
+%% First, black on white, no border, transparent, but no assumption about titles
+\tcbset{ bwminimalstyle/.style={size=minimal, boxrule=-0.3pt, frame empty,
+colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
+%% Second, bold title, run-in to text/paragraph/heading
+%% Space afterwards will be controlled by environment,
+%% independent of constructions of the tcb title
+%% Places \blocktitlefont onto many block titles
+\tcbset{ runintitlestyle/.style={fonttitle=\blocktitlefont\upshape\bfseries, attach title to upper} }
+%% Spacing prior to each exercise, anywhere
+\tcbset{ exercisespacingstyle/.style={before skip={1.5ex plus 0.5ex}} }
+%% Spacing prior to each block
+\tcbset{ blockspacingstyle/.style={before skip={2.0ex plus 0.5ex}} }
+%% xparse allows the construction of more robust commands,
+%% this is a necessity for isolating styling and behavior
+%% The tcolorbox library of the same name loads the base library
+\tcbuselibrary{xparse}
+%% The tcolorbox library loads TikZ, its calc package is generally useful,
+%% and is necessary for some smaller documents that use partial tcolor boxes
+%% See:  https://github.com/PreTeXtBook/pretext/issues/1624
+\usetikzlibrary{calc}
+%% We use some more exotic tcolorbox keys to restore indentation to parboxes
+\tcbuselibrary{hooks}
+%% Save default paragraph indentation and parskip for use later, when adjusting parboxes
+\newlength{\ptxnormalparindent}
+\newlength{\ptxnormalparskip}
+%% Prescribe the paragraph indent to the value shared with the
+%% XSL-FO conversion, so the two agree, rather than accepting the
+%% document class default; "\ptxnormalparindent" then captures it
+\AtBeginDocument{\setlength{\parindent}{1.5em}}
+\AtBeginDocument{\setlength{\ptxnormalparindent}{\parindent}}
+\AtBeginDocument{\setlength{\ptxnormalparskip}{\parskip}}
+\newcommand{\ptxsetparstyle}{\setlength{\parindent}{\ptxnormalparindent}\setlength{\parskip}{\ptxnormalparskip}}%% An appendix is numbered by a letter, and a bare letter beside a
+%% title is ambiguous ("A Trip Abroad"), so a letter composed with
+%% a title carries a period ("A. Trip Abroad").  These macros are
+%% seams in the division styles, empty until the appendices arrive
+%% (chapter-level for a book, section-level for an article, so a
+%% multi-part number like "E.1" never gains a period); see the
+%% uses at  \appendix
+\newcommand{\ptxappendixperiodchapter}{}
+\newcommand{\ptxappendixperiodsection}{}
+%% Hyperref should be here, but likes to be loaded late
+%%
+%% Inline math delimiters, \(, \), need to be robust
+%% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
+%% If  latexrelease.sty  exists, bugfix is in kernel
+%% If not, bugfix is in  fixltx2e.sty
+%% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
+%% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
+\IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% shorter subnumbers in some side-by-side require manipulations
+\usepackage{xstring}
+%% Footnote counters and part/chapter counters are manipulated
+%% April 2018:  chngcntr  commands now integrated into the kernel,
+%% but circa 2018/2019 the package would still try to redefine them,
+%% so we need to do the work of loading conditionally for old kernels.
+%% From version 1.1a,  chngcntr  should detect defintions made by LaTeX kernel.
+\ifdefined\counterwithin
+\else
+    \usepackage{chngcntr}
+\fi
+%% Text height identically 9 inches, text width varies on point size
+%% See Bringhurst 2.1.1 on measure for recommendations
+%% 75 characters per line (count spaces, punctuation) is target
+%% which is the upper limit of Bringhurst's recommendations
+\geometry{letterpaper,total={340pt,9.0in}}
+%% Custom Page Layout Adjustments (use publisher page-geometry entry)
+%% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex executables
+%% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
+%% The conditional below provides  pdflatex  specific configuration last
+%% begin: engine-specific capabilities
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific default configuration
+\ifxetex\usepackage{xltxtra}\fi
+%% realscripts is the only part of xltxtra relevant to lualatex 
+\ifluatex\usepackage{realscripts}\fi
+%% end:   xelatex and lualatex-specific default configuration
+}{
+%% begin: pdflatex-specific default configuration
+%% We assume a PreTeXt XML source file may have Unicode characters
+%% and so we ask LaTeX to parse a UTF-8 encoded file
+%% This may work well for accented characters in Western language,
+%% but not with Greek, Asian languages, etc.
+%% When this is not good enough, switch to the  xelatex  engine
+%% where Unicode is better supported (encouraged, even)
+\usepackage[utf8]{inputenc}
+%% end: pdflatex-specific default configuration
+}
+%% end:   engine-specific capabilities
+%%
+%% Fonts.  Conditional on LaTex engine employed.
+%% Default Text Font: The Latin Modern fonts are
+%% "enhanced versions of the [original TeX] Computer Modern fonts."
+%% We use them as the default text font for PreTeXt output.
+%% Default Monospace font: Inconsolata (aka zi4)
+%% Sponsored by TUG: http://levien.com/type/myfonts/inconsolata.html
+%% Loaded for documents with intentional objects requiring monospace
+%% See package documentation for excellent instructions
+%% fontspec will work universally if we use filename to locate OTF files
+%% Loads the "upquote" package as needed, so we don't have to
+%% Upright quotes might come from the  textcomp  package, which we also use
+%% We employ the shapely \ell to match Google Font version
+%% pdflatex: "varl" package option produces shapely \ell
+%% pdflatex: "var0" package option produces plain zero (not used)
+%% pdflatex: "varqu" package option produces best upright quotes
+%% xelatex,lualatex: add OTF StylisticSet 1 for shapely \ell
+%% xelatex,lualatex: add OTF StylisticSet 2 for plain zero (not used)
+%% xelatex,lualatex: add OTF StylisticSet 3 for upright quotes
+%%
+%% Automatic Font Control
+%% Portions of a document, are, or may, be affected by defined commands
+%% These are perhaps more flexible when using  xelatex  rather than  pdflatex
+%% The following definitions are meant to be re-defined in a style, using \renewcommand
+%% They are scoped when employed (in a TeX group), and so should not be defined with an argument
+\newcommand{\divisionfont}{\relax}
+\newcommand{\blocktitlefont}{\relax}
+\newcommand{\contentsfont}{\relax}
+\newcommand{\pagefont}{\relax}
+\newcommand{\tabularfont}{\relax}
+\newcommand{\xreffont}{\relax}
+\newcommand{\titlepagefont}{\relax}
+%%
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: font setup and configuration for use with xelatex
+%% Generally, xelatex is necessary for non-Western fonts
+%% fontspec package provides extensive control of system fonts,
+%% meaning *.otf (OpenType), and apparently *.ttf (TrueType)
+%% that live *outside* your TeX/MF tree, and are controlled by your *system*
+%% (it is possible that a TeX distribution will place fonts in a system location)
+%%
+%% The fontspec package is the best vehicle for using different fonts in  xelatex
+%% So we load it always, no matter what a publisher or style might want
+%%
+\usepackage{fontspec}
+%%
+%% begin: xelatex main font ("font-xelatex-main" template)
+%% Latin Modern Roman is the default font for xelatex and so is loaded with a TU encoding
+%% *in the format* so we can't touch it, only perhaps adjust it later
+%% in one of two ways (then known by NFSS names such as "lmr")
+%% (1) via NFSS with font family names such as "lmr" and "lmss"
+%% (2) via fontspec with commands like \setmainfont{Latin Modern Roman}
+%% The latter requires the font to be known at the system-level by its font name,
+%% but will give access to OTF font features through optional arguments
+%% https://tex.stackexchange.com/questions/470008/
+%% where-and-how-does-fontspec-sty-specify-the-default-font-latin-modern-roman
+%% http://tex.stackexchange.com/questions/115321
+%% /how-to-optimize-latin-modern-font-with-xelatex
+%%
+%% end:   xelatex main font ("font-xelatex-main" template)
+%% begin: xelatex math font ("font-xelatex-math" template)
+%% end:   xelatex math font ("font-xelatex-math" template)
+%% begin: xelatex mono font ("font-xelatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\IfFontExistsTF{Inconsolatazi4-Regular.otf}{}{\GenericError{}{The font "Inconsolatazi4-Regular.otf" requested by PreTeXt output processed by the  xelatex  executable is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Perhaps try using  pdflatex  as a test.}{}}
+\IfFontExistsTF{Inconsolatazi4-Bold.otf}{}{\GenericError{}{The font "Inconsolatazi4-Bold.otf" requested by PreTeXt output processed by the  xelatex  executable is not available.  Either a file cannot be located in default locations via a filename, or a font is not known by its name as part of your system.}{Perhaps try using  pdflatex  as a test.}{}}
+\usepackage{zi4}
+\setmonofont[BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}]{Inconsolatazi4-Regular.otf}
+%% end:   xelatex mono font ("font-xelatex-mono" template)
+%% begin: xelatex font adjustments ("font-xelatex-style" template)
+%% end:   xelatex font adjustments ("font-xelatex-style" template)
+%%
+%% Extensive support for other languages
+\usepackage{polyglossia}
+%% Set main/default language based on pretext/@xml:lang value
+%% document language code is "en-US", US English
+%% usmax variant has extra hypenation
+\setmainlanguage[variant=usmax]{english}
+%% Enable secondary languages based on discovery of @xml:lang values
+%% Enable fonts/scripts based on discovery of @xml:lang values
+%% Western languages should be ably covered by Latin Modern Roman
+%% end:   font setup and configuration for use with xelatex
+}{%
+%% begin: font setup and configuration for use with pdflatex
+%% begin: pdflatex main font ("font-pdflatex-main" template)
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%% end:   pdflatex main font ("font-pdflatex-main" template)
+%% begin: pdflatex mono font ("font-pdflatex-mono" template)
+%% (conditional on non-trivial uses being present in source)
+\usepackage[varqu,varl]{inconsolata}
+%% end:   pdflatex mono font ("font-pdflatex-mono" template)
+%% begin: pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   pdflatex font adjustments ("font-pdflatex-style" template)
+%% end:   font setup and configuration for use with pdflatex
+}
+%% Micromanage spacing, etc.  The named "microtype-options"
+%% template may be employed to fine-tune package behavior
+\usepackage{microtype}
+%% Symbols, align environment, commutative diagrams, bracket-matrix
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{amssymb}
+%% allow page breaks within display mathematics anywhere
+%% level 4 is maximally permissive
+%% this is exactly the opposite of AMSmath package philosophy
+%% there are per-display, and per-equation options to control this
+%% split, aligned, gathered, and alignedat are not affected
+\allowdisplaybreaks[4]
+%% allow more columns to a matrix
+%% can make this even bigger by overriding with  latex.preamble.late  processing option
+\setcounter{MaxMatrixCols}{30}
+%%
+%% Symbols for use in text mode (i.e. not in math mode)
+\usepackage{pifont}
+%% Solid geometric shapes to mark ends of environments
+\newcommand{\ptxsquare}{\ding{110}}
+\newcommand{\ptxtriangle}{\ding{115}}
+\newcommand{\ptxdiamond}{\ding{117}}
+%% Markers for unordered list items
+\newcommand{\ptxlistdisc}{\raisebox{0.3ex}{\textbullet}}
+\newcommand{\ptxlistcircle}{\raisebox{0.3ex}{\textopenbullet}}
+\newcommand{\ptxlistsquare}{\raisebox{0.4ex}{\scalebox{0.5}{\ding{110}}}}
+%%
+%% Division Titles, and Page Headers/Footers
+%% titlesec package, loading "titleps" package cooperatively
+%% See code comments about the necessity and purpose of "explicit" option.
+%% The "newparttoc" option causes a consistent entry for parts in the ToC 
+%% file, but it is only effective if there is a \titleformat for \part.
+%% "pagestyles" loads the  titleps  package cooperatively.
+\usepackage[explicit, newparttoc, pagestyles]{titlesec}
+%% The companion titletoc package for the ToC.
+\usepackage{titletoc}
+%% begin: customizations of page styles via the modal "titleps-style" template
+%% Designed to use commands from the LaTeX "titleps" package
+\pagestyle{plain}
+%% end: customizations of page styles via the modal "titleps-style" template
+%%
+%% Create globally-available macros to be provided for style writers
+%% These are redefined for each occurence of each division
+\newcommand{\divisionnameptx}{\relax}%
+\newcommand{\titleptx}{\relax}%
+\newcommand{\subtitleptx}{\relax}%
+\newcommand{\shortitleptx}{\relax}%
+\newcommand{\authorsptx}{\relax}%
+\newcommand{\epigraphptx}{\relax}%
+%% Create environments for possible occurences of each division
+%% Environment for a PTX "section" at the level of a LaTeX "section"
+\NewDocumentEnvironment{sectionptx}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "worksheet" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{worksheet-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "worksheet" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{worksheet-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "handout" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{handout-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "handout" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{handout-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "subsection" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{subsectionptx}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "solutions" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{solutions-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "solutions" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{solutions-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{exercises-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{exercises-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "references" at the level of a LaTeX "subsection"
+\NewDocumentEnvironment{references-subsection-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\subsection*{#2}%
+\addcontentsline{toc}{subsection}{#4}
+\label{#7}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "section"
+\NewDocumentEnvironment{exercises-section}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section[{#4}]{#2}%
+\label{#7}%
+}{}%
+%% Environment for a PTX "exercises" at the level of a LaTeX "section"
+\NewDocumentEnvironment{exercises-section-numberless}{mmmmmmm}
+{%
+\renewcommand{\divisionnameptx}{#1}%
+\renewcommand{\titleptx}{#2}%
+\renewcommand{\subtitleptx}{#3}%
+\renewcommand{\shortitleptx}{#4}%
+\renewcommand{\authorsptx}{#5}%
+\renewcommand{\epigraphptx}{#6}%
+\section*{#2}%
+\addcontentsline{toc}{section}{#4}
+\label{#7}%
+}{}%
+%%
+%% Styles for six traditional LaTeX divisions
+\titleformat{\part}[display]
+{\divisionfont\Huge\bfseries\centering}{\divisionnameptx\space\thepart}{30pt}{\Huge#1}
+[{\Large\centering\authorsptx}]
+\titleformat{\chapter}[display]
+{\divisionfont\huge\bfseries}{\divisionnameptx\space\thechapter}{20pt}{\Huge#1}
+[{\Large\authorsptx}]
+\titleformat{name=\chapter,numberless}[display]
+{\divisionfont\huge\bfseries}{}{0pt}{#1}
+[{\Large\authorsptx}]
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titleformat{\section}[hang]
+{\divisionfont\Large\bfseries}{\thesection\ptxappendixperiodsection}{1ex}{#1}
+[{\large\authorsptx}]
+\titleformat{name=\section,numberless}[block]
+{\divisionfont\Large\bfseries}{}{0pt}{#1}
+[{\large\authorsptx}]
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\subsection}[hang]
+{\divisionfont\large\bfseries}{\thesubsection}{1ex}{#1}
+[{\normalsize\authorsptx}]
+\titleformat{name=\subsection,numberless}[block]
+{\divisionfont\large\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\subsubsection}[hang]
+{\divisionfont\normalsize\bfseries}{\thesubsubsection}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\subsubsection,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titleformat{\paragraph}[hang]
+{\divisionfont\normalsize\bfseries}{\theparagraph}{1em}{#1}
+[{\small\authorsptx}]
+\titleformat{name=\paragraph,numberless}[block]
+{\divisionfont\normalsize\bfseries}{}{0pt}{#1}
+[{\normalsize\authorsptx}]
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5em}
+%%
+%% Styles for five traditional LaTeX divisions
+\titlecontents{part}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\Large\thecontentslabel\enspace}{\Large}%
+{}%
+[\addvspace{.5pc}]%
+\titlecontents{chapter}%
+[0pt]{\contentsmargin{0em}\addvspace{1pc}\contentsfont\bfseries}%
+{\large\thecontentslabel\ptxappendixperiodchapter\enspace}{\large}%
+{\hfill\bfseries\thecontentspage}%
+[\addvspace{.5pc}]%
+\titlecontents{section}%
+[3.8em]{\contentsfont}%
+{\contentslabel[\thecontentslabel\ptxappendixperiodsection]{2.3em}}%
+{\hspace*{-2.3em}}%
+{\titlerule*[1pc]{.}\contentspage}%
+\dottedcontents{subsection}[6.1em]{\contentsfont}{3.2em}{1pc}%
+\dottedcontents{subsubsection}[9.3em]{\contentsfont}{4.3em}{1pc}%
+%%
+%% Begin: Semantic Macros
+%% To preserve meaning in a LaTeX file
+%%
+%% \ptxmono macro for content of "c", "cd", "tag", etc elements
+%% Also used automatically in other constructions
+%% Simply an alias for \texttt
+%% Always defined, even if there is no need, or if a specific tt font is not loaded
+\newcommand{\ptxmono}[1]{\texttt{#1}}
+%%
+%%
+%% Following semantic macros are only defined here if their
+%% use is required only in this specific document
+%%
+%% Used for inline definitions of terms
+\newcommand{\ptxterminology}[1]{\textbf{#1}}
+%% Used for fillin answer blank in text
+%% Relies on calc package, loaded via tcolorbox
+%% Argument is intended number of characters of blank
+%% Length may compress for output to fit in one line
+\newlength{\ptxfillinmaxwidth}
+\newlength{\ptxfillincontract}
+\newlength{\ptxcharmaxwidth}\setlength{\ptxcharmaxwidth}{0.5em}
+\newlength{\ptxcharminwidth}\setlength{\ptxcharminwidth}{0.1em}
+\newlength{\ptxfillinheight}
+\newcommand{\ptxfillintext}[1]{%
+\setlength{\ptxfillinmaxwidth}{#1\ptxcharmaxwidth}%
+\setlength{\ptxfillincontract}{#1\ptxcharminwidth}%
+\setlength{\ptxfillinheight}{\baselineskip}\addtolength{\ptxfillinheight}{1.2pt}%
+\strut\nobreak\leaders\vbox{\hrule width 0.3pt height 0.3pt \vskip -1.2pt}\hskip 1\ptxfillinmaxwidth minus \ptxfillincontract\nobreak\strut%
+}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+%% End: Semantic Macros
+%% begin: environments for duplicates in solutions divisions
+%% Solutions to inline exercises, style and environment
+\tcbset{ inlinesolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{inlinesolution}[4]{inlinesolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
+%% Solutions to division exercises, not in exercise group
+%% Parameter #1 is type-name and is ignored
+\tcbset{ divisionsolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{divisionsolution}[4]{divisionsolutionstyle, title={\hyperlink{#4}{#2}.\notblank{#3}{\space#3}{}}}
+%% Solutions to division exercises, in exercise group, no columns
+%% Parameter #1 is type-name and is ignored
+\tcbset{ divisionsolutionegstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, left skip=\ptxegindent, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{divisionsolutioneg}[4]{divisionsolutionegstyle, title={\hyperlink{#4}{#2}.\notblank{#3}{\space#3}{}}}
+\tcbset{ activitysolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{activitysolution}[4]{activitysolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
+\tcbset{ projectsolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{projectsolution}[4]{projectsolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
+%% Divisional exercises (and worksheet) as LaTeX environments
+%% Third argument is option for extra workspace in worksheets
+%% Hanging indent occupies a 5ex width slot prior to left margin
+%% Experimentally this seems just barely sufficient for a bold "888."
+%% Division exercises, not in exercise group
+\tcbset{ divisionexercisestyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}
+%% Division exercises, in exercise group, no columns
+\tcbset{ divisionexerciseegstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, left skip=\ptxegindent, breakable, before upper app={\ptxsetparstyle} } }
+\newtcolorbox{divisionexerciseeg}[4]{divisionexerciseegstyle, before title={\hspace*{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2}{}}, after title={\notblank{#2}{\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\par\rule{\ptxworkspacestrutwidth}{#3}\par\vfill}{\par}}}
+%% Worksheets and handouts children may have workspaces
+\newlength{\ptxworkspacestrutwidth}
+%% @workspace strut is invisible
+\setlength{\ptxworkspacestrutwidth}{0pt}
+%% Equation Numbering
+%% Controlled by  numbering.equations.level  processing parameter
+%% No adjustment here implies document-wide numbering
+\numberwithin{equation}{section}
+%% "tcolorbox" environment for a single image, occupying entire \linewidth
+%% arguments are left-margin, width, right-margin, as multiples of
+%% \linewidth, and are guaranteed to be positive and sum to 1.0
+\tcbset{ imagestyle/.style={bwminimalstyle} }
+\NewTColorBox{tcbimage}{mmm}{imagestyle,left skip=#1\linewidth,width=#2\linewidth}
+%% Wrapper environment for tcbimage environment with a fourth argument
+%% Fourth argument, if nonempty, is a vertical space adjustment
+%% and implies image will be preceded by \leavevmode\nopagebreak
+%% Intended use is for alignment with a list marker
+\NewDocumentEnvironment{image}{mmmm}{\notblank{#4}{\leavevmode\nopagebreak\vspace{#4}}{}\begin{tcbimage}{#1}{#2}{#3}}{\end{tcbimage}%
+}
+%% For improved tables
+\usepackage{array}
+%% Some extra height on each row is desirable, especially with horizontal rules
+%% Increment determined experimentally
+\setlength{\extrarowheight}{0.2ex}
+%% Define variable thickness horizontal rules, full and partial
+%% Thicknesses are 0.03, 0.05, 0.08 in the  booktabs  package
+\newcommand{\ptxhrulethin}  {\noalign{\hrule height 0.04em}}
+\newcommand{\ptxhrulemedium}{\noalign{\hrule height 0.07em}}
+\newcommand{\ptxhrulethick} {\noalign{\hrule height 0.11em}}
+%% We preserve a copy of the \setlength package before other
+%% packages (extpfeil) get a chance to load packages that redefine it
+\let\ptxoldsetlength\setlength
+\newlength{\ptxOldarrayrulewidth}
+\newcommand{\ptxcrulethin}[1]%
+{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.04em}}\cline{#1}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}%
+\newcommand{\ptxcrulemedium}[1]%
+{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.07em}}\cline{#1}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}
+\newcommand{\ptxcrulethick}[1]%
+{\noalign{\global\ptxoldsetlength{\ptxOldarrayrulewidth}{\arrayrulewidth}}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{0.11em}}\cline{#1}%
+\noalign{\global\ptxoldsetlength{\arrayrulewidth}{\ptxOldarrayrulewidth}}}
+%% Single letter column specifiers defined via array package
+\newcolumntype{A}{!{\vrule width 0.04em}}
+\newcolumntype{B}{!{\vrule width 0.07em}}
+\newcolumntype{C}{!{\vrule width 0.11em}}
+%% tcolorbox to place tabular outside of a sidebyside
+\tcbset{ tabularboxstyle/.style={bwminimalstyle,} }
+\newtcolorbox{tabularbox}[3]{tabularboxstyle, left skip=#1\linewidth, width=#2\linewidth,}
+%% Footnote Numbering
+%% Specified by numbering.footnotes.level
+\counterwithin*{footnote}{section}
+%% More flexible list management, esp. for references
+%% But also for specifying labels (i.e. custom order) on nested lists
+\usepackage{enumitem}
+%% Lists of references in their own section, maximum depth 1
+\newlist{referencelist}{description}{4}
+\setlist[referencelist]{leftmargin=!,labelwidth=!,labelsep=0ex,itemsep=1.0ex,topsep=1.0ex,partopsep=0pt,parsep=0pt}
+%% Description lists as tcolorbox sidebyside
+%% "dli" short for "description list item"
+\newlength{\ptxdlititlewidth}
+\newlength{\ptxdlimaxnarrowtitle}\setlength{\ptxdlimaxnarrowtitle}{11ex}
+\newlength{\ptxdlimaxmediumtitle}\setlength{\ptxdlimaxmediumtitle}{18ex}
+\newlength{\ptxdlimaxwidetitle}\setlength{\ptxdlimaxwidetitle}{25ex}
+\tcbset{ dlistyle/.style={sidebyside, sidebyside align=top seam, lower separated=false, bwminimalstyle, bottomtitle=0.75ex, after skip=1.5ex, boxsep=0pt, left=0pt, right=0pt, top=0pt, bottom=0pt, before lower app={\ptxsetparstyle\noindent}} }
+\tcbset{ dlinarrowstyle/.style={dlistyle, lefthand width=\ptxdlimaxnarrowtitle, sidebyside gap=1ex, halign=flush left, righttitle=10ex} }
+\tcbset{ dlimediumstyle/.style={dlistyle, lefthand width=\ptxdlimaxmediumtitle, sidebyside gap=4ex, halign=flush right} }
+\tcbset{ dliwidestyle/.style={dlistyle, lefthand width=\ptxdlimaxwidetitle, sidebyside gap=4ex, halign=flush right} }
+\NewDocumentEnvironment{descriptionlist}{}{\par\vspace*{1.5ex}}{\par\vspace*{1.5ex}}%
+%% begin enviroment has an if/then to open the tcolorbox
+\NewDocumentEnvironment{dlinarrow}{mm}{%
+\settowidth{\ptxdlititlewidth}{{\textbf{#1}}}%
+\ifthenelse{\ptxdlititlewidth > \ptxdlimaxnarrowtitle}%
+{\begin{tcolorbox}[title={\textbf{#1}}, phantom={\hypertarget{#2}{}}, dlinarrowstyle]\tcblower}%
+{\begin{tcolorbox}[dlinarrowstyle, phantom={\hypertarget{#2}{}}]\textbf{#1}\tcblower}%
+}%
+{\end{tcolorbox}}%
+%% medium option is simpler
+\NewDocumentEnvironment{dlimedium}{mm}%
+{\begin{tcolorbox}[dlimediumstyle, phantom={\hypertarget{#2}{}}]\textbf{#1}\tcblower}%
+{\end{tcolorbox}}%
+%% wide option is similar
+\NewDocumentEnvironment{dliwide}{mm}%
+{\begin{tcolorbox}[dliwidestyle, phantom={\hypertarget{#2}{}}]\textbf{#1}\tcblower}%
+{\end{tcolorbox}}%
+%% Indented groups of "exercise" within an "exercises" division
+%% Lengths control the indentation (always) and gaps (multi-column)
+\newlength{\ptxegindent}\setlength{\ptxegindent}{0.05\linewidth}
+\newlength{\ptxexggap}\setlength{\ptxexggap}{0.05\linewidth}
+%% Thin "xparse" environments will represent the entire exercise
+%% group, in the case when it does not hold multiple columns.
+\NewDocumentEnvironment{exercisegroup}{}
+{}{}
+%% hyperref driver does not need to be specified, it will be detected
+\usepackage{hyperref}
+%% footnotehyper: footnote text escapes boxed environments ("savenotes")
+%% and every box restores the standard footnote counter for its marks
+\usepackage{footnotehyper}
+\makeatletter
+\newcommand{\ptxnativefootnotes}{\def\@mpfn{footnote}\def\thempfn{\thefootnote}}
+\makeatother
+\appto\ptxsetparstyle{\ptxnativefootnotes}
+\tcbset{every box/.append style={before lower pre={\ptxnativefootnotes}}}
+%% Hyperlinking active in electronic PDFs, all links without surrounding boxes and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+%% Less-clever names for hyperlinks are more reliable, *especially* for structural parts
+%% See comments in the code to learn more about the importance of this setting
+\hypersetup{hypertexnames=false}
+%%The  hypertexnames  setting then confuses the hyperlinking from the index
+%%This patch resolves the incorrect links, see code for StackExchange post.
+\makeatletter
+\patchcmd\Hy@EveryPageBoxHook{\Hy@EveryPageAnchor}{\Hy@hypertexnamestrue\Hy@EveryPageAnchor}{}{\fail}
+\makeatother
+\hypersetup{pdftitle={Sample Worksheets}}
+%% If you manually remove hyperref, leave in this next command
+%% This will allow LaTeX compilation, employing this no-op command
+\providecommand\phantomsection{}
+%% Division Numbering: Chapters, Sections, Subsections, etc
+%% Division numbers may be turned off at some level ("depth")
+%% A section *always* has depth 1, contrary to us counting from the document root
+%% The latex default is 3.  If a larger number is present here, then
+%% removing this command may make some cross-references ambiguous
+%% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
+\setcounter{secnumdepth}{3}
+%%
+%%
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for most blocks (possibly not projects, 2D displays)
+%% Controlled by  numbering.theorems.level  processing parameter
+\newtcolorbox[auto counter, number within=section]{block}{}
+%% A faux tcolorbox whose only purpose is to provide common numbering
+%% facilities for 2D displays which are subnumbered as part of a "sidebyside"
+\makeatletter
+\newtcolorbox[auto counter, number within=tcb@cnt@block, number freestyle={\noexpand\thetcb@cnt@block(\noexpand\alph{\tcbcounter})}]{subdisplay}{}
+\makeatother
+%%
+%% tcolorbox, with styles, for THEOREM-LIKE
+%%
+%% theorem: fairly simple numbered block/structure
+\tcbset{ theoremstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{theorem}[4]{title={{#1~\thetcbcounter\notblank{#2#3}{\space}{}\notblank{#2}{\space#2}{}\notblank{#3}{\space(#3)}{}}}, phantomlabel={#4}, breakable, after={\par}, fontupper=\itshape, theoremstyle, }
+%%
+%% tcolorbox, with styles, for PROOF-LIKE
+%%
+%% proof: title is a replacement
+\tcbset{ proofstyle/.style={bwminimalstyle, fonttitle=\blocktitlefont\itshape, attach title to upper, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxsquare},
+} }
+\newtcolorbox{proof}[3]{title={\notblank{#2}{#2}{#1.}}, phantom={\hypertarget{#3}{}}, breakable, after={\par}, proofstyle, before upper app={\ptxsetparstyle} }
+%%
+%% tcolorbox, with styles, for DEFINITION-LIKE
+%%
+%% definition: fairly simple numbered block/structure
+\tcbset{ definitionstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxdiamond}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{definition}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, definitionstyle, }
+%%
+%% tcolorbox, with styles, for EXAMPLE-LIKE
+%%
+%% example: fairly simple numbered block/structure
+\tcbset{ examplestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, after upper={\space\space\hspace*{\stretch{1}}\ptxtriangle}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{example}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, examplestyle, }
+%%
+%% tcolorbox, with styles, for inline exercises
+%%
+%% inlineexercise: fairly simple numbered block/structure
+\tcbset{ inlineexercisestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{inlineexercise}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, inlineexercisestyle, }
+%%
+%% tcolorbox, with styles, for PROJECT-LIKE
+%%
+%% activity: fairly simple numbered block/structure
+\tcbset{ activitystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{activity}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, activitystyle, }
+%% project: fairly simple numbered block/structure
+\tcbset{ projectstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\ptxsetparstyle}, } }
+\newtcolorbox[use counter from=block]{project}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, projectstyle, }
+%%
+%% tcolorbox, with styles, for GOAL-LIKE
+%%
+%% objectives: early in a subdivision, introduction/list/conclusion
+\tcbset{ objectivesstyle/.style={bwminimalstyle, blockspacingstyle, fonttitle=\blocktitlefont\large\bfseries, toprule=0.1ex, toptitle=0.5ex, top=2ex, bottom=0.5ex, bottomrule=0.1ex} }
+\newtcolorbox{objectives}[2]{title={#1}, phantomlabel={#2}, breakable, objectivesstyle, before upper app={\ptxsetparstyle}}
+%%
+%% tcolorbox, with styles, for FIGURE-LIKE
+%%
+%% figureptx: 2-D display structure
+\tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
+%% tableptx: 2-D display structure
+\tcbset{ tableptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, coltitle=black, bottomtitle=2ex, titlerule=-0.3pt, fonttitle=\blocktitlefont, breakable} }
+\newtcolorbox[use counter from=block]{tableptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, tableptxstyle, }
+%%
+%% tcolorbox, with styles, for (PANEL)FIGURE-LIKE
+%%
+%% panelfigureptx: 2-D display structure
+\tcbset{ panelfigureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\newtcolorbox[use counter from=block]{panelfigureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, panelfigureptxstyle, }
+%%
+%% tcolorbox, with styles, for (SUB)FIGURE-LIKE
+%%
+%% subfigureptx: 2-D display structure
+\tcbset{ subfigureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
+\makeatletter
+\newtcolorbox[use counter from=subdisplay]{subfigureptx}[4]{lower separated=false, before lower={{\textbf{\StrSubstitute{\thetcbcounter}{\thetcb@cnt@block}{}}\space#2}}, phantomlabel={#3}, unbreakable, subfigureptxstyle, }
+\makeatother
+%%
+%% xparse environments for introductions and conclusions of divisions
+%%
+%% introduction: in a structured division
+\NewDocumentEnvironment{introduction}{m}
+{\notblank{#1}{\noindent\textbf{#1}\space}{}}{\par\medskip}
+%% conclusion: in a structured division
+\NewDocumentEnvironment{conclusion}{m}
+{\par\medskip\noindent\notblank{#1}{\textbf{#1}\space}{}}{}
+%%
+%% xparse environment for headnotes of list-like divisions
+%%
+%% headnote: prefatory note of a list-like division
+\NewDocumentEnvironment{headnote}{m}
+{\notblank{#1}{\noindent\textbf{#1}\space}{}}{\par\medskip}
+%%
+%% tcolorbox, with styles, for miscellaneous environments
+%%
+%% paragraphs: the terminal, pseudo-division
+%% We use the lowest LaTeX traditional division
+\titleformat{\subparagraph}[runin]{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{#1}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1em}
+\NewDocumentEnvironment{paragraphs}{mm}
+{\subparagraph*{#1}\hypertarget{#2}{}}{}
+%% Graphics Preamble Entries
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\usetikzlibrary{positioning}        % for Dave R's worksheet
+\usepackage{circuitikz}             % for Virgil P's worksheet
+\usepackage{nicematrix}             % for multi-run latex-image (label="latex-three-pass")
+\usepackage{siunitx}                % swim speeds in shark attack image
+\usepackage{qrcode}                 % QR code from a URL, placed in a TikZ picture
+%% If tikz has been loaded, replace ampersand with \amp macro
+\ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+%% tcolorbox styles for sidebyside layout
+\tcbset{ sbsstyle/.style={raster before skip=2.0ex, raster equal height=rows, raster force size=false, raster after skip=0.7\baselineskip} }
+\tcbset{ sbspanelstyle/.style={bwminimalstyle, fonttitle=\blocktitlefont, before upper app={\ptxsetparstyle}} }
+%% Enviroments for side-by-side and components
+%% Necessary to use \NewTColorBox for boxes of the panels
+%% "newfloat" environment to squash page-breaks within a single sidebyside
+%% "xparse" environment for entire sidebyside
+\NewDocumentEnvironment{sidebyside}{mmmm}
+  {\begin{tcbraster}
+    [sbsstyle,raster columns=#1,
+    raster left skip=#2\linewidth,raster right skip=#3\linewidth,raster column skip=#4\linewidth]}
+  {\end{tcbraster}}
+%% "tcolorbox" environment for a panel of sidebyside
+\NewTColorBox{sbspanel}{mO{top}}{sbspanelstyle,width=#1\linewidth,valign=#2}
+%% Custom Preamble Entries, late (use latex.preamble.late)
+%% Begin: Author-provided macros
+%% (From  docinfo/macros  element)
+%% Plus three from PTX for XML characters
+\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4} 
+\newcommand{\myequation}[2]{#1\amp =#2} 
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2}
+\newcommand{\testingescapedpercent}{ \% } 
+\newcommand{\bvec}{{\mathbf b}}
+\newcommand{\vvec}{{\mathbf v}}
+\newcommand{\class}[2][\sim]{\lbrack #2\rbrack_{#1}}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+%% End: Author-provided macros
+%% Title page information for article
+\title{Sample Worksheets\\
+{\large The printouts of the PreTeXt sample article}}
+\date{}
+\begin{document}
+%% bottom alignment is explicit, since it normally depends on oneside, twoside
+\raggedbottom
+%% Target for xref to top-level element is document start
+\hypertarget{sample-worksheets}{}
+\maketitle
+\thispagestyle{empty}
+%
+%
+\typeout{************************************************}
+\typeout{Section 1 Worksheets}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Worksheets}{}{Worksheets}{}{}{section-worksheets}
+\begin{introduction}{}%
+This is a section full of worksheets.  Each is a division of its own, via the \ptxmono{<worksheet>} element.  This is an optional \ptxmono{<introduction>} to the current \ptxmono{<section>}.  In practice you might want to rip out all the worksheets of an entire book and bundle them up as an \textquotedblleft{}activity book.\textquotedblright{}%
+\par
+If you make PDF output you will notice an increased amount of control over layout.  Also, if the publication file elects \LaTeX{} draft mode, then there will be visual indicators of prescribed whitespace.%
+\end{introduction}%
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.1 A Geometric Prelude (without authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{A Geometric Prelude (without authored pages)}{}{A Geometric Prelude (without authored pages)}{}{}{worksheet-geometric-prelude}
+\begin{objectives}{Objectives}{objectives}
+%
+\begin{itemize}[label=\ptxlistdisc]
+\item{}Practice visualizing vector addition%
+\item{}Use vectors without explicit coordinates%
+\end{itemize}
+\end{objectives}
+\begin{introduction}{}%
+This two-page worksheet was generously donated to the sample article by Dave Rosoff at a CuratedCourses workshop in August~2018.  It has the default (skinny) margins.%
+\par
+It was known to Euclid, and probably earlier, that the midpoints of the sides of any quadrilateral all lie in the same plane (even if the vertices of the quadrilateral do not). In fact, these midpoints are the vertices of a parallelogram, as pictured in \hyperref[figure-midpoints-of-quadrilateral]{Figure~{\xreffont\ref{figure-midpoints-of-quadrilateral}}}.%
+\begin{sidebyside}{3}{0.0166666666666667}{0.0166666666666667}{0.0333333333333333}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The midpoints of the sides of a quadrilateral are the vertices of a parallelogram.}{figure-midpoints-of-quadrilateral}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=0.8, yscale=0.8]
+ \draw[style={black, ultra thick}] (0,0) -- (5,0) -- (4,4) -- (2,5) -- (0,0);
+ \draw[style={black, dashed, very thick}] (2.5, 0) -- (4.5, 2) -- (3, 4.5) -- (1, 2.5) -- (2.5, 0);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The sides of a triangle presented as vectors.}{figure-triangle-cyclic-vectors}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  % \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+  %   {} -- (1.5,0) node[below right=0mm and 3mm] {$\vec{A}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+  %  {} -- (2,1) node[above left=5mm and 1mm] {$\vec{B}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+  %  {} -- (0.5,1) node[below left=1mm and 3mm] {$\vec{C}$};
+  %\node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  %\node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\par
+In this exercise, we'll use vectors to show that the medians of any triangle (\hyperref[figure-triangle-cyclic-vectors]{Figure~{\xreffont\ref{figure-triangle-cyclic-vectors}}}) intersect at a point. Recall that medians are the lines connecting the vertices of the triangle to the midpoints of their opposite edges, as in the figure. We'll do this in a few steps.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{4in}{ex-cyclic}%
+What is the value of \(\vec{A} + \vec{B} + \vec{C}\)?%
+\end{divisionexercise}%
+\hyperref[figure-triangle-cyclic-medians]{Figure~{\xreffont\ref{figure-triangle-cyclic-medians}}} from the previous page is reproduced for your convenience.%
+\begin{figureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-copy}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\end{image}%
+\tcblower
+\end{figureptx}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{2}{}{4.5in}{exercise-vector-addition}%
+Show that \(\vec{M}_{1} + \vec{M}_{2} + \vec{M}_{3} = 0\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercise-vector-addition-2}{}\quad{}Use \hyperlink{ex-cyclic}{Worksheet Exercise~{\xreffont 1.1.1}}.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.6}%
+\begin{divisionexercise}{3}{}{2in}{worksheet-geometric-prelude-7-2}%
+To show that the point \(P\) exists (as the common intersection of the \(\vec{M}_{i}\)), show that%
+\begin{equation*}
+\vec{A} + \frac{2}{3} \vec{M}_{3} = \frac{2}{3} \vec{M}_{2} = \fillinmath{\frac{2}{3} \vec{M}_{1}-\vec{C}}\text{.}
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{4}{}{2.54cm}{worksheet-geometric-prelude-8}%
+If you have time, try to devise a vector proof of Euclid's result presented at the beginning of the workshop. Recall that a \ptxterminology{parallelogram} is a four-sided polygon whose opposite sides are parallel.%
+\end{divisionexercise}%
+\begin{conclusion}{Wrap-up.}%
+It's possible to do interesting things with vector arithmetic in a coordinate-free way: we didn't specify an origin, or any entries of any vectors in the examples.%
+\end{conclusion}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.2 A Geometric Prelude (with authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{A Geometric Prelude (with authored pages)}{}{A Geometric Prelude (with authored pages)}{}{}{worksheet-geometric-prelude-pages}
+\begin{objectives}{Objectives}{objectives-pages}
+%
+\begin{itemize}[label=\ptxlistdisc]
+\item{}Practice visualizing vector addition%
+\item{}Use vectors without explicit coordinates%
+\end{itemize}
+\end{objectives}
+\begin{introduction}{}%
+This two-page worksheet was generously donated to the sample article by Dave Rosoff at a CuratedCourses workshop in August~2018.  It has the default (skinny) margins.%
+\par
+It was known to Euclid, and probably earlier, that the midpoints of the sides of any quadrilateral all lie in the same plane (even if the vertices of the quadrilateral do not). In fact, these midpoints are the vertices of a parallelogram, as pictured in \hyperref[figure-midpoints-of-quadrilateral]{Figure~{\xreffont\ref{figure-midpoints-of-quadrilateral}}}.%
+\begin{sidebyside}{3}{0.0166666666666667}{0.0166666666666667}{0.0333333333333333}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The midpoints of the sides of a quadrilateral are the vertices of a parallelogram.}{figure-midpoints-of-quadrilateral-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=0.8, yscale=0.8]
+ \draw[style={black, ultra thick}] (0,0) -- (5,0) -- (4,4) -- (2,5) -- (0,0);
+ \draw[style={black, dashed, very thick}] (2.5, 0) -- (4.5, 2) -- (3, 4.5) -- (1, 2.5) -- (2.5, 0);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The sides of a triangle presented as vectors.}{figure-triangle-cyclic-vectors-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  % \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+  %   {} -- (1.5,0) node[below right=0mm and 3mm] {$\vec{A}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+  %  {} -- (2,1) node[above left=5mm and 1mm] {$\vec{B}$};
+  %\draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+  %  {} -- (0.5,1) node[below left=1mm and 3mm] {$\vec{C}$};
+  %\node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  %\node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{panelfigureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-pages}{}%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\par
+In this exercise, we'll use vectors to show that the medians of any triangle (\hyperref[figure-triangle-cyclic-vectors]{Figure~{\xreffont\ref{figure-triangle-cyclic-vectors}}}) intersect at a point. Recall that medians are the lines connecting the vertices of the triangle to the midpoints of their opposite edges, as in the figure. We'll do this in a few steps.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{4in}{ex-cyclic-pages}%
+What is the value of \(\vec{A} + \vec{B} + \vec{C}\)?%
+\end{divisionexercise}%
+\clearpage
+\hyperref[figure-triangle-cyclic-medians]{Figure~{\xreffont\ref{figure-triangle-cyclic-medians}}} from the previous page is reproduced for your convenience.%
+\begin{figureptx}{Figure}{The medians of the triangle are \(\vec{M}_1\), \(\vec{M}_2\), and \(\vec{M}_3\).}{figure-triangle-cyclic-medians-copy-pages}{}%
+\begin{image}{0.25}{0.5}{0.25}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[xscale=1.5, yscale=1.5]
+  \draw[->,>=latex, style={black, thick}] (0,0) -- (2.30 , 0) node [below] {$\vec{A}$} --  (3,0);
+  \draw[->,>=latex, style={black, thick}] (3,0) -- (1.47, 1.53) node [above right =1mm] {$\vec{B}$} -- (1,2);
+  \draw[->,>=latex, style={black, thick}] (1,2) -- (0.23 , 0.46) node [above left=1mm] {$\vec{C}$} -- (0,0);
+  \draw[->,>=latex, style={black,semithick,dashed}] (1,2) -- (7/6, 4/3) node
+    {$\vec{M}_{1}$} -- (1.5,0);% node[below right=0mm and 3mm] {$\vec{A}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (0,0) -- (2/3, 1/3) node
+   {$\vec{M}_{2}$} -- (2,1);% node[above left=5mm and 1mm] {$\vec{B}$};
+  \draw[->,>=latex, style={black,semithick,dashed}] (3,0) -- (13/6,1/3) node
+   {$\vec{M}_{3}$} -- (0.5,1);% node[below left=1mm and 3mm] {$\vec{C}$};
+  \node[draw,shape=circle,fill=black,name=P,scale=0.5] at (4/3,2/3) {};
+  \node[above right=1.2mm and -0.5mm of P] at (4/3,2/3) {$P$};
+  % \node {$P$} (1.3333,0.6667);
+\end{tikzpicture}%
+}%
+\end{image}%
+\tcblower
+\end{figureptx}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{2}{}{4.5in}{exercise-vector-addition-pages}%
+Show that \(\vec{M}_{1} + \vec{M}_{2} + \vec{M}_{3} = 0\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercise-vector-addition-pages-2}{}\quad{}Use \hyperlink{ex-cyclic}{Worksheet Exercise~{\xreffont 1.1.1}}.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.6}%
+\begin{divisionexercise}{3}{}{2in}{worksheet-geometric-prelude-pages-5-3-2}%
+To show that the point \(P\) exists (as the common intersection of the \(\vec{M}_{i}\)), show that%
+\begin{equation*}
+\vec{A} + \frac{2}{3} \vec{M}_{3} = \frac{2}{3} \vec{M}_{2} = \fillinmath{\frac{2}{3} \vec{M}_{1}-\vec{C}}\text{.}
+\end{equation*}
+%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{4}{}{2.54cm}{worksheet-geometric-prelude-pages-5-4}%
+If you have time, try to devise a vector proof of Euclid's result presented at the beginning of the workshop. Recall that a \ptxterminology{parallelogram} is a four-sided polygon whose opposite sides are parallel.%
+\end{divisionexercise}%
+\begin{conclusion}{Wrap-up.}%
+It's possible to do interesting things with vector arithmetic in a coordinate-free way: we didn't specify an origin, or any entries of any vectors in the examples.%
+\end{conclusion}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.3 Networks Worksheet (no authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=3cm, bottom=1.2in}
+\begin{worksheet-subsection}{Worksheet}{Networks Worksheet (no authored pages)}{}{Networks Worksheet (no authored pages)}{}{}{worksheet-networks}
+\begin{introduction}{Basic laws for electrical circuits.}%
+This two-page worksheet was generously donated to the sample article by Virgil Pierce at a CuratedCourses workshop in August~2018.  It has default (skinny) left and right margins, but we have specified longer top and bottom margins, with the top being the larger of the two.%
+\begin{theorem}{Theorem}{Ohms Law.}{}{worksheet-networks-2-3}%
+The current through a resistor is proportional to the ratio of the \emph{Voltage} to the \emph{Resistance}%
+\begin{equation*}
+I = \frac{V}{R} 
+\end{equation*}
+Or for our purposes%
+\begin{equation*}
+I R = V 
+\end{equation*}
+%
+\end{theorem}
+\begin{theorem}{Theorem}{Kirchoffs Current Law.}{}{worksheet-networks-2-4}%
+The sum of the currents in a network meeting at a point is zero.%
+\begin{equation*}
+\sum_{k=1}^n I_k = 0 
+\end{equation*}
+%
+\end{theorem}
+\begin{example}{Example}{Kirchoff's Current Law.}{worksheet-networks-2-5}%
+For the circuit below \(I_1 + I_2 = I_3 \).%
+\begin{image}{0.3}{0.4}{0.3}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[R, i=$I_1$, *-o](2,2);
+\draw (0,0)
+to[R, i=$I_2$, *-o](2,-2);
+\draw (-3, 0)
+to[R, i=$I_3$, o-*](0,0);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{example}
+\begin{theorem}{Theorem}{Kirchoffs Voltage Law.}{}{worksheet-networks-2-6}%
+The sum of the voltages around any closed circuit (or subcircuit) is zero.%
+\begin{equation*}
+\sum_{k=1}^n V_k = 0 
+\end{equation*}
+%
+\end{theorem}
+Kirchoffs Current Law and Kirkoffs Voltage Law combined with Ohms Law gives for any circuit of resistors and sources a linear system that may (or may not) determine the currents.%
+\end{introduction}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{1}{}{1.5in}{worksheet-networks-3-1}%
+For the simple network pictured, calculuate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](2,3)
+to[R, R=$4\quad \mbox{ohm}$] (3, 3)
+to[short](4,3)
+to[R, R=$3\quad \mbox{ohm}$](4,0)
+to[short](3,0)
+to[R, R=$3\quad \mbox{ohm}$](2,0)
+to[short](0,0);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{2}{}{2in}{worksheet-networks-3-2}%
+Compare it with a parallel circuit network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4\quad \mbox{ohm}$](6,3)
+to[short](7,3)
+to[R, R=$3\quad \mbox{ohm}$](7,0)
+to[short](6,0)
+to[R, R=$3\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{3}{}{1in}{worksheet-networks-4}%
+Now for a more complicated network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\begin{image}{0}{1}{0}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11 \quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4 \quad \mbox{ohm}$](6,3)
+to[short](9,3)
+to[R, R=$4 \quad \mbox{ohm}$](10,3)
+to[short](11,3)
+to[R, R=$3 \quad \mbox{ohm}$](11, 0)
+to[short](10,0)
+to[R, R=$2\quad \mbox{ohm}$](9,0)
+to[short](6,0)
+to[R, R=$2\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\draw(8,0)
+to[R, R=$1\quad \mbox{ohm}$](8,3);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{3in}{worksheet-networks-5}%
+Now generalize these ideas to a context outside of electrical circuits. Consider the network of streets given in the diagram (with one-way directions as indicated).%
+\begin{image}{0.175}{0.65}{0.175}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[>=stealth]
+\draw[->, very thick] (0,0) -- (10, 0) node[midway, below]{East Bound Winooski Ave};
+\draw[<-, very thick] (0, 1) -- (10, 1) node[midway, above]{West Bound Winooski Ave};
+    \draw[<-, very thick] (0, 4) -- (10, 4) node[midway, above]{Shelburne St};
+    \draw[<-, very thick] (1, -1) -- (1, 5) node[midway, above, sloped]{Willow};
+    \draw[->, very thick] (9, -1) -- (9, 5) node[midway, above, sloped]{Jay};
+    \end{tikzpicture}%
+}%
+\end{image}%
+A traffic engineer counts the hourly flow of cars into and out of this network at the entrances.  They get (EB = East Bound; WB = West Bound):%
+\begin{tableptx}{Table}{\textbf{Estimated hourly traffic flow for the road network}}{worksheet-networks-5-1-4}{}%
+\centering%
+{\tabularfont%
+\begin{tabular}{cccccc}
+{\bfseries{}}&{\bfseries{}EB Winooski}&{\bfseries{}WB Winooski}&{\bfseries{}Shelburne St}&{\bfseries{}Willow}&{\bfseries{}Jay}\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}into}}&50&400&0&10&50\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}out of}}&55&390&20&15&30
+\end{tabular}
+}%
+\end{tableptx}%
+Use a variable for each segment inside of the network and set up a system of linear equations restricting the flow. Solve the system.  Note that you should not get a unique solution as traffic should be able to flow through the network in various ways.%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.4 Networks Worksheet (with authored pages)}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=3cm, bottom=1.2in}
+\begin{worksheet-subsection}{Worksheet}{Networks Worksheet (with authored pages)}{}{Networks Worksheet (with authored pages)}{}{}{worksheet-networks-pages}
+\begin{introduction}{Basic laws for electrical circuits.}%
+This two-page worksheet was generously donated to the sample article by Virgil Pierce at a CuratedCourses workshop in August~2018.  It has default (skinny) left and right margins, but we have specified longer top and bottom margins, with the top being the larger of the two.%
+\begin{theorem}{Theorem}{Ohms Law.}{}{worksheet-networks-pages-2-3}%
+The current through a resistor is proportional to the ratio of the \emph{Voltage} to the \emph{Resistance}%
+\begin{equation*}
+I = \frac{V}{R} 
+\end{equation*}
+Or for our purposes%
+\begin{equation*}
+I R = V 
+\end{equation*}
+%
+\end{theorem}
+\begin{theorem}{Theorem}{Kirchoffs Current Law.}{}{worksheet-networks-pages-2-4}%
+The sum of the currents in a network meeting at a point is zero.%
+\begin{equation*}
+\sum_{k=1}^n I_k = 0 
+\end{equation*}
+%
+\end{theorem}
+\begin{example}{Example}{Kirchoff's Current Law.}{worksheet-networks-pages-2-5}%
+For the circuit below \(I_1 + I_2 = I_3 \).%
+\begin{image}{0.3}{0.4}{0.3}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[R, i=$I_1$, *-o](2,2);
+\draw (0,0)
+to[R, i=$I_2$, *-o](2,-2);
+\draw (-3, 0)
+to[R, i=$I_3$, o-*](0,0);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{example}
+\begin{theorem}{Theorem}{Kirchoffs Voltage Law.}{}{worksheet-networks-pages-2-6}%
+The sum of the voltages around any closed circuit (or subcircuit) is zero.%
+\begin{equation*}
+\sum_{k=1}^n V_k = 0 
+\end{equation*}
+%
+\end{theorem}
+Kirchoffs Current Law and Kirkoffs Voltage Law combined with Ohms Law gives for any circuit of resistors and sources a linear system that may (or may not) determine the currents.%
+\end{introduction}%
+\clearpage
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{1}{}{1.5in}{worksheet-networks-pages-4-1-1}%
+For the simple network pictured, calculuate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw (0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](2,3)
+to[R, R=$4\quad \mbox{ohm}$] (3, 3)
+to[short](4,3)
+to[R, R=$3\quad \mbox{ohm}$](4,0)
+to[short](3,0)
+to[R, R=$3\quad \mbox{ohm}$](2,0)
+to[short](0,0);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{2}{}{2in}{worksheet-networks-pages-4-1-2}%
+Compare it with a parallel circuit network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\noindent\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11\quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4\quad \mbox{ohm}$](6,3)
+to[short](7,3)
+to[R, R=$3\quad \mbox{ohm}$](7,0)
+to[short](6,0)
+to[R, R=$3\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\end{circuitikz}%
+}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{divisionexercise}{3}{}{1in}{worksheet-networks-pages-4-2}%
+Now for a more complicated network. Calculate the amperage in each part of the network by setting up a system of linear equations for the amperages.%
+\begin{image}{0}{1}{0}{}%
+\resizebox{\linewidth}{!}{%
+\begin{circuitikz}
+\draw(0,0)
+to[V, v=$11 \quad \mbox{volt}$](0, 3)
+to[short](5,3)
+to[R, R=$4 \quad \mbox{ohm}$](6,3)
+to[short](9,3)
+to[R, R=$4 \quad \mbox{ohm}$](10,3)
+to[short](11,3)
+to[R, R=$3 \quad \mbox{ohm}$](11, 0)
+to[short](10,0)
+to[R, R=$2\quad \mbox{ohm}$](9,0)
+to[short](6,0)
+to[R, R=$2\quad \mbox{ohm}$](5,0)
+to[short](0,0);
+\draw(4,0)
+to[R, R=$3\quad \mbox{ohm}$](4,3);
+\draw(8,0)
+to[R, R=$1\quad \mbox{ohm}$](8,3);
+\end{circuitikz}%
+}%
+\end{image}%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{3in}{worksheet-networks-pages-5-1}%
+Now generalize these ideas to a context outside of electrical circuits. Consider the network of streets given in the diagram (with one-way directions as indicated).%
+\begin{image}{0.175}{0.65}{0.175}{}%
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[>=stealth]
+\draw[->, very thick] (0,0) -- (10, 0) node[midway, below]{East Bound Winooski Ave};
+\draw[<-, very thick] (0, 1) -- (10, 1) node[midway, above]{West Bound Winooski Ave};
+    \draw[<-, very thick] (0, 4) -- (10, 4) node[midway, above]{Shelburne St};
+    \draw[<-, very thick] (1, -1) -- (1, 5) node[midway, above, sloped]{Willow};
+    \draw[->, very thick] (9, -1) -- (9, 5) node[midway, above, sloped]{Jay};
+    \end{tikzpicture}%
+}%
+\end{image}%
+A traffic engineer counts the hourly flow of cars into and out of this network at the entrances.  They get (EB = East Bound; WB = West Bound):%
+\begin{tableptx}{Table}{\textbf{Estimated hourly traffic flow for the road network}}{worksheet-networks-pages-5-1-1-4}{}%
+\centering%
+{\tabularfont%
+\begin{tabular}{cccccc}
+{\bfseries{}}&{\bfseries{}EB Winooski}&{\bfseries{}WB Winooski}&{\bfseries{}Shelburne St}&{\bfseries{}Willow}&{\bfseries{}Jay}\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}into}}&50&400&0&10&50\tabularnewline[0pt]
+\multicolumn{1}{l}{{\bfseries{}out of}}&55&390&20&15&30
+\end{tabular}
+}%
+\end{tableptx}%
+Use a variable for each segment inside of the network and set up a system of linear equations restricting the flow. Solve the system.  Note that you should not get a unique solution as traffic should be able to flow through the network in various ways.%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.5 Worksheet}
+\typeout{************************************************}
+%
+\newgeometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+\begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-testing}
+\begin{introduction}{}%
+This is a mock one-page worksheet for testing purposes. We have specified an overall margin just slightly less than the default.%
+\end{introduction}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{1}{}{1in}{worksheet-testing-2-1}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{2}{}{1in}{worksheet-testing-2-2}%
+Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{worksheet-testing-2-2-2}{}\quad{}This is a hint.  You can hide it in the print preview before printing.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{worksheet-testing-2-2-3}{}\quad{}Here is an answer.  Also hidable.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{worksheet-testing-2-2-4}{}\quad{}This is a rather long solution.  When you hide or show it in the print preview, the workspace should be adjusted (the page will reload).%
+\par
+Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\par
+A two-line paragraph interspersed to check on spacing, breaks and all that.%
+\begin{divisionexercise}{3}{A full-width exercise.}{1.5in}{worksheet-testing-4}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\par
+Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{worksheet-testing-4-3}{}\quad{}This is a sample solution for a full-width exercise.  Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\end{divisionexercise}%
+Another two-line paragraph interspersed to check on spacing, breaks and all that.%
+\begin{sidebyside}{3}{0}{0}{0.05}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{4}{}{}{worksheet-testing-6-1}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{5}{}{0.5in}{worksheet-testing-6-2}%
+Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.3}%
+\begin{divisionexercise}{6}{}{1in}{worksheet-testing-6-3}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{activity}{Activity}{A Mock Activity.}{worksheet-testing-7}%
+The problem, as we see it.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{worksheet-testing-7-3}{}\quad{}A worksheet could have hints, no?  But no spacing. Note row below has widths set to balance the heights.%
+\end{activity}%
+\begin{sidebyside}{3}{0}{0}{0.05}%
+\begin{sbspanel}{0.25}%
+\begin{divisionexercise}{7}{}{0.5in}{worksheet-testing-8-1}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.4}%
+\begin{divisionexercise}{8}{}{0.5in}{worksheet-testing-8-2}%
+Integer sagittis dictum turpis vel aliquet. Fusce ut suscipit dolor, nec tristique nisl. Aenean luctus, leo et ornare fermentum, nibh dui vulputate leo, nec tincidunt augue ipsum sed odio. Nunc non erat sollicitudin, iaculis eros consequat, dapibus eros.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.25}%
+\begin{divisionexercise}{9}{}{0.5in}{worksheet-testing-8-3}%
+Praesent rutrum scelerisque felis sit amet adipiscing. Phasellus in mollis velit. Nunc malesuada felis sit amet massa cursus, eget elementum neque viverra.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.6 Dot products and projection}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Dot products and projection}{}{Dot products and projection}{}{}{worksheet-dot-products}
+\begin{savenotes}%
+\begin{sidebyside}{2}{0}{0}{0.1}%
+\begin{sbspanel}{0.45}%
+\begin{divisionexercise}{1}{}{}{worksheet-dot-products-2-1}%
+Let \({\vec v}_1 = (-4,1)\), \({\vec v}_2 = (2,2)\), \({\vec v}_3 = (1,2,3)\), \({\vec v}_4 = (-2,1,0)\). Find the values of the following expressions:%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}\({\vec v}_1 \cdot {\vec v}_2 = \fillinmath{XXX}\)%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\item{}\({\vec v}_3 \cdot {\vec v}_4 = \fillinmath{XXX}\)%
+\par\rule{\ptxworkspacestrutwidth}{1.0in}%
+\item{}\(\lVert{\vec v}_1\rVert = \fillinmath{XXX}\)%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\item{}\(\lVert{\vec v}_4\rVert = \fillinmath{XXX}\)%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\item{}Are any of these vectors perpendicular to each other? \ptxfillintext{10}%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{enumerate}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.45}%
+\begin{savenotes}%
+\begin{divisionexercise}{2}{}{3in}{worksheet-dot-products-2-2}%
+The vectors \(\vec a = (3,9)\) and \(\vec b = (4,2)\) are pictured below.  Derive the formula for projection on a line and use it to find the projection of \(\vec a\) on the line spanned by \(\vec u\). Also compute the length of the residual vector.\footnote{Here is a footnote.\label{worksheet-dot-products-2-2-1-1-5}}%
+\begin{figureptx}{Figure}{Two vectors \(\vec a\) and \(\vec b\).}{prefigure-vectors}{}%
+\noindent\includegraphics[width=\linewidth]{generated/prefigure/prefigure-worksheet-vectors.pdf}%
+\tcblower
+\end{figureptx}%
+\end{divisionexercise}%
+\end{savenotes}%
+\end{sbspanel}%
+\end{sidebyside}%
+\end{savenotes}%
+\begin{savenotes}%
+\begin{sidebyside}{2}{0}{0}{0.04}%
+\begin{sbspanel}{0.48}%
+\begin{divisionexercise}{3}{}{}{worksheet-dot-products-3-1}%
+Consider the vector equation%
+\begin{equation*}
+m \begin{bmatrix}2 \\ 5\end{bmatrix} = \begin{bmatrix}3 \\ 7\end{bmatrix}\text{.}
+\end{equation*}
+%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}Check that there is no solution \(m\) that makes the equation true.%
+\par\rule{\ptxworkspacestrutwidth}{1.25in}%
+\item{}Use projection to find the best approximation \(\hat m\).%
+\par\rule{\ptxworkspacestrutwidth}{1.25in}%
+\item{}Compute \(\hat m \begin{bmatrix}2 \\ 5\end{bmatrix} \).%
+\par\rule{\ptxworkspacestrutwidth}{1.25in}%
+\item{}Compute the residual vector.%
+\par\rule{\ptxworkspacestrutwidth}{1.25in}%
+\item{}Compute the length of the residual vector and explain what it means.%
+\par\rule{\ptxworkspacestrutwidth}{1.25in}%
+\end{enumerate}%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.48}%
+\begin{savenotes}%
+\begin{divisionexercise}{4}{}{}{worksheet-dot-products-3-2}%
+Consider the system of equations%
+\begin{align*}
+3t \amp =5\\
+2t \amp = 9 \text{.}
+\end{align*}
+%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}Write the system in vector form.\footnote{Another footnote\label{worksheet-dot-products-3-2-2-1-1}}%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\item{}Find the best estimate, \(\hat t\), of \(t\) using projection.%
+\par\rule{\ptxworkspacestrutwidth}{3.9in}%
+\item{}Compute the length of the residual vector.%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\end{enumerate}%
+\end{divisionexercise}%
+\end{savenotes}%
+\end{sbspanel}%
+\end{sidebyside}%
+\end{savenotes}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.7 Worksheet}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-activity-no-task}
+\begin{activity}{Activity}{}{worksheet-activity-no-task-1}%
+Just a simple activity here.%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{activity}%
+\begin{activity}{Activity}{}{worksheet-activity-no-task-2}%
+Here is a second activity.%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{activity}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.8 Worksheet}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-activity-with-task}
+\begin{activity}{Activity}{}{worksheet-activity-with-task-1}%
+This is going to be an activity with tasks.%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}Here is the first task.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{worksheet-activity-with-task-1-2-2}{}\quad{}Here is a solution for the first task.  It should get indented the same amount as the task.%
+\par\rule{\ptxworkspacestrutwidth}{0.75in}%
+\item{}Here is the second task.%
+\par\rule{\ptxworkspacestrutwidth}{0.25in}%
+\item{}Here is the third task.%
+\par\rule{\ptxworkspacestrutwidth}{1.75in}%
+\end{enumerate}%
+This is a conclusion that comes after the last task.%
+\end{activity}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.9 Worksheet}
+\typeout{************************************************}
+%
+\newgeometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+\begin{worksheet-subsection}{Worksheet}{Worksheet}{}{Worksheet}{}{}{worksheet-workspace}
+\begin{introduction}{}%
+This is a mock worksheet for testing the use of \ptxmono{@workspace} on an \ptxmono{<exercise>} in a worksheet.%
+\end{introduction}%
+Do things to the following.%
+\begin{divisionexercise}{1}{}{1in}{worksheet-workspace-3}%
+Apple%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{1in}{worksheet-workspace-4}%
+Banana%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{1in}{worksheet-workspace-5}%
+Cherry%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{1in}{worksheet-workspace-6}%
+Durian%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{2in}{worksheet-workspace-7}%
+Elderberry (with workspace override)%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{1in}{worksheet-workspace-8}%
+Fig%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{1in}{worksheet-workspace-9}%
+Guava%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{}{1in}{worksheet-workspace-10}%
+Habanero%
+\end{divisionexercise}%
+\begin{divisionexercise}{9}{}{1in}{worksheet-workspace-11}%
+I can't think of an \textquotedblleft{}I\textquotedblright{} fruit.%
+\end{divisionexercise}%
+\begin{divisionexercise}{10}{}{1in}{worksheet-workspace-12}%
+Jackfruit%
+\end{divisionexercise}%
+Now, do things to the following, again.%
+\begin{divisionexercise}{11}{}{0.25in}{worksheet-workspace-14}%
+Apple%
+\end{divisionexercise}%
+\begin{divisionexercise}{12}{}{0.25in}{worksheet-workspace-15}%
+Banana%
+\end{divisionexercise}%
+\begin{divisionexercise}{13}{}{0.25in}{worksheet-workspace-16}%
+Cherry%
+\end{divisionexercise}%
+\begin{divisionexercise}{14}{}{0.25in}{worksheet-workspace-17}%
+Durian%
+\end{divisionexercise}%
+\begin{divisionexercise}{15}{}{2in}{worksheet-workspace-18}%
+Elderberry (with workspace override)%
+\end{divisionexercise}%
+\begin{divisionexercise}{16}{}{0.25in}{worksheet-workspace-19}%
+Fig%
+\end{divisionexercise}%
+\begin{divisionexercise}{17}{}{0.25in}{worksheet-workspace-20}%
+Guava%
+\end{divisionexercise}%
+\begin{divisionexercise}{18}{}{0.25in}{worksheet-workspace-21}%
+Habanero%
+\end{divisionexercise}%
+\begin{divisionexercise}{19}{}{0.25in}{worksheet-workspace-22}%
+I can't think of an \textquotedblleft{}I\textquotedblright{} fruit.%
+\end{divisionexercise}%
+\begin{divisionexercise}{20}{}{0.25in}{worksheet-workspace-23}%
+Jackfruit%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.10 Worksheet with an exercise with tasks and subtasks}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet with an exercise with tasks and subtasks}{}{Worksheet with an exercise with tasks and subtasks}{}{}{section-worksheets-12}
+\begin{introduction}{}%
+Page breaking between tasks in a single exercise can be tricky.  This is a test for that.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{}{section-worksheets-12-3}%
+Here are multiple tasks with just enough workspace to cause a page break after the third one.%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}This task has two short subtasks that should be indented under it.%
+\begin{enumerate}[font=\bfseries,label=(\roman*),ref=\theenumi.\roman*]%
+\item{}The first subtask.%
+\par\rule{\ptxworkspacestrutwidth}{.5in}%
+\item{}The second subtask.%
+\par\rule{\ptxworkspacestrutwidth}{.5in}%
+\end{enumerate}%
+Conclusion for the first task.%
+\item{}The second task.%
+\par\rule{\ptxworkspacestrutwidth}{1.5in}%
+\item{}The third task.%
+\par\rule{\ptxworkspacestrutwidth}{1.5in}%
+\item{}The fourth task.%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\end{enumerate}%
+Conclusion for the entire exercise.%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{3in}{section-worksheets-12-4}%
+An exercise without any tasks but some workspace.%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 1.11 Worksheet with \ptxmono{<paragraphs>}}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet with \ptxmono{<paragraphs>}}{}{Worksheet with \ptxmono{<paragraphs>}}{}{}{section-worksheets-13}
+\begin{introduction}{}%
+This is a test of the \ptxmono{<paragraphs>} element within a worksheet.  It should be able to contain exercises that have workspace, and we should be able to insert page breaks even inside of paragraphs.%
+\end{introduction}%
+\begin{paragraphs}{Warm up.}{section-worksheets-13-3}%
+\begin{inlineexercise}{1}{}{1in}{section-worksheets-13-3-2}%
+This is a warm-up exercise.  It should have a small workspace and be on the first page of the worksheet.%
+\end{inlineexercise}%
+\end{paragraphs}%
+\begin{paragraphs}{More exercises.}{section-worksheets-13-4}%
+\begin{inlineexercise}{2}{}{2in}{section-worksheets-13-4-2}%
+This is a second exercise.  It should have a larger workspace and be on the second page of the worksheet.%
+\end{inlineexercise}%
+\begin{inlineexercise}{3}{}{}{section-worksheets-13-4-3}%
+This is a third exercise with some tasks.  The workspace should be such that there will be a page break between tasks.%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item{}Do the first thing.%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\item{}Do the second thing.%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\item{}Do the third thing.%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\end{enumerate}%
+\end{inlineexercise}%
+\end{paragraphs}%
+\begin{paragraphs}{A third division.}{section-worksheets-13-5}%
+This is a paragraph that starts the third \ptxmono{<paragraphs>} division.%
+\begin{sidebyside}{2}{0}{0}{0}%
+\begin{sbspanel}{0.5}%
+\begin{divisionexercise}{4}{}{1in}{section-worksheets-13-5-3-1}%
+This is an exercise in the third paragraphs division inside a side-by-side.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\begin{sbspanel}{0.5}%
+\begin{divisionexercise}{5}{}{2in}{section-worksheets-13-5-3-2}%
+This is a second exercise in the third paragraphs division.  It should have a larger workspace and be on the fourth page of the worksheet.%
+\end{divisionexercise}%
+\end{sbspanel}%
+\end{sidebyside}%
+\begin{inlineexercise}{6}{}{2in}{section-worksheets-13-5-4}%
+This is a third exercise in the third paragraphs division.  It should have a larger workspace and be on the fifth page of the worksheet.%
+\end{inlineexercise}%
+\end{paragraphs}%
+\end{worksheet-subsection}
+\restoregeometry
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Section 2 Handouts}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Handouts}{}{Handouts}{}{}{section-handouts}
+\begin{introduction}{}%
+Like worksheets, a \ptxterminology{handout} is a division that is inteded to be printed for use in a classroom. In HTML output, you get the same print preview and page layout as you do with worksheets; in PDF, these will start on a new page with possibly different margins than the rest of the document.%
+\par
+Unlike worksheets, handouts do not have a special class of exercises or activities (exercises in a handout are treated like an \emph{inline} exercise). The other main distinction is that a handout lets workspace be specified on pretty much any block or paragraph element, not just exercises, tasks, and project-like elements.  This allows them to be used in the creation of guided notes containing some premade content with lots of space for students to fill in details during class.%
+\end{introduction}%
+%
+%
+\typeout{************************************************}
+\typeout{Handout 2.1 Derivative Rules}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{handout-subsection}{Handout}{Derivative Rules}{}{Derivative Rules}{}{}{handout-derivative-rules}
+\begin{paragraphs}{Rules for specific types of functions.}{handout-derivative-rules-2-1}%
+%
+\begin{descriptionlist}
+\begin{dlimedium}{Constant functions}{handout-derivative-rules-2-1-2-1-1}%
+\(\displaystyle (k)' = 0\)%
+\end{dlimedium}%
+\begin{dlimedium}{Power functions}{handout-derivative-rules-2-1-2-1-2}%
+\(\displaystyle (x^{n})' = nx^{n-1}\)%
+\end{dlimedium}%
+\begin{dlimedium}{Exponential functions}{handout-derivative-rules-2-1-2-1-3}%
+\((a^{x})' = \ln(a) a^{x} \text{ (for } a>0\text{)}\)%
+\par
+\((e^{x})' = e^{x}\)%
+\end{dlimedium}%
+\begin{dlimedium}{Logarithmic functions}{handout-derivative-rules-2-1-2-1-4}%
+\(\displaystyle (\ln(x))' = \frac{1}{x}\)%
+\end{dlimedium}%
+\begin{dlimedium}{Trigonometric functions}{handout-derivative-rules-2-1-2-1-5}%
+\((\sin(x))' = \cos(x)\).%
+\par
+\((\cos(x))' = -\sin(x)\).%
+\par
+\((\tan(x))' = \sec^{2}(x) = \frac{1}{\cos^{2}(x)}\).%
+\par
+\((\arcsin(x))' = \frac{1}{\sqrt{1-x^{2}}}\).%
+\par
+\((\arctan(x))' = \frac{1}{1+x^{2}}\).%
+\end{dlimedium}%
+\end{descriptionlist}
+%
+\end{paragraphs}%
+\begin{paragraphs}{Rules for combinations of functions.}{handout-derivative-rules-2-2}%
+%
+\begin{descriptionlist}
+\begin{dlimedium}{Constant multiples}{handout-derivative-rules-2-2-2-1-1}%
+\(\displaystyle (k\cdot f(x))' = k\cdot f'(x)\)%
+\end{dlimedium}%
+\begin{dlimedium}{Sum and difference}{handout-derivative-rules-2-2-2-1-2}%
+\(\displaystyle (f(x) \pm g(x))' = f'(x) \pm g'(x)\)%
+\end{dlimedium}%
+\begin{dlimedium}{Products (the product rule)}{handout-derivative-rules-2-2-2-1-3}%
+\(\displaystyle (f(x)\cdot g(x))' = f'(x)g(x) + f(x)g'(x)\)%
+\end{dlimedium}%
+\begin{dlimedium}{Quotients (the quotient rule)}{handout-derivative-rules-2-2-2-1-4}%
+\(\displaystyle \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^{2}}\)%
+\end{dlimedium}%
+\begin{dlimedium}{Compositions (the chain rule)}{handout-derivative-rules-2-2-2-1-5}%
+\(\displaystyle (f(g(x)))' = f'(g(x))\cdot g'(x)\)%
+\end{dlimedium}%
+\end{descriptionlist}
+%
+\end{paragraphs}%
+\end{handout-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Handout 2.2 Guided Notes: Derivatives of sums}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{handout-subsection}{Handout}{Guided Notes: Derivatives of sums}{}{Guided Notes: Derivatives of sums}{}{}{section-handouts-4}
+Today we will explore how to take the derivative of the sum of two functions.  For example, if%
+\begin{equation*}
+f(x) = x^2 + 3x\text{,}
+\end{equation*}
+what is \(f'(x)\)?  What two functions is this the sum of?  What are the derivatives of each of those functions?%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\par
+To be sure of the derivative of the sum, we should use the definition of the derivative.%
+\begin{definition}{Definition}{Definition of the Derivative.}{section-handouts-4-2-3}%
+The derivative of a function \(f(x)\) at any point \(x\) is defined as...%
+\par\rule{\ptxworkspacestrutwidth}{.75in}%
+\end{definition}
+Now let's apply this definition to the function \(f(x) = x^2 + 3x\). We have:%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\par
+What should the general rule be?%
+\par\rule{\ptxworkspacestrutwidth}{0.25in}%
+\clearpage
+\begin{theorem}{Theorem}{}{}{section-handouts-4-3-1}%
+For any two differentiable functions \(f(x)\) and \(g(x)\), the derivative of their sum \(h(x) = f(x) + g(x)\) is given by:%
+\par\rule{\ptxworkspacestrutwidth}{0.5in}%
+\end{theorem}
+\begin{proof}{Proof}{}{section-handouts-4-3-1-2}
+Let \(f(x)\) and \(g(x)\) be differentiable functions and let \(h(x) = f(x) + g(x)\).  Then by the limit definition of the derivative,%
+\par\rule{\ptxworkspacestrutwidth}{3in}%
+\end{proof}
+\begin{example}{Example}{}{section-handouts-4-3-2}%
+Find the derivative of \(f(x) = x^5 + e^x\).%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{example}
+\begin{example}{Example}{}{section-handouts-4-3-3}%
+Find the derivative of \(f(x) = \sqrt{x} + x^3 + 7x\).%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{example}
+\begin{example}{Example}{}{section-handouts-4-3-4}%
+Find the derivative of \(f(x) = 5x^4\).%
+\par\rule{\ptxworkspacestrutwidth}{1in}%
+\end{example}
+\end{handout-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Handout 2.3 A handout with a long list}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{handout-subsection}{Handout}{A handout with a long list}{}{A handout with a long list}{}{}{section-handouts-5}
+It is common for a handout, especially a set of lecture notes, to consist of a long list of bullets, possibly more than would fit on a page.  This handout should test that such a handout can have its items split between pages even if they belong to the same paragraph.%
+\begin{itemize}[label=\ptxlistdisc]
+\item{}This is the first item in a long list.  It should be on the first page of the handout.%
+\item{}This is the second item in a long list.  It should be on the first page of the handout.%
+\item{}This is the third item in a long list.  It should be on the second page of the handout.%
+\par
+Maybe we have a second paragraph in the same list item.  This is really just to help fill up space.  Maybe I should have used some of that standard space filler, but I'm just typing now because I can't remember what is call.%
+\item{}I suppose I could just start copy\slash{}pasting now.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\footnote{A late footnote\label{section-handouts-5-2-1-9-1-1}} Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.%
+\item{}See, I figured it out!%
+\end{itemize}
+And that's the end of the list.  Did this go onto a second page?%
+\end{handout-subsection}
+\restoregeometry
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Section 3 Projects as Printouts}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Projects as Printouts}{}{Projects as Printouts}{}{}{section-standalone-project-printouts}
+A project-like element outside of any worksheet or handout may still carry \ptxmono{workspace}, on itself or on its tasks. When it does, HTML output gives it the same print preview icon a worksheet gets, and previewing it lays out just that project across pages with the workspace expanded to fill them. In PDF such a project is typeset as an ordinary block, with no extra room.%
+\par
+The third project below has no \ptxmono{workspace} anywhere, so it gets no icon.%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{project}{Project}{A Project With Workspace On Its Tasks.}{project-printout-tasks}%
+Show all of your reasoning in the space provided.%
+\begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
+\item\label{project-printout-task-first}Find the derivative of \(f(x) = x^2\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{project-printout-task-first-2}{}\quad{}Use the power rule.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{project-printout-task-first-3}{}\quad{}We have \(f'(x) = 2x\).%
+\par\rule{\ptxworkspacestrutwidth}{2in}%
+\item\label{project-printout-task-second}Now find the derivative of \(g(x) = x^3\), and explain the pattern you see.%
+\par\rule{\ptxworkspacestrutwidth}{3in}%
+\end{enumerate}%
+Compare your two answers with a neighbor.%
+\end{project}%
+\restoregeometry
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{project}{Project}{A Project With Workspace On Itself.}{project-printout-simple}%
+Explain, in a paragraph, why the workspace requested here is not visible on screen, but does appear in the print preview.%
+\par\rule{\ptxworkspacestrutwidth}{4in}%
+\end{project}%
+\restoregeometry
+\begin{project}{Project}{A Project With No Workspace.}{project-printout-none}%
+This project should not have a print preview icon.%
+\end{project}%
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Section 4 Worksheet Solution Testing}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Worksheet Solution Testing}{}{Worksheet Solution Testing}{}{}{section-worksheet-solutions-testing}
+\begin{introduction}{}%
+Solutions to projects and worksheets can both be selected independently for the auto-generated solutions divisions.  What happens when a worksheet contains a project?  Here we explore the various combinations.%
+\end{introduction}%
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 4.1 Subsection with only exercise}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Subsection with only exercise}{}{Subsection with only exercise}{}{}{section-worksheet-solutions-testing-3}
+\begin{inlineexercise}{Checkpoint}{}{section-worksheet-solutions-testing-3-2}%
+This is an exercise's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-3-2-2}{}\quad{}This is an exercise's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-3-2-3}{}\quad{}This is the exercise's solution.%
+\end{inlineexercise}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 4.2 Subsection with only project}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Subsection with only project}{}{Subsection with only project}{}{}{section-worksheet-solutions-testing-4}
+\begin{project}{Project}{}{section-worksheet-solutions-testing-4-2}%
+This is a project's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-4-2-2}{}\quad{}This is a project's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-4-2-3}{}\quad{}This is the project's solution.%
+\end{project}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Subsection 4.3 Subsection with both exercise and project}
+\typeout{************************************************}
+%
+\begin{subsectionptx}{Subsection}{Subsection with both exercise and project}{}{Subsection with both exercise and project}{}{}{section-worksheet-solutions-testing-5}
+\begin{inlineexercise}{Checkpoint}{}{section-worksheet-solutions-testing-5-2}%
+This is an exercise's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-2-2}{}\quad{}This is an exercise's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-5-2-3}{}\quad{}This is the exercise's solution.%
+\end{inlineexercise}%
+\begin{project}{Project}{}{section-worksheet-solutions-testing-5-3}%
+This is a project's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-3-2}{}\quad{}This is a project's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-5-3-3}{}\quad{}This is the project's solution.%
+\end{project}%
+\end{subsectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 4.4 Worksheet with only exercise}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet with only exercise}{}{Worksheet with only exercise}{}{}{section-worksheet-solutions-testing-6}
+\begin{divisionexercise}{1}{}{}{section-worksheet-solutions-testing-6-2}%
+This is an exercise's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-6-2-2}{}\quad{}This is an exercise's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-6-2-3}{}\quad{}This is the exercise's solution.%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 4.5 Worksheet with only project}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet with only project}{}{Worksheet with only project}{}{}{section-worksheet-solutions-testing-7}
+\begin{project}{Project}{}{section-worksheet-solutions-testing-7-2}%
+This is a project's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-7-2-2}{}\quad{}This is a project's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-7-2-3}{}\quad{}This is the project's solution.%
+\end{project}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet 4.6 Worksheet with both exercise and project}
+\typeout{************************************************}
+%
+\newgeometry{left=0.75in, right=0.75in, top=0.75in, bottom=0.75in}
+\begin{worksheet-subsection}{Worksheet}{Worksheet with both exercise and project}{}{Worksheet with both exercise and project}{}{}{section-worksheet-solutions-testing-8}
+\begin{divisionexercise}{1}{}{}{section-worksheet-solutions-testing-8-2}%
+This is an exercise's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-8-2-2}{}\quad{}This is an exercise's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-8-2-3}{}\quad{}This is the exercise's solution.%
+\end{divisionexercise}%
+\begin{project}{Project}{}{section-worksheet-solutions-testing-8-3}%
+This is a project's statement.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-8-3-2}{}\quad{}This is a project's answer.%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-8-3-3}{}\quad{}This is the project's solution.%
+\end{project}%
+\end{worksheet-subsection}
+\restoregeometry
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.7 Inline answers only}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Inline answers only}{}{Inline answers only}{}{}{section-worksheet-solutions-testing-9}
+\par\medskip
+\noindent\textbf{\normalsize{}4.1\space\textperiodcentered\space{}Subsection with only exercise}
+\begin{inlinesolution}{Checkpoint}{4.1}{}{section-worksheet-solutions-testing-3-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-3-2-2-main}{}This is an exercise's answer.%
+\end{inlinesolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{inlinesolution}{Checkpoint}{4.3}{}{section-worksheet-solutions-testing-5-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-5-2-2-main}{}This is an exercise's answer.%
+\end{inlinesolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.8 Project answers only}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Project answers only}{}{Project answers only}{}{}{section-worksheet-solutions-testing-10}
+\par\medskip
+\noindent\textbf{\normalsize{}4.2\space\textperiodcentered\space{}Subsection with only project}
+\begin{projectsolution}{Project}{4.2}{}{section-worksheet-solutions-testing-4-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-4-2-2-main}{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{projectsolution}{Project}{4.4}{}{section-worksheet-solutions-testing-5-3}%
+\noindent\hypertarget{section-worksheet-solutions-testing-5-3-2-main}{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.5\space\textperiodcentered\space{}Worksheet with only project}
+\begin{projectsolution}{Project}{4.5}{}{section-worksheet-solutions-testing-7-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-7-2-2-main}{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{projectsolution}{Project}{4.6}{}{section-worksheet-solutions-testing-8-3}%
+\noindent\hypertarget{section-worksheet-solutions-testing-8-3-2-main}{}This is a project's answer.%
+\end{projectsolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.9 Worksheet answers only}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Worksheet answers only}{}{Worksheet answers only}{}{}{section-worksheet-solutions-testing-11}
+\par\medskip
+\noindent\textbf{\normalsize{}4.4\space\textperiodcentered\space{}Worksheet with only exercise}
+\begin{divisionsolution}{Worksheet Exercise}{4.4.1}{}{section-worksheet-solutions-testing-6-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-6-2-2-main}{}This is an exercise's answer.%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{divisionsolution}{Worksheet Exercise}{4.6.1}{}{section-worksheet-solutions-testing-8-2}%
+\noindent\hypertarget{section-worksheet-solutions-testing-8-2-2-main}{}This is an exercise's answer.%
+\end{divisionsolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.10 Inline answers, project statement}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Inline answers, project statement}{}{Inline answers, project statement}{}{}{section-worksheet-solutions-testing-12}
+\par\medskip
+\noindent\textbf{\normalsize{}4.1\space\textperiodcentered\space{}Subsection with only exercise}
+\begin{inlinesolution}{Checkpoint}{4.1}{}{section-worksheet-solutions-testing-3-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-3-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.2\space\textperiodcentered\space{}Subsection with only project}
+\begin{projectsolution}{Project}{4.2}{}{section-worksheet-solutions-testing-4-2}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{inlinesolution}{Checkpoint}{4.3}{}{section-worksheet-solutions-testing-5-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\begin{projectsolution}{Project}{4.4}{}{section-worksheet-solutions-testing-5-3}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.5\space\textperiodcentered\space{}Worksheet with only project}
+\begin{projectsolution}{Project}{4.5}{}{section-worksheet-solutions-testing-7-2}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{projectsolution}{Project}{4.6}{}{section-worksheet-solutions-testing-8-3}%
+This is a project's statement.%
+\end{projectsolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.11 Inline answers, worksheet statement}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Inline answers, worksheet statement}{}{Inline answers, worksheet statement}{}{}{section-worksheet-solutions-testing-13}
+\par\medskip
+\noindent\textbf{\normalsize{}4.1\space\textperiodcentered\space{}Subsection with only exercise}
+\begin{inlinesolution}{Checkpoint}{4.1}{}{section-worksheet-solutions-testing-3-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-3-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{inlinesolution}{Checkpoint}{4.3}{}{section-worksheet-solutions-testing-5-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.4\space\textperiodcentered\space{}Worksheet with only exercise}
+\begin{divisionsolution}{Worksheet Exercise}{4.4.1}{}{section-worksheet-solutions-testing-6-2}%
+This is an exercise's statement.%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{divisionsolution}{Worksheet Exercise}{4.6.1}{}{section-worksheet-solutions-testing-8-2}%
+This is an exercise's statement.%
+\end{divisionsolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.12 Project answers, worksheet statement}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Project answers, worksheet statement}{}{Project answers, worksheet statement}{}{}{section-worksheet-solutions-testing-14}
+\par\medskip
+\noindent\textbf{\normalsize{}4.2\space\textperiodcentered\space{}Subsection with only project}
+\begin{projectsolution}{Project}{4.2}{}{section-worksheet-solutions-testing-4-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-4-2-2-main}{}\quad{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{projectsolution}{Project}{4.4}{}{section-worksheet-solutions-testing-5-3}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-3-2-main}{}\quad{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.4\space\textperiodcentered\space{}Worksheet with only exercise}
+\begin{divisionsolution}{Worksheet Exercise}{4.4.1}{}{section-worksheet-solutions-testing-6-2}%
+This is an exercise's statement.%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.5\space\textperiodcentered\space{}Worksheet with only project}
+\begin{projectsolution}{Project}{4.5}{}{section-worksheet-solutions-testing-7-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-7-2-2-main}{}\quad{}This is a project's answer.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{divisionsolution}{Worksheet Exercise}{4.6.1}{}{section-worksheet-solutions-testing-8-2}%
+This is an exercise's statement.%
+\end{divisionsolution}%
+\begin{projectsolution}{Project}{4.6}{}{section-worksheet-solutions-testing-8-3}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-8-3-2-main}{}\quad{}This is a project's answer.%
+\end{projectsolution}%
+\end{solutions-subsection}
+%
+%
+\typeout{************************************************}
+\typeout{Solutions 4.13 Inline answers, project statement, worksheet solution}
+\typeout{************************************************}
+%
+\begin{solutions-subsection}{Solutions}{Inline answers, project statement, worksheet solution}{}{Inline answers, project statement, worksheet solution}{}{}{section-worksheet-solutions-testing-15}
+\par\medskip
+\noindent\textbf{\normalsize{}4.1\space\textperiodcentered\space{}Subsection with only exercise}
+\begin{inlinesolution}{Checkpoint}{4.1}{}{section-worksheet-solutions-testing-3-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-3-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.2\space\textperiodcentered\space{}Subsection with only project}
+\begin{projectsolution}{Project}{4.2}{}{section-worksheet-solutions-testing-4-2}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.3\space\textperiodcentered\space{}Subsection with both exercise and project}
+\begin{inlinesolution}{Checkpoint}{4.3}{}{section-worksheet-solutions-testing-5-2}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{section-worksheet-solutions-testing-5-2-2-main}{}\quad{}This is an exercise's answer.%
+\end{inlinesolution}%
+\begin{projectsolution}{Project}{4.4}{}{section-worksheet-solutions-testing-5-3}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.4\space\textperiodcentered\space{}Worksheet with only exercise}
+\begin{divisionsolution}{Worksheet Exercise}{4.4.1}{}{section-worksheet-solutions-testing-6-2}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-6-2-3-main}{}\quad{}This is the exercise's solution.%
+\end{divisionsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.5\space\textperiodcentered\space{}Worksheet with only project}
+\begin{projectsolution}{Project}{4.5}{}{section-worksheet-solutions-testing-7-2}%
+This is a project's statement.%
+\end{projectsolution}%
+\par\medskip
+\noindent\textbf{\normalsize{}4.6\space\textperiodcentered\space{}Worksheet with both exercise and project}
+\begin{divisionsolution}{Worksheet Exercise}{4.6.1}{}{section-worksheet-solutions-testing-8-2}%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{section-worksheet-solutions-testing-8-2-3-main}{}\quad{}This is the exercise's solution.%
+\end{divisionsolution}%
+\begin{projectsolution}{Project}{4.6}{}{section-worksheet-solutions-testing-8-3}%
+This is a project's statement.%
+\end{projectsolution}%
+\end{solutions-subsection}
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Section 5 Exercises, One Subsection}
+\typeout{************************************************}
+%
+\begin{sectionptx}{Section}{Exercises, One Subsection}{}{Exercises, One Subsection}{}{}{section-exercises-single}
+This \ptxmono{<section>} of the sample article demonstrates an \textquotedblleft{}unstructured division.\textquotedblright{}  There are no \ptxmono{<subsection>}, you are just reading the first two paragraphs, followed by some nonsense text.  Then there is a \emph{single} \ptxmono{<exercises>} division.  Note that this division is not numbered (since it is unique within the \ptxmono{<section>}).  And a cross-reference to one of the contained \ptxmono{<exercise>} will be numbered as a member of the \ptxmono{<section>}, \hyperlink{exercise-challenging-one-unstructured}{Exercise~{\xreffont 5.4}}.%
+\par
+If you use the unstructured form of a division, \emph{and} have both inline and divisional exercises, there is a potential to form ambiguous cross-references.  To wit, check that \hyperref[duplicate-inline]{{\xreffont\ref{duplicate-inline}}} and \hyperlink{duplicate-divisional}{{\xreffont 5.2}} are really different exercises (which you are \emph{unable to do} if you are reading this in print!).  The solution is to include the type of exercise in the reference, which will assist everybody, but especially your print readers:  \hyperref[duplicate-inline]{Checkpoint~{\xreffont\ref{duplicate-inline}}} and \hyperlink{duplicate-divisional}{Exercise~{\xreffont 5.2}}.%
+\par
+The following text is mostly nonsense, just for testing purposes.%
+\begin{inlineexercise}{Checkpoint}{Inline One.}{section-exercises-single-5}%
+Aliquam vitae risus placerat, pellentesque leo vitae, iaculis ante. Praesent ac odio eget mi bibendum eleifend ac eget metus. Morbi in dolor et diam accumsan mattis. Aenean elementum pulvinar efficitur. Etiam viverra ut tellus quis consequat. Phasellus sit amet nisl a ligula pharetra tempus id in elit. Maecenas congue quam eu purus fermentum pretium. Fusce pellentesque ultricies arcu, egestas sollicitudin erat condimentum non. Integer non velit at dolor dictum aliquam et rhoncus mauris. Sed nec nibh id nunc convallis tincidunt ut at ligula. Etiam elementum nisl eu erat dapibus rhoncus.%
+\end{inlineexercise}%
+Pellentesque nec condimentum ligula, quis interdum mauris. Ut sed urna lacinia, aliquam arcu id, faucibus nisi. Suspendisse potenti. Curabitur in erat ultricies, condimentum mi nec, vehicula mauris. Duis faucibus risus fermentum velit hendrerit, non laoreet massa maximus. Donec bibendum elit ac lectus lobortis luctus. Ut finibus, dolor ut euismod tristique, ligula tortor tempus arcu, finibus semper purus erat ut ligula. Aenean accumsan ut ante vel euismod.%
+\begin{inlineexercise}{Checkpoint}{Inline Two.}{duplicate-inline}%
+Ut porttitor neque a pharetra euismod. Vivamus ut metus pretium, placerat massa tempor, condimentum metus. Phasellus vestibulum iaculis turpis non posuere. Vestibulum quis aliquet neque. Donec nec metus iaculis, laoreet massa vitae, suscipit tellus. Etiam et ultrices quam, quis pretium ligula. In ut cursus metus. Aenean volutpat quam odio, quis tempus dolor egestas eget. Nunc fringilla lobortis nunc, ut interdum lorem posuere sed. Sed sodales risus a laoreet venenatis. Nunc sodales tempor mollis. Nam sollicitudin velit sed ex viverra feugiat. Nunc consectetur mi vitae urna sollicitudin malesuada. Fusce eget risus lectus. Mauris augue velit, vestibulum vitae tempus sit amet, porttitor eget turpis.%
+\end{inlineexercise}%
+\begin{theorem}{Theorem}{Major Result.}{}{section-exercises-single-8}%
+Vivamus tortor tortor, lobortis et sem vel, accumsan placerat libero. Sed eget metus non magna accumsan efficitur a non turpis. Curabitur maximus arcu ipsum, eget vestibulum nulla mollis ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis vel eleifend risus. Morbi hendrerit tellus eget nibh imperdiet, ac mollis nisl sagittis. Ut commodo pharetra leo. Suspendisse consequat velit eget velit condimentum feugiat.%
+\end{theorem}
+\begin{inlineexercise}{Checkpoint}{Inline Three.}{section-exercises-single-9}%
+Suspendisse lacinia mattis risus, eget viverra urna dictum eu. Maecenas ut sem in turpis egestas varius nec at ipsum. Praesent bibendum nisi et turpis congue, a pellentesque felis tempor. Vivamus non dolor in risus interdum mattis. In tempus iaculis velit, sit amet rhoncus tellus aliquam convallis. Sed ut tellus id ipsum blandit convallis sed eget tortor. Nunc leo felis, scelerisque vel ante porta, volutpat rhoncus neque. Mauris convallis, felis at aliquam aliquet, felis ipsum semper mi, vitae auctor purus ante non erat. Ut nec felis mi.%
+\end{inlineexercise}%
+%
+%
+\typeout{************************************************}
+\typeout{Exercises 5 Exercise Collection}
+\typeout{************************************************}
+%
+\begin{exercises-subsection-numberless}{Exercises}{Exercise Collection}{}{Exercise Collection}{}{}{exercise-collection}
+\begin{divisionexercise}{1}{Drill One.}{}{exercise-collection-2}%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.%
+\begin{figureptx}{Figure}{A figure in an \ptxmono{<exercise>} in an \emph{unstructured} division to test that it is numbered as if the containing \ptxmono{<exercises>} is not present}{exercise-collection-2-2-2}{}%
+\begin{image}{0.45}{0.1}{0.45}{}%
+\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\end{image}%
+\tcblower
+\end{figureptx}%
+\begin{figureptx}{Figure}{A side-by-side in a figure in an \ptxmono{<exercise>} in an \emph{unstructured} division to test that it is numbered as if the containing \ptxmono{<exercises>} is not present and to test the numbering of the panels in a solutions manual}{exercise-collection-2-2-3}{}%
+\begin{sidebyside}{2}{0.05}{0.05}{0.7}%
+\begin{sbspanel}{0.1}%
+\begin{subfigureptx}{Figure}{First Panel, subcaptioned}{exercise-collection-2-2-3-2-1}{}%
+\noindent\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\tcblower
+\end{subfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.1}%
+\begin{subfigureptx}{Figure}{Second Panel, subcaptioned}{exercise-collection-2-2-3-2-2}{}%
+\noindent\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\tcblower
+\end{subfigureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\tcblower
+\end{figureptx}%
+\begin{sidebyside}{2}{0.05}{0.05}{0.7}%
+\begin{sbspanel}{0.1}%
+\begin{panelfigureptx}{Figure}{First Panel, not subcaptioned}{exercise-collection-2-2-4-1}{}%
+\noindent\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\begin{sbspanel}{0.1}%
+\begin{panelfigureptx}{Figure}{Second Panel, not subcaptioned}{exercise-collection-2-2-4-2}{}%
+\noindent\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\tcblower
+\end{panelfigureptx}%
+\end{sbspanel}%
+\end{sidebyside}%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{Drill Two.}{}{duplicate-divisional}%
+Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.%
+\begin{figureptx}{Figure}{Testing numbering, figure in a \ptxmono{<exercise>} in an un-numbered \ptxmono{<exercises>}}{duplicate-divisional-2-2}{}%
+\begin{image}{0.4}{0.2}{0.4}{}%
+\includegraphics[width=\linewidth]{external/images/cross-square.png}
+\end{image}%
+\tcblower
+\end{figureptx}%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{Drill Three.}{}{exercise-collection-4}%
+Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{Challenging One.}{}{exercise-challenging-one-unstructured}%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.%
+\end{divisionexercise}%
+\par\medskip\noindent%
+\textbf{Exercise Group.}\space\space%
+An introduction to an \ptxmono{exercisegroup}.  This is here to attempt to interrupt the flow of the counting from this division to the next.%
+\begin{exercisegroup}
+\begin{divisionexerciseeg}{5}{Challenging Two.}{}{exercise-collection-6-2}%
+Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh.%
+\par
+Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.%
+\end{divisionexerciseeg}%
+\begin{divisionexerciseeg}{6}{Challenging Three.}{}{exercise-collection-6-3}%
+Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.%
+\end{divisionexerciseeg}%
+\end{exercisegroup}
+\par\medskip\noindent
+\begin{divisionexercise}{7}{Impossible One.}{}{exercise-collection-7}%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras congue urna nulla. Aliquam eget euismod tellus. Maecenas nibh libero, venenatis a laoreet in, tempor sit amet sem. Morbi sit amet justo tempor velit auctor placerat. Maecenas nec lobortis orci. Aenean dictum enim lacus, ac blandit lacus elementum nec. Mauris porttitor neque volutpat tincidunt sollicitudin. Cras porta lectus ac facilisis tempor. Suspendisse in velit nisl. Sed convallis leo at nunc aliquet fermentum. Pellentesque feugiat at ex sed elementum. In porta vulputate ipsum sit amet consectetur.%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{Impossible Two.}{}{exercise-collection-8}%
+Aliquam sagittis ex at magna porttitor, quis scelerisque ligula malesuada. Vestibulum vitae mauris id nisi pretium ornare a id lectus. Nam suscipit magna id sem ultricies vestibulum. Nulla facilisi. Duis venenatis lectus massa, ac mollis nisi suscipit non. Sed et sapien vulputate, imperdiet nibh vel, lobortis nisl. Curabitur sagittis justo nibh. Nulla vulputate sodales justo at efficitur. Cras justo augue, mollis vitae nulla sed, vestibulum tincidunt ante. Vestibulum et lorem lectus. Maecenas accumsan lacus a nisi euismod rutrum eu dapibus justo. Etiam scelerisque a odio a euismod. Pellentesque vestibulum pellentesque nisi, a tempus erat cursus ac. Morbi ut auctor lectus.%
+\end{divisionexercise}%
+\begin{divisionexercise}{9}{Impossible Three.}{}{exercise-collection-9}%
+Nam congue ex nec justo iaculis maximus. Vestibulum lobortis magna sed urna auctor, vel dignissim massa posuere. In sed venenatis elit. Vivamus congue gravida tempus. Nunc quis fermentum nisi. Nullam hendrerit lorem et tellus semper, sit amet scelerisque purus lobortis. Quisque sollicitudin quis neque eu suscipit. Praesent volutpat justo quis magna vehicula molestie.%
+\end{divisionexercise}%
+\end{exercises-subsection-numberless}
+%
+%
+\typeout{************************************************}
+\typeout{References 5 More Reading}
+\typeout{************************************************}
+%
+\begin{references-subsection-numberless}{References}{More Reading}{}{More Reading}{}{}{section-exercises-single-11}
+\begin{headnote}{}%
+Left intentionally blank, just checking sectioning.%
+\end{headnote}%
+%% If this is a top-level references
+%%   you can replace the "referencelist" environment
+%%   with a standard "thebibliography" environment
+\begin{referencelist}
+\bibitem[1]{biblio-lay-article-repeat2}\hypertarget{biblio-lay-article-repeat2}{}David C. Lay, \textit{Subspaces and Echelon Forms}. The College Mathematics Journal, January 1993, \textbf{24} no.\@\,1, 57\textendash{}62.
+\end{referencelist}
+\end{references-subsection-numberless}
+\end{sectionptx}
+%
+%
+\typeout{************************************************}
+\typeout{Exercises 6 Exercise Section, Structured}
+\typeout{************************************************}
+%
+\begin{exercises-section}{Exercises}{Exercise Section, Structured}{}{Exercise Section, Structured}{}{}{exercises-structured}
+\begin{introduction}{}%
+A collection of exercises, in a top-level \ptxmono{<exercises>} division, structured with \ptxmono{<subexercises>}.%
+\end{introduction}%
+\paragraph{Easy Exercises}\hypertarget{exercises-structured-3}{}
+\begin{divisionexercise}{1}{Arithmetic.}{}{exercises-structured-3-2}%
+Compute \(3+4\).%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{exercises-structured-3-2-3}{}\quad{}\(7\)%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{Trigonometry.}{}{exercises-structured-3-3}%
+Compute \(\sin(\pi/4)\).%
+\end{divisionexercise}%
+\paragraph{Hard Problems}\hypertarget{hard-subexercises}{}
+\begin{divisionexercise}{3}{Number Theory.}{}{hard-subexercises-2}%
+Prove Fermat's Last Theorem.%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{Millenial.}{}{hard-subexercises-3}%
+Find general solutions to the Navier-Stokes equation.%
+\end{divisionexercise}%
+\paragraph{With an Exercise Group}\hypertarget{exercises-structured-5}{}
+\par\medskip\noindent%
+\textbf{Exercise Group.}\space\space%
+This is an exercise group, and this is its introduction.%
+\par
+And a second line for the introduction.%
+\begin{exercisegroup}
+\begin{divisionexerciseeg}{5}{One.}{}{exercises-structured-5-2-2}%
+\(6-5\)%
+\par\smallskip%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{exercises-structured-5-2-2-3}{}\quad{}Subtract.%
+\end{divisionexerciseeg}%
+\begin{divisionexerciseeg}{6}{Two.}{}{exercises-structured-5-2-3}%
+\(1+1\)%
+\end{divisionexerciseeg}%
+\end{exercisegroup}
+\par\noindent%
+Here we conclude the group.%
+\par
+And a second line for the conclusion.%
+\par\medskip\noindent
+\begin{divisionexercise}{7}{Outside exercisegroup, inside subexercises.}{}{exercises-structured-5-3}%
+6+5%
+\end{divisionexercise}%
+\end{exercises-section}
+\end{document}

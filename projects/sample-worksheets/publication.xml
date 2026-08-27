@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright (C) 2015-2026  Robert A. Beezer
+
+This file is part of PreTeXt.
+
+PreTeXt is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+PreTeXt is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<!-- Deliberately close to the sample article's own publication file in   -->
+<!-- everything that bears on printouts: chunking, exercise component    -->
+<!-- visibility, formatted worksheets, 10pt LaTeX, so that a printout     -->
+<!-- laid out here lays out the same way there.  Everything that does not -->
+<!-- bear on printouts (analytics, base URL, journal styles, calculators) -->
+<!-- is left out.                                                         -->
+
+<publication>
+
+    <common>
+        <!-- One HTML page per section, as in the sample article, so each  -->
+        <!-- printout's preview is reached from the page holding it.       -->
+        <chunking level="1"/>
+        <exercise-inline hint="yes"/>
+        <exercise-project answer="yes"/>
+        <fillin textstyle="underline" mathstyle="shade"/>
+        <!-- Page furniture for printouts is left unset here, which is the -->
+        <!-- interesting default: the HTML preview still reserves a header -->
+        <!-- and footer band, and offers them for editing in the browser.  -->
+    </common>
+
+    <source>
+        <!-- Copies of just the images these sections use; see the         -->
+        <!-- "directories" element in the source file for the external     -->
+        <!-- ones.                                                         -->
+        <directories generated="gen"/>
+    </source>
+
+    <html>
+        <css theme="default-modern"/>
+        <search variant="default"/>
+        <knowl example="no" remark="no" proof="no" example-solution="no"/>
+    </html>
+
+    <!-- 10pt matches the sample article, and is the LaTeX default; the    -->
+    <!-- HTML print preview sets a printout in 11pt whatever this says,    -->
+    <!-- which the printout treatment accounts for.                        -->
+    <latex print="no" sides="one" font-size="10">
+        <page right-alignment="flush" bottom-alignment="ragged"/>
+        <!-- The point of this project: worksheets, handouts and           -->
+        <!-- project-like printouts get their own pages and margins,       -->
+        <!-- rather than being set as ordinary divisions.  Set to "no" to  -->
+        <!-- compare against the unformatted rendering.                    -->
+        <worksheet formatted="yes"/>
+    </latex>
+
+</publication>

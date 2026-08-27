@@ -5,13 +5,17 @@
       <target name="sa-web" format="html" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes" />
       <target name="sra-web" format="html" source="sample-research-article/sample-article.xml" publication="projects/sample-research-article/publication.xml" deploy="yes" />
       <target name="sa-tex" format="latex" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
-<<<<<<< HEAD
       <target name="sa-pdf" format="pdf" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
+
+      <!-- Just the printout sections of the sample article: worksheets,    -->
+      <!-- handouts, and project-like blocks with writing space, so that     -->
+      <!-- printout page breaks can be worked on without rebuilding the      -->
+      <!-- whole article each time.                                          -->
+      <target name="sw-web" format="html" source="sample-worksheets/sample-worksheets.ptx" publication="projects/sample-worksheets/publication.xml" deploy="yes"/>
+      <target name="sw-pdf" format="pdf" source="sample-worksheets/sample-worksheets.ptx" publication="projects/sample-worksheets/publication.xml" latex-source="yes" deploy="yes"/>
+
+      <!-- A shorter version of the sample article, possibly closer to a research article -->
       <target name="sra-pdf" format="pdf" source="sample-research-article/sample-article.xml" publication="projects/sample-research-article/publication.xml" latex-source="yes" deploy="yes"/>
-=======
-      <target name="sa-pdf" format="pdf" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" latex-source="yes" deploy="yes"/>
-      <target name="sa-epub" format="epub" source="sample-article/sample-article.xml" publication="projects/sample-article/publication.xml" deploy="yes"/>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
       <target name="sb-web" format="html" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
       <target name="sb-tex" format="latex" source="sample-book/sample-book.xml" publication="projects/sample-book/publication-noparts.xml" deploy="yes"/>
       <target name="scorm" format="html" source="scorm-sample/main.xml" publication="projects/scorm-sample/publication.xml" compression="scorm" />

@@ -13,13 +13,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+<style>
+@counter-style ptx-marker-1 { system: extends lower-roman; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends lower-roman; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-4 { system: extends upper-roman; prefix: '*'; suffix: '* '; }
+@counter-style ptx-marker-5 { system: extends upper-alpha; prefix: '++'; suffix: ' '; }
+@counter-style ptx-marker-6 { system: extends decimal; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-7 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-8 { system: extends decimal; prefix: '-'; suffix: '- '; }
+@counter-style ptx-marker-9 { system: extends lower-alpha; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-10 { system: extends upper-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-11 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-12 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-13 { system: extends decimal; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-14 { system: extends decimal; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: true,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
 </head>
@@ -64,14 +80,9 @@ resolve(ggb_ggb_3d__direction__vector_slate);})
 window.onload = function() { ggb_ggb_3d__direction__vector_slate.inject('ggb_3d-direction-vector_slate-container'); }
 },
 (error) => {console.log('GGB applet load failure.', error)});
-<<<<<<< HEAD
 </script><div style="line-height: 0;"><div class="geogebra-applet" id="ggb_3d-direction-vector_slate-container" style="width:600px; height:300px; display: block; "></div></div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:43.75% 43.75%;column-gap:10%;">
-=======
-</script><div class="geogebra-applet" id="ggb_3d-direction-vector_slate-container" style="width:600px; height:300px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:10%;margin-right:10%;grid-template-columns:43.75% 43.75%;column-gap:10%;">
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 <div class="sbspanel sbspanel--top top" style=""><div class="slate-ptx" id="ggb_2__17_table1"><table class="tabular">
 <tr>
 <td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\ \)</span></td>
@@ -102,26 +113,16 @@ window.onload = function() { ggb_ggb_3d__direction__vector_slate.inject('ggb_3d-
 <td class="r m b0 r0 l0 t0 lines"></td>
 </tr>
 </table></div></div>
-<<<<<<< HEAD
-<div class="sbspanel sbspanel--top top" style=""><p xmlns="http://www.w3.org/1999/xhtml">
+<div class="sbspanel sbspanel--top top" style=""><p>
                                     <button id="a_to_b">Show A to B</button>
                                     <button id="b_to_a">Show B to A</button>
                                 </p></div>
-=======
-<div class="sbspanel sbspanel--top top" style=""><p xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude">
-                                    <button id="a_to_b">Show A to B</button>
-                                    <button id="b_to_a">Show B to A</button>
-                                </p></div>
-</div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;"><div class="sbspanel sbspanel--top top" style=""><div class="para" id="info"><div class="autopermalink" data-description="Paragraph"><a href="#info" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div></div></div>
-<script src="external/code/haynes/3d-direction-vector.js"></script>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 </div>
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:100%;column-gap:0%;">
 <div class="sbspanel sbspanel--top top" style="">
-<div class="para" id="info"><div class="autopermalink" data-description="Paragraph"><a href="#info" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para" id="info"><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#info" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
 </div>
 </div>
 </div>

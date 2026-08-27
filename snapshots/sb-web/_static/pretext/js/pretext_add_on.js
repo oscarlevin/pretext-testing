@@ -11,35 +11,17 @@
  *******************************************************************************
  */
 
-/*
-console.log("thisbrowser.userAgent", window.navigator.userAgent);
-*/
-
-/* scrollbar width from https://stackoverflow.com/questions/13382516/getting-scroll-bar-width-using-javascript */
-function getScrollbarWidth() {
-    var outer = document.createElement("div");
-    outer.style.visibility = "hidden";
-    outer.style.width = "100px";
-    outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
-
-    document.body.appendChild(outer);
-
-    var widthNoScroll = outer.offsetWidth;
-    // force scrollbars
-    outer.style.overflow = "scroll";
-
-    // add innerdiv
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    outer.appendChild(inner);
-
-    var widthWithScroll = inner.offsetWidth;
-
-    // remove divs
-    outer.parentNode.removeChild(outer);
-
-    return widthNoScroll - widthWithScroll;
-}
+// stub for i18next to future-proof the code. We don't actually use it for
+// anything right now, but it will be needed if we want to localize the
+// accessibility search status messages.
+window.i18next = window.i18next || {
+    t(key, params = {}) {
+        for (const param in params) {
+            key = key.replace(`{{${param}}}`, params[param]);
+        }
+        return key;
+    }
+};
 
 /*
   copy permalink address to clipboard
@@ -122,15 +104,33 @@ window.addEventListener("load",function(event) {
     /* click an image to magnify */
     $('body').on('click','.image-box > img:not(.draw_on_me):not(.mag_popup), .sbspanel > img:not(.draw_on_me):not(.mag_popup), figure > img:not(.draw_on_me):not(.mag_popup), figure > div > img:not(.draw_on_me):not(.mag_popup)', function(){
         var img_big = document.createElement('div');
-        img_big.setAttribute('style', 'background:#fff;');
+        const content_element = document.getElementById('ptx-content');
         img_big.setAttribute('class', 'mag_popup_container');
-        img_big.innerHTML = '<img src="' + $(this).attr("src") + '" style="width:100%" class="mag_popup"/>';
+        img_big.innerHTML = `<img src="${$(this).attr("src")}" style="width:100%;" class="mag_popup"/>`;
  // place_to_put_big_img = $(this).parents(".sbsrow, figure, li").last();
         place_to_put_big_img = $(this).parents(".image-box, .sbsrow, figure, li, .cols2 article:nth-of-type(2n)").last();
   // for .cols2, the even ones have to go inside the previous odd one
         if (place_to_put_big_img.prop("tagName") == "ARTICLE") {
            place_to_put_big_img = place_to_put_big_img.prev().children().first();
         }
+
+        // find ancestor so that place_to_put_big_img's position is relative to that ancestor
+        var img_big_parent = place_to_put_big_img[0].parentElement;
+        while (img_big_parent.id !== "ptx-content") {
+           const computed_position = getComputedStyle(img_big_parent).position;
+           if (computed_position !== "static") {
+              break;
+           }
+           img_big_parent = img_big_parent.parentElement;
+        }
+
+        const content_element_computed_style = getComputedStyle(content_element);
+        const content_padding_left  = parseFloat(content_element_computed_style.paddingLeft );
+        const content_padding_right = parseFloat(content_element_computed_style.paddingRight);
+        const img_big_offset = content_element.getBoundingClientRect().left - img_big_parent.getBoundingClientRect().left + content_padding_left;
+        const doc_width = content_element.offsetWidth - content_padding_left - content_padding_right;
+        img_big.setAttribute('style', `width:${doc_width.toString()}px; left:${img_big_offset.toString()}px;`);
+
         $(img_big).insertBefore(place_to_put_big_img);
     });
 
@@ -286,61 +286,67 @@ function process_workspace() {
     console.log("processing workspace");
     MathJax.typesetPromise();
 }
-/* for the GeoGebra calculator */
 
-function pretext_geogebra_calculator_onload() {
-    $("#calculator-toggle").focus();
-    var inputfield = $("input.gwt-SuggestBox.TextField")[0];
-    console.log("inputfield", inputfield);
-    inputfield.focus();
-}
 window.addEventListener("load",function(event) {
+    const calcDialogElement = document.getElementById('ptx-calculator-container');
+    const calcButtonElement = document.getElementById('ptx-calculator-toggle');
+    if (!calcDialogElement || !calcButtonElement) {
+        return;
+    }
+    const calcDialog = new PTXDialog(calcDialogElement, calcButtonElement, {"kind": "non-modal"});
 
-   /* scrolling on GG plot should scale, not move browser body */
-//     var scrollWidth = 15;  //currently correct for FF, Ch, and Saf, but would be better to calculate
-     var scrollWidth = getScrollbarWidth();
-     if ( (navigator.userAgent.match(/Mozilla/i) != null) ) {
-        // scrollWidth += 0.5
-     }
-     console.log("scrollWidth", scrollWidth);
-     calcoffsetR = 5;
-     calcoffsetB = 5;
-     $('body').on('mouseover','#geogebra-calculator canvas', function(){
-         $('body').css('overflow', 'hidden');
-         $('html').css('margin-right', '15px');
-         $('#calculator-container').css('right', (calcoffsetR+scrollWidth).toString() + 'px');
-         $('#calculator-container').css('bottom', (calcoffsetB+scrollWidth).toString() + 'px');
-     });
+    const focusCalcInput = function() {
+        const inputField = document.querySelector("#ptx-geogebra-calculator input.gwt-SuggestBox.TextField");
+        if (inputField) {
+            inputField.focus();
+        }
+    }
+    function initGeogebra() {
+        // Some paramaters are fixed here, others are set by publisher options in the HTML source
+        // and stored in ggbParams. Merge those here.
+        const fixedParams = {
+            showToolBar: true,
+            showAlgebraInput: true,
+            perspective: "G/A",
+            algebraInputPosition: "bottom",
+            appletOnLoad: focusCalcInput,
+            scaleContainerClass: "ptx-calculator-container",
+            allowUpscale: false,
+            autoHeight: false,
+        }
+        const generatedParams = (typeof ggbParams === "object" && ggbParams) ? ggbParams : {};
+        const params = {...generatedParams, ...fixedParams};
+        let applet = new GGBApplet(params, true);
+        applet.inject('ptx-geogebra-calculator');
+        return applet;
+    }
 
-     $('body').on('mouseout','#geogebra-calculator canvas', function(){
-         $('body').css('overflow', 'scroll')
-         $('html').css('margin-right', '0');
-         $('#calculator-container').css('right', calcoffsetR.toString() + 'px');
-         $('#calculator-container').css('bottom', calcoffsetB.toString() + 'px');
-     });
+    let applet;
+    calcButtonElement.addEventListener('click', function() {
+        if (calcDialog.dialog.open) {
+            let initialized = calcDialogElement.dataset.initialized || false;
+            if (!initialized) {
+                applet = initGeogebra();
+                calcDialogElement.dataset.initialized = true;
+            } else {
+                focusCalcInput();
+            }
+        }
+    });
 
-     $('body').on('click', '#calculator-toggle', function() {
-         if ($('#calculator-container').css('display') == 'none') {
-             $('#calculator-container').css('display', 'block');
-             $('#calculator-toggle').addClass('open');
-             $('#calculator-toggle').attr('title', 'Hide calculator');
-             $('#calculator-toggle').attr('aria-expanded', 'true');
-             create_calc_script = document.getElementById("create_ggb_calc");
-             if (!create_calc_script) {
-                 var ggbscript = document.createElement("script");
-                 ggbscript.id = "create_ggb_calc";
-                 ggbscript.innerHTML = "ggbApp.inject('geogebra-calculator')";
-                 document.body.appendChild(ggbscript);
-             } else {
-                 pretext_geogebra_calculator_onload();
-             }
-         } else {
-             $('#calculator-container').css('display', 'none');
-             $('#calculator-toggle').removeClass('open');
-             $('#calculator-toggle').attr('title', 'Show calculator');
-             $('#calculator-toggle').attr('aria-expanded', 'false');
-         }
-     });
+    //add resize observer for dialog
+    const resizeObserver = new ResizeObserver(entries => {
+        for (let entry of entries) {
+            if (entry.target === calcDialogElement && applet && applet.getAppletObject()) {
+                const width = entry.contentRect.width;
+                const height = entry.contentRect.height;
+                const topBarHeight = calcDialogElement.querySelector('.ptx-dialog-topbar').clientHeight || 0;
+                applet.getAppletObject().setSize(width, height - topBarHeight);
+                applet.getAppletObject().recalculateEnvironments();
+            }
+        }
+    });
+    resizeObserver.observe(calcDialogElement);
 });
 
 
@@ -410,6 +416,16 @@ window.addEventListener("load",function(event) {
 
 // The new method for creating pages and adjusting workspace //
 
+// The element being previewed.  Usually a worksheet or handout section, but a
+// project-like block with workspace that lives outside any worksheet/handout
+// is previewed as a printout in its own right, in which case this is the
+// project's <article>.  loadPrintout() tags whichever it is with "printout",
+// which is also the hook the print stylesheet keys on, so nothing downstream
+// has to care which kind of element it got.
+function getPrintout() {
+    return document.querySelector('.printout');
+}
+
 // Unwrap section.paragraphs containers so their children flow directly
 // into the parent, enabling CSS page breaks between the inner elements.
 function flattenParagraphsSections(printout) {
@@ -446,6 +462,17 @@ function waitForImages(container, timeoutMs = 5000) {
     ]);
 }
 
+// The workspace divs in, or at, an element.  In a worksheet a workspace is
+// always nested inside an exercise or task, but a project-like standalone
+// printout can carry @workspace on itself, and then the block *is* the
+// workspace div -- which querySelectorAll, looking only at descendants, misses.
+function workspaceDivsIn(elem) {
+    if (elem.classList.contains('workspace')) {
+        return [elem];
+    }
+    return [...elem.querySelectorAll('.workspace')];
+}
+
 // This is used multiple places to set height of workspace divs to their author-provided heights
 function setInitialWorkspaceHeights() {
     const workspaces = document.querySelectorAll('.workspace');
@@ -457,11 +484,8 @@ function setInitialWorkspaceHeights() {
 
 // If a printout (worksheet or handout) includes authored pages, we only need to put content before the first page and after the last page into the first and last pages, respectively.
 function adjustPrintoutPages() {
-<<<<<<< HEAD
     console.log("*** Adjusting printout pages.");
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting adjustPrintoutPages.");
         return;
@@ -494,10 +518,7 @@ function adjustPrintoutPages() {
 
 // This is the main function we will call then a printout does not come from the XSL with pages already defined (for now, the XSL will keep the <page> behavior as an option).
 function createPrintoutPages(margins) {
-<<<<<<< HEAD
     console.log("*** Creating printout pages with margins:", margins);
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 
     // Assumptions: needs to work for both letter (8.5in x 11in) and a4 (210mm x 297mm) paper sizes.  We will work in pixels (96/in): those are 816px x 1056px and 794px x 1122.5px respectively (1 inch = 96 px, 1 cm = 37.8 px).  We assume that the printing interface of the browser will do the right thing with these.
 
@@ -506,7 +527,7 @@ function createPrintoutPages(margins) {
     const conservativeContentHeight = 1056 - (margins.top + margins.bottom); // in pixels
     const conservativeContentWidth = 794 - (margins.left + margins.right); // in pixels
 
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting createPrintoutPages.");
         return;
@@ -524,7 +545,6 @@ function createPrintoutPages(margins) {
         } else if (child.querySelector('.task')) {
             // Keep the child as a block, but put each task after the first one as its own row:
             rows.push(child);
-<<<<<<< HEAD
             const tasks = child.querySelectorAll('.task, .conclusion');
 
             //Determine how many levels of nesting each task has.  If parent is an .exercise, leave alone.  If parent is a .task, add .subtask class.  If grandparent is .task, add .subsubtask to it so it can be indented by css:
@@ -537,9 +557,6 @@ function createPrintoutPages(margins) {
                     tasks[i].classList.add('subtask');
                 }
             }
-=======
-            const tasks = child.querySelectorAll('.task');
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
             for (let i = tasks.length-1; i > 0; i--) {
                 // Move the task out of the original child and place it directly after it in the printout.  We do this in reverse order so when every task is moved, they return to the original order. They will then be added to the rows list as their own blocks.
                 printout.insertBefore(tasks[i], child.nextSibling);
@@ -558,7 +575,7 @@ function createPrintoutPages(margins) {
             continue;
         }
         let totalWorkspaceHeight = 0;
-        if (row.querySelector('.workspace')) {
+        if (workspaceDivsIn(row).length > 0) {
             // Workspace height is not just sum of workspace heights; we need to be careful with sidebyside and columns
             totalWorkspaceHeight = getElemWorkspaceHeight(row);
         }
@@ -601,7 +618,7 @@ function createPrintoutPages(margins) {
 
 // Add headers and footers to all pages in a printout.  Start with this set to be hidden by default; a toggle later will show/hide them.
 function addHeadersAndFootersToPrintout() {
-    const printout = document.querySelector('section.worksheet, section.handout');
+    const printout = getPrintout();
     if (!printout) {
         console.warn("No printout found, exiting addHeadersAndFootersToPrintout.");
         return;
@@ -783,7 +800,7 @@ function getElemWorkspaceHeight(elem) {
             }
         }
     }
-    const workspaces = elem.querySelectorAll('.workspace');
+    const workspaces = workspaceDivsIn(elem);
     let totalHeight = 0;
     workspaces.forEach(ws => {
         const workspaceHeight = ws.offsetHeight;
@@ -918,43 +935,7 @@ function toggleWorkspaceHighlight(isChecked) {
     }
 }
 
-<<<<<<< HEAD
 function getPaperSize() {
-=======
-// Printout print preview and page setup
-window.addEventListener("load",function(event) {
-  // We condition on the existence of the papersize radio buttons, which only appear in the printout print preview.
-  if (document.querySelector('input[name="papersize"]')) {
-    // First, get the margins for pages to be passed around as needed.
-    const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
-    // Convert margin values to pixels if they are not already numbers
-    function toPixels(value) {
-        if (typeof value === "number") return value;
-        if (typeof value !== "string") return 0;
-        value = value.trim();
-        if (value.endsWith("px")) {
-            return parseFloat(value);
-        } else if (value.endsWith("in")) {
-            return Math.floor(parseFloat(value) * 96);
-        } else if (value.endsWith("cm")) {
-            return Math.floor(parseFloat(value) * 37.8);
-        } else if (value.endsWith("mm")) {
-            return Math.floor(parseFloat(value) * 3.78);
-        } else if (value.endsWith("pt")) {
-            return Math.floor(parseFloat(value) * (96 / 72));
-        } else {
-            // fallback: try to parse as px
-            return parseFloat(value) || 0;
-        }
-    }
-    const margins = {
-        top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
-        right: toPixels(marginList[1] || "0.75in"),
-        bottom: toPixels(marginList[2] || "0.75in"),
-        left: toPixels(marginList[3] || "0.75in")
-    }
-    // Get the papersize from localStorage or set it based on user's geographic region
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
     let paperSize = localStorage.getItem("papersize");
     if (paperSize) {
       return paperSize;
@@ -989,10 +970,48 @@ window.addEventListener("load",function(event) {
     return paperSize || "letter";
 }
 
+// A project-like born hidden as a knowl (the publisher's knowl-project) renders
+// as
+//   <details id="..."><summary><h2 class="heading"/><div class="print-links"/></summary>
+//     <article class="knowl__content">...</article></details>
+// so the id lands on the <details>, the title sits in the <summary>, and the
+// content is a separate article with no title of its own.  Rebuild it as the
+// single block a visible project would have produced, title first, so the rest
+// of the preview needs to know nothing about knowls.  Returns the block to
+// preview, or the <details> unchanged if it is not shaped as expected.
+function flattenKnowledPrintout(details) {
+    const content = details.querySelector(':scope > .knowl__content');
+    if (!content) {
+        console.warn("Born-hidden printout has no knowl content; previewing as-is:", details);
+        return details;
+    }
+    const heading = details.querySelector(':scope > summary > .heading');
+    if (heading) {
+        content.insertBefore(heading, content.firstChild);
+    }
+    // It is the page now, not knowl content.  Carry the id over so the preview
+    // keeps the identity named in the URL.
+    content.classList.remove('knowl__content');
+    content.id = details.id;
+    // Moves content out of details, then drops the details (and its summary).
+    details.replaceWith(content);
+    return content;
+}
+
+// The print icon has to live inside the <summary> of a born-hidden knowl to be
+// visible while the knowl is closed, but a click in a <summary> is the knowl's
+// own open/close toggle.  So follow the link ourselves and swallow the toggle.
+document.addEventListener("click", (ev) => {
+    const link = ev.target.closest("a.print-link");
+    if (!link || !link.closest("summary")) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    window.location.assign(link.href);
+});
+
 // Function to load the printout section and switch to print stylesheet.  This will run whenever a user clicks on a print preview link (which adds ?printpreview=sectionID to the URL).
 async function loadPrintout(printableSectionID) {
 
-<<<<<<< HEAD
     // Switch to print-worksheet.css for print preview
     const themeStylesheetLink = document.querySelector('link[rel="stylesheet"][href*="theme"]');
     // get the href of the theme stylesheet link
@@ -1005,70 +1024,27 @@ async function loadPrintout(printableSectionID) {
         // Wait for the new stylesheet to load.  This is important to ensure the styles are applied before the calling function tries to compute workspace sizes.
         await new Promise((resolve) => {
             themeStylesheetLink.addEventListener('load', resolve, { once: true });
-=======
-    // If there are hints/answers/solutions on the page, then we will get a checkbox to optionally hide them.
-    for (const solutionType of ["Hints", "Solutions", "Answers"]) {
-        const checkbox = document.getElementById(`hide-${solutionType.toLowerCase()}-checkbox`);
-        if (checkbox) {
-            // Set the checkbox state from localStorage
-            const storageKey = `hide${solutionType}`;
-            checkbox.checked = localStorage.getItem(storageKey) === "true";
-            // if the checkbox is checked, then we remove any solution divs that have first element "details" with class "solutionType"
-            if (checkbox.checked) {
-                // cssClass will be "hint", "solution", or "answer"; lowercase version of solutionType and remove the last character
-                const cssClass = solutionType.slice(0, -1).toLowerCase();
-                document.querySelectorAll(`details.${cssClass}`).forEach(elem => {
-                    elem.remove()
-                });
-            }
-
-            // Add event listener to toggle visibility
-            checkbox.addEventListener("change", function() {
-                localStorage.setItem(storageKey, this.checked);
-                // Reload the page to recompute workspace with changed visibility
-                window.location.reload();
-            });
-        }
-    }
-
-    // Open all details elements (knowls) on the page that are inside the .worksheet or .handout section
-    var born_hidden_knowls = document.querySelectorAll('.worksheet details, .handout details');
-    console.log("born_hidden_knowls", born_hidden_knowls);
-    born_hidden_knowls.forEach(function(detail) {
-        detail.open = true;
-    });
-    // If the printout has authored pages, there will be at least one .onepage element.
-    if (document.querySelector('.onepage')) {
-        adjustPrintoutPages();
-        /* not the right way:  need to figure out what this needs to wait for */
-        //window.setTimeout(adjustPrintoutPages, 1000);
-    } else {
-        createPrintoutPages(margins);
-    }
-    // After pages are set up, we adjust the workspace heights to fit the page (based on the paper size).
-    adjustWorkspaceToFitPage({paperSize: paperSize, margins: margins});
-
-    console.log("finished adjusting workspace");
-
-
-    // Get the 'highlight workspace' checkbox state from localStorage or set it to false by default
-    const highlightWorkspaceCheckbox = document.getElementById("highlight-workspace-checkbox");
-    if (highlightWorkspaceCheckbox) {
-        highlightWorkspaceCheckbox.checked = localStorage.getItem("highlightWorkspace") === "true";
-        highlightWorkspaceCheckbox.addEventListener("change", function() {
-            localStorage.setItem("highlightWorkspace", this.checked);
-            toggleWorkspaceHighlight(this.checked);
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
         });
     }
 
-    // Find the section with this ID
-    const printableSection = document.getElementById(printableSectionID);
+    // Find the element with this ID.  For a worksheet or handout this is the
+    // division's section; for a standalone project-like printout it is the
+    // project's article, nested somewhere inside a division section, or a
+    // <details> if the project is born hidden as a knowl.
+    let printableSection = document.getElementById(printableSectionID);
     if (!printableSection) {
-        console.error("No section found with ID:", printableSectionID);
+        console.error("No printable element found with ID:", printableSectionID);
         return;
     }
-    // Remove any existing sections from .ptx-content and add only the printable section
+    if (printableSection.tagName === "DETAILS") {
+        printableSection = flattenKnowledPrintout(printableSection);
+    }
+    // Mark it as the printout so the stylesheet and the pagination code below
+    // can find it without knowing which kind of element it is.
+    printableSection.classList.add("printout");
+    // Remove any existing sections from .ptx-content and add only the printable
+    // section.  Removing a section that contains the printout is harmless: we
+    // still hold a reference to it, and re-attach it on the next line.
     const ptxContent = document.querySelector('.ptx-content');
     const existingSections = ptxContent.querySelectorAll(':scope > section');
     existingSections.forEach(sec => ptxContent.removeChild(sec));
@@ -1076,8 +1052,8 @@ async function loadPrintout(printableSectionID) {
 }
 
 // Function to redo solutions details to divs with summary as title
-function rewriteSolutions() {
-    var born_hidden_knowls = document.querySelectorAll('.worksheet details, .handout details');
+async function rewriteSolutions() {
+    var born_hidden_knowls = document.querySelectorAll('.printout details');
     born_hidden_knowls.forEach(function(detail) {
         const summary = detail.querySelector('summary');
         const content = detail.innerHTML.replace(summary.outerHTML, '');
@@ -1093,6 +1069,9 @@ function rewriteSolutions() {
         div.appendChild(body);
         detail.parentNode.replaceChild(div, detail);
     });
+    if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
+        await MathJax.typesetPromise();
+    }
 }
 
 // Utility to convert various CSS length units to pixels
@@ -1124,8 +1103,16 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         const printableSectionID = urlParams.get("printpreview");
         await loadPrintout(printableSectionID);
 
+        // loadPrintout bails out if the id names nothing printable (a stale or
+        // hand-edited URL), so there may be no printout to lay out.
+        const printout = getPrintout();
+        if (!printout) {
+            console.warn("Nothing to preview for printpreview=" + printableSectionID + "; leaving the page as it is.");
+            return;
+        }
+
         // First, get the margins for pages to be passed around as needed.
-        const marginList = document.querySelector('section.worksheet, section.handout').getAttribute('data-margins').split(' ');
+        const marginList = (printout.getAttribute('data-margins') || "").split(' ');
         // Convert margin values to pixels if they are not already numbers
         const margins = {
             top: toPixels(marginList[0] || "0.75in"), // Default to 0.75in if not specified
@@ -1135,7 +1122,7 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         }
 
         // Transform all solutions details elements to divs with the summary as a title
-        rewriteSolutions();
+        await rewriteSolutions();
 
         // Get the papersize from localStorage or set it based on user's geographic region.  This will always return a value (defaulting to 'letter' if all else fails).
         let paperSize = getPaperSize();
@@ -1208,7 +1195,7 @@ window.addEventListener("DOMContentLoaded", async function(event) {
         // Finally, with everything set up, we create or adjust the printout pages as needed.
 
         // Flatten paragraphs sections so page breaks can occur inside them.
-        const printoutSection = document.querySelector('section.worksheet, section.handout');
+        const printoutSection = getPrintout();
         if (printoutSection) {
             flattenParagraphsSections(printoutSection);
         }
@@ -1278,144 +1265,16 @@ window.addEventListener("DOMContentLoaded", async function(event) {
     }
 });
 
-
-
-//-----------------------------------------------------------------
-// Dark/Light mode swiching
-
-function isDarkMode() {
-    if (document.documentElement.dataset.darkmode === 'disabled')
-        return false;
-
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme === "dark")
-        return true;
-    else if (currentTheme === "light")
-        return false;
-
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-
-function setDarkMode(isDark) {
-    if(document.documentElement.dataset.darkmode === 'disabled')
-        return;
-
-    const parentHtml = document.documentElement;
-    const iframes = document.querySelectorAll("iframe[data-dark-mode-enabled]");
-
-    // Update the parent document
-    if (isDark) {
-        parentHtml.classList.add("dark-mode");
-    } else {
-        parentHtml.classList.remove("dark-mode");
-    }
-
-    // Sync each iframe's <html> class with the parent
-    for (const iframe of iframes) {
-        try {
-            const iframeHtml = iframe.contentWindow.document.documentElement;
-            if (isDark) {
-              iframeHtml.classList.add("dark-mode")
-            } else {
-              iframeHtml.classList.remove("dark-mode")
-            }
-        } catch (err) {
-            console.warn("Dark mode sync to iframe failed:", err);
-        }
-    }
-
-    const modeButton = document.getElementById("light-dark-button");
-    if (modeButton) {
-        modeButton.querySelector('.icon').innerText = isDark ? "light_mode" : "dark_mode";
-        modeButton.querySelector('.name').innerText = isDark ? "Light Mode" : "Dark Mode";
-    }
-}
-
-// Run this as soon as possible to avoid flicker
-setDarkMode(isDarkMode());
-
-// Rest of dark mode setup logic waits until after load
-window.addEventListener("DOMContentLoaded", function(event) {
-    // Rerun setDarkMode now that it can update buttons
-    const isDark = isDarkMode();
-    setDarkMode(isDark);
-
-    const modeButton = document.getElementById("light-dark-button");
-    modeButton.addEventListener("click", function() {
-        const wasDark = isDarkMode();
-        setDarkMode(!wasDark);
-        localStorage.setItem("theme", wasDark ? "light" : "dark");
-    });
-});
-
-// Share button and embed in LMS code
-window.addEventListener("DOMContentLoaded", function(event) {
-    const shareButton = document.getElementById("embed-button");
-    if (shareButton) {
-        const sharePopup = document.getElementById("embed-popup");
-        const embedCode = "<iframe src='" + window.location.href + "?embed' width='100%' height='1000px' frameborder='0'></iframe>";
-        const embedTextbox = document.getElementById("embed-code-textbox");
-        if (embedTextbox) {
-            embedTextbox.value = embedCode;
-        }
-        shareButton.addEventListener("click", function() {
-            sharePopup.classList.toggle("hidden");
-        });
-        const copyButton = document.getElementById("copy-embed-button");
-        if (copyButton) {
-            copyButton.addEventListener("click", function() {
-                const embedTextbox = document.getElementById("embed-code-textbox");
-                if (embedTextbox) {
-                    navigator.clipboard.writeText(embedCode).then(() => {
-                        console.log("Embed code copied to clipboard!");
-                    }).catch(err => {
-                        console.error("Failed to copy embed code: ", err);
-                    });
-                    //copyButton.innerHTML = "✓✓";
-                    // show confirmation for 2 seconds:
-                    copyButton.querySelector('.icon').innerText = "library_add_check";
-                    setTimeout(function() {
-                        copyButton.querySelector('.icon').innerText = "content_copy";
-                        sharePopup.classList.add("hidden");
-                    }, 450);
-                }
-            });
-        }
-    }
-});
-
-// Hide everything except the content when the URL has "embed" in it
-window.addEventListener("DOMContentLoaded", function(event) {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("embed")) {
-        // Set dark mode based on value of param
-        if (urlParams.get("embed") === "dark") {
-            setDarkMode(true);
-        } else {
-            setDarkMode(false);
-        }
-        const elemsToHide = [
-            "ptx-navbar",
-            "ptx-masthead",
-            "ptx-page-footer",
-            "ptx-sidebar",
-            "ptx-content-footer"
-        ];
-        for (let id of elemsToHide) {
-            const elem = document.getElementById(id);
-            if (elem) {
-                elem.classList.add("hidden");
-            }
-        }
-    }
-});
-
 // START Support for code-copy button functionality
 document.addEventListener("click", (ev) => {
     const codeBox = ev.target.closest(".clipboardable");
     if (!navigator.clipboard || !codeBox) return;
     const button = ev.target.closest(".code-copy");
-    const preContent = codeBox.querySelector("pre").textContent;
+    // Copy a clone with "unselectable" content removed (e.g. a console prompt),
+    // so the copied text matches what a manual selection would capture.
+    const pre = codeBox.querySelector("pre").cloneNode(true);
+    pre.querySelectorAll(".unselectable").forEach((el) => el.remove());
+    const preContent = pre.textContent;
     navigator.clipboard.writeText(preContent);
     button.classList.toggle("copied")
     setTimeout(() => button.classList.toggle("copied"), 1000);
@@ -1438,3 +1297,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 // END Support for code-copy button functionality
+
+
+window.addEventListener("DOMContentLoaded", () => {
+    const userDropdownButton = document.getElementById("ptx-user-dropdown-button");
+    const userDropdownContent = document.getElementById("ptx-user-dropdown-content");
+    if (userDropdownButton && userDropdownContent) {
+        new PTXDropdown(userDropdownContent, userDropdownButton);
+    }
+});

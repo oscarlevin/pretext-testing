@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WWSC Hints, Answers, and Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: true,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Integrating WeBWorK into Textbooks">
+<meta property="og:title" content="Integrating WeBWorK into Textbooks">
+<meta property="book:title" content="Integrating WeBWorK into Textbooks">
+<meta name="twitter:description" content="Sample Exercises">
+<meta property="og:description" content="Sample Exercises">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.1.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.d0616b3d72ab3b06.bundle.js"></script><script src="_static/prefix-713.de0ab26248766350.bundle.js"></script><script src="_static/prefix-runestone.af9055d29ed602c4.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-713.f43ced6a6134ea74.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.87414d180ebeebd6.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork/2.20/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="PTXWW" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href="http://webwork.maa.org/"><img src="external/images/webwork-logo.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="sample-ww-chapter.html"><span class="title">Integrating WeBWorK into Textbooks</span> <span class="subtitle">Sample Exercises</span></a></h1>
+<p class="byline">Robert Beezer, Alex Jordan</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search book" commandfor="ptx-search-dialog" command="show-modal"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog" closedby="closerequest"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close search" id="ptx-search-close" class="ptx-search-close" commandfor="ptx-search-dialog" command="close"><span class="material-symbols-outlined">close</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sample-ww-chapter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="sample-ww-chapter-6.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\definiteintegral}[4]{\int_{#1}^{#2}\,#3\,d#4}
+\newcommand{\indefiniteintegral}[2]{\int#1\,d#2} 
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Preface</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-4.html" class="internal"><span class="codenumber">1</span> <span class="title">Instructive Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-2.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-the-quadratic-formula.html" class="internal"><span class="codenumber">1.2</span> <span class="title">The Quadratic Formula</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-4.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Open Problem Library</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-5.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Antidifferentiation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-2" class="internal"><span class="codenumber">1.4.1</span> <span class="title">A Few More Features</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-5.html#sample-ww-chapter-4-5-3" class="internal"><span class="codenumber">1.4.2</span> <span class="title">WeBWorK Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-6.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Math Content</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-7.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Multiple Choice</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-4-8.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Tables</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-4-9.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Graphics in Exercises</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-4-9.html#sample-ww-chapter-4-9-10" class="internal"><span class="codenumber">1.8</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="sample-ww-chapter-5.html" class="internal"><span class="codenumber">2</span> <span class="title">Technical Examples</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-2.html" class="internal"><span class="codenumber">2.1</span> <span class="title">PGML Formatting and Verbatim Calisthenics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-3.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Subject Area Templates</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sample-ww-chapter-5-4.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Stress Tests</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sample-ww-chapter-5-5.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Layout Configuration Testing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-3" class="internal"><span class="codenumber">2.4.1</span> <span class="title">Inline Exercises</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sample-ww-chapter-5-5.html#sample-ww-chapter-5-5-4" class="internal"><span class="codenumber">2.4.2</span> <span class="title">Divisional Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="section-runestone-testing.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Runestone Assignment Testing</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="section-runestone-testing.html#section-runestone-testing-3" class="internal"><span class="codenumber">2.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="section-deprecations.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Deprecations</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter contains-active">
+<div class="toc-title-box"><a href="sample-ww-chapter-6.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-solutions active"><div class="toc-title-box"><a href="sample-ww-chapter-6-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Hints, Answers, and Solutions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="solutions" id="sample-ww-chapter-6-1">
+<h2 class="heading">
+<span class="type">Appendix</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">A</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Hints, Answers, and Solutions</span>
+</h2>
+<h3 class="heading hide-type" title="Section 1.1: Arithmetic">
+<span class="codenumber">1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Instructive Examples</span><br><span class="codenumber">1.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Arithmetic</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#integer-addition" aria-label="Back to Checkpoint 1.1.1. Adding Single-Digit Integers."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Adding Single-Digit Integers.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.1.1"><a href="#extracted-integer-addition-1-2" title="Copy heading and permalink for Answer 1.1.1.1" aria-label="Copy heading and permalink for Answer 1.1.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(6 + 1 = {7}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.1.1"><a href="#extracted-integer-addition-1-3" title="Copy heading and permalink for Solution 1.1.1.1" aria-label="Copy heading and permalink for Solution 1.1.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#integer-addition-with-seed" aria-label="Back to Checkpoint 1.1.2. Declaring a Problem Seed."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Declaring a Problem Seed.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(13\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-with-seed-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.2.1"><a href="#extracted-integer-addition-with-seed-1-2" title="Copy heading and permalink for Answer 1.1.2.1" aria-label="Copy heading and permalink for Answer 1.1.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(5 + 8 = {13}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-with-seed-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.2.1"><a href="#extracted-integer-addition-with-seed-1-3" title="Copy heading and permalink for Solution 1.1.2.1" aria-label="Copy heading and permalink for Solution 1.1.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#integer-addition-with-control-seed" aria-label="Back to Checkpoint 1.1.3. Controlling Randomness."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Controlling Randomness.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-with-control-seed-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.3.1"><a href="#extracted-integer-addition-with-control-seed-1-2" title="Copy heading and permalink for Answer 1.1.3.1" aria-label="Copy heading and permalink for Answer 1.1.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(1 + 2 = {3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-integer-addition-with-control-seed-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.3.1"><a href="#extracted-integer-addition-with-control-seed-1-3" title="Copy heading and permalink for Solution 1.1.3.1" aria-label="Copy heading and permalink for Solution 1.1.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#special-answer-checking" aria-label="Back to Checkpoint 1.1.4. Special Answer Checking."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special Answer Checking.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(x^{8}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-special-answer-checking-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.4.1"><a href="#extracted-special-answer-checking-1-2" title="Copy heading and permalink for Answer 1.1.4.1" aria-label="Copy heading and permalink for Answer 1.1.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We <em class="emphasis">add</em> the exponents as follows, while including a gratuitous reference to the quadratic formula:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-special-answer-checking-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{aligned}
+{x^{5}x^{3}}\amp =x^{5+3}\amp \text{Theorem 1.2.1}\\
+\amp =x^{8}
+\end{aligned}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-special-answer-checking-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.4.1"><a href="#extracted-special-answer-checking-1-3" title="Copy heading and permalink for Solution 1.1.4.1" aria-label="Copy heading and permalink for Solution 1.1.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#using-hints" aria-label="Back to Checkpoint 1.1.5. Using Hints."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Hints.</span></a></h4>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="para">Factor the number inside the radical.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-using-hints-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 1.1.5.1"><a href="#extracted-using-hints-1-2" title="Copy heading and permalink for Hint 1.1.5.1" aria-label="Copy heading and permalink for Hint 1.1.5.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(4\sqrt{3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-using-hints-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.5.1"><a href="#extracted-using-hints-1-3" title="Copy heading and permalink for Answer 1.1.5.1" aria-label="Copy heading and permalink for Answer 1.1.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+{\sqrt{48}}=\sqrt{4^2\cdot 3}=4\sqrt{3}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-using-hints-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.1.5.1"><a href="#extracted-using-hints-1-4" title="Copy heading and permalink for Solution 1.1.5.1" aria-label="Copy heading and permalink for Solution 1.1.5.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#no-random" aria-label="Back to Checkpoint 1.1.6. No Randomization."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">No Randomization.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-no-random-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.6.1"><a href="#extracted-no-random-1-2" title="Copy heading and permalink for Answer 1.1.6.1" aria-label="Copy heading and permalink for Answer 1.1.6.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#local-pg" aria-label="Back to Checkpoint 1.1.7. Local PG."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Local PG.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(6\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-local-pg-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.7.1"><a href="#extracted-local-pg-1-2" title="Copy heading and permalink for Answer 1.1.7.1" aria-label="Copy heading and permalink for Answer 1.1.7.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-2.html#local-pg-file" aria-label="Back to Checkpoint 1.1.8. Local PG File."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Local PG File.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-local-pg-file-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.1.8.1"><a href="#extracted-local-pg-file-1-2" title="Copy heading and permalink for Answer 1.1.8.1" aria-label="Copy heading and permalink for Answer 1.1.8.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 1.2: The Quadratic Formula">
+<span class="codenumber">1.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Quadratic Formula</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="section-the-quadratic-formula.html#quadratic-equation" aria-label="Back to Checkpoint 1.2.2. Solving Quadratic Equations."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solving Quadratic Equations.</span></a></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.2.a: Identify Coefficients"><a href="section-the-quadratic-formula.html#extracted-quadratic-equation-1-2" aria-label="Back to 1.2.2.a Identify Coefficients."><span class="codenumber">1.2.2.a</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identify Coefficients.</span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.2.1"><a href="#extracted-quadratic-equation-1-2-3" title="Copy heading and permalink for Answer 1.2.2.1" aria-label="Copy heading and permalink for Answer 1.2.2.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.2.2"><a href="#extracted-quadratic-equation-1-2-4" title="Copy heading and permalink for Answer 1.2.2.2" aria-label="Copy heading and permalink for Answer 1.2.2.2">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.2.3"><a href="#extracted-quadratic-equation-1-2-5" title="Copy heading and permalink for Answer 1.2.2.3" aria-label="Copy heading and permalink for Answer 1.2.2.3">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Take the coefficient of <span class="process-math">\(x^2\)</span> for the value of <span class="process-math">\(a\text{,}\)</span> the coefficient of <span class="process-math">\(x\)</span> for <span class="process-math">\(b\text{,}\)</span> and the constant for <span class="process-math">\(c\text{.}\)</span> <em class="emphasis">In this case</em>, they are <span class="process-math">\(a = {2}\text{,}\)</span> <span class="process-math">\(b = {-5}\text{,}\)</span> <span class="process-math">\(c = {-12}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.2.1"><a href="#extracted-quadratic-equation-1-2-6" title="Copy heading and permalink for Solution 1.2.2.1" aria-label="Copy heading and permalink for Solution 1.2.2.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.2.b: Use the Quadratic Formula"><a href="section-the-quadratic-formula.html#extracted-quadratic-equation-1-3" aria-label="Back to 1.2.2.b Use the Quadratic Formula."><span class="codenumber">1.2.2.b</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Use the Quadratic Formula.</span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\left\{4,\frac{-3}{2}\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.2.1"><a href="#extracted-quadratic-equation-1-3-3" title="Copy heading and permalink for Answer 1.2.2.1" aria-label="Copy heading and permalink for Answer 1.2.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Recall that the quadratic formula is given in Theorem 1.2.1.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">You already identified <span class="process-math">\(a = {2}\text{,}\)</span> <span class="process-math">\(b = {-5}\text{,}\)</span> and <span class="process-math">\(c = {-12}\text{,}\)</span> so the results are:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-5\right)+\sqrt{\left(-5\right)^{2}-4\cdot 2\cdot \left(-12\right)}}{2\cdot 2}} = {4}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">or<div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-5\right)-\sqrt{\left(-5\right)^{2}-4\cdot 2\cdot \left(-12\right)}}{2\cdot 2}} = {-{\frac{3}{2}}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-quadratic-equation-1-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.2.1"><a href="#extracted-quadratic-equation-1-3-4" title="Copy heading and permalink for Solution 1.2.2.1" aria-label="Copy heading and permalink for Solution 1.2.2.1">🔗</a></div>
+</div></details>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-the-quadratic-formula.html#nested-tasks" aria-label="Back to Checkpoint 1.2.3. Nested tasks."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Nested tasks.</span></a></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.3.a: Identify Coefficients"><a href="section-the-quadratic-formula.html#extracted-nested-tasks-1-2" aria-label="Back to 1.2.3.a Identify Coefficients."><span class="codenumber">1.2.3.a</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identify Coefficients.</span></a></h5>
+<article class="exercise-like"><h6 class="heading hide-type" title="Task 1.2.3.a.i"><a href="section-the-quadratic-formula.html#extracted-nested-tasks-1-2-3" aria-label="Back to 1.2.3.a.i"><span class="codenumber">1.2.3.a.i</span></a></h6>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(3\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.3.1"><a href="#extracted-nested-tasks-1-2-3-2" title="Copy heading and permalink for Answer 1.2.3.1" aria-label="Copy heading and permalink for Answer 1.2.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Take the coefficient of <span class="process-math">\(x^2\)</span> for the value of <span class="process-math">\(a\text{.}\)</span> <em class="emphasis">In this case</em>, <span class="process-math">\(a = {3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#extracted-nested-tasks-1-2-3-3" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h6 class="heading hide-type" title="Task 1.2.3.a.ii"><a href="section-the-quadratic-formula.html#extracted-nested-tasks-1-2-4" aria-label="Back to 1.2.3.a.ii"><span class="codenumber">1.2.3.a.ii</span></a></h6>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-16\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.3.1"><a href="#extracted-nested-tasks-1-2-4-2" title="Copy heading and permalink for Answer 1.2.3.1" aria-label="Copy heading and permalink for Answer 1.2.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Take the coefficient of <span class="process-math">\(x\)</span> for the value of <span class="process-math">\(b\text{.}\)</span> <em class="emphasis">In this case</em>, <span class="process-math">\(b = {-16}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#extracted-nested-tasks-1-2-4-3" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h6 class="heading hide-type" title="Task 1.2.3.a.iii"><a href="section-the-quadratic-formula.html#extracted-nested-tasks-1-2-5" aria-label="Back to 1.2.3.a.iii"><span class="codenumber">1.2.3.a.iii</span></a></h6>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.3.1"><a href="#extracted-nested-tasks-1-2-5-2" title="Copy heading and permalink for Answer 1.2.3.1" aria-label="Copy heading and permalink for Answer 1.2.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Take the constant term for the value of <span class="process-math">\(c\text{.}\)</span> <em class="emphasis">In this case</em>, <span class="process-math">\(c = {-12}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-2-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#extracted-nested-tasks-1-2-5-3" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
+</div></details>
+</div></article></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.3.b: Use the Quadratic Formula"><a href="section-the-quadratic-formula.html#extracted-nested-tasks-1-3" aria-label="Back to 1.2.3.b Use the Quadratic Formula."><span class="codenumber">1.2.3.b</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Use the Quadratic Formula.</span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\left\{6,\frac{-2}{3}\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.3.1"><a href="#extracted-nested-tasks-1-3-3" title="Copy heading and permalink for Answer 1.2.3.1" aria-label="Copy heading and permalink for Answer 1.2.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Recall that the quadratic formula is given in Theorem 1.2.1.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">You already identified <span class="process-math">\(a = {3}\text{,}\)</span> <span class="process-math">\(b = {-16}\text{,}\)</span> and <span class="process-math">\(c = {-12}\text{,}\)</span> so the results are:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-16\right)+\sqrt{\left(-16\right)^{2}-4\cdot 3\cdot \left(-12\right)}}{2\cdot 3}} = {6}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">or<div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-16\right)-\sqrt{\left(-16\right)^{2}-4\cdot 3\cdot \left(-12\right)}}{2\cdot 3}} = {-{\frac{2}{3}}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-nested-tasks-1-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.3.1"><a href="#extracted-nested-tasks-1-3-4" title="Copy heading and permalink for Solution 1.2.3.1" aria-label="Copy heading and permalink for Solution 1.2.3.1">🔗</a></div>
+</div></details>
+</div></article></article>
+<article class="exercise-like"><h4 class="heading"><a href="section-the-quadratic-formula.html#copy-with-tasks" aria-label="Back to Checkpoint 1.2.4. Copy a Problem with Tasks."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Copy a Problem with Tasks.</span></a></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.4.a: Identify Coefficients"><a href="section-the-quadratic-formula.html#extracted-copy-with-tasks-1-2" aria-label="Back to 1.2.4.a Identify Coefficients."><span class="codenumber">1.2.4.a</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Identify Coefficients.</span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.1"><a href="#extracted-copy-with-tasks-1-2-3" title="Copy heading and permalink for Answer 1.2.4.1" aria-label="Copy heading and permalink for Answer 1.2.4.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.2"><a href="#extracted-copy-with-tasks-1-2-4" title="Copy heading and permalink for Answer 1.2.4.2" aria-label="Copy heading and permalink for Answer 1.2.4.2">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-25\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.3"><a href="#extracted-copy-with-tasks-1-2-5" title="Copy heading and permalink for Answer 1.2.4.3" aria-label="Copy heading and permalink for Answer 1.2.4.3">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Take the coefficient of <span class="process-math">\(x^2\)</span> for the value of <span class="process-math">\(a\text{,}\)</span> the coefficient of <span class="process-math">\(x\)</span> for <span class="process-math">\(b\text{,}\)</span> and the constant for <span class="process-math">\(c\text{.}\)</span> <em class="emphasis">In this case</em>, they are <span class="process-math">\(a = {2}\text{,}\)</span> <span class="process-math">\(b = {-5}\text{,}\)</span> <span class="process-math">\(c = {-25}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.4.1"><a href="#extracted-copy-with-tasks-1-2-6" title="Copy heading and permalink for Solution 1.2.4.1" aria-label="Copy heading and permalink for Solution 1.2.4.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 1.2.4.b: Use the Quadratic Formula"><a href="section-the-quadratic-formula.html#extracted-copy-with-tasks-1-3" aria-label="Back to 1.2.4.b Use the Quadratic Formula."><span class="codenumber">1.2.4.b</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Use the Quadratic Formula.</span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\left\{5,\frac{-5}{2}\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.2.4.1"><a href="#extracted-copy-with-tasks-1-3-3" title="Copy heading and permalink for Answer 1.2.4.1" aria-label="Copy heading and permalink for Answer 1.2.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Recall that the quadratic formula is given in Theorem 1.2.1.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">You already identified <span class="process-math">\(a = {2}\text{,}\)</span> <span class="process-math">\(b = {-5}\text{,}\)</span> and <span class="process-math">\(c = {-25}\text{,}\)</span> so the results are:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-5\right)+\sqrt{\left(-5\right)^{2}-4\cdot 2\cdot \left(-25\right)}}{2\cdot 2}} = {5}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">or<div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+x = {\frac{-\left(-5\right)-\sqrt{\left(-5\right)^{2}-4\cdot 2\cdot \left(-25\right)}}{2\cdot 2}} = {-{\frac{5}{2}}}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-copy-with-tasks-1-3-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.2.4.1"><a href="#extracted-copy-with-tasks-1-3-4" title="Copy heading and permalink for Solution 1.2.4.1" aria-label="Copy heading and permalink for Solution 1.2.4.1">🔗</a></div>
+</div></details>
+</div></article></article><h3 class="heading hide-type" title="Section 1.3: Open Problem Library">
+<span class="codenumber">1.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Open Problem Library</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-4.html#cylinder-volume" aria-label="Back to Checkpoint 1.3.1. Cylinder Volume."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Cylinder Volume.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(360\pi\ {\rm m^{3}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.1"><a href="#extracted-cylinder-volume-1-2" title="Copy heading and permalink for Answer 1.3.1.1" aria-label="Copy heading and permalink for Answer 1.3.1.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(1130.97\ {\rm m^{3}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.3.1.2"><a href="#extracted-cylinder-volume-1-3" title="Copy heading and permalink for Answer 1.3.1.2" aria-label="Copy heading and permalink for Answer 1.3.1.2">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">We use <span class="process-math">\(r\)</span> to represent the base’s radius, and <span class="process-math">\(h\)</span> to represent the cylinder’s height.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">A cylinder’s volume formula is <span class="process-math">\(V= (\text{base area}) \cdot \text{height}\text{.}\)</span> A cylinder’s base is a circle, with its area formula <span class="process-math">\(A = \pi r^{2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Putting together these two formulas, we have a cylinder’s volume formula:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<span class="process-math">\(\displaystyle{ V= \pi r^{2} h }\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Throughout these computations, all quantities have units attached, and we only show them in the final step.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<ol class="lower-alpha ol-marker-1" id="extracted-cylinder-volume-1-4-6-1">
+<li>
+<div class="para">Using the volume formula, we have:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<span class="process-math">\(\displaystyle{\begin{aligned}
+V \amp  = \pi r^{2} h \\
+\amp  = \pi \cdot 6^{2} \cdot 10 \\
+\amp  = \pi \cdot 360 \\
+\amp  = 360 \pi \textrm{ m}^3
+\end{aligned}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Don’t forget the volume unit <span class="process-math">\(\textrm{m}^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.a"><a href="#extracted-cylinder-volume-1-4-6-1-1" title="Copy heading and permalink for Item 1.3.1.a" aria-label="Copy heading and permalink for Item 1.3.1.a">🔗</a></div>
+</li>
+<li>
+<div class="para">To find the decimal version, we replace <span class="process-math">\(\pi\)</span> with its decimal value, and we have:<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">
+<span class="process-math">\(\displaystyle{\begin{aligned}[t]
+V\amp  = 360 \pi \\
+\amp  \approx 360 \cdot 3.14\ldots \\
+\amp  \approx {1130.97\ {\rm m^{3}}}
+\end{aligned}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Don’t forget the volume unit <span class="process-math">\(\textrm{m}^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.b"><a href="#extracted-cylinder-volume-1-4-6-1-2" title="Copy heading and permalink for Item 1.3.1.b" aria-label="Copy heading and permalink for Item 1.3.1.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-cylinder-volume-1-4-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.3.1.1"><a href="#extracted-cylinder-volume-1-4" title="Copy heading and permalink for Solution 1.3.1.1" aria-label="Copy heading and permalink for Solution 1.3.1.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Exercises 1.4.2: WeBWorK Exercises">
+<span class="codenumber">1.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antidifferentiation</span><br><span class="codenumber">1.4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">WeBWorK Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-5.html#ww-antiderivatives" aria-label="Back to 1.4.2.1. Antiderivatives."><span class="codenumber">1.4.2.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Antiderivatives.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(28.3885180688169\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-ww-antiderivatives-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.4.2.1.1"><a href="#extracted-ww-antiderivatives-1-2" title="Copy heading and permalink for Answer 1.4.2.1.1" aria-label="Copy heading and permalink for Answer 1.4.2.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">SOLUTION<div class="autopermalink" data-description="Paragraph"><a href="#extracted-ww-antiderivatives-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{array}{rcl} \displaystyle \int_0^{2} (4 e^x+2 \sin x)\, dx \amp =\amp   
+\displaystyle  4 e^x-2 \cos x  \Big]_0^{2}
+\\ \amp =\amp  (4 e^{2} - 2 \cos 2) - (4 e^0 - 2 \cos0 ) 
+\\ \amp =\amp  4 e^{2} - 2 \cos 2 - 2 
+\end{array}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#extracted-ww-antiderivatives-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.4.2.1.1"><a href="#extracted-ww-antiderivatives-1-3" title="Copy heading and permalink for Solution 1.4.2.1.1" aria-label="Copy heading and permalink for Solution 1.4.2.1.1">🔗</a></div>
+</div></details>
+</div></article><div class="exercisegroup"><div class="exercisegroup-exercises cols2 multicolumn">
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-5.html#antiderivative-sin" aria-label="Back to 1.4.2.4."><span class="codenumber">1.4.2.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-\cos\mathopen{}\left(x\right)+C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-antiderivative-sin-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.4.2.4.1"><a href="#extracted-antiderivative-sin-1-2" title="Copy heading and permalink for Answer 1.4.2.4.1" aria-label="Copy heading and permalink for Answer 1.4.2.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-5.html#antiderivative-exp" aria-label="Back to 1.4.2.5."><span class="codenumber">1.4.2.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(e^{x}+C\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-antiderivative-exp-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.4.2.5.1"><a href="#extracted-antiderivative-exp-1-2" title="Copy heading and permalink for Answer 1.4.2.5.1" aria-label="Copy heading and permalink for Answer 1.4.2.5.1">🔗</a></div>
+</div></details>
+</div></article>
+</div></div>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-5.html#ww-use-the-definition-of-the-derivative" aria-label="Back to 1.4.2.6. Show Your Work."><span class="codenumber">1.4.2.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Show Your Work.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(2x\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-ww-use-the-definition-of-the-derivative-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.4.2.6.1"><a href="#extracted-ww-use-the-definition-of-the-derivative-1-2" title="Copy heading and permalink for Answer 1.4.2.6.1" aria-label="Copy heading and permalink for Answer 1.4.2.6.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 1.6: Multiple Choice">
+<span class="codenumber">1.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple Choice</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-7.html#multiple-choice" aria-label="Back to Checkpoint 1.6.1. Drop-down/Popup."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Drop-down/Popup.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{is not}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.1.1"><a href="#extracted-multiple-choice-1-2" title="Copy heading and permalink for Answer 1.6.1.1" aria-label="Copy heading and permalink for Answer 1.6.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">If <span class="process-math">\(\sqrt{2}\)</span> were rational, then <span class="process-math">\(\sqrt{2}=\frac{p}{q}\text{,}\)</span> with <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> coprime. But then <span class="process-math">\(2q^2=p^2\text{.}\)</span> By <a class="external" href="" target="_blank">the Fundamental Theorem of Arithmetic</a>, the power of <span class="process-math">\(2\)</span> dividing the left side is odd, while the power of <span class="process-math">\(2\)</span> dividing the right side is even. This is a contradiction, so <span class="process-math">\(\sqrt{2}\)</span> is not rational.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.1.1"><a href="#extracted-multiple-choice-1-3" title="Copy heading and permalink for Solution 1.6.1.1" aria-label="Copy heading and permalink for Solution 1.6.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-7.html#choose-one" aria-label="Back to Checkpoint 1.6.2. Choose one."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choose one.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{The Fundamental ... of Calculus}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-choose-one-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.2.1"><a href="#extracted-choose-one-1-2" title="Copy heading and permalink for Answer 1.6.2.1" aria-label="Copy heading and permalink for Answer 1.6.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The correct answer is The Fundamental ... of Calculus.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-choose-one-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.2.1"><a href="#extracted-choose-one-1-3" title="Copy heading and permalink for Solution 1.6.2.1" aria-label="Copy heading and permalink for Solution 1.6.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-7.html#options-subset" aria-label="Back to Checkpoint 1.6.3. Choose a Subset of Options."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choose a Subset of Options.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{Choice 1, Choice 3, Choice 5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.3.1"><a href="#extracted-options-subset-1-2" title="Copy heading and permalink for Answer 1.6.3.1" aria-label="Copy heading and permalink for Answer 1.6.3.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The correct answer is Choice 1, Choice 3, Choice 5.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.3.1"><a href="#extracted-options-subset-1-3" title="Copy heading and permalink for Solution 1.6.3.1" aria-label="Copy heading and permalink for Solution 1.6.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-7.html#options-subset-auto-label" aria-label="Back to Checkpoint 1.6.4. Choose a Subset of Options with Automated Labeling."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choose a Subset of Options with Automated Labeling.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{A, B, D}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-auto-label-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.4.1"><a href="#extracted-options-subset-auto-label-1-2" title="Copy heading and permalink for Answer 1.6.4.1" aria-label="Copy heading and permalink for Answer 1.6.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The correct answer is A, B, D.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-auto-label-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.4.1"><a href="#extracted-options-subset-auto-label-1-3" title="Copy heading and permalink for Solution 1.6.4.1" aria-label="Copy heading and permalink for Solution 1.6.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-7.html#options-subset-explicit-labeling" aria-label="Back to Checkpoint 1.6.5. Choose a Subset of Options with Explicit Labeling."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Choose a Subset of Options with Explicit Labeling.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{SUSHI, TACO, PIZZA}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-explicit-labeling-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.6.5.1"><a href="#extracted-options-subset-explicit-labeling-1-2" title="Copy heading and permalink for Answer 1.6.5.1" aria-label="Copy heading and permalink for Answer 1.6.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The correct answer is SUSHI, TACO, PIZZA.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-options-subset-explicit-labeling-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 1.6.5.1"><a href="#extracted-options-subset-explicit-labeling-1-3" title="Copy heading and permalink for Solution 1.6.5.1" aria-label="Copy heading and permalink for Solution 1.6.5.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 1.7: Tables">
+<span class="codenumber">1.7</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tables</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-8.html#table-completion" aria-label="Back to Checkpoint 1.7.1. Complete this Table."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.7.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Complete this Table.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(48\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-table-completion-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.7.1.1"><a href="#extracted-table-completion-1-2" title="Copy heading and permalink for Answer 1.7.1.1" aria-label="Copy heading and permalink for Answer 1.7.1.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(36\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-table-completion-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.7.1.2"><a href="#extracted-table-completion-1-3" title="Copy heading and permalink for Answer 1.7.1.2" aria-label="Copy heading and permalink for Answer 1.7.1.2">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(72\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-table-completion-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.7.1.3"><a href="#extracted-table-completion-1-4" title="Copy heading and permalink for Answer 1.7.1.3" aria-label="Copy heading and permalink for Answer 1.7.1.3">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(54\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-table-completion-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.7.1.4"><a href="#extracted-table-completion-1-5" title="Copy heading and permalink for Answer 1.7.1.4" aria-label="Copy heading and permalink for Answer 1.7.1.4">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="r m b3 r3 l0 t0 lines"><span class="process-math">\(\times\)</span></td>
+<td class="c m b3 r1 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+<td class="c m b3 r1 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="r m b1 r3 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(48\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(36\)</span></td>
+</tr>
+<tr>
+<td class="r m b1 r3 l0 t0 lines"><span class="process-math">\(9\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(72\)</span></td>
+<td class="c m b1 r1 l0 t0 lines"><span class="process-math">\(54\)</span></td>
+</tr>
+</table></div>
+<div class="autopermalink" data-description="Solution 1.7.1.1"><a href="#extracted-table-completion-1-6" title="Copy heading and permalink for Solution 1.7.1.1" aria-label="Copy heading and permalink for Solution 1.7.1.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 1.8: Graphics in Exercises">
+<span class="codenumber">1.8</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphics in Exercises</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-9.html#static-latex-image" aria-label="Back to Checkpoint 1.8.1. A static &lt;latex-image&gt; graph."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A static <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\mathop{\rm C}\nolimits\mathopen{}\left(n+1,2\right)\hbox{ or }\frac{\left(n+1\right)n}{2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-static-latex-image-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.1.1"><a href="#extracted-static-latex-image-1-2" title="Copy heading and permalink for Answer 1.8.1.1" aria-label="Copy heading and permalink for Answer 1.8.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-9.html#randomized-latex-image" aria-label="Back to Checkpoint 1.8.2. A randomized &lt;latex-image&gt; graph."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A randomized <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(24\ {\rm cm^{2}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-randomized-latex-image-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.2.1"><a href="#extracted-randomized-latex-image-1-2" title="Copy heading and permalink for Answer 1.8.2.1" aria-label="Copy heading and permalink for Answer 1.8.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-9.html#latex-image-with-preamble" aria-label="Back to Checkpoint 1.8.3. A &lt;latex-image&gt; graph affected by &lt;latex-image-preamble&gt;."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">A <code class="code-inline tex2jax_ignore">&lt;latex-image&gt;</code> graph affected by <code class="code-inline tex2jax_ignore">&lt;latex-image-preamble&gt;</code>.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-1, 1, 2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-latex-image-with-preamble-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.3.1"><a href="#extracted-latex-image-with-preamble-1-2" title="Copy heading and permalink for Answer 1.8.3.1" aria-label="Copy heading and permalink for Answer 1.8.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-4-9.html#solving-with-graph" aria-label="Back to Checkpoint 1.8.5. Solve using a graph."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.8.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Solve using a graph.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\left\{2\right\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-solving-with-graph-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.5.1"><a href="#extracted-solving-with-graph-1-2" title="Copy heading and permalink for Answer 1.8.5.1" aria-label="Copy heading and permalink for Answer 1.8.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The graph reveals that the solution set to <span class="process-math">\(f(x)=1\)</span> is <span class="process-math">\({\left\{2\right\}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-solving-with-graph-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/webwork/images/solving-with-graph-image-2.png" class="contained" alt="a plot of a curve on a cartesian set of axes; the x axis ranges from -1 to 4, and the y-axis ranges from -1 to 4; the curve enters from the left, below the x-axis, and curves upward and to the right until it reaches the point (0,0); from here it continues predominantly rightward for a bit, bending slightly upward more and more as it progresses; it passes through the points (2,1) and (2.51984,2) before leaving the graph moving more and more upward and to the right; a horizontal line segment moves rightward from y=1 on the y-axis until it reaches a point on the curve; a vertical line segment moves down from this point to x=2 on the x-axis."></div>
+<div class="autopermalink" data-description="Solution 1.8.5.1"><a href="#extracted-solving-with-graph-1-3" title="Copy heading and permalink for Solution 1.8.5.1" aria-label="Copy heading and permalink for Solution 1.8.5.1">🔗</a></div>
+</div></details>
+</div></article><h4 class="heading hide-type" title="Exercises 1.8"><span class="title">Exercises</span></h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises cols2 multicolumn">
+<article class="exercise-like"><h5 class="heading"><a href="sample-ww-chapter-4-9.html#box-diagonal-five" aria-label="Back to 1.8.1."><span class="codenumber">1.8.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-box-diagonal-five-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.1.1"><a href="#extracted-box-diagonal-five-1-2" title="Copy heading and permalink for Answer 1.8.1.1" aria-label="Copy heading and permalink for Answer 1.8.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/box-diagonal-five-image-1.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Solution 1.8.1.1"><a href="#extracted-box-diagonal-five-1-3" title="Copy heading and permalink for Solution 1.8.1.1" aria-label="Copy heading and permalink for Solution 1.8.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h5 class="heading"><a href="sample-ww-chapter-4-9.html#box-diagonal-thirteen" aria-label="Back to 1.8.2."><span class="codenumber">1.8.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(13\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-box-diagonal-thirteen-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 1.8.2.1"><a href="#extracted-box-diagonal-thirteen-1-2" title="Copy heading and permalink for Answer 1.8.2.1" aria-label="Copy heading and permalink for Answer 1.8.2.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/webwork/images/box-diagonal-thirteen-image-1.svg" role="img" class="contained"></div>
+<div class="autopermalink" data-description="Solution 1.8.2.1"><a href="#extracted-box-diagonal-thirteen-1-3" title="Copy heading and permalink for Solution 1.8.2.1" aria-label="Copy heading and permalink for Solution 1.8.2.1">🔗</a></div>
+</div></details>
+</div></article>
+</div></div>
+<h3 class="heading hide-type" title="Section 2.1: PGML Formatting and Verbatim Calisthenics">
+<span class="codenumber">2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Technical Examples</span><br><span class="codenumber">2.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PGML Formatting and Verbatim Calisthenics</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-2.html#mathobject-string-answers" aria-label="Back to Checkpoint 2.1.2."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\({\verb!&lt;&gt;&amp;'";!}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-mathobject-string-answers-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.1.2.1"><a href="#extracted-mathobject-string-answers-1-2" title="Copy heading and permalink for Answer 2.1.2.1" aria-label="Copy heading and permalink for Answer 2.1.2.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\({\verb!#%&amp;&lt;&gt;\^_`|~!}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-mathobject-string-answers-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.1.2.2"><a href="#extracted-mathobject-string-answers-1-3" title="Copy heading and permalink for Answer 2.1.2.2" aria-label="Copy heading and permalink for Answer 2.1.2.2">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\({\text{\$\{\}}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-mathobject-string-answers-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.1.2.3"><a href="#extracted-mathobject-string-answers-1-4" title="Copy heading and permalink for Answer 2.1.2.3" aria-label="Copy heading and permalink for Answer 2.1.2.3">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-mathobject-string-answers-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.1.2.4"><a href="#extracted-mathobject-string-answers-1-5" title="Copy heading and permalink for Answer 2.1.2.4" aria-label="Copy heading and permalink for Answer 2.1.2.4">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\({\text{!()*+,-./:=?@[]}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-mathobject-string-answers-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.1.2.5"><a href="#extracted-mathobject-string-answers-1-6" title="Copy heading and permalink for Answer 2.1.2.5" aria-label="Copy heading and permalink for Answer 2.1.2.5">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 2.2: Subject Area Templates">
+<span class="codenumber">2.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subject Area Templates</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-3.html#number-or-function" aria-label="Back to Checkpoint 2.2.1. Answer is a number or a function."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Answer is a number or a function.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(-2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-number-or-function-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.1"><a href="#extracted-number-or-function-1-2" title="Copy heading and permalink for Answer 2.2.1.1" aria-label="Copy heading and permalink for Answer 2.2.1.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\frac{7-2x^{7}}{x}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-number-or-function-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.2"><a href="#extracted-number-or-function-1-3" title="Copy heading and permalink for Answer 2.2.1.2" aria-label="Copy heading and permalink for Answer 2.2.1.2">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Solution explanation goes here.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-number-or-function-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.1.1"><a href="#extracted-number-or-function-1-4" title="Copy heading and permalink for Solution 2.2.1.1" aria-label="Copy heading and permalink for Solution 2.2.1.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-3.html#function-with-domain-issues" aria-label="Back to Checkpoint 2.2.2. Answer is a function with domain issues."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Answer is a function with domain issues.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\sqrt{x-4}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-function-with-domain-issues-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.1"><a href="#extracted-function-with-domain-issues-1-2" title="Copy heading and permalink for Answer 2.2.2.1" aria-label="Copy heading and permalink for Answer 2.2.2.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\ln\mathopen{}\left(\left|\frac{x}{x-4}\right|\right)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-function-with-domain-issues-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.2"><a href="#extracted-function-with-domain-issues-1-3" title="Copy heading and permalink for Answer 2.2.2.2" aria-label="Copy heading and permalink for Answer 2.2.2.2">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">Solution explanation goes here.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-function-with-domain-issues-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.2.1"><a href="#extracted-function-with-domain-issues-1-4" title="Copy heading and permalink for Solution 2.2.2.1" aria-label="Copy heading and permalink for Solution 2.2.2.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-3.html#multiple-choice-popup-or-radio-buttons" aria-label="Back to Checkpoint 2.2.3. Multiple Choice by Popup, Radio Buttons, or Checkboxes."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Multiple Choice by Popup, Radio Buttons, or Checkboxes.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{Blue}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.1"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-2" title="Copy heading and permalink for Answer 2.2.3.1" aria-label="Copy heading and permalink for Answer 2.2.3.1">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{Blue}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.2"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-3" title="Copy heading and permalink for Answer 2.2.3.2" aria-label="Copy heading and permalink for Answer 2.2.3.2">🔗</a></div>
+</div></details>
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{Blue}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.3"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-4" title="Copy heading and permalink for Answer 2.2.3.3" aria-label="Copy heading and permalink for Answer 2.2.3.3">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The correct answer is Blue.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The correct answer is Blue.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">The correct answer is Blue.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.3.1"><a href="#extracted-multiple-choice-popup-or-radio-buttons-1-5" title="Copy heading and permalink for Solution 2.2.3.1" aria-label="Copy heading and permalink for Solution 2.2.3.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-3.html#radio-buttons-with-math" aria-label="Back to Checkpoint 2.2.4."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(\text{Choice 3}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-radio-buttons-with-math-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.4.1"><a href="#extracted-radio-buttons-with-math-1-2" title="Copy heading and permalink for Answer 2.2.4.1" aria-label="Copy heading and permalink for Answer 2.2.4.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The answer is Choice 3.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-radio-buttons-with-math-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.4.1"><a href="#extracted-radio-buttons-with-math-1-3" title="Copy heading and permalink for Solution 2.2.4.1" aria-label="Copy heading and permalink for Solution 2.2.4.1">🔗</a></div>
+</div></details>
+</div></article>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-3.html#tables" aria-label="Back to Checkpoint 2.2.5. Tables."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tables.</span></a></h4>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(5\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-tables-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.5.1"><a href="#extracted-tables-1-2" title="Copy heading and permalink for Answer 2.2.5.1" aria-label="Copy heading and permalink for Answer 2.2.5.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para">The missing number is 5.<div class="autopermalink" data-description="Paragraph"><a href="#extracted-tables-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Solution 2.2.5.1"><a href="#extracted-tables-1-3" title="Copy heading and permalink for Solution 2.2.5.1" aria-label="Copy heading and permalink for Solution 2.2.5.1">🔗</a></div>
+</div></details>
+</div></article><h3 class="heading hide-type" title="Section 2.3: Stress Tests">
+<span class="codenumber">2.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Stress Tests</span>
+</h3>
+<article class="exercise-like"><h4 class="heading"><a href="sample-ww-chapter-5-4.html#ptx-source-with-server-images" aria-label="Back to Checkpoint 2.3.1. PTX problem source with server-generated images."><span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">PTX problem source with server-generated images.</span></a></h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 2.3.1.a"><a href="sample-ww-chapter-5-4.html#extracted-ptx-source-with-server-images-1-1" aria-label="Back to 2.3.1.a"><span class="codenumber">2.3.1.a</span></a></h5>
+<div class="solutions">
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/ptx-source-with-server-images-image-3.png" class="contained"></div>
+<div class="autopermalink" data-description="Solution 2.3.1.1"><a href="#extracted-ptx-source-with-server-images-1-1-2" title="Copy heading and permalink for Solution 2.3.1.1" aria-label="Copy heading and permalink for Solution 2.3.1.1">🔗</a></div>
+</div></details>
+</div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 2.3.1.b"><a href="sample-ww-chapter-5-4.html#extracted-ptx-source-with-server-images-1-2" aria-label="Back to 2.3.1.b"><span class="codenumber">2.3.1.b</span></a></h5>
+<div class="solutions">
+<details class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="hint solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/ptx-source-with-server-images-image-7.png" class="contained"></div>
+<div class="autopermalink" data-description="Hint 2.3.1.1"><a href="#extracted-ptx-source-with-server-images-1-2-2" title="Copy heading and permalink for Hint 2.3.1.1" aria-label="Copy heading and permalink for Hint 2.3.1.1">🔗</a></div>
+</div></details>
+<details class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/webwork/images/ptx-source-with-server-images-image-8.png" class="contained"></div>
+<div class="autopermalink" data-description="Solution 2.3.1.1"><a href="#extracted-ptx-source-with-server-images-1-2-3" title="Copy heading and permalink for Solution 2.3.1.1" aria-label="Copy heading and permalink for Solution 2.3.1.1">🔗</a></div>
+</div></details>
+</div></article></article><h3 class="heading hide-type" title="Section 2.5: Runestone Assignment Testing">
+<span class="codenumber">2.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Runestone Assignment Testing</span>
+</h3>
+<h4 class="heading hide-type" title="Exercises 2.5"><span class="title">Exercises</span></h4>
+<div class="exercisegroup"><div class="exercisegroup-exercises">
+<article class="exercise-like"><h5 class="heading"><a href="section-runestone-testing.html#an-exercisegroup-exercise" aria-label="Back to 2.5.1."><span class="codenumber">2.5.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></a></h5>
+<div class="solutions">
+<details class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para">
+<span class="process-math">\(2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#extracted-an-exercisegroup-exercise-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.5.1.1"><a href="#extracted-an-exercisegroup-exercise-1-2" title="Copy heading and permalink for Answer 2.5.1.1" aria-label="Copy heading and permalink for Answer 2.5.1.1">🔗</a></div>
+</div></details>
+</div></article>
+</div></div>
+<div class="autopermalink" data-description="Appendix A: Hints, Answers, and Solutions"><a href="#sample-ww-chapter-6-1" title="Copy heading and permalink for Appendix A: Hints, Answers, and Solutions" aria-label="Copy heading and permalink for Appendix A: Hints, Answers, and Solutions">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="sample-ww-chapter-6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

@@ -3400,7 +3400,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Programs",
-  "body": " Programs  First, some samples of programs that are not interactive. They will be syntax highlighted if a valid language is specified. Optionally, lines can be numbered and selected lines highlighted.   A static Java program with highlighted lines   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    Instead of specifying language on each program, a default can be specified at docinfo\/programs\/@language . That value will be used for any program that lacks a language attribute. This sample does not specify it's own language and is relying on the default set in this book.   Python program, relying on default programs language   def say_hello(): print(\"Hello, World!\") say_hello()    "
+  "body": " Programs  First, some samples of programs that are not interactive. They will be syntax highlighted if a valid language is specified. Optionally, lines can be numbered and selected lines highlighted.    A static Java program with highlighted lines   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    Instead of specifying language on each program, a default can be specified at docinfo\/defaults\/programs\/@language . That value will be used for any program that lacks a language attribute. This sample does not specify it's own language and is relying on the default set in this book.   Python program, relying on default programs language   def say_hello(): print(\"Hello, World!\") say_hello()     An non-interactive GDScript program, using Runestone   extends Node func _ready(): print(\"Hello, World!\")    "
 },
 {
   "id": "inactive-code-3",
@@ -3409,7 +3409,7 @@ var ptx_lunr_docs = [
   "type": "Listing",
   "number": "5.1.1",
   "title": "A static Java program with highlighted lines",
-  "body": " A static Java program with highlighted lines   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
+  "body": " A static Java program with highlighted lines   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
 },
 {
   "id": "inactive-code-5",
@@ -3421,13 +3421,22 @@ var ptx_lunr_docs = [
   "body": " Python program, relying on default programs language   def say_hello(): print(\"Hello, World!\") say_hello()   "
 },
 {
+  "id": "program-notactive-gdscript",
+  "level": "2",
+  "url": "inactive-code.html#program-notactive-gdscript",
+  "type": "Listing",
+  "number": "5.1.3",
+  "title": "An non-interactive GDScript program, using <span class=\"booktitle\">Runestone<\/span>",
+  "body": " An non-interactive GDScript program, using Runestone   extends Node func _ready(): print(\"Hello, World!\")   "
+},
+{
   "id": "activecode",
   "level": "1",
   "url": "activecode.html",
   "type": "Section",
   "number": "5.2",
   "title": "ActiveCode",
-  "body": " ActiveCode  Programs in supported languages are made interactive in HTML when interactive is set to activecode . Some languages can be made interactive on any server, while others require being served from Runestone servers. See Interactive Programs Capabilities in the PreTeXt Guide for a list of what languages are supported in which environs.   An interactive Python program, using Runestone   print(\"Hello, World!\")    Otherwise they are rendered as text with syntax coloring. Either way, if a language is not specified, docinfo\/programs\/@language will be checked to determine what language to assume the code is written in.   An interactive Python program, using Runestone   print(\"Hello, World!\")    A C program will only be interactive if hosted on a Runestone server.   An C program, interactive on a Runestone server   #include <stdio.h> int main(void) { puts(\"Hello, world!\"); }    A Java program will only be interactive if hosted on a Runestone server.   Informal Java Hello, World  A Java program, interactive on a Runestone server   \"hi\" in Java  public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }    Javascript programs are made interactive in HTML, on request.   An interactive JavaScript program, using Runestone   document.write('Hello, world!');    Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify compiler-args and linker-args or interpreter-args as appropriate to the language. Default values for those options can be set in <docinfo\/programs> - any defaults set there will be used for any program that lacks the corresponding attribute.   A C++ program with compiler-args and stdin  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane     A static Java program   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    An Octave program will also only be interactive if hosted on a Runestone server. Octave is meant to be a drop-in replacement for Matlab.   A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)    Likewise, a Kotlin program will only be interactive if hosted on a Runestone server.   A simple Kotlin program   fun main() { println(\"Hello, world!!\") }    A language not supported by Runestone Services will always be rendered static.   A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.    The highlight-lines works on ActiveCode programs, but the highlighted lines are only shown when viewing the initial code. Any version of the code that the reader has edited may have shifted lines of code and thus highlighting might affect the wrong lines, causing confusion.  def add(a, b): return a + b # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")  A program can have a <preamble> and\/or <postamble> which are added to the code that the user writes before it is run. They are visible by default, but can be made invisible with visible set to \"no\" . When visible, the code editor will prevent those regions from being modified. The indentation for lines in the preamble\/code\/postamble elements will be calculated relative to each other - make sure to indent them all to a similar extent. (In the source for the sample below, the # TODO... is intentially indented one stop extra so that the user's code is part of the add function.  <tests> are similar to <postamble> in that it represents code that is added to the users submission. However, <tests> is intended specifically for unit testing code (see examples below for unit testing in Python, Java, C++, SQL). Tests are invisble by default and can be made visible with visible set to \"yes\" . For historical reasons, the indentation of the <tests> is treated separately from the rest of the program.   A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    Here is the same Python program from the previous section, but now with a <preamble> and <postamble> that are invisible. The user will not see the code that is added to their submission. Not actually useful in this case, but it might be if you wanted to hide boilerplate setup from the reader.   A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    The following Python program is in a <listing> since we will want to reference it shortly. The program does not do very much, it just defines four variables whose values are lists of statistics. It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an language and is relying on the default one specified in <docinfo\/programs>   A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]    An ActiveCode running on the Runestone server (rather than in a browser) can be provided with attributes that are flags to influence the compiler and linker, as in this <program> recycled from before.   A Java program, interactive on a Runestone server, with compiler and linker flags   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    Now a programming exercise. The program upcoming is going to include all the code of the program preceding. This is accomplished with an include attribute on the including program whose value is the xml:id of the included program. So by running the next program, it should pass all of its three tests (for example another example using unit tests, see ). Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.  You'll see nothing that tells the reader that the one chunk of code is prefacing the other. And in static formats it might be even less obvious. So you will want to say something to alert the reader. Here it is easy: includes all the code from .  This program also makes use of autorun to execute on page load and the codelens to disable the codelens feature.   A Python program, including another   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()    Exact same exercise again, but now we include three programs. We first get the simple Hello, world! program at , then the program defining the variables with lists of statistics at , and finally the program from the appendix just to test linking to material there.  This program also makes use of hidecode to initially keep the code hidden and download to enable a file download of the program (that includes all the included code).   A Python program, including two others   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()    Here is an activecode with language set to sql uses the database to load a SQLite database file.   An SQL program that uses an SQLite database file   Select all the columns of all the rows in the test database table.    SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35    Now a C++ program that is spread across multiple files. This example will only be interactive on a Runestone server.  First, we have a .h file that defines an filename . It has an xml:id so other elements can reference it. It also has an label which is it's unique identifier in the Runestone database. (The label is intentionally different than the xml:id for demonstration purposes, but they can be the same.) The filename is used to indicate what to name to use when the contents of the element are written to a file on the server - other program code and\/or tools on the server can look for it using this name. The filename need not be unique we could have multiple programs with filename=\"add.h\" . As we will see below, the author specifies which version of a file should be used in any given location with its unique xml:id.  The <program> is inside of a <listing> so that we have a place to add a caption and so that we can reference the code sample, including that caption, with an <xref> from elsewhere. Note that the <listing> has both a <caption> and a <title> . The <caption> will be rendered with the program. The <title> will not appear locally. It will be used if an <xref> links to the <listing> using text=\"title\"   add.h (version 1)  int add(int a, int b);   Next, a .cpp file. Note that because it is part of an exercise, the label is applied to the exercise that contains it. The xml:id and filename still belong on the program itself.  It also has extra-compiler-args . These will be added to any default compiler args for the book. In this case, the -c indicates that we only want to compile this file when it is Run and not try to link it or actually run it.    You can leave this code as is or modify it. When you click Run , the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.   int add(int a, int b) { return a + b; }   Finally, the core program. add-files is used to specify (by xml:id) the files that need to be added to the program directory. compile-also specifies files that must be compiled with this source file (they will be assumed to be also part of add-files ). Notice that when using add-files to reference code we want to include, we use the xml:id of the target program - it has the contents we want to include. When making a textual reference with an <xref> we can't link to the program, as it lacks the contextual information required to create a valid reference. Instead, we should link to a listing (or some other container) that surrounds the code, like this: or  #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }  Note that there is a cross page test of add-files located in  A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing.  "
+  "body": " ActiveCode  Programs in supported languages are made interactive in HTML when interactive is set to activecode . Some languages can be made interactive on any server, while others require being served from Runestone servers. See Interactive Programs Capabilities in the PreTeXt Guide for a list of what languages are supported in which environs.   An interactive Python program, using Runestone   print(\"Hello, World!\")    Otherwise they are rendered as text with syntax coloring. Either way, if a language is not specified, docinfo\/defaults\/programs\/@language will be checked to determine what language to assume the code is written in.   An interactive Python program, using Runestone   print(\"Hello, World!\")    A C program will only be interactive if hosted on a Runestone server.   An C program, interactive on a Runestone server   #include <stdio.h> int main(void) { puts(\"Hello, world!\"); }    A GDScript program will run interactively in the browser.   An interactive GDScript program, using Runestone  Run the following code. You'll need to fix the function `get_double` that takes 1 `int` parameter and returns an `int` for the test to pass.   # Complete get_double() so that it returns twice its input. extends Node # Returns double `value`. func get_double(value: int) -> int: return value  extends PracticeTest ## L1.P1 - Double the value ## ## A \"simple\" GDPractice example: no scene state and no _test_space - just a ## direct comparison of get_double() between the practice and the solution via ## _call_all(), plus a structural guardrail from requirements.gd. const Requirements := preload(\"res:\/\/addons\/gdpractice\/tester\/requirements.gd\") ## Inputs used to compare get_double() between the practice and the solution. const TEST_VALUES: Array[int] = [0, 1, 2, 5, -3] func _build_requirements() -> void: super() Requirements.setup(_practice_base_path) _add_callable_requirement( \"get_double()'s signature must not change\", func() -> String: return ( \"\" if Requirements._check_methods() else \"Don't change get_double()'s parameters or return type - only fill in its body.\" ) ) func _build_checks() -> void: for test_value: int in TEST_VALUES: # GDScript lambdas capture local variables by value, so each closure # below keeps its own snapshot of `test_value`. _add_simple_check( \"get_double(%d) returns %d\" % [test_value, test_value * 2], func() -> String: var result := _call_all(\"get_double\", [test_value]) if result.practice != result.solution: return ( \"Expected get_double(%d) to return %d, but got %s.\" % [test_value, result.solution, result.practice] ) return \"\" )    Here's a GDScript program with some graphics.   An interactive GDScript program, with graphics  This is the first script from the Godot getting started step-by-step example . The first thing to try is adding the following code:   var speed = 400 var angular_speed = PI func _process(delta): rotation += angular_speed * delta   Then change it to the following code:   var speed = 400 var angular_speed = PI func _process(delta): rotation += angular_speed * delta var velocity = Vector2.UP.rotated(rotation) * speed position += velocity * delta     extends Sprite2D func _init(): pass  extends PracticeTest func _build_checks() -> void: var practice_slot = _practice var c1 := Check.new() c1.description = \"Run graphical program\" c1.checker = func() -> String: return \"\" checks.append_array([c1])    Here's a GDScript program with split graphics. testing making a change   An interactive GDScript program, with split graphics  This is an example of split screen code.   extends Node2D const SPEED := 200.0 func _physics_process(delta: float) -> void: if Input.is_action_pressed(\"move_right\"): position.x += 0  extends PracticeTest func _init() -> void: side_by_side = true if not InputMap.has_action(\"move_right\"): InputMap.add_action(\"move_right\") var event := InputEventKey.new() event.keycode = KEY_D InputMap.action_add_event(\"move_right\", event) func _build_requirements() -> void: super() _add_actions_requirement([\"move_right\"]) func _setup_state() -> void: _practice.position = Vector2.ZERO _solution.position = Vector2.ZERO func _setup_populate_test_space() -> void: Input.action_press(\"move_right\") await _connect_timed(0.5, get_tree().physics_frame, _populate_test_space) Input.action_release(\"move_right\") func _populate_test_space() -> void: _test_space.append({ practice_position = _practice.position, solution_position = _solution.position, }) func _build_checks() -> void: _add_simple_check( \"holding move_right should move the practice node to match the solution\", func() -> String: var last: Dictionary = _test_space.back() return ( \"\" if last.practice_position.is_equal_approx(last.solution_position) else ( \"position doesn't match the solution. Make sure position.x is \" + \"updated based on SPEED in _physics_process() when move_right is pressed.\" ) ) )    A Java program will only be interactive if hosted on a Runestone server.   A Java program, interactive on a Runestone server   public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }    Javascript programs are made interactive in HTML, on request.   An interactive JavaScript program, using Runestone   document.write('Hello, world!');    Some languages, like Java or C++, are only interactive when run on a Runestone server where the code can be compiled and run. Those languages can specify compiler-args and linker-args or interpreter-args as appropriate to the language. Default values for those options can be set in <docinfo\/defaults\/programs> - any defaults set there will be used for any program that lacks the corresponding attribute.  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/defaults\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   A C++ program with compiler-args and stdin   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane     A static Java program   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    An Octave program will also only be interactive if hosted on a Runestone server. Octave is meant to be a drop-in replacement for Matlab.   A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)    Likewise, a Kotlin program will only be interactive if hosted on a Runestone server.   A simple Kotlin program   fun main() { println(\"Hello, world!!\") }    A language not supported by Runestone Services will always be rendered static.   A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.    The highlight-lines works on ActiveCode programs, but the highlighted lines are only shown when viewing the initial code. Any version of the code that the reader has edited may have shifted lines of code and thus highlighting might affect the wrong lines, causing confusion.  def add(a, b): return a + b # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")  A program can have a <preamble> and\/or <postamble> which are added to the code that the user writes before it is run. They are visible by default, but can be made invisible with visible set to \"no\" . When visible, the code editor will prevent those regions from being modified. The indentation for lines in the preamble\/code\/postamble elements will be calculated relative to each other - make sure to indent them all to a similar extent. (In the source for the sample below, the # TODO... is intentially indented one stop extra so that the user's code is part of the add function.  <tests> are similar to <postamble> in that it represents code that is added to the users submission. However, <tests> is intended specifically for unit testing code (see examples below for unit testing in Python, Java, C++, SQL). Tests are invisble by default and can be made visible with visible set to \"yes\" . For historical reasons, the indentation of the <tests> is treated separately from the rest of the program.    A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    Here is the same Python program from the previous section, but now with a <preamble> and <postamble> that are invisible. The user will not see the code that is added to their submission. Not actually useful in this case, but it might be if you wanted to hide boilerplate setup from the reader.   A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")    The following Python program is in a <listing> since we will want to reference it shortly. The program does not do very much, it just defines four variables whose values are lists of statistics. It should run, and there will be no syntax errors, but it is a bit boring since there is no output. Note that it does not have an language and is relying on the default one specified in <docinfo\/defaults\/programs>   A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]    An ActiveCode running on the Runestone server (rather than in a browser) can be provided with attributes that are flags to influence the compiler and linker, as in this <program> recycled from before.   A Java program, interactive on a Runestone server, with compiler and linker flags   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }    Now a programming exercise. The program upcoming is going to include all the code of the program preceding. This is accomplished with an include attribute on the including program whose value is the xml:id of the included program. So by running the next program, it should pass all of its three tests (for example another example using unit tests, see ). Now reload the page, do not run the program in the listing, and then see that the program in the exercise still runs correctly.  You'll see nothing that tells the reader that the one chunk of code is prefacing the other. And in static formats it might be even less obvious. So you will want to say something to alert the reader. Here it is easy: includes all the code from .  This program also makes use of autorun to execute on page load and the codelens to disable the codelens feature.   A Python program, including another   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()    Exact same exercise again, but now we include three programs. We first get the simple Hello, world! program at , then the program defining the variables with lists of statistics at , and finally the program from the appendix just to test linking to material there.  This program also makes use of hidecode to initially keep the code hidden and download to enable a file download of the program (that includes all the included code).   A Python program, including two others   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()    Here is an activecode with language set to sql uses the database to load a SQLite database file.   An SQL program that uses an SQLite database file   Select all the columns of all the rows in the test database table.    SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35    Now a C++ program that is spread across multiple files. This example will only be interactive on a Runestone server.  First, we have a .h file that defines an filename . It has an xml:id so other elements can reference it. It also has an label which is it's unique identifier in the Runestone database. (The label is intentionally different than the xml:id for demonstration purposes, but they can be the same.) The filename is used to indicate what to name to use when the contents of the element are written to a file on the server - other program code and\/or tools on the server can look for it using this name. The filename need not be unique we could have multiple programs with filename=\"add.h\" . As we will see below, the author specifies which version of a file should be used in any given location with its unique xml:id.  The <program> is inside of a <listing> so that we have a place to add a title and so that we can reference the code sample, including that title, with an <xref> from elsewhere. The <title> of the <listing> is rendered with the program. It is also used if an <xref> links to the <listing> using text=\"title\" .   add.h (version 1) - A very simple header file that lacks header guards.  int add(int a, int b);   Next, a .cpp file. Note that because it is part of an exercise, the label is applied to the exercise that contains it. The xml:id and filename still belong on the program itself.  It also has extra-compiler-args . These will be added to any default compiler args for the book. In this case, the -c indicates that we only want to compile this file when it is Run and not try to link it or actually run it.    You can leave this code as is or modify it. When you click Run , the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.   int add(int a, int b) { return a + b; }   Finally, the core program. add-files is used to specify (by xml:id) the files that need to be added to the program directory. compile-also specifies files that must be compiled with this source file (they will be assumed to be also part of add-files ). Notice that when using add-files to reference code we want to include, we use the xml:id of the target program - it has the contents we want to include. When making a textual reference with an <xref> we can't link to the program, as it lacks the contextual information required to create a valid reference. Instead, we should link to a listing (or some other container) that surrounds the code, like this: or  #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }  Note that there is a cross page test of add-files located in  A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing. A nonsense paragraph just to check on spacing.  "
 },
 {
   "id": "program-activecode-python",
@@ -3457,38 +3466,65 @@ var ptx_lunr_docs = [
   "body": " An C program, interactive on a Runestone server   #include <stdio.h> int main(void) { puts(\"Hello, world!\"); }   "
 },
 {
+  "id": "program-activecode-gdscript",
+  "level": "2",
+  "url": "activecode.html#program-activecode-gdscript",
+  "type": "Activity",
+  "number": "5.2.4",
+  "title": "An interactive GDScript program, using <span class=\"booktitle\">Runestone<\/span>.",
+  "body": " An interactive GDScript program, using Runestone  Run the following code. You'll need to fix the function `get_double` that takes 1 `int` parameter and returns an `int` for the test to pass.   # Complete get_double() so that it returns twice its input. extends Node # Returns double `value`. func get_double(value: int) -> int: return value  extends PracticeTest ## L1.P1 - Double the value ## ## A \"simple\" GDPractice example: no scene state and no _test_space - just a ## direct comparison of get_double() between the practice and the solution via ## _call_all(), plus a structural guardrail from requirements.gd. const Requirements := preload(\"res:\/\/addons\/gdpractice\/tester\/requirements.gd\") ## Inputs used to compare get_double() between the practice and the solution. const TEST_VALUES: Array[int] = [0, 1, 2, 5, -3] func _build_requirements() -> void: super() Requirements.setup(_practice_base_path) _add_callable_requirement( \"get_double()'s signature must not change\", func() -> String: return ( \"\" if Requirements._check_methods() else \"Don't change get_double()'s parameters or return type - only fill in its body.\" ) ) func _build_checks() -> void: for test_value: int in TEST_VALUES: # GDScript lambdas capture local variables by value, so each closure # below keeps its own snapshot of `test_value`. _add_simple_check( \"get_double(%d) returns %d\" % [test_value, test_value * 2], func() -> String: var result := _call_all(\"get_double\", [test_value]) if result.practice != result.solution: return ( \"Expected get_double(%d) to return %d, but got %s.\" % [test_value, result.solution, result.practice] ) return \"\" )   "
+},
+{
+  "id": "program-activecode-gdscript-graphics",
+  "level": "2",
+  "url": "activecode.html#program-activecode-gdscript-graphics",
+  "type": "Activity",
+  "number": "5.2.5",
+  "title": "An interactive GDScript program, with graphics.",
+  "body": " An interactive GDScript program, with graphics  This is the first script from the Godot getting started step-by-step example . The first thing to try is adding the following code:   var speed = 400 var angular_speed = PI func _process(delta): rotation += angular_speed * delta   Then change it to the following code:   var speed = 400 var angular_speed = PI func _process(delta): rotation += angular_speed * delta var velocity = Vector2.UP.rotated(rotation) * speed position += velocity * delta     extends Sprite2D func _init(): pass  extends PracticeTest func _build_checks() -> void: var practice_slot = _practice var c1 := Check.new() c1.description = \"Run graphical program\" c1.checker = func() -> String: return \"\" checks.append_array([c1])   "
+},
+{
+  "id": "program-activecode-gdscript-split-graphics",
+  "level": "2",
+  "url": "activecode.html#program-activecode-gdscript-split-graphics",
+  "type": "Activity",
+  "number": "5.2.6",
+  "title": "An interactive GDScript program, with split graphics.",
+  "body": " An interactive GDScript program, with split graphics  This is an example of split screen code.   extends Node2D const SPEED := 200.0 func _physics_process(delta: float) -> void: if Input.is_action_pressed(\"move_right\"): position.x += 0  extends PracticeTest func _init() -> void: side_by_side = true if not InputMap.has_action(\"move_right\"): InputMap.add_action(\"move_right\") var event := InputEventKey.new() event.keycode = KEY_D InputMap.action_add_event(\"move_right\", event) func _build_requirements() -> void: super() _add_actions_requirement([\"move_right\"]) func _setup_state() -> void: _practice.position = Vector2.ZERO _solution.position = Vector2.ZERO func _setup_populate_test_space() -> void: Input.action_press(\"move_right\") await _connect_timed(0.5, get_tree().physics_frame, _populate_test_space) Input.action_release(\"move_right\") func _populate_test_space() -> void: _test_space.append({ practice_position = _practice.position, solution_position = _solution.position, }) func _build_checks() -> void: _add_simple_check( \"holding move_right should move the practice node to match the solution\", func() -> String: var last: Dictionary = _test_space.back() return ( \"\" if last.practice_position.is_equal_approx(last.solution_position) else ( \"position doesn't match the solution. Make sure position.x is \" + \"updated based on SPEED in _physics_process() when move_right is pressed.\" ) ) )   "
+},
+{
   "id": "program-activecode-java",
   "level": "2",
   "url": "activecode.html#program-activecode-java",
   "type": "Listing",
-  "number": "5.2.4",
-  "title": "Informal Java “Hello, World”A Java program, interactive on a <span class=\"booktitle\">Runestone<\/span> server",
-  "body": " Informal Java Hello, World  A Java program, interactive on a Runestone server   \"hi\" in Java  public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }   "
+  "number": "5.2.7",
+  "title": "A Java program, interactive on a <span class=\"booktitle\">Runestone<\/span> server",
+  "body": " A Java program, interactive on a Runestone server   public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hi world!\"); } }   "
 },
 {
   "id": "program-activecode-javascript",
   "level": "2",
   "url": "activecode.html#program-activecode-javascript",
   "type": "Listing",
-  "number": "5.2.5",
+  "number": "5.2.8",
   "title": "An interactive JavaScript program, using <span class=\"booktitle\">Runestone<\/span>",
   "body": " An interactive JavaScript program, using Runestone   document.write('Hello, world!');   "
 },
 {
-  "id": "activecode-13",
+  "id": "activecode-20",
   "level": "2",
-  "url": "activecode.html#activecode-13",
+  "url": "activecode.html#activecode-20",
   "type": "Listing",
-  "number": "5.2.6",
+  "number": "5.2.9",
   "title": "A C++ program with compiler-args and stdin",
-  "body": " A C++ program with compiler-args and stdin  It may be convenient to set compiler-args and linker-args at the book level in <docinfo\/programs> . Values specified in that location will be used for any <program> that does not override the values by specifying its own attributes.   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane   "
+  "body": " A C++ program with compiler-args and stdin   #include <iostream> #include <string> using namespace std; int main() { string name; cin >> name; cout << \"Hello, \" << name << endl; return 0; }  Jane   "
 },
 {
   "id": "program-static-java",
   "level": "2",
   "url": "activecode.html#program-static-java",
   "type": "Listing",
-  "number": "5.2.7",
+  "number": "5.2.10",
   "title": "A static Java program",
   "body": " A static Java program   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
 },
@@ -3497,7 +3533,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#program-activecode-octave",
   "type": "Listing",
-  "number": "5.2.8",
+  "number": "5.2.11",
   "title": "A simple Octave program",
   "body": " A simple Octave program   x = 2 + 2 printf(\"%d\\n\", x)   "
 },
@@ -3506,7 +3542,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#program-activecode-kotlin",
   "type": "Listing",
-  "number": "5.2.9",
+  "number": "5.2.12",
   "title": "A simple Kotlin program",
   "body": " A simple Kotlin program   fun main() { println(\"Hello, world!!\") }   "
 },
@@ -3515,25 +3551,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#program-mistake-pascal",
   "type": "Listing",
-  "number": "5.2.10",
+  "number": "5.2.13",
   "title": "A Pascal program that cannot be interactive on Runestone",
   "body": " A Pascal program that cannot be interactive on Runestone   program HelloWorld; begin WriteLn('Hello, world!'); end.   "
 },
 {
-  "id": "activecode-25",
+  "id": "activecode-32",
   "level": "2",
-  "url": "activecode.html#activecode-25",
+  "url": "activecode.html#activecode-32",
   "type": "Listing",
-  "number": "5.2.11",
+  "number": "5.2.14",
   "title": "A Python program with preamble\/postamble",
   "body": " A Python program with preamble\/postamble   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")   "
 },
 {
-  "id": "activecode-27",
+  "id": "activecode-34",
   "level": "2",
-  "url": "activecode.html#activecode-27",
+  "url": "activecode.html#activecode-34",
   "type": "Listing",
-  "number": "5.2.12",
+  "number": "5.2.15",
   "title": "A Python program with invisible pre\/post ambles",
   "body": " A Python program with invisible pre\/post ambles   def add(a, b):  # TODO - complete the add function  # Use the function result = add(2, 3) if result == 5: print(\"Test passed\") else: print(\"Test failed\")   "
 },
@@ -3542,7 +3578,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#listing-python-included",
   "type": "Listing",
-  "number": "5.2.13",
+  "number": "5.2.16",
   "title": "A Python program that defines some statistics",
   "body": " A Python program that defines some statistics   loan_amount = [1250.0, 500.0, 1450.0, 200.0, 700.0, 100.0, 250.0, 225.0, 1200.0, 150.0, 600.0, 300.0, 700.0, 125.0, 650.0, 175.0, 1800.0, 1525.0, 575.0, 700.0, 1450.0, 400.0, 200.0, 1000.0, 350.0] country_name = ['Azerbaijan', 'El Salvador', 'Bolivia', 'Paraguay', 'El Salvador', 'Philippines', 'Philippines', 'Nicaragua', 'Guatemala', 'Philippines', 'Paraguay', 'Philippines', 'Bolivia', 'Philippines', 'Philippines', 'Madagascar', 'Georgia', 'Uganda', 'Kenya', 'Tajikistan', 'Jordan', 'Kenya', 'Philippines', 'Ecuador', 'Kenya'] time_to_raise = [193075.0, 1157108.0, 1552939.0, 244945.0, 238797.0, 1248909.0, 773599.0, 116181.0, 2288095.0, 51668.0, 26717.0, 48030.0, 1839190.0, 71117.0, 580401.0, 800427.0, 1156218.0, 1166045.0, 2924705.0, 470622.0, 24078.0, 260044.0, 445938.0, 201408.0, 2370450.0] num_lenders_total = [38, 18, 51, 3, 21, 1, 10, 8, 42, 1, 18, 6, 28, 5, 16, 7, 54, 1, 18, 22, 36, 12, 8, 24, 8]   "
 },
@@ -3551,14 +3587,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#program-activecode-java-flags",
   "type": "Listing",
-  "number": "5.2.14",
+  "number": "5.2.17",
   "title": "A Java program, interactive on a <span class=\"booktitle\">Runestone<\/span> server, with compiler and linker flags",
-  "body": " A Java program, interactive on a Runestone server, with compiler and linker flags   \"hi\" in Java  import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
+  "body": " A Java program, interactive on a Runestone server, with compiler and linker flags   import javax.swing.JFrame; \/\/Importing class JFrame import javax.swing.JLabel; \/\/Importing class JLabel public class HelloWorld { public static void main(String[] args) { JFrame frame = new JFrame(); \/\/Creating frame frame.setTitle(\"Hi!\"); \/\/Setting title frame frame.add(new JLabel(\"Hello, world!\"));\/\/Adding text to frame frame.pack(); \/\/Setting size to smallest frame.setLocationRelativeTo(null); \/\/Centering frame frame.setVisible(true); \/\/Showing frame } }   "
 },
 {
-  "id": "activecode-32",
+  "id": "activecode-39",
   "level": "2",
-  "url": "activecode.html#activecode-32",
+  "url": "activecode.html#activecode-39",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -3569,7 +3605,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#exercise-python-including",
   "type": "Checkpoint",
-  "number": "5.2.15",
+  "number": "5.2.18",
   "title": "A Python program, including another.",
   "body": " A Python program, including another   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum()\") MyTests().main()   "
 },
@@ -3578,7 +3614,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#exercise-python-including-two",
   "type": "Checkpoint",
-  "number": "5.2.16",
+  "number": "5.2.19",
   "title": "A Python program, including two others.",
   "body": " A Python program, including two others   Compute the total amount of money loaned and store it in the variable loan_total .    loan_total = 0 for loan in loan_amount: loan_total += loan print(loan_total)  from unittest.gui import TestCaseGui class MyTests(TestCaseGui): def testOne(self): self.assertTrue('loan_total' in self.getEditorText(), \"you need a loan_total variable\") self.assertEqual(loan_total, sum(loan_amount), \"Use the accumulator pattern to add up all the loans\") self.assertFalse('sum(' in self.getEditorText(), \"you may not use sum\") MyTests().main()   "
 },
@@ -3587,7 +3623,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#exercise-sql-using-db",
   "type": "Checkpoint",
-  "number": "5.2.17",
+  "number": "5.2.20",
   "title": "An SQL program that uses an SQLite database file.",
   "body": " An SQL program that uses an SQLite database file   Select all the columns of all the rows in the test database table.    SELECT * FROM test  assert 1,1 == world assert 0,1 == hello assert 2,1 == 35   "
 },
@@ -3596,16 +3632,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activecode.html#addh-v1-listing",
   "type": "Listing",
-  "number": "5.2.18",
-  "title": "add.h (version 1)",
-  "body": " add.h (version 1)  int add(int a, int b);  "
+  "number": "5.2.21",
+  "title": "add.h (version 1) - A very simple header file that lacks header guards.",
+  "body": " add.h (version 1) - A very simple header file that lacks header guards.  int add(int a, int b);  "
 },
 {
   "id": "addcpp-v1",
   "level": "2",
   "url": "activecode.html#addcpp-v1",
   "type": "Checkpoint",
-  "number": "5.2.19",
+  "number": "5.2.22",
   "title": "",
   "body": "  You can leave this code as is or modify it. When you click Run , the code will be compiled. However, it will not be run as this is not a standalone program. To run it, use the full program below.   int add(int a, int b) { return a + b; }  "
 },
@@ -3616,7 +3652,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Code Lens",
-  "body": " Code Lens  CodeLens is an interactive tool for following program execution, much like a debugger, without the ability to influence flow control or variable values. For use without a server, traces must be computed beforehand. First, we have some trivial programs, to provide minimal testing.   A Python program, stepable with CodeLens   print('Hello, World!')     An C program, stepable with CodeLens   #include <stdio.h> int main(void) { puts(\"Hello, World!\"); }     A Java program, stepable with CodeLens   public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }    Codelens interactives can be given one or more checkpoints where the user is asked a question as the code is executed:   A Python program, stepable with CodeLens, with questions   def foo(n): n = n + 1 return n x = 7 y = x \/\/ 3 z = foo(y)   What variable is being assigned to?    What value will be assigned to y ?  \/\/ does integer division    What value will be returned?  What is n right now?     If a Codelens contains checkpoints, it is also possible to make it into an exercise. For use on Runestone, there should be an label on the exercise:   A C++ program as CodeLens exercise  Run the codelens and answer the questions it asks.   int foo() { int x = 2; int y = ++x; return y; } int main() { int x = foo(); while (x < 20) { x *= 2; } }   What value will be assigned to y ?  ++ has precedence over =    What value will be assigned to x ?  We are doubling it     Now some moderately more complicated programs to find the prime numbers less than . We do not vouch for the quality of these, or even their correctness!   Sieve of Eratosthenes , Java   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)     Sieve of Eratosthenes , C++   #include <stdio.h> const int len = 20; int main() { int arr[20] = {0}; for (int i = 2; i < len; i++) { for (int j = i * i; j < len; j+=i) { arr[j - 1] = 1; } } for (int i = 1; i < len; i++) { if (arr[i - 1] == 0) printf(\" %d\", i); } }     Sieve of Eratosthenes , Java   public class SievePrimeFactors { public static void main(String args[]) { int num = 20; boolean[] bool = new boolean[num]; for (int i = 0; i< bool.length; i++) { bool[i] = true; } for (int i = 2; i < Math.sqrt(num); i++) { if(bool[i] == true) { for(int j = (i*i); j < num; j = j+i) { bool[j] = false; } } } System.out.println(\"List of prime numbers: \"); for (int i = 2; i< bool.length; i++) { if(bool[i]==true) { System.out.println(i); } } } }    "
+  "body": " Code Lens  CodeLens is an interactive tool for following program execution, much like a debugger, without the ability to influence flow control or variable values. For use without a server, traces must be computed beforehand. First, we have some trivial programs, to provide minimal testing.   A Python program, stepable with CodeLens   print('Hello, World!')     An C program, stepable with CodeLens   #include <stdio.h> int main(void) { puts(\"Hello, World!\"); }     A Java program, stepable with CodeLens   public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }    Codelens interactives can be given one or more checkpoints where the user is asked a question as the code is executed:   A Python program, stepable with CodeLens, with questions   def foo(n): n = n + 1 return n x = 7 y = x \/\/ 3 z = foo(y)   What variable is being assigned to?    What value will be assigned to y ?  \/\/ does integer division    What value will be returned?  What is n right now?     If a Codelens contains checkpoints, it is also possible to make it into an exercise. For use on Runestone, there should be an label on the exercise:   A C++ program as CodeLens exercise   Run the codelens and answer the questions it asks.    int foo() { int x = 2; int y = ++x; return y; } int main() { int x = foo(); while (x < 20) { x *= 2; } }   What value will be assigned to y ?  ++ has precedence over =    What value will be assigned to x ?  We are doubling it     Now some moderately more complicated programs to find the prime numbers less than . We do not vouch for the quality of these, or even their correctness!   Sieve of Eratosthenes , Java   def SieveOfEratosthenes(n): # array of type boolean with True values in it prime = [True for i in range(n + 1)] p = 2 while (p * p <= n): # If it remain unchanged it is prime if (prime[p] == True): # updating all the multiples for i in range(p * 2, n + 1, p): prime[i] = False p += 1 prime[0]= False prime[1]= False # Print for p in range(n + 1): if prime[p]: print (p,end=\" \") # main if __name__=='__main__': n = 20 print (\"The prime numbers smaller than or equal to\", n,\"is\") SieveOfEratosthenes(n)     Sieve of Eratosthenes , C++   #include <stdio.h> const int len = 20; int main() { int arr[20] = {0}; for (int i = 2; i < len; i++) { for (int j = i * i; j < len; j+=i) { arr[j - 1] = 1; } } for (int i = 1; i < len; i++) { if (arr[i - 1] == 0) printf(\" %d\", i); } }     Sieve of Eratosthenes , Java   public class SievePrimeFactors { public static void main(String args[]) { int num = 20; boolean[] bool = new boolean[num]; for (int i = 0; i< bool.length; i++) { bool[i] = true; } for (int i = 2; i < Math.sqrt(num); i++) { if(bool[i] == true) { for(int j = (i*i); j < num; j = j+i) { bool[j] = false; } } } System.out.println(\"List of prime numbers: \"); for (int i = 2; i< bool.length; i++) { if(bool[i]==true) { System.out.println(i); } } } }    "
 },
 {
   "id": "program-codelens-python",
@@ -3661,7 +3697,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.3.5",
   "title": "A C++ program as CodeLens exercise.",
-  "body": " A C++ program as CodeLens exercise  Run the codelens and answer the questions it asks.   int foo() { int x = 2; int y = ++x; return y; } int main() { int x = foo(); while (x < 20) { x *= 2; } }   What value will be assigned to y ?  ++ has precedence over =    What value will be assigned to x ?  We are doubling it    "
+  "body": " A C++ program as CodeLens exercise   Run the codelens and answer the questions it asks.    int foo() { int x = 2; int y = ++x; return y; } int main() { int x = foo(); while (x < 20) { x *= 2; } }   What value will be assigned to y ?  ++ has precedence over =    What value will be assigned to x ?  We are doubling it    "
 },
 {
   "id": "sieve-python",
@@ -3697,7 +3733,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.4",
   "title": "Coding Exercises",
-  "body": " Coding Exercises  Program listings can be more that just live demonstrations, they can be exercises. The first two also occur in the sample article where they just get a static rendering, if at all.   Inline Coding Exercise, No Help   An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.    We didn't really ask you to do anything.    Inline Coding Exercise, Partial   Similar to above, but we provide a starting point for the exercise.    #include <stdio.h> int main(void)    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)      Activity Coding Exercise   Similar to above, but now as a complete Python program inside an <activity> . This demonstrates the possibility to use any project-like block ( <project> , <activity> , <exploration> , <investigation> ), but not in the case when structured with <task> . (There is an empty <tests> element here, designed to test relief for an error this will cause on a Runestone server.)    for i in range(10): print(i)     We're still not really sure.    An Exercise with a Static Program   Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)    We're not really sure. Still.   Unit testing can be used to automatically evaluate student work. Unit testing frameworks are available for Python, Java, and C++   Coding Exercise, with Unit Tests   Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]    def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)      Java Exercise, with Unit Tests   Unit tests for Java can be written using junit.    public class Test1 { public static void main(String[] args) { boolean isRaining = true; if (isRaining) { System.out.println(\"Take an umbrella!\"); } System.out.println(\"Drive carefully\"); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; public class RunestoneTests extends CodeTestHelper { @Test public void testMain() throws IOException { String output = getMethodOutput(\"main\"); String expect = \"Take an umbrella! \\nDrive carefully\"; boolean passed = getResults(expect, output, \"Expected output from main\"); assertTrue(passed); } }     C++ Exercise, with Unit Tests   Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).    \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  \/\/There should be two visible empty lines above this line #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }    For simple programs, or languages without an available unit testing framework, input-output testing can be done instead. IO testing can only be done on languages that are run on a Runestone server (Java\/C\/C++\/Octave\/Python3).   C++ Exercise, with IO Tests   Read in an integer n . Print out a n by n square of asterisks.    #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****      "
+  "body": " Coding Exercises  Program listings can be more that just live demonstrations, they can be exercises. The first two also occur in the sample article where they just get a static rendering, if at all.   Inline Coding Exercise, No Help   An exercise might ask a reader to write a computer program, that would go here in the <statement> . But you can also add a <program> element after a <statement> . Here we place no code at all, but we do say we want it to be interactive. The purpose is to make it a live coding environment for a version of your output that allows the reader to perhaps submit a solution. The <program> element is necessary so you can specify a programming language.  In interactive formats, try creating and running a Python program below. Use CodeLens to step through the program.    We didn't really ask you to do anything.    Inline Coding Exercise, Partial   Similar to above, but we provide a starting point for the exercise.    #include <stdio.h> int main(void)    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)      Activity Coding Exercise   Similar to above, but now as a complete Python program inside an <activity> . This demonstrates the possibility to use any project-like block ( <project> , <activity> , <exploration> , <investigation> ), but not in the case when structured with <task> . (There is an empty <tests> element here, designed to test relief for an error this will cause on a Runestone server.)    for i in range(10): print(i)     We're still not really sure.    An Exercise with a Static Program   Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)    We're not really sure. Still.   Unit testing can be used to automatically evaluate student work. Unit testing frameworks are available for Python, Java, and C++    Coding Exercise, with Unit Tests   Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]    def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)     An activecode exercise can offer extra help to a reader who gets stuck, via Runestone's CodeTailor feature. A codetailor attribute adds a Get Help button that, on a Runestone server, presents a personalized Parsons problem the blocks of a correct solution, scrambled for the reader to reassemble, where a block may hold one line of code or several. The value all scrambles a complete solution, while incorrect locks the blocks a reader already has right, so only the wrong ones move. A companion codetailor-fallback names, by its xml:id , a Parsons problem elsewhere in this document to present when a personalized problem cannot be generated; without it, generation is always requested. The first exercise below elects all and falls back to a Parsons problem from a later chapter; the second elects incorrect and relies on generation alone.   Coding Exercise, with CodeTailor Help   Write a function total that returns the sum of a list of numbers. If you get stuck, use the Get Help button to assemble a solution from scrambled blocks.    def total(numbers): return 0  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(total([1, 2, 3]), 6, \"Summing three integers\") self.assertEqual(total([]), 0, \"Summing an empty list\") self.assertEqual(total([10, -4]), 6, \"Summing with a negative\") myTests().main()    Accumulate the numbers in a running total.   def total(numbers): result = 0 for n in numbers: result = result + n return result      Coding Exercise, CodeTailor Help for Incorrect Blocks   Write a function largest that returns the greatest number in a nonempty list. Here the Get Help button locks the blocks you already have right, so you rearrange only the incorrect ones.    def largest(numbers): return 0  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(largest([1, 3, 2]), 3, \"Largest of three integers\") self.assertEqual(largest([-5, -2, -9]), -2, \"Largest of negatives\") self.assertEqual(largest([7]), 7, \"Largest of a single number\") myTests().main()    Track the greatest value seen so far.   def largest(numbers): result = numbers[0] for n in numbers: if n > result: result = n return result      Java Exercise, with Unit Tests   Unit tests for Java can be written using junit.    public class Test1 { public static void main(String[] args) { boolean isRaining = true; if (isRaining) { System.out.println(\"Take an umbrella!\"); } System.out.println(\"Drive carefully\"); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; public class RunestoneTests extends CodeTestHelper { @Test public void testMain() throws IOException { String output = getMethodOutput(\"main\"); String expect = \"Take an umbrella! \\nDrive carefully\"; boolean passed = getResults(expect, output, \"Expected output from main\"); assertTrue(passed); } }     C++ Exercise, with Unit Tests   Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).    \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  \/\/There should be two visible empty lines above this line #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }    For simple programs, or languages without an available unit testing framework, input-output testing can be done instead. IO testing can only be done on languages that are run on a Runestone server (Java\/C\/C++\/Octave\/Python3).   C++ Exercise, with IO Tests   Read in an integer n . Print out a n by n square of asterisks.    #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****      "
 },
 {
   "id": "coding-exercise-blank",
@@ -3722,7 +3758,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "coding-exercises.html#coding-exercise-partial-two",
   "type": "Activity",
-  "number": "5.4.1",
+  "number": "5.4.3",
   "title": "Activity Coding Exercise.",
   "body": " Activity Coding Exercise   Similar to above, but now as a complete Python program inside an <activity> . This demonstrates the possibility to use any project-like block ( <project> , <activity> , <exploration> , <investigation> ), but not in the case when structured with <task> . (There is an empty <tests> element here, designed to test relief for an error this will cause on a Runestone server.)    for i in range(10): print(i)     We're still not really sure.  "
 },
@@ -3731,7 +3767,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "coding-exercises.html#coding-exercises-6",
   "type": "Checkpoint",
-  "number": "5.4.3",
+  "number": "5.4.4",
   "title": "An Exercise with a Static Program.",
   "body": " An Exercise with a Static Program   Similar to above, again, but we place the <program> element inside the <statement> , not after it as a peer. This signals that this is not a coding exercise and the program will render static, since it is explicitly labeled as not being interactive.   #include <stdio.h> int main(void)    We're not really sure. Still.  "
 },
@@ -3740,16 +3776,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "coding-exercises.html#coding-exercise-python-unit-test",
   "type": "Checkpoint",
-  "number": "5.4.4",
+  "number": "5.4.5",
   "title": "Coding Exercise, with Unit Tests.",
   "body": " Coding Exercise, with Unit Tests   Fix the following code so that it always correctly adds two numbers. [Ed. Unit test support is experimental.]    def add(a,b): return 4  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(add(2,2), 4, \"Adding two identical integers\") self.assertEqual(add(7,13), 20, \"Adding two different integers\") self.assertAlmostEqual(add(2.0,3.0), 5.0, 5, \"Adding two decimal numbers\") myTests().main()    We're not really sure. But it would begin as follows:   #include <stdio.h> int main(void)    "
+},
+{
+  "id": "coding-exercise-codetailor",
+  "level": "2",
+  "url": "coding-exercises.html#coding-exercise-codetailor",
+  "type": "Checkpoint",
+  "number": "5.4.6",
+  "title": "Coding Exercise, with CodeTailor Help.",
+  "body": " Coding Exercise, with CodeTailor Help   Write a function total that returns the sum of a list of numbers. If you get stuck, use the Get Help button to assemble a solution from scrambled blocks.    def total(numbers): return 0  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(total([1, 2, 3]), 6, \"Summing three integers\") self.assertEqual(total([]), 0, \"Summing an empty list\") self.assertEqual(total([10, -4]), 6, \"Summing with a negative\") myTests().main()    Accumulate the numbers in a running total.   def total(numbers): result = 0 for n in numbers: result = result + n return result    "
+},
+{
+  "id": "coding-exercise-codetailor-incorrect",
+  "level": "2",
+  "url": "coding-exercises.html#coding-exercise-codetailor-incorrect",
+  "type": "Checkpoint",
+  "number": "5.4.7",
+  "title": "Coding Exercise, CodeTailor Help for Incorrect Blocks.",
+  "body": " Coding Exercise, CodeTailor Help for Incorrect Blocks   Write a function largest that returns the greatest number in a nonempty list. Here the Get Help button locks the blocks you already have right, so you rearrange only the incorrect ones.    def largest(numbers): return 0  from unittest.gui import TestCaseGui class myTests(TestCaseGui): def testOne(self): self.assertEqual(largest([1, 3, 2]), 3, \"Largest of three integers\") self.assertEqual(largest([-5, -2, -9]), -2, \"Largest of negatives\") self.assertEqual(largest([7]), 7, \"Largest of a single number\") myTests().main()    Track the greatest value seen so far.   def largest(numbers): result = numbers[0] for n in numbers: if n > result: result = n return result    "
 },
 {
   "id": "coding-exercise-java-unit-test",
   "level": "2",
   "url": "coding-exercises.html#coding-exercise-java-unit-test",
   "type": "Checkpoint",
-  "number": "5.4.5",
+  "number": "5.4.8",
   "title": "Java Exercise, with Unit Tests.",
   "body": " Java Exercise, with Unit Tests   Unit tests for Java can be written using junit.    public class Test1 { public static void main(String[] args) { boolean isRaining = true; if (isRaining) { System.out.println(\"Take an umbrella!\"); } System.out.println(\"Drive carefully\"); } }  import static org.junit.Assert.*; import org.junit.*; import java.io.*; public class RunestoneTests extends CodeTestHelper { @Test public void testMain() throws IOException { String output = getMethodOutput(\"main\"); String expect = \"Take an umbrella! \\nDrive carefully\"; boolean passed = getResults(expect, output, \"Expected output from main\"); assertTrue(passed); } }   "
 },
@@ -3758,7 +3812,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "coding-exercises.html#coding-exercise-cpp-unit-test",
   "type": "Checkpoint",
-  "number": "5.4.6",
+  "number": "5.4.9",
   "title": "C++ Exercise, with Unit Tests.",
   "body": " C++ Exercise, with Unit Tests   Unit tests for C++ can be written using doctest or catch. Doctest based tests build substantially faster than catch based ones.  In an interactive environment, the tests in this exercise will be made visible, but uneditable, so that in the event of a failed test the student can see exactly what is being tested (Doctest does not report on individual passed tests and the feedback on failed tests generally won't make sense without the test itself).    \/\/ Complete the function to return the sum of two numbers int add(int a, int b) { }  \/\/There should be two visible empty lines above this line #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN #include \"doctest.h\" TEST_CASE( \"Test the add function\" ) { REQUIRE( add(2, 3) == 5 ); REQUIRE( add(6, 1) == 7 ); REQUIRE( add(-5, 5) == 0 ); }   "
 },
@@ -3767,7 +3821,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "coding-exercises.html#coding-exercise-cpp-io-tests",
   "type": "Checkpoint",
-  "number": "5.4.7",
+  "number": "5.4.10",
   "title": "C++ Exercise, with IO Tests.",
   "body": " C++ Exercise, with IO Tests   Read in an integer n . Print out a n by n square of asterisks.    #include <iostream> using namespace std; int main() { int n; cin >> n; for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) { cout << \"*\"; } cout << endl; } }    1  *    3  *** *** ***    5  ***** ***** ***** ***** *****     "
 },
@@ -3857,7 +3911,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "rune-nested-divisions.html#interactive-short-answer",
   "type": "Checkpoint",
-  "number": "5.7.1",
+  "number": "5.7.4",
   "title": "Inline Exercise in a Subsection.",
   "body": " Inline Exercise in a Subsection   I am an interactive short answer question, but only on a capable platform.    "
 },
@@ -3967,7 +4021,7 @@ var ptx_lunr_docs = [
   "type": "Exercises",
   "number": "5.10",
   "title": "Parsons Exercises",
-  "body": " Parsons Exercises   Parsons Problem, Mathematical Proof  even numbers   Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.    Parsons Problem, Partial Ordering   Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.     import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)      Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem with executable   Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.         def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg      print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image    img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p)    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem, Mathematical Proof, Numbered Blocks  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    Dorothy will not be much help with this proof.    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)     "
+  "body": " Parsons Exercises   Parsons Problem, Mathematical Proof  even numbers   Create a proof of the theorem: If is an even number, then .  [Ed. If you examine the source, you will also notice the <exercise> lacks a language attribute. It is relying on the docinfo\/parsons\/@language value that is in bookinfo.xml. If present, that attribute will be used for any Parsons that lack a language .]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.    Parsons Problem, Partial Ordering   Parsons problems can specify a partial ordering that allows for multiple valid solutions.  Try putting the blocks in a valid order to calculate and print c Only use the required blocks. There are many valid orderings.     import math    import antigravity    a = 3     b = 4    4 = b     cSquared = a ** 2 + b ** 2    c = math.sqrt(cSquared)    print(c)      Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem requires the reader to provide the necessary indentation.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem with executable   Parsons problems that have a language specified that corresponds to a valid activecode language can be made runnable.  Complete the Python function isolateRed(p) If either the blue or green is higher than the red, average the three color values and set red, green, and blue to be that average. Otherwise, do nothing to p .  After you check a correct answer you will be able to Run the code you created - it will be used to modify the image shown below.         def isolateRed(p):    if p.green > p.red or p.blue > p.red:    avg = (p.red + p.blue + p.green) \/ 3    p.red = avg  p.blue = avg  p.green = avg      print(\"Using your code to isolate the red in the Golden Gate Bridge image.\") import image    img = image.Image(\"golden-gate.png\") win = image.ImageWin(img.getWidth(), img.getHeight()) img.draw(win) # img.setDelay(delay, number of pixels between delay) # setDelay(1, 400) will speed up a lot img.setDelay(1,50) for row in range(img.getHeight()): for col in range(img.getWidth()): p = img.getPixel(col, row) isolateRed(p) img.setPixel(col, row, p)    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. this version of this problem does not require the reader to provide the necessary indentation, which is the default.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem, Mathematical Proof, Numbered Blocks  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version has numbered blocks, online they are on the right end of the block.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    Dorothy will not be much help with this proof.    Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)      Parsons Problem, Mathematical Proof, Fixed Order  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version is a copy of the first Parsons problem in this section, now with randomize set to no on the <blocks> , so the blocks always appear in the fixed order given by the order attributes, instead of being shuffled.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.   "
 },
 {
   "id": "number-theory-proof",
@@ -4033,17 +4087,22 @@ var ptx_lunr_docs = [
   "body": " Parsons Problem, Programming  prime numbers  Sieve of Eratosthenes   The Sieve of Eratosthenes computes prime numbers by starting with a finite list of the integers bigger than 1. The first member of the list is a prime and is saved\/recorded. Then all multiples of that prime (which not a prime, excepting the prime itself!) are removed from the list. Now the first number remaining in the list is the next prime number. And the process repeats.  The code blocks below can be rearranged to form one of the many possible programs to implement this algorithm to compute a list of all the primes less than . [Ed. This version has numbered blocks, online they are on the left end of the block.]  This reprises .     n = 250     primes = []  candidates = list(range(2,n))    candidates = []  primes = list(range(2,n))     primes = candidates + [p]    while candidates:    p = candidates[0]  primes.append(p)    for nonprime in range(p, n, p):    if nonprime in candidates:  candidates.remove(nonprime)    print(primes)    "
 },
 {
+  "id": "number-theory-proof-fixed-order",
+  "level": "2",
+  "url": "parsons-exercises.html#number-theory-proof-fixed-order",
+  "type": "Exercise",
+  "number": "5.10.8",
+  "title": "Parsons Problem, Mathematical Proof, Fixed Order.",
+  "body": " Parsons Problem, Mathematical Proof, Fixed Order  even numbers   Create a proof of the theorem: If is an even number, then . [Ed. This version is a copy of the first Parsons problem in this section, now with randomize set to no on the <blocks> , so the blocks always appear in the fixed order given by the order attributes, instead of being shuffled.]     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.  "
+},
+{
   "id": "horizontal-parsons-exercises",
   "level": "1",
   "url": "horizontal-parsons-exercises.html",
   "type": "Exercises",
   "number": "5.11",
   "title": "Horizontal Parsons Exercises",
-<<<<<<< HEAD
   "body": " Horizontal Parsons Exercises   Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test     Parsons Problem, Python import   Testing syntax highlighting.    from  math  import  pi     Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test     Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42    Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog     Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog     Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test     Parsons Problem with math blocks   Testing math mode blocks - correct answer is           "
-=======
-  "body": " Horizontal Parsons Exercises   Parsons Problem, SQL statement   Form the SQL statement by rearranging the four blocks.     SELECT  *  FROM  test     Parsons Problem, Python import   Testing syntax highlighting.    from  math  import  pi     Parsons Problem, SQL statement, no randomization   Form the SQL statement by rearranging the four blocks. This version of this problem will always present the blocks in the same fixed order (but incorrect, hopefully!), as prescribed by the author in the source.    SELECT  *  FROM  test     Parsons Problem, SQL statement, automatic feedback   Form the SQL statement by rearranging the four blocks.    SELECT  *  FROM  test   assert 1,1 == world assert 0,1 == hello assert 2,1 == 42    Parsons Problem, Natural Language   Form the sentence often used to show font samples. You can reuse blocks as needed.     quick  brown  fox  jumped  over  the  lazy  dog     Parsons Problem, Natural Language, with Distractors   Form the sentence often used to show font samples. Again, but now with distractors.     quick  brown  fox  jumped  foo  over  the  lazy  bar  dog     Parsons Problem, SQL statement, reusable   Form the SQL statement by rearranging the four blocks. Same problem as above, but we allow blocks to be reused (even though the solution does not require that).    SELECT  *  FROM  test    "
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 },
 {
   "id": "horizontal-parson-sql-statement-simple",
@@ -4469,20 +4528,101 @@ var ptx_lunr_docs = [
   "body": " Fill-In, Dynamic Math with Interdependent Formula Checking   Consider the function . Find two nontrivial functions and so that .   and     Noticing that the expression appears inside parentheses with a power, it makes sense to think of that as the inner function, defining . The outer function describes what happens to that. If we imagined replacing the formula with a box and then call that box our variable , we find the outer function is given by .  This is not the only non-trivial composition. Can you find others?                    a*x^n+b    c*x+d    x              is not allowed for nontrivial compositions.                    You have composed in the wrong order.       is not allowed for nontrivial compositions.                            "
 },
 {
+  "id": "fill-in-literal-exercises",
+  "level": "1",
+  "url": "fill-in-literal-exercises.html",
+  "type": "Exercises",
+  "number": "5.20",
+  "title": "Fill-In, Literal String Answers",
+  "body": " Fill-In, Literal String Answers   For a string answer, PreTeXt compares the reader's response against the answer as a literal string. So characters that have special meaning in a regular expression, such as . , ( , or + , are matched exactly rather than acting as wildcards or operators. These examples exercise that behavior across a range of such characters, whether the correct answer is compared explicitly (with use-answer or literal ) or left to be supplied automatically from the fillin .    Fill-In, Decimal Point   Give the value of , rounded to two decimal places.            Fill-In, A Dotted Address   Enter the IPv4 address 192.168.1.1 , including its dots.            Fill-In, A Formula with Several Symbols   Enter the formula f(x) = x^2 + 1 exactly, using a caret for the exponent.            Fill-In, A File Path   Enter the Windows path C:\\Users , with a backslash.            Fill-In, A Price   Write one hundred dollars with a leading dollar sign, as $100 .            Fill-In, Literal Match Ignoring Case   Enter the placeholder foo(bar) , in any mix of upper- and lower-case letters.        Case is ignored, but the parentheses are part of the answer and are matched literally.        Fill-In, Explicit Literal Test   Enter the placeholder foo(bar) , including the parentheses. Here the comparison states the pattern directly and marks it as a literal match with literal=\"yes\" .      foo(bar)       Fill-In, Answer Taken from the Fillin   Enter the placeholder foo(bar) , including the parentheses. Here no correct test is written at all: the correct answer is taken from the fillin and compared literally, while the test below only supplies a hint.      foobar   The parentheses are part of the answer.       "
+},
+{
+  "id": "fillin-literal-period",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-period",
+  "type": "Exercise",
+  "number": "5.20.1",
+  "title": "Fill-In, Decimal Point.",
+  "body": " Fill-In, Decimal Point   Give the value of , rounded to two decimal places.          "
+},
+{
+  "id": "fillin-literal-address",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-address",
+  "type": "Exercise",
+  "number": "5.20.2",
+  "title": "Fill-In, A Dotted Address.",
+  "body": " Fill-In, A Dotted Address   Enter the IPv4 address 192.168.1.1 , including its dots.          "
+},
+{
+  "id": "fillin-literal-formula",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-formula",
+  "type": "Exercise",
+  "number": "5.20.3",
+  "title": "Fill-In, A Formula with Several Symbols.",
+  "body": " Fill-In, A Formula with Several Symbols   Enter the formula f(x) = x^2 + 1 exactly, using a caret for the exponent.          "
+},
+{
+  "id": "fillin-literal-path",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-path",
+  "type": "Exercise",
+  "number": "5.20.4",
+  "title": "Fill-In, A File Path.",
+  "body": " Fill-In, A File Path   Enter the Windows path C:\\Users , with a backslash.          "
+},
+{
+  "id": "fillin-literal-price",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-price",
+  "type": "Exercise",
+  "number": "5.20.5",
+  "title": "Fill-In, A Price.",
+  "body": " Fill-In, A Price   Write one hundred dollars with a leading dollar sign, as $100 .          "
+},
+{
+  "id": "fillin-literal-case",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-case",
+  "type": "Exercise",
+  "number": "5.20.6",
+  "title": "Fill-In, Literal Match Ignoring Case.",
+  "body": " Fill-In, Literal Match Ignoring Case   Enter the placeholder foo(bar) , in any mix of upper- and lower-case letters.        Case is ignored, but the parentheses are part of the answer and are matched literally.      "
+},
+{
+  "id": "fillin-literal-explicit",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-explicit",
+  "type": "Exercise",
+  "number": "5.20.7",
+  "title": "Fill-In, Explicit Literal Test.",
+  "body": " Fill-In, Explicit Literal Test   Enter the placeholder foo(bar) , including the parentheses. Here the comparison states the pattern directly and marks it as a literal match with literal=\"yes\" .      foo(bar)     "
+},
+{
+  "id": "fillin-literal-synthesized",
+  "level": "2",
+  "url": "fill-in-literal-exercises.html#fillin-literal-synthesized",
+  "type": "Exercise",
+  "number": "5.20.8",
+  "title": "Fill-In, Answer Taken from the Fillin.",
+  "body": " Fill-In, Answer Taken from the Fillin   Enter the placeholder foo(bar) , including the parentheses. Here no correct test is written at all: the correct answer is taken from the fillin and compared literally, while the test below only supplies a hint.      foobar   The parentheses are part of the answer.      "
+},
+{
   "id": "runestone-hodgepodge",
   "level": "1",
   "url": "runestone-hodgepodge.html",
   "type": "Exercises",
-  "number": "5.20",
+  "number": "5.21",
   "title": "Hodgepodge",
-  "body": " Hodgepodge    This is a test of accessing program resources across pages by relying on what is in the database.   #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }    With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      A sequence of <task> can have a <conclusion> , like this one, even if they do not see much use in practice.    "
+  "body": " Hodgepodge    This is a test of accessing program resources across pages by relying on what is in the database.   #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }    With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Parsons Problem, as a Task   A Parsons problem hosted by a <task> , carrying its language, adaptivity, and indentation attributes there.     x = 3    print(x)      A sequence of <task> can have a <conclusion> , like this one, even if they do not see much use in practice.    "
 },
 {
   "id": "multifile-program-2",
   "level": "2",
   "url": "runestone-hodgepodge.html#multifile-program-2",
   "type": "Exercise",
-  "number": "5.20.1",
+  "number": "5.21.1",
   "title": "",
   "body": "  This is a test of accessing program resources across pages by relying on what is in the database.   #include \"add.h\" #include <iostream> using namespace std; int main() { int a = 1; int b = 2; cout << \"The sum of \" << a << \" and \" << b << \" is \" << add(a, b) << endl; }  "
 },
@@ -4491,16 +4631,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "runestone-hodgepodge.html#true-false-exercise-with-tasks-in-exercises",
   "type": "Exercise",
-  "number": "5.20.2",
+  "number": "5.21.2",
   "title": "With Tasks in an Exercises Division.",
-  "body": " With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      A sequence of <task> can have a <conclusion> , like this one, even if they do not see much use in practice.   "
+  "body": " With Tasks in an Exercises Division   Structured with task, recycled earlier from earlier, to make sure that the tasks do not get counted as Runestone reading activities (since they are inside an <exercise> inside of an <exercises> division.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Parsons Problem, as a Task   A Parsons problem hosted by a <task> , carrying its language, adaptivity, and indentation attributes there.     x = 3    print(x)      A sequence of <task> can have a <conclusion> , like this one, even if they do not see much use in practice.   "
 },
 {
   "id": "exercises-timed",
   "level": "1",
   "url": "exercises-timed.html",
   "type": "Section",
-  "number": "5.21",
+  "number": "5.22",
   "title": "Exercises that are Timed",
   "body": " Exercises that are Timed  This is a section that merely explains and holds an <exercises> division, which will be at the level of a <subsection> . There is a time-limit attribute on <exercises> , set to the value 10 , which implies (a) the collection of (two) exercises is a timed exam when hosted on Runestone, and (b) a student will have 10 minutes to complete the collection.  Showing results, showing feedback, displaying a timer, and allowing pausing are all enabled by default. To disable any of these features, set the corresponding attributes on the <exercises> division, results , feedback , timer , pause , to the value no . As a test, we have turned off pausing. Don't panic!  Of course, if you are not viewing this while online and hosted on a Runestone server, then these exercises will not look any different than in other places.  (Since this is an unstructured division, the number of the <exercises> is not displayed when born. It does have a number, which is the same as the enclosing <section> . To wit: versus .)  If you prefer that a given <section> has more than one <exercises> within it (timed or not), realize that you must then structure your <section> with a ssequence of <subsection> as peers of the multiple <exercises> you desire.   Timed Exercises   You have 10 minutes to do these exercises when hosted online on a Runestone server.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?     Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     "
 },
@@ -4509,7 +4649,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-timed.html#vector-space-dimension-timed",
   "type": "Exercise",
-  "number": "5.21.1",
+  "number": "5.22.1",
   "title": "True\/False.",
   "body": " True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
 },
@@ -4518,7 +4658,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-timed.html#multiple-choice-not-randomized-timed",
   "type": "Exercise",
-  "number": "5.21.2",
+  "number": "5.22.2",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
   "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
@@ -4527,7 +4667,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "interactive-projects.html",
   "type": "Section",
-  "number": "5.22",
+  "number": "5.23",
   "title": "Projects and Friends",
   "body": " Projects and Friends  PROJECT-LIKE refers to the elements\/blocks <project> , <activity> , <activity> , and <exploration> . They are very similar to <exercise> , and here we stress that they can be interactive in all the same ways an <exercise> can. Key differences are that they are blocks, and so are peers of other blocks like paragraphs and examples, and are children of divisions. By default they have their own numbering scheme, though we expect this to convert to an elective behavior.  Both <exercise> and PROJECT-LIKE can be structured with <task> . It would be natural to have a <project> with multiple <task> , each a possibly different interactive problem type. We expect that to be possible soon. For now, <exercise> and <project> (and friends) need to be structured with a <statement> (and their associated signal) in order to be interactive.   Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?    Now an <exercise> with three <task> . Since the middle one is a short-answer question, it will only be interactive on a capable platform.   True\/False and Explain   Structured with <task> , we can have an <introduction> . If you are viewing this <exercise> in the Runestone assignment builder, you will notice that each of these three <task> appears as its own problem and therefore each one gets its own copy of this <introduction> you are reading right now.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Matching Problem, Dates  matching US dates   Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863      A <conclusion> is possible and will be replicated after each of the three <task> when they are viewed individually in the Runestone assignment builder.    Now an <exploration> nested two-deep with the same two questions , two times each, just for testing purposes.   Exploring Two-Deep   This is a top-level introduction.    First Iterations of Each   This is an introduction to the first iterations, at the second level.    Multiple-Choice, Not Randomized, One Answer (First Copy)  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (First Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.    We include a conclusion to the first iterations, at the second level (with no conclusion at the top-level).     Second Iterations of Each   This is an introduction to the second iterations, at the second level.    Multiple-Choice, Not Randomized, One Answer (Second Copy)  stop signs   What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")       Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (Second Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.    We include a conclusion to the first iterations, at the second level (with no conclusion at the top-level).      This is an <exercise> which has been structured deeply with <task> . It is here to allow for testing a tabbed viewer presentation in online outputs.   A very structured exercise   This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A super-simple task  This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A title of a task that has a subtask with an <answer> for the Solutions   This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A task with a title and an <answer> for the Solutions   A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.    With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.      A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First subsubtask. Short paragraph.    A second three-deep subsubtask!  Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First answer. In interdum suscipit ullamcorper.    Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    "
 },
@@ -4536,7 +4676,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "interactive-projects.html#activity-multiple-choice-multiple-answers",
   "type": "Activity",
-  "number": "5.22.1",
+  "number": "5.23.1",
   "title": "Multiple-Choice, Not Randomized, Multiple Answers.",
   "body": " Multiple-Choice, Not Randomized, Multiple Answers  stop signs   Which colors might be found in a rainbow? (Note that the radio buttons now allow multiple buttons to be selected.)      Red    Red is a definitely one of the colors.      Yellow    Yes, yellow is correct.      Black    Remember the acronym ROY G BIV . B stands for blue.      Green    Yes, green is one of the colors.      Do you know the acronym ROY G BIV for the colors of a rainbow, and their order?   "
 },
@@ -4545,7 +4685,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "interactive-projects.html#true-false-exercise-with-tasks",
   "type": "Checkpoint",
-  "number": "5.22.1",
+  "number": "5.23.2",
   "title": "True\/False and Explain.",
   "body": " True\/False and Explain   Structured with <task> , we can have an <introduction> . If you are viewing this <exercise> in the Runestone assignment builder, you will notice that each of these three <task> appears as its own problem and therefore each one gets its own copy of this <introduction> you are reading right now.    True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?      Explain your reasoning in the previous question.      Matching Problem, Dates  matching US dates   Match each event in United States history with the year it happened. (We are recycling this to test the static representation of a matching problem authored inside of <task> .)    Review Encyclopedia Brittania, 25 Decade-Defining Events in U.S. History url.     Monroe Doctrine  1823    Haymarket Riot  1886    Louisiana Purchase  1803    Battle of Gettysburg  1863      A <conclusion> is possible and will be replicated after each of the three <task> when they are viewed individually in the Runestone assignment builder.   "
 },
@@ -4554,7 +4694,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "interactive-projects.html#exploration-two-deep",
   "type": "Exploration",
-  "number": "5.22.2",
+  "number": "5.23.3",
   "title": "Exploring Two-Deep.",
   "body": " Exploring Two-Deep   This is a top-level introduction.    First Iterations of Each   This is an introduction to the first iterations, at the second level.    Multiple-Choice, Not Randomized, One Answer (First Copy)  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (First Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.    We include a conclusion to the first iterations, at the second level (with no conclusion at the top-level).     Second Iterations of Each   This is an introduction to the second iterations, at the second level.    Multiple-Choice, Not Randomized, One Answer (Second Copy)  stop signs   What color is a stop sign?  We include a spurious Python <program> element in the <statement> which should never convert this from a multiple-choice question into a programming exercise (on any host), but should still get syntax highlighting as part of rendering the exercise.   sum = 0 sum += 6 for i in range(sum): print(\"Hello, World!\")       Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     Python ActiveCode (Second Copy)   Run the following program and observe the information provided at each step.    for i in range(10): print(i)   We're still not really sure.    We include a conclusion to the first iterations, at the second level (with no conclusion at the top-level).     "
 },
@@ -4563,34 +4703,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "interactive-projects.html#very-structured-exercise",
   "type": "Checkpoint",
-  "number": "5.22.2",
+  "number": "5.23.4",
   "title": "A very structured exercise.",
   "body": " A very structured exercise   This is an over-arching introduction to the whole exercise. We follow with some tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A super-simple task  This first task is very simple, just a paragraph. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Now three paragraphs. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A title of a task that has a subtask with an <answer> for the Solutions   This second task is further divided by more tasks. This is its introduction. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    A task with a title and an <answer> for the Solutions   A really simple subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  A short paragraph, before an answer.    With a proof.   In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   And a bit more to say.      A subtask with an answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Right! In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      Three simple sub-sub-tasks. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First subsubtask. Short paragraph.    A second three-deep subsubtask!  Second subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    Third subsubtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    The conclusion of the structured subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     A simple task as the last subtask. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    This concludes our structured second task. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.      This third top-level task is intermediate in complexity, you are reading the statement , which is followed by more items. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    One hint. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    First answer. In interdum suscipit ullamcorper.    Second answer. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.  In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.    At last, the solution. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.     This is a conclusion where you could summarize the exercise. In interdum suscipit ullamcorper. Morbi sit amet malesuada augue, id vestibulum magna. Nulla blandit dui metus, malesuada mollis sapien ullamcorper sit amet. Nulla at neque nisi. Integer vel porta felis.   "
 },
 {
-  "id": "rune-25",
+  "id": "rune-26",
   "level": "1",
-  "url": "rune-25.html",
+  "url": "rune-26.html",
   "type": "Reading Questions",
-  "number": "5.23",
+  "number": "5.24",
   "title": "Reading Questions",
   "body": "   This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.     Shouldn't be hard!      And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?     "
 },
 {
   "id": "simple-reading-question",
   "level": "2",
-  "url": "rune-25.html#simple-reading-question",
+  "url": "rune-26.html#simple-reading-question",
   "type": "Reading Question",
-  "number": "5.23.1",
+  "number": "5.24.1",
   "title": "",
   "body": "  This is a simple question. Does this look like a short answer question?  Both questions in this reading-questions division should render in an interactive short answer form on a capable platform.     Shouldn't be hard!   "
 },
 {
   "id": "second-reading-question",
   "level": "2",
-  "url": "rune-25.html#second-reading-question",
+  "url": "rune-26.html#second-reading-question",
   "type": "Reading Question",
-  "number": "5.23.2",
+  "number": "5.24.2",
   "title": "",
   "body": "  And a second reading question, so we can test having more than one. Specifically to be certain each goes into the manifest properly. How about some math now, . Is that all right?    "
 },
@@ -4599,70 +4739,43 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "atomic-video.html",
   "type": "Section",
-  "number": "5.24",
+  "number": "5.25",
   "title": "YouTube Video Embedding",
-  "body": " YouTube Video Embedding  An <video> can be placed in five different ways:  all by itself, as a peer of <p> typically, with layout control,  inside a <figure> , earning a number and caption,  inside a <sidebyside> , with size and layout configured,  inside a <figure> inside a <sidebyside> , with size and layout configured, with a number and caption, and  inside a <figure> inside a <sidebyside> inside a <figure> , with size and layout configured, with a number and caption, but now sub-numbered ((a), (b), (c), ).  Examples of each, and more.  A YouTube video is embedded much differently when hosted on a Runestone server, so that an API is available to report reader (student) interactions. We are testing here the various possibilities.  All by itsef, with no layout specified, so showing the default size and placement. Vivamus in congue massa. Morbi condimentum ac magna at accumsan. Vestibulum ac augue eu lorem semper gravida.   Width set at 40%, so equal margins and thus centered. Aenean faucibus augue tellus, et sollicitudin tortor finibus non. Maecenas semper dolor quis diam placerat, iaculis sollicitudin augue finibus. Vestibulum facilisis ligula lectus, ac tristique nisl aliquet non.   Asymmetric margins of 20% and 40% given, implying 40% width, equal to previous instance. Vivamus suscipit diam eget mi cursus viverra.   As a plain component of a <sidebyside> . Widths here are 20% and 30%, margins and gaps are automatic, default alignment on top edges. Nulla pharetra imperdiet elit, in sodales nibh blandit ultricies. Maecenas efficitur ac felis ut pharetra.      Inside a <figure> with no adjustments, so default behavior. Note how a <figure> occupies the entire width of the page, so then does the caption.   List Variables    Inside a <figure> with asymmetric (large) margins of 30% and 60%. Quisque finibus augue sit amet facilisis fringilla. Aenean faucibus augue tellus, et sollicitudin tortor finibus non.   List Variables    Inside figures inside a <sidebyside> . Same widths as previous <sidebyside> but alignment on bottoms of the panels, to partially align captions. Note how the captions are constrained in width by the width of the panels of the side-by-side.    List Variables     List Variables (Again)     Identical code to previous example, but now wrapped in an overall <figure> , which has its own caption and number, leaving the interior figures to be sub-numbered. Cross-references use the full number: .   Amalgamation of Videos    List Variables     List Variables  List Variables      "
+  "body": " YouTube Video Embedding  An <video> can be placed in five different ways:  all by itself, as a peer of <p> typically, with layout control,  inside a <figure> , earning a number and caption,  inside a <sidebyside> , with size and layout configured,  inside a <figure> inside a <sidebyside> , with size and layout configured, with a number and caption, and  inside a <figure> inside a <sidebyside> inside a <figure> , with size and layout configured, with a number and caption, but now sub-numbered ((a), (b), (c), ).  Examples of each, and more.  A YouTube video is embedded much differently when hosted on a Runestone server, so that an API is available to report reader (student) interactions. We are testing here the various possibilities.  All by itsef, with no layout specified, so showing the default size and placement. Vivamus in congue massa. Morbi condimentum ac magna at accumsan. Vestibulum ac augue eu lorem semper gravida.   Width set at 40%, so equal margins and thus centered. Aenean faucibus augue tellus, et sollicitudin tortor finibus non. Maecenas semper dolor quis diam placerat, iaculis sollicitudin augue finibus. Vestibulum facilisis ligula lectus, ac tristique nisl aliquet non.   Asymmetric margins of 20% and 40% given, implying 40% width, equal to previous instance. Vivamus suscipit diam eget mi cursus viverra.   Inside a <figure> with no adjustments, so default behavior. Note how a <figure> occupies the entire width of the page, so then does the caption.   List Variables    Inside a <figure> with asymmetric (large) margins of 30% and 60%. Quisque finibus augue sit amet facilisis fringilla. Aenean faucibus augue tellus, et sollicitudin tortor finibus non.   List Variables    "
+},
+{
+  "id": "atomic-video-11",
+  "level": "2",
+  "url": "atomic-video.html#atomic-video-11",
+  "type": "Figure",
+  "number": "5.25.1",
+  "title": "",
+  "body": " List Variables   "
 },
 {
   "id": "atomic-video-13",
   "level": "2",
   "url": "atomic-video.html#atomic-video-13",
   "type": "Figure",
-  "number": "5.24.1",
+  "number": "5.25.2",
   "title": "",
   "body": " List Variables   "
-},
-{
-  "id": "atomic-video-15",
-  "level": "2",
-  "url": "atomic-video.html#atomic-video-15",
-  "type": "Figure",
-  "number": "5.24.2",
-  "title": "",
-  "body": " List Variables   "
-},
-{
-  "id": "atomic-video-17-1",
-  "level": "2",
-  "url": "atomic-video.html#atomic-video-17-1",
-  "type": "Figure",
-  "number": "5.24.3",
-  "title": "",
-  "body": " List Variables   "
-},
-{
-  "id": "atomic-video-17-2",
-  "level": "2",
-  "url": "atomic-video.html#atomic-video-17-2",
-  "type": "Figure",
-  "number": "5.24.4",
-  "title": "",
-  "body": " List Variables (Again)   "
-},
-{
-  "id": "atomic-video-19",
-  "level": "2",
-  "url": "atomic-video.html#atomic-video-19",
-  "type": "Figure",
-  "number": "5.24.5",
-  "title": "",
-  "body": " Amalgamation of Videos    List Variables     List Variables  List Variables     "
 },
 {
   "id": "section-runestone-assignment-testing",
   "level": "1",
   "url": "section-runestone-assignment-testing.html",
   "type": "Section",
-  "number": "5.25",
+  "number": "5.26",
   "title": "Runestone Assignment Testing",
-  "body": " Runestone Assignment Testing  This is a section that is specifically for testing when exercises are migrated to a Runestone Assignment page.     This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?     An Exercise Group   This introduction should appear ahead of each exercise when it shows up in the Runestone Assignment page.              a blue square   It has a table, and an image too, to check it all comes through.     What is ?      Two      Three        What is ?      Two      Four         What is ?     And a final paragraph in the section, and a chance to say there is a trailing <exercise> outside the <exercisegroup> .  "
+  "body": " Runestone Assignment Testing  This is a section that is specifically for testing when exercises are migrated to a Runestone Assignment page.     This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?     An Exercise Group   This introduction should appear ahead of each exercise when it shows up in the Runestone Assignment page.              a blue square   It has a table, and an image too, to check it all comes through.     What is ?      Two      Three        What is ?      Two      Four         What is ?     And a final paragraph, now as a <conclusion> of the <exercises> , and a chance to say there is a trailing <exercise> outside the <exercisegroup> .    "
 },
 {
   "id": "exercisegroup-exercise-zero",
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-zero",
   "type": "Exercise",
-  "number": "5.25.1",
+  "number": "5.26.1",
   "title": "",
   "body": "  This is an <exercises> division (at the level of a <subsection> ) which is not being numbered. We've hijacked this first exercise to say so, and to precede the <exercisegroup> following, which is the real test right now. What is ?   "
 },
@@ -4671,7 +4784,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-one",
   "type": "Exercise",
-  "number": "5.25.2",
+  "number": "5.26.2",
   "title": "",
   "body": "  What is ?      Two      Three     "
 },
@@ -4680,7 +4793,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-two",
   "type": "Exercise",
-  "number": "5.25.3",
+  "number": "5.26.3",
   "title": "",
   "body": "  What is ?      Two      Four     "
 },
@@ -4689,7 +4802,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "section-runestone-assignment-testing.html#exercisegroup-exercise-three",
   "type": "Exercise",
-  "number": "5.25.4",
+  "number": "5.26.4",
   "title": "",
   "body": "  What is ?   "
 },
@@ -4698,7 +4811,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "worksheet-groupwork.html",
   "type": "Worksheet",
-  "number": "5.26",
+  "number": "5.27",
   "title": "A “Group Work” Worksheet",
   "body": " A Group Work Worksheet  This is a <worksheet> which has a groupwork attribute set to yes , along with a label attribute to assist with the Runestone database. Note, you can also set a groupsize attribute. When hosted on Runestone, the exercises within will be available for a group of students to submit together.   Multiple-Choice, Group Work  stop signs  group work   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?    Worksheets allow for material interleaved with the <exercise> throughout.   Parsons Problem, Group Work  even numbers  groupwork   Create a proof of the theorem: If is an even number, then .     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.   "
 },
@@ -4707,7 +4820,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "worksheet-groupwork.html#groupwork-multiple-choice",
   "type": "Worksheet Exercise",
-  "number": "5.26.1",
+  "number": "5.27.1",
   "title": "Multiple-Choice, Group Work.",
   "body": " Multiple-Choice, Group Work  stop signs  group work   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
@@ -4716,7 +4829,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "worksheet-groupwork.html#groupwork-number-theory",
   "type": "Worksheet Exercise",
-  "number": "5.26.2",
+  "number": "5.27.2",
   "title": "Parsons Problem, Group Work.",
   "body": " Parsons Problem, Group Work  even numbers  groupwork   Create a proof of the theorem: If is an even number, then .     Suppose is even.    Then is a prime number.  Then there exists an so that .  Then there exists an so that .    Click the heels of your ruby slippers together three times.    So .  This is a superfluous second paragraph in this block.    Thus .    And a little bit of irrelevant multi-line math .    Dorothy will not be much help with this proof.  "
 },
@@ -4725,7 +4838,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "exercises-title-groupwork.html",
   "type": "Exercises",
-  "number": "5.27",
+  "number": "5.28",
   "title": "Group Exercises",
   "body": "  This is an <exercises> division with no <title> , set as groupwork, and therefore its default title will automatically indicate it is meant for a group. Otherwise, it is not of any new interest.    Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?    "
 },
@@ -4734,7 +4847,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "exercises-title-groupwork.html#multiple-choice-not-randomized-five",
   "type": "Exercise",
-  "number": "5.27.1",
+  "number": "5.28.1",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
   "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?           Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
@@ -4743,20 +4856,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "splice-integration.html",
   "type": "Section",
-  "number": "5.28",
+  "number": "5.29",
   "title": "SPLICE Integration",
-<<<<<<< HEAD
   "body": " SPLICE Integration  SPLICE is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a protocol for an embedded iframe to communicate with its host page.  One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.  This first sample tests the ability of an iframe to ask for a new size.   The next uses CodeCheck .   CodeCheck iframe    And the remaing four are from the OpenDSA project.   Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise       (2025-11-05) The following two exercises are strictly EXPERIMENTAL . Do not incorporate them into your projects as they are likely to change dramatically.    Finding the average velocity of a moving object from data (dual, Doenet)    OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.    This example recreates the Show-Eval visualization from the Runestone Components, using a PreTexT <interactive> . It also records student activity using SPLICE.  It demonstrates how the Show-Eval tool can be used to visualize the evaluation of Python expressions step by step.  This could also be used for doing similar visualization of mathematical expressions. Support for MathJax would take some work, but this example would be a good starting point.   Show-Eval Visualization    "
-=======
-  "body": " SPLICE Integration  SPLICE is a project to supply documentation and infrastructure to help with adopting shared standards, protocols, and tools for web-based learning tools. The project has designed a protocol for an embedded iframe to communicate with its host page.  One aspect is the ability of an iframe to ask for a new size. Below is a test of that capability.  These are examples that use the SPLICE protocol for communicating with a server, such as Runestone. They are all integrated into this PreTeXt book as an <interactive> that uses an iframe attribute to embed an iframe from some other server.  This first sample tests the ability of an iframe to ask for a new size.   The next uses CodeCheck .   CodeCheck iframe    And the remaing four are from the OpenDSA project.   Stack pop slideshow     A List Insertion Exercise     A Binary Search Exercise     Dijkstra's Algorithm Exercise       (2025-11-05) The following two exercises are strictly EXPERIMENTAL . Do not incorporate them into your projects as they are likely to change dramatically.    Finding the average velocity of a moving object from data (dual, Doenet)    OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.    "
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 },
 {
   "id": "horstmann-codecheck",
   "level": "2",
   "url": "splice-integration.html#horstmann-codecheck",
   "type": "Figure",
-  "number": "5.28.1",
+  "number": "5.29.1",
   "title": "",
   "body": " CodeCheck iframe   "
 },
@@ -4765,7 +4874,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#opendsa-slideshow",
   "type": "Figure",
-  "number": "5.28.2",
+  "number": "5.29.2",
   "title": "",
   "body": " Stack pop slideshow   "
 },
@@ -4774,7 +4883,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-insert",
   "type": "Figure",
-  "number": "5.28.3",
+  "number": "5.29.3",
   "title": "",
   "body": " A List Insertion Exercise   "
 },
@@ -4783,7 +4892,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-bs",
   "type": "Figure",
-  "number": "5.28.4",
+  "number": "5.29.4",
   "title": "",
   "body": " A Binary Search Exercise   "
 },
@@ -4792,46 +4901,43 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "splice-integration.html#splice-integration-dijkstra",
   "type": "Figure",
-  "number": "5.28.5",
+  "number": "5.29.5",
   "title": "",
   "body": " Dijkstra's Algorithm Exercise   "
 },
 {
-  "id": "splice-integration-15",
+  "id": "doenet-average-velocity",
   "level": "2",
-  "url": "splice-integration.html#splice-integration-15",
+  "url": "splice-integration.html#doenet-average-velocity",
   "type": "Checkpoint",
-  "number": "5.28.6",
+  "number": "5.29.6",
   "title": "Finding the average velocity of a moving object from data (dual, Doenet).",
   "body": "Finding the average velocity of a moving object from data (dual, Doenet)   "
 },
 {
-  "id": "splice-integration-16",
+  "id": "opendsa-list-insertion",
   "level": "2",
-  "url": "splice-integration.html#splice-integration-16",
+  "url": "splice-integration.html#opendsa-list-insertion",
   "type": "Checkpoint",
-  "number": "5.28.7",
+  "number": "5.29.7",
   "title": "OpenDSA List Insertion (Dual).",
   "body": "OpenDSA List Insertion (Dual)  Work this following problem. Note that this is really just a test to see if additional text (beyond an <interactive> ) will show up.   "
 },
 {
-<<<<<<< HEAD
   "id": "show-eval-visualization1",
   "level": "2",
   "url": "splice-integration.html#show-eval-visualization1",
   "type": "Figure",
-  "number": "5.28.8",
+  "number": "5.29.8",
   "title": "",
   "body": " Show-Eval Visualization   "
 },
 {
-=======
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
   "id": "chapter-exam",
   "level": "1",
   "url": "chapter-exam.html",
   "type": "Exercises",
-  "number": "5.29",
+  "number": "5.30",
   "title": "Timed Chapter Exam",
   "body": " Timed Chapter Exam   This is an <exercises> division, as a peer of the <section> in this <chapter> of a <book> . It is also setup as a Runestone timed exam. So it is an example of how you might have a per-chapter exam. This contrasts with an earlier timed exam which is constructed as a per-section exam ( ). The exercises are the same here, but in a different order. As a test, this exam is pauseable and has a 15 minute time limit.    Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?     True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?    "
 },
@@ -4840,7 +4946,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chapter-exam.html#multiple-choice-not-randomized-timed-two",
   "type": "Exercise",
-  "number": "5.29.1",
+  "number": "5.30.1",
   "title": "Multiple-Choice, Not Randomized, One Answer.",
   "body": " Multiple-Choice, Not Randomized, One Answer  stop signs   What color is a stop sign?      Green    Green means go! .      Red    Red is universally used for prohibited activities or serious warnings.      White    White might be hard to see.      What did you see last time you went driving?    Maybe go out for a drive?   "
 },
@@ -4849,7 +4955,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chapter-exam.html#vector-space-dimension-timed-two",
   "type": "Exercise",
-  "number": "5.29.2",
+  "number": "5.30.2",
   "title": "True\/False.",
   "body": " True\/False  vector space   Every vector space has finite dimension.    The vector space of all polynomials with finite degree has a basis, , which is infinte.    , the vector space of polynomials with degree at most , has dimension by . [Cross-reference is just a demo, content is not relevant.] What happens if we relax the defintion and remove the parameter ?   "
 },

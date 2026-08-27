@@ -13,13 +13,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
-<script type="module">import { startMathJax } from './_static/pretext/js/mathjax_startup.js';
+<style>
+@counter-style ptx-marker-1 { system: extends lower-roman; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-3 { system: extends lower-roman; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-4 { system: extends upper-roman; prefix: '*'; suffix: '* '; }
+@counter-style ptx-marker-5 { system: extends upper-alpha; prefix: '++'; suffix: ' '; }
+@counter-style ptx-marker-6 { system: extends decimal; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-7 { system: extends decimal; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-8 { system: extends decimal; prefix: '-'; suffix: '- '; }
+@counter-style ptx-marker-9 { system: extends lower-alpha; prefix: ''; suffix: ') '; }
+@counter-style ptx-marker-10 { system: extends upper-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-11 { system: extends lower-roman; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-12 { system: extends lower-alpha; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-13 { system: extends decimal; prefix: ''; suffix: ' '; }
+@counter-style ptx-marker-14 { system: extends decimal; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
 startMathJax({
 hasWebworkReps: false,
 hasSage: true,
 isReact: false,
 htmlPresentation: false,
+lang: "en-US",
 });
 </script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.8.0/jsxgraph.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.8.0/jsxgraphcore.js"></script>
@@ -41,7 +57,6 @@ htmlPresentation: false,
 \)</span></div>
 <div style="aspect-ratio: 2.5;">
 <div class="sbsgroup">
-<<<<<<< HEAD
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:30% 30% 30%;column-gap:5%;">
 <div class="sbspanel sbspanel--top top" style=""><div id="box_p3" class="jxgbox process-math" style="width:180px; height:180px; display: block; "></div></div>
@@ -51,22 +66,11 @@ htmlPresentation: false,
 </div>
 <div class="sidebyside">
 <div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><input xmlns="http://www.w3.org/1999/xhtml" type="button" value="Animate" onkeypress="animate_p3(s_p3,75,100);" onclick="animate_p3(s_p3,75,100);" style="font-size:16px; width:100%"></input></div>
-<div class="sbspanel sbspanel--top top" style=""><input xmlns="http://www.w3.org/1999/xhtml" type="button" value="Clear Traces" onkeypress="clearTraces_p3();" onclick="clearTraces_p3();" style="font-size:16px; width:100%"></input></div>
+<div class="sbspanel sbspanel--top top" style=""><input type="button" value="Animate" onkeypress="animate_p3(s_p3,75,100);" onclick="animate_p3(s_p3,75,100);" style="font-size:16px; width:100%"></div>
+<div class="sbspanel sbspanel--top top" style=""><input type="button" value="Clear Traces" onkeypress="clearTraces_p3();" onclick="clearTraces_p3();" style="font-size:16px; width:100%"></div>
 </div>
 </div>
 </div>
-=======
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:30% 30% 30%;column-gap:5%;">
-<div class="sbspanel sbspanel--top top" style=""><div id="box_p3" class="jxgbox" style="width:180px; height:180px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div></div>
-<div class="sbspanel sbspanel--top top" style=""><div id="box2_p3" class="jxgbox" style="width:180px; height:180px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div></div>
-<div class="sbspanel sbspanel--top top" style=""><div id="box3_p3" class="jxgbox" style="width:180px; height:180px; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;"></div></div>
-</div></div>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;grid-template-columns:50% 50%;column-gap:0%;">
-<div class="sbspanel sbspanel--top top" style=""><input xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" type="button" value="Animate" onkeypress="animate_p3(s_p3,75,100);" onclick="animate_p3(s_p3,75,100);" style="font-size:16px; width:100%"></input></div>
-<div class="sbspanel sbspanel--top top" style=""><input xmlns="http://www.w3.org/1999/xhtml" xmlns:xi="http://www.w3.org/2001/XInclude" type="button" value="Clear Traces" onkeypress="clearTraces_p3();" onclick="clearTraces_p3();" style="font-size:16px; width:100%"></input></div>
-</div></div>
->>>>>>> 768124a5096be3810c0486c1bc89c17313cb9b15
 </div>
 <script src="external/code/jsxgraph/piecewise.js"></script>
 </body>
