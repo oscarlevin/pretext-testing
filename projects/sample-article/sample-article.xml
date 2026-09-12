@@ -16334,6 +16334,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                       Just a simple activity here.
                     </p>
                   </statement>
+                  <solution>
+                    <p>
+                        This is the solution to the simple activity. 
+                    </p>
+                  </solution>
                 </activity>
                 <activity workspace="1in">
                   <statement>
@@ -16341,6 +16346,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                       Here is a second activity.
                     </p>
                   </statement>
+                  <answer>
+                    <p>
+                        This is the answer to the second activity.
+                    </p>
+                  </answer>
                 </activity>
             </worksheet>
             <worksheet label="worksheet-activity-with-task">
@@ -16395,6 +16405,11 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
                     <statement>
                         <p>Apple</p>
                     </statement>
+                    <answer>
+                        <p>
+                            Fruit.
+                        </p>
+                    </answer>
                 </exercise>
 
                 <exercise workspace="1in">
